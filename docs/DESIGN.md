@@ -7,7 +7,6 @@ primary, emerald/amber/sky state colors, cobalt-to-sky gradient for match moment
 ## Type
 
 - **Manrope** only (400-800) — SF/Inter-class clean sans with Apple-like hierarchy: ExtraBold display/hero with tight tracking, Bold headings, Medium/Regular body.
-- **Manrope** (400–800) for UI, body and numbers — clear, tabular-friendly, never generic.
 - Scale ≈1.25: display 34 / title 27 / heading 20 / sub 16 / body 15 / caption 12.5 / micro 10.5.
 - Body line-height 1.5×; large headlines tracked −0.5 to −0.7.
 
@@ -27,12 +26,13 @@ One committed accent, warm neutrals, semantic bucket colors:
 | Pop (sky) | `#86DBFF` on-ink | `#86DBFF` |
 | Hero gradient | `#2447DB → #0C6EAA` | `#2A50EE → #12224E` |
 
-**Electric Optimism rules:** lime is an *energy* accent, never body text — it lives on
+**Cobalt rules:** sky (`pop`) is an *energy* accent, never body text — it lives on
 gradients and dark ink (hero CTAs, strength meter, countdown, tags, active dots). The
-teal hero gradient is reserved for brand statement moments: welcome carousel, Match
-greeting card, pre-departure countdown. Everything transactional stays on the trust
-base. White body text on gradients ≥5.2:1; lime labels on gradients are bold/large only
-(≥4.0:1, above the 3:1 large-text threshold); ink on lime ≥11.9:1.
+cobalt→sky gradient is reserved for brand statement moments: welcome carousel, Match
+greeting card, pre-departure countdown. Everything transactional stays on white/off-white
+trust surfaces. The client's raw state hues (#12B76A / #F59E0B / #38BDF8) live in the
+soft fills and large graphics; darkened text variants carry WCAG AA contrast (all 46
+shipped token pairs pass, both schemes).
 
 No SaaS-blue defaults, no purple-gradient-on-white, no glassmorphism. Contrast is
 verified programmatically: every shipped text/background token pair (36 pairs across
