@@ -35,6 +35,9 @@ const COUNTRIES = {
   SG: { currency: 'SGD', intakeMonths: [1, 8], visaFee: 90, insuranceYearly: 500, enrolFee: 400, appFee: 100 },
   NZ: { currency: 'NZD', intakeMonths: [2, 7], visaFee: 750, insuranceYearly: 700, enrolFee: 300, appFee: 75 },
   RU: { currency: 'RUB', intakeMonths: [2, 9], visaFee: 6000, insuranceYearly: 15000, enrolFee: 8000, appFee: 3000 },
+  US: { currency: 'USD', intakeMonths: [1, 8], visaFee: 535, insuranceYearly: 2000, enrolFee: 400, appFee: 80 },
+  CA: { currency: 'CAD', intakeMonths: [1, 9], visaFee: 235, insuranceYearly: 900, enrolFee: 350, appFee: 130 },
+  CN: { currency: 'CNY', intakeMonths: [3, 9], visaFee: 800, insuranceYearly: 800, enrolFee: 400, appFee: 600 },
 };
 
 const FX = {
@@ -42,7 +45,7 @@ const FX = {
   asOf: '2026-07-15',
   rates: {
     USD: 1, AUD: 1.53, MYR: 4.42, TWD: 31.9, GBP: 0.79, SGD: 1.34,
-    NZD: 1.68, RUB: 92.5, IDR: 15850, VND: 25300, CNY: 7.18,
+    NZD: 1.68, RUB: 92.5, IDR: 15850, VND: 25300, CNY: 7.18, CAD: 1.36,
   },
 };
 
@@ -132,6 +135,9 @@ const TUITION = {
   SG: { business: 32000, engineering: 36000, it: 35000, health: 45000, hospitality: 26000, design: 28000, law: 38000, science: 34000, media: 30000, architecture: 37000, education: 27000, med: 78000 },
   NZ: { business: 30000, engineering: 36000, it: 34000, health: 38000, hospitality: 26000, design: 28000, law: 33000, science: 33000, media: 29000, architecture: 36000, education: 28000, med: 62000 },
   RU: { business: 320000, engineering: 380000, it: 360000, health: 420000, hospitality: 260000, design: 280000, law: 340000, science: 350000, media: 300000, architecture: 380000, education: 260000, med: 620000 },
+  US: { business: 45000, engineering: 48000, it: 47000, health: 50000, hospitality: 35000, design: 40000, law: 48000, science: 45000, media: 40000, architecture: 46000, education: 36000, med: 70000 },
+  CA: { business: 40000, engineering: 48000, it: 46000, health: 50000, hospitality: 32000, design: 36000, law: 45000, science: 42000, media: 36000, architecture: 45000, education: 34000, med: 90000 },
+  CN: { business: 26000, engineering: 30000, it: 29000, health: 34000, hospitality: 22000, design: 24000, law: 28000, science: 27000, media: 24000, architecture: 29000, education: 21000, med: 45000 },
 };
 
 const COURSE_NAMES = {
@@ -139,7 +145,7 @@ const COURSE_NAMES = {
   engineering: ['Bachelor of Engineering (Civil)', 'Bachelor of Engineering (Mechanical)', 'Bachelor of Engineering (Electrical)', 'Bachelor of Engineering (Mechatronics)', 'Bachelor of Engineering (Chemical)', 'Bachelor of Engineering (Aerospace)', 'Bachelor of Engineering (Biomedical)', 'Bachelor of Engineering (Environmental)'],
   it: ['Bachelor of Computer Science', 'Bachelor of Software Engineering', 'Bachelor of IT (Data Analytics)', 'Bachelor of Cybersecurity', 'Bachelor of Artificial Intelligence', 'Bachelor of Game Development', 'Bachelor of Information Systems', 'Bachelor of Networking & Cloud Computing'],
   health: ['Bachelor of Nursing', 'Bachelor of Medicine, Bachelor of Surgery (MBBS)', 'Bachelor of Pharmacy', 'Bachelor of Biomedical Science', 'Bachelor of Physiotherapy', 'Bachelor of Psychology', 'Bachelor of Nutrition & Dietetics', 'Bachelor of Dental Surgery'],
-  hospitality: ['Bachelor of Hospitality Management', 'Bachelor of Culinary Arts Management', 'Bachelor of Tourism & Event Management', 'Bachelor of International Hotel & Resort Management', 'Bachelor of Aviation Management'],
+  hospitality: ['Bachelor of Hospitality Management', 'Bachelor of Culinary Arts Management', 'Bachelor of Tourism & Event Management', 'Bachelor of International Hotel & Resort Management', 'Bachelor of Aviation Management', 'Bachelor of Baking & Pastry Arts', 'Bachelor of Food Business Management'],
   design: ['Bachelor of Design (Visual Communication)', 'Bachelor of Interior Architecture', 'Bachelor of Fashion Design', 'Bachelor of Digital Media Design', 'Bachelor of Graphic Design', 'Bachelor of Industrial & Product Design', 'Bachelor of Animation & Visual Effects'],
   law: ['Bachelor of Laws (LLB)', 'Bachelor of Criminology & Justice', 'Bachelor of Legal Studies', 'Bachelor of Commercial Law'],
   science: ['Bachelor of Science (Mathematics & Statistics)', 'Bachelor of Environmental Science', 'Bachelor of Science (Physics)', 'Bachelor of Data Science', 'Bachelor of Biotechnology', 'Bachelor of Actuarial Science', 'Bachelor of Chemistry'],
@@ -148,8 +154,8 @@ const COURSE_NAMES = {
   education: ['Bachelor of Education (Primary)', 'Bachelor of Early Childhood Education', 'Bachelor of Education (TESL)', 'Bachelor of Sports Science & Physical Education', 'Bachelor of Special Education'],
 };
 const PATHWAY_NAMES = {
-  foundation: { business: 'Foundation in Business', it: 'Foundation in Computing', engineering: 'Foundation in Engineering & Science', design: 'Foundation in Art & Design', health: 'Foundation in Health Science', law: 'Foundation in Law & Social Science' },
-  diploma: { it: 'Diploma in Information Technology', business: 'Diploma in Business Management', hospitality: 'Diploma in Hotel Operations', engineering: 'Diploma in Engineering Technology' },
+  foundation: { business: 'Foundation in Business', it: 'Foundation in Computing', engineering: 'Foundation in Engineering & Science', design: 'Foundation in Art & Design', health: 'Foundation in Health Science', law: 'Foundation in Law & Social Science', hospitality: 'Foundation in Hospitality & Culinary Arts' },
+  diploma: { it: 'Diploma in Information Technology', business: 'Diploma in Business Management', hospitality: 'Diploma in Culinary Arts & Hotel Operations', engineering: 'Diploma in Engineering Technology', media: 'Diploma in Media & Communication' },
 };
 
 const ENGLISH_BY_FIELD = { business: 6.0, engineering: 6.0, it: 6.0, health: 6.5, hospitality: 5.5, design: 6.0, law: 6.5, science: 6.0, media: 6.5, architecture: 6.0, education: 6.5 };
@@ -235,7 +241,78 @@ const INSTITUTIONS = [
     [['it', 3, 'b', 2], ['business', 0, 'b', 2], ['education', 0, 'b', 2], ['it', 0, 'd', 0]]],
   ['ru-nsu', 'Novosibirsk State University', 'NSU', 'RU', 'Novosibirsk', 'university', false, 'Science-city university in Akademgorodok', 1958, 8000, 'https://www.nsu.ru',
     [['health', 1, 'b', 4], ['science', 2, 'b', 3], ['engineering', 1, 'b', 2]]],
+
+  ['us-mit', 'Massachusetts Institute of Technology', 'MIT', 'US', 'Boston', 'institute', false, 'World-leading institute for science and engineering', 1861, 11900, 'https://www.mit.edu',
+    [['engineering', 5, 'b', 5], ['it', 0, 'b', 5], ['science', 0, 'b', 5], ['architecture', 0, 'b', 5]]],
+  ['us-bu', 'Boston University', 'BU', 'US', 'Boston', 'university', true, 'Private research university on the Charles River', 1839, 37000, 'https://www.bu.edu',
+    [['business', 4, 'b', 4], ['media', 0, 'b', 4], ['health', 5, 'b', 4], ['business', 0, 'f', 0]]],
+  ['us-nyu', 'New York University', 'NYU', 'US', 'New York', 'university', true, 'Global university in the heart of Manhattan', 1831, 59000, 'https://www.nyu.edu',
+    [['business', 6, 'b', 5], ['media', 2, 'b', 4], ['design', 3, 'b', 4], ['law', 2, 'b', 4]]],
+  ['us-ucla', 'University of California, Los Angeles', 'UCLA', 'US', 'Los Angeles', 'university', false, 'Top public university in sunny Los Angeles', 1919, 46000, 'https://www.ucla.edu',
+    [['science', 3, 'b', 5], ['media', 3, 'b', 4], ['engineering', 2, 'b', 5]]],
+  ['us-uchicago', 'University of Chicago', 'UChicago', 'US', 'Chicago', 'university', false, 'Rigorous research university on the South Side', 1890, 18000, 'https://www.uchicago.edu',
+    [['business', 9, 'b', 5], ['science', 0, 'b', 5], ['law', 2, 'b', 5]]],
+  ['us-smc', 'Santa Monica College', 'SMC', 'US', 'Los Angeles', 'college', false, 'California community college with top university-transfer rates', 1929, 26000, 'https://www.smc.edu',
+    [['business', 0, 'd', 0], ['it', 0, 'd', 0], ['media', 0, 'd', 0]]],
+  ['us-ice', 'Institute of Culinary Education', 'ICE', 'US', 'New York', 'institute', false, 'Award-winning culinary school in Lower Manhattan', 1975, 3000, 'https://www.ice.edu',
+    [['hospitality', 0, 'd', 0], ['hospitality', 0, 'f', 0]]],
+
+  ['ca-utoronto', 'University of Toronto', 'UofT', 'CA', 'Toronto', 'university', true, "Canada's top-ranked research university", 1827, 97000, 'https://www.utoronto.ca',
+    [['business', 1, 'b', 5], ['it', 0, 'b', 5], ['health', 5, 'b', 4], ['business', 0, 'f', 0]]],
+  ['ca-ubc', 'University of British Columbia', 'UBC', 'CA', 'Vancouver', 'university', false, 'Pacific-rim research university in Vancouver', 1908, 66000, 'https://www.ubc.ca',
+    [['science', 1, 'b', 4], ['engineering', 7, 'b', 4], ['media', 0, 'b', 4]]],
+  ['ca-mcgill', 'McGill University', 'McGill', 'CA', 'Montreal', 'university', true, 'Historic English-language university in Montreal', 1821, 39000, 'https://www.mcgill.ca',
+    [['health', 3, 'b', 5], ['science', 6, 'b', 4], ['business', 0, 'b', 4]]],
+  ['ca-york', 'York University', 'York U', 'CA', 'Toronto', 'university', false, 'Large comprehensive university in northern Toronto', 1959, 55000, 'https://www.yorku.ca',
+    [['business', 5, 'b', 3], ['it', 6, 'b', 3], ['education', 1, 'b', 3], ['business', 0, 'd', 0]]],
+  ['ca-georgebrown', 'George Brown College', 'George Brown', 'CA', 'Toronto', 'college', true, "Toronto's downtown college for culinary and creative careers", 1967, 32000, 'https://www.georgebrown.ca',
+    [['hospitality', 1, 'b', 1], ['design', 4, 'b', 1], ['business', 0, 'd', 0], ['hospitality', 0, 'd', 0]]],
+
+  ['cn-tsinghua', 'Tsinghua University', 'Tsinghua', 'CN', 'Beijing', 'university', true, "China's leading engineering and science university", 1911, 50000, 'https://www.tsinghua.edu.cn',
+    [['engineering', 2, 'b', 5], ['it', 4, 'b', 5], ['architecture', 0, 'b', 5], ['business', 0, 'b', 5]]],
+  ['cn-pku', 'Peking University', 'PKU', 'CN', 'Beijing', 'university', false, "China's oldest modern national university", 1898, 48000, 'https://www.pku.edu.cn',
+    [['law', 0, 'b', 5], ['science', 0, 'b', 5], ['business', 9, 'b', 5]]],
+  ['cn-fudan', 'Fudan University', 'Fudan', 'CN', 'Shanghai', 'university', true, 'Comprehensive research university in Shanghai', 1905, 32000, 'https://www.fudan.edu.cn',
+    [['health', 1, 'b', 5], ['business', 1, 'b', 4], ['media', 0, 'b', 4], ['business', 0, 'f', 0]]],
+  ['cn-sysu', 'Sun Yat-sen University', 'SYSU', 'CN', 'Guangzhou', 'university', false, 'Research university across Guangdong campuses', 1924, 66000, 'https://www.sysu.edu.cn',
+    [['business', 0, 'b', 3], ['it', 1, 'b', 3], ['hospitality', 3, 'b', 3], ['it', 0, 'd', 0]]],
+  ['cn-bhi', 'Beijing Hospitality Institute', 'BHI', 'CN', 'Beijing', 'institute', false, 'Swiss-style hospitality management institute', 2010, 5000, 'https://www.bhi.edu.cn',
+    [['hospitality', 3, 'b', 1], ['hospitality', 1, 'b', 1], ['hospitality', 0, 'd', 0]]],
+
+  ['au-angliss', 'William Angliss Institute', 'Angliss', 'AU', 'Melbourne', 'institute', true, 'Specialist institute for foods, tourism and hospitality', 1940, 23000, 'https://www.angliss.edu.au',
+    [['hospitality', 1, 'b', 1], ['hospitality', 2, 'b', 1], ['hospitality', 0, 'd', 0], ['business', 0, 'd', 0]]],
+  ['my-berjaya', 'BERJAYA University College', 'BERJAYA UC', 'MY', 'Kuala Lumpur', 'college', true, 'Culinary and hospitality specialist in the city centre', 2009, 3500, 'https://www.berjaya.edu.my',
+    [['hospitality', 1, 'b', 1], ['hospitality', 3, 'b', 1], ['business', 0, 'b', 1], ['hospitality', 0, 'd', 0]]],
+  ['tw-nkuht', 'National Kaohsiung University of Hospitality and Tourism', 'NKUHT', 'TW', 'Kaohsiung', 'university', false, "Taiwan's national school for hospitality and culinary arts", 1995, 8000, 'https://www.nkuht.edu.tw',
+    [['hospitality', 1, 'b', 1], ['hospitality', 2, 'b', 2], ['hospitality', 0, 'd', 0]]],
+  ['gb-lcb', 'Le Cordon Bleu London', 'Le Cordon Bleu', 'GB', 'London', 'institute', false, 'The famous French culinary arts institute in Bloomsbury', 1933, 1000, 'https://www.cordonbleu.edu/london',
+    [['hospitality', 1, 'b', 1], ['hospitality', 0, 'd', 0]]],
+  ['nz-lcb', 'Le Cordon Bleu Wellington', 'LCB Wellington', 'NZ', 'Wellington', 'institute', false, 'French culinary arts school in the capital', 2012, 400, 'https://www.cordonbleu.edu/wellington',
+    [['hospitality', 1, 'b', 1], ['hospitality', 0, 'd', 0]]],
+  ['sg-shatec', 'SHATEC', 'SHATEC', 'SG', 'Singapore', 'institute', false, "Singapore's hotel and culinary school built by the industry", 1983, 1200, 'https://www.shatec.sg',
+    [['hospitality', 1, 'b', 1], ['hospitality', 0, 'd', 0]]],
+
+  // Branch campuses — same brand, different country, different fees.
+  ['my-monash', 'Monash University Malaysia', 'Monash MY', 'MY', 'Kuala Lumpur', 'university', true, "Monash's Malaysian campus — same degree, Malaysian fees", 1998, 10000, 'https://www.monash.edu.my',
+    [['business', 0, 'b', 3], ['it', 0, 'b', 3], ['engineering', 3, 'b', 3], ['media', 0, 'b', 3]]],
+  ['cn-nyush', 'NYU Shanghai', 'NYU Shanghai', 'CN', 'Shanghai', 'university', false, "NYU's degree-granting campus in Pudong", 2012, 2000, 'https://shanghai.nyu.edu',
+    [['business', 1, 'b', 4], ['it', 0, 'b', 4], ['media', 0, 'b', 3]]],
 ];
+
+// Branch-campus links (both directions get a "same family" cross-reference).
+const BRANCHES = [
+  ['au-monash', 'my-monash'],
+  ['us-nyu', 'cn-nyush'],
+  ['gb-lcb', 'nz-lcb'],
+];
+
+// Per-institution tuition calibration against published 2026 fee ranges
+// (branch campuses and specialist schools price differently from the
+// country baseline: NYU Shanghai ≈ ¥200k, Monash MY ≈ RM48k, community
+// colleges far below university rates).
+const TUITION_MULT = {
+  'my-monash': 1.6, 'cn-nyush': 6, 'cn-bhi': 3, 'us-smc': 0.35,
+};
 
 // ------------------------------------------------------------------- cities
 const CITY_COL = {
@@ -246,6 +323,9 @@ const CITY_COL = {
   Singapore: ['SG', 1500, 600, 120],
   Auckland: ['NZ', 1300, 600, 170], Wellington: ['NZ', 1200, 580, 150], Christchurch: ['NZ', 1050, 550, 120], Dunedin: ['NZ', 950, 520, 90],
   Moscow: ['RU', 45000, 25000, 2500], 'Saint Petersburg': ['RU', 35000, 22000, 2000], Kazan: ['RU', 25000, 18000, 1500], Novosibirsk: ['RU', 22000, 17000, 1400],
+  Boston: ['US', 1100, 550, 90], 'New York': ['US', 1300, 600, 132], 'Los Angeles': ['US', 1100, 520, 100], Chicago: ['US', 900, 500, 75],
+  Toronto: ['CA', 1000, 520, 156], Vancouver: ['CA', 1050, 520, 120], Montreal: ['CA', 700, 480, 94],
+  Beijing: ['CN', 3000, 1800, 200], Shanghai: ['CN', 3200, 1900, 200], Guangzhou: ['CN', 2200, 1600, 150],
 };
 
 const CITY_ATTRACTIONS = {
@@ -275,6 +355,16 @@ const CITY_ATTRACTIONS = {
   'Saint Petersburg': [['The Hermitage', 'landmark', 12, 'Three million artworks in the Winter Palace'], ['Nevsky Prospekt', 'shopping', 8, 'The grand avenue of the city'], ['Summer Garden', 'nature', 15, 'Marble statues and fountain alleys'], ['Rubinstein Street', 'food', 10, 'Bar-and-bistro street of the city'], ['New Holland Island', 'nature', 12, 'Island park with pop-ups and lawns']],
   Kazan: [['Kazan Kremlin', 'landmark', 10, 'White-walled fortress with a turquoise mosque'], ['Bauman Street', 'food', 8, 'Pedestrian mile of chak-chak and cafés'], ['Kaban Lake', 'nature', 12, 'Boardwalk embankment downtown'], ['Koltso Mall', 'shopping', 8, 'Central mall on the ring'], ['Kazan Arena', 'sports', 20, 'World-Cup stadium on the river']],
   Novosibirsk: [['Opera & Ballet Theatre', 'landmark', 10, 'The largest theatre building in Russia'], ['Ob River Embankment', 'nature', 15, "Sunset walks along Siberia's great river"], ['Central Park', 'nature', 10, 'Ferris wheel and winter ice town'], ['Aura Mall', 'shopping', 12, 'Warm refuge with 200 stores'], ['Akademgorodok', 'landmark', 30, 'The famous forest science city']],
+  Boston: [['Freedom Trail', 'landmark', 15, 'Red-brick line through 16 revolutionary sites'], ['Fenway Park', 'sports', 15, 'Oldest ballpark in America — catch a Red Sox night'], ['Quincy Market', 'food', 12, 'Food-hall colonnade beside Faneuil Hall'], ['Charles River Esplanade', 'nature', 10, 'Riverside runs with skyline views'], ['Newbury Street', 'shopping', 12, 'Brownstone mile of shops and cafés']],
+  'New York': [['Central Park', 'nature', 15, '843 acres of lawns, lakes and squirrels'], ['Times Square', 'landmark', 12, 'The neon crossroads of the world'], ['Chelsea Market', 'food', 15, 'Indoor market under the High Line'], ['Fifth Avenue', 'shopping', 10, 'Flagship-store canyon'], ['Madison Square Garden', 'sports', 12, 'Knicks nights and mega concerts']],
+  'Los Angeles': [['Santa Monica Pier', 'nature', 30, 'Ferris wheel over the Pacific'], ['Hollywood Sign', 'landmark', 35, 'Hike Griffith Park for the classic shot'], ['Grand Central Market', 'food', 20, 'Century-old downtown food hall'], ['The Grove', 'shopping', 20, 'Open-air mall beside the Farmers Market'], ['Crypto.com Arena', 'sports', 20, 'Lakers, Kings and arena-tour days']],
+  Chicago: [['Millennium Park', 'landmark', 10, 'Selfie with The Bean, concerts on the lawn'], ['Navy Pier', 'nature', 15, 'Lakefront wheel and summer fireworks'], ['West Loop', 'food', 12, 'Restaurant row on Randolph Street'], ['Magnificent Mile', 'shopping', 10, 'Michigan Avenue retail stretch'], ['Wrigley Field', 'sports', 25, 'Ivy-walled home of the Cubs']],
+  Toronto: [['CN Tower', 'landmark', 12, 'Glass-floor views from 553 metres'], ['St. Lawrence Market', 'food', 10, 'Peameal bacon sandwiches since 1803'], ['High Park', 'nature', 20, 'Cherry blossoms and lakeside trails'], ['CF Toronto Eaton Centre', 'shopping', 8, 'Glass-galleria mega mall'], ['Scotiabank Arena', 'sports', 12, 'Raptors and Maple Leafs under one roof']],
+  Vancouver: [['Stanley Park', 'nature', 15, 'Seawall cycling loop around the peninsula'], ['Granville Island', 'food', 15, 'Public market under the bridge'], ['Gastown', 'landmark', 10, 'Steam clock and cobbled brunch streets'], ['Robson Street', 'shopping', 8, 'Downtown fashion strip'], ['Rogers Arena', 'sports', 10, 'Canucks hockey nights']],
+  Montreal: [['Old Montreal', 'landmark', 12, 'Cobblestones and Notre-Dame Basilica'], ['Mount Royal', 'nature', 15, 'The lookout above the city'], ['Jean-Talon Market', 'food', 20, 'Open-air market in Little Italy'], ['Sainte-Catherine Street', 'shopping', 8, 'The longest shopping street in Canada'], ['Bell Centre', 'sports', 10, 'Canadiens hockey is a religion here']],
+  Beijing: [['Forbidden City', 'landmark', 25, 'Six hundred years of imperial halls'], ['Summer Palace', 'nature', 30, 'Lakeside temples northwest of the city'], ['Wangfujing Street', 'food', 20, 'Snack street and night stalls'], ['Sanlitun', 'nightlife', 25, 'Bar street and flagship stores'], ["Workers' Stadium", 'sports', 20, 'Beijing Guoan football nights']],
+  Shanghai: [['The Bund', 'landmark', 15, 'Colonial riverfront facing the Pudong skyline'], ['Yu Garden', 'nature', 15, 'Ming-dynasty rockeries and koi ponds'], ['Tianzifang', 'shopping', 15, 'Lane-house maze of craft shops'], ['City God Temple food street', 'food', 15, 'Soup dumplings at the source'], ['Found 158', 'nightlife', 15, 'Sunken courtyard of bars and gyms']],
+  Guangzhou: [['Canton Tower', 'landmark', 15, 'Twisting tower over the Pearl River'], ['Shamian Island', 'nature', 15, 'Banyan-lined colonial island'], ['Beijing Road', 'shopping', 12, 'Pedestrian shopping since the Song dynasty'], ['Taotaoju dim sum', 'food', 12, 'Yum cha institution since 1880'], ['Tianhe Stadium', 'sports', 15, 'Football nights in the new town']],
 };
 
 // City knowledge for the in-app assistant: [climate, safety]. Indicative,
@@ -306,6 +396,16 @@ const CITY_INFO = {
   'Saint Petersburg': ['White nights in June; winters −8 to −2°C, summers 13–23°C.', 'Tourist centre is safe; standard care in transit hubs late.'],
   Kazan: ['Continental: snowy winters −12 to −5°C, warm summers 15–25°C.', 'Calm, student-heavy city.'],
   Novosibirsk: ['Siberian: winters −20 to −12°C (dress seriously), summers 15–26°C.', 'Safe university districts; winter cold is the main risk.'],
+  Boston: ['Four proper seasons: snowy winters −6 to 4°C, warm summers 17–28°C; fall is spectacular.', 'Safe student city; usual late-night awareness downtown.'],
+  'New York': ['Hot summers 20–29°C, cold winters −3 to 6°C; every season has a mood.', 'Much safer than the movies suggest; stay aware on late-night subways.'],
+  'Los Angeles': ['Sunny and dry 14–29°C nearly all year; cool ocean-breeze evenings.', 'Neighbourhood-dependent; campus areas are safe, plan rides home at night.'],
+  Chicago: ['Windy city: icy winters −8 to 0°C, pleasant summers 17–29°C.', 'Downtown and campus areas are fine; research neighbourhoods before renting.'],
+  Toronto: ['Cold snowy winters −7 to 0°C, warm summers 15–27°C; the PATH keeps downtown walkable.', 'Consistently ranked among the safest big cities in North America.'],
+  Vancouver: ['Mildest in Canada: rainy winters 1–8°C, dry sunny summers 13–22°C.', 'Very safe; standard awareness around the Downtown Eastside.'],
+  Montreal: ['Real winters −13 to −5°C with lots of snow; joyful summers 16–26°C.', 'Safe, walkable and student-filled; icy sidewalks are the real hazard.'],
+  Beijing: ['Dry continental: cold winters −8 to 3°C, hot summers 22–31°C.', 'Very low street crime; campuses are gated and patrolled.'],
+  Shanghai: ['Humid subtropical: chilly damp winters 1–9°C, hot muggy summers 25–33°C.', 'Extremely safe at all hours; mind silent e-scooters when crossing.'],
+  Guangzhou: ['Subtropical: warm and humid 14–33°C, long summers with downpours.', 'Safe and orderly; typhoon season brings heavy rain, not trouble.'],
 };
 
 // ---------------------------------------------------------------- build data
@@ -314,6 +414,7 @@ const CITY_INFO = {
 const TEACHING_LANGUAGES = {
   AU: ['English'], GB: ['English'], NZ: ['English'], SG: ['English'],
   MY: ['English'], TW: ['Mandarin', 'English'], RU: ['Russian', 'English'],
+  US: ['English'], CA: ['English'], CN: ['Mandarin', 'English'],
 };
 const MY_MALAY_ALSO = new Set(['my-um', 'my-usm', 'my-utm']);
 
@@ -337,7 +438,84 @@ const INST_META = {
   'nz-canterbury': ['University of Canterbury', 261], 'nz-otago': ['University of Otago', 214],
   'ru-msu': ['Moscow State University', 94], 'ru-itmo': ['ITMO University', 360],
   'ru-kfu': ['Kazan Federal University', 396], 'ru-nsu': ['Novosibirsk State University', 225],
+  'us-mit': ['Massachusetts Institute of Technology', 1], 'us-bu': ['Boston University', 108],
+  'us-nyu': ['New York University', 43], 'us-ucla': ['University of California, Los Angeles', 42],
+  'us-uchicago': ['University of Chicago', 21], 'us-smc': ['Santa Monica College', null],
+  'us-ice': ['Institute of Culinary Education', null],
+  'ca-utoronto': ['University of Toronto', 25], 'ca-ubc': ['University of British Columbia', 38],
+  'ca-mcgill': ['McGill University', 29], 'ca-york': ['York University', 353],
+  'ca-georgebrown': ['George Brown College', null],
+  'cn-tsinghua': ['Tsinghua University', 20], 'cn-pku': ['Peking University', 14],
+  'cn-fudan': ['Fudan University', 39], 'cn-sysu': ['Sun Yat-sen University', 319],
+  'cn-bhi': ['Beijing Hospitality Institute', null],
+  'au-angliss': ['William Angliss Institute', null], 'my-berjaya': ['Berjaya University College', null],
+  'tw-nkuht': ['National Kaohsiung University of Hospitality and Tourism', null],
+  'gb-lcb': ['Le Cordon Bleu', null], 'nz-lcb': ['Le Cordon Bleu', null],
+  'sg-shatec': ['SHATEC', null],
+  'my-monash': ['Monash University Malaysia Campus', null], 'cn-nyush': ['New York University Shanghai', null],
 };
+
+// Verified real campus photos (Wikimedia Commons filenames) resolved from each
+// institution's Wikidata "image" claim (P18) — the human-curated photo of the
+// subject, never its coat of arms/logo — or, where no P18 exists, a manually
+// checked photo from the article's media list. Verified 2026-08-03.
+// Institutions absent here have no usable free photo → abstract placeholder.
+const INST_PHOTO = {
+  'au-monash': 'Monashcaulfield2.jpg',
+  'au-sydney': 'University of Sydney Main Quadrangle.jpg',
+  'au-uq': 'UQ-SteeleBldg800.jpg',
+  'au-unsw': 'Main Walkway, Lower campus UNSW.jpg',
+  'au-unimelb': 'Trinity college university of melbourne.jpg',
+  'au-rmit': 'RMIT University Building 01.jpg',
+  'my-um': 'Universiti Malaya KL gate.jpg',
+  'my-taylors': 'Taylors Lakeside Campus.jpg',
+  'my-sunway': 'Sunway University (New Building) - 2015.jpg',
+  'my-mmu': 'Multimedia University.JPG',
+  'my-usm': 'Main gate at the Universiti Sains Malaysia.jpg',
+  'tw-ntu': 'National Taiwan University Library 20060802.jpg',
+  'tw-nthu': 'NTHU entrance.JPG',
+  'tw-fcu': 'Feng Chia University in Central Taiwan Science Park.JPG',
+  'tw-nsysu': '2017 NSYSU maingate.jpg',
+  'gb-manchester': 'Whitworth Hall.jpg',
+  'gb-leeds': 'Parkinson Building, Leeds University, England-12Sept2010.jpg',
+  'gb-birmingham': 'Aston Webb buildings in snow, The University of Birmingham, Dec 2009.jpg',
+  'gb-ucl': 'Wilkins Building 1, UCL, London - Diliff.jpg',
+  'gb-kcl': 'Strand102.jpg',
+  'gb-edinburgh': 'Old College Quad.jpg',
+  'sg-nus': 'NUS, University Cultural Centre 3, Nov 06.JPG',
+  'sg-ntusg': 'NTU Administration Building.JPG',
+  'sg-smu': 'Singapore Management University, Jan 06.JPG',
+  'nz-auckland': 'Faculty of Medical and Health Sciences, University of Auckland.jpg',
+  'nz-vuw': 'VUW-Kelburn.jpg',
+  'nz-canterbury': 'UC CentralLibrary01 gobeirne.jpg',
+  'nz-otago': 'University of Otago.jpg',
+  'ru-msu': 'МГУ, вид с воздуха.jpg',
+  'ru-itmo': "ITMO University's main building, August 2016.jpg",
+  'ru-kfu': 'Kazan State University from the 2 Korpus.jpg',
+  'ru-nsu': 'Akademgorodok NSU Interweek.jpg',
+  'us-mit': 'MIT Dome night1 Edit.jpg',
+  'us-bu': 'BU College of Communication.jpg',
+  'us-nyu': 'NYU07.JPG',
+  'us-ucla': 'Royce Hall, University of California, Los Angeles (23-09-2003).jpg',
+  'us-uchicago': 'Campus Spring.jpg',
+  'us-smc': 'Smctheaterartsbuilding.JPG',
+  'ca-utoronto': 'UofTConvocationHall.jpg',
+  'ca-ubc': 'Irving K. Barber Library.jpg',
+  'ca-mcgill': 'Arts Building, McGill University, Aug 31 2022.jpg',
+  'ca-york': 'YorkUComputerScienceAndEngineeringBuilding.jpg',
+  'ca-georgebrown': 'GBC Casa Loma 02.jpg',
+  'cn-tsinghua': 'Thu gate.JPG',
+  'cn-pku': 'PekingUniversityPic6.jpg',
+  'cn-fudan': 'Fudan university.jpg',
+  'cn-sysu': 'Zhongda ZH3.jpg',
+  'my-berjaya': 'Berjaya Times Square (211030).jpg',
+  'gb-lcb': 'Paris 06 2012 Cordon Bleu 3149.jpg',
+  'nz-lcb': 'Paris 06 2012 Cordon Bleu 3149.jpg',
+  'my-monash': 'Cmglee Sunway Monash University.jpg',
+  'cn-nyush': 'NYUSH Lujiazui Building.jpg',
+};
+const commonsPhoto = (name) =>
+  `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(name.replace(/ /g, '_'))}?width=1000`;
 
 const institutions = INSTITUTIONS.map(([id, name, short, country, city, type, verified, tagline, founded, students, website]) => ({
   id, name, short, country, city, type,
@@ -346,8 +524,24 @@ const institutions = INSTITUTIONS.map(([id, name, short, country, city, type, ve
   logo: `https://logo.clearbit.com/${new URL(website).hostname.replace(/^www\./, '')}`,
   wikipedia: INST_META[id][0],
   ranking: INST_META[id][1],
-  images: [0, 1, 2].map((n) => `https://picsum.photos/seed/${id}-${n}/800/500`),
+  images: [
+    ...(INST_PHOTO[id] ? [commonsPhoto(INST_PHOTO[id])] : []),
+    ...(INST_PHOTO[id] ? [1, 2] : [0, 1, 2]).map((n) => `https://picsum.photos/seed/${id}-${n}/800/500`),
+  ],
 }));
+
+// Cross-link branch campuses (denormalised so the UI needs no extra lookup).
+for (const pair of BRANCHES) {
+  for (const id of pair) {
+    const self = institutions.find((x) => x.id === id);
+    self.campuses = pair
+      .filter((other) => other !== id)
+      .map((other) => {
+        const o = institutions.find((x) => x.id === other);
+        return { id: o.id, name: o.name, city: o.city, country: o.country };
+      });
+  }
+}
 
 function nextIntakes(country, count = 4) {
   const months = COUNTRIES[country].intakeMonths;
@@ -365,10 +559,10 @@ function nextIntakes(country, count = 4) {
 }
 
 const MED_RECOGNITION = {
-  MY: ['AU', 'GB', 'NZ', 'MY'], SG: ['AU', 'GB', 'NZ', 'SG'], TW: ['AU', 'GB', 'TW'],
-  CN: ['GB', 'AU', 'RU'], ID: ['AU', 'GB', 'MY'], VN: ['AU', 'GB', 'RU'],
+  MY: ['AU', 'GB', 'NZ', 'MY', 'US', 'CA'], SG: ['AU', 'GB', 'NZ', 'SG', 'US', 'CA'], TW: ['AU', 'GB', 'TW', 'US'],
+  CN: ['GB', 'AU', 'RU', 'CN', 'US'], ID: ['AU', 'GB', 'MY', 'US'], VN: ['AU', 'GB', 'RU', 'US'],
 };
-const COMMON_LAW = ['GB', 'AU', 'NZ', 'SG', 'MY'];
+const COMMON_LAW = ['GB', 'AU', 'NZ', 'SG', 'MY', 'US', 'CA'];
 
 function recognitionFor(field, isMed, dest) {
   const out = {};
@@ -405,6 +599,8 @@ for (const [rowIndex, row] of INSTITUTIONS.entries()) {
       const idx = (rowIndex + k) % names.length;
       if (used.has(idx)) continue;
       if (field === 'health' && idx === 1) continue;
+      // No undergraduate LLB in the US/Canada — law there is a graduate degree.
+      if (field === 'law' && idx === 0 && ['US', 'CA'].includes(country)) continue;
       specs.push([field, idx, 'b', Math.max(1, band)]);
       used.add(idx);
       added += 1;
@@ -414,14 +610,14 @@ for (const [rowIndex, row] of INSTITUTIONS.entries()) {
     const level = levelCode === 'b' ? 'bachelor' : levelCode === 'f' ? 'foundation' : 'diploma';
     const isMed = level === 'bachelor' && field === 'health' && nameIdx === 1;
     const name = level === 'bachelor' ? COURSE_NAMES[field][nameIdx] : PATHWAY_NAMES[level === 'foundation' ? 'foundation' : 'diploma'][field] ?? `${level === 'foundation' ? 'Foundation' : 'Diploma'} in ${field}`;
-    const base = isMed ? TUITION[country].med : TUITION[country][field];
+    const base = (isMed ? TUITION[country].med : TUITION[country][field]) * (TUITION_MULT[instId] ?? 1);
     const levelMult = level === 'foundation' ? 0.55 : level === 'diploma' ? 0.65 : 1;
     const selMult = level === 'bachelor' ? 0.85 + 0.09 * band : 1;
     const tuitionPerYear = round50(base * levelMult * selMult);
     const durationYears = level === 'foundation' ? 1 : level === 'diploma' ? 2
-      : isMed ? (['TW', 'RU'].includes(country) ? 6 : 5)
+      : isMed ? (['TW', 'RU', 'CN'].includes(country) ? 6 : 5)
       : field === 'engineering' ? 4
-      : ['TW', 'RU'].includes(country) ? 4 : 3;
+      : ['TW', 'RU', 'US', 'CA', 'CN'].includes(country) ? 4 : 3;
     const ielts = level === 'foundation' ? 5.0 : level === 'diploma' ? 5.5 : isMed ? 7.0 : ENGLISH_BY_FIELD[field];
     const requiredDocuments = ['transcript', 'certificate', 'passport', 'english', 'statement', 'financial'];
     if (field === 'law' || field === 'education' || isMed) requiredDocuments.push('recommendation');
@@ -486,11 +682,22 @@ const RENT_DETAIL = {
   'Saint Petersburg': [22000, 32000, 38000, 55000, 48000, 70000],
   Kazan: [15000, 22000, 26000, 38000, 33000, 48000],
   Novosibirsk: [13000, 19000, 23000, 33000, 30000, 43000],
+  Boston: [1100, 1500, 2400, 3000, 2800, 3600],
+  'New York': [1300, 1800, 2800, 3800, 3200, 4500],
+  'Los Angeles': [1100, 1500, 2200, 2900, 2600, 3400],
+  Chicago: [900, 1200, 1800, 2400, 2100, 2900],
+  Toronto: [1000, 1400, 1900, 2400, 2200, 2900],
+  Vancouver: [1050, 1450, 2000, 2500, 2300, 3000],
+  Montreal: [700, 950, 1300, 1700, 1500, 2000],
+  Beijing: [3000, 4500, 5500, 8000, 7000, 11000],
+  Shanghai: [3200, 5000, 6000, 8500, 7500, 12000],
+  Guangzhou: [2200, 3200, 4000, 6000, 5000, 8000],
 };
 // [utilities+internet+mobile per person / month, cheap eating-out meal]
 const LIVING_EXTRA = {
   AU: [220, 22], MY: [250, 12], TW: [2200, 120], GB: [160, 14],
   SG: [180, 9], NZ: [200, 20], RU: [6000, 500],
+  US: [180, 18], CA: [150, 17], CN: [400, 25],
 };
 
 const cityInfo = Object.entries(CITY_INFO).map(([city, [climate, safety]]) => ({
@@ -565,6 +772,10 @@ const scholarships = [
   ['sch-21', 'Hospitality Futures Bursary', 'Global Hotels Group (mock)', 'any', ['hospitality'], 'any', 'partial', { amount: 4000, currency: 'USD' }, '2027-02-15', 'Includes a paid internship placement.'],
   ['sch-22', 'HealthCare Heroes Grant', 'HealthBridge Foundation (mock)', 'any', ['health'], 'any', 'partial', { percentTuition: 25 }, '2027-03-01', 'For future nurses, pharmacists and doctors.'],
   ['sch-23', 'Kingsford Culinary Excellence Award', 'Kingsford Hospitality College', 'AU', ['hospitality'], 'any', 'partial', { percentTuition: 30 }, '2026-10-20', 'Includes a stage at a hatted Melbourne kitchen.'],
+  ['sch-24', 'North Star International Merit Award', 'UniBridge US Partners (mock)', 'US', 'any', 'any', 'partial', { percentTuition: 30 }, '2026-12-05', 'Merit-based; automatic consideration with strong grades and essays.'],
+  ['sch-25', 'Maple Leaf International Grant', 'Maple Education Foundation (mock)', 'CA', 'any', 'any', 'partial', { amount: 12000, currency: 'CAD' }, '2027-01-25', 'One-year award for first-year international students.'],
+  ['sch-26', 'China Silk Road Scholarship', 'CSC (mock)', 'CN', 'any', 'any', 'full', { percentTuition: 100, stipendMonthly: 2500 }, '2026-11-20', 'Full tuition, dormitory and monthly stipend; Mandarin course included.'],
+  ['sch-27', 'Global Culinary Talent Bursary', 'World Chefs Alliance (mock)', 'any', ['hospitality'], 'any', 'partial', { amount: 6000, currency: 'USD' }, '2027-02-10', 'For culinary, baking and pastry programmes; tasting-day audition.'],
 ].map(([id, name, provider, destinationCountry, fields, nationalities, coverageType, money, deadline, eligibilityNote]) => ({
   id, name, provider, destinationCountry, fields, nationalities, coverageType, ...money, deadline, eligibilityNote,
 }));
@@ -587,6 +798,10 @@ const AMB = [
   ['Hui Min Teo', 'MY', 'gb-edinburgh', 'Bachelor of Science (Physics)', 3, 'Lab days, Munro weekends. Edinburgh winters are survivable, promise.', 20],
   ['Xin Yi Loh', 'MY', 'my-mmu', 'Bachelor of Software Engineering', 2, 'Cyberjaya nights, Grab-ride playlists, and open-source everything.', 31],
   ['Anastasia Kim', 'CN', 'ru-itmo', 'Bachelor of Software Engineering', 3, 'Harbin → St Petersburg. White nights make exam season weirdly fun.', 24],
+  ['Grace Huang', 'TW', 'us-nyu', 'Bachelor of Banking & Finance', 2, 'Taipei → Manhattan. Museum member, bagel critic, spreadsheet queen.', 35],
+  ['Daniel Wong', 'MY', 'ca-utoronto', 'Bachelor of Computer Science', 3, 'KL to Toronto. Yes you survive −15°C — layering guide in my posts.', 13],
+  ['Xiao Chen', 'CN', 'cn-tsinghua', 'Bachelor of Engineering (Electrical)', 2, 'Beijing native. Campus bike routes and dorm hacks for internationals.', 52],
+  ['Amira Binti Salleh', 'MY', 'ca-georgebrown', 'Bachelor of Culinary Arts Management', 1, 'From Penang kopitiam to Toronto test kitchens. Knife kit always packed.', 29],
 ];
 const POST_TEXTS = [
   'Orientation week done! The seniors literally walk you to your first class here.',
@@ -613,7 +828,7 @@ const ambassadors = AMB.map(([name, homeCountry, institutionId, courseName, year
 
 // ----------------------------------------------------------------- community
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const groupInsts = ['au-monash', 'au-unsw', 'my-um', 'my-taylors', 'tw-ntu', 'gb-manchester', 'sg-nus', 'nz-auckland', 'ru-itmo'];
+const groupInsts = ['au-monash', 'au-unsw', 'my-um', 'my-taylors', 'tw-ntu', 'gb-manchester', 'sg-nus', 'nz-auckland', 'ru-itmo', 'us-nyu', 'ca-utoronto', 'cn-tsinghua'];
 const intakeGroups = groupInsts.map((iid) => {
   const inst = institutions.find((x) => x.id === iid);
   const intake = nextIntakes(inst.country, 4).find((x) => x.startsWith('2027'));
@@ -689,6 +904,10 @@ const EVENTS = [
   ['Taipei Language Exchange Night', 'Taipei', 'TW', '2026-10-08', "Da'an Community Hall", false, 'meetup', 'Practise Mandarin over bubble tea with local buddies.'],
   ['Auckland Harbour Walk & Welcome', 'Auckland', 'NZ', '2027-02-27', 'Wynyard Quarter', false, 'meetup', 'Casual walk and gelato for new internationals.'],
   ['Moscow Winter Survival Workshop', 'Moscow', 'RU', '2026-12-05', 'MSU Main Building Hall B', false, 'meetup', 'What to wear, how to metro, and where to buy it all.'],
+  ['USA University Fair', 'New York', 'US', '2026-10-10', 'Javits Center', true, 'expo', 'Ivy League to state schools — admissions and financial-aid booths in one hall.'],
+  ['Canada Education Fair', 'Toronto', 'CA', '2026-11-21', 'Metro Toronto Convention Centre', true, 'expo', 'Universities and colleges from every province; study-permit clinic on site.'],
+  ['China International Education Expo', 'Beijing', 'CN', '2026-10-31', 'China National Convention Center', false, 'expo', 'English-taught degree programmes and scholarship counters.'],
+  ['Toronto Winter Welcome Skate', 'Toronto', 'CA', '2027-01-23', 'Nathan Phillips Square Rink', false, 'meetup', 'Free skate rentals for new internationals — hot chocolate on us.'],
 ];
 const events = EVENTS.map(([title, city, country, date, venue, sponsored, kind, description], i) => ({
   id: `evt-${String(i + 1).padStart(2, '0')}`,
@@ -705,6 +924,9 @@ const PREDEP = {
   SG: ['Receive IPA letter from ICA', 'Complete medical examination form', 'Show proof of funds', 'Apply for hostel or HDB room rental', 'Get a prepaid tourist SIM, upgrade later', 'Open a bank account with passport + IPA', 'Plan MRT route from Changi', 'Complete Student Pass formalities on arrival'],
   NZ: ['Confirm offer and pay first-year fees', 'Apply for Fee-Paying Student Visa', 'Show NZD 20,000 living funds', 'Book halls of residence or flat', 'Order a NZ SIM or eSIM', 'Open a bank account before arrival online', 'Book SkyDrive or airport shuttle', 'Declare all food items on arrival card'],
   RU: ['Receive official invitation letter', 'Apply for study visa at consulate', 'Prepare notarised translated documents', 'Confirm dormitory allocation', 'Buy a local SIM with passport', 'Carry some cash roubles for first week', 'Arrange university airport pickup', 'Register migration card within 7 days'],
+  US: ['Receive Form I-20 from your university', 'Pay the SEVIS I-901 fee', 'Book F-1 visa interview at the embassy', 'Show proof of funds for year one', 'Arrange on-campus housing or apartment', 'Get a US SIM or eSIM plan', 'Open a US student bank account after arrival', 'Carry I-20 and admission letter in hand luggage'],
+  CA: ['Receive Letter of Acceptance (LOA)', 'Apply for study permit online', 'Buy a GIC if using the SDS stream', 'Book biometrics appointment', 'Arrange residence or homestay', 'Get a Canadian SIM plan', 'Open a student bank account (GIC bank)', 'Print the Port of Entry letter for arrival'],
+  CN: ['Receive admission notice and JW202 form', 'Apply for X1 student visa', 'Prepare notarised transcripts and health form', 'Confirm on-campus dormitory booking', 'Get a local SIM with your passport', 'Set up Alipay/WeChat Pay with a foreign card', 'Register with campus police within 24 hours', 'Convert visa to residence permit in 30 days'],
 };
 const CATEGORIES = ['visa', 'insurance', 'money', 'housing', 'sim', 'banking', 'other', 'other'];
 const predeparture = {
@@ -717,8 +939,29 @@ const predeparture = {
     SG: { country: 'SG', hoursPerWeekTerm: 16, breakRule: 'Full-time during vacation with pass', note: 'Only at approved institutions; 16 hours per week in term (mock).' },
     NZ: { country: 'NZ', hoursPerWeekTerm: 20, breakRule: 'Full-time during scheduled holidays', note: '20 hours per week during study on a Fee-Paying Student Visa (mock).' },
     RU: { country: 'RU', hoursPerWeekTerm: 20, breakRule: 'Free during official university holidays', note: 'Requires a work permit unless working at your own university (mock).' },
+    US: { country: 'US', hoursPerWeekTerm: 20, breakRule: 'Full-time on campus during breaks', note: 'F-1 students: on-campus work only during term; off-campus needs CPT/OPT approval (mock).' },
+    CA: { country: 'CA', hoursPerWeekTerm: 24, breakRule: 'Full-time during scheduled breaks', note: 'Off-campus work up to 24 hours per week during term on a study permit (mock).' },
+    CN: { country: 'CN', hoursPerWeekTerm: 8, breakRule: 'Internships only, with approvals', note: 'Work-study needs university and immigration approval; most students stick to campus internships (mock).' },
   },
 };
+
+// ------------------------------------------------------------------ flights
+// Round-trip economy fares home, USD, [low season, peak season/holidays].
+// Indicative 2026 averages from public fare aggregators; [0, 0] = home city
+// equals study destination (no flight needed).
+const FLIGHTS = {
+  AU: { MY: [350, 700], TW: [500, 900], SG: [400, 750], ID: [400, 800], VN: [450, 850], CN: [500, 950] },
+  MY: { MY: [80, 160], TW: [180, 350], SG: [60, 140], ID: [100, 220], VN: [120, 250], CN: [250, 500] },
+  TW: { MY: [200, 400], TW: [60, 120], SG: [220, 420], ID: [280, 520], VN: [180, 350], CN: [200, 400] },
+  GB: { MY: [650, 1100], TW: [700, 1200], SG: [650, 1150], ID: [700, 1200], VN: [700, 1200], CN: [600, 1100] },
+  SG: { MY: [80, 180], TW: [220, 420], SG: [0, 0], ID: [120, 250], VN: [150, 300], CN: [280, 550] },
+  NZ: { MY: [500, 950], TW: [600, 1100], SG: [550, 1000], ID: [550, 1050], VN: [600, 1100], CN: [600, 1150] },
+  RU: { MY: [550, 950], TW: [600, 1050], SG: [550, 950], ID: [600, 1050], VN: [500, 900], CN: [400, 750] },
+  US: { MY: [900, 1500], TW: [700, 1300], SG: [850, 1450], ID: [900, 1550], VN: [800, 1400], CN: [700, 1300] },
+  CA: { MY: [900, 1500], TW: [750, 1300], SG: [900, 1500], ID: [950, 1600], VN: [850, 1450], CN: [750, 1350] },
+  CN: { MY: [250, 500], TW: [300, 550], SG: [280, 550], ID: [350, 650], VN: [200, 400], CN: [80, 180] },
+};
+const flights = { currency: 'USD', roundTrip: true, fares: FLIGHTS };
 
 // -------------------------------------------------------------------- vault
 const documents = [
@@ -800,6 +1043,7 @@ const files = {
   'predeparture.json': predeparture,
   'documents.json': documents,
   'seed.json': seed_,
+  'flights.json': flights,
 };
 for (const [file, data] of Object.entries(files)) {
   writeFileSync(join(OUT, file), JSON.stringify(data, null, 2) + '\n');

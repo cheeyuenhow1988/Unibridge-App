@@ -16,8 +16,10 @@ import { ErrorState } from '@/components/ui/States';
 import { Text } from '@/components/ui/Text';
 import { FLAGS } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
+import { useAsync } from '@/hooks/useAsync';
 import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
+import { getFlightFares } from '@/services/api';
 import { costBreakdown } from '@/services/costs';
 import { convert, formatDual, formatMoney, homeCurrencyFor } from '@/services/currency';
 import { pathwayRoutesFor } from '@/services/eligibility';
@@ -39,6 +41,7 @@ export default function CourseDetail() {
   const { matchData, profile, loading, error, retry } = useMatchData();
   const savedIds = useSavedStore((s) => s.savedCourseIds);
   const [costSheetOpen, setCostSheetOpen] = useState(false);
+  const flights = useAsync(() => getFlightFares(), []);
   const toggleSavedRaw = useSavedStore((s) => s.toggleSaved);
   const { t: tSave } = useTranslation();
   const toggleSaved = (id: string, wasSaved: boolean) => {
@@ -73,6 +76,7 @@ export default function CourseDetail() {
 
   const { course, institution } = result;
   const saved = savedIds.includes(course.id);
+  const fare = flights.data?.fares[course.country]?.[profile.homeCountry];
   const statusColor = { eligible: colors.eligible, borderline: colors.borderline, pathway: colors.pathway }[result.status];
 
   const costRow = (label: string, amount: number, note?: string) => (
@@ -237,6 +241,23 @@ export default function CourseDetail() {
               </View>
             </Row>
           </Card>
+
+          {fare && fare[0] > 0 ? (
+            <Card tone="alt" onPress={() => setCostSheetOpen(true)} style={{ gap: 4 }}>
+              <Row style={{ justifyContent: 'space-between' }}>
+                <Row gap={spacing.sm}>
+                  <Ionicons name="airplane-outline" size={18} color={colors.accent} />
+                  <Text variant="label">{t('course.flights')}</Text>
+                </Row>
+                <Text variant="label">
+                  {formatMoney(Math.round(convert(fare[0], 'USD', home)), home)}
+                  {' – '}
+                  {formatMoney(Math.round(convert(fare[1], 'USD', home)), home)}
+                </Text>
+              </Row>
+              <Text variant="caption" tone="faint">{t('course.flightsNote')}</Text>
+            </Card>
+          ) : null}
 
           <Card tone="alt" style={{ gap: 4 }}>
             <Row style={{ justifyContent: 'space-between' }}>

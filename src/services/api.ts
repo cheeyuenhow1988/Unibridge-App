@@ -15,9 +15,10 @@ import communityData from '@/data/community.json';
 import predepartureData from '@/data/predeparture.json';
 import documentsData from '@/data/documents.json';
 import seedData from '@/data/seed.json';
+import flightsData from '@/data/flights.json';
 import type {
   Ambassador, Application, Attraction, CityInfo, CommunityEvent, CostOfLiving, CountryCode, Course,
-  Coursemate, DocumentTypeId, GroupMessage, Institution, IntakeGroup, PredepartureItem,
+  Coursemate, DocumentTypeId, FlightFares, GroupMessage, Institution, IntakeGroup, PredepartureItem,
   QualificationSystem, Scholarship, StudentProfile, WorkRights,
 } from '@/types/models';
 
@@ -77,6 +78,10 @@ export async function getCostOfLiving(city: string): Promise<CostOfLiving | unde
 
 export async function listCityInfo(): Promise<CityInfo[]> {
   return simulate(cityInfoData as CityInfo[], 150);
+}
+
+export async function getFlightFares(): Promise<FlightFares> {
+  return simulate(flightsData as unknown as FlightFares, 100);
 }
 
 export async function listScholarships(): Promise<Scholarship[]> {

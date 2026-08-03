@@ -323,5 +323,58 @@
     "percentTuition": 30,
     "deadline": "2026-10-20",
     "eligibilityNote": "Includes a stage at a hatted Melbourne kitchen."
+  },
+  {
+    "id": "sch-24",
+    "name": "North Star International Merit Award",
+    "provider": "UniBridge US Partners (mock)",
+    "destinationCountry": "US",
+    "fields": "any",
+    "nationalities": "any",
+    "coverageType": "partial",
+    "percentTuition": 30,
+    "deadline": "2026-12-05",
+    "eligibilityNote": "Merit-based; automatic consideration with strong grades and essays."
+  },
+  {
+    "id": "sch-25",
+    "name": "Maple Leaf International Grant",
+    "provider": "Maple Education Foundation (mock)",
+    "destinationCountry": "CA",
+    "fields": "any",
+    "nationalities": "any",
+    "coverageType": "partial",
+    "amount": 12000,
+    "currency": "CAD",
+    "deadline": "2027-01-25",
+    "eligibilityNote": "One-year award for first-year international students."
+  },
+  {
+    "id": "sch-26",
+    "name": "China Silk Road Scholarship",
+    "provider": "CSC (mock)",
+    "destinationCountry": "CN",
+    "fields": "any",
+    "nationalities": "any",
+    "coverageType": "full",
+    "percentTuition": 100,
+    "stipendMonthly": 2500,
+    "deadline": "2026-11-20",
+    "eligibilityNote": "Full tuition, dormitory and monthly stipend; Mandarin course included."
+  },
+  {
+    "id": "sch-27",
+    "name": "Global Culinary Talent Bursary",
+    "provider": "World Chefs Alliance (mock)",
+    "destinationCountry": "any",
+    "fields": [
+      "hospitality"
+    ],
+    "nationalities": "any",
+    "coverageType": "partial",
+    "amount": 6000,
+    "currency": "USD",
+    "deadline": "2027-02-10",
+    "eligibilityNote": "For culinary, baking and pastry programmes; tasting-day audition."
   }
 ]

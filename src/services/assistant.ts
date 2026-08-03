@@ -3,13 +3,15 @@ import type { MatchData } from '@/hooks/useMatchData';
 import { convert, formatMoney } from '@/services/currency';
 import { trueAnnualIn } from '@/services/costs';
 import type {
-  CityInfo, CountryCode, CurrencyCode, FieldId, Institution, MatchResult, StudentProfile,
+  CityInfo, CountryCode, CurrencyCode, FieldId, FlightFares, Institution, MatchResult, StudentProfile,
 } from '@/types/models';
 
 export interface QuickReply {
   label: string;
   send: string;
   intent: string;
+  /** Set → tapping navigates to this in-app screen instead of sending a message. */
+  route?: string;
 }
 
 /** Multi-step interview state: field → budget → climate → recommendation. */
@@ -33,6 +35,7 @@ export interface AssistantCtx {
   matchData: MatchData;
   institutions: Institution[];
   cityInfo: CityInfo[];
+  flights: FlightFares;
   home: CurrencyCode;
 }
 
@@ -89,9 +92,9 @@ const INTEREST_FIELDS: Record<string, FieldId[]> = {
 
 const WHERE_COUNTRIES: Record<string, CountryCode[]> = {
   warm: ['MY', 'SG', 'TW', 'AU'],
-  cool: ['GB', 'NZ', 'RU'],
-  english: ['AU', 'GB', 'NZ', 'SG'],
-  cheap: ['MY', 'TW', 'RU'],
+  cool: ['GB', 'NZ', 'RU', 'CA'],
+  english: ['AU', 'GB', 'NZ', 'SG', 'US', 'CA'],
+  cheap: ['MY', 'TW', 'RU', 'CN'],
 };
 
 // Free-text field detection for the interview (en + basic ms/zh keywords).
@@ -205,6 +208,16 @@ function interestChips(ctx: AssistantCtx): QuickReply[] {
   }));
 }
 
+/** "Open <uni> ↗" chips — tap to jump to the course page (official website lives there too). */
+function openChips(results: MatchResult[], ctx: AssistantCtx): QuickReply[] {
+  return results.map((r) => ({
+    label: ctx.t('assistant.chipOpen', { name: r.institution.short }),
+    send: ctx.t('assistant.chipOpen', { name: r.institution.short }),
+    intent: `open:${r.course.id}`,
+    route: `/course/${r.course.id}`,
+  }));
+}
+
 function recommend(results: MatchResult[], ctx: AssistantCtx, introKey: string, introOpts?: Record<string, unknown>): AssistantReply {
   // One course per institution so the top-3 spans different universities.
   const ranked = rank(results, ctx);
@@ -220,6 +233,7 @@ function recommend(results: MatchResult[], ctx: AssistantCtx, introKey: string, 
   const lines = top.map((r) => `• ${courseLine(r, ctx)}`).join('\n');
   return {
     text: `${ctx.t(introKey, introOpts)}\n\n${lines}\n\n${ctx.t('assistant.openMatchHint')}`,
+    chips: openChips(top, ctx),
   };
 }
 
@@ -235,15 +249,22 @@ function cityAnswer(city: CityInfo, sub: string, ctx: AssistantCtx): AssistantRe
   if (sub === 'safety') return { text: t('assistant.citySafety', { city: city.city, safety: city.safety }), chips };
   if (sub === 'cost' && col) {
     const monthly = col.rentMonthly + col.foodMonthly + col.transportMonthly;
+    const fare = ctx.flights.fares[city.country]?.[ctx.profile.homeCountry];
+    const flightLine = fare && fare[0] > 0
+      ? `\n\n${t('assistant.cityFlight', {
+          low: formatMoney(Math.round(convert(fare[0], 'USD', ctx.home)), ctx.home),
+          peak: formatMoney(Math.round(convert(fare[1], 'USD', ctx.home)), ctx.home),
+        })}`
+      : '';
     return {
-      text: t('assistant.cityCost', {
+      text: `${t('assistant.cityCost', {
         city: city.city,
         rent: formatMoney(col.rentMonthly, col.currency),
         food: formatMoney(col.foodMonthly, col.currency),
         transport: formatMoney(col.transportMonthly, col.currency),
         total: formatMoney(monthly, col.currency),
         homeTotal: formatMoney(convert(monthly, col.currency, ctx.home), ctx.home),
-      }),
+      })}${flightLine}`,
       chips,
     };
   }
@@ -258,14 +279,19 @@ function budgetAnswer(amount: number, ctx: AssistantCtx): AssistantReply {
   const eligible = ctx.matchData.results.filter((r) => r.status === 'eligible' && r.course.level === 'bachelor');
   const affordable = eligible.filter((r) => annualCost(r, ctx) <= amount);
   if (affordable.length === 0) {
-    const cheapest = rank(eligible, ctx).slice(0, 2).map((r) => `• ${courseLine(r, ctx)}`).join('\n');
-    return { text: `${t('assistant.budgetNone', { amount: formatMoney(amount, ctx.home) })}\n\n${cheapest}` };
+    const cheapestTop = rank(eligible, ctx).slice(0, 2);
+    const cheapest = cheapestTop.map((r) => `• ${courseLine(r, ctx)}`).join('\n');
+    return {
+      text: `${t('assistant.budgetNone', { amount: formatMoney(amount, ctx.home) })}\n\n${cheapest}`,
+      chips: openChips(cheapestTop, ctx),
+    };
   }
   const top = affordable.sort((a, b) => annualCost(a, ctx) - annualCost(b, ctx)).slice(0, 3);
   return {
     text: `${t('assistant.budgetAnswer', { amount: formatMoney(amount, ctx.home), count: affordable.length })}\n\n${top
       .map((r) => `• ${courseLine(r, ctx)}`)
       .join('\n')}\n\n${t('assistant.budgetNote')}`,
+    chips: openChips(top, ctx),
   };
 }
 
@@ -356,6 +382,12 @@ export function respond(query: string, ctx: AssistantCtx, intent?: string): Assi
         website: inst.website,
       }),
       chips: [
+        {
+          label: t('assistant.chipOpen', { name: inst.short }),
+          send: t('assistant.chipOpen', { name: inst.short }),
+          intent: `open-inst:${inst.id}`,
+          route: `/institution/${inst.id}`,
+        },
         { label: t('assistant.chipCityWeather', { city: inst.city }), send: t('assistant.chipCityWeather', { city: inst.city }), intent: `city:${inst.city}:weather` },
         { label: t('assistant.chipCityCost', { city: inst.city }), send: t('assistant.chipCityCost', { city: inst.city }), intent: `city:${inst.city}:cost` },
       ],

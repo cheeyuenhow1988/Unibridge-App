@@ -5,63 +5,84 @@
       "institutionId": "au-monash",
       "intake": "2027-02",
       "name": "Monash Feb 2027",
-      "members": 67
+      "members": 107
     },
     {
       "id": "grp-au-unsw-2027-02",
       "institutionId": "au-unsw",
       "intake": "2027-02",
       "name": "UNSW Feb 2027",
-      "members": 105
+      "members": 189
     },
     {
       "id": "grp-my-um-2027-01",
       "institutionId": "my-um",
       "intake": "2027-01",
       "name": "UM Jan 2027",
-      "members": 43
+      "members": 190
     },
     {
       "id": "grp-my-taylors-2027-01",
       "institutionId": "my-taylors",
       "intake": "2027-01",
       "name": "Taylor's Jan 2027",
-      "members": 55
+      "members": 163
     },
     {
       "id": "grp-tw-ntu-2027-02",
       "institutionId": "tw-ntu",
       "intake": "2027-02",
       "name": "NTU Feb 2027",
-      "members": 156
+      "members": 55
     },
     {
       "id": "grp-gb-manchester-2027-01",
       "institutionId": "gb-manchester",
       "intake": "2027-01",
       "name": "Manchester Jan 2027",
-      "members": 170
+      "members": 45
     },
     {
       "id": "grp-sg-nus-2027-01",
       "institutionId": "sg-nus",
       "intake": "2027-01",
       "name": "NUS Jan 2027",
-      "members": 212
+      "members": 88
     },
     {
       "id": "grp-nz-auckland-2027-02",
       "institutionId": "nz-auckland",
       "intake": "2027-02",
       "name": "Auckland Feb 2027",
-      "members": 198
+      "members": 166
     },
     {
       "id": "grp-ru-itmo-2027-02",
       "institutionId": "ru-itmo",
       "intake": "2027-02",
       "name": "ITMO Feb 2027",
-      "members": 123
+      "members": 88
+    },
+    {
+      "id": "grp-us-nyu-2027-01",
+      "institutionId": "us-nyu",
+      "intake": "2027-01",
+      "name": "NYU Jan 2027",
+      "members": 194
+    },
+    {
+      "id": "grp-ca-utoronto-2027-01",
+      "institutionId": "ca-utoronto",
+      "intake": "2027-01",
+      "name": "UofT Jan 2027",
+      "members": 152
+    },
+    {
+      "id": "grp-cn-tsinghua-2027-03",
+      "institutionId": "cn-tsinghua",
+      "intake": "2027-03",
+      "name": "Tsinghua Mar 2027",
+      "members": 203
     }
   ],
   "groupMessages": [
@@ -640,6 +661,198 @@
       "avatar": "https://i.pravatar.cc/100?img=26",
       "text": "Anyone else flying in from KL? Thinking of booking the same flight.",
       "time": "2026-07-25T14:59:00Z"
+    },
+    {
+      "id": "grp-us-nyu-2027-01-m1",
+      "groupId": "grp-us-nyu-2027-01",
+      "author": "Hui Min",
+      "avatar": "https://i.pravatar.cc/100?img=20",
+      "text": "Making a spreadsheet of who lands when — drop your flight if you want airport buddies.",
+      "time": "2026-07-18T18:00:00Z"
+    },
+    {
+      "id": "grp-us-nyu-2027-01-m2",
+      "groupId": "grp-us-nyu-2027-01",
+      "author": "Aina",
+      "avatar": "https://i.pravatar.cc/100?img=32",
+      "text": "Which bank is everyone using? Heard the student account has no fees.",
+      "time": "2026-07-19T09:17:00Z"
+    },
+    {
+      "id": "grp-us-nyu-2027-01-m3",
+      "groupId": "grp-us-nyu-2027-01",
+      "author": "Marcus",
+      "avatar": "https://i.pravatar.cc/100?img=12",
+      "text": "Reminder: the uni housing portal opens Monday 9am, alarms on!",
+      "time": "2026-07-20T12:34:00Z"
+    },
+    {
+      "id": "grp-us-nyu-2027-01-m4",
+      "groupId": "grp-us-nyu-2027-01",
+      "author": "Putri",
+      "avatar": "https://i.pravatar.cc/100?img=47",
+      "text": "Hi everyone! Just accepted my offer — see you at orientation! 🎉",
+      "time": "2026-07-21T15:51:00Z"
+    },
+    {
+      "id": "grp-us-nyu-2027-01-m5",
+      "groupId": "grp-us-nyu-2027-01",
+      "author": "Wei Jun",
+      "avatar": "https://i.pravatar.cc/100?img=11",
+      "text": "Anyone else flying in from KL? Thinking of booking the same flight.",
+      "time": "2026-07-22T18:08:00Z"
+    },
+    {
+      "id": "grp-us-nyu-2027-01-m6",
+      "groupId": "grp-us-nyu-2027-01",
+      "author": "Yi-Chen",
+      "avatar": "https://i.pravatar.cc/100?img=44",
+      "text": "Has anyone sorted accommodation yet? Looking at on-campus vs shared flat.",
+      "time": "2026-07-23T09:25:00Z"
+    },
+    {
+      "id": "grp-us-nyu-2027-01-m7",
+      "groupId": "grp-us-nyu-2027-01",
+      "author": "Minh Anh",
+      "avatar": "https://i.pravatar.cc/100?img=26",
+      "text": "The visa appointment took me 20 minutes, bring printed bank statements!",
+      "time": "2026-07-24T12:42:00Z"
+    },
+    {
+      "id": "grp-us-nyu-2027-01-m8",
+      "groupId": "grp-us-nyu-2027-01",
+      "author": "Zihan",
+      "avatar": "https://i.pravatar.cc/100?img=59",
+      "text": "Is anyone arriving a week early? Planning a city walk before orientation.",
+      "time": "2026-07-25T15:59:00Z"
+    },
+    {
+      "id": "grp-ca-utoronto-2027-01-m1",
+      "groupId": "grp-ca-utoronto-2027-01",
+      "author": "Aina",
+      "avatar": "https://i.pravatar.cc/100?img=32",
+      "text": "Hi everyone! Just accepted my offer — see you at orientation! 🎉",
+      "time": "2026-07-18T19:00:00Z"
+    },
+    {
+      "id": "grp-ca-utoronto-2027-01-m2",
+      "groupId": "grp-ca-utoronto-2027-01",
+      "author": "Marcus",
+      "avatar": "https://i.pravatar.cc/100?img=12",
+      "text": "Anyone else flying in from KL? Thinking of booking the same flight.",
+      "time": "2026-07-19T10:17:00Z"
+    },
+    {
+      "id": "grp-ca-utoronto-2027-01-m3",
+      "groupId": "grp-ca-utoronto-2027-01",
+      "author": "Putri",
+      "avatar": "https://i.pravatar.cc/100?img=47",
+      "text": "Has anyone sorted accommodation yet? Looking at on-campus vs shared flat.",
+      "time": "2026-07-20T13:34:00Z"
+    },
+    {
+      "id": "grp-ca-utoronto-2027-01-m4",
+      "groupId": "grp-ca-utoronto-2027-01",
+      "author": "Wei Jun",
+      "avatar": "https://i.pravatar.cc/100?img=11",
+      "text": "The visa appointment took me 20 minutes, bring printed bank statements!",
+      "time": "2026-07-21T16:51:00Z"
+    },
+    {
+      "id": "grp-ca-utoronto-2027-01-m5",
+      "groupId": "grp-ca-utoronto-2027-01",
+      "author": "Yi-Chen",
+      "avatar": "https://i.pravatar.cc/100?img=44",
+      "text": "Is anyone arriving a week early? Planning a city walk before orientation.",
+      "time": "2026-07-22T19:08:00Z"
+    },
+    {
+      "id": "grp-ca-utoronto-2027-01-m6",
+      "groupId": "grp-ca-utoronto-2027-01",
+      "author": "Minh Anh",
+      "avatar": "https://i.pravatar.cc/100?img=26",
+      "text": "Pro tip from a senior: buy your transport card at the airport, big queue in town.",
+      "time": "2026-07-23T10:25:00Z"
+    },
+    {
+      "id": "grp-ca-utoronto-2027-01-m7",
+      "groupId": "grp-ca-utoronto-2027-01",
+      "author": "Zihan",
+      "avatar": "https://i.pravatar.cc/100?img=59",
+      "text": "Just got my CoE today!! It suddenly feels real 😭",
+      "time": "2026-07-24T13:42:00Z"
+    },
+    {
+      "id": "grp-ca-utoronto-2027-01-m8",
+      "groupId": "grp-ca-utoronto-2027-01",
+      "author": "Siti",
+      "avatar": "https://i.pravatar.cc/100?img=49",
+      "text": "Making a spreadsheet of who lands when — drop your flight if you want airport buddies.",
+      "time": "2026-07-25T16:59:00Z"
+    },
+    {
+      "id": "grp-cn-tsinghua-2027-03-m1",
+      "groupId": "grp-cn-tsinghua-2027-03",
+      "author": "Marcus",
+      "avatar": "https://i.pravatar.cc/100?img=12",
+      "text": "The visa appointment took me 20 minutes, bring printed bank statements!",
+      "time": "2026-07-18T20:00:00Z"
+    },
+    {
+      "id": "grp-cn-tsinghua-2027-03-m2",
+      "groupId": "grp-cn-tsinghua-2027-03",
+      "author": "Putri",
+      "avatar": "https://i.pravatar.cc/100?img=47",
+      "text": "Is anyone arriving a week early? Planning a city walk before orientation.",
+      "time": "2026-07-19T11:17:00Z"
+    },
+    {
+      "id": "grp-cn-tsinghua-2027-03-m3",
+      "groupId": "grp-cn-tsinghua-2027-03",
+      "author": "Wei Jun",
+      "avatar": "https://i.pravatar.cc/100?img=11",
+      "text": "Pro tip from a senior: buy your transport card at the airport, big queue in town.",
+      "time": "2026-07-20T14:34:00Z"
+    },
+    {
+      "id": "grp-cn-tsinghua-2027-03-m4",
+      "groupId": "grp-cn-tsinghua-2027-03",
+      "author": "Yi-Chen",
+      "avatar": "https://i.pravatar.cc/100?img=44",
+      "text": "Just got my CoE today!! It suddenly feels real 😭",
+      "time": "2026-07-21T17:51:00Z"
+    },
+    {
+      "id": "grp-cn-tsinghua-2027-03-m5",
+      "groupId": "grp-cn-tsinghua-2027-03",
+      "author": "Minh Anh",
+      "avatar": "https://i.pravatar.cc/100?img=26",
+      "text": "Making a spreadsheet of who lands when — drop your flight if you want airport buddies.",
+      "time": "2026-07-22T20:08:00Z"
+    },
+    {
+      "id": "grp-cn-tsinghua-2027-03-m6",
+      "groupId": "grp-cn-tsinghua-2027-03",
+      "author": "Zihan",
+      "avatar": "https://i.pravatar.cc/100?img=59",
+      "text": "Which bank is everyone using? Heard the student account has no fees.",
+      "time": "2026-07-23T11:25:00Z"
+    },
+    {
+      "id": "grp-cn-tsinghua-2027-03-m7",
+      "groupId": "grp-cn-tsinghua-2027-03",
+      "author": "Siti",
+      "avatar": "https://i.pravatar.cc/100?img=49",
+      "text": "Reminder: the uni housing portal opens Monday 9am, alarms on!",
+      "time": "2026-07-24T14:42:00Z"
+    },
+    {
+      "id": "grp-cn-tsinghua-2027-03-m8",
+      "groupId": "grp-cn-tsinghua-2027-03",
+      "author": "Jia Le",
+      "avatar": "https://i.pravatar.cc/100?img=33",
+      "text": "Hi everyone! Just accepted my offer — see you at orientation! 🎉",
+      "time": "2026-07-25T17:59:00Z"
     }
   ],
   "coursemates": [
@@ -920,6 +1133,54 @@
       "kind": "meetup",
       "description": "What to wear, how to metro, and where to buy it all.",
       "image": "https://picsum.photos/seed/evt-13/600/300"
+    },
+    {
+      "id": "evt-15",
+      "title": "USA University Fair",
+      "city": "New York",
+      "country": "US",
+      "date": "2026-10-10",
+      "venue": "Javits Center",
+      "sponsored": true,
+      "kind": "expo",
+      "description": "Ivy League to state schools — admissions and financial-aid booths in one hall.",
+      "image": "https://picsum.photos/seed/evt-14/600/300"
+    },
+    {
+      "id": "evt-16",
+      "title": "Canada Education Fair",
+      "city": "Toronto",
+      "country": "CA",
+      "date": "2026-11-21",
+      "venue": "Metro Toronto Convention Centre",
+      "sponsored": true,
+      "kind": "expo",
+      "description": "Universities and colleges from every province; study-permit clinic on site.",
+      "image": "https://picsum.photos/seed/evt-15/600/300"
+    },
+    {
+      "id": "evt-17",
+      "title": "China International Education Expo",
+      "city": "Beijing",
+      "country": "CN",
+      "date": "2026-10-31",
+      "venue": "China National Convention Center",
+      "sponsored": false,
+      "kind": "expo",
+      "description": "English-taught degree programmes and scholarship counters.",
+      "image": "https://picsum.photos/seed/evt-16/600/300"
+    },
+    {
+      "id": "evt-18",
+      "title": "Toronto Winter Welcome Skate",
+      "city": "Toronto",
+      "country": "CA",
+      "date": "2027-01-23",
+      "venue": "Nathan Phillips Square Rink",
+      "sponsored": false,
+      "kind": "meetup",
+      "description": "Free skate rentals for new internationals — hot chocolate on us.",
+      "image": "https://picsum.photos/seed/evt-17/600/300"
     }
   ]
 }

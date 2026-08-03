@@ -1,8 +1,8 @@
-export type CountryCode = 'AU' | 'MY' | 'TW' | 'GB' | 'SG' | 'NZ' | 'RU';
+export type CountryCode = 'AU' | 'MY' | 'TW' | 'GB' | 'SG' | 'NZ' | 'RU' | 'US' | 'CA' | 'CN';
 export type HomeCountryCode = 'MY' | 'TW' | 'SG' | 'ID' | 'VN' | 'CN';
 export type CurrencyCode =
   | 'AUD' | 'MYR' | 'TWD' | 'GBP' | 'SGD' | 'NZD' | 'RUB'
-  | 'IDR' | 'VND' | 'CNY' | 'USD';
+  | 'IDR' | 'VND' | 'CNY' | 'USD' | 'CAD';
 
 export type FieldId =
   | 'business' | 'engineering' | 'it' | 'health' | 'hospitality' | 'design' | 'law'
@@ -44,6 +44,8 @@ export interface Institution {
   founded: number;
   students: number;
   images: string[];
+  /** Sister/branch campuses of the same brand in other cities or countries. */
+  campuses?: { id: string; name: string; city: string; country: CountryCode }[];
 }
 
 export interface EntryRequirement {
@@ -113,6 +115,13 @@ export interface FxTable {
   base: 'USD';
   asOf: string;
   rates: Record<CurrencyCode, number>;
+}
+
+export interface FlightFares {
+  currency: 'USD';
+  roundTrip: boolean;
+  /** fares[destinationCountry][homeCountry] = [lowSeason, peakSeason] round-trip economy, USD. */
+  fares: Record<CountryCode, Record<HomeCountryCode, [number, number]>>;
 }
 
 export interface CityInfo {

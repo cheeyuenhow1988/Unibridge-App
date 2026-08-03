@@ -1,10 +1,10 @@
 import type { CountryCode, CurrencyCode, HomeCountryCode } from '@/types/models';
 
-export const DEST_COUNTRIES: CountryCode[] = ['AU', 'MY', 'TW', 'GB', 'SG', 'NZ', 'RU'];
+export const DEST_COUNTRIES: CountryCode[] = ['AU', 'MY', 'TW', 'GB', 'SG', 'NZ', 'RU', 'US', 'CA', 'CN'];
 export const HOME_COUNTRIES: HomeCountryCode[] = ['MY', 'TW', 'SG', 'ID', 'VN', 'CN'];
 
 export const FLAGS: Record<CountryCode | HomeCountryCode, string> = {
-  AU: '🇦🇺', MY: '🇲🇾', TW: '🇹🇼', GB: '🇬🇧', SG: '🇸🇬', NZ: '🇳🇿', RU: '🇷🇺',
+  AU: '🇦🇺', MY: '🇲🇾', TW: '🇹🇼', GB: '🇬🇧', SG: '🇸🇬', NZ: '🇳🇿', RU: '🇷🇺', US: '🇺🇸', CA: '🇨🇦',
   ID: '🇮🇩', VN: '🇻🇳', CN: '🇨🇳',
 };
 
@@ -14,5 +14,5 @@ export const HOME_CURRENCY: Record<HomeCountryCode, CurrencyCode> = {
 
 export const CURRENCY_SYMBOL: Record<CurrencyCode, string> = {
   AUD: 'A$', MYR: 'RM', TWD: 'NT$', GBP: '£', SGD: 'S$', NZD: 'NZ$',
-  RUB: '₽', IDR: 'Rp', VND: '₫', CNY: '¥', USD: '$',
+  RUB: '₽', IDR: 'Rp', VND: '₫', CNY: '¥', USD: '$', CAD: 'C$',
 };

@@ -518,5 +518,205 @@
     "eatingOutMeal": 500,
     "insuranceYearly": 15000,
     "visaFeeOneOff": 6000
+  },
+  {
+    "city": "Boston",
+    "country": "US",
+    "currency": "USD",
+    "rentMonthly": 1100,
+    "rentOptions": {
+      "roomSuburb": 1100,
+      "roomCbd": 1500,
+      "studioSuburb": 2400,
+      "studioCbd": 3000,
+      "unitSuburb": 2800,
+      "unitCbd": 3600
+    },
+    "foodMonthly": 550,
+    "transportMonthly": 90,
+    "utilitiesMonthly": 180,
+    "eatingOutMeal": 18,
+    "insuranceYearly": 2000,
+    "visaFeeOneOff": 535
+  },
+  {
+    "city": "New York",
+    "country": "US",
+    "currency": "USD",
+    "rentMonthly": 1300,
+    "rentOptions": {
+      "roomSuburb": 1300,
+      "roomCbd": 1800,
+      "studioSuburb": 2800,
+      "studioCbd": 3800,
+      "unitSuburb": 3200,
+      "unitCbd": 4500
+    },
+    "foodMonthly": 600,
+    "transportMonthly": 132,
+    "utilitiesMonthly": 180,
+    "eatingOutMeal": 18,
+    "insuranceYearly": 2000,
+    "visaFeeOneOff": 535
+  },
+  {
+    "city": "Los Angeles",
+    "country": "US",
+    "currency": "USD",
+    "rentMonthly": 1100,
+    "rentOptions": {
+      "roomSuburb": 1100,
+      "roomCbd": 1500,
+      "studioSuburb": 2200,
+      "studioCbd": 2900,
+      "unitSuburb": 2600,
+      "unitCbd": 3400
+    },
+    "foodMonthly": 520,
+    "transportMonthly": 100,
+    "utilitiesMonthly": 180,
+    "eatingOutMeal": 18,
+    "insuranceYearly": 2000,
+    "visaFeeOneOff": 535
+  },
+  {
+    "city": "Chicago",
+    "country": "US",
+    "currency": "USD",
+    "rentMonthly": 900,
+    "rentOptions": {
+      "roomSuburb": 900,
+      "roomCbd": 1200,
+      "studioSuburb": 1800,
+      "studioCbd": 2400,
+      "unitSuburb": 2100,
+      "unitCbd": 2900
+    },
+    "foodMonthly": 500,
+    "transportMonthly": 75,
+    "utilitiesMonthly": 180,
+    "eatingOutMeal": 18,
+    "insuranceYearly": 2000,
+    "visaFeeOneOff": 535
+  },
+  {
+    "city": "Toronto",
+    "country": "CA",
+    "currency": "CAD",
+    "rentMonthly": 1000,
+    "rentOptions": {
+      "roomSuburb": 1000,
+      "roomCbd": 1400,
+      "studioSuburb": 1900,
+      "studioCbd": 2400,
+      "unitSuburb": 2200,
+      "unitCbd": 2900
+    },
+    "foodMonthly": 520,
+    "transportMonthly": 156,
+    "utilitiesMonthly": 150,
+    "eatingOutMeal": 17,
+    "insuranceYearly": 900,
+    "visaFeeOneOff": 235
+  },
+  {
+    "city": "Vancouver",
+    "country": "CA",
+    "currency": "CAD",
+    "rentMonthly": 1050,
+    "rentOptions": {
+      "roomSuburb": 1050,
+      "roomCbd": 1450,
+      "studioSuburb": 2000,
+      "studioCbd": 2500,
+      "unitSuburb": 2300,
+      "unitCbd": 3000
+    },
+    "foodMonthly": 520,
+    "transportMonthly": 120,
+    "utilitiesMonthly": 150,
+    "eatingOutMeal": 17,
+    "insuranceYearly": 900,
+    "visaFeeOneOff": 235
+  },
+  {
+    "city": "Montreal",
+    "country": "CA",
+    "currency": "CAD",
+    "rentMonthly": 700,
+    "rentOptions": {
+      "roomSuburb": 700,
+      "roomCbd": 950,
+      "studioSuburb": 1300,
+      "studioCbd": 1700,
+      "unitSuburb": 1500,
+      "unitCbd": 2000
+    },
+    "foodMonthly": 480,
+    "transportMonthly": 94,
+    "utilitiesMonthly": 150,
+    "eatingOutMeal": 17,
+    "insuranceYearly": 900,
+    "visaFeeOneOff": 235
+  },
+  {
+    "city": "Beijing",
+    "country": "CN",
+    "currency": "CNY",
+    "rentMonthly": 3000,
+    "rentOptions": {
+      "roomSuburb": 3000,
+      "roomCbd": 4500,
+      "studioSuburb": 5500,
+      "studioCbd": 8000,
+      "unitSuburb": 7000,
+      "unitCbd": 11000
+    },
+    "foodMonthly": 1800,
+    "transportMonthly": 200,
+    "utilitiesMonthly": 400,
+    "eatingOutMeal": 25,
+    "insuranceYearly": 800,
+    "visaFeeOneOff": 800
+  },
+  {
+    "city": "Shanghai",
+    "country": "CN",
+    "currency": "CNY",
+    "rentMonthly": 3200,
+    "rentOptions": {
+      "roomSuburb": 3200,
+      "roomCbd": 5000,
+      "studioSuburb": 6000,
+      "studioCbd": 8500,
+      "unitSuburb": 7500,
+      "unitCbd": 12000
+    },
+    "foodMonthly": 1900,
+    "transportMonthly": 200,
+    "utilitiesMonthly": 400,
+    "eatingOutMeal": 25,
+    "insuranceYearly": 800,
+    "visaFeeOneOff": 800
+  },
+  {
+    "city": "Guangzhou",
+    "country": "CN",
+    "currency": "CNY",
+    "rentMonthly": 2200,
+    "rentOptions": {
+      "roomSuburb": 2200,
+      "roomCbd": 3200,
+      "studioSuburb": 4000,
+      "studioCbd": 6000,
+      "unitSuburb": 5000,
+      "unitCbd": 8000
+    },
+    "foodMonthly": 1600,
+    "transportMonthly": 150,
+    "utilitiesMonthly": 400,
+    "eatingOutMeal": 25,
+    "insuranceYearly": 800,
+    "visaFeeOneOff": 800
   }
 ]

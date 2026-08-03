@@ -1,4 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
+import { router, type Href } from 'expo-router';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FlatList, KeyboardAvoidingView, Platform, Pressable, TextInput, View } from 'react-native';
@@ -13,7 +14,7 @@ import { fonts, radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
-import { listCityInfo, listInstitutions } from '@/services/api';
+import { getFlightFares, listCityInfo, listInstitutions } from '@/services/api';
 import { respond, respondWizard, type AssistantCtx, type QuickReply, type WizardState } from '@/services/assistant';
 import { homeCurrencyFor } from '@/services/currency';
 
@@ -28,13 +29,19 @@ export default function AssistantScreen() {
   const { t } = useTranslation();
   const { colors } = useTheme();
   const { matchData, profile, loading, error, retry } = useMatchData();
-  const extras = useAsync(async () => Promise.all([listInstitutions(), listCityInfo()]), []);
+  const extras = useAsync(async () => Promise.all([listInstitutions(), listCityInfo(), getFlightFares()]), []);
   const [messages, setMessages] = useState<Msg[] | null>(null);
   const [draft, setDraft] = useState('');
   const [thinking, setThinking] = useState(false);
   const [wizard, setWizard] = useState<WizardState | null>(null);
   const listRef = useRef<FlatList>(null);
   const idRef = useRef(0);
+  // Latest interview state for the delayed reply handler — a fast typer can
+  // send the next answer before the previous reply's setWizard has rendered.
+  const wizardRef = useRef<WizardState | null>(null);
+  useEffect(() => {
+    wizardRef.current = wizard;
+  }, [wizard]);
 
   const ctx: AssistantCtx | null = useMemo(() => {
     if (!matchData || !profile || !extras.data) return null;
@@ -44,6 +51,7 @@ export default function AssistantScreen() {
       matchData,
       institutions: extras.data[0],
       cityInfo: extras.data[1],
+      flights: extras.data[2],
       home: homeCurrencyFor(profile),
     };
   }, [matchData, profile, extras.data, t]);
@@ -74,13 +82,14 @@ export default function AssistantScreen() {
     setTimeout(() => {
       // Mid-interview answers route through the wizard: free-typed text or
       // the wizard's own chips. Any other explicit intent exits the interview.
+      const wiz = wizardRef.current;
       const wizardTurn =
-        wizard &&
+        wiz &&
         (intent === undefined || intent.startsWith('interest:') || intent.startsWith('wamt:') || intent.startsWith('wpref:'));
       const reply = wizardTurn
-        ? respondWizard(text, intent, wizard!, ctx)
+        ? respondWizard(text, intent, wiz!, ctx)
         : respond(text, ctx, intent);
-      if (!wizardTurn && wizard && reply.wizard === undefined) setWizard(null);
+      if (!wizardTurn && wiz && reply.wizard === undefined) setWizard(null);
       if (reply.wizard !== undefined) setWizard(reply.wizard);
       idRef.current += 1;
       setMessages((prev) => [
@@ -157,7 +166,12 @@ export default function AssistantScreen() {
               {!item.mine && item.chips?.length ? (
                 <Row wrap gap={spacing.sm} style={{ paddingRight: spacing.xl }}>
                   {item.chips.map((c) => (
-                    <Chip key={c.intent + c.label} small label={c.label} onPress={() => send(c.send, c.intent)} />
+                    <Chip
+                      key={c.intent + c.label}
+                      small
+                      label={c.label}
+                      onPress={() => (c.route ? router.push(c.route as Href) : send(c.send, c.intent))}
+                    />
                   ))}
                 </Row>
               ) : null}

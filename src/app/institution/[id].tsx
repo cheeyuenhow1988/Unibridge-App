@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Alert, Linking, Pressable, ScrollView, View, useWindowDimensions } from 'react-native';
 import { AmbassadorStrip } from '@/components/explore/AmbassadorStrip';
 import { AttractionsCarousel } from '@/components/explore/AttractionsCarousel';
+import { InstLogo } from '@/components/explore/InstLogo';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
@@ -17,7 +18,6 @@ import { FLAGS } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
-import { useWikiImage } from '@/hooks/useWikiImage';
 import { getInstitution, listCoursesByInstitution } from '@/services/api';
 import { formatDual, homeCurrencyFor } from '@/services/currency';
 import { useProfileStore } from '@/store/useProfileStore';
@@ -34,7 +34,6 @@ export default function InstitutionDetail() {
     async () => Promise.all([getInstitution(id), listCoursesByInstitution(id)]),
     [id],
   );
-  const wikiImage = useWikiImage(state.data?.[0]?.wikipedia ?? '');
 
   if (state.loading) {
     return (
@@ -58,7 +57,7 @@ export default function InstitutionDetail() {
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: spacing.xxxl }}>
         <View>
           <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false}>
-            {(wikiImage ? [wikiImage, ...institution.images.slice(1)] : institution.images).map((img) => (
+            {institution.images.map((img) => (
               <Image key={img} source={{ uri: img }} style={{ width, height: 240 }} contentFit="cover" transition={250} />
             ))}
           </ScrollView>
@@ -86,11 +85,7 @@ export default function InstitutionDetail() {
               ) : null}
             </Row>
             <Row gap={spacing.md}>
-              <Image
-                source={{ uri: institution.logo }}
-                style={{ width: 44, height: 44, borderRadius: 10, backgroundColor: '#FFFFFF' }}
-                contentFit="contain"
-              />
+              <InstLogo institution={institution} size={44} radius={10} />
               <Text variant="title" style={{ flex: 1 }}>{institution.name}</Text>
             </Row>
             <Text variant="body" tone="secondary">{institution.tagline}</Text>
@@ -156,6 +151,31 @@ export default function InstitutionDetail() {
           </Row>
 
           <Text variant="caption" tone="faint">{t('institution.indicative')}</Text>
+
+          {institution.campuses?.length ? (
+            <>
+              <SectionHeader title={t('institution.otherCampuses')} />
+              <View style={{ gap: spacing.md }}>
+                {institution.campuses.map((c) => (
+                  <Card key={c.id} onPress={() => router.push(`/institution/${c.id}`)} style={{ gap: 4 }}>
+                    <Row style={{ justifyContent: 'space-between' }}>
+                      <Row gap={spacing.sm} style={{ flex: 1 }}>
+                        <Ionicons name="git-branch-outline" size={18} color={colors.accent} />
+                        <View style={{ flex: 1 }}>
+                          <Text variant="sub" numberOfLines={1}>{c.name}</Text>
+                          <Text variant="caption" tone="secondary">
+                            {FLAGS[c.country]} {c.city}, {t(`countries.${c.country}`)}
+                          </Text>
+                        </View>
+                      </Row>
+                      <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />
+                    </Row>
+                    <Text variant="caption" tone="accent">{t('institution.campusFeesNote')}</Text>
+                  </Card>
+                ))}
+              </View>
+            </>
+          ) : null}
 
           <SectionHeader title={t('institution.coursesTitle')} />
           <View style={{ gap: spacing.md }}>

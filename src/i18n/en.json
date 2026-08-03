@@ -70,7 +70,9 @@
     "RU": "Russia",
     "ID": "Indonesia",
     "VN": "Vietnam",
-    "CN": "China"
+    "CN": "China",
+    "US": "United States",
+    "CA": "Canada"
   },
   "fields": {
     "business": "Business",
@@ -250,7 +252,9 @@
     "students": "{{count}} students",
     "cityCountry": "{{city}}, {{country}}",
     "rankingShort": "QS #{{rank}}",
-    "rankingNote": "Indicative QS-style world ranking"
+    "rankingNote": "Indicative QS-style world ranking",
+    "otherCampuses": "Other campuses",
+    "campusFeesNote": "Same institution family, different country — tuition and living costs differ. Tap to compare."
   },
   "attraction": {
     "whatToDo": "What to do",
@@ -288,7 +292,9 @@
     "applicationFee": "Application fee",
     "feeWaived": "Fee waived for UniBridge users",
     "utilities": "Utilities & internet",
-    "rentDetail": "Shared room, suburb — tap for all rent options"
+    "rentDetail": "Shared room, suburb — tap for all rent options",
+    "flights": "Flights home (round trip)",
+    "flightsNote": "Per trip, low vs peak season, in your home currency. Not included in the total above — tap for city cost details."
   },
   "scholarships": {
     "title": "Scholarships",
@@ -558,7 +564,9 @@
     "wizardAskPref": "Last one — what kind of place suits you?",
     "wizardSummary": "Your picks: {{field}} · {{budget}} · {{pref}}",
     "wizardRelaxed": "Note: nothing fit that budget, so I loosened it to show your closest options.",
-    "pref_any": "Anywhere"
+    "pref_any": "Anywhere",
+    "chipOpen": "Open {{name}} ↗",
+    "cityFlight": "✈️ Flights home, round trip: about {{low}} in low season · {{peak}} in peak/holiday season."
   },
   "notFound": {
     "title": "Page not found",
@@ -583,6 +591,10 @@
     "mealOut": "Eating out, per cheap meal",
     "utilities": "Utilities, internet & mobile",
     "transport": "Public transport",
-    "basis": "Totals in the app assume the budget option: a shared room in a suburb."
+    "basis": "Totals in the app assume the budget option: a shared room in a suburb.",
+    "flightsTitle": "Flights home (round trip)",
+    "flightLow": "Low season",
+    "flightPeak": "Peak season (holidays)",
+    "flightNote": "Round-trip economy estimate between your home country and this city — book 2–3 months ahead for low-season prices."
   }
 }

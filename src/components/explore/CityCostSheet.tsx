@@ -5,8 +5,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Divider, Row } from '@/components/ui/Misc';
 import { Text } from '@/components/ui/Text';
 import { radius, spacing } from '@/constants/theme';
+import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
+import { getFlightFares } from '@/services/api';
 import { convert, formatMoney } from '@/services/currency';
+import { useProfileStore } from '@/store/useProfileStore';
 import type { CostOfLiving, CurrencyCode } from '@/types/models';
 
 interface Props {
@@ -20,6 +23,9 @@ interface Props {
 export function CityCostSheet({ visible, col, home, onClose }: Props) {
   const { t } = useTranslation();
   const { colors } = useTheme();
+  const homeCountry = useProfileStore((s) => s.profile?.homeCountry);
+  const flights = useAsync(() => getFlightFares(), []);
+  const fare = homeCountry ? flights.data?.fares[col.country]?.[homeCountry] : undefined;
 
   const dual = (n: number) =>
     col.currency === home
@@ -80,6 +86,19 @@ export function CityCostSheet({ visible, col, home, onClose }: Props) {
           {lineRow(t('costsheet.mealOut'), col.eatingOutMeal)}
           {lineRow(t('costsheet.utilities'), col.utilitiesMonthly)}
           {lineRow(t('costsheet.transport'), col.transportMonthly)}
+
+          {fare && fare[0] > 0 ? (
+            <>
+              <Row gap={6} style={{ marginTop: spacing.md }}>
+                <Ionicons name="airplane-outline" size={16} color={colors.accent} />
+                <Text variant="heading">{t('costsheet.flightsTitle')}</Text>
+              </Row>
+              {lineRow(t('costsheet.flightLow'), Math.round(convert(fare[0], 'USD', col.currency)))}
+              {lineRow(t('costsheet.flightPeak'), Math.round(convert(fare[1], 'USD', col.currency)))}
+              <Text variant="caption" tone="faint">{t('costsheet.flightNote')}</Text>
+            </>
+          ) : null}
+
           <Text variant="caption" tone="faint" style={{ marginTop: spacing.md }}>
             {t('costsheet.basis')}
           </Text>

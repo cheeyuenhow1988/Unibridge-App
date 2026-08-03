@@ -293,6 +293,132 @@
         "label": "Register migration card within 7 days",
         "category": "other"
       }
+    ],
+    "US": [
+      {
+        "id": "us-p1",
+        "label": "Receive Form I-20 from your university",
+        "category": "visa"
+      },
+      {
+        "id": "us-p2",
+        "label": "Pay the SEVIS I-901 fee",
+        "category": "insurance"
+      },
+      {
+        "id": "us-p3",
+        "label": "Book F-1 visa interview at the embassy",
+        "category": "money"
+      },
+      {
+        "id": "us-p4",
+        "label": "Show proof of funds for year one",
+        "category": "housing"
+      },
+      {
+        "id": "us-p5",
+        "label": "Arrange on-campus housing or apartment",
+        "category": "sim"
+      },
+      {
+        "id": "us-p6",
+        "label": "Get a US SIM or eSIM plan",
+        "category": "banking"
+      },
+      {
+        "id": "us-p7",
+        "label": "Open a US student bank account after arrival",
+        "category": "other"
+      },
+      {
+        "id": "us-p8",
+        "label": "Carry I-20 and admission letter in hand luggage",
+        "category": "other"
+      }
+    ],
+    "CA": [
+      {
+        "id": "ca-p1",
+        "label": "Receive Letter of Acceptance (LOA)",
+        "category": "visa"
+      },
+      {
+        "id": "ca-p2",
+        "label": "Apply for study permit online",
+        "category": "insurance"
+      },
+      {
+        "id": "ca-p3",
+        "label": "Buy a GIC if using the SDS stream",
+        "category": "money"
+      },
+      {
+        "id": "ca-p4",
+        "label": "Book biometrics appointment",
+        "category": "housing"
+      },
+      {
+        "id": "ca-p5",
+        "label": "Arrange residence or homestay",
+        "category": "sim"
+      },
+      {
+        "id": "ca-p6",
+        "label": "Get a Canadian SIM plan",
+        "category": "banking"
+      },
+      {
+        "id": "ca-p7",
+        "label": "Open a student bank account (GIC bank)",
+        "category": "other"
+      },
+      {
+        "id": "ca-p8",
+        "label": "Print the Port of Entry letter for arrival",
+        "category": "other"
+      }
+    ],
+    "CN": [
+      {
+        "id": "cn-p1",
+        "label": "Receive admission notice and JW202 form",
+        "category": "visa"
+      },
+      {
+        "id": "cn-p2",
+        "label": "Apply for X1 student visa",
+        "category": "insurance"
+      },
+      {
+        "id": "cn-p3",
+        "label": "Prepare notarised transcripts and health form",
+        "category": "money"
+      },
+      {
+        "id": "cn-p4",
+        "label": "Confirm on-campus dormitory booking",
+        "category": "housing"
+      },
+      {
+        "id": "cn-p5",
+        "label": "Get a local SIM with your passport",
+        "category": "sim"
+      },
+      {
+        "id": "cn-p6",
+        "label": "Set up Alipay/WeChat Pay with a foreign card",
+        "category": "banking"
+      },
+      {
+        "id": "cn-p7",
+        "label": "Register with campus police within 24 hours",
+        "category": "other"
+      },
+      {
+        "id": "cn-p8",
+        "label": "Convert visa to residence permit in 30 days",
+        "category": "other"
+      }
     ]
   },
   "workRights": {
@@ -337,6 +463,24 @@
       "hoursPerWeekTerm": 20,
       "breakRule": "Free during official university holidays",
       "note": "Requires a work permit unless working at your own university (mock)."
+    },
+    "US": {
+      "country": "US",
+      "hoursPerWeekTerm": 20,
+      "breakRule": "Full-time on campus during breaks",
+      "note": "F-1 students: on-campus work only during term; off-campus needs CPT/OPT approval (mock)."
+    },
+    "CA": {
+      "country": "CA",
+      "hoursPerWeekTerm": 24,
+      "breakRule": "Full-time during scheduled breaks",
+      "note": "Off-campus work up to 24 hours per week during term on a study permit (mock)."
+    },
+    "CN": {
+      "country": "CN",
+      "hoursPerWeekTerm": 8,
+      "breakRule": "Internships only, with approvals",
+      "note": "Work-study needs university and immigration approval; most students stick to campus internships (mock)."
     }
   }
 }

@@ -68,7 +68,9 @@
     "RU": "Rusia",
     "ID": "Indonesia",
     "VN": "Vietnam",
-    "CN": "China"
+    "CN": "China",
+    "US": "Amerika Syarikat",
+    "CA": "Kanada"
   },
   "fields": {
     "business": "Perniagaan",
@@ -247,7 +249,9 @@
     "cityCountry": "{{city}}, {{country}}",
     "teachingLanguage": "Bahasa pengantar",
     "rankingShort": "QS #{{rank}}",
-    "rankingNote": "Kedudukan dunia gaya QS (anggaran)"
+    "rankingNote": "Kedudukan dunia gaya QS (anggaran)",
+    "otherCampuses": "Kampus lain",
+    "campusFeesNote": "Keluarga institusi yang sama, negara berbeza — yuran dan kos sara hidup berbeza. Ketik untuk bandingkan."
   },
   "attraction": {
     "whatToDo": "Apa yang boleh dibuat",
@@ -285,7 +289,9 @@
     "applicationFee": "Yuran permohonan",
     "feeWaived": "Yuran dikecualikan untuk pengguna UniBridge",
     "utilities": "Utiliti & internet",
-    "rentDetail": "Bilik kongsi, pinggir bandar — ketik untuk semua pilihan sewa"
+    "rentDetail": "Bilik kongsi, pinggir bandar — ketik untuk semua pilihan sewa",
+    "flights": "Penerbangan pulang (pergi-balik)",
+    "flightsNote": "Setiap perjalanan, musim biasa vs puncak, dalam mata wang anda. Tidak termasuk dalam jumlah di atas — ketik untuk butiran kos bandar."
   },
   "scholarships": {
     "title": "Biasiswa",
@@ -564,7 +570,9 @@
     "wizardAskPref": "Terakhir — tempat macam mana yang sesuai dengan anda?",
     "wizardSummary": "Pilihan anda: {{field}} · {{budget}} · {{pref}}",
     "wizardRelaxed": "Nota: tiada yang muat bajet itu, jadi saya longgarkan untuk tunjuk pilihan terdekat.",
-    "pref_any": "Mana-mana sahaja"
+    "pref_any": "Mana-mana sahaja",
+    "chipOpen": "Buka {{name}} ↗",
+    "cityFlight": "✈️ Tiket penerbangan pulang (pergi-balik): sekitar {{low}} musim biasa · {{peak}} musim puncak/cuti."
   },
   "costsheet": {
     "title": "Kos sara hidup {{city}}",
@@ -579,6 +587,10 @@
     "mealOut": "Makan luar, semangkuk/sepinggan",
     "utilities": "Utiliti, internet & telefon",
     "transport": "Pengangkutan awam",
-    "basis": "Jumlah dalam apl menganggap pilihan jimat: bilik kongsi di pinggir bandar."
+    "basis": "Jumlah dalam apl menganggap pilihan jimat: bilik kongsi di pinggir bandar.",
+    "flightsTitle": "Penerbangan pulang (pergi-balik)",
+    "flightLow": "Musim biasa",
+    "flightPeak": "Musim puncak (cuti)",
+    "flightNote": "Anggaran kelas ekonomi pergi-balik antara negara asal anda dan bandar ini — tempah 2–3 bulan awal untuk harga musim biasa."
   }
 }

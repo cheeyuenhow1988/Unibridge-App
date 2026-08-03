@@ -2,22 +2,21 @@ import { Image } from 'expo-image';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
+import { InstLogo } from '@/components/explore/InstLogo';
 import { Badge } from '@/components/ui/Badge';
 import { Card } from '@/components/ui/Card';
 import { Row } from '@/components/ui/Misc';
 import { Text } from '@/components/ui/Text';
 import { FLAGS } from '@/constants/countries';
 import { spacing } from '@/constants/theme';
-import { useWikiImage } from '@/hooks/useWikiImage';
 import type { Institution } from '@/types/models';
 
 export function InstitutionCard({ institution }: { institution: Institution }) {
   const { t } = useTranslation();
-  const wikiImage = useWikiImage(institution.wikipedia);
   return (
     <Card padded={false} onPress={() => router.push(`/institution/${institution.id}`)}>
       <Image
-        source={{ uri: wikiImage ?? institution.images[0] }}
+        source={{ uri: institution.images[0] }}
         style={{ width: '100%', height: 140 }}
         contentFit="cover"
         transition={200}
@@ -25,11 +24,7 @@ export function InstitutionCard({ institution }: { institution: Institution }) {
       <View style={{ padding: spacing.lg, gap: spacing.xs }}>
         <Row style={{ justifyContent: 'space-between' }}>
           <Row gap={spacing.sm} style={{ flex: 1 }}>
-            <Image
-              source={{ uri: institution.logo }}
-              style={{ width: 26, height: 26, borderRadius: 6, backgroundColor: '#FFFFFF' }}
-              contentFit="contain"
-            />
+            <InstLogo institution={institution} size={26} />
             <Text variant="sub" style={{ flex: 1 }} numberOfLines={1}>{institution.name}</Text>
           </Row>
           {institution.verifiedPartner ? (

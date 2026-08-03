@@ -18,9 +18,17 @@
     "wikipedia": "Monash University",
     "ranking": 37,
     "images": [
-      "https://picsum.photos/seed/au-monash-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Monashcaulfield2.jpg?width=1000",
       "https://picsum.photos/seed/au-monash-1/800/500",
       "https://picsum.photos/seed/au-monash-2/800/500"
+    ],
+    "campuses": [
+      {
+        "id": "my-monash",
+        "name": "Monash University Malaysia",
+        "city": "Kuala Lumpur",
+        "country": "MY"
+      }
     ]
   },
   {
@@ -42,7 +50,7 @@
     "wikipedia": "University of Sydney",
     "ranking": 18,
     "images": [
-      "https://picsum.photos/seed/au-sydney-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/University_of_Sydney_Main_Quadrangle.jpg?width=1000",
       "https://picsum.photos/seed/au-sydney-1/800/500",
       "https://picsum.photos/seed/au-sydney-2/800/500"
     ]
@@ -66,7 +74,7 @@
     "wikipedia": "University of Queensland",
     "ranking": 40,
     "images": [
-      "https://picsum.photos/seed/au-uq-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/UQ-SteeleBldg800.jpg?width=1000",
       "https://picsum.photos/seed/au-uq-1/800/500",
       "https://picsum.photos/seed/au-uq-2/800/500"
     ]
@@ -90,7 +98,7 @@
     "wikipedia": "University of New South Wales",
     "ranking": 19,
     "images": [
-      "https://picsum.photos/seed/au-unsw-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Main_Walkway%2C_Lower_campus_UNSW.jpg?width=1000",
       "https://picsum.photos/seed/au-unsw-1/800/500",
       "https://picsum.photos/seed/au-unsw-2/800/500"
     ]
@@ -114,7 +122,7 @@
     "wikipedia": "University of Melbourne",
     "ranking": 13,
     "images": [
-      "https://picsum.photos/seed/au-unimelb-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Trinity_college_university_of_melbourne.jpg?width=1000",
       "https://picsum.photos/seed/au-unimelb-1/800/500",
       "https://picsum.photos/seed/au-unimelb-2/800/500"
     ]
@@ -138,7 +146,7 @@
     "wikipedia": "RMIT University",
     "ranking": 123,
     "images": [
-      "https://picsum.photos/seed/au-rmit-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/RMIT_University_Building_01.jpg?width=1000",
       "https://picsum.photos/seed/au-rmit-1/800/500",
       "https://picsum.photos/seed/au-rmit-2/800/500"
     ]
@@ -163,7 +171,7 @@
     "wikipedia": "University of Malaya",
     "ranking": 60,
     "images": [
-      "https://picsum.photos/seed/my-um-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Universiti_Malaya_KL_gate.jpg?width=1000",
       "https://picsum.photos/seed/my-um-1/800/500",
       "https://picsum.photos/seed/my-um-2/800/500"
     ]
@@ -187,7 +195,7 @@
     "wikipedia": "Taylor's University",
     "ranking": 251,
     "images": [
-      "https://picsum.photos/seed/my-taylors-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Taylors_Lakeside_Campus.jpg?width=1000",
       "https://picsum.photos/seed/my-taylors-1/800/500",
       "https://picsum.photos/seed/my-taylors-2/800/500"
     ]
@@ -211,7 +219,7 @@
     "wikipedia": "Sunway University",
     "ranking": 539,
     "images": [
-      "https://picsum.photos/seed/my-sunway-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Sunway_University_(New_Building)_-_2015.jpg?width=1000",
       "https://picsum.photos/seed/my-sunway-1/800/500",
       "https://picsum.photos/seed/my-sunway-2/800/500"
     ]
@@ -235,7 +243,7 @@
     "wikipedia": "Multimedia University",
     "ranking": null,
     "images": [
-      "https://picsum.photos/seed/my-mmu-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Multimedia_University.JPG?width=1000",
       "https://picsum.photos/seed/my-mmu-1/800/500",
       "https://picsum.photos/seed/my-mmu-2/800/500"
     ]
@@ -260,7 +268,7 @@
     "wikipedia": "Universiti Sains Malaysia",
     "ranking": 146,
     "images": [
-      "https://picsum.photos/seed/my-usm-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Main_gate_at_the_Universiti_Sains_Malaysia.jpg?width=1000",
       "https://picsum.photos/seed/my-usm-1/800/500",
       "https://picsum.photos/seed/my-usm-2/800/500"
     ]
@@ -310,7 +318,7 @@
     "wikipedia": "National Taiwan University",
     "ranking": 68,
     "images": [
-      "https://picsum.photos/seed/tw-ntu-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/National_Taiwan_University_Library_20060802.jpg?width=1000",
       "https://picsum.photos/seed/tw-ntu-1/800/500",
       "https://picsum.photos/seed/tw-ntu-2/800/500"
     ]
@@ -335,7 +343,7 @@
     "wikipedia": "National Tsing Hua University",
     "ranking": 210,
     "images": [
-      "https://picsum.photos/seed/tw-nthu-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/NTHU_entrance.JPG?width=1000",
       "https://picsum.photos/seed/tw-nthu-1/800/500",
       "https://picsum.photos/seed/tw-nthu-2/800/500"
     ]
@@ -360,7 +368,7 @@
     "wikipedia": "Feng Chia University",
     "ranking": null,
     "images": [
-      "https://picsum.photos/seed/tw-fcu-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Feng_Chia_University_in_Central_Taiwan_Science_Park.JPG?width=1000",
       "https://picsum.photos/seed/tw-fcu-1/800/500",
       "https://picsum.photos/seed/tw-fcu-2/800/500"
     ]
@@ -385,7 +393,7 @@
     "wikipedia": "National Sun Yat-sen University",
     "ranking": 427,
     "images": [
-      "https://picsum.photos/seed/tw-nsysu-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/2017_NSYSU_maingate.jpg?width=1000",
       "https://picsum.photos/seed/tw-nsysu-1/800/500",
       "https://picsum.photos/seed/tw-nsysu-2/800/500"
     ]
@@ -409,7 +417,7 @@
     "wikipedia": "University of Manchester",
     "ranking": 34,
     "images": [
-      "https://picsum.photos/seed/gb-manchester-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Whitworth_Hall.jpg?width=1000",
       "https://picsum.photos/seed/gb-manchester-1/800/500",
       "https://picsum.photos/seed/gb-manchester-2/800/500"
     ]
@@ -433,7 +441,7 @@
     "wikipedia": "University of Leeds",
     "ranking": 82,
     "images": [
-      "https://picsum.photos/seed/gb-leeds-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Parkinson_Building%2C_Leeds_University%2C_England-12Sept2010.jpg?width=1000",
       "https://picsum.photos/seed/gb-leeds-1/800/500",
       "https://picsum.photos/seed/gb-leeds-2/800/500"
     ]
@@ -457,7 +465,7 @@
     "wikipedia": "University of Birmingham",
     "ranking": 80,
     "images": [
-      "https://picsum.photos/seed/gb-birmingham-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Aston_Webb_buildings_in_snow%2C_The_University_of_Birmingham%2C_Dec_2009.jpg?width=1000",
       "https://picsum.photos/seed/gb-birmingham-1/800/500",
       "https://picsum.photos/seed/gb-birmingham-2/800/500"
     ]
@@ -481,7 +489,7 @@
     "wikipedia": "University College London",
     "ranking": 9,
     "images": [
-      "https://picsum.photos/seed/gb-ucl-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Wilkins_Building_1%2C_UCL%2C_London_-_Diliff.jpg?width=1000",
       "https://picsum.photos/seed/gb-ucl-1/800/500",
       "https://picsum.photos/seed/gb-ucl-2/800/500"
     ]
@@ -505,7 +513,7 @@
     "wikipedia": "King's College London",
     "ranking": 40,
     "images": [
-      "https://picsum.photos/seed/gb-kcl-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Strand102.jpg?width=1000",
       "https://picsum.photos/seed/gb-kcl-1/800/500",
       "https://picsum.photos/seed/gb-kcl-2/800/500"
     ]
@@ -529,7 +537,7 @@
     "wikipedia": "University of Edinburgh",
     "ranking": 27,
     "images": [
-      "https://picsum.photos/seed/gb-edinburgh-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Old_College_Quad.jpg?width=1000",
       "https://picsum.photos/seed/gb-edinburgh-1/800/500",
       "https://picsum.photos/seed/gb-edinburgh-2/800/500"
     ]
@@ -553,7 +561,7 @@
     "wikipedia": "National University of Singapore",
     "ranking": 8,
     "images": [
-      "https://picsum.photos/seed/sg-nus-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/NUS%2C_University_Cultural_Centre_3%2C_Nov_06.JPG?width=1000",
       "https://picsum.photos/seed/sg-nus-1/800/500",
       "https://picsum.photos/seed/sg-nus-2/800/500"
     ]
@@ -577,7 +585,7 @@
     "wikipedia": "Nanyang Technological University",
     "ranking": 15,
     "images": [
-      "https://picsum.photos/seed/sg-ntusg-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/NTU_Administration_Building.JPG?width=1000",
       "https://picsum.photos/seed/sg-ntusg-1/800/500",
       "https://picsum.photos/seed/sg-ntusg-2/800/500"
     ]
@@ -601,7 +609,7 @@
     "wikipedia": "Singapore Management University",
     "ranking": 511,
     "images": [
-      "https://picsum.photos/seed/sg-smu-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_Management_University%2C_Jan_06.JPG?width=1000",
       "https://picsum.photos/seed/sg-smu-1/800/500",
       "https://picsum.photos/seed/sg-smu-2/800/500"
     ]
@@ -649,7 +657,7 @@
     "wikipedia": "University of Auckland",
     "ranking": 65,
     "images": [
-      "https://picsum.photos/seed/nz-auckland-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Faculty_of_Medical_and_Health_Sciences%2C_University_of_Auckland.jpg?width=1000",
       "https://picsum.photos/seed/nz-auckland-1/800/500",
       "https://picsum.photos/seed/nz-auckland-2/800/500"
     ]
@@ -673,7 +681,7 @@
     "wikipedia": "Victoria University of Wellington",
     "ranking": 244,
     "images": [
-      "https://picsum.photos/seed/nz-vuw-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/VUW-Kelburn.jpg?width=1000",
       "https://picsum.photos/seed/nz-vuw-1/800/500",
       "https://picsum.photos/seed/nz-vuw-2/800/500"
     ]
@@ -697,7 +705,7 @@
     "wikipedia": "University of Canterbury",
     "ranking": 261,
     "images": [
-      "https://picsum.photos/seed/nz-canterbury-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/UC_CentralLibrary01_gobeirne.jpg?width=1000",
       "https://picsum.photos/seed/nz-canterbury-1/800/500",
       "https://picsum.photos/seed/nz-canterbury-2/800/500"
     ]
@@ -721,7 +729,7 @@
     "wikipedia": "University of Otago",
     "ranking": 214,
     "images": [
-      "https://picsum.photos/seed/nz-otago-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/University_of_Otago.jpg?width=1000",
       "https://picsum.photos/seed/nz-otago-1/800/500",
       "https://picsum.photos/seed/nz-otago-2/800/500"
     ]
@@ -746,7 +754,7 @@
     "wikipedia": "Moscow State University",
     "ranking": 94,
     "images": [
-      "https://picsum.photos/seed/ru-msu-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9C%D0%93%D0%A3%2C_%D0%B2%D0%B8%D0%B4_%D1%81_%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85%D0%B0.jpg?width=1000",
       "https://picsum.photos/seed/ru-msu-1/800/500",
       "https://picsum.photos/seed/ru-msu-2/800/500"
     ]
@@ -771,7 +779,7 @@
     "wikipedia": "ITMO University",
     "ranking": 360,
     "images": [
-      "https://picsum.photos/seed/ru-itmo-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/ITMO_University's_main_building%2C_August_2016.jpg?width=1000",
       "https://picsum.photos/seed/ru-itmo-1/800/500",
       "https://picsum.photos/seed/ru-itmo-2/800/500"
     ]
@@ -796,7 +804,7 @@
     "wikipedia": "Kazan Federal University",
     "ranking": 396,
     "images": [
-      "https://picsum.photos/seed/ru-kfu-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kazan_State_University_from_the_2_Korpus.jpg?width=1000",
       "https://picsum.photos/seed/ru-kfu-1/800/500",
       "https://picsum.photos/seed/ru-kfu-2/800/500"
     ]
@@ -821,9 +829,656 @@
     "wikipedia": "Novosibirsk State University",
     "ranking": 225,
     "images": [
-      "https://picsum.photos/seed/ru-nsu-0/800/500",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Akademgorodok_NSU_Interweek.jpg?width=1000",
       "https://picsum.photos/seed/ru-nsu-1/800/500",
       "https://picsum.photos/seed/ru-nsu-2/800/500"
+    ]
+  },
+  {
+    "id": "us-mit",
+    "name": "Massachusetts Institute of Technology",
+    "short": "MIT",
+    "country": "US",
+    "city": "Boston",
+    "type": "institute",
+    "verifiedPartner": false,
+    "tagline": "World-leading institute for science and engineering",
+    "founded": 1861,
+    "students": 11900,
+    "website": "https://www.mit.edu",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/mit.edu",
+    "wikipedia": "Massachusetts Institute of Technology",
+    "ranking": 1,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/MIT_Dome_night1_Edit.jpg?width=1000",
+      "https://picsum.photos/seed/us-mit-1/800/500",
+      "https://picsum.photos/seed/us-mit-2/800/500"
+    ]
+  },
+  {
+    "id": "us-bu",
+    "name": "Boston University",
+    "short": "BU",
+    "country": "US",
+    "city": "Boston",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Private research university on the Charles River",
+    "founded": 1839,
+    "students": 37000,
+    "website": "https://www.bu.edu",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/bu.edu",
+    "wikipedia": "Boston University",
+    "ranking": 108,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/BU_College_of_Communication.jpg?width=1000",
+      "https://picsum.photos/seed/us-bu-1/800/500",
+      "https://picsum.photos/seed/us-bu-2/800/500"
+    ]
+  },
+  {
+    "id": "us-nyu",
+    "name": "New York University",
+    "short": "NYU",
+    "country": "US",
+    "city": "New York",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Global university in the heart of Manhattan",
+    "founded": 1831,
+    "students": 59000,
+    "website": "https://www.nyu.edu",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/nyu.edu",
+    "wikipedia": "New York University",
+    "ranking": 43,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/NYU07.JPG?width=1000",
+      "https://picsum.photos/seed/us-nyu-1/800/500",
+      "https://picsum.photos/seed/us-nyu-2/800/500"
+    ],
+    "campuses": [
+      {
+        "id": "cn-nyush",
+        "name": "NYU Shanghai",
+        "city": "Shanghai",
+        "country": "CN"
+      }
+    ]
+  },
+  {
+    "id": "us-ucla",
+    "name": "University of California, Los Angeles",
+    "short": "UCLA",
+    "country": "US",
+    "city": "Los Angeles",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Top public university in sunny Los Angeles",
+    "founded": 1919,
+    "students": 46000,
+    "website": "https://www.ucla.edu",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/ucla.edu",
+    "wikipedia": "University of California, Los Angeles",
+    "ranking": 42,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Royce_Hall%2C_University_of_California%2C_Los_Angeles_(23-09-2003).jpg?width=1000",
+      "https://picsum.photos/seed/us-ucla-1/800/500",
+      "https://picsum.photos/seed/us-ucla-2/800/500"
+    ]
+  },
+  {
+    "id": "us-uchicago",
+    "name": "University of Chicago",
+    "short": "UChicago",
+    "country": "US",
+    "city": "Chicago",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Rigorous research university on the South Side",
+    "founded": 1890,
+    "students": 18000,
+    "website": "https://www.uchicago.edu",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/uchicago.edu",
+    "wikipedia": "University of Chicago",
+    "ranking": 21,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Campus_Spring.jpg?width=1000",
+      "https://picsum.photos/seed/us-uchicago-1/800/500",
+      "https://picsum.photos/seed/us-uchicago-2/800/500"
+    ]
+  },
+  {
+    "id": "us-smc",
+    "name": "Santa Monica College",
+    "short": "SMC",
+    "country": "US",
+    "city": "Los Angeles",
+    "type": "college",
+    "verifiedPartner": false,
+    "tagline": "California community college with top university-transfer rates",
+    "founded": 1929,
+    "students": 26000,
+    "website": "https://www.smc.edu",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/smc.edu",
+    "wikipedia": "Santa Monica College",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Smctheaterartsbuilding.JPG?width=1000",
+      "https://picsum.photos/seed/us-smc-1/800/500",
+      "https://picsum.photos/seed/us-smc-2/800/500"
+    ]
+  },
+  {
+    "id": "us-ice",
+    "name": "Institute of Culinary Education",
+    "short": "ICE",
+    "country": "US",
+    "city": "New York",
+    "type": "institute",
+    "verifiedPartner": false,
+    "tagline": "Award-winning culinary school in Lower Manhattan",
+    "founded": 1975,
+    "students": 3000,
+    "website": "https://www.ice.edu",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/ice.edu",
+    "wikipedia": "Institute of Culinary Education",
+    "ranking": null,
+    "images": [
+      "https://picsum.photos/seed/us-ice-0/800/500",
+      "https://picsum.photos/seed/us-ice-1/800/500",
+      "https://picsum.photos/seed/us-ice-2/800/500"
+    ]
+  },
+  {
+    "id": "ca-utoronto",
+    "name": "University of Toronto",
+    "short": "UofT",
+    "country": "CA",
+    "city": "Toronto",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Canada's top-ranked research university",
+    "founded": 1827,
+    "students": 97000,
+    "website": "https://www.utoronto.ca",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/utoronto.ca",
+    "wikipedia": "University of Toronto",
+    "ranking": 25,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/UofTConvocationHall.jpg?width=1000",
+      "https://picsum.photos/seed/ca-utoronto-1/800/500",
+      "https://picsum.photos/seed/ca-utoronto-2/800/500"
+    ]
+  },
+  {
+    "id": "ca-ubc",
+    "name": "University of British Columbia",
+    "short": "UBC",
+    "country": "CA",
+    "city": "Vancouver",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Pacific-rim research university in Vancouver",
+    "founded": 1908,
+    "students": 66000,
+    "website": "https://www.ubc.ca",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/ubc.ca",
+    "wikipedia": "University of British Columbia",
+    "ranking": 38,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Irving_K._Barber_Library.jpg?width=1000",
+      "https://picsum.photos/seed/ca-ubc-1/800/500",
+      "https://picsum.photos/seed/ca-ubc-2/800/500"
+    ]
+  },
+  {
+    "id": "ca-mcgill",
+    "name": "McGill University",
+    "short": "McGill",
+    "country": "CA",
+    "city": "Montreal",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Historic English-language university in Montreal",
+    "founded": 1821,
+    "students": 39000,
+    "website": "https://www.mcgill.ca",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/mcgill.ca",
+    "wikipedia": "McGill University",
+    "ranking": 29,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Arts_Building%2C_McGill_University%2C_Aug_31_2022.jpg?width=1000",
+      "https://picsum.photos/seed/ca-mcgill-1/800/500",
+      "https://picsum.photos/seed/ca-mcgill-2/800/500"
+    ]
+  },
+  {
+    "id": "ca-york",
+    "name": "York University",
+    "short": "York U",
+    "country": "CA",
+    "city": "Toronto",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Large comprehensive university in northern Toronto",
+    "founded": 1959,
+    "students": 55000,
+    "website": "https://www.yorku.ca",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/yorku.ca",
+    "wikipedia": "York University",
+    "ranking": 353,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/YorkUComputerScienceAndEngineeringBuilding.jpg?width=1000",
+      "https://picsum.photos/seed/ca-york-1/800/500",
+      "https://picsum.photos/seed/ca-york-2/800/500"
+    ]
+  },
+  {
+    "id": "ca-georgebrown",
+    "name": "George Brown College",
+    "short": "George Brown",
+    "country": "CA",
+    "city": "Toronto",
+    "type": "college",
+    "verifiedPartner": true,
+    "tagline": "Toronto's downtown college for culinary and creative careers",
+    "founded": 1967,
+    "students": 32000,
+    "website": "https://www.georgebrown.ca",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/georgebrown.ca",
+    "wikipedia": "George Brown College",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/GBC_Casa_Loma_02.jpg?width=1000",
+      "https://picsum.photos/seed/ca-georgebrown-1/800/500",
+      "https://picsum.photos/seed/ca-georgebrown-2/800/500"
+    ]
+  },
+  {
+    "id": "cn-tsinghua",
+    "name": "Tsinghua University",
+    "short": "Tsinghua",
+    "country": "CN",
+    "city": "Beijing",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "China's leading engineering and science university",
+    "founded": 1911,
+    "students": 50000,
+    "website": "https://www.tsinghua.edu.cn",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/tsinghua.edu.cn",
+    "wikipedia": "Tsinghua University",
+    "ranking": 20,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Thu_gate.JPG?width=1000",
+      "https://picsum.photos/seed/cn-tsinghua-1/800/500",
+      "https://picsum.photos/seed/cn-tsinghua-2/800/500"
+    ]
+  },
+  {
+    "id": "cn-pku",
+    "name": "Peking University",
+    "short": "PKU",
+    "country": "CN",
+    "city": "Beijing",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "China's oldest modern national university",
+    "founded": 1898,
+    "students": 48000,
+    "website": "https://www.pku.edu.cn",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/pku.edu.cn",
+    "wikipedia": "Peking University",
+    "ranking": 14,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/PekingUniversityPic6.jpg?width=1000",
+      "https://picsum.photos/seed/cn-pku-1/800/500",
+      "https://picsum.photos/seed/cn-pku-2/800/500"
+    ]
+  },
+  {
+    "id": "cn-fudan",
+    "name": "Fudan University",
+    "short": "Fudan",
+    "country": "CN",
+    "city": "Shanghai",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Comprehensive research university in Shanghai",
+    "founded": 1905,
+    "students": 32000,
+    "website": "https://www.fudan.edu.cn",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/fudan.edu.cn",
+    "wikipedia": "Fudan University",
+    "ranking": 39,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Fudan_university.jpg?width=1000",
+      "https://picsum.photos/seed/cn-fudan-1/800/500",
+      "https://picsum.photos/seed/cn-fudan-2/800/500"
+    ]
+  },
+  {
+    "id": "cn-sysu",
+    "name": "Sun Yat-sen University",
+    "short": "SYSU",
+    "country": "CN",
+    "city": "Guangzhou",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Research university across Guangdong campuses",
+    "founded": 1924,
+    "students": 66000,
+    "website": "https://www.sysu.edu.cn",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/sysu.edu.cn",
+    "wikipedia": "Sun Yat-sen University",
+    "ranking": 319,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Zhongda_ZH3.jpg?width=1000",
+      "https://picsum.photos/seed/cn-sysu-1/800/500",
+      "https://picsum.photos/seed/cn-sysu-2/800/500"
+    ]
+  },
+  {
+    "id": "cn-bhi",
+    "name": "Beijing Hospitality Institute",
+    "short": "BHI",
+    "country": "CN",
+    "city": "Beijing",
+    "type": "institute",
+    "verifiedPartner": false,
+    "tagline": "Swiss-style hospitality management institute",
+    "founded": 2010,
+    "students": 5000,
+    "website": "https://www.bhi.edu.cn",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/bhi.edu.cn",
+    "wikipedia": "Beijing Hospitality Institute",
+    "ranking": null,
+    "images": [
+      "https://picsum.photos/seed/cn-bhi-0/800/500",
+      "https://picsum.photos/seed/cn-bhi-1/800/500",
+      "https://picsum.photos/seed/cn-bhi-2/800/500"
+    ]
+  },
+  {
+    "id": "au-angliss",
+    "name": "William Angliss Institute",
+    "short": "Angliss",
+    "country": "AU",
+    "city": "Melbourne",
+    "type": "institute",
+    "verifiedPartner": true,
+    "tagline": "Specialist institute for foods, tourism and hospitality",
+    "founded": 1940,
+    "students": 23000,
+    "website": "https://www.angliss.edu.au",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/angliss.edu.au",
+    "wikipedia": "William Angliss Institute",
+    "ranking": null,
+    "images": [
+      "https://picsum.photos/seed/au-angliss-0/800/500",
+      "https://picsum.photos/seed/au-angliss-1/800/500",
+      "https://picsum.photos/seed/au-angliss-2/800/500"
+    ]
+  },
+  {
+    "id": "my-berjaya",
+    "name": "BERJAYA University College",
+    "short": "BERJAYA UC",
+    "country": "MY",
+    "city": "Kuala Lumpur",
+    "type": "college",
+    "verifiedPartner": true,
+    "tagline": "Culinary and hospitality specialist in the city centre",
+    "founded": 2009,
+    "students": 3500,
+    "website": "https://www.berjaya.edu.my",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/berjaya.edu.my",
+    "wikipedia": "Berjaya University College",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Berjaya_Times_Square_(211030).jpg?width=1000",
+      "https://picsum.photos/seed/my-berjaya-1/800/500",
+      "https://picsum.photos/seed/my-berjaya-2/800/500"
+    ]
+  },
+  {
+    "id": "tw-nkuht",
+    "name": "National Kaohsiung University of Hospitality and Tourism",
+    "short": "NKUHT",
+    "country": "TW",
+    "city": "Kaohsiung",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Taiwan's national school for hospitality and culinary arts",
+    "founded": 1995,
+    "students": 8000,
+    "website": "https://www.nkuht.edu.tw",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/nkuht.edu.tw",
+    "wikipedia": "National Kaohsiung University of Hospitality and Tourism",
+    "ranking": null,
+    "images": [
+      "https://picsum.photos/seed/tw-nkuht-0/800/500",
+      "https://picsum.photos/seed/tw-nkuht-1/800/500",
+      "https://picsum.photos/seed/tw-nkuht-2/800/500"
+    ]
+  },
+  {
+    "id": "gb-lcb",
+    "name": "Le Cordon Bleu London",
+    "short": "Le Cordon Bleu",
+    "country": "GB",
+    "city": "London",
+    "type": "institute",
+    "verifiedPartner": false,
+    "tagline": "The famous French culinary arts institute in Bloomsbury",
+    "founded": 1933,
+    "students": 1000,
+    "website": "https://www.cordonbleu.edu/london",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/cordonbleu.edu",
+    "wikipedia": "Le Cordon Bleu",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Paris_06_2012_Cordon_Bleu_3149.jpg?width=1000",
+      "https://picsum.photos/seed/gb-lcb-1/800/500",
+      "https://picsum.photos/seed/gb-lcb-2/800/500"
+    ],
+    "campuses": [
+      {
+        "id": "nz-lcb",
+        "name": "Le Cordon Bleu Wellington",
+        "city": "Wellington",
+        "country": "NZ"
+      }
+    ]
+  },
+  {
+    "id": "nz-lcb",
+    "name": "Le Cordon Bleu Wellington",
+    "short": "LCB Wellington",
+    "country": "NZ",
+    "city": "Wellington",
+    "type": "institute",
+    "verifiedPartner": false,
+    "tagline": "French culinary arts school in the capital",
+    "founded": 2012,
+    "students": 400,
+    "website": "https://www.cordonbleu.edu/wellington",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/cordonbleu.edu",
+    "wikipedia": "Le Cordon Bleu",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Paris_06_2012_Cordon_Bleu_3149.jpg?width=1000",
+      "https://picsum.photos/seed/nz-lcb-1/800/500",
+      "https://picsum.photos/seed/nz-lcb-2/800/500"
+    ],
+    "campuses": [
+      {
+        "id": "gb-lcb",
+        "name": "Le Cordon Bleu London",
+        "city": "London",
+        "country": "GB"
+      }
+    ]
+  },
+  {
+    "id": "sg-shatec",
+    "name": "SHATEC",
+    "short": "SHATEC",
+    "country": "SG",
+    "city": "Singapore",
+    "type": "institute",
+    "verifiedPartner": false,
+    "tagline": "Singapore's hotel and culinary school built by the industry",
+    "founded": 1983,
+    "students": 1200,
+    "website": "https://www.shatec.sg",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/shatec.sg",
+    "wikipedia": "SHATEC",
+    "ranking": null,
+    "images": [
+      "https://picsum.photos/seed/sg-shatec-0/800/500",
+      "https://picsum.photos/seed/sg-shatec-1/800/500",
+      "https://picsum.photos/seed/sg-shatec-2/800/500"
+    ]
+  },
+  {
+    "id": "my-monash",
+    "name": "Monash University Malaysia",
+    "short": "Monash MY",
+    "country": "MY",
+    "city": "Kuala Lumpur",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Monash's Malaysian campus — same degree, Malaysian fees",
+    "founded": 1998,
+    "students": 10000,
+    "website": "https://www.monash.edu.my",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/monash.edu.my",
+    "wikipedia": "Monash University Malaysia Campus",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Cmglee_Sunway_Monash_University.jpg?width=1000",
+      "https://picsum.photos/seed/my-monash-1/800/500",
+      "https://picsum.photos/seed/my-monash-2/800/500"
+    ],
+    "campuses": [
+      {
+        "id": "au-monash",
+        "name": "Monash University",
+        "city": "Melbourne",
+        "country": "AU"
+      }
+    ]
+  },
+  {
+    "id": "cn-nyush",
+    "name": "NYU Shanghai",
+    "short": "NYU Shanghai",
+    "country": "CN",
+    "city": "Shanghai",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "NYU's degree-granting campus in Pudong",
+    "founded": 2012,
+    "students": 2000,
+    "website": "https://shanghai.nyu.edu",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/shanghai.nyu.edu",
+    "wikipedia": "New York University Shanghai",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/NYUSH_Lujiazui_Building.jpg?width=1000",
+      "https://picsum.photos/seed/cn-nyush-1/800/500",
+      "https://picsum.photos/seed/cn-nyush-2/800/500"
+    ],
+    "campuses": [
+      {
+        "id": "us-nyu",
+        "name": "New York University",
+        "city": "New York",
+        "country": "US"
+      }
     ]
   }
 ]

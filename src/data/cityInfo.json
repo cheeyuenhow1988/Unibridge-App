@@ -154,5 +154,65 @@
     "country": "RU",
     "climate": "Siberian: winters −20 to −12°C (dress seriously), summers 15–26°C.",
     "safety": "Safe university districts; winter cold is the main risk."
+  },
+  {
+    "city": "Boston",
+    "country": "US",
+    "climate": "Four proper seasons: snowy winters −6 to 4°C, warm summers 17–28°C; fall is spectacular.",
+    "safety": "Safe student city; usual late-night awareness downtown."
+  },
+  {
+    "city": "New York",
+    "country": "US",
+    "climate": "Hot summers 20–29°C, cold winters −3 to 6°C; every season has a mood.",
+    "safety": "Much safer than the movies suggest; stay aware on late-night subways."
+  },
+  {
+    "city": "Los Angeles",
+    "country": "US",
+    "climate": "Sunny and dry 14–29°C nearly all year; cool ocean-breeze evenings.",
+    "safety": "Neighbourhood-dependent; campus areas are safe, plan rides home at night."
+  },
+  {
+    "city": "Chicago",
+    "country": "US",
+    "climate": "Windy city: icy winters −8 to 0°C, pleasant summers 17–29°C.",
+    "safety": "Downtown and campus areas are fine; research neighbourhoods before renting."
+  },
+  {
+    "city": "Toronto",
+    "country": "CA",
+    "climate": "Cold snowy winters −7 to 0°C, warm summers 15–27°C; the PATH keeps downtown walkable.",
+    "safety": "Consistently ranked among the safest big cities in North America."
+  },
+  {
+    "city": "Vancouver",
+    "country": "CA",
+    "climate": "Mildest in Canada: rainy winters 1–8°C, dry sunny summers 13–22°C.",
+    "safety": "Very safe; standard awareness around the Downtown Eastside."
+  },
+  {
+    "city": "Montreal",
+    "country": "CA",
+    "climate": "Real winters −13 to −5°C with lots of snow; joyful summers 16–26°C.",
+    "safety": "Safe, walkable and student-filled; icy sidewalks are the real hazard."
+  },
+  {
+    "city": "Beijing",
+    "country": "CN",
+    "climate": "Dry continental: cold winters −8 to 3°C, hot summers 22–31°C.",
+    "safety": "Very low street crime; campuses are gated and patrolled."
+  },
+  {
+    "city": "Shanghai",
+    "country": "CN",
+    "climate": "Humid subtropical: chilly damp winters 1–9°C, hot muggy summers 25–33°C.",
+    "safety": "Extremely safe at all hours; mind silent e-scooters when crossing."
+  },
+  {
+    "city": "Guangzhou",
+    "country": "CN",
+    "climate": "Subtropical: warm and humid 14–33°C, long summers with downpours.",
+    "safety": "Safe and orderly; typhoon season brings heavy rain, not trouble."
   }
 ]

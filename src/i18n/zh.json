@@ -68,7 +68,9 @@
     "RU": "俄罗斯",
     "ID": "印度尼西亚",
     "VN": "越南",
-    "CN": "中国"
+    "CN": "中国",
+    "US": "美国",
+    "CA": "加拿大"
   },
   "fields": {
     "business": "商科",
@@ -91,7 +93,7 @@
   "instTypes": {
     "university": "大学",
     "college": "学院",
-    "institute": "研究院"
+    "institute": "专业学院"
   },
   "attractionTypes": {
     "food": "美食",
@@ -247,7 +249,9 @@
     "cityCountry": "{{country}}{{city}}",
     "teachingLanguage": "授课语言",
     "rankingShort": "QS 第{{rank}}名",
-    "rankingNote": "QS 风格世界排名（参考值）"
+    "rankingNote": "QS 风格世界排名（参考值）",
+    "otherCampuses": "其他校区",
+    "campusFeesNote": "同一院校品牌、不同国家——学费与生活费不同。点按对比。"
   },
   "attraction": {
     "whatToDo": "玩什么",
@@ -285,7 +289,9 @@
     "applicationFee": "申请费",
     "feeWaived": "UniBridge 用户免申请费",
     "utilities": "水电与网络",
-    "rentDetail": "合租房间·郊区——点按查看全部租房选项"
+    "rentDetail": "合租房间·郊区——点按查看全部租房选项",
+    "flights": "回国机票（往返）",
+    "flightsNote": "每次往返、淡季与旺季对比，按您的货币显示。未计入上方总额——点按查看城市生活费详情。"
   },
   "scholarships": {
     "title": "奖学金",
@@ -564,7 +570,9 @@
     "wizardAskPref": "最后一个——你喜欢什么样的地方？",
     "wizardSummary": "你的选择：{{field}} · {{budget}} · {{pref}}",
     "wizardRelaxed": "注：没有完全符合该预算的选项，我放宽了预算来显示最接近的选择。",
-    "pref_any": "哪里都行"
+    "pref_any": "哪里都行",
+    "chipOpen": "打开{{name}} ↗",
+    "cityFlight": "✈️ 回国往返机票：淡季约 {{low}} · 旺季/假期约 {{peak}}。"
   },
   "costsheet": {
     "title": "{{city}}生活费用",
@@ -579,6 +587,10 @@
     "mealOut": "外食单餐（平价）",
     "utilities": "水电、网络与话费",
     "transport": "公共交通",
-    "basis": "应用内总费用按省钱方案计算：郊区合租房间。"
+    "basis": "应用内总费用按省钱方案计算：郊区合租房间。",
+    "flightsTitle": "回国机票（往返）",
+    "flightLow": "淡季",
+    "flightPeak": "旺季（假期）",
+    "flightNote": "您的国家与该城市之间的往返经济舱估价——提前 2–3 个月预订可拿到淡季价。"
   }
 }
