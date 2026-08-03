@@ -455,6 +455,44 @@ for (const [rowIndex, row] of INSTITUTIONS.entries()) {
   });
 }
 
+// Monthly rent by option, calibrated against early-2026 public rental data
+// (SpareRoom/uhomes for UK, Australian student-housing guides, ohmyhome/cove
+// for SG, bambooroutes for KL, findawayabroad for Taipei; other cities scaled
+// from those anchors). [roomSuburb, roomCbd, studioSuburb, studioCbd, unitSuburb, unitCbd]
+const RENT_DETAIL = {
+  Sydney: [1200, 1700, 2100, 2600, 2300, 3000],
+  Melbourne: [1000, 1500, 1900, 2400, 2100, 2700],
+  Brisbane: [950, 1350, 1700, 2100, 1900, 2400],
+  Perth: [900, 1250, 1550, 1950, 1800, 2200],
+  'Kuala Lumpur': [800, 1300, 1500, 2300, 1800, 2800],
+  Penang: [650, 1000, 1200, 1800, 1400, 2200],
+  Cyberjaya: [700, 1000, 1300, 1800, 1500, 2100],
+  'Johor Bahru': [600, 900, 1100, 1600, 1300, 1900],
+  Taipei: [9000, 14000, 15000, 21000, 22000, 30000],
+  Hsinchu: [7000, 10000, 11000, 15000, 16000, 22000],
+  Taichung: [6500, 9500, 10000, 14000, 14000, 20000],
+  Kaohsiung: [6000, 9000, 9500, 13000, 13000, 18000],
+  London: [800, 1200, 1400, 1800, 1700, 2400],
+  Manchester: [550, 750, 900, 1200, 1050, 1400],
+  Edinburgh: [600, 800, 950, 1250, 1100, 1500],
+  Birmingham: [500, 700, 850, 1100, 1000, 1300],
+  Leeds: [480, 650, 800, 1050, 950, 1250],
+  Singapore: [1100, 1600, 2100, 2800, 3100, 4000],
+  Auckland: [950, 1300, 1650, 2100, 1900, 2400],
+  Wellington: [850, 1150, 1500, 1900, 1750, 2200],
+  Christchurch: [750, 1000, 1300, 1650, 1500, 1900],
+  Dunedin: [650, 850, 1100, 1400, 1300, 1650],
+  Moscow: [30000, 45000, 50000, 75000, 65000, 95000],
+  'Saint Petersburg': [22000, 32000, 38000, 55000, 48000, 70000],
+  Kazan: [15000, 22000, 26000, 38000, 33000, 48000],
+  Novosibirsk: [13000, 19000, 23000, 33000, 30000, 43000],
+};
+// [utilities+internet+mobile per person / month, cheap eating-out meal]
+const LIVING_EXTRA = {
+  AU: [220, 22], MY: [250, 12], TW: [2200, 120], GB: [160, 14],
+  SG: [180, 9], NZ: [200, 20], RU: [6000, 500],
+};
+
 const cityInfo = Object.entries(CITY_INFO).map(([city, [climate, safety]]) => ({
   city,
   country: CITY_COL[city][0],
@@ -462,12 +500,20 @@ const cityInfo = Object.entries(CITY_INFO).map(([city, [climate, safety]]) => ({
   safety,
 }));
 
-const costOfLiving = Object.entries(CITY_COL).map(([city, [country, rent, food, transport]]) => ({
-  city, country, currency: COUNTRIES[country].currency,
-  rentMonthly: rent, foodMonthly: food, transportMonthly: transport,
-  insuranceYearly: COUNTRIES[country].insuranceYearly,
-  visaFeeOneOff: COUNTRIES[country].visaFee,
-}));
+const costOfLiving = Object.entries(CITY_COL).map(([city, [country, , food, transport]]) => {
+  const [roomSuburb, roomCbd, studioSuburb, studioCbd, unitSuburb, unitCbd] = RENT_DETAIL[city];
+  const [utilitiesMonthly, eatingOutMeal] = LIVING_EXTRA[country];
+  return {
+    city, country, currency: COUNTRIES[country].currency,
+    // Budget default used in every total: a shared room in a suburb.
+    rentMonthly: roomSuburb,
+    rentOptions: { roomSuburb, roomCbd, studioSuburb, studioCbd, unitSuburb, unitCbd },
+    foodMonthly: food, transportMonthly: transport,
+    utilitiesMonthly, eatingOutMeal,
+    insuranceYearly: COUNTRIES[country].insuranceYearly,
+    visaFeeOneOff: COUNTRIES[country].visaFee,
+  };
+});
 
 const TYPE_TIPS = {
   food: ['Go hungry and stall-hop — split dishes so you can try more', 'Weeknights are cheaper and less crowded than weekends'],

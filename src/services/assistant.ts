@@ -1,3 +1,4 @@
+import { FLAGS } from '@/constants/countries';
 import type { MatchData } from '@/hooks/useMatchData';
 import { convert, formatMoney } from '@/services/currency';
 import { trueAnnualIn } from '@/services/costs';
@@ -41,7 +42,9 @@ function annualCost(r: MatchResult, ctx: AssistantCtx): number {
 function courseLine(r: MatchResult, ctx: AssistantCtx): string {
   return ctx.t('assistant.courseLine', {
     course: r.course.name,
-    institution: r.institution.short,
+    flag: FLAGS[r.course.country],
+    institution: r.institution.name,
+    country: ctx.t(`countries.${r.course.country}`),
     status: ctx.t(`match.${r.status}`),
     cost: formatMoney(annualCost(r, ctx), ctx.home),
   });

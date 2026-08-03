@@ -122,13 +122,27 @@ export interface CityInfo {
   safety: string;
 }
 
+export interface RentOptions {
+  roomSuburb: number;
+  roomCbd: number;
+  studioSuburb: number;
+  studioCbd: number;
+  unitSuburb: number;
+  unitCbd: number;
+}
+
 export interface CostOfLiving {
   city: string;
   country: CountryCode;
   currency: CurrencyCode;
+  /** Budget default used in totals: shared room in a suburb. */
   rentMonthly: number;
+  rentOptions: RentOptions;
   foodMonthly: number;
   transportMonthly: number;
+  utilitiesMonthly: number;
+  /** Typical inexpensive eating-out meal price. */
+  eatingOutMeal: number;
   insuranceYearly: number;
   visaFeeOneOff: number;
 }

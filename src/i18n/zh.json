@@ -282,7 +282,9 @@
     "pathwayRoutes": "衔接路线",
     "pathwayLeadsTo": "可衔接：{{fields}}",
     "applicationFee": "申请费",
-    "feeWaived": "UniBridge 用户免申请费"
+    "feeWaived": "UniBridge 用户免申请费",
+    "utilities": "水电与网络",
+    "rentDetail": "合租房间·郊区——点按查看全部租房选项"
   },
   "scholarships": {
     "title": "奖学金",
@@ -547,7 +549,7 @@
     "recommendWhere": "这是你在那里最有把握的选择：",
     "noMatches": "没找到匹配的课程——换个方向或放宽筛选试试。",
     "openMatchHint": "打开\"匹配\"标签页查看全部选项并进行对比。",
-    "courseLine": "{{course}} — {{institution}}（{{status}}）· 约{{cost}}/年",
+    "courseLine": "{{course}}\n   {{flag}} {{institution}}（{{country}}）· {{status}} · 约{{cost}}/年",
     "instAnswer": "{{name}}是位于{{country}}{{city}}的{{type}}——{{tagline}}。UniBridge 上有 {{count}} 门课程，对你而言真实费用约 {{min}}–{{max}}/年。官网：{{website}}",
     "cityOverview": "{{city}}一览：\n\n☀️ {{climate}}\n\n🛡️ {{safety}}",
     "cityWeather": "{{city}}天气：{{climate}}",
@@ -555,5 +557,20 @@
     "cityCost": "在{{city}}生活每月约 {{total}}（{{homeTotal}}）：房租 {{rent}}、伙食 {{food}}、交通 {{transport}}。",
     "askCity": "你想了解哪个城市？",
     "fallback": "我可以帮你了解大学、城市（天气、安全、费用）、预算，以及选择读什么、去哪里读。试试这些："
+  },
+  "costsheet": {
+    "title": "{{city}}生活费用",
+    "note": "2026 年初公开租房数据的参考均价——预订前请核实。",
+    "room": "合租房间",
+    "studio": "单间公寓",
+    "unit": "整租一居室",
+    "suburb": "郊区",
+    "cbd": "市中心 / CBD",
+    "livingTitle": "每月生活开销",
+    "food": "伙食（买菜+部分外食）",
+    "mealOut": "外食单餐（平价）",
+    "utilities": "水电、网络与话费",
+    "transport": "公共交通",
+    "basis": "应用内总费用按省钱方案计算：郊区合租房间。"
   }
 }

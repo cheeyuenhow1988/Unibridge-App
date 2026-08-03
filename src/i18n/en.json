@@ -285,7 +285,9 @@
     "pathwayRoutes": "Pathway routes",
     "pathwayLeadsTo": "Leads into {{fields}}",
     "applicationFee": "Application fee",
-    "feeWaived": "Fee waived for UniBridge users"
+    "feeWaived": "Fee waived for UniBridge users",
+    "utilities": "Utilities & internet",
+    "rentDetail": "Shared room, suburb — tap for all rent options"
   },
   "scholarships": {
     "title": "Scholarships",
@@ -541,7 +543,7 @@
     "recommendWhere": "Here are your strongest options there:",
     "noMatches": "I couldn't find matching courses for that — try another direction or loosen your filters.",
     "openMatchHint": "Open the Match tab to see every option and compare them.",
-    "courseLine": "{{course}} — {{institution}} ({{status}}) · ≈{{cost}}/yr",
+    "courseLine": "{{course}}\n   {{flag}} {{institution}}, {{country}} · {{status}} · ≈{{cost}}/yr",
     "instAnswer": "{{name}} is a {{type}} in {{city}}, {{country}} — {{tagline}}. On UniBridge: {{count}} courses, true cost ≈{{min}}–{{max}} per year for you. Official site: {{website}}",
     "cityOverview": "{{city}} at a glance:\n\n☀️ {{climate}}\n\n🛡️ {{safety}}",
     "cityWeather": "{{city}} weather: {{climate}}",
@@ -559,5 +561,20 @@
     "title": "Ask {{name}}",
     "mockReply": "Thanks for your question! Our admissions team typically replies within 1 business day. (This is a prototype chat.)",
     "placeholder": "Type your question…"
+  },
+  "costsheet": {
+    "title": "{{city}} living costs",
+    "note": "Indicative early-2026 averages from public rental data — verify before booking.",
+    "room": "Room in a shared home",
+    "studio": "Studio",
+    "unit": "Whole 1-bedroom unit",
+    "suburb": "Suburb",
+    "cbd": "City centre / CBD",
+    "livingTitle": "Monthly living",
+    "food": "Food (groceries + some eating out)",
+    "mealOut": "Eating out, per cheap meal",
+    "utilities": "Utilities, internet & mobile",
+    "transport": "Public transport",
+    "basis": "Totals in the app assume the budget option: a shared room in a suburb."
   }
 }

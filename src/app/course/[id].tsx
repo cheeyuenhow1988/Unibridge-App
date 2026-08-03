@@ -1,10 +1,11 @@
 import { Ionicons } from '@expo/vector-icons';
 import { router, useLocalSearchParams } from 'expo-router';
-import { useMemo } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, View } from 'react-native';
 import { AmbassadorStrip } from '@/components/explore/AmbassadorStrip';
 import { AttractionsCarousel } from '@/components/explore/AttractionsCarousel';
+import { CityCostSheet } from '@/components/explore/CityCostSheet';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
@@ -37,6 +38,7 @@ export default function CourseDetail() {
   const { colors } = useTheme();
   const { matchData, profile, loading, error, retry } = useMatchData();
   const savedIds = useSavedStore((s) => s.savedCourseIds);
+  const [costSheetOpen, setCostSheetOpen] = useState(false);
   const toggleSavedRaw = useSavedStore((s) => s.toggleSaved);
   const { t: tSave } = useTranslation();
   const toggleSaved = (id: string, wasSaved: boolean) => {
@@ -206,8 +208,20 @@ export default function CourseDetail() {
               {t('course.trueCostSubtitle', { years: t('common.years', { count: course.durationYears }), currency: home })}
             </Text>
             {costRow(t('course.tuition'), costs.tuitionTotal)}
-            {costRow(t('course.rent'), costs.rentMonthly * 12 * course.durationYears)}
+            <Pressable accessibilityRole="button" onPress={() => setCostSheetOpen(true)}>
+              <Row style={{ justifyContent: 'space-between', paddingVertical: spacing.xs }}>
+                <Row gap={4} style={{ flex: 1 }}>
+                  <Text variant="body" tone="secondary">{t('course.rent')}</Text>
+                  <Ionicons name="information-circle-outline" size={14} color={colors.accent} />
+                </Row>
+                <Text variant="bodyMedium">{formatMoney(costs.rentMonthly * 12 * course.durationYears, course.currency)}</Text>
+              </Row>
+              <Text variant="caption" tone="accent" style={{ marginTop: -2 }}>
+                {t('course.rentDetail')}
+              </Text>
+            </Pressable>
             {costRow(t('course.food'), costs.foodMonthly * 12 * course.durationYears)}
+            {costRow(t('course.utilities'), costs.utilitiesMonthly * 12 * course.durationYears)}
             {costRow(t('course.transport'), costs.transportMonthly * 12 * course.durationYears)}
             {costRow(t('course.insurance'), costs.insuranceTotal)}
             {costRow(t('course.visa'), costs.visaFee, t('common.oneOff'))}
@@ -261,6 +275,8 @@ export default function CourseDetail() {
           <AttractionsCarousel institutionId={institution.id} city={course.campusCity} />
         </View>
       </ScrollView>
+
+      {col ? <CityCostSheet visible={costSheetOpen} col={col} home={home} onClose={() => setCostSheetOpen(false)} /> : null}
 
       <View
         style={{

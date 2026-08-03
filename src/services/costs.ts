@@ -10,6 +10,7 @@ export interface CostBreakdown {
   rentMonthly: number;
   foodMonthly: number;
   transportMonthly: number;
+  utilitiesMonthly: number;
   insuranceTotal: number;
   visaFee: number;
   oneOffFees: number;
@@ -20,7 +21,7 @@ export interface CostBreakdown {
 }
 
 export function costBreakdown(course: Course, col: CostOfLiving): CostBreakdown {
-  const livingMonthly = col.rentMonthly + col.foodMonthly + col.transportMonthly;
+  const livingMonthly = col.rentMonthly + col.foodMonthly + col.transportMonthly + col.utilitiesMonthly;
   const tuitionTotal = course.tuitionPerYear * course.durationYears;
   const insuranceTotal = col.insuranceYearly * course.durationYears;
   const oneOffFees =
@@ -36,6 +37,7 @@ export function costBreakdown(course: Course, col: CostOfLiving): CostBreakdown 
     rentMonthly: col.rentMonthly,
     foodMonthly: col.foodMonthly,
     transportMonthly: col.transportMonthly,
+    utilitiesMonthly: col.utilitiesMonthly,
     insuranceTotal,
     visaFee: col.visaFeeOneOff,
     oneOffFees,

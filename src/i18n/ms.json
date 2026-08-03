@@ -282,7 +282,9 @@
     "pathwayRoutes": "Laluan alternatif",
     "pathwayLeadsTo": "Menuju ke {{fields}}",
     "applicationFee": "Yuran permohonan",
-    "feeWaived": "Yuran dikecualikan untuk pengguna UniBridge"
+    "feeWaived": "Yuran dikecualikan untuk pengguna UniBridge",
+    "utilities": "Utiliti & internet",
+    "rentDetail": "Bilik kongsi, pinggir bandar — ketik untuk semua pilihan sewa"
   },
   "scholarships": {
     "title": "Biasiswa",
@@ -547,7 +549,7 @@
     "recommendWhere": "Ini pilihan terkuat anda di sana:",
     "noMatches": "Tiada kursus sepadan — cuba arah lain atau longgarkan tapisan.",
     "openMatchHint": "Buka tab Padanan untuk melihat semua pilihan dan membandingkannya.",
-    "courseLine": "{{course}} — {{institution}} ({{status}}) · ≈{{cost}}/tahun",
+    "courseLine": "{{course}}\n   {{flag}} {{institution}}, {{country}} · {{status}} · ≈{{cost}}/tahun",
     "instAnswer": "{{name}} ialah {{type}} di {{city}}, {{country}} — {{tagline}}. Di UniBridge: {{count}} kursus, kos sebenar ≈{{min}}–{{max}} setahun untuk anda. Laman rasmi: {{website}}",
     "cityOverview": "{{city}} sepintas lalu:\n\n☀️ {{climate}}\n\n🛡️ {{safety}}",
     "cityWeather": "Cuaca {{city}}: {{climate}}",
@@ -555,5 +557,20 @@
     "cityCost": "Sara hidup di {{city}} sekitar {{total}} sebulan ({{homeTotal}}): sewa {{rent}}, makanan {{food}}, pengangkutan {{transport}}.",
     "askCity": "Bandar mana yang anda ingin tahu?",
     "fallback": "Saya boleh bantu tentang universiti, bandar (cuaca, keselamatan, kos), bajet, dan memilih apa atau di mana untuk belajar. Cuba salah satu:"
+  },
+  "costsheet": {
+    "title": "Kos sara hidup {{city}}",
+    "note": "Purata awal 2026 (anggaran) daripada data sewa awam — sahkan sebelum menempah.",
+    "room": "Bilik dalam rumah kongsi",
+    "studio": "Studio",
+    "unit": "Unit 1 bilik penuh",
+    "suburb": "Pinggir bandar",
+    "cbd": "Pusat bandar / CBD",
+    "livingTitle": "Sara hidup bulanan",
+    "food": "Makanan (barang dapur + makan luar)",
+    "mealOut": "Makan luar, semangkuk/sepinggan",
+    "utilities": "Utiliti, internet & telefon",
+    "transport": "Pengangkutan awam",
+    "basis": "Jumlah dalam apl menganggap pilihan jimat: bilik kongsi di pinggir bandar."
   }
 }
