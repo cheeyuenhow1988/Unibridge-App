@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export interface AsyncState<T> {
   data: T | null;
@@ -13,15 +13,14 @@ export function useAsync<T>(fn: () => Promise<T>, deps: readonly unknown[] = [])
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [nonce, setNonce] = useState(0);
-  const fnRef = useRef(fn);
-  fnRef.current = fn;
 
+  // The fetch deliberately keys off `deps`/`nonce`, not the (fresh-per-render) fn identity.
+  /* eslint-disable react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
     setError(false);
-    fnRef
-      .current()
+    fn()
       .then((result) => {
         if (!cancelled) setData(result);
       })
@@ -34,8 +33,8 @@ export function useAsync<T>(fn: () => Promise<T>, deps: readonly unknown[] = [])
     return () => {
       cancelled = true;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [...deps, nonce]);
+  /* eslint-enable react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
 
   const retry = useCallback(() => setNonce((n) => n + 1), []);
   return { data, loading, error, retry };

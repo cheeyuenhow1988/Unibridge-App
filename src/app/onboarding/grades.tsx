@@ -34,6 +34,8 @@ export default function GradeEntry() {
   const [score, setScore] = useState(profile?.english.score ? String(profile.english.score) : '');
   const [error, setError] = useState<string | null>(null);
 
+  // Initialise the dynamic form once the qualification system config loads.
+  /* eslint-disable react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
   useEffect(() => {
     if (!system) return;
     if (system.mode === 'subjects') {
@@ -46,8 +48,8 @@ export default function GradeEntry() {
     } else if (typeof profile?.grades.total === 'number') {
       setTotal(String(profile.grades.total));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [system?.id]);
+  /* eslint-enable react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
 
   if (!profile || !system) return <Screen edges={['top', 'bottom']} />;
 

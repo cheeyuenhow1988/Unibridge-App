@@ -22,7 +22,7 @@ import { listAttractions } from '@/services/api';
 import { costBreakdown } from '@/services/costs';
 import { convert, formatMoney, homeCurrencyFor } from '@/services/currency';
 import { useSavedStore } from '@/store/useSavedStore';
-import type { Attraction, MatchStatus } from '@/types/models';
+import type { Attraction } from '@/types/models';
 
 const LABEL_W = 104;
 const COL_W = 224;
