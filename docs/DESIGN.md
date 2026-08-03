@@ -1,14 +1,12 @@
 # UniBridge design direction
 
-Feel: **optimistic, international, trustworthy — with Gen-Z energy.** Editorial fintech
-foundation ("Electric Optimism" pass): deep-teal gradient statement moments and an
-electric-lime pop accent layered over the calm ivory trust base.
+Feel: **trustworthy, ambitious, global, premium** — Apple-clean education-fintech
+("Cobalt" system, client-specified): crisp white and warm off-white, deep cobalt
+primary, emerald/amber/sky state colors, cobalt-to-sky gradient for match moments.
 
 ## Type
 
-- **Fraunces** (SemiBold/Bold, plus **Black** for hero numerals and gradient headlines) —
-  a characterful serif that gives the app the warm, editorial confidence of modern
-  fintech brands, pushed to poster weight for the moments that should be screenshotted.
+- **Manrope** only (400-800) — SF/Inter-class clean sans with Apple-like hierarchy: ExtraBold display/hero with tight tracking, Bold headings, Medium/Regular body.
 - **Manrope** (400–800) for UI, body and numbers — clear, tabular-friendly, never generic.
 - Scale ≈1.25: display 34 / title 27 / heading 20 / sub 16 / body 15 / caption 12.5 / micro 10.5.
 - Body line-height 1.5×; large headlines tracked −0.5 to −0.7.
@@ -19,16 +17,15 @@ One committed accent, warm neutrals, semantic bucket colors:
 
 | Token | Light | Dark |
 |---|---|---|
-| Background | `#F6F4EF` warm ivory | `#101917` warm charcoal-green |
-| Surface | `#FFFFFF` | `#1A2421` |
-| Ink | `#172723` | `#ECF2EF` |
-| Accent (teal) | `#0C6F60` | `#3FCDB1` |
-| Eligible | teal | teal |
-| Borderline | amber `#96500A` | `#E8A23D` |
-| Pathway | cobalt `#3A57C4` | `#93A9F2` |
+| Background | `#FAF9F6` / `#FFFFFF` | `#0D1117` |
+| Ink | `#1F1F1F` | `#EDF1F7` |
+| Accent (cobalt) | `#2447DB` | `#8AA6FF` |
+| Eligible (emerald) | `#0B7A47` on `#DCF5E9` | `#57D9A3` |
+| Borderline (amber) | `#955C09` on `#FCEFD3` | `#F5B759` |
+| Pathway (sky) | `#086C9E` on `#E0F3FC` | `#7CC8F2` |
 | Verified | gold `#77590E` | `#E2C15E` |
-| Pop (lime) | `#C8F14A` on-ink | `#CDF463` |
-| Hero gradient | `#0D7A68 → #083D33` | `#12564A → #0B211D` |
+| Pop (sky) | `#86DBFF` on-ink | `#86DBFF` |
+| Hero gradient | `#2447DB → #0C6EAA` | `#2A50EE → #12224E` |
 
 **Electric Optimism rules:** lime is an *energy* accent, never body text — it lives on
 gradients and dark ink (hero CTAs, strength meter, countdown, tags, active dots). The
