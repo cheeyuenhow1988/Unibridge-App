@@ -43,7 +43,12 @@
     "posts": "Kiriman",
     "likes_other": "{{count}} suka",
     "year": "Tahun {{year}}",
-    "at": "di"
+    "at": "di",
+    "savedToast": "Disimpan ke senarai anda",
+    "removedToast": "Dibuang daripada simpanan",
+    "copiedToClipboard": "Disalin — tampal di mana-mana",
+    "soon": "akan datang",
+    "demo": "Demo"
   },
   "tabs": {
     "match": "Padanan",
@@ -200,7 +205,9 @@
       "localWaived": "Pemohon tempatan — syarat Bahasa Inggeris dikecualikan"
     },
     "pathwayVia": "Laluan tersedia melalui {{name}}",
-    "yourScore": "Skor anda: {{score}}"
+    "yourScore": "Skor anda: {{score}}",
+    "strengthDocs_other": "{{count}} dokumen tiada dalam peti anda — tambah sebelum memohon",
+    "clearCompare": "Kosongkan pilihan"
   },
   "compare": {
     "title": "Banding",
@@ -312,7 +319,8 @@
     "pickImage": "Pilih foto",
     "uploadedOn": "Dimuat naik {{date}}",
     "expiresOn": "Luput {{date}}",
-    "removeConfirm": "Buang dokumen ini?"
+    "removeConfirm": "Buang dokumen ini?",
+    "expirySaved": "Tarikh luput disimpan"
   },
   "apply": {
     "title": "Mohon",
@@ -360,7 +368,8 @@
     "updated": "Dikemas kini {{date}}",
     "viewOffers": "Lihat tawaran ({{count}})",
     "scholarshipShortlist": "Senarai biasiswa",
-    "documents": "Dokumen"
+    "documents": "Dokumen",
+    "intakeLabel": "Kemasukan {{intake}}"
   },
   "predeparture": {
     "title": "Pra-berlepas",
@@ -459,5 +468,10 @@
     "title": "Tanya {{name}}",
     "mockReply": "Terima kasih atas soalan anda! Pasukan kemasukan biasanya membalas dalam 1 hari bekerja. (Ini sembang prototaip.)",
     "placeholder": "Taip soalan anda…"
+  },
+  "notFound": {
+    "title": "Halaman tidak dijumpai",
+    "body": "Pautan itu tidak menuju ke mana-mana — kursus atau halaman mungkin telah berpindah.",
+    "cta": "Ke padanan saya"
   }
 }

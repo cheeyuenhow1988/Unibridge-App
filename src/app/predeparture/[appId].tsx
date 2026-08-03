@@ -62,8 +62,10 @@ export default function Predeparture() {
   const [nowTs] = useState(() => Date.now());
   const nextIntake = useMemo(() => {
     if (!result) return null;
+    // The intake the student actually applied for wins over a calendar guess.
+    if (application?.intake) return application.intake;
     return result.course.intakes.find((i) => new Date(`${i}-01`).getTime() > nowTs) ?? result.course.intakes.at(-1) ?? null;
-  }, [result, nowTs]);
+  }, [result, application?.intake, nowTs]);
 
   const daysToGo = useMemo(() => {
     if (!nextIntake) return null;

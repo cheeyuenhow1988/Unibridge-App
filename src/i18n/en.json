@@ -34,6 +34,11 @@
     "emptyTitle": "Nothing here yet",
     "notFound": "We couldn't find that.",
     "share": "Share",
+    "savedToast": "Saved to your list",
+    "removedToast": "Removed from saved",
+    "copiedToClipboard": "Copied — paste it anywhere",
+    "soon": "soon",
+    "demo": "Demo",
     "edit": "Edit",
     "delete": "Delete",
     "add": "Add",
@@ -192,6 +197,9 @@
     "strengthUnlock": "Add IELTS {{score}} to unlock {{count}} more courses",
     "strengthEnglishDone": "Your {{test}} {{score}} is working for you — English requirements covered.",
     "strengthComplete": "Strong profile — you're ready to apply.",
+    "strengthDocs_one": "{{count}} document missing from your vault — add it before you apply",
+    "strengthDocs_other": "{{count}} documents missing from your vault — add them before you apply",
+    "clearCompare": "Clear selection",
     "emptyBucket": "No courses in this bucket with the current filters.",
     "emptyBucketCta": "Loosen your filters to see more.",
     "reason": {
@@ -314,6 +322,7 @@
     "pickImage": "Choose photo",
     "uploadedOn": "Uploaded {{date}}",
     "expiresOn": "Expires {{date}}",
+    "expirySaved": "Expiry date saved",
     "removeConfirm": "Remove this document?"
   },
   "apply": {
@@ -359,6 +368,7 @@
     "depositPaid": "Deposit paid — place confirmed 🎉",
     "predeparture": "Pre-departure checklist",
     "appliedOn": "Applied {{date}}",
+    "intakeLabel": "Intake {{intake}}",
     "updated": "Updated {{date}}",
     "viewOffers": "View offers ({{count}})",
     "scholarshipShortlist": "Scholarship shortlist",
@@ -457,6 +467,11 @@
     "loadDemo": "Load demo profile",
     "about": "UniBridge prototype — all institutions and data are fictional.",
     "homeCurrency": "Home currency"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "That link doesn't lead anywhere — the course or page may have moved.",
+    "cta": "Go to my matches"
   },
   "chat": {
     "title": "Ask {{name}}",

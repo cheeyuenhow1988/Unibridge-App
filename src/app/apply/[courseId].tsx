@@ -16,6 +16,7 @@ import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
 import { getCourse, getInstitution, listScholarships } from '@/services/api';
+import { hapticSuccess } from '@/services/haptics';
 import { formatMoney } from '@/services/currency';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
 import { useSavedStore } from '@/store/useSavedStore';
@@ -76,7 +77,13 @@ export default function ApplyFlow() {
   const shortlisted = scholarships.filter((s) => savedScholarshipIds.includes(s.id));
 
   const submit = () => {
-    const app = startApplication(course.id, feeWaived, scholarshipId === 'none' ? undefined : scholarshipId);
+    const app = startApplication(
+      course.id,
+      feeWaived,
+      intake ?? course.intakes[0],
+      scholarshipId === 'none' ? undefined : scholarshipId,
+    );
+    hapticSuccess();
     setAppId(app.id);
     setStep('done');
   };

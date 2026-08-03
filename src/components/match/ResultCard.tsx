@@ -10,7 +10,9 @@ import { FLAGS } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/useTheme';
 import { formatDual } from '@/services/currency';
+import { hapticTap } from '@/services/haptics';
 import { useSavedStore } from '@/store/useSavedStore';
+import { toast } from '@/store/useToastStore';
 import type { CurrencyCode, MatchResult } from '@/types/models';
 
 interface Props {
@@ -52,7 +54,11 @@ export function ResultCard({ result, homeCurrency, homeCountryLabel, compareMode
               accessibilityRole="button"
               accessibilityLabel={t('common.save')}
               hitSlop={10}
-              onPress={() => toggleSaved(course.id)}
+              onPress={() => {
+                hapticTap();
+                toast(saved ? t('common.removedToast') : t('common.savedToast'));
+                toggleSaved(course.id);
+              }}
             >
               <Ionicons name={saved ? 'heart' : 'heart-outline'} size={20} color={saved ? colors.danger : colors.inkFaint} />
             </Pressable>

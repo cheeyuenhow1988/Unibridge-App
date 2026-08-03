@@ -1,5 +1,4 @@
 import i18n from '@/i18n';
-import { Fraunces_600SemiBold, Fraunces_700Bold, Fraunces_900Black } from '@expo-google-fonts/fraunces';
 import {
   Manrope_400Regular, Manrope_500Medium, Manrope_600SemiBold, Manrope_700Bold, Manrope_800ExtraBold,
   useFonts,
@@ -9,6 +8,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { Platform, View } from 'react-native';
+import { ToastHost } from '@/components/ui/Toast';
 import { useTheme } from '@/hooks/useTheme';
 import { useProfileStore } from '@/store/useProfileStore';
 
@@ -19,9 +19,6 @@ export default function RootLayout() {
   const hydrated = useProfileStore((s) => s.hydrated);
   const language = useProfileStore((s) => s.language);
   const [fontsLoaded] = useFonts({
-    Fraunces_600SemiBold,
-    Fraunces_700Bold,
-    Fraunces_900Black,
     Manrope_400Regular,
     Manrope_500Medium,
     Manrope_600SemiBold,
@@ -41,16 +38,19 @@ export default function RootLayout() {
   if (!ready) return null;
 
   const stack = (
-    <Stack
-      screenOptions={{
-        headerShown: false,
-        contentStyle: { backgroundColor: colors.bg },
-      }}
-    >
-      <Stack.Screen name="compare" options={{ presentation: 'modal' }} />
-      <Stack.Screen name="apply/[courseId]" options={{ presentation: 'modal' }} />
-      <Stack.Screen name="chat/[institutionId]" options={{ presentation: 'modal' }} />
-    </Stack>
+    <View style={{ flex: 1 }}>
+      <Stack
+        screenOptions={{
+          headerShown: false,
+          contentStyle: { backgroundColor: colors.bg },
+        }}
+      >
+        <Stack.Screen name="compare" options={{ presentation: 'modal' }} />
+        <Stack.Screen name="apply/[courseId]" options={{ presentation: 'modal' }} />
+        <Stack.Screen name="chat/[institutionId]" options={{ presentation: 'modal' }} />
+      </Stack>
+      <ToastHost />
+    </View>
   );
 
   return (
@@ -59,7 +59,7 @@ export default function RootLayout() {
       {Platform.OS === 'web' ? (
         // Desktop browsers get a centered phone-width canvas instead of
         // stretching cards across the full window.
-        <View style={{ flex: 1, backgroundColor: scheme === 'dark' ? '#070C0A' : '#E7E2D7', alignItems: 'center' }}>
+        <View style={{ flex: 1, backgroundColor: scheme === 'dark' ? '#080B10' : '#EEECE5', alignItems: 'center' }}>
           <View style={{ flex: 1, width: '100%', maxWidth: 480 }}>{stack}</View>
         </View>
       ) : (

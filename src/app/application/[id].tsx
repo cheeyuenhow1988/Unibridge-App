@@ -16,6 +16,7 @@ import { FLAGS } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
 import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
+import { hapticSuccess } from '@/services/haptics';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
 import { APPLICATION_TIMELINE } from '@/types/models';
 
@@ -69,6 +70,7 @@ export default function ApplicationDetail() {
           </Pressable>
           <Text variant="title">{course.name}</Text>
           <Text variant="caption" tone="faint">
+            {application.intake ? `${t('applications.intakeLabel', { intake: application.intake })} · ` : ''}
             {t('applications.appliedOn', { date: application.createdAt })} · {t('applications.updated', { date: application.updatedAt })}
           </Text>
         </View>
@@ -129,12 +131,21 @@ export default function ApplicationDetail() {
         ) : null}
 
         {canAdvance ? (
-          <Button
-            label={t('applications.advanceDemo')}
-            variant="ghost"
-            icon="play-forward-outline"
-            onPress={() => advanceStatus(application.id)}
-          />
+          <View
+            style={{
+              borderWidth: 1.5, borderStyle: 'dashed', borderColor: colors.border,
+              borderRadius: radius.lg, padding: spacing.md, gap: spacing.xs, alignItems: 'flex-start',
+            }}
+          >
+            <Badge tone="neutral" icon="flask-outline" label={t('common.demo')} />
+            <Button
+              label={t('applications.advanceDemo')}
+              variant="ghost"
+              size="sm"
+              icon="play-forward-outline"
+              onPress={() => advanceStatus(application.id)}
+            />
+          </View>
         ) : null}
       </View>
 
@@ -145,6 +156,7 @@ export default function ApplicationDetail() {
         onClose={() => setDepositOpen(false)}
         onConfirm={() => {
           acceptOffer(application.id);
+          hapticSuccess();
           setDepositOpen(false);
         }}
       />

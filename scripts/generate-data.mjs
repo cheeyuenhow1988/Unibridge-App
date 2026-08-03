@@ -610,7 +610,7 @@ const seed_ = {
   savedCourseIds: ['au-monash-c1', 'gb-manchester-c1', 'nz-auckland-c1', 'sg-nus-c1'],
   applications: [
     {
-      id: 'app-demo-1', courseId: 'au-monash-c1', status: 'offer',
+      id: 'app-demo-1', courseId: 'au-monash-c1', status: 'offer', intake: '2027-02',
       createdAt: '2026-06-04', updatedAt: '2026-07-28', feeWaived: true,
       history: [
         { status: 'submitted', date: '2026-06-04' },
@@ -620,7 +620,7 @@ const seed_ = {
       ],
     },
     {
-      id: 'app-demo-2', courseId: 'gb-manchester-c1', status: 'conditional_offer',
+      id: 'app-demo-2', courseId: 'gb-manchester-c1', status: 'conditional_offer', intake: '2027-01',
       createdAt: '2026-06-12', updatedAt: '2026-07-15', feeWaived: true,
       history: [
         { status: 'submitted', date: '2026-06-12' },
@@ -629,7 +629,7 @@ const seed_ = {
       ],
     },
     {
-      id: 'app-demo-3', courseId: 'sg-nus-c1', status: 'under_review',
+      id: 'app-demo-3', courseId: 'sg-nus-c1', status: 'under_review', intake: '2027-01',
       createdAt: '2026-07-02', updatedAt: '2026-07-20', feeWaived: true,
       history: [
         { status: 'submitted', date: '2026-07-02' },

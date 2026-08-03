@@ -21,6 +21,7 @@ import { useTheme } from '@/hooks/useTheme';
 import { listAttractions } from '@/services/api';
 import { costBreakdown } from '@/services/costs';
 import { convert, formatMoney, homeCurrencyFor } from '@/services/currency';
+import { shareMessage } from '@/services/share';
 import { useSavedStore } from '@/store/useSavedStore';
 import type { Attraction } from '@/types/models';
 
@@ -77,11 +78,21 @@ export default function CompareScreen() {
 
   const onShare = async () => {
     try {
+      setSharing(true);
       if (Platform.OS === 'web' || !(await Sharing.isAvailableAsync())) {
-        Alert.alert(t('compare.shareUnavailable'));
+        // Web fallback: share/copy a clean text summary instead of dead-ending.
+        const summary = [
+          t('compare.shareTitle'),
+          ...columns.map(({ result, costs }) =>
+            `${FLAGS[result.course.country]} ${result.course.name} — ${result.institution.name}\n` +
+            `  ${formatMoney(costs.tuitionPerYear, costs.currency)} ${t('common.perYear')} · ${t('compare.trueTotal')} ` +
+            `${formatMoney(convert(costs.trueTotal, costs.currency, home), home)} · ${t(`match.${result.status}`)}`,
+          ),
+          t('match.disclaimer'),
+        ].join('\n\n');
+        await shareMessage(summary, t('common.copiedToClipboard'));
         return;
       }
-      setSharing(true);
       const uri = await captureRef(shareRef, { format: 'png', quality: 0.95 });
       await Sharing.shareAsync(uri.startsWith('file://') ? uri : `file://${uri}`, { mimeType: 'image/png' });
     } catch {

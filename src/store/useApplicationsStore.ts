@@ -14,7 +14,7 @@ export interface StatusNotification {
 interface ApplicationsState {
   applications: Application[];
   notifications: StatusNotification[];
-  startApplication: (courseId: string, feeWaived: boolean, scholarshipId?: string) => Application;
+  startApplication: (courseId: string, feeWaived: boolean, intake?: string, scholarshipId?: string) => Application;
   advanceStatus: (id: string) => void;
   acceptOffer: (id: string) => void;
   setPickup: (id: string, pickup: Application['pickup']) => void;
@@ -30,11 +30,12 @@ export const useApplicationsStore = create<ApplicationsState>()(
     (set) => ({
       applications: [],
       notifications: [],
-      startApplication: (courseId, feeWaived, scholarshipId) => {
+      startApplication: (courseId, feeWaived, intake, scholarshipId) => {
         const app: Application = {
           id: `app-${Date.now()}`,
           courseId,
           status: 'submitted',
+          intake,
           createdAt: today(),
           updatedAt: today(),
           feeWaived,

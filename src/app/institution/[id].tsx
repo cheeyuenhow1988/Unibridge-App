@@ -2,7 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { Linking, Pressable, ScrollView, View, useWindowDimensions } from 'react-native';
+import { Alert, Linking, Pressable, ScrollView, View, useWindowDimensions } from 'react-native';
 import { AmbassadorStrip } from '@/components/explore/AmbassadorStrip';
 import { AttractionsCarousel } from '@/components/explore/AttractionsCarousel';
 import { Badge } from '@/components/ui/Badge';
@@ -106,31 +106,34 @@ export default function InstitutionDetail() {
               onPress={() => router.push(`/chat/${institution.id}`)}
             />
           </Row>
-          <View style={{ gap: spacing.sm }}>
-            <Row gap={spacing.sm} wrap>
-              {([
-                ['logo-whatsapp', 'WhatsApp'],
-                ['paper-plane-outline', 'Telegram'],
-                ['logo-facebook', 'Facebook'],
-              ] as const).map(([icon, label]) => (
-                <Pressable
-                  key={label}
-                  accessibilityRole="button"
-                  onPress={() => router.push(`/chat/${institution.id}`)}
-                  style={({ pressed }) => ({
-                    flexDirection: 'row', alignItems: 'center', gap: 6,
-                    borderRadius: radius.full, borderWidth: 1, borderColor: colors.border,
-                    backgroundColor: colors.surface, paddingHorizontal: spacing.md, minHeight: 36,
-                    opacity: pressed ? 0.85 : 1,
-                  })}
-                >
-                  <Ionicons name={icon} size={15} color={colors.accent} />
-                  <Text variant="caption" tone="secondary">{label}</Text>
-                </Pressable>
-              ))}
-            </Row>
-            <Text variant="caption" tone="faint">{t('institution.socialNote')}</Text>
-          </View>
+          <Row gap={spacing.sm} wrap>
+            {([
+              ['logo-whatsapp', 'WhatsApp'],
+              ['paper-plane-outline', 'Telegram'],
+              ['logo-facebook', 'Facebook'],
+            ] as const).map(([icon, label]) => (
+              <Pressable
+                key={label}
+                accessibilityRole="button"
+                accessibilityLabel={`${label} — ${t('common.comingSoon')}`}
+                onPress={() =>
+                  Alert.alert(`${label} — ${t('common.comingSoon')}`, t('institution.socialNote'), [
+                    { text: t('common.close'), style: 'cancel' },
+                    { text: t('course.askQuestion'), onPress: () => router.push(`/chat/${institution.id}`) },
+                  ])
+                }
+                style={({ pressed }) => ({
+                  flexDirection: 'row', alignItems: 'center', gap: 6,
+                  borderRadius: radius.full, borderWidth: 1, borderColor: colors.border, borderStyle: 'dashed',
+                  backgroundColor: colors.surfaceAlt, paddingHorizontal: spacing.md, minHeight: 36,
+                  opacity: pressed ? 0.7 : 0.9,
+                })}
+              >
+                <Ionicons name={icon} size={15} color={colors.inkFaint} />
+                <Text variant="caption" tone="faint">{label} · {t('common.soon')}</Text>
+              </Pressable>
+            ))}
+          </Row>
 
           <Text variant="caption" tone="faint">{t('institution.indicative')}</Text>
 

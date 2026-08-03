@@ -20,7 +20,9 @@ import { useTheme } from '@/hooks/useTheme';
 import { costBreakdown } from '@/services/costs';
 import { convert, formatDual, formatMoney, homeCurrencyFor } from '@/services/currency';
 import { pathwayRoutesFor } from '@/services/eligibility';
+import { hapticTap } from '@/services/haptics';
 import { useSavedStore } from '@/store/useSavedStore';
+import { toast } from '@/store/useToastStore';
 import type { QualificationId } from '@/types/models';
 
 const SYSTEM_ORDER: QualificationId[] = ['spm', 'stpm', 'uec', 'alevels', 'ib', 'hkdse', 'gsat', 'atar', 'gpa'];
@@ -35,7 +37,13 @@ export default function CourseDetail() {
   const { colors } = useTheme();
   const { matchData, profile, loading, error, retry } = useMatchData();
   const savedIds = useSavedStore((s) => s.savedCourseIds);
-  const toggleSaved = useSavedStore((s) => s.toggleSaved);
+  const toggleSavedRaw = useSavedStore((s) => s.toggleSaved);
+  const { t: tSave } = useTranslation();
+  const toggleSaved = (id: string, wasSaved: boolean) => {
+    hapticTap();
+    toast(wasSaved ? tSave('common.removedToast') : tSave('common.savedToast'));
+    toggleSavedRaw(id);
+  };
 
   const result = matchData?.resultByCourseId.get(id);
   const home = profile ? homeCurrencyFor(profile.homeCountry) : 'USD';
@@ -80,7 +88,7 @@ export default function CourseDetail() {
         <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => router.back()} hitSlop={10}>
           <Ionicons name="chevron-back" size={24} color={colors.ink} />
         </Pressable>
-        <Pressable accessibilityRole="button" accessibilityLabel={t('common.save')} onPress={() => toggleSaved(course.id)} hitSlop={10}>
+        <Pressable accessibilityRole="button" accessibilityLabel={t('common.save')} onPress={() => toggleSaved(course.id, saved)} hitSlop={10}>
           <Ionicons name={saved ? 'heart' : 'heart-outline'} size={22} color={saved ? colors.danger : colors.ink} />
         </Pressable>
       </Row>
@@ -264,7 +272,7 @@ export default function CourseDetail() {
         <Pressable
           accessibilityRole="button"
           accessibilityLabel={t('common.save')}
-          onPress={() => toggleSaved(course.id)}
+          onPress={() => toggleSaved(course.id, saved)}
           style={{
             width: 48, height: 48, borderRadius: radius.full, borderWidth: 1.5,
             borderColor: colors.border, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.surface,

@@ -43,7 +43,12 @@
     "posts": "动态",
     "likes_other": "{{count}} 个赞",
     "year": "第 {{year}} 年",
-    "at": "在"
+    "at": "在",
+    "savedToast": "已加入收藏",
+    "removedToast": "已取消收藏",
+    "copiedToClipboard": "已复制——随处粘贴",
+    "soon": "即将上线",
+    "demo": "演示"
   },
   "tabs": {
     "match": "匹配",
@@ -200,7 +205,9 @@
       "localWaived": "本地申请者——免英语要求"
     },
     "pathwayVia": "可经 {{name}} 衔接",
-    "yourScore": "你的分数：{{score}}"
+    "yourScore": "你的分数：{{score}}",
+    "strengthDocs_other": "文件库缺少 {{count}} 份材料——申请前先补齐",
+    "clearCompare": "清除所选"
   },
   "compare": {
     "title": "对比",
@@ -312,7 +319,8 @@
     "pickImage": "选择照片",
     "uploadedOn": "上传于 {{date}}",
     "expiresOn": "{{date}} 到期",
-    "removeConfirm": "移除这份文件？"
+    "removeConfirm": "移除这份文件？",
+    "expirySaved": "有效期已保存"
   },
   "apply": {
     "title": "申请",
@@ -360,7 +368,8 @@
     "updated": "更新于 {{date}}",
     "viewOffers": "查看录取（{{count}}）",
     "scholarshipShortlist": "奖学金清单",
-    "documents": "材料"
+    "documents": "材料",
+    "intakeLabel": "{{intake}} 入学"
   },
   "predeparture": {
     "title": "行前准备",
@@ -459,5 +468,10 @@
     "title": "咨询{{name}}",
     "mockReply": "感谢你的提问！招生团队通常会在 1 个工作日内回复。（这是原型聊天。）",
     "placeholder": "输入你的问题…"
+  },
+  "notFound": {
+    "title": "页面不存在",
+    "body": "这个链接没有对应内容——课程或页面可能已移动。",
+    "cta": "回到我的匹配"
   }
 }

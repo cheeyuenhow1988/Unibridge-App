@@ -134,7 +134,10 @@ export default function ApplicationsScreen() {
                 ))}
               </Row>
               <Row style={{ justifyContent: 'space-between' }}>
-                <Text variant="caption" tone="faint">{t('applications.appliedOn', { date: item.createdAt })}</Text>
+                <Text variant="caption" tone="faint">
+                  {item.intake ? `${t('applications.intakeLabel', { intake: item.intake })} · ` : ''}
+                  {t('applications.appliedOn', { date: item.createdAt })}
+                </Text>
                 <Text variant="caption" tone="faint">{t('applications.updated', { date: item.updatedAt })}</Text>
               </Row>
             </Card>

@@ -2,7 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Alert, Linking, Modal, Pressable, ScrollView, Share, View } from 'react-native';
+import { Alert, Linking, Modal, Pressable, ScrollView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
@@ -13,6 +13,7 @@ import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
 import { listAttractions } from '@/services/api';
+import { shareMessage } from '@/services/share';
 import type { Attraction, AttractionType } from '@/types/models';
 
 export const ATTRACTION_ICONS: Record<AttractionType, keyof typeof Ionicons.glyphMap> = {
@@ -36,7 +37,7 @@ export function AttractionsCarousel({ institutionId, city }: { institutionId: st
 
   const share = async (a: Attraction) => {
     try {
-      await Share.share({ message: `${a.name} · ${a.description}\n${mapsUrl(a, city)}` });
+      await shareMessage(`${a.name} · ${a.description}\n${mapsUrl(a, city)}`, t('common.copiedToClipboard'));
     } catch {
       Alert.alert(t('compare.shareUnavailable'));
     }

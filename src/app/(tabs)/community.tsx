@@ -18,6 +18,7 @@ import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
 import { listAmbassadors, listCoursemates, listEvents, listInstitutions, listIntakeGroups } from '@/services/api';
+import { hapticTap } from '@/services/haptics';
 import { useCommunityStore } from '@/store/useCommunityStore';
 
 type Segment = 'groups' | 'feed' | 'mates' | 'events';
@@ -32,6 +33,8 @@ export default function CommunityScreen() {
   const toggleConnection = useCommunityStore((s) => s.toggleConnection);
   const rsvps = useCommunityStore((s) => s.rsvps);
   const toggleRsvp = useCommunityStore((s) => s.toggleRsvp);
+  const likedPostIds = useCommunityStore((s) => s.likedPostIds);
+  const toggleLike = useCommunityStore((s) => s.toggleLike);
 
   const state = useAsync(async () =>
     Promise.all([listIntakeGroups(), listAmbassadors(), listCoursemates(), listEvents(), listInstitutions()]),
@@ -147,10 +150,27 @@ export default function CommunityScreen() {
                   <Image source={{ uri: post.image }} style={{ width: '100%', height: 200 }} contentFit="cover" transition={200} />
                   <View style={{ padding: spacing.lg, gap: spacing.xs }}>
                     <Text variant="body">{post.text}</Text>
-                    <Row gap={5}>
-                      <Ionicons name="heart" size={14} color={colors.danger} />
-                      <Text variant="caption" tone="faint">{t('common.likes', { count: post.likes })}</Text>
-                    </Row>
+                    <Pressable
+                      accessibilityRole="button"
+                      accessibilityState={{ selected: likedPostIds.includes(post.id) }}
+                      hitSlop={8}
+                      onPress={() => {
+                        hapticTap();
+                        toggleLike(post.id);
+                      }}
+                      style={{ alignSelf: 'flex-start', minHeight: 32, justifyContent: 'center' }}
+                    >
+                      <Row gap={5}>
+                        <Ionicons
+                          name={likedPostIds.includes(post.id) ? 'heart' : 'heart-outline'}
+                          size={16}
+                          color={likedPostIds.includes(post.id) ? colors.danger : colors.inkFaint}
+                        />
+                        <Text variant="caption" tone="faint">
+                          {t('common.likes', { count: post.likes + (likedPostIds.includes(post.id) ? 1 : 0) })}
+                        </Text>
+                      </Row>
+                    </Pressable>
                   </View>
                 </Card>
               ))}
@@ -182,7 +202,10 @@ export default function CommunityScreen() {
                         size="sm"
                         variant={connected ? 'secondary' : 'primary'}
                         icon={connected ? 'checkmark' : 'person-add-outline'}
-                        onPress={() => toggleConnection(m.id)}
+                        onPress={() => {
+                          hapticTap();
+                          toggleConnection(m.id);
+                        }}
                       />
                     </View>
                   );
@@ -216,7 +239,10 @@ export default function CommunityScreen() {
                         size="sm"
                         variant={going ? 'secondary' : 'primary'}
                         icon={going ? 'checkmark' : 'calendar-outline'}
-                        onPress={() => toggleRsvp(e.id)}
+                        onPress={() => {
+                          hapticTap();
+                          toggleRsvp(e.id);
+                        }}
                         style={{ alignSelf: 'flex-start', marginTop: spacing.xs }}
                       />
                     </View>

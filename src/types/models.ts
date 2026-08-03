@@ -253,6 +253,8 @@ export interface Application {
   id: string;
   courseId: string;
   status: ApplicationStatus;
+  /** ISO year-month of the intake applied for, e.g. "2027-02". */
+  intake?: string;
   createdAt: string;
   updatedAt: string;
   history: { status: ApplicationStatus; date: string }[];

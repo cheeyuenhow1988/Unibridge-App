@@ -10,14 +10,19 @@ import { SkeletonCards } from '@/components/ui/Skeleton';
 import { EmptyState, ErrorState } from '@/components/ui/States';
 import { Text } from '@/components/ui/Text';
 import { TextField } from '@/components/ui/TextField';
+import { Card } from '@/components/ui/Card';
 import { DEST_COUNTRIES, FLAGS } from '@/constants/countries';
 import { spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
+import { useMatchData } from '@/hooks/useMatchData';
 import { listInstitutions, listScholarships } from '@/services/api';
+import { formatDual, homeCurrencyFor } from '@/services/currency';
 import { useProfileStore } from '@/store/useProfileStore';
+import { useSavedStore } from '@/store/useSavedStore';
 import type { CountryCode } from '@/types/models';
+import { router } from 'expo-router';
 
-type Segment = 'institutions' | 'scholarships';
+type Segment = 'institutions' | 'scholarships' | 'saved';
 
 export default function ExploreScreen() {
   const { t } = useTranslation();
@@ -28,6 +33,12 @@ export default function ExploreScreen() {
 
   const inst = useAsync(listInstitutions);
   const sch = useAsync(listScholarships);
+  const savedCourseIds = useSavedStore((s) => s.savedCourseIds);
+  const { matchData } = useMatchData();
+  const home = profile ? homeCurrencyFor(profile.homeCountry) : 'USD';
+  const savedCourses = savedCourseIds
+    .map((id) => matchData?.resultByCourseId.get(id))
+    .filter((r): r is NonNullable<typeof r> => !!r);
 
   const filteredInstitutions = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -67,7 +78,7 @@ export default function ExploreScreen() {
         ListHeaderComponent={
           <View style={{ gap: spacing.lg, paddingTop: spacing.xl, paddingBottom: spacing.lg }}>
             <Text variant="display">{t('tabs.explore')}</Text>
-            <Row gap={spacing.sm}>
+            <Row gap={spacing.sm} wrap>
               <Chip
                 label={t('tabs.explore')}
                 selected={segment === 'institutions'}
@@ -78,28 +89,55 @@ export default function ExploreScreen() {
                 selected={segment === 'scholarships'}
                 onPress={() => setSegment('scholarships')}
               />
+              <Chip
+                label={`${t('common.saved')}${savedCourseIds.length ? ` · ${savedCourseIds.length}` : ''}`}
+                selected={segment === 'saved'}
+                onPress={() => setSegment('saved')}
+              />
             </Row>
-            <TextField
-              placeholder={segment === 'scholarships' ? t('scholarships.searchPlaceholder') : t('common.search')}
-              value={query}
-              onChangeText={setQuery}
-              autoCorrect={false}
-            />
-            <FlatList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={DEST_COUNTRIES}
-              keyExtractor={(c) => c}
-              contentContainerStyle={{ gap: spacing.sm }}
-              renderItem={({ item: c }) => (
-                <Chip
-                  small
-                  label={`${FLAGS[c]} ${t(`countries.${c}`)}`}
-                  selected={country === c}
-                  onPress={() => setCountry(country === c ? null : c)}
+            {segment !== 'saved' ? (
+              <>
+                <TextField
+                  placeholder={segment === 'scholarships' ? t('scholarships.searchPlaceholder') : t('common.search')}
+                  value={query}
+                  onChangeText={setQuery}
+                  autoCorrect={false}
                 />
-              )}
-            />
+                <FlatList
+                  horizontal
+                  showsHorizontalScrollIndicator={false}
+                  data={DEST_COUNTRIES}
+                  keyExtractor={(c) => c}
+                  contentContainerStyle={{ gap: spacing.sm }}
+                  renderItem={({ item: c }) => (
+                    <Chip
+                      small
+                      label={`${FLAGS[c]} ${t(`countries.${c}`)}`}
+                      selected={country === c}
+                      onPress={() => setCountry(country === c ? null : c)}
+                    />
+                  )}
+                />
+              </>
+            ) : null}
+            {segment === 'saved' ? (
+              <View style={{ gap: spacing.md }}>
+                {savedCourses.map((r) => (
+                  <Card key={r.course.id} onPress={() => router.push(`/course/${r.course.id}`)} style={{ gap: 4 }}>
+                    <Text variant="caption" tone="secondary" numberOfLines={1}>
+                      {FLAGS[r.course.country]} {r.institution.name}
+                    </Text>
+                    <Text variant="sub" numberOfLines={2}>{r.course.name}</Text>
+                    <Text variant="caption" tone="accent">
+                      {formatDual(r.course.tuitionPerYear, r.course.currency, home)} {t('common.perYear')}
+                    </Text>
+                  </Card>
+                ))}
+                {savedCourses.length === 0 ? (
+                  <EmptyState icon="heart-outline" title={t('profile.savedEmpty')} />
+                ) : null}
+              </View>
+            ) : null}
             {segment === 'scholarships' && profile ? (
               <Text variant="caption" tone="faint">
                 {t('scholarships.forYou')} · {FLAGS[profile.nationality]} {t(`countries.${profile.nationality}`)}

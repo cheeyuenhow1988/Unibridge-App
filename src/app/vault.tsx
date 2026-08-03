@@ -9,18 +9,61 @@ import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { Row } from '@/components/ui/Misc';
+import { PickerField } from '@/components/ui/PickerField';
 import { Screen } from '@/components/ui/Screen';
 import { SkeletonCards } from '@/components/ui/Skeleton';
 import { ErrorState } from '@/components/ui/States';
 import { Text } from '@/components/ui/Text';
-import { TextField } from '@/components/ui/TextField';
 import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
 import { getDocumentTypes } from '@/services/api';
 import { useProfileStore } from '@/store/useProfileStore';
+import { toast } from '@/store/useToastStore';
 import { useVaultStore } from '@/store/useVaultStore';
 import type { DocumentTypeId } from '@/types/models';
+
+/** Year/month/day picker row — no free-text dates, no silent failures. */
+function ExpiryPicker({ label, value, onChange }: { label: string; value?: string; onChange: (date: string) => void }) {
+  const [y, m, d] = (value ?? '--').split('-');
+  const [year, setYear] = useState(y && y !== '' ? y : undefined);
+  const [month, setMonth] = useState(m || undefined);
+  const [day, setDay] = useState(d || undefined);
+
+  const commit = (ny?: string, nm?: string, nd?: string) => {
+    if (ny && nm && nd) onChange(`${ny}-${nm}-${nd}`);
+  };
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return (
+    <Row gap={spacing.sm} style={{ alignItems: 'flex-end' }}>
+      <View style={{ flex: 3 }}>
+        <PickerField
+          label={label}
+          placeholder="——"
+          value={year}
+          options={Array.from({ length: 9 }, (_, i) => String(2025 + i)).map((v) => ({ value: v, label: v }))}
+          onChange={(v) => { setYear(v); commit(v, month, day); }}
+        />
+      </View>
+      <View style={{ flex: 2 }}>
+        <PickerField
+          placeholder="——"
+          value={month}
+          options={Array.from({ length: 12 }, (_, i) => pad(i + 1)).map((v) => ({ value: v, label: v }))}
+          onChange={(v) => { setMonth(v); commit(year, v, day); }}
+        />
+      </View>
+      <View style={{ flex: 2 }}>
+        <PickerField
+          placeholder="——"
+          value={day}
+          options={Array.from({ length: 31 }, (_, i) => pad(i + 1)).map((v) => ({ value: v, label: v }))}
+          onChange={(v) => { setDay(v); commit(year, month, v); }}
+        />
+      </View>
+    </Row>
+  );
+}
 
 const DOC_ICONS: Record<DocumentTypeId, keyof typeof Ionicons.glyphMap> = {
   transcript: 'school-outline',
@@ -45,7 +88,6 @@ export default function VaultScreen() {
   const removeDocument = useVaultStore((s) => s.removeDocument);
   const setExpiry = useVaultStore((s) => s.setExpiry);
   const profile = useProfileStore((s) => s.profile);
-  const [expiryDrafts, setExpiryDrafts] = useState<Record<string, string>>({});
 
   const intakeYear = profile?.intakeYear ?? 2027;
   const intakeDate = new Date(`${intakeYear}-02-01`);
@@ -190,27 +232,14 @@ export default function VaultScreen() {
               </Row>
 
               {doc && hasExpiry ? (
-                <Row gap={spacing.sm} style={{ alignItems: 'flex-end' }}>
-                  <View style={{ flex: 1 }}>
-                    <TextField
-                      label={t('vault.expiryLabel')}
-                      placeholder={t('vault.expiryPlaceholder')}
-                      value={expiryDrafts[doc.id] ?? doc.expiryDate ?? ''}
-                      onChangeText={(v) => setExpiryDrafts((d) => ({ ...d, [doc.id]: v }))}
-                      autoCapitalize="none"
-                    />
-                  </View>
-                  <Button
-                    label={t('vault.setExpiry')}
-                    size="sm"
-                    variant="secondary"
-                    onPress={() => {
-                      const v = (expiryDrafts[doc.id] ?? '').trim();
-                      if (/^\d{4}-\d{2}-\d{2}$/.test(v)) setExpiry(doc.id, v);
-                    }}
-                    style={{ marginBottom: 22 }}
-                  />
-                </Row>
+                <ExpiryPicker
+                  label={t('vault.expiryLabel')}
+                  value={doc.expiryDate}
+                  onChange={(date) => {
+                    setExpiry(doc.id, date);
+                    toast(t('vault.expirySaved'));
+                  }}
+                />
               ) : null}
             </Card>
           );

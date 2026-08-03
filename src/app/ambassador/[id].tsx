@@ -15,11 +15,15 @@ import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
 import { getAmbassador, getInstitution } from '@/services/api';
+import { hapticTap } from '@/services/haptics';
+import { useCommunityStore } from '@/store/useCommunityStore';
 
 export default function AmbassadorProfile() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const { t } = useTranslation();
   const { colors } = useTheme();
+  const likedPostIds = useCommunityStore((s) => s.likedPostIds);
+  const toggleLike = useCommunityStore((s) => s.toggleLike);
   const state = useAsync(async () => {
     const ambassador = await getAmbassador(id);
     if (!ambassador) throw new Error('not found');
@@ -80,10 +84,27 @@ export default function AmbassadorProfile() {
             <View style={{ padding: spacing.lg, gap: spacing.xs }}>
               <Text variant="body">{post.text}</Text>
               <Row style={{ justifyContent: 'space-between' }}>
-                <Row gap={5}>
-                  <Ionicons name="heart" size={14} color={colors.danger} />
-                  <Text variant="caption" tone="faint">{t('common.likes', { count: post.likes })}</Text>
-                </Row>
+                <Pressable
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: likedPostIds.includes(post.id) }}
+                  hitSlop={8}
+                  onPress={() => {
+                    hapticTap();
+                    toggleLike(post.id);
+                  }}
+                  style={{ minHeight: 32, justifyContent: 'center' }}
+                >
+                  <Row gap={5}>
+                    <Ionicons
+                      name={likedPostIds.includes(post.id) ? 'heart' : 'heart-outline'}
+                      size={16}
+                      color={likedPostIds.includes(post.id) ? colors.danger : colors.inkFaint}
+                    />
+                    <Text variant="caption" tone="faint">
+                      {t('common.likes', { count: post.likes + (likedPostIds.includes(post.id) ? 1 : 0) })}
+                    </Text>
+                  </Row>
+                </Pressable>
                 <Text variant="caption" tone="faint">{post.date}</Text>
               </Row>
             </View>

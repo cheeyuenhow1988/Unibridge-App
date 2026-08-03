@@ -36,7 +36,10 @@ export function Button({ label, onPress, variant = 'primary', size = 'md', icon,
       accessibilityLabel={label}
       onPress={onPress}
       disabled={disabled || loading}
-      style={({ pressed }) => [
+      style={(state) => {
+        const { pressed } = state;
+        const web = state as { hovered?: boolean; focused?: boolean };
+        return [
         {
           height,
           minWidth: 44,
@@ -49,10 +52,12 @@ export function Button({ label, onPress, variant = 'primary', size = 'md', icon,
           justifyContent: 'center',
           gap: spacing.sm,
           paddingHorizontal: size === 'sm' ? spacing.lg : spacing.xxl,
-          opacity: disabled ? 0.45 : pressed ? 0.88 : 1,
+          opacity: disabled ? 0.45 : pressed ? 0.88 : web.hovered || web.focused ? 0.92 : 1,
         },
+        (web.hovered || web.focused) && variant === 'secondary' ? { borderColor: colors.accentPressed } : null,
         style,
-      ]}
+      ];
+      }}
     >
       {loading ? (
         <ActivityIndicator color={fg} />

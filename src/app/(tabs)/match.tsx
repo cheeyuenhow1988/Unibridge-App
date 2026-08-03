@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FlatList, Pressable, View } from 'react-native';
 import { DEFAULT_FILTERS, FiltersModal, type MatchFilters } from '@/components/match/FiltersModal';
@@ -31,9 +31,12 @@ export default function MatchScreen() {
   const { colors } = useTheme();
   const { matchData, profile, loading, error, retry } = useMatchData();
   const compareIds = useSavedStore((s) => s.compareIds);
+  const clearCompare = useSavedStore((s) => s.clearCompare);
   const [bucket, setBucket] = useState<MatchStatus>('eligible');
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [filters, setFilters] = useState<MatchFilters>(DEFAULT_FILTERS);
+  const listRef = useRef<FlatList>(null);
+  const scrollTop = () => listRef.current?.scrollToOffset({ offset: 0, animated: false });
 
   const homeCurrency = profile ? homeCurrencyFor(profile.homeCountry) : 'USD';
   const homeCountryLabel = profile ? t(`countries.${profile.homeCountry}`) : '';
@@ -108,6 +111,7 @@ export default function MatchScreen() {
   return (
     <Screen padded={false}>
       <FlatList
+        ref={listRef}
         data={list}
         keyExtractor={(r) => r.course.id}
         contentContainerStyle={{ paddingHorizontal: spacing.lg, paddingBottom: 120 }}
@@ -126,7 +130,10 @@ export default function MatchScreen() {
                     key={key}
                     accessibilityRole="tab"
                     accessibilityState={{ selected }}
-                    onPress={() => setBucket(key)}
+                    onPress={() => {
+                      setBucket(key);
+                      scrollTop();
+                    }}
                     style={{
                       flex: 1,
                       borderRadius: radius.lg,
@@ -200,14 +207,32 @@ export default function MatchScreen() {
       />
 
       {compareIds.length >= 2 ? (
-        <View style={{ position: 'absolute', bottom: spacing.xl, left: spacing.xl, right: spacing.xl }}>
+        <View
+          style={{
+            position: 'absolute', bottom: spacing.xl, left: spacing.xl, right: spacing.xl,
+            flexDirection: 'row', alignItems: 'center', gap: spacing.sm,
+          }}
+        >
           <Button
             label={t('match.compare', { count: compareIds.length })}
             size="lg"
             variant="pop"
             icon="git-compare-outline"
             onPress={() => router.push('/compare')}
+            style={{ flex: 1 }}
           />
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={t('match.clearCompare')}
+            onPress={clearCompare}
+            style={({ pressed }) => ({
+              width: 48, height: 48, borderRadius: radius.full, backgroundColor: colors.surface,
+              borderWidth: 1.5, borderColor: colors.border, alignItems: 'center', justifyContent: 'center',
+              opacity: pressed ? 0.85 : 1,
+            })}
+          >
+            <Ionicons name="close" size={20} color={colors.inkSecondary} />
+          </Pressable>
         </View>
       ) : compareIds.length === 1 ? (
         <View style={{ position: 'absolute', bottom: spacing.xl, alignSelf: 'center' }}>
@@ -224,7 +249,10 @@ export default function MatchScreen() {
 
       <FiltersModal
         visible={filtersOpen}
-        onClose={() => setFiltersOpen(false)}
+        onClose={() => {
+          setFiltersOpen(false);
+          scrollTop();
+        }}
         filters={filters}
         onChange={setFilters}
         resultCount={filtered.length}

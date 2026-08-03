@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from 'react';
-import { Pressable, View, type StyleProp, type ViewStyle } from 'react-native';
+import { Pressable, View, type PressableStateCallbackType, type StyleProp, type ViewStyle } from 'react-native';
 import { radius, spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/useTheme';
 
@@ -9,6 +9,9 @@ interface Props extends PropsWithChildren {
   padded?: boolean;
   tone?: 'surface' | 'alt' | 'accent';
 }
+
+/** RN types omit the web-only hover/focus interaction states. */
+type WebPressableState = PressableStateCallbackType & { hovered?: boolean; focused?: boolean };
 
 export function Card({ children, onPress, style, padded = true, tone = 'surface' }: Props) {
   const { colors, scheme } = useTheme();
@@ -25,8 +28,14 @@ export function Card({ children, onPress, style, padded = true, tone = 'surface'
   if (!onPress) return <View style={[base, style]}>{children}</View>;
   return (
     <Pressable
+      accessibilityRole="button"
       onPress={onPress}
-      style={({ pressed }) => [base, pressed && { opacity: 0.85, transform: [{ scale: 0.995 }] }, style]}
+      style={(state: WebPressableState) => [
+        base,
+        (state.hovered || state.focused) && { borderColor: colors.accent, transform: [{ translateY: -1 }] },
+        state.pressed && { opacity: 0.85, transform: [{ scale: 0.995 }] },
+        style,
+      ]}
     >
       {children}
     </Pressable>

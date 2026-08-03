@@ -42,8 +42,8 @@ export default function GradeEntry() {
       const existing = profile?.grades.subjects;
       if (existing?.length) setRows(existing);
       else {
-        const opts = system.subjectOptions ?? [];
-        setRows(Array.from({ length: system.subjectCount ?? 3 }, (_, i) => ({ subject: opts[i] ?? '', grade: '' })));
+        // Empty rows, not guessed subjects: pre-filled wrong data reads as truth.
+        setRows(Array.from({ length: system.subjectCount ?? 3 }, () => ({ subject: '', grade: '' })));
       }
     } else if (typeof profile?.grades.total === 'number') {
       setTotal(String(profile.grades.total));

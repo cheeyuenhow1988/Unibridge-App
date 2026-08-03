@@ -38,6 +38,12 @@ export const useSavedStore = create<SavedState>()(
       removeFromCompare: (id) => set((s) => ({ compareIds: s.compareIds.filter((x) => x !== id) })),
       setSaved: (ids) => set({ savedCourseIds: ids }),
     }),
-    { name: 'ub-saved', storage: createJSONStorage(() => AsyncStorage) },
+    {
+      name: 'ub-saved',
+      storage: createJSONStorage(() => AsyncStorage),
+      // compareIds is deliberately session-only: a stale "Compare (3)" bar
+      // floating over next week's session violates user intent.
+      partialize: ({ savedCourseIds, savedScholarshipIds }) => ({ savedCourseIds, savedScholarshipIds }),
+    },
   ),
 );
