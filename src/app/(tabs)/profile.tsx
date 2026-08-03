@@ -166,7 +166,7 @@ export default function ProfileScreen() {
             </Row>
           </Card>
 
-          <Card onPress={() => router.push('/assistant')} style={{ gap: 4 }}>
+          <Card onPress={() => router.push('/(tabs)/assistant')} style={{ gap: 4 }}>
             <Row style={{ justifyContent: 'space-between' }}>
               <Row gap={spacing.sm}>
                 <Ionicons name="sparkles" size={20} color={colors.accent} />

@@ -55,7 +55,8 @@
     "explore": "Teroka",
     "applications": "Permohonan",
     "community": "Komuniti",
-    "profile": "Profil"
+    "profile": "Profil",
+    "assistant": "Pembantu"
   },
   "countries": {
     "AU": "Australia",
@@ -539,7 +540,7 @@
     "where_cool": "Tempat sejuk",
     "where_english": "Berbahasa Inggeris",
     "where_cheap": "Paling berpatutan",
-    "studyAsk": "Jom cari bidang anda. Yang mana paling macam anda?",
+    "studyAsk": "Jom cari bidang anda — ketik satu di bawah, atau taip sahaja dengan ayat sendiri (cth. \"saya suka fesyen\" atau \"mungkin marketing\").",
     "whereAsk": "Jom kecilkan pilihan — apa yang paling penting?",
     "budgetAsk": "Lebih kurang berapa anda boleh belanja setahun — yuran dan sara hidup sekali?",
     "budgetAnswer": "Dengan {{amount}} setahun, {{count}} kursus layak anda muat bajet. Nilai terbaik:",
@@ -556,7 +557,14 @@
     "citySafety": "Keselamatan {{city}}: {{safety}}",
     "cityCost": "Sara hidup di {{city}} sekitar {{total}} sebulan ({{homeTotal}}): sewa {{rent}}, makanan {{food}}, pengangkutan {{transport}}.",
     "askCity": "Bandar mana yang anda ingin tahu?",
-    "fallback": "Saya boleh bantu tentang universiti, bandar (cuaca, keselamatan, kos), bajet, dan memilih apa atau di mana untuk belajar. Cuba salah satu:"
+    "fallback": "Saya boleh bantu tentang universiti, bandar (cuaca, keselamatan, kos), bajet, dan memilih apa atau di mana untuk belajar. Cuba salah satu:",
+    "wizardFieldUnknown": "Saya tak dapat kenal pasti bidang — cuba ayat sendiri seperti \"kerja hotel\", \"coding\", \"jadi cikgu\", atau ketik satu:",
+    "wizardAskBudget": "Bagus — {{field}}. Seterusnya: lebih kurang berapa boleh belanja setahun (yuran + sara hidup)? Taip jumlah atau pilih:",
+    "wizardSkip": "Tiada had bajet",
+    "wizardAskPref": "Terakhir — tempat macam mana yang sesuai dengan anda?",
+    "wizardSummary": "Pilihan anda: {{field}} · {{budget}} · {{pref}}",
+    "wizardRelaxed": "Nota: tiada yang muat bajet itu, jadi saya longgarkan untuk tunjuk pilihan terdekat.",
+    "pref_any": "Mana-mana sahaja"
   },
   "costsheet": {
     "title": "Kos sara hidup {{city}}",

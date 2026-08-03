@@ -122,7 +122,7 @@ export default function MatchScreen() {
 
             <Pressable
               accessibilityRole="button"
-              onPress={() => router.push('/assistant')}
+              onPress={() => router.push('/(tabs)/assistant')}
               style={({ pressed }) => ({
                 flexDirection: 'row', alignItems: 'center', gap: spacing.md,
                 backgroundColor: colors.accentSoft, borderRadius: radius.lg,

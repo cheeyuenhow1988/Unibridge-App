@@ -6,9 +6,10 @@ import { useTheme } from '@/hooks/useTheme';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
 
 const ICONS: Record<string, [keyof typeof Ionicons.glyphMap, keyof typeof Ionicons.glyphMap]> = {
-  match: ['sparkles-outline', 'sparkles'],
+  match: ['school-outline', 'school'],
   explore: ['compass-outline', 'compass'],
   applications: ['documents-outline', 'documents'],
+  assistant: ['sparkles-outline', 'sparkles'],
   community: ['people-outline', 'people'],
   profile: ['person-circle-outline', 'person-circle'],
 };
@@ -41,6 +42,7 @@ export default function TabsLayout() {
           tabBarBadgeStyle: { backgroundColor: colors.danger, color: colors.onAccent, fontFamily: fonts.bold, fontSize: 10 },
         }}
       />
+      <Tabs.Screen name="assistant" options={{ title: t('tabs.assistant') }} />
       <Tabs.Screen name="community" options={{ title: t('tabs.community') }} />
       <Tabs.Screen name="profile" options={{ title: t('tabs.profile') }} />
     </Tabs>

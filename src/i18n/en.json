@@ -57,7 +57,8 @@
     "explore": "Explore",
     "applications": "Applications",
     "community": "Community",
-    "profile": "Profile"
+    "profile": "Profile",
+    "assistant": "Assistant"
   },
   "countries": {
     "AU": "Australia",
@@ -533,7 +534,7 @@
     "where_cool": "Somewhere cool",
     "where_english": "English-speaking",
     "where_cheap": "Most affordable",
-    "studyAsk": "Let's find your field. What sounds most like you?",
+    "studyAsk": "Let's find your field — tap one below, or just type it in your own words (e.g. \"I like fashion\" or \"maybe marketing\").",
     "whereAsk": "Let's narrow it down — what matters most to you?",
     "budgetAsk": "Roughly how much can you spend per year — tuition and living together?",
     "budgetAnswer": "With {{amount}} per year, {{count}} of your eligible courses fit the budget. The best value:",
@@ -550,7 +551,14 @@
     "citySafety": "{{city}} safety: {{safety}}",
     "cityCost": "Living in {{city}} costs about {{total}} a month ({{homeTotal}}): rent {{rent}}, food {{food}}, transport {{transport}}.",
     "askCity": "Which city are you curious about?",
-    "fallback": "I can help with universities, cities (weather, safety, costs), budgets, and choosing what or where to study. Try one of these:"
+    "fallback": "I can help with universities, cities (weather, safety, costs), budgets, and choosing what or where to study. Try one of these:",
+    "wizardFieldUnknown": "I didn't catch a field in that — try your own words like \"hotel work\", \"coding\", \"become a teacher\", or tap one:",
+    "wizardAskBudget": "Nice — {{field}} it is. Next: roughly how much can you spend per year (tuition + living)? Type an amount or pick one:",
+    "wizardSkip": "No budget limit",
+    "wizardAskPref": "Last one — what kind of place suits you?",
+    "wizardSummary": "Your picks: {{field}} · {{budget}} · {{pref}}",
+    "wizardRelaxed": "Note: nothing fit that budget, so I loosened it to show your closest options.",
+    "pref_any": "Anywhere"
   },
   "notFound": {
     "title": "Page not found",

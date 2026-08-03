@@ -12,9 +12,19 @@ export interface QuickReply {
   intent: string;
 }
 
+/** Multi-step interview state: field → budget → climate → recommendation. */
+export interface WizardState {
+  stage: 'field' | 'budget' | 'pref';
+  fields?: FieldId[];
+  fieldLabel?: string;
+  budget?: number | null;
+}
+
 export interface AssistantReply {
   text: string;
   chips?: QuickReply[];
+  /** Set → screen stores interview state; null → interview finished. */
+  wizard?: WizardState | null;
 }
 
 export interface AssistantCtx {
@@ -83,6 +93,117 @@ const WHERE_COUNTRIES: Record<string, CountryCode[]> = {
   english: ['AU', 'GB', 'NZ', 'SG'],
   cheap: ['MY', 'TW', 'RU'],
 };
+
+// Free-text field detection for the interview (en + basic ms/zh keywords).
+const FIELD_KEYWORDS: [RegExp, FieldId[]][] = [
+  [/(market|hr|human resource|account|financ|bank|business|econom|entrepreneur|supply|logistic|perniagaan|niaga|商|金融|市场|会计|营销)/i, ['business']],
+  [/(software|coding|program|computer|\bit\b|data|cyber|game|\bai\b|komputer|程序|编程|电脑|数据|计算机)/i, ['it']],
+  [/(doctor|medic|nurse|pharma|physio|dentist|psycholog|health|doktor|jururawat|医|护理|药|心理)/i, ['health']],
+  [/(civil|mechanic|electric|mechatronic|aero|engineer|jurutera|kejuruteraan|工程)/i, ['engineering']],
+  [/(interior|fashion|graphic|animation|product design|design|reka bentuk|设计|时装|动画)/i, ['design']],
+  [/(law|legal|lawyer|undang|律师|法律)/i, ['law']],
+  [/(film|media|journal|advertis|public relation|broadcast|传媒|新闻|媒体)/i, ['media']],
+  [/(teach|education|tesl|guru|pendidikan|教育|老师|教师)/i, ['education']],
+  [/(hotel|chef|culinar|tourism|hospitality|aviation|cabin|masak|pelancongan|酒店|厨|旅游|烹饪)/i, ['hospitality']],
+  [/(architect|urban|quantity survey|construction|seni bina|建筑)/i, ['architecture']],
+  [/(physic|chemist|biolog|biotech|math|actuar|science|sains|物理|化学|生物|数学|科学)/i, ['science']],
+];
+
+function detectFields(text: string): FieldId[] | null {
+  const hits = new Set<FieldId>();
+  for (const [re, fields] of FIELD_KEYWORDS) {
+    if (re.test(text)) fields.forEach((f) => hits.add(f));
+  }
+  return hits.size > 0 ? [...hits] : null;
+}
+
+/** The interview: every answer may be typed freely or tapped as a chip. */
+export function respondWizard(query: string, intent: string | undefined, state: WizardState, ctx: AssistantCtx): AssistantReply {
+  const { t } = ctx;
+
+  if (state.stage === 'field') {
+    let fields: FieldId[] | null = null;
+    let label = query.trim();
+    if (intent?.startsWith('interest:')) {
+      const key = intent.slice(9);
+      fields = INTEREST_FIELDS[key] ?? null;
+      label = t(`assistant.interest_${key}`);
+    } else {
+      fields = detectFields(query);
+      if (fields) label = fields.map((f) => t(`fields.${f}`)).join(' + ');
+    }
+    if (!fields) {
+      return {
+        text: t('assistant.wizardFieldUnknown'),
+        chips: interestChips(ctx),
+        wizard: { stage: 'field' },
+      };
+    }
+    const amounts = [30000, 60000, 100000].map((usd) => Math.round(convert(usd, 'USD', ctx.home) / 100) * 100);
+    return {
+      text: t('assistant.wizardAskBudget', { field: label }),
+      chips: [
+        ...amounts.map((a) => ({ label: formatMoney(a, ctx.home), send: formatMoney(a, ctx.home), intent: `wamt:${a}` })),
+        { label: t('assistant.wizardSkip'), send: t('assistant.wizardSkip'), intent: 'wamt:none' },
+      ],
+      wizard: { stage: 'budget', fields, fieldLabel: label },
+    };
+  }
+
+  if (state.stage === 'budget') {
+    let budget: number | null = null;
+    if (intent === 'wamt:none') budget = null;
+    else if (intent?.startsWith('wamt:')) budget = Number(intent.slice(5));
+    else budget = parseAmount(query);
+    return {
+      text: t('assistant.wizardAskPref'),
+      chips: [
+        ...Object.keys(WHERE_COUNTRIES).map((k) => ({
+          label: t(`assistant.where_${k}`),
+          send: t(`assistant.where_${k}`),
+          intent: `wpref:${k}`,
+        })),
+        { label: t('assistant.pref_any'), send: t('assistant.pref_any'), intent: 'wpref:any' },
+      ],
+      wizard: { ...state, stage: 'pref', budget },
+    };
+  }
+
+  // Final stage: combine all three answers into one recommendation.
+  let prefKey = intent?.startsWith('wpref:') ? intent.slice(6) : 'any';
+  if (!intent) {
+    const q = query.toLowerCase();
+    if (/(warm|hot|panas|热|暖)/.test(q)) prefKey = 'warm';
+    else if (/(cool|cold|snow|sejuk|冷|凉)/.test(q)) prefKey = 'cool';
+    else if (/(english|inggeris|英语)/.test(q)) prefKey = 'english';
+    else if (/(cheap|murah|便宜|affordable)/.test(q)) prefKey = 'cheap';
+  }
+  const countries = prefKey === 'any' ? null : WHERE_COUNTRIES[prefKey] ?? null;
+
+  let pool = ctx.matchData.results.filter((r) => state.fields?.includes(r.course.field));
+  if (countries) pool = pool.filter((r) => countries.includes(r.course.country));
+  let relaxedNote = '';
+  let withBudget = state.budget ? pool.filter((r) => annualCost(r, ctx) <= state.budget!) : pool;
+  if (withBudget.length === 0 && state.budget) {
+    withBudget = pool;
+    relaxedNote = `\n\n${t('assistant.wizardRelaxed')}`;
+  }
+  const summary = t('assistant.wizardSummary', {
+    field: state.fieldLabel ?? '',
+    budget: state.budget ? formatMoney(state.budget, ctx.home) : t('assistant.wizardSkip'),
+    pref: prefKey === 'any' ? t('assistant.pref_any') : t(`assistant.where_${prefKey}`),
+  });
+  const result = recommend(withBudget, ctx, 'assistant.recommendStudy', { system: ctx.profile.qualification.toUpperCase() });
+  return { text: `${summary}\n\n${result.text}${relaxedNote}`, chips: result.chips, wizard: null };
+}
+
+function interestChips(ctx: AssistantCtx): QuickReply[] {
+  return Object.keys(INTEREST_FIELDS).map((k) => ({
+    label: ctx.t(`assistant.interest_${k}`),
+    send: ctx.t(`assistant.interest_${k}`),
+    intent: `interest:${k}`,
+  }));
+}
 
 function recommend(results: MatchResult[], ctx: AssistantCtx, introKey: string, introOpts?: Record<string, unknown>): AssistantReply {
   // One course per institution so the top-3 spans different universities.
@@ -162,13 +283,11 @@ export function respond(query: string, ctx: AssistantCtx, intent?: string): Assi
   if (intent) {
     if (intent === 'menu') return { text: t('assistant.fallback'), chips: menuChips(ctx) };
     if (intent === 'study') {
+      // Starts the interview: field (typed or tapped) → budget → climate.
       return {
         text: t('assistant.studyAsk'),
-        chips: Object.keys(INTEREST_FIELDS).map((k) => ({
-          label: t(`assistant.interest_${k}`),
-          send: t(`assistant.interest_${k}`),
-          intent: `interest:${k}`,
-        })),
+        chips: interestChips(ctx),
+        wizard: { stage: 'field' },
       };
     }
     if (intent === 'where') {

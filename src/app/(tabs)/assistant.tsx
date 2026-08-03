@@ -1,5 +1,4 @@
 import { Ionicons } from '@expo/vector-icons';
-import { router } from 'expo-router';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FlatList, KeyboardAvoidingView, Platform, Pressable, TextInput, View } from 'react-native';
@@ -15,7 +14,7 @@ import { useAsync } from '@/hooks/useAsync';
 import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
 import { listCityInfo, listInstitutions } from '@/services/api';
-import { respond, type AssistantCtx, type QuickReply } from '@/services/assistant';
+import { respond, respondWizard, type AssistantCtx, type QuickReply, type WizardState } from '@/services/assistant';
 import { homeCurrencyFor } from '@/services/currency';
 
 interface Msg {
@@ -33,6 +32,7 @@ export default function AssistantScreen() {
   const [messages, setMessages] = useState<Msg[] | null>(null);
   const [draft, setDraft] = useState('');
   const [thinking, setThinking] = useState(false);
+  const [wizard, setWizard] = useState<WizardState | null>(null);
   const listRef = useRef<FlatList>(null);
   const idRef = useRef(0);
 
@@ -72,7 +72,16 @@ export default function AssistantScreen() {
     setDraft('');
     setThinking(true);
     setTimeout(() => {
-      const reply = respond(text, ctx, intent);
+      // Mid-interview answers route through the wizard: free-typed text or
+      // the wizard's own chips. Any other explicit intent exits the interview.
+      const wizardTurn =
+        wizard &&
+        (intent === undefined || intent.startsWith('interest:') || intent.startsWith('wamt:') || intent.startsWith('wpref:'));
+      const reply = wizardTurn
+        ? respondWizard(text, intent, wizard!, ctx)
+        : respond(text, ctx, intent);
+      if (!wizardTurn && wizard && reply.wizard === undefined) setWizard(null);
+      if (reply.wizard !== undefined) setWizard(reply.wizard);
       idRef.current += 1;
       setMessages((prev) => [
         ...(prev ?? []),
@@ -104,9 +113,6 @@ export default function AssistantScreen() {
     <Screen padded={false} edges={['top', 'bottom']}>
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <Row style={{ paddingHorizontal: spacing.lg, paddingVertical: spacing.md, gap: spacing.md }}>
-          <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => router.back()} hitSlop={10}>
-            <Ionicons name="chevron-back" size={24} color={colors.ink} />
-          </Pressable>
           <View
             style={{
               width: 36, height: 36, borderRadius: radius.full, backgroundColor: colors.accentSoft,

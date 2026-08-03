@@ -55,7 +55,8 @@
     "explore": "探索",
     "applications": "申请",
     "community": "社区",
-    "profile": "我的"
+    "profile": "我的",
+    "assistant": "助手"
   },
   "countries": {
     "AU": "澳大利亚",
@@ -539,7 +540,7 @@
     "where_cool": "凉爽的地方",
     "where_english": "英语国家",
     "where_cheap": "最实惠",
-    "studyAsk": "来找你的方向。哪个最像你？",
+    "studyAsk": "来找你的方向——点下面的选项，或直接用自己的话输入（比如\"我喜欢时装\"、\"可能想学市场营销\"）。",
     "whereAsk": "来缩小范围——你最看重什么？",
     "budgetAsk": "你每年大约能花多少——学费加生活费一起算？",
     "budgetAnswer": "每年 {{amount}} 的预算下，你有 {{count}} 门符合条件的课程负担得起。性价比最高的：",
@@ -556,7 +557,14 @@
     "citySafety": "{{city}}安全：{{safety}}",
     "cityCost": "在{{city}}生活每月约 {{total}}（{{homeTotal}}）：房租 {{rent}}、伙食 {{food}}、交通 {{transport}}。",
     "askCity": "你想了解哪个城市？",
-    "fallback": "我可以帮你了解大学、城市（天气、安全、费用）、预算，以及选择读什么、去哪里读。试试这些："
+    "fallback": "我可以帮你了解大学、城市（天气、安全、费用）、预算，以及选择读什么、去哪里读。试试这些：",
+    "wizardFieldUnknown": "我没听出你想学的方向——试着用自己的话说，比如\"酒店工作\"、\"写代码\"、\"当老师\"，或点一个：",
+    "wizardAskBudget": "好——就是{{field}}。下一个问题：你每年大概能花多少（学费+生活费）？输入金额或选一个：",
+    "wizardSkip": "不限预算",
+    "wizardAskPref": "最后一个——你喜欢什么样的地方？",
+    "wizardSummary": "你的选择：{{field}} · {{budget}} · {{pref}}",
+    "wizardRelaxed": "注：没有完全符合该预算的选项，我放宽了预算来显示最接近的选择。",
+    "pref_any": "哪里都行"
   },
   "costsheet": {
     "title": "{{city}}生活费用",
