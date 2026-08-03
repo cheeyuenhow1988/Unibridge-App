@@ -1,0 +1,290 @@
+export type CountryCode = 'AU' | 'MY' | 'TW' | 'GB' | 'SG' | 'NZ' | 'RU';
+export type HomeCountryCode = 'MY' | 'TW' | 'SG' | 'ID' | 'VN' | 'CN';
+export type CurrencyCode =
+  | 'AUD' | 'MYR' | 'TWD' | 'GBP' | 'SGD' | 'NZD' | 'RUB'
+  | 'IDR' | 'VND' | 'CNY' | 'USD';
+
+export type FieldId =
+  | 'business' | 'engineering' | 'it' | 'health' | 'hospitality' | 'design' | 'law';
+
+export type CourseLevel = 'foundation' | 'diploma' | 'bachelor';
+
+export type QualificationId =
+  | 'spm' | 'stpm' | 'uec' | 'alevels' | 'ib' | 'hkdse' | 'gsat' | 'atar' | 'gpa';
+
+export type InstitutionType = 'university' | 'college' | 'institute';
+
+export type DocumentTypeId =
+  | 'transcript' | 'certificate' | 'passport' | 'english'
+  | 'recommendation' | 'statement' | 'financial' | 'portfolio' | 'health';
+
+export type AttractionType =
+  | 'food' | 'nature' | 'shopping' | 'landmark' | 'nightlife' | 'sports';
+
+export interface Institution {
+  id: string;
+  name: string;
+  country: CountryCode;
+  city: string;
+  type: InstitutionType;
+  verifiedPartner: boolean;
+  tagline: string;
+  email: string;
+  phone: string;
+  founded: number;
+  students: number;
+  images: string[];
+}
+
+export interface EntryRequirement {
+  /** Threshold on the qualification's score scale (see QualificationSystem.direction). */
+  min: number;
+  /** Human-readable requirement, e.g. "BBC" or "max 12 points (best 5)". */
+  display: string;
+}
+
+export interface Course {
+  id: string;
+  institutionId: string;
+  field: FieldId;
+  level: CourseLevel;
+  name: string;
+  campusCity: string;
+  country: CountryCode;
+  currency: CurrencyCode;
+  durationYears: number;
+  semestersPerYear: number;
+  /** ISO year-month strings, e.g. "2027-02". */
+  intakes: string[];
+  tuitionPerYear: number;
+  tuitionPerSemester: number;
+  oneOffFees: { enrollment: number; lab?: number; materials?: number };
+  english: { ielts: number; toefl: number };
+  /** 1 (open entry) … 5 (highly selective); 0 for pathway programmes. */
+  selectivity: number;
+  requirements: Record<QualificationId, EntryRequirement>;
+  localRequirementNote: string;
+  requiredDocuments: DocumentTypeId[];
+  applicationFee: number;
+  recognition: Record<HomeCountryCode, boolean>;
+  /** Set on foundation/diploma courses: the fields this pathway leads into. */
+  pathwayFor?: FieldId[];
+}
+
+export interface GradeOption {
+  label: string;
+  points: number;
+}
+
+export interface QualificationSystem {
+  id: QualificationId;
+  name: string;
+  region: string;
+  mode: 'subjects' | 'total';
+  /** Whether a higher or lower score is better (UEC points: lower is better). */
+  direction: 'higher' | 'lower';
+  unit: string;
+  subjectCount?: number;
+  maxSubjects?: number;
+  grades?: GradeOption[];
+  aggregator?: 'sum' | 'mean' | 'credits';
+  /** For 'credits': a subject counts as a credit when points >= this value. */
+  creditMinPoints?: number;
+  /** For 'sum'/'mean': how many best subjects count. */
+  bestOf?: number;
+  min?: number;
+  max?: number;
+  decimals?: number;
+  borderlineDelta: number;
+  subjectOptions?: string[];
+}
+
+export interface FxTable {
+  base: 'USD';
+  asOf: string;
+  rates: Record<CurrencyCode, number>;
+}
+
+export interface CostOfLiving {
+  city: string;
+  country: CountryCode;
+  currency: CurrencyCode;
+  rentMonthly: number;
+  foodMonthly: number;
+  transportMonthly: number;
+  insuranceYearly: number;
+  visaFeeOneOff: number;
+}
+
+export interface Scholarship {
+  id: string;
+  name: string;
+  provider: string;
+  destinationCountry: CountryCode | 'any';
+  fields: FieldId[] | 'any';
+  nationalities: HomeCountryCode[] | 'any';
+  coverageType: 'full' | 'partial' | 'stipend';
+  percentTuition?: number;
+  amount?: number;
+  currency?: CurrencyCode;
+  stipendMonthly?: number;
+  deadline: string;
+  eligibilityNote: string;
+}
+
+export interface Attraction {
+  id: string;
+  institutionId: string;
+  name: string;
+  type: AttractionType;
+  distanceMinutes: number;
+  description: string;
+  image: string;
+}
+
+export interface AmbassadorPost {
+  id: string;
+  text: string;
+  image: string;
+  likes: number;
+  date: string;
+}
+
+export interface Ambassador {
+  id: string;
+  name: string;
+  homeCountry: HomeCountryCode;
+  institutionId: string;
+  courseName: string;
+  year: number;
+  bio: string;
+  avatar: string;
+  posts: AmbassadorPost[];
+}
+
+export interface IntakeGroup {
+  id: string;
+  institutionId: string;
+  intake: string;
+  name: string;
+  members: number;
+}
+
+export interface GroupMessage {
+  id: string;
+  groupId: string;
+  author: string;
+  avatar: string;
+  text: string;
+  time: string;
+}
+
+export interface Coursemate {
+  id: string;
+  name: string;
+  homeCountry: HomeCountryCode;
+  institutionId: string;
+  courseName: string;
+  intake: string;
+  avatar: string;
+}
+
+export interface CommunityEvent {
+  id: string;
+  title: string;
+  city: string;
+  country: CountryCode;
+  date: string;
+  venue: string;
+  sponsored: boolean;
+  image: string;
+  description: string;
+}
+
+export interface WorkRights {
+  country: CountryCode;
+  hoursPerWeekTerm: number;
+  breakRule: string;
+  note: string;
+}
+
+export interface PredepartureItem {
+  id: string;
+  label: string;
+  category: 'visa' | 'money' | 'insurance' | 'housing' | 'sim' | 'banking' | 'other';
+}
+
+// ---------- Student-side models (stores) ----------
+
+export interface SubjectGrade {
+  subject: string;
+  grade: string;
+}
+
+export interface GradesInput {
+  subjects?: SubjectGrade[];
+  total?: number;
+}
+
+export type EnglishTest = 'ielts' | 'toefl' | 'none';
+
+export interface StudentProfile {
+  name: string;
+  homeCountry: HomeCountryCode;
+  nationality: HomeCountryCode;
+  qualification: QualificationId;
+  intakeYear: number;
+  grades: GradesInput;
+  english: { test: EnglishTest; score?: number };
+}
+
+export type ApplicationStatus =
+  | 'submitted' | 'under_review' | 'conditional_offer' | 'offer' | 'accepted' | 'coe_issued';
+
+export const APPLICATION_TIMELINE: ApplicationStatus[] = [
+  'submitted', 'under_review', 'conditional_offer', 'offer', 'accepted', 'coe_issued',
+];
+
+export interface Application {
+  id: string;
+  courseId: string;
+  status: ApplicationStatus;
+  createdAt: string;
+  updatedAt: string;
+  history: { status: ApplicationStatus; date: string }[];
+  feeWaived: boolean;
+  scholarshipId?: string;
+  depositPaid?: boolean;
+  pickup?: { name: string; phone: string; flight: string };
+}
+
+export interface VaultDocument {
+  id: string;
+  type: DocumentTypeId;
+  name: string;
+  uri: string;
+  uploadedAt: string;
+  expiryDate?: string;
+}
+
+export type MatchStatus = 'eligible' | 'borderline' | 'pathway';
+
+export interface MatchReason {
+  key: string;
+  params?: Record<string, string | number>;
+}
+
+export interface MatchResult {
+  course: Course;
+  institution: Institution;
+  status: MatchStatus;
+  academicOk: boolean;
+  academicBorderline: boolean;
+  englishOk: boolean;
+  englishMissing: boolean;
+  isLocal: boolean;
+  score: number;
+  requirement: EntryRequirement;
+  reasons: MatchReason[];
+  recognizedAtHome: boolean;
+}

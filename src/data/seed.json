@@ -1,0 +1,128 @@
+{
+  "profile": {
+    "name": "Aisyah Rahman",
+    "homeCountry": "MY",
+    "nationality": "MY",
+    "qualification": "uec",
+    "intakeYear": 2027,
+    "grades": {
+      "subjects": [
+        {
+          "subject": "Chinese",
+          "grade": "A2"
+        },
+        {
+          "subject": "English",
+          "grade": "B3"
+        },
+        {
+          "subject": "Mathematics",
+          "grade": "A2"
+        },
+        {
+          "subject": "Advanced Mathematics",
+          "grade": "B3"
+        },
+        {
+          "subject": "Physics",
+          "grade": "B4"
+        }
+      ]
+    },
+    "english": {
+      "test": "ielts",
+      "score": 6.5
+    }
+  },
+  "savedCourseIds": [
+    "au-harbourview-c1",
+    "gb-northgate-c1",
+    "nz-kauri-c1",
+    "sg-straitsintl-c1"
+  ],
+  "applications": [
+    {
+      "id": "app-demo-1",
+      "courseId": "au-harbourview-c1",
+      "status": "offer",
+      "createdAt": "2026-06-04",
+      "updatedAt": "2026-07-28",
+      "feeWaived": true,
+      "history": [
+        {
+          "status": "submitted",
+          "date": "2026-06-04"
+        },
+        {
+          "status": "under_review",
+          "date": "2026-06-18"
+        },
+        {
+          "status": "conditional_offer",
+          "date": "2026-07-06"
+        },
+        {
+          "status": "offer",
+          "date": "2026-07-28"
+        }
+      ]
+    },
+    {
+      "id": "app-demo-2",
+      "courseId": "gb-northgate-c1",
+      "status": "conditional_offer",
+      "createdAt": "2026-06-12",
+      "updatedAt": "2026-07-15",
+      "feeWaived": true,
+      "history": [
+        {
+          "status": "submitted",
+          "date": "2026-06-12"
+        },
+        {
+          "status": "under_review",
+          "date": "2026-06-30"
+        },
+        {
+          "status": "conditional_offer",
+          "date": "2026-07-15"
+        }
+      ]
+    },
+    {
+      "id": "app-demo-3",
+      "courseId": "sg-straitsintl-c1",
+      "status": "under_review",
+      "createdAt": "2026-07-02",
+      "updatedAt": "2026-07-20",
+      "feeWaived": true,
+      "history": [
+        {
+          "status": "submitted",
+          "date": "2026-07-02"
+        },
+        {
+          "status": "under_review",
+          "date": "2026-07-20"
+        }
+      ]
+    }
+  ],
+  "joinedGroupIds": [
+    "grp-au-harbourview-2027-02"
+  ],
+  "notifications": [
+    {
+      "id": "ntf-1",
+      "applicationId": "app-demo-1",
+      "status": "offer",
+      "date": "2026-07-28"
+    },
+    {
+      "id": "ntf-2",
+      "applicationId": "app-demo-3",
+      "status": "under_review",
+      "date": "2026-07-20"
+    }
+  ]
+}

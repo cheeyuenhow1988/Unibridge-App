@@ -1,0 +1,327 @@
+[
+  {
+    "id": "sch-01",
+    "name": "UniBridge Global Merit Scholarship",
+    "provider": "UniBridge Partners",
+    "destinationCountry": "any",
+    "fields": "any",
+    "nationalities": "any",
+    "coverageType": "partial",
+    "percentTuition": 25,
+    "deadline": "2026-11-30",
+    "eligibilityNote": "Automatic consideration with any application through UniBridge; awarded on academic merit."
+  },
+  {
+    "id": "sch-02",
+    "name": "Harbourview International Excellence Award",
+    "provider": "Harbourview University",
+    "destinationCountry": "AU",
+    "fields": "any",
+    "nationalities": "any",
+    "coverageType": "partial",
+    "percentTuition": 40,
+    "deadline": "2026-10-31",
+    "eligibilityNote": "ATAR 90+ equivalent; maintained with a credit average."
+  },
+  {
+    "id": "sch-03",
+    "name": "Southern Sky Vice-Chancellor's Scholarship",
+    "provider": "Southern Sky University",
+    "destinationCountry": "AU",
+    "fields": "any",
+    "nationalities": "any",
+    "coverageType": "full",
+    "percentTuition": 100,
+    "deadline": "2026-09-30",
+    "eligibilityNote": "Top 2% of applicant pool; interview required."
+  },
+  {
+    "id": "sch-04",
+    "name": "Destination Australia Regional Grant",
+    "provider": "Australian Government (mock)",
+    "destinationCountry": "AU",
+    "fields": "any",
+    "nationalities": "any",
+    "coverageType": "partial",
+    "amount": 15000,
+    "currency": "AUD",
+    "deadline": "2027-01-15",
+    "eligibilityNote": "For study at regional campuses; one year, renewable."
+  },
+  {
+    "id": "sch-05",
+    "name": "Merdeka ASEAN Bursary",
+    "provider": "Merdeka International University",
+    "destinationCountry": "MY",
+    "fields": "any",
+    "nationalities": [
+      "MY",
+      "ID",
+      "VN",
+      "SG"
+    ],
+    "coverageType": "partial",
+    "percentTuition": 50,
+    "deadline": "2026-12-15",
+    "eligibilityNote": "ASEAN nationals with strong co-curricular records."
+  },
+  {
+    "id": "sch-06",
+    "name": "Straits Founders Grant",
+    "provider": "Straits University College",
+    "destinationCountry": "MY",
+    "fields": [
+      "business",
+      "hospitality"
+    ],
+    "nationalities": "any",
+    "coverageType": "partial",
+    "amount": 8000,
+    "currency": "MYR",
+    "deadline": "2026-11-01",
+    "eligibilityNote": "First-generation university students prioritised."
+  },
+  {
+    "id": "sch-07",
+    "name": "Taiwan Bridge Scholarship",
+    "provider": "Taiwan MOE (mock)",
+    "destinationCountry": "TW",
+    "fields": "any",
+    "nationalities": "any",
+    "coverageType": "full",
+    "percentTuition": 100,
+    "stipendMonthly": 15000,
+    "deadline": "2026-10-15",
+    "eligibilityNote": "Full tuition plus monthly living stipend; Mandarin course included."
+  },
+  {
+    "id": "sch-08",
+    "name": "Formosa STEM Talent Award",
+    "provider": "Formosa Institute",
+    "destinationCountry": "TW",
+    "fields": [
+      "it",
+      "engineering"
+    ],
+    "nationalities": "any",
+    "coverageType": "partial",
+    "percentTuition": 60,
+    "deadline": "2027-01-31",
+    "eligibilityNote": "Portfolio or competition results in STEM fields."
+  },
+  {
+    "id": "sch-09",
+    "name": "Albion Global Leaders Scholarship",
+    "provider": "Albion University London",
+    "destinationCountry": "GB",
+    "fields": "any",
+    "nationalities": "any",
+    "coverageType": "partial",
+    "amount": 20000,
+    "currency": "GBP",
+    "deadline": "2026-12-01",
+    "eligibilityNote": "Essay and leadership evidence required."
+  },
+  {
+    "id": "sch-10",
+    "name": "Northgate International Merit Scholarship",
+    "provider": "Northgate University",
+    "destinationCountry": "GB",
+    "fields": "any",
+    "nationalities": "any",
+    "coverageType": "partial",
+    "percentTuition": 30,
+    "deadline": "2027-02-28",
+    "eligibilityNote": "Automatic for offers above entry requirements."
+  },
+  {
+    "id": "sch-11",
+    "name": "Thamesbank Law Access Award",
+    "provider": "Thamesbank College of Law",
+    "destinationCountry": "GB",
+    "fields": [
+      "law"
+    ],
+    "nationalities": "any",
+    "coverageType": "partial",
+    "percentTuition": 50,
+    "deadline": "2026-11-30",
+    "eligibilityNote": "Widening-access award for future barristers and solicitors."
+  },
+  {
+    "id": "sch-12",
+    "name": "Straits International ASEAN Scholarship",
+    "provider": "Straits International University",
+    "destinationCountry": "SG",
+    "fields": "any",
+    "nationalities": [
+      "MY",
+      "ID",
+      "VN"
+    ],
+    "coverageType": "full",
+    "percentTuition": 100,
+    "stipendMonthly": 800,
+    "deadline": "2026-10-01",
+    "eligibilityNote": "Bond-free full scholarship for ASEAN nationals."
+  },
+  {
+    "id": "sch-13",
+    "name": "Merlion Creative Portfolio Award",
+    "provider": "Merlion College of Design",
+    "destinationCountry": "SG",
+    "fields": [
+      "design"
+    ],
+    "nationalities": "any",
+    "coverageType": "partial",
+    "percentTuition": 40,
+    "deadline": "2027-03-15",
+    "eligibilityNote": "Judged on a 10-page digital portfolio."
+  },
+  {
+    "id": "sch-14",
+    "name": "Kauri Pacific Gateway Scholarship",
+    "provider": "Kauri University",
+    "destinationCountry": "NZ",
+    "fields": "any",
+    "nationalities": "any",
+    "coverageType": "partial",
+    "amount": 15000,
+    "currency": "NZD",
+    "deadline": "2026-12-20",
+    "eligibilityNote": "First-year support for international students."
+  },
+  {
+    "id": "sch-15",
+    "name": "Southern Alps Engineering Award",
+    "provider": "Southern Alps University",
+    "destinationCountry": "NZ",
+    "fields": [
+      "engineering"
+    ],
+    "nationalities": "any",
+    "coverageType": "partial",
+    "percentTuition": 50,
+    "deadline": "2027-01-10",
+    "eligibilityNote": "For rebuild-and-resilience engineering specialisations."
+  },
+  {
+    "id": "sch-16",
+    "name": "Open Doors Russia Scholarship",
+    "provider": "Open Doors (mock)",
+    "destinationCountry": "RU",
+    "fields": "any",
+    "nationalities": "any",
+    "coverageType": "full",
+    "percentTuition": 100,
+    "deadline": "2026-12-10",
+    "eligibilityNote": "Olympiad-style selection; covers full tuition."
+  },
+  {
+    "id": "sch-17",
+    "name": "Neva Technical Excellence Grant",
+    "provider": "Neva State Technical University",
+    "destinationCountry": "RU",
+    "fields": [
+      "engineering",
+      "it"
+    ],
+    "nationalities": "any",
+    "coverageType": "partial",
+    "percentTuition": 75,
+    "deadline": "2027-02-01",
+    "eligibilityNote": "Physics/maths olympiad participants favoured."
+  },
+  {
+    "id": "sch-18",
+    "name": "ASEAN Future Leaders Fund",
+    "provider": "ASEAN Foundation (mock)",
+    "destinationCountry": "any",
+    "fields": "any",
+    "nationalities": [
+      "MY",
+      "SG",
+      "ID",
+      "VN"
+    ],
+    "coverageType": "partial",
+    "amount": 5000,
+    "currency": "USD",
+    "deadline": "2026-11-15",
+    "eligibilityNote": "Community-leadership track record required."
+  },
+  {
+    "id": "sch-19",
+    "name": "Chinese Bridge Overseas Study Grant",
+    "provider": "CB Foundation (mock)",
+    "destinationCountry": "any",
+    "fields": "any",
+    "nationalities": [
+      "CN",
+      "TW"
+    ],
+    "coverageType": "partial",
+    "percentTuition": 30,
+    "deadline": "2027-01-20",
+    "eligibilityNote": "For Chinese-speaking students studying abroad."
+  },
+  {
+    "id": "sch-20",
+    "name": "Global Women in STEM Scholarship",
+    "provider": "WiSTEM International (mock)",
+    "destinationCountry": "any",
+    "fields": [
+      "it",
+      "engineering"
+    ],
+    "nationalities": "any",
+    "coverageType": "partial",
+    "percentTuition": 35,
+    "deadline": "2026-12-31",
+    "eligibilityNote": "Open to women applicants in STEM programmes."
+  },
+  {
+    "id": "sch-21",
+    "name": "Hospitality Futures Bursary",
+    "provider": "Global Hotels Group (mock)",
+    "destinationCountry": "any",
+    "fields": [
+      "hospitality"
+    ],
+    "nationalities": "any",
+    "coverageType": "partial",
+    "amount": 4000,
+    "currency": "USD",
+    "deadline": "2027-02-15",
+    "eligibilityNote": "Includes a paid internship placement."
+  },
+  {
+    "id": "sch-22",
+    "name": "HealthCare Heroes Grant",
+    "provider": "HealthBridge Foundation (mock)",
+    "destinationCountry": "any",
+    "fields": [
+      "health"
+    ],
+    "nationalities": "any",
+    "coverageType": "partial",
+    "percentTuition": 25,
+    "deadline": "2027-03-01",
+    "eligibilityNote": "For future nurses, pharmacists and doctors."
+  },
+  {
+    "id": "sch-23",
+    "name": "Kingsford Culinary Excellence Award",
+    "provider": "Kingsford Hospitality College",
+    "destinationCountry": "AU",
+    "fields": [
+      "hospitality"
+    ],
+    "nationalities": "any",
+    "coverageType": "partial",
+    "percentTuition": 30,
+    "deadline": "2026-10-20",
+    "eligibilityNote": "Includes a stage at a hatted Melbourne kitchen."
+  }
+]

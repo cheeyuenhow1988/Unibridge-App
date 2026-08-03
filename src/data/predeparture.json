@@ -1,0 +1,342 @@
+{
+  "checklists": {
+    "AU": [
+      {
+        "id": "au-p1",
+        "label": "Confirm CoE and OSHC health cover",
+        "category": "visa"
+      },
+      {
+        "id": "au-p2",
+        "label": "Apply for Student Visa (subclass 500)",
+        "category": "insurance"
+      },
+      {
+        "id": "au-p3",
+        "label": "Show proof of funds (12 months living costs)",
+        "category": "money"
+      },
+      {
+        "id": "au-p4",
+        "label": "Book accommodation or homestay for arrival",
+        "category": "housing"
+      },
+      {
+        "id": "au-p5",
+        "label": "Order an Australian SIM or eSIM",
+        "category": "sim"
+      },
+      {
+        "id": "au-p6",
+        "label": "Open a student bank account online before flying",
+        "category": "banking"
+      },
+      {
+        "id": "au-p7",
+        "label": "Book airport pickup or SkyBus",
+        "category": "other"
+      },
+      {
+        "id": "au-p8",
+        "label": "Pack certified copies of transcripts",
+        "category": "other"
+      }
+    ],
+    "MY": [
+      {
+        "id": "my-p1",
+        "label": "Receive EMGS approval letter",
+        "category": "visa"
+      },
+      {
+        "id": "my-p2",
+        "label": "Complete pre-arrival medical screening",
+        "category": "insurance"
+      },
+      {
+        "id": "my-p3",
+        "label": "Show proof of funds for first year",
+        "category": "money"
+      },
+      {
+        "id": "my-p4",
+        "label": "Arrange campus hostel or rental",
+        "category": "housing"
+      },
+      {
+        "id": "my-p5",
+        "label": "Get a local SIM at the airport",
+        "category": "sim"
+      },
+      {
+        "id": "my-p6",
+        "label": "Open a Malaysian bank account after arrival",
+        "category": "banking"
+      },
+      {
+        "id": "my-p7",
+        "label": "Arrange airport pickup with international office",
+        "category": "other"
+      },
+      {
+        "id": "my-p8",
+        "label": "Bring passport photos on blue background",
+        "category": "other"
+      }
+    ],
+    "TW": [
+      {
+        "id": "tw-p1",
+        "label": "Apply for resident visa with admission letter",
+        "category": "visa"
+      },
+      {
+        "id": "tw-p2",
+        "label": "Buy NHI-compatible interim insurance",
+        "category": "insurance"
+      },
+      {
+        "id": "tw-p3",
+        "label": "Prepare financial statement (TWD 100,000+)",
+        "category": "money"
+      },
+      {
+        "id": "tw-p4",
+        "label": "Apply for dormitory in the housing portal",
+        "category": "housing"
+      },
+      {
+        "id": "tw-p5",
+        "label": "Reserve an EasyCard and SIM bundle",
+        "category": "sim"
+      },
+      {
+        "id": "tw-p6",
+        "label": "Open a post-office account after ARC",
+        "category": "banking"
+      },
+      {
+        "id": "tw-p7",
+        "label": "Confirm airport MRT route to campus",
+        "category": "other"
+      },
+      {
+        "id": "tw-p8",
+        "label": "Bring extra passport photos for ARC",
+        "category": "other"
+      }
+    ],
+    "GB": [
+      {
+        "id": "gb-p1",
+        "label": "Receive CAS from your institution",
+        "category": "visa"
+      },
+      {
+        "id": "gb-p2",
+        "label": "Apply for Student visa and pay IHS surcharge",
+        "category": "insurance"
+      },
+      {
+        "id": "gb-p3",
+        "label": "Show 9 months of living funds",
+        "category": "money"
+      },
+      {
+        "id": "gb-p4",
+        "label": "Book student halls or private housing",
+        "category": "housing"
+      },
+      {
+        "id": "gb-p5",
+        "label": "Order a UK SIM to your home address",
+        "category": "sim"
+      },
+      {
+        "id": "gb-p6",
+        "label": "Choose a student bank account",
+        "category": "banking"
+      },
+      {
+        "id": "gb-p7",
+        "label": "Book airport transfer or coach",
+        "category": "other"
+      },
+      {
+        "id": "gb-p8",
+        "label": "Pack originals of all certificates",
+        "category": "other"
+      }
+    ],
+    "SG": [
+      {
+        "id": "sg-p1",
+        "label": "Receive IPA letter from ICA",
+        "category": "visa"
+      },
+      {
+        "id": "sg-p2",
+        "label": "Complete medical examination form",
+        "category": "insurance"
+      },
+      {
+        "id": "sg-p3",
+        "label": "Show proof of funds",
+        "category": "money"
+      },
+      {
+        "id": "sg-p4",
+        "label": "Apply for hostel or HDB room rental",
+        "category": "housing"
+      },
+      {
+        "id": "sg-p5",
+        "label": "Get a prepaid tourist SIM, upgrade later",
+        "category": "sim"
+      },
+      {
+        "id": "sg-p6",
+        "label": "Open a bank account with passport + IPA",
+        "category": "banking"
+      },
+      {
+        "id": "sg-p7",
+        "label": "Plan MRT route from Changi",
+        "category": "other"
+      },
+      {
+        "id": "sg-p8",
+        "label": "Complete Student Pass formalities on arrival",
+        "category": "other"
+      }
+    ],
+    "NZ": [
+      {
+        "id": "nz-p1",
+        "label": "Confirm offer and pay first-year fees",
+        "category": "visa"
+      },
+      {
+        "id": "nz-p2",
+        "label": "Apply for Fee-Paying Student Visa",
+        "category": "insurance"
+      },
+      {
+        "id": "nz-p3",
+        "label": "Show NZD 20,000 living funds",
+        "category": "money"
+      },
+      {
+        "id": "nz-p4",
+        "label": "Book halls of residence or flat",
+        "category": "housing"
+      },
+      {
+        "id": "nz-p5",
+        "label": "Order a NZ SIM or eSIM",
+        "category": "sim"
+      },
+      {
+        "id": "nz-p6",
+        "label": "Open a bank account before arrival online",
+        "category": "banking"
+      },
+      {
+        "id": "nz-p7",
+        "label": "Book SkyDrive or airport shuttle",
+        "category": "other"
+      },
+      {
+        "id": "nz-p8",
+        "label": "Declare all food items on arrival card",
+        "category": "other"
+      }
+    ],
+    "RU": [
+      {
+        "id": "ru-p1",
+        "label": "Receive official invitation letter",
+        "category": "visa"
+      },
+      {
+        "id": "ru-p2",
+        "label": "Apply for study visa at consulate",
+        "category": "insurance"
+      },
+      {
+        "id": "ru-p3",
+        "label": "Prepare notarised translated documents",
+        "category": "money"
+      },
+      {
+        "id": "ru-p4",
+        "label": "Confirm dormitory allocation",
+        "category": "housing"
+      },
+      {
+        "id": "ru-p5",
+        "label": "Buy a local SIM with passport",
+        "category": "sim"
+      },
+      {
+        "id": "ru-p6",
+        "label": "Carry some cash roubles for first week",
+        "category": "banking"
+      },
+      {
+        "id": "ru-p7",
+        "label": "Arrange university airport pickup",
+        "category": "other"
+      },
+      {
+        "id": "ru-p8",
+        "label": "Register migration card within 7 days",
+        "category": "other"
+      }
+    ]
+  },
+  "workRights": {
+    "AU": {
+      "country": "AU",
+      "hoursPerWeekTerm": 24,
+      "breakRule": "Unlimited hours during scheduled course breaks",
+      "note": "Capped at 48 hours per fortnight during term on a subclass 500 visa (mock)."
+    },
+    "MY": {
+      "country": "MY",
+      "hoursPerWeekTerm": 20,
+      "breakRule": "Semester breaks longer than 7 days only",
+      "note": "Work permitted only during holidays and only in approved sectors (mock)."
+    },
+    "TW": {
+      "country": "TW",
+      "hoursPerWeekTerm": 20,
+      "breakRule": "No cap during summer/winter vacation",
+      "note": "Requires a work permit from the Workforce Development Agency (mock)."
+    },
+    "GB": {
+      "country": "GB",
+      "hoursPerWeekTerm": 20,
+      "breakRule": "Full-time during official vacations",
+      "note": "20 hours per week maximum in term time on a Student visa (mock)."
+    },
+    "SG": {
+      "country": "SG",
+      "hoursPerWeekTerm": 16,
+      "breakRule": "Full-time during vacation with pass",
+      "note": "Only at approved institutions; 16 hours per week in term (mock)."
+    },
+    "NZ": {
+      "country": "NZ",
+      "hoursPerWeekTerm": 20,
+      "breakRule": "Full-time during scheduled holidays",
+      "note": "20 hours per week during study on a Fee-Paying Student Visa (mock)."
+    },
+    "RU": {
+      "country": "RU",
+      "hoursPerWeekTerm": 20,
+      "breakRule": "Free during official university holidays",
+      "note": "Requires a work permit unless working at your own university (mock)."
+    }
+  }
+}

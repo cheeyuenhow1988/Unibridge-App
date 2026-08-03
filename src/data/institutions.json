@@ -1,0 +1,596 @@
+[
+  {
+    "id": "au-harbourview",
+    "name": "Harbourview University",
+    "country": "AU",
+    "city": "Sydney",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Global outlook on the harbour since 1964",
+    "founded": 1964,
+    "students": 42000,
+    "email": "admissions@harbourview.edu",
+    "phone": "+61 2 6409933",
+    "images": [
+      "https://picsum.photos/seed/au-harbourview-0/800/500",
+      "https://picsum.photos/seed/au-harbourview-1/800/500",
+      "https://picsum.photos/seed/au-harbourview-2/800/500"
+    ]
+  },
+  {
+    "id": "au-southernsky",
+    "name": "Southern Sky University",
+    "country": "AU",
+    "city": "Melbourne",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Research that reaches every horizon",
+    "founded": 1958,
+    "students": 51000,
+    "email": "admissions@southernsky.edu",
+    "phone": "+61 2 5034615",
+    "images": [
+      "https://picsum.photos/seed/au-southernsky-0/800/500",
+      "https://picsum.photos/seed/au-southernsky-1/800/500",
+      "https://picsum.photos/seed/au-southernsky-2/800/500"
+    ]
+  },
+  {
+    "id": "au-coralcoast",
+    "name": "Coral Coast University",
+    "country": "AU",
+    "city": "Brisbane",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Learn where the sun does",
+    "founded": 1975,
+    "students": 28000,
+    "email": "admissions@coralcoast.edu",
+    "phone": "+61 2 8672192",
+    "images": [
+      "https://picsum.photos/seed/au-coralcoast-0/800/500",
+      "https://picsum.photos/seed/au-coralcoast-1/800/500",
+      "https://picsum.photos/seed/au-coralcoast-2/800/500"
+    ]
+  },
+  {
+    "id": "au-swanbrook",
+    "name": "Swanbrook Institute of Technology",
+    "country": "AU",
+    "city": "Perth",
+    "type": "institute",
+    "verifiedPartner": true,
+    "tagline": "Hands-on technology education",
+    "founded": 1988,
+    "students": 12000,
+    "email": "admissions@swanbrook.edu",
+    "phone": "+61 2 7027606",
+    "images": [
+      "https://picsum.photos/seed/au-swanbrook-0/800/500",
+      "https://picsum.photos/seed/au-swanbrook-1/800/500",
+      "https://picsum.photos/seed/au-swanbrook-2/800/500"
+    ]
+  },
+  {
+    "id": "au-marrickville",
+    "name": "Marrickville College of Design",
+    "country": "AU",
+    "city": "Sydney",
+    "type": "college",
+    "verifiedPartner": false,
+    "tagline": "Where Sydney creates",
+    "founded": 1992,
+    "students": 4500,
+    "email": "admissions@marrickville.edu",
+    "phone": "+61 2 2573325",
+    "images": [
+      "https://picsum.photos/seed/au-marrickville-0/800/500",
+      "https://picsum.photos/seed/au-marrickville-1/800/500",
+      "https://picsum.photos/seed/au-marrickville-2/800/500"
+    ]
+  },
+  {
+    "id": "au-kingsford",
+    "name": "Kingsford Hospitality College",
+    "country": "AU",
+    "city": "Melbourne",
+    "type": "college",
+    "verifiedPartner": true,
+    "tagline": "Service excellence, taught by industry",
+    "founded": 1985,
+    "students": 6000,
+    "email": "admissions@kingsford.edu",
+    "phone": "+61 2 5739332",
+    "images": [
+      "https://picsum.photos/seed/au-kingsford-0/800/500",
+      "https://picsum.photos/seed/au-kingsford-1/800/500",
+      "https://picsum.photos/seed/au-kingsford-2/800/500"
+    ]
+  },
+  {
+    "id": "my-merdeka",
+    "name": "Merdeka International University",
+    "country": "MY",
+    "city": "Kuala Lumpur",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Malaysia's gateway to the world",
+    "founded": 1971,
+    "students": 38000,
+    "email": "admissions@merdeka.edu",
+    "phone": "+60 3 3459051",
+    "images": [
+      "https://picsum.photos/seed/my-merdeka-0/800/500",
+      "https://picsum.photos/seed/my-merdeka-1/800/500",
+      "https://picsum.photos/seed/my-merdeka-2/800/500"
+    ]
+  },
+  {
+    "id": "my-straits",
+    "name": "Straits University College",
+    "country": "MY",
+    "city": "Penang",
+    "type": "college",
+    "verifiedPartner": true,
+    "tagline": "Heritage city, modern campus",
+    "founded": 1996,
+    "students": 9000,
+    "email": "admissions@straits.edu",
+    "phone": "+60 3 6622701",
+    "images": [
+      "https://picsum.photos/seed/my-straits-0/800/500",
+      "https://picsum.photos/seed/my-straits-1/800/500",
+      "https://picsum.photos/seed/my-straits-2/800/500"
+    ]
+  },
+  {
+    "id": "my-cyberview",
+    "name": "Cyberview Institute of Technology",
+    "country": "MY",
+    "city": "Cyberjaya",
+    "type": "institute",
+    "verifiedPartner": false,
+    "tagline": "Built in Malaysia's tech corridor",
+    "founded": 2001,
+    "students": 11000,
+    "email": "admissions@cyberview.edu",
+    "phone": "+60 3 8789271",
+    "images": [
+      "https://picsum.photos/seed/my-cyberview-0/800/500",
+      "https://picsum.photos/seed/my-cyberview-1/800/500",
+      "https://picsum.photos/seed/my-cyberview-2/800/500"
+    ]
+  },
+  {
+    "id": "my-selangor",
+    "name": "Selangor College of Hospitality",
+    "country": "MY",
+    "city": "Kuala Lumpur",
+    "type": "college",
+    "verifiedPartner": false,
+    "tagline": "From kitchen to boardroom",
+    "founded": 1994,
+    "students": 3800,
+    "email": "admissions@selangor.edu",
+    "phone": "+60 3 5250853",
+    "images": [
+      "https://picsum.photos/seed/my-selangor-0/800/500",
+      "https://picsum.photos/seed/my-selangor-1/800/500",
+      "https://picsum.photos/seed/my-selangor-2/800/500"
+    ]
+  },
+  {
+    "id": "my-iskandar",
+    "name": "Iskandar Metropolitan University",
+    "country": "MY",
+    "city": "Johor Bahru",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Southern gateway to opportunity",
+    "founded": 2008,
+    "students": 16000,
+    "email": "admissions@iskandar.edu",
+    "phone": "+60 3 3249313",
+    "images": [
+      "https://picsum.photos/seed/my-iskandar-0/800/500",
+      "https://picsum.photos/seed/my-iskandar-1/800/500",
+      "https://picsum.photos/seed/my-iskandar-2/800/500"
+    ]
+  },
+  {
+    "id": "tw-taipeibay",
+    "name": "Taipei Bay University",
+    "country": "TW",
+    "city": "Taipei",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Innovation at the heart of Taipei",
+    "founded": 1962,
+    "students": 33000,
+    "email": "admissions@taipeibay.edu",
+    "phone": "+886 2 8938529",
+    "images": [
+      "https://picsum.photos/seed/tw-taipeibay-0/800/500",
+      "https://picsum.photos/seed/tw-taipeibay-1/800/500",
+      "https://picsum.photos/seed/tw-taipeibay-2/800/500"
+    ]
+  },
+  {
+    "id": "tw-formosa",
+    "name": "Formosa Institute of Science & Technology",
+    "country": "TW",
+    "city": "Hsinchu",
+    "type": "institute",
+    "verifiedPartner": true,
+    "tagline": "Next to the fabs, ahead of the curve",
+    "founded": 1979,
+    "students": 14000,
+    "email": "admissions@formosa.edu",
+    "phone": "+886 2 7711638",
+    "images": [
+      "https://picsum.photos/seed/tw-formosa-0/800/500",
+      "https://picsum.photos/seed/tw-formosa-1/800/500",
+      "https://picsum.photos/seed/tw-formosa-2/800/500"
+    ]
+  },
+  {
+    "id": "tw-taichung",
+    "name": "Taichung Central University",
+    "country": "TW",
+    "city": "Taichung",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Balanced learning, central living",
+    "founded": 1969,
+    "students": 21000,
+    "email": "admissions@taichung.edu",
+    "phone": "+886 2 3763013",
+    "images": [
+      "https://picsum.photos/seed/tw-taichung-0/800/500",
+      "https://picsum.photos/seed/tw-taichung-1/800/500",
+      "https://picsum.photos/seed/tw-taichung-2/800/500"
+    ]
+  },
+  {
+    "id": "tw-kaohsiung",
+    "name": "Kaohsiung Harbour University",
+    "country": "TW",
+    "city": "Kaohsiung",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Port-city practicality",
+    "founded": 1973,
+    "students": 24000,
+    "email": "admissions@kaohsiung.edu",
+    "phone": "+886 2 2775284",
+    "images": [
+      "https://picsum.photos/seed/tw-kaohsiung-0/800/500",
+      "https://picsum.photos/seed/tw-kaohsiung-1/800/500",
+      "https://picsum.photos/seed/tw-kaohsiung-2/800/500"
+    ]
+  },
+  {
+    "id": "gb-albion",
+    "name": "Albion University London",
+    "country": "GB",
+    "city": "London",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "A London institution for the world",
+    "founded": 1901,
+    "students": 36000,
+    "email": "admissions@albion.edu",
+    "phone": "+44 20 5506565",
+    "images": [
+      "https://picsum.photos/seed/gb-albion-0/800/500",
+      "https://picsum.photos/seed/gb-albion-1/800/500",
+      "https://picsum.photos/seed/gb-albion-2/800/500"
+    ]
+  },
+  {
+    "id": "gb-northgate",
+    "name": "Northgate University",
+    "country": "GB",
+    "city": "Manchester",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Industry-first learning in the north",
+    "founded": 1956,
+    "students": 40000,
+    "email": "admissions@northgate.edu",
+    "phone": "+44 20 7179508",
+    "images": [
+      "https://picsum.photos/seed/gb-northgate-0/800/500",
+      "https://picsum.photos/seed/gb-northgate-1/800/500",
+      "https://picsum.photos/seed/gb-northgate-2/800/500"
+    ]
+  },
+  {
+    "id": "gb-holyrood",
+    "name": "Holyrood University",
+    "country": "GB",
+    "city": "Edinburgh",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Ancient city, modern minds",
+    "founded": 1889,
+    "students": 29000,
+    "email": "admissions@holyrood.edu",
+    "phone": "+44 20 6495588",
+    "images": [
+      "https://picsum.photos/seed/gb-holyrood-0/800/500",
+      "https://picsum.photos/seed/gb-holyrood-1/800/500",
+      "https://picsum.photos/seed/gb-holyrood-2/800/500"
+    ]
+  },
+  {
+    "id": "gb-brindley",
+    "name": "Brindley City University",
+    "country": "GB",
+    "city": "Birmingham",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Made in the Midlands",
+    "founded": 1971,
+    "students": 26000,
+    "email": "admissions@brindley.edu",
+    "phone": "+44 20 1034586",
+    "images": [
+      "https://picsum.photos/seed/gb-brindley-0/800/500",
+      "https://picsum.photos/seed/gb-brindley-1/800/500",
+      "https://picsum.photos/seed/gb-brindley-2/800/500"
+    ]
+  },
+  {
+    "id": "gb-thamesbank",
+    "name": "Thamesbank College of Law",
+    "country": "GB",
+    "city": "London",
+    "type": "college",
+    "verifiedPartner": false,
+    "tagline": "The practical route to practice",
+    "founded": 1983,
+    "students": 5200,
+    "email": "admissions@thamesbank.edu",
+    "phone": "+44 20 5237037",
+    "images": [
+      "https://picsum.photos/seed/gb-thamesbank-0/800/500",
+      "https://picsum.photos/seed/gb-thamesbank-1/800/500",
+      "https://picsum.photos/seed/gb-thamesbank-2/800/500"
+    ]
+  },
+  {
+    "id": "gb-airevalley",
+    "name": "Aire Valley Institute",
+    "country": "GB",
+    "city": "Leeds",
+    "type": "institute",
+    "verifiedPartner": false,
+    "tagline": "Skills that hold their value",
+    "founded": 1998,
+    "students": 7400,
+    "email": "admissions@airevalley.edu",
+    "phone": "+44 20 8536036",
+    "images": [
+      "https://picsum.photos/seed/gb-airevalley-0/800/500",
+      "https://picsum.photos/seed/gb-airevalley-1/800/500",
+      "https://picsum.photos/seed/gb-airevalley-2/800/500"
+    ]
+  },
+  {
+    "id": "sg-straitsintl",
+    "name": "Straits International University",
+    "country": "SG",
+    "city": "Singapore",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Asia's crossroads campus",
+    "founded": 1980,
+    "students": 30000,
+    "email": "admissions@straitsintl.edu",
+    "phone": "+65 1460883",
+    "images": [
+      "https://picsum.photos/seed/sg-straitsintl-0/800/500",
+      "https://picsum.photos/seed/sg-straitsintl-1/800/500",
+      "https://picsum.photos/seed/sg-straitsintl-2/800/500"
+    ]
+  },
+  {
+    "id": "sg-merlion",
+    "name": "Merlion College of Design",
+    "country": "SG",
+    "city": "Singapore",
+    "type": "college",
+    "verifiedPartner": true,
+    "tagline": "Design for dense cities",
+    "founded": 1990,
+    "students": 4800,
+    "email": "admissions@merlion.edu",
+    "phone": "+65 6330915",
+    "images": [
+      "https://picsum.photos/seed/sg-merlion-0/800/500",
+      "https://picsum.photos/seed/sg-merlion-1/800/500",
+      "https://picsum.photos/seed/sg-merlion-2/800/500"
+    ]
+  },
+  {
+    "id": "sg-changi",
+    "name": "Changi Institute of Technology",
+    "country": "SG",
+    "city": "Singapore",
+    "type": "institute",
+    "verifiedPartner": true,
+    "tagline": "Engineering the everyday",
+    "founded": 1986,
+    "students": 13000,
+    "email": "admissions@changi.edu",
+    "phone": "+65 1283841",
+    "images": [
+      "https://picsum.photos/seed/sg-changi-0/800/500",
+      "https://picsum.photos/seed/sg-changi-1/800/500",
+      "https://picsum.photos/seed/sg-changi-2/800/500"
+    ]
+  },
+  {
+    "id": "sg-marinagate",
+    "name": "Marina Gate Business School",
+    "country": "SG",
+    "city": "Singapore",
+    "type": "college",
+    "verifiedPartner": false,
+    "tagline": "Where commerce meets the bay",
+    "founded": 1995,
+    "students": 6800,
+    "email": "admissions@marinagate.edu",
+    "phone": "+65 3402603",
+    "images": [
+      "https://picsum.photos/seed/sg-marinagate-0/800/500",
+      "https://picsum.photos/seed/sg-marinagate-1/800/500",
+      "https://picsum.photos/seed/sg-marinagate-2/800/500"
+    ]
+  },
+  {
+    "id": "nz-kauri",
+    "name": "Kauri University",
+    "country": "NZ",
+    "city": "Auckland",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Rooted here, reaching everywhere",
+    "founded": 1965,
+    "students": 33000,
+    "email": "admissions@kauri.edu",
+    "phone": "+64 9 1556032",
+    "images": [
+      "https://picsum.photos/seed/nz-kauri-0/800/500",
+      "https://picsum.photos/seed/nz-kauri-1/800/500",
+      "https://picsum.photos/seed/nz-kauri-2/800/500"
+    ]
+  },
+  {
+    "id": "nz-harbourcity",
+    "name": "Harbour City University",
+    "country": "NZ",
+    "city": "Wellington",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Creative capital thinking",
+    "founded": 1972,
+    "students": 21000,
+    "email": "admissions@harbourcity.edu",
+    "phone": "+64 9 2671201",
+    "images": [
+      "https://picsum.photos/seed/nz-harbourcity-0/800/500",
+      "https://picsum.photos/seed/nz-harbourcity-1/800/500",
+      "https://picsum.photos/seed/nz-harbourcity-2/800/500"
+    ]
+  },
+  {
+    "id": "nz-southernalps",
+    "name": "Southern Alps University",
+    "country": "NZ",
+    "city": "Christchurch",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Engineering a resilient future",
+    "founded": 1968,
+    "students": 18000,
+    "email": "admissions@southernalps.edu",
+    "phone": "+64 9 8051925",
+    "images": [
+      "https://picsum.photos/seed/nz-southernalps-0/800/500",
+      "https://picsum.photos/seed/nz-southernalps-1/800/500",
+      "https://picsum.photos/seed/nz-southernalps-2/800/500"
+    ]
+  },
+  {
+    "id": "nz-kea",
+    "name": "Kea Institute of Technology",
+    "country": "NZ",
+    "city": "Dunedin",
+    "type": "institute",
+    "verifiedPartner": false,
+    "tagline": "Small classes, big outcomes",
+    "founded": 1993,
+    "students": 5600,
+    "email": "admissions@kea.edu",
+    "phone": "+64 9 5773020",
+    "images": [
+      "https://picsum.photos/seed/nz-kea-0/800/500",
+      "https://picsum.photos/seed/nz-kea-1/800/500",
+      "https://picsum.photos/seed/nz-kea-2/800/500"
+    ]
+  },
+  {
+    "id": "ru-tverskaya",
+    "name": "Tverskaya State University",
+    "country": "RU",
+    "city": "Moscow",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Classical rigour, modern practice",
+    "founded": 1930,
+    "students": 45000,
+    "email": "admissions@tverskaya.edu",
+    "phone": "+7 495 1244112",
+    "images": [
+      "https://picsum.photos/seed/ru-tverskaya-0/800/500",
+      "https://picsum.photos/seed/ru-tverskaya-1/800/500",
+      "https://picsum.photos/seed/ru-tverskaya-2/800/500"
+    ]
+  },
+  {
+    "id": "ru-neva",
+    "name": "Neva State Technical University",
+    "country": "RU",
+    "city": "Saint Petersburg",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Engineering on the Neva",
+    "founded": 1935,
+    "students": 38000,
+    "email": "admissions@neva.edu",
+    "phone": "+7 495 2557047",
+    "images": [
+      "https://picsum.photos/seed/ru-neva-0/800/500",
+      "https://picsum.photos/seed/ru-neva-1/800/500",
+      "https://picsum.photos/seed/ru-neva-2/800/500"
+    ]
+  },
+  {
+    "id": "ru-volga",
+    "name": "Volga Federal Institute",
+    "country": "RU",
+    "city": "Kazan",
+    "type": "institute",
+    "verifiedPartner": false,
+    "tagline": "Affordable, accredited, ambitious",
+    "founded": 1961,
+    "students": 15000,
+    "email": "admissions@volga.edu",
+    "phone": "+7 495 8584193",
+    "images": [
+      "https://picsum.photos/seed/ru-volga-0/800/500",
+      "https://picsum.photos/seed/ru-volga-1/800/500",
+      "https://picsum.photos/seed/ru-volga-2/800/500"
+    ]
+  },
+  {
+    "id": "ru-novayasibir",
+    "name": "Novaya Sibir State University",
+    "country": "RU",
+    "city": "Novosibirsk",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Science city education",
+    "founded": 1959,
+    "students": 26000,
+    "email": "admissions@novayasibir.edu",
+    "phone": "+7 495 5389659",
+    "images": [
+      "https://picsum.photos/seed/ru-novayasibir-0/800/500",
+      "https://picsum.photos/seed/ru-novayasibir-1/800/500",
+      "https://picsum.photos/seed/ru-novayasibir-2/800/500"
+    ]
+  }
+]

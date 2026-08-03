@@ -1,0 +1,38 @@
+[
+  {
+    "id": "transcript",
+    "hasExpiry": false
+  },
+  {
+    "id": "certificate",
+    "hasExpiry": false
+  },
+  {
+    "id": "passport",
+    "hasExpiry": true
+  },
+  {
+    "id": "english",
+    "hasExpiry": true
+  },
+  {
+    "id": "recommendation",
+    "hasExpiry": false
+  },
+  {
+    "id": "statement",
+    "hasExpiry": false
+  },
+  {
+    "id": "financial",
+    "hasExpiry": false
+  },
+  {
+    "id": "portfolio",
+    "hasExpiry": false
+  },
+  {
+    "id": "health",
+    "hasExpiry": true
+  }
+]

@@ -1,0 +1,360 @@
+[
+  {
+    "id": "spm",
+    "name": "SPM",
+    "region": "Malaysia",
+    "mode": "subjects",
+    "direction": "higher",
+    "unit": "credits",
+    "subjectCount": 6,
+    "maxSubjects": 10,
+    "aggregator": "credits",
+    "creditMinPoints": 3,
+    "grades": [
+      {
+        "label": "A+",
+        "points": 9
+      },
+      {
+        "label": "A",
+        "points": 8
+      },
+      {
+        "label": "A-",
+        "points": 7
+      },
+      {
+        "label": "B+",
+        "points": 6
+      },
+      {
+        "label": "B",
+        "points": 5
+      },
+      {
+        "label": "C+",
+        "points": 4
+      },
+      {
+        "label": "C",
+        "points": 3
+      },
+      {
+        "label": "D",
+        "points": 2
+      },
+      {
+        "label": "E",
+        "points": 1
+      },
+      {
+        "label": "G",
+        "points": 0
+      }
+    ],
+    "borderlineDelta": 1,
+    "subjectOptions": [
+      "Bahasa Melayu",
+      "English",
+      "Mathematics",
+      "Additional Mathematics",
+      "Physics",
+      "Chemistry",
+      "Biology",
+      "Sejarah",
+      "Ekonomi",
+      "Prinsip Perakaunan",
+      "Pendidikan Seni"
+    ]
+  },
+  {
+    "id": "stpm",
+    "name": "STPM",
+    "region": "Malaysia",
+    "mode": "subjects",
+    "direction": "higher",
+    "unit": "cgpa",
+    "subjectCount": 4,
+    "maxSubjects": 5,
+    "aggregator": "mean",
+    "bestOf": 3,
+    "grades": [
+      {
+        "label": "A",
+        "points": 4
+      },
+      {
+        "label": "A-",
+        "points": 3.67
+      },
+      {
+        "label": "B+",
+        "points": 3.33
+      },
+      {
+        "label": "B",
+        "points": 3
+      },
+      {
+        "label": "B-",
+        "points": 2.67
+      },
+      {
+        "label": "C+",
+        "points": 2.33
+      },
+      {
+        "label": "C",
+        "points": 2
+      },
+      {
+        "label": "C-",
+        "points": 1.67
+      },
+      {
+        "label": "D+",
+        "points": 1.33
+      },
+      {
+        "label": "D",
+        "points": 1
+      },
+      {
+        "label": "F",
+        "points": 0
+      }
+    ],
+    "borderlineDelta": 0.34,
+    "subjectOptions": [
+      "Pengajian Am",
+      "Mathematics (T)",
+      "Physics",
+      "Chemistry",
+      "Biology",
+      "Economics",
+      "Business Studies",
+      "Accounting",
+      "Sejarah",
+      "Geografi"
+    ]
+  },
+  {
+    "id": "uec",
+    "name": "UEC",
+    "region": "Malaysia (Chinese independent schools)",
+    "mode": "subjects",
+    "direction": "lower",
+    "unit": "points",
+    "subjectCount": 5,
+    "maxSubjects": 9,
+    "aggregator": "sum",
+    "bestOf": 5,
+    "grades": [
+      {
+        "label": "A1",
+        "points": 1
+      },
+      {
+        "label": "A2",
+        "points": 2
+      },
+      {
+        "label": "B3",
+        "points": 3
+      },
+      {
+        "label": "B4",
+        "points": 4
+      },
+      {
+        "label": "B5",
+        "points": 5
+      },
+      {
+        "label": "B6",
+        "points": 6
+      },
+      {
+        "label": "C7",
+        "points": 7
+      },
+      {
+        "label": "C8",
+        "points": 8
+      }
+    ],
+    "borderlineDelta": 2,
+    "subjectOptions": [
+      "Chinese",
+      "English",
+      "Mathematics",
+      "Advanced Mathematics",
+      "Physics",
+      "Chemistry",
+      "Biology",
+      "History",
+      "Geography",
+      "Bookkeeping & Accounts"
+    ]
+  },
+  {
+    "id": "alevels",
+    "name": "A-Levels",
+    "region": "UK / International",
+    "mode": "subjects",
+    "direction": "higher",
+    "unit": "points",
+    "subjectCount": 3,
+    "maxSubjects": 4,
+    "aggregator": "sum",
+    "bestOf": 3,
+    "grades": [
+      {
+        "label": "A*",
+        "points": 6
+      },
+      {
+        "label": "A",
+        "points": 5
+      },
+      {
+        "label": "B",
+        "points": 4
+      },
+      {
+        "label": "C",
+        "points": 3
+      },
+      {
+        "label": "D",
+        "points": 2
+      },
+      {
+        "label": "E",
+        "points": 1
+      }
+    ],
+    "borderlineDelta": 2,
+    "subjectOptions": [
+      "Mathematics",
+      "Further Mathematics",
+      "Physics",
+      "Chemistry",
+      "Biology",
+      "Economics",
+      "Business",
+      "Computer Science",
+      "History",
+      "Geography",
+      "English Literature",
+      "Psychology",
+      "Art & Design",
+      "Accounting"
+    ]
+  },
+  {
+    "id": "ib",
+    "name": "IB Diploma",
+    "region": "International",
+    "mode": "total",
+    "direction": "higher",
+    "unit": "points",
+    "min": 24,
+    "max": 45,
+    "decimals": 0,
+    "borderlineDelta": 2
+  },
+  {
+    "id": "hkdse",
+    "name": "HKDSE",
+    "region": "Hong Kong",
+    "mode": "subjects",
+    "direction": "higher",
+    "unit": "points",
+    "subjectCount": 5,
+    "maxSubjects": 7,
+    "aggregator": "sum",
+    "bestOf": 5,
+    "grades": [
+      {
+        "label": "5**",
+        "points": 7
+      },
+      {
+        "label": "5*",
+        "points": 6
+      },
+      {
+        "label": "5",
+        "points": 5
+      },
+      {
+        "label": "4",
+        "points": 4
+      },
+      {
+        "label": "3",
+        "points": 3
+      },
+      {
+        "label": "2",
+        "points": 2
+      },
+      {
+        "label": "1",
+        "points": 1
+      }
+    ],
+    "borderlineDelta": 2,
+    "subjectOptions": [
+      "Chinese Language",
+      "English Language",
+      "Mathematics",
+      "Citizenship & Social Development",
+      "Physics",
+      "Chemistry",
+      "Biology",
+      "Economics",
+      "BAFS",
+      "ICT",
+      "Geography",
+      "History"
+    ]
+  },
+  {
+    "id": "gsat",
+    "name": "Taiwan GSAT",
+    "region": "Taiwan",
+    "mode": "total",
+    "direction": "higher",
+    "unit": "points",
+    "min": 20,
+    "max": 60,
+    "decimals": 0,
+    "borderlineDelta": 4
+  },
+  {
+    "id": "atar",
+    "name": "ATAR",
+    "region": "Australia",
+    "mode": "total",
+    "direction": "higher",
+    "unit": "rank",
+    "min": 30,
+    "max": 99.95,
+    "decimals": 2,
+    "borderlineDelta": 5
+  },
+  {
+    "id": "gpa",
+    "name": "High School GPA",
+    "region": "Generic (4.0 scale)",
+    "mode": "total",
+    "direction": "higher",
+    "unit": "gpa",
+    "min": 0,
+    "max": 4,
+    "decimals": 2,
+    "borderlineDelta": 0.25
+  }
+]

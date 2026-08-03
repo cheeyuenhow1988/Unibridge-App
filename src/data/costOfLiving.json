@@ -1,0 +1,262 @@
+[
+  {
+    "city": "Sydney",
+    "country": "AU",
+    "currency": "AUD",
+    "rentMonthly": 1900,
+    "foodMonthly": 700,
+    "transportMonthly": 180,
+    "insuranceYearly": 650,
+    "visaFeeOneOff": 1600
+  },
+  {
+    "city": "Melbourne",
+    "country": "AU",
+    "currency": "AUD",
+    "rentMonthly": 1650,
+    "foodMonthly": 650,
+    "transportMonthly": 170,
+    "insuranceYearly": 650,
+    "visaFeeOneOff": 1600
+  },
+  {
+    "city": "Brisbane",
+    "country": "AU",
+    "currency": "AUD",
+    "rentMonthly": 1500,
+    "foodMonthly": 620,
+    "transportMonthly": 160,
+    "insuranceYearly": 650,
+    "visaFeeOneOff": 1600
+  },
+  {
+    "city": "Perth",
+    "country": "AU",
+    "currency": "AUD",
+    "rentMonthly": 1400,
+    "foodMonthly": 600,
+    "transportMonthly": 150,
+    "insuranceYearly": 650,
+    "visaFeeOneOff": 1600
+  },
+  {
+    "city": "Kuala Lumpur",
+    "country": "MY",
+    "currency": "MYR",
+    "rentMonthly": 1500,
+    "foodMonthly": 900,
+    "transportMonthly": 200,
+    "insuranceYearly": 600,
+    "visaFeeOneOff": 2000
+  },
+  {
+    "city": "Penang",
+    "country": "MY",
+    "currency": "MYR",
+    "rentMonthly": 1100,
+    "foodMonthly": 800,
+    "transportMonthly": 150,
+    "insuranceYearly": 600,
+    "visaFeeOneOff": 2000
+  },
+  {
+    "city": "Cyberjaya",
+    "country": "MY",
+    "currency": "MYR",
+    "rentMonthly": 1200,
+    "foodMonthly": 850,
+    "transportMonthly": 180,
+    "insuranceYearly": 600,
+    "visaFeeOneOff": 2000
+  },
+  {
+    "city": "Johor Bahru",
+    "country": "MY",
+    "currency": "MYR",
+    "rentMonthly": 1000,
+    "foodMonthly": 750,
+    "transportMonthly": 150,
+    "insuranceYearly": 600,
+    "visaFeeOneOff": 2000
+  },
+  {
+    "city": "Taipei",
+    "country": "TW",
+    "currency": "TWD",
+    "rentMonthly": 12000,
+    "foodMonthly": 8000,
+    "transportMonthly": 1280,
+    "insuranceYearly": 10000,
+    "visaFeeOneOff": 3000
+  },
+  {
+    "city": "Hsinchu",
+    "country": "TW",
+    "currency": "TWD",
+    "rentMonthly": 9500,
+    "foodMonthly": 7000,
+    "transportMonthly": 1000,
+    "insuranceYearly": 10000,
+    "visaFeeOneOff": 3000
+  },
+  {
+    "city": "Taichung",
+    "country": "TW",
+    "currency": "TWD",
+    "rentMonthly": 8500,
+    "foodMonthly": 7000,
+    "transportMonthly": 1000,
+    "insuranceYearly": 10000,
+    "visaFeeOneOff": 3000
+  },
+  {
+    "city": "Kaohsiung",
+    "country": "TW",
+    "currency": "TWD",
+    "rentMonthly": 8000,
+    "foodMonthly": 6500,
+    "transportMonthly": 900,
+    "insuranceYearly": 10000,
+    "visaFeeOneOff": 3000
+  },
+  {
+    "city": "London",
+    "country": "GB",
+    "currency": "GBP",
+    "rentMonthly": 1200,
+    "foodMonthly": 450,
+    "transportMonthly": 180,
+    "insuranceYearly": 776,
+    "visaFeeOneOff": 490
+  },
+  {
+    "city": "Manchester",
+    "country": "GB",
+    "currency": "GBP",
+    "rentMonthly": 850,
+    "foodMonthly": 380,
+    "transportMonthly": 95,
+    "insuranceYearly": 776,
+    "visaFeeOneOff": 490
+  },
+  {
+    "city": "Edinburgh",
+    "country": "GB",
+    "currency": "GBP",
+    "rentMonthly": 900,
+    "foodMonthly": 380,
+    "transportMonthly": 70,
+    "insuranceYearly": 776,
+    "visaFeeOneOff": 490
+  },
+  {
+    "city": "Birmingham",
+    "country": "GB",
+    "currency": "GBP",
+    "rentMonthly": 800,
+    "foodMonthly": 360,
+    "transportMonthly": 85,
+    "insuranceYearly": 776,
+    "visaFeeOneOff": 490
+  },
+  {
+    "city": "Leeds",
+    "country": "GB",
+    "currency": "GBP",
+    "rentMonthly": 750,
+    "foodMonthly": 350,
+    "transportMonthly": 80,
+    "insuranceYearly": 776,
+    "visaFeeOneOff": 490
+  },
+  {
+    "city": "Singapore",
+    "country": "SG",
+    "currency": "SGD",
+    "rentMonthly": 1500,
+    "foodMonthly": 600,
+    "transportMonthly": 120,
+    "insuranceYearly": 500,
+    "visaFeeOneOff": 90
+  },
+  {
+    "city": "Auckland",
+    "country": "NZ",
+    "currency": "NZD",
+    "rentMonthly": 1300,
+    "foodMonthly": 600,
+    "transportMonthly": 170,
+    "insuranceYearly": 700,
+    "visaFeeOneOff": 750
+  },
+  {
+    "city": "Wellington",
+    "country": "NZ",
+    "currency": "NZD",
+    "rentMonthly": 1200,
+    "foodMonthly": 580,
+    "transportMonthly": 150,
+    "insuranceYearly": 700,
+    "visaFeeOneOff": 750
+  },
+  {
+    "city": "Christchurch",
+    "country": "NZ",
+    "currency": "NZD",
+    "rentMonthly": 1050,
+    "foodMonthly": 550,
+    "transportMonthly": 120,
+    "insuranceYearly": 700,
+    "visaFeeOneOff": 750
+  },
+  {
+    "city": "Dunedin",
+    "country": "NZ",
+    "currency": "NZD",
+    "rentMonthly": 950,
+    "foodMonthly": 520,
+    "transportMonthly": 90,
+    "insuranceYearly": 700,
+    "visaFeeOneOff": 750
+  },
+  {
+    "city": "Moscow",
+    "country": "RU",
+    "currency": "RUB",
+    "rentMonthly": 45000,
+    "foodMonthly": 25000,
+    "transportMonthly": 2500,
+    "insuranceYearly": 15000,
+    "visaFeeOneOff": 6000
+  },
+  {
+    "city": "Saint Petersburg",
+    "country": "RU",
+    "currency": "RUB",
+    "rentMonthly": 35000,
+    "foodMonthly": 22000,
+    "transportMonthly": 2000,
+    "insuranceYearly": 15000,
+    "visaFeeOneOff": 6000
+  },
+  {
+    "city": "Kazan",
+    "country": "RU",
+    "currency": "RUB",
+    "rentMonthly": 25000,
+    "foodMonthly": 18000,
+    "transportMonthly": 1500,
+    "insuranceYearly": 15000,
+    "visaFeeOneOff": 6000
+  },
+  {
+    "city": "Novosibirsk",
+    "country": "RU",
+    "currency": "RUB",
+    "rentMonthly": 22000,
+    "foodMonthly": 17000,
+    "transportMonthly": 1400,
+    "insuranceYearly": 15000,
+    "visaFeeOneOff": 6000
+  }
+]

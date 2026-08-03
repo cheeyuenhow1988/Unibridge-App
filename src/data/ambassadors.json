@@ -1,0 +1,474 @@
+[
+  {
+    "id": "amb-01",
+    "name": "Aina Zulkifli",
+    "homeCountry": "MY",
+    "institutionId": "au-harbourview",
+    "courseName": "Bachelor of Business Administration",
+    "year": 2,
+    "bio": "KL girl figuring out Sydney one flat white at a time. Ask me about homestays and part-time café work.",
+    "avatar": "https://i.pravatar.cc/300?img=32",
+    "posts": [
+      {
+        "id": "amb-1-p1",
+        "text": "Orientation week done! The seniors literally walk you to your first class here.",
+        "image": "https://picsum.photos/seed/amb-0-0/600/400",
+        "likes": 196,
+        "date": "2026-02-03"
+      },
+      {
+        "id": "amb-1-p2",
+        "text": "Found the best cheap lunch near campus — full plate under 5 bucks if you go before noon.",
+        "image": "https://picsum.photos/seed/amb-0-1/600/400",
+        "likes": 199,
+        "date": "2026-03-14"
+      },
+      {
+        "id": "amb-1-p3",
+        "text": "Weekend trip with my intake group. This is why you join the group chat early!",
+        "image": "https://picsum.photos/seed/amb-0-2/600/400",
+        "likes": 143,
+        "date": "2026-04-25"
+      }
+    ]
+  },
+  {
+    "id": "amb-02",
+    "name": "Wei Jun Tan",
+    "homeCountry": "MY",
+    "institutionId": "au-southernsky",
+    "courseName": "Bachelor of Engineering (Civil)",
+    "year": 3,
+    "bio": "UEC grad from Penang. I run the Malaysian Students Society BBQ — yes there is sambal.",
+    "avatar": "https://i.pravatar.cc/300?img=11",
+    "posts": [
+      {
+        "id": "amb-2-p1",
+        "text": "Monthly budget breakdown in my bio link — rent is the big one, everything else is manageable.",
+        "image": "https://picsum.photos/seed/amb-1-0/600/400",
+        "likes": 89,
+        "date": "2026-02-10"
+      },
+      {
+        "id": "amb-2-p2",
+        "text": "Joined the badminton club. Instant friend group, would recommend to every freshie.",
+        "image": "https://picsum.photos/seed/amb-1-1/600/400",
+        "likes": 110,
+        "date": "2026-03-21"
+      }
+    ]
+  },
+  {
+    "id": "amb-03",
+    "name": "Yi-Chen Lin",
+    "homeCountry": "TW",
+    "institutionId": "au-harbourview",
+    "courseName": "Bachelor of Computer Science",
+    "year": 2,
+    "bio": "Taipei → Sydney. I map every night market substitute this city has.",
+    "avatar": "https://i.pravatar.cc/300?img=44",
+    "posts": [
+      {
+        "id": "amb-3-p1",
+        "text": "Campus library at 2am during finals. The free coffee cart is a lifesaver.",
+        "image": "https://picsum.photos/seed/amb-2-0/600/400",
+        "likes": 205,
+        "date": "2026-02-17"
+      },
+      {
+        "id": "amb-3-p2",
+        "text": "Tip: open your student bank account in week 1, the queue doubles by week 3.",
+        "image": "https://picsum.photos/seed/amb-2-1/600/400",
+        "likes": 161,
+        "date": "2026-03-03"
+      },
+      {
+        "id": "amb-3-p3",
+        "text": "Orientation week done! The seniors literally walk you to your first class here.",
+        "image": "https://picsum.photos/seed/amb-2-2/600/400",
+        "likes": 88,
+        "date": "2026-04-14"
+      }
+    ]
+  },
+  {
+    "id": "amb-04",
+    "name": "Marcus Lim",
+    "homeCountry": "SG",
+    "institutionId": "gb-albion",
+    "courseName": "Bachelor of Laws (LLB)",
+    "year": 3,
+    "bio": "Mooting, mock trials and meal-prepping in London on a student budget.",
+    "avatar": "https://i.pravatar.cc/300?img=12",
+    "posts": [
+      {
+        "id": "amb-4-p1",
+        "text": "Found the best cheap lunch near campus — full plate under 5 bucks if you go before noon.",
+        "image": "https://picsum.photos/seed/amb-3-0/600/400",
+        "likes": 218,
+        "date": "2026-02-24"
+      },
+      {
+        "id": "amb-4-p2",
+        "text": "Weekend trip with my intake group. This is why you join the group chat early!",
+        "image": "https://picsum.photos/seed/amb-3-1/600/400",
+        "likes": 149,
+        "date": "2026-03-10"
+      }
+    ]
+  },
+  {
+    "id": "amb-05",
+    "name": "Putri Wijaya",
+    "homeCountry": "ID",
+    "institutionId": "my-merdeka",
+    "courseName": "Bachelor of Business Administration",
+    "year": 2,
+    "bio": "From Jakarta, at home in KL. Halal food guide and bus-route encyclopaedia.",
+    "avatar": "https://i.pravatar.cc/300?img=47",
+    "posts": [
+      {
+        "id": "amb-5-p1",
+        "text": "Joined the badminton club. Instant friend group, would recommend to every freshie.",
+        "image": "https://picsum.photos/seed/amb-4-0/600/400",
+        "likes": 84,
+        "date": "2026-02-06"
+      },
+      {
+        "id": "amb-5-p2",
+        "text": "My part-time gig at the campus café covers groceries. Work rights are limited — check yours!",
+        "image": "https://picsum.photos/seed/amb-4-1/600/400",
+        "likes": 197,
+        "date": "2026-03-17"
+      },
+      {
+        "id": "amb-5-p3",
+        "text": "Campus library at 2am during finals. The free coffee cart is a lifesaver.",
+        "image": "https://picsum.photos/seed/amb-4-2/600/400",
+        "likes": 45,
+        "date": "2026-04-03"
+      }
+    ]
+  },
+  {
+    "id": "amb-06",
+    "name": "Minh Anh Nguyen",
+    "homeCountry": "VN",
+    "institutionId": "ru-tverskaya",
+    "courseName": "Bachelor of Medicine, Bachelor of Surgery (MBBS)",
+    "year": 4,
+    "bio": "Hanoi to Moscow. Yes, anatomy in two languages is possible — DM me.",
+    "avatar": "https://i.pravatar.cc/300?img=26",
+    "posts": [
+      {
+        "id": "amb-6-p1",
+        "text": "Tip: open your student bank account in week 1, the queue doubles by week 3.",
+        "image": "https://picsum.photos/seed/amb-5-0/600/400",
+        "likes": 92,
+        "date": "2026-02-13"
+      },
+      {
+        "id": "amb-6-p2",
+        "text": "Orientation week done! The seniors literally walk you to your first class here.",
+        "image": "https://picsum.photos/seed/amb-5-1/600/400",
+        "likes": 16,
+        "date": "2026-03-24"
+      }
+    ]
+  },
+  {
+    "id": "amb-07",
+    "name": "Zihan Wang",
+    "homeCountry": "CN",
+    "institutionId": "gb-northgate",
+    "courseName": "Bachelor of Software Engineering",
+    "year": 2,
+    "bio": "Chengdu hotpot loyalist reviewing every Manchester hotpot for science.",
+    "avatar": "https://i.pravatar.cc/300?img=59",
+    "posts": [
+      {
+        "id": "amb-7-p1",
+        "text": "Weekend trip with my intake group. This is why you join the group chat early!",
+        "image": "https://picsum.photos/seed/amb-6-0/600/400",
+        "likes": 30,
+        "date": "2026-02-20"
+      },
+      {
+        "id": "amb-7-p2",
+        "text": "Monthly budget breakdown in my bio link — rent is the big one, everything else is manageable.",
+        "image": "https://picsum.photos/seed/amb-6-1/600/400",
+        "likes": 154,
+        "date": "2026-03-06"
+      },
+      {
+        "id": "amb-7-p3",
+        "text": "Joined the badminton club. Instant friend group, would recommend to every freshie.",
+        "image": "https://picsum.photos/seed/amb-6-2/600/400",
+        "likes": 171,
+        "date": "2026-04-17"
+      }
+    ]
+  },
+  {
+    "id": "amb-08",
+    "name": "Nurul Izzah",
+    "homeCountry": "MY",
+    "institutionId": "my-merdeka",
+    "courseName": "Bachelor of Laws (LLB)",
+    "year": 3,
+    "bio": "Moot court addict. I mentor SPM leavers on scholarship essays.",
+    "avatar": "https://i.pravatar.cc/300?img=45",
+    "posts": [
+      {
+        "id": "amb-8-p1",
+        "text": "My part-time gig at the campus café covers groceries. Work rights are limited — check yours!",
+        "image": "https://picsum.photos/seed/amb-7-0/600/400",
+        "likes": 222,
+        "date": "2026-02-27"
+      },
+      {
+        "id": "amb-8-p2",
+        "text": "Campus library at 2am during finals. The free coffee cart is a lifesaver.",
+        "image": "https://picsum.photos/seed/amb-7-1/600/400",
+        "likes": 205,
+        "date": "2026-03-13"
+      }
+    ]
+  },
+  {
+    "id": "amb-09",
+    "name": "Chia-Hao Chen",
+    "homeCountry": "TW",
+    "institutionId": "tw-taipeibay",
+    "courseName": "Bachelor of Computer Science",
+    "year": 3,
+    "bio": "GSAT survivor. I intern at a Hsinchu fab on weekdays.",
+    "avatar": "https://i.pravatar.cc/300?img=15",
+    "posts": [
+      {
+        "id": "amb-9-p1",
+        "text": "Orientation week done! The seniors literally walk you to your first class here.",
+        "image": "https://picsum.photos/seed/amb-8-0/600/400",
+        "likes": 114,
+        "date": "2026-02-09"
+      },
+      {
+        "id": "amb-9-p2",
+        "text": "Found the best cheap lunch near campus — full plate under 5 bucks if you go before noon.",
+        "image": "https://picsum.photos/seed/amb-8-1/600/400",
+        "likes": 167,
+        "date": "2026-03-20"
+      },
+      {
+        "id": "amb-9-p3",
+        "text": "Weekend trip with my intake group. This is why you join the group chat early!",
+        "image": "https://picsum.photos/seed/amb-8-2/600/400",
+        "likes": 43,
+        "date": "2026-04-06"
+      }
+    ]
+  },
+  {
+    "id": "amb-10",
+    "name": "Siti Rahmah",
+    "homeCountry": "MY",
+    "institutionId": "sg-straitsintl",
+    "courseName": "Bachelor of Commerce (Finance)",
+    "year": 2,
+    "bio": "JB → SG commuter turned hostelite. Budget spreadsheets are my love language.",
+    "avatar": "https://i.pravatar.cc/300?img=49",
+    "posts": [
+      {
+        "id": "amb-10-p1",
+        "text": "Monthly budget breakdown in my bio link — rent is the big one, everything else is manageable.",
+        "image": "https://picsum.photos/seed/amb-9-0/600/400",
+        "likes": 72,
+        "date": "2026-02-16"
+      },
+      {
+        "id": "amb-10-p2",
+        "text": "Joined the badminton club. Instant friend group, would recommend to every freshie.",
+        "image": "https://picsum.photos/seed/amb-9-1/600/400",
+        "likes": 42,
+        "date": "2026-03-27"
+      }
+    ]
+  },
+  {
+    "id": "amb-11",
+    "name": "Dewi Lestari",
+    "homeCountry": "ID",
+    "institutionId": "sg-straitsintl",
+    "courseName": "Bachelor of Computer Science",
+    "year": 3,
+    "bio": "Hackathon regular. I keep a list of every free food event on campus.",
+    "avatar": "https://i.pravatar.cc/300?img=25",
+    "posts": [
+      {
+        "id": "amb-11-p1",
+        "text": "Campus library at 2am during finals. The free coffee cart is a lifesaver.",
+        "image": "https://picsum.photos/seed/amb-10-0/600/400",
+        "likes": 22,
+        "date": "2026-02-23"
+      },
+      {
+        "id": "amb-11-p2",
+        "text": "Tip: open your student bank account in week 1, the queue doubles by week 3.",
+        "image": "https://picsum.photos/seed/amb-10-1/600/400",
+        "likes": 76,
+        "date": "2026-03-09"
+      },
+      {
+        "id": "amb-11-p3",
+        "text": "Orientation week done! The seniors literally walk you to your first class here.",
+        "image": "https://picsum.photos/seed/amb-10-2/600/400",
+        "likes": 109,
+        "date": "2026-04-20"
+      }
+    ]
+  },
+  {
+    "id": "amb-12",
+    "name": "Thanh Pham",
+    "homeCountry": "VN",
+    "institutionId": "tw-taipeibay",
+    "courseName": "Bachelor of Design (Digital Media Design)",
+    "year": 2,
+    "bio": "Saigon skater sketching Taipei. Portfolio tips welcome.",
+    "avatar": "https://i.pravatar.cc/300?img=53",
+    "posts": [
+      {
+        "id": "amb-12-p1",
+        "text": "Found the best cheap lunch near campus — full plate under 5 bucks if you go before noon.",
+        "image": "https://picsum.photos/seed/amb-11-0/600/400",
+        "likes": 137,
+        "date": "2026-02-05"
+      },
+      {
+        "id": "amb-12-p2",
+        "text": "Weekend trip with my intake group. This is why you join the group chat early!",
+        "image": "https://picsum.photos/seed/amb-11-1/600/400",
+        "likes": 169,
+        "date": "2026-03-16"
+      }
+    ]
+  },
+  {
+    "id": "amb-13",
+    "name": "Jia Le Ong",
+    "homeCountry": "SG",
+    "institutionId": "nz-kauri",
+    "courseName": "Bachelor of Business Administration",
+    "year": 2,
+    "bio": "Swapped MRT for hiking boots. Auckland weekends are for waterfalls.",
+    "avatar": "https://i.pravatar.cc/300?img=33",
+    "posts": [
+      {
+        "id": "amb-13-p1",
+        "text": "Joined the badminton club. Instant friend group, would recommend to every freshie.",
+        "image": "https://picsum.photos/seed/amb-12-0/600/400",
+        "likes": 186,
+        "date": "2026-02-12"
+      },
+      {
+        "id": "amb-13-p2",
+        "text": "My part-time gig at the campus café covers groceries. Work rights are limited — check yours!",
+        "image": "https://picsum.photos/seed/amb-12-1/600/400",
+        "likes": 184,
+        "date": "2026-03-23"
+      },
+      {
+        "id": "amb-13-p3",
+        "text": "Campus library at 2am during finals. The free coffee cart is a lifesaver.",
+        "image": "https://picsum.photos/seed/amb-12-2/600/400",
+        "likes": 55,
+        "date": "2026-04-09"
+      }
+    ]
+  },
+  {
+    "id": "amb-14",
+    "name": "Hui Min Teo",
+    "homeCountry": "MY",
+    "institutionId": "gb-holyrood",
+    "courseName": "Bachelor of Biomedical Science",
+    "year": 3,
+    "bio": "Lab days, Munro weekends. Edinburgh winters are survivable, promise.",
+    "avatar": "https://i.pravatar.cc/300?img=20",
+    "posts": [
+      {
+        "id": "amb-14-p1",
+        "text": "Tip: open your student bank account in week 1, the queue doubles by week 3.",
+        "image": "https://picsum.photos/seed/amb-13-0/600/400",
+        "likes": 158,
+        "date": "2026-02-19"
+      },
+      {
+        "id": "amb-14-p2",
+        "text": "Orientation week done! The seniors literally walk you to your first class here.",
+        "image": "https://picsum.photos/seed/amb-13-1/600/400",
+        "likes": 125,
+        "date": "2026-03-05"
+      }
+    ]
+  },
+  {
+    "id": "amb-15",
+    "name": "Xin Yi Loh",
+    "homeCountry": "MY",
+    "institutionId": "my-cyberview",
+    "courseName": "Bachelor of Software Engineering",
+    "year": 2,
+    "bio": "Cyberjaya nights, Grab-ride playlists, and open-source everything.",
+    "avatar": "https://i.pravatar.cc/300?img=31",
+    "posts": [
+      {
+        "id": "amb-15-p1",
+        "text": "Weekend trip with my intake group. This is why you join the group chat early!",
+        "image": "https://picsum.photos/seed/amb-14-0/600/400",
+        "likes": 109,
+        "date": "2026-02-26"
+      },
+      {
+        "id": "amb-15-p2",
+        "text": "Monthly budget breakdown in my bio link — rent is the big one, everything else is manageable.",
+        "image": "https://picsum.photos/seed/amb-14-1/600/400",
+        "likes": 115,
+        "date": "2026-03-12"
+      },
+      {
+        "id": "amb-15-p3",
+        "text": "Joined the badminton club. Instant friend group, would recommend to every freshie.",
+        "image": "https://picsum.photos/seed/amb-14-2/600/400",
+        "likes": 112,
+        "date": "2026-04-23"
+      }
+    ]
+  },
+  {
+    "id": "amb-16",
+    "name": "Anastasia Kim",
+    "homeCountry": "CN",
+    "institutionId": "ru-neva",
+    "courseName": "Bachelor of Engineering (Electrical)",
+    "year": 3,
+    "bio": "Harbin → St Petersburg. White nights make exam season weirdly fun.",
+    "avatar": "https://i.pravatar.cc/300?img=24",
+    "posts": [
+      {
+        "id": "amb-16-p1",
+        "text": "My part-time gig at the campus café covers groceries. Work rights are limited — check yours!",
+        "image": "https://picsum.photos/seed/amb-15-0/600/400",
+        "likes": 105,
+        "date": "2026-02-08"
+      },
+      {
+        "id": "amb-16-p2",
+        "text": "Campus library at 2am during finals. The free coffee cart is a lifesaver.",
+        "image": "https://picsum.photos/seed/amb-15-1/600/400",
+        "likes": 85,
+        "date": "2026-03-19"
+      }
+    ]
+  }
+]

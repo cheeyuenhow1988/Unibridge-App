@@ -1,0 +1,1523 @@
+[
+  {
+    "id": "au-harbourview-a1",
+    "institutionId": "au-harbourview",
+    "name": "Bondi Beach",
+    "type": "nature",
+    "distanceMinutes": 38,
+    "description": "Iconic surf beach at the start of the coastal walk",
+    "image": "https://picsum.photos/seed/au-harbourview-a0/400/300"
+  },
+  {
+    "id": "au-harbourview-a2",
+    "institutionId": "au-harbourview",
+    "name": "Sydney Opera House",
+    "type": "landmark",
+    "distanceMinutes": 10,
+    "description": "The sails everyone flies here to see",
+    "image": "https://picsum.photos/seed/au-harbourview-a1/400/300"
+  },
+  {
+    "id": "au-harbourview-a3",
+    "institutionId": "au-harbourview",
+    "name": "Spice Alley",
+    "type": "food",
+    "distanceMinutes": 9,
+    "description": "Lantern-lit laneway of Asian hawker eateries",
+    "image": "https://picsum.photos/seed/au-harbourview-a2/400/300"
+  },
+  {
+    "id": "au-harbourview-a4",
+    "institutionId": "au-harbourview",
+    "name": "The Rocks Markets",
+    "type": "shopping",
+    "distanceMinutes": 10,
+    "description": "Weekend stalls under the Harbour Bridge",
+    "image": "https://picsum.photos/seed/au-harbourview-a3/400/300"
+  },
+  {
+    "id": "au-harbourview-a5",
+    "institutionId": "au-harbourview",
+    "name": "Royal Botanic Garden",
+    "type": "nature",
+    "distanceMinutes": 10,
+    "description": "Harbourside lawns ten minutes from downtown",
+    "image": "https://picsum.photos/seed/au-harbourview-a4/400/300"
+  },
+  {
+    "id": "au-southernsky-a1",
+    "institutionId": "au-southernsky",
+    "name": "Queen Victoria Market",
+    "type": "food",
+    "distanceMinutes": 11,
+    "description": "Historic sheds of produce, doughnuts and bratwurst",
+    "image": "https://picsum.photos/seed/au-southernsky-a0/400/300"
+  },
+  {
+    "id": "au-southernsky-a2",
+    "institutionId": "au-southernsky",
+    "name": "Hosier Lane",
+    "type": "landmark",
+    "distanceMinutes": 9,
+    "description": "Ever-changing street-art laneway",
+    "image": "https://picsum.photos/seed/au-southernsky-a1/400/300"
+  },
+  {
+    "id": "au-southernsky-a3",
+    "institutionId": "au-southernsky",
+    "name": "St Kilda Beach",
+    "type": "nature",
+    "distanceMinutes": 22,
+    "description": "Sunset pier with a resident penguin colony",
+    "image": "https://picsum.photos/seed/au-southernsky-a2/400/300"
+  },
+  {
+    "id": "au-southernsky-a4",
+    "institutionId": "au-southernsky",
+    "name": "Melbourne Cricket Ground",
+    "type": "sports",
+    "distanceMinutes": 17,
+    "description": "The MCG — sport is a religion here",
+    "image": "https://picsum.photos/seed/au-southernsky-a3/400/300"
+  },
+  {
+    "id": "au-southernsky-a5",
+    "institutionId": "au-southernsky",
+    "name": "Lygon Street",
+    "type": "food",
+    "distanceMinutes": 9,
+    "description": "Melbourne's original Little Italy",
+    "image": "https://picsum.photos/seed/au-southernsky-a4/400/300"
+  },
+  {
+    "id": "au-coralcoast-a1",
+    "institutionId": "au-coralcoast",
+    "name": "South Bank Parklands",
+    "type": "nature",
+    "distanceMinutes": 8,
+    "description": "City beach, lagoon and free BBQs",
+    "image": "https://picsum.photos/seed/au-coralcoast-a0/400/300"
+  },
+  {
+    "id": "au-coralcoast-a2",
+    "institutionId": "au-coralcoast",
+    "name": "Eat Street Northshore",
+    "type": "food",
+    "distanceMinutes": 28,
+    "description": "Container-village night market",
+    "image": "https://picsum.photos/seed/au-coralcoast-a1/400/300"
+  },
+  {
+    "id": "au-coralcoast-a3",
+    "institutionId": "au-coralcoast",
+    "name": "Story Bridge",
+    "type": "landmark",
+    "distanceMinutes": 19,
+    "description": "Climb it or picnic under it",
+    "image": "https://picsum.photos/seed/au-coralcoast-a2/400/300"
+  },
+  {
+    "id": "au-coralcoast-a4",
+    "institutionId": "au-coralcoast",
+    "name": "Queen Street Mall",
+    "type": "shopping",
+    "distanceMinutes": 10,
+    "description": "Open-air retail heart of the city",
+    "image": "https://picsum.photos/seed/au-coralcoast-a3/400/300"
+  },
+  {
+    "id": "au-coralcoast-a5",
+    "institutionId": "au-coralcoast",
+    "name": "Suncorp Stadium",
+    "type": "sports",
+    "distanceMinutes": 12,
+    "description": "Rugby league nights are electric",
+    "image": "https://picsum.photos/seed/au-coralcoast-a4/400/300"
+  },
+  {
+    "id": "au-swanbrook-a1",
+    "institutionId": "au-swanbrook",
+    "name": "Cottesloe Beach",
+    "type": "nature",
+    "distanceMinutes": 23,
+    "description": "Indian Ocean sunsets and Norfolk pines",
+    "image": "https://picsum.photos/seed/au-swanbrook-a0/400/300"
+  },
+  {
+    "id": "au-swanbrook-a2",
+    "institutionId": "au-swanbrook",
+    "name": "Kings Park",
+    "type": "nature",
+    "distanceMinutes": 8,
+    "description": "One of the largest inner-city parks in the world",
+    "image": "https://picsum.photos/seed/au-swanbrook-a1/400/300"
+  },
+  {
+    "id": "au-swanbrook-a3",
+    "institutionId": "au-swanbrook",
+    "name": "Fremantle Markets",
+    "type": "shopping",
+    "distanceMinutes": 25,
+    "description": "Victorian-era market hall by the port",
+    "image": "https://picsum.photos/seed/au-swanbrook-a2/400/300"
+  },
+  {
+    "id": "au-swanbrook-a4",
+    "institutionId": "au-swanbrook",
+    "name": "Elizabeth Quay",
+    "type": "landmark",
+    "distanceMinutes": 14,
+    "description": "Riverfront promenade and public art",
+    "image": "https://picsum.photos/seed/au-swanbrook-a3/400/300"
+  },
+  {
+    "id": "au-swanbrook-a5",
+    "institutionId": "au-swanbrook",
+    "name": "Optus Stadium",
+    "type": "sports",
+    "distanceMinutes": 22,
+    "description": "AFL derbies under lights",
+    "image": "https://picsum.photos/seed/au-swanbrook-a4/400/300"
+  },
+  {
+    "id": "au-marrickville-a1",
+    "institutionId": "au-marrickville",
+    "name": "Bondi Beach",
+    "type": "nature",
+    "distanceMinutes": 37,
+    "description": "Iconic surf beach at the start of the coastal walk",
+    "image": "https://picsum.photos/seed/au-marrickville-a0/400/300"
+  },
+  {
+    "id": "au-marrickville-a2",
+    "institutionId": "au-marrickville",
+    "name": "Sydney Opera House",
+    "type": "landmark",
+    "distanceMinutes": 17,
+    "description": "The sails everyone flies here to see",
+    "image": "https://picsum.photos/seed/au-marrickville-a1/400/300"
+  },
+  {
+    "id": "au-marrickville-a3",
+    "institutionId": "au-marrickville",
+    "name": "Spice Alley",
+    "type": "food",
+    "distanceMinutes": 5,
+    "description": "Lantern-lit laneway of Asian hawker eateries",
+    "image": "https://picsum.photos/seed/au-marrickville-a2/400/300"
+  },
+  {
+    "id": "au-marrickville-a4",
+    "institutionId": "au-marrickville",
+    "name": "The Rocks Markets",
+    "type": "shopping",
+    "distanceMinutes": 20,
+    "description": "Weekend stalls under the Harbour Bridge",
+    "image": "https://picsum.photos/seed/au-marrickville-a3/400/300"
+  },
+  {
+    "id": "au-marrickville-a5",
+    "institutionId": "au-marrickville",
+    "name": "Royal Botanic Garden",
+    "type": "nature",
+    "distanceMinutes": 14,
+    "description": "Harbourside lawns ten minutes from downtown",
+    "image": "https://picsum.photos/seed/au-marrickville-a4/400/300"
+  },
+  {
+    "id": "au-kingsford-a1",
+    "institutionId": "au-kingsford",
+    "name": "Queen Victoria Market",
+    "type": "food",
+    "distanceMinutes": 15,
+    "description": "Historic sheds of produce, doughnuts and bratwurst",
+    "image": "https://picsum.photos/seed/au-kingsford-a0/400/300"
+  },
+  {
+    "id": "au-kingsford-a2",
+    "institutionId": "au-kingsford",
+    "name": "Hosier Lane",
+    "type": "landmark",
+    "distanceMinutes": 4,
+    "description": "Ever-changing street-art laneway",
+    "image": "https://picsum.photos/seed/au-kingsford-a1/400/300"
+  },
+  {
+    "id": "au-kingsford-a3",
+    "institutionId": "au-kingsford",
+    "name": "St Kilda Beach",
+    "type": "nature",
+    "distanceMinutes": 21,
+    "description": "Sunset pier with a resident penguin colony",
+    "image": "https://picsum.photos/seed/au-kingsford-a2/400/300"
+  },
+  {
+    "id": "au-kingsford-a4",
+    "institutionId": "au-kingsford",
+    "name": "Melbourne Cricket Ground",
+    "type": "sports",
+    "distanceMinutes": 10,
+    "description": "The MCG — sport is a religion here",
+    "image": "https://picsum.photos/seed/au-kingsford-a3/400/300"
+  },
+  {
+    "id": "au-kingsford-a5",
+    "institutionId": "au-kingsford",
+    "name": "Lygon Street",
+    "type": "food",
+    "distanceMinutes": 10,
+    "description": "Melbourne's original Little Italy",
+    "image": "https://picsum.photos/seed/au-kingsford-a4/400/300"
+  },
+  {
+    "id": "my-merdeka-a1",
+    "institutionId": "my-merdeka",
+    "name": "Petronas Twin Towers",
+    "type": "landmark",
+    "distanceMinutes": 15,
+    "description": "The skyline shot of Malaysia",
+    "image": "https://picsum.photos/seed/my-merdeka-a0/400/300"
+  },
+  {
+    "id": "my-merdeka-a2",
+    "institutionId": "my-merdeka",
+    "name": "Jalan Alor",
+    "type": "food",
+    "distanceMinutes": 13,
+    "description": "Late-night satay and char kuey teow street",
+    "image": "https://picsum.photos/seed/my-merdeka-a1/400/300"
+  },
+  {
+    "id": "my-merdeka-a3",
+    "institutionId": "my-merdeka",
+    "name": "Batu Caves",
+    "type": "nature",
+    "distanceMinutes": 44,
+    "description": "Rainbow steps to a limestone temple cave",
+    "image": "https://picsum.photos/seed/my-merdeka-a2/400/300"
+  },
+  {
+    "id": "my-merdeka-a4",
+    "institutionId": "my-merdeka",
+    "name": "Pavilion KL",
+    "type": "shopping",
+    "distanceMinutes": 5,
+    "description": "Glitzy mall in Bukit Bintang",
+    "image": "https://picsum.photos/seed/my-merdeka-a3/400/300"
+  },
+  {
+    "id": "my-merdeka-a5",
+    "institutionId": "my-merdeka",
+    "name": "Changkat Bukit Bintang",
+    "type": "nightlife",
+    "distanceMinutes": 14,
+    "description": "Bar street that wakes after dark",
+    "image": "https://picsum.photos/seed/my-merdeka-a4/400/300"
+  },
+  {
+    "id": "my-straits-a1",
+    "institutionId": "my-straits",
+    "name": "George Town Street Art",
+    "type": "landmark",
+    "distanceMinutes": 20,
+    "description": "Hunt the famous wrought-iron murals",
+    "image": "https://picsum.photos/seed/my-straits-a0/400/300"
+  },
+  {
+    "id": "my-straits-a2",
+    "institutionId": "my-straits",
+    "name": "Gurney Drive Hawker Centre",
+    "type": "food",
+    "distanceMinutes": 8,
+    "description": "Assam laksa by the seafront",
+    "image": "https://picsum.photos/seed/my-straits-a1/400/300"
+  },
+  {
+    "id": "my-straits-a3",
+    "institutionId": "my-straits",
+    "name": "Penang Hill",
+    "type": "nature",
+    "distanceMinutes": 32,
+    "description": "Funicular ride above the heritage city",
+    "image": "https://picsum.photos/seed/my-straits-a2/400/300"
+  },
+  {
+    "id": "my-straits-a4",
+    "institutionId": "my-straits",
+    "name": "Gurney Plaza",
+    "type": "shopping",
+    "distanceMinutes": 8,
+    "description": "Seafront mall with everything",
+    "image": "https://picsum.photos/seed/my-straits-a3/400/300"
+  },
+  {
+    "id": "my-straits-a5",
+    "institutionId": "my-straits",
+    "name": "Batu Ferringhi",
+    "type": "nature",
+    "distanceMinutes": 35,
+    "description": "Beach strip with a night market",
+    "image": "https://picsum.photos/seed/my-straits-a4/400/300"
+  },
+  {
+    "id": "my-cyberview-a1",
+    "institutionId": "my-cyberview",
+    "name": "Cyberjaya Lake Gardens",
+    "type": "nature",
+    "distanceMinutes": 14,
+    "description": "Morning-run loop around the lake",
+    "image": "https://picsum.photos/seed/my-cyberview-a0/400/300"
+  },
+  {
+    "id": "my-cyberview-a2",
+    "institutionId": "my-cyberview",
+    "name": "Tamarind Square",
+    "type": "food",
+    "distanceMinutes": 4,
+    "description": "Cafés and a famous 24-hour bookshop",
+    "image": "https://picsum.photos/seed/my-cyberview-a1/400/300"
+  },
+  {
+    "id": "my-cyberview-a3",
+    "institutionId": "my-cyberview",
+    "name": "IOI City Mall",
+    "type": "shopping",
+    "distanceMinutes": 25,
+    "description": "Mega-mall with an indoor ice rink",
+    "image": "https://picsum.photos/seed/my-cyberview-a2/400/300"
+  },
+  {
+    "id": "my-cyberview-a4",
+    "institutionId": "my-cyberview",
+    "name": "Putra Mosque",
+    "type": "landmark",
+    "distanceMinutes": 21,
+    "description": "Rose-pink mosque on Putrajaya lake",
+    "image": "https://picsum.photos/seed/my-cyberview-a3/400/300"
+  },
+  {
+    "id": "my-cyberview-a5",
+    "institutionId": "my-cyberview",
+    "name": "Putrajaya Wetlands Park",
+    "type": "nature",
+    "distanceMinutes": 23,
+    "description": "Kayaks and flamingo sightings",
+    "image": "https://picsum.photos/seed/my-cyberview-a4/400/300"
+  },
+  {
+    "id": "my-selangor-a1",
+    "institutionId": "my-selangor",
+    "name": "Petronas Twin Towers",
+    "type": "landmark",
+    "distanceMinutes": 14,
+    "description": "The skyline shot of Malaysia",
+    "image": "https://picsum.photos/seed/my-selangor-a0/400/300"
+  },
+  {
+    "id": "my-selangor-a2",
+    "institutionId": "my-selangor",
+    "name": "Jalan Alor",
+    "type": "food",
+    "distanceMinutes": 13,
+    "description": "Late-night satay and char kuey teow street",
+    "image": "https://picsum.photos/seed/my-selangor-a1/400/300"
+  },
+  {
+    "id": "my-selangor-a3",
+    "institutionId": "my-selangor",
+    "name": "Batu Caves",
+    "type": "nature",
+    "distanceMinutes": 38,
+    "description": "Rainbow steps to a limestone temple cave",
+    "image": "https://picsum.photos/seed/my-selangor-a2/400/300"
+  },
+  {
+    "id": "my-selangor-a4",
+    "institutionId": "my-selangor",
+    "name": "Pavilion KL",
+    "type": "shopping",
+    "distanceMinutes": 11,
+    "description": "Glitzy mall in Bukit Bintang",
+    "image": "https://picsum.photos/seed/my-selangor-a3/400/300"
+  },
+  {
+    "id": "my-selangor-a5",
+    "institutionId": "my-selangor",
+    "name": "Changkat Bukit Bintang",
+    "type": "nightlife",
+    "distanceMinutes": 10,
+    "description": "Bar street that wakes after dark",
+    "image": "https://picsum.photos/seed/my-selangor-a4/400/300"
+  },
+  {
+    "id": "my-iskandar-a1",
+    "institutionId": "my-iskandar",
+    "name": "Legoland Malaysia",
+    "type": "landmark",
+    "distanceMinutes": 33,
+    "description": "Theme park a bus ride from campus",
+    "image": "https://picsum.photos/seed/my-iskandar-a0/400/300"
+  },
+  {
+    "id": "my-iskandar-a2",
+    "institutionId": "my-iskandar",
+    "name": "Jalan Dhoby",
+    "type": "food",
+    "distanceMinutes": 8,
+    "description": "Heritage shophouse cafés and banana cake",
+    "image": "https://picsum.photos/seed/my-iskandar-a1/400/300"
+  },
+  {
+    "id": "my-iskandar-a3",
+    "institutionId": "my-iskandar",
+    "name": "Danga Bay",
+    "type": "nature",
+    "distanceMinutes": 14,
+    "description": "Waterfront promenade facing Singapore",
+    "image": "https://picsum.photos/seed/my-iskandar-a2/400/300"
+  },
+  {
+    "id": "my-iskandar-a4",
+    "institutionId": "my-iskandar",
+    "name": "Johor Premium Outlets",
+    "type": "shopping",
+    "distanceMinutes": 39,
+    "description": "Discount designer runs",
+    "image": "https://picsum.photos/seed/my-iskandar-a3/400/300"
+  },
+  {
+    "id": "my-iskandar-a5",
+    "institutionId": "my-iskandar",
+    "name": "Arulmigu Sri Rajakaliamman",
+    "type": "landmark",
+    "distanceMinutes": 14,
+    "description": "The glass temple of JB",
+    "image": "https://picsum.photos/seed/my-iskandar-a4/400/300"
+  },
+  {
+    "id": "tw-taipeibay-a1",
+    "institutionId": "tw-taipeibay",
+    "name": "Shilin Night Market",
+    "type": "food",
+    "distanceMinutes": 25,
+    "description": "Fried chicken bigger than your face",
+    "image": "https://picsum.photos/seed/tw-taipeibay-a0/400/300"
+  },
+  {
+    "id": "tw-taipeibay-a2",
+    "institutionId": "tw-taipeibay",
+    "name": "Taipei 101",
+    "type": "landmark",
+    "distanceMinutes": 19,
+    "description": "Bamboo-shaped icon with a summit view",
+    "image": "https://picsum.photos/seed/tw-taipeibay-a1/400/300"
+  },
+  {
+    "id": "tw-taipeibay-a3",
+    "institutionId": "tw-taipeibay",
+    "name": "Elephant Mountain",
+    "type": "nature",
+    "distanceMinutes": 19,
+    "description": "Short hike, best skyline photo in town",
+    "image": "https://picsum.photos/seed/tw-taipeibay-a2/400/300"
+  },
+  {
+    "id": "tw-taipeibay-a4",
+    "institutionId": "tw-taipeibay",
+    "name": "Ximending",
+    "type": "shopping",
+    "distanceMinutes": 15,
+    "description": "Neon street fashion district",
+    "image": "https://picsum.photos/seed/tw-taipeibay-a3/400/300"
+  },
+  {
+    "id": "tw-taipeibay-a5",
+    "institutionId": "tw-taipeibay",
+    "name": "Beitou Hot Springs",
+    "type": "nature",
+    "distanceMinutes": 33,
+    "description": "Steaming public baths on the MRT line",
+    "image": "https://picsum.photos/seed/tw-taipeibay-a4/400/300"
+  },
+  {
+    "id": "tw-formosa-a1",
+    "institutionId": "tw-formosa",
+    "name": "East Gate (Yingxi Gate)",
+    "type": "landmark",
+    "distanceMinutes": 6,
+    "description": "City gate ringed by a moat park",
+    "image": "https://picsum.photos/seed/tw-formosa-a0/400/300"
+  },
+  {
+    "id": "tw-formosa-a2",
+    "institutionId": "tw-formosa",
+    "name": "Beipu Old Street",
+    "type": "food",
+    "distanceMinutes": 32,
+    "description": "Hakka lei cha and persimmon cakes",
+    "image": "https://picsum.photos/seed/tw-formosa-a1/400/300"
+  },
+  {
+    "id": "tw-formosa-a3",
+    "institutionId": "tw-formosa",
+    "name": "Big City Mall",
+    "type": "shopping",
+    "distanceMinutes": 6,
+    "description": "Everything mall next to the station",
+    "image": "https://picsum.photos/seed/tw-formosa-a2/400/300"
+  },
+  {
+    "id": "tw-formosa-a4",
+    "institutionId": "tw-formosa",
+    "name": "Hsinchu Park",
+    "type": "nature",
+    "distanceMinutes": 15,
+    "description": "Cherry blossoms and a glass museum",
+    "image": "https://picsum.photos/seed/tw-formosa-a3/400/300"
+  },
+  {
+    "id": "tw-formosa-a5",
+    "institutionId": "tw-formosa",
+    "name": "17km Coastline Bikeway",
+    "type": "sports",
+    "distanceMinutes": 24,
+    "description": "Flat seaside ride past wind turbines",
+    "image": "https://picsum.photos/seed/tw-formosa-a4/400/300"
+  },
+  {
+    "id": "tw-taichung-a1",
+    "institutionId": "tw-taichung",
+    "name": "Fengjia Night Market",
+    "type": "food",
+    "distanceMinutes": 11,
+    "description": "Taiwan's biggest night market",
+    "image": "https://picsum.photos/seed/tw-taichung-a0/400/300"
+  },
+  {
+    "id": "tw-taichung-a2",
+    "institutionId": "tw-taichung",
+    "name": "Rainbow Village",
+    "type": "landmark",
+    "distanceMinutes": 25,
+    "description": "A settlement saved by paint",
+    "image": "https://picsum.photos/seed/tw-taichung-a1/400/300"
+  },
+  {
+    "id": "tw-taichung-a3",
+    "institutionId": "tw-taichung",
+    "name": "Gaomei Wetlands",
+    "type": "nature",
+    "distanceMinutes": 49,
+    "description": "Windmill boardwalk at golden hour",
+    "image": "https://picsum.photos/seed/tw-taichung-a2/400/300"
+  },
+  {
+    "id": "tw-taichung-a4",
+    "institutionId": "tw-taichung",
+    "name": "Miyahara",
+    "type": "shopping",
+    "distanceMinutes": 8,
+    "description": "Ophthalmology hall turned ice-cream palace",
+    "image": "https://picsum.photos/seed/tw-taichung-a3/400/300"
+  },
+  {
+    "id": "tw-taichung-a5",
+    "institutionId": "tw-taichung",
+    "name": "Taichung Park",
+    "type": "nature",
+    "distanceMinutes": 15,
+    "description": "Lake pavilion from 1908",
+    "image": "https://picsum.photos/seed/tw-taichung-a4/400/300"
+  },
+  {
+    "id": "tw-kaohsiung-a1",
+    "institutionId": "tw-kaohsiung",
+    "name": "Liuhe Night Market",
+    "type": "food",
+    "distanceMinutes": 8,
+    "description": "Seafood skewers by the harbour",
+    "image": "https://picsum.photos/seed/tw-kaohsiung-a0/400/300"
+  },
+  {
+    "id": "tw-kaohsiung-a2",
+    "institutionId": "tw-kaohsiung",
+    "name": "Pier-2 Art Center",
+    "type": "landmark",
+    "distanceMinutes": 17,
+    "description": "Warehouses full of installations",
+    "image": "https://picsum.photos/seed/tw-kaohsiung-a1/400/300"
+  },
+  {
+    "id": "tw-kaohsiung-a3",
+    "institutionId": "tw-kaohsiung",
+    "name": "Lotus Pond",
+    "type": "nature",
+    "distanceMinutes": 22,
+    "description": "Dragon and Tiger pagodas",
+    "image": "https://picsum.photos/seed/tw-kaohsiung-a2/400/300"
+  },
+  {
+    "id": "tw-kaohsiung-a4",
+    "institutionId": "tw-kaohsiung",
+    "name": "Dream Mall",
+    "type": "shopping",
+    "distanceMinutes": 12,
+    "description": "Rooftop ferris wheel views",
+    "image": "https://picsum.photos/seed/tw-kaohsiung-a3/400/300"
+  },
+  {
+    "id": "tw-kaohsiung-a5",
+    "institutionId": "tw-kaohsiung",
+    "name": "Cijin Island",
+    "type": "nature",
+    "distanceMinutes": 24,
+    "description": "Ferry, seafood street, black-sand beach",
+    "image": "https://picsum.photos/seed/tw-kaohsiung-a4/400/300"
+  },
+  {
+    "id": "gb-albion-a1",
+    "institutionId": "gb-albion",
+    "name": "Borough Market",
+    "type": "food",
+    "distanceMinutes": 11,
+    "description": "A thousand years of market eating",
+    "image": "https://picsum.photos/seed/gb-albion-a0/400/300"
+  },
+  {
+    "id": "gb-albion-a2",
+    "institutionId": "gb-albion",
+    "name": "British Museum",
+    "type": "landmark",
+    "distanceMinutes": 14,
+    "description": "The world under one roof, free entry",
+    "image": "https://picsum.photos/seed/gb-albion-a1/400/300"
+  },
+  {
+    "id": "gb-albion-a3",
+    "institutionId": "gb-albion",
+    "name": "Hyde Park",
+    "type": "nature",
+    "distanceMinutes": 13,
+    "description": "Rowboats, deck chairs, speakers corner",
+    "image": "https://picsum.photos/seed/gb-albion-a2/400/300"
+  },
+  {
+    "id": "gb-albion-a4",
+    "institutionId": "gb-albion",
+    "name": "Oxford Street",
+    "type": "shopping",
+    "distanceMinutes": 7,
+    "description": "A mile and a half of flagship stores",
+    "image": "https://picsum.photos/seed/gb-albion-a3/400/300"
+  },
+  {
+    "id": "gb-albion-a5",
+    "institutionId": "gb-albion",
+    "name": "Shoreditch",
+    "type": "nightlife",
+    "distanceMinutes": 21,
+    "description": "Street art by day, bars by night",
+    "image": "https://picsum.photos/seed/gb-albion-a4/400/300"
+  },
+  {
+    "id": "gb-northgate-a1",
+    "institutionId": "gb-northgate",
+    "name": "Old Trafford",
+    "type": "sports",
+    "distanceMinutes": 24,
+    "description": "The Theatre of Dreams",
+    "image": "https://picsum.photos/seed/gb-northgate-a0/400/300"
+  },
+  {
+    "id": "gb-northgate-a2",
+    "institutionId": "gb-northgate",
+    "name": "Northern Quarter",
+    "type": "nightlife",
+    "distanceMinutes": 6,
+    "description": "Indie bars and record shops",
+    "image": "https://picsum.photos/seed/gb-northgate-a1/400/300"
+  },
+  {
+    "id": "gb-northgate-a3",
+    "institutionId": "gb-northgate",
+    "name": "Curry Mile",
+    "type": "food",
+    "distanceMinutes": 13,
+    "description": "A mile of South Asian flavour in Rusholme",
+    "image": "https://picsum.photos/seed/gb-northgate-a2/400/300"
+  },
+  {
+    "id": "gb-northgate-a4",
+    "institutionId": "gb-northgate",
+    "name": "Manchester Arndale",
+    "type": "shopping",
+    "distanceMinutes": 4,
+    "description": "City-centre retail giant",
+    "image": "https://picsum.photos/seed/gb-northgate-a3/400/300"
+  },
+  {
+    "id": "gb-northgate-a5",
+    "institutionId": "gb-northgate",
+    "name": "Heaton Park",
+    "type": "nature",
+    "distanceMinutes": 21,
+    "description": "Six hundred acres of green escape",
+    "image": "https://picsum.photos/seed/gb-northgate-a4/400/300"
+  },
+  {
+    "id": "gb-holyrood-a1",
+    "institutionId": "gb-holyrood",
+    "name": "Arthur's Seat",
+    "type": "nature",
+    "distanceMinutes": 24,
+    "description": "An extinct volcano in the city",
+    "image": "https://picsum.photos/seed/gb-holyrood-a0/400/300"
+  },
+  {
+    "id": "gb-holyrood-a2",
+    "institutionId": "gb-holyrood",
+    "name": "Royal Mile",
+    "type": "landmark",
+    "distanceMinutes": 7,
+    "description": "Castle to palace through the Old Town",
+    "image": "https://picsum.photos/seed/gb-holyrood-a1/400/300"
+  },
+  {
+    "id": "gb-holyrood-a3",
+    "institutionId": "gb-holyrood",
+    "name": "Princes Street",
+    "type": "shopping",
+    "distanceMinutes": 5,
+    "description": "Shopping with a castle backdrop",
+    "image": "https://picsum.photos/seed/gb-holyrood-a2/400/300"
+  },
+  {
+    "id": "gb-holyrood-a4",
+    "institutionId": "gb-holyrood",
+    "name": "Grassmarket",
+    "type": "nightlife",
+    "distanceMinutes": 11,
+    "description": "Historic square of pubs and folk music",
+    "image": "https://picsum.photos/seed/gb-holyrood-a3/400/300"
+  },
+  {
+    "id": "gb-holyrood-a5",
+    "institutionId": "gb-holyrood",
+    "name": "Portobello Beach",
+    "type": "nature",
+    "distanceMinutes": 31,
+    "description": "Seaside promenade and saunas",
+    "image": "https://picsum.photos/seed/gb-holyrood-a4/400/300"
+  },
+  {
+    "id": "gb-brindley-a1",
+    "institutionId": "gb-brindley",
+    "name": "Bullring & Grand Central",
+    "type": "shopping",
+    "distanceMinutes": 12,
+    "description": "The famous Selfridges discs",
+    "image": "https://picsum.photos/seed/gb-brindley-a0/400/300"
+  },
+  {
+    "id": "gb-brindley-a2",
+    "institutionId": "gb-brindley",
+    "name": "Digbeth",
+    "type": "food",
+    "distanceMinutes": 16,
+    "description": "Street food yards in the creative quarter",
+    "image": "https://picsum.photos/seed/gb-brindley-a1/400/300"
+  },
+  {
+    "id": "gb-brindley-a3",
+    "institutionId": "gb-brindley",
+    "name": "Cadbury World",
+    "type": "landmark",
+    "distanceMinutes": 27,
+    "description": "Chocolate heritage in Bournville",
+    "image": "https://picsum.photos/seed/gb-brindley-a2/400/300"
+  },
+  {
+    "id": "gb-brindley-a4",
+    "institutionId": "gb-brindley",
+    "name": "Cannon Hill Park",
+    "type": "nature",
+    "distanceMinutes": 16,
+    "description": "Boating lake and the MAC arts centre",
+    "image": "https://picsum.photos/seed/gb-brindley-a3/400/300"
+  },
+  {
+    "id": "gb-brindley-a5",
+    "institutionId": "gb-brindley",
+    "name": "Broad Street",
+    "type": "nightlife",
+    "distanceMinutes": 10,
+    "description": "Clubs along the canal side",
+    "image": "https://picsum.photos/seed/gb-brindley-a4/400/300"
+  },
+  {
+    "id": "gb-thamesbank-a1",
+    "institutionId": "gb-thamesbank",
+    "name": "Borough Market",
+    "type": "food",
+    "distanceMinutes": 12,
+    "description": "A thousand years of market eating",
+    "image": "https://picsum.photos/seed/gb-thamesbank-a0/400/300"
+  },
+  {
+    "id": "gb-thamesbank-a2",
+    "institutionId": "gb-thamesbank",
+    "name": "British Museum",
+    "type": "landmark",
+    "distanceMinutes": 7,
+    "description": "The world under one roof, free entry",
+    "image": "https://picsum.photos/seed/gb-thamesbank-a1/400/300"
+  },
+  {
+    "id": "gb-thamesbank-a3",
+    "institutionId": "gb-thamesbank",
+    "name": "Hyde Park",
+    "type": "nature",
+    "distanceMinutes": 17,
+    "description": "Rowboats, deck chairs, speakers corner",
+    "image": "https://picsum.photos/seed/gb-thamesbank-a2/400/300"
+  },
+  {
+    "id": "gb-thamesbank-a4",
+    "institutionId": "gb-thamesbank",
+    "name": "Oxford Street",
+    "type": "shopping",
+    "distanceMinutes": 12,
+    "description": "A mile and a half of flagship stores",
+    "image": "https://picsum.photos/seed/gb-thamesbank-a3/400/300"
+  },
+  {
+    "id": "gb-thamesbank-a5",
+    "institutionId": "gb-thamesbank",
+    "name": "Shoreditch",
+    "type": "nightlife",
+    "distanceMinutes": 18,
+    "description": "Street art by day, bars by night",
+    "image": "https://picsum.photos/seed/gb-thamesbank-a4/400/300"
+  },
+  {
+    "id": "gb-airevalley-a1",
+    "institutionId": "gb-airevalley",
+    "name": "Trinity Leeds",
+    "type": "shopping",
+    "distanceMinutes": 4,
+    "description": "Glass-roofed shopping quarter",
+    "image": "https://picsum.photos/seed/gb-airevalley-a0/400/300"
+  },
+  {
+    "id": "gb-airevalley-a2",
+    "institutionId": "gb-airevalley",
+    "name": "Kirkgate Market",
+    "type": "food",
+    "distanceMinutes": 6,
+    "description": "One of the largest indoor markets in Europe",
+    "image": "https://picsum.photos/seed/gb-airevalley-a1/400/300"
+  },
+  {
+    "id": "gb-airevalley-a3",
+    "institutionId": "gb-airevalley",
+    "name": "Roundhay Park",
+    "type": "nature",
+    "distanceMinutes": 15,
+    "description": "Lakes, gorges and Tropical World",
+    "image": "https://picsum.photos/seed/gb-airevalley-a2/400/300"
+  },
+  {
+    "id": "gb-airevalley-a4",
+    "institutionId": "gb-airevalley",
+    "name": "Headingley Stadium",
+    "type": "sports",
+    "distanceMinutes": 12,
+    "description": "Cricket and rugby league history",
+    "image": "https://picsum.photos/seed/gb-airevalley-a3/400/300"
+  },
+  {
+    "id": "gb-airevalley-a5",
+    "institutionId": "gb-airevalley",
+    "name": "Call Lane",
+    "type": "nightlife",
+    "distanceMinutes": 13,
+    "description": "Bar-hopping central",
+    "image": "https://picsum.photos/seed/gb-airevalley-a4/400/300"
+  },
+  {
+    "id": "sg-straitsintl-a1",
+    "institutionId": "sg-straitsintl",
+    "name": "Gardens by the Bay",
+    "type": "nature",
+    "distanceMinutes": 21,
+    "description": "Supertrees and cooled conservatories",
+    "image": "https://picsum.photos/seed/sg-straitsintl-a0/400/300"
+  },
+  {
+    "id": "sg-straitsintl-a2",
+    "institutionId": "sg-straitsintl",
+    "name": "Maxwell Food Centre",
+    "type": "food",
+    "distanceMinutes": 20,
+    "description": "Hainanese chicken rice pilgrimage",
+    "image": "https://picsum.photos/seed/sg-straitsintl-a1/400/300"
+  },
+  {
+    "id": "sg-straitsintl-a3",
+    "institutionId": "sg-straitsintl",
+    "name": "Orchard Road",
+    "type": "shopping",
+    "distanceMinutes": 11,
+    "description": "Air-conditioned retail canyon",
+    "image": "https://picsum.photos/seed/sg-straitsintl-a2/400/300"
+  },
+  {
+    "id": "sg-straitsintl-a4",
+    "institutionId": "sg-straitsintl",
+    "name": "Marina Bay Sands",
+    "type": "landmark",
+    "distanceMinutes": 16,
+    "description": "The boat-topped skyline icon",
+    "image": "https://picsum.photos/seed/sg-straitsintl-a3/400/300"
+  },
+  {
+    "id": "sg-straitsintl-a5",
+    "institutionId": "sg-straitsintl",
+    "name": "Sentosa",
+    "type": "nature",
+    "distanceMinutes": 31,
+    "description": "Beaches, luge and cable cars",
+    "image": "https://picsum.photos/seed/sg-straitsintl-a4/400/300"
+  },
+  {
+    "id": "sg-straitsintl-a6",
+    "institutionId": "sg-straitsintl",
+    "name": "Clarke Quay",
+    "type": "nightlife",
+    "distanceMinutes": 13,
+    "description": "Riverside bars and bumboats",
+    "image": "https://picsum.photos/seed/sg-straitsintl-a5/400/300"
+  },
+  {
+    "id": "sg-merlion-a1",
+    "institutionId": "sg-merlion",
+    "name": "Gardens by the Bay",
+    "type": "nature",
+    "distanceMinutes": 19,
+    "description": "Supertrees and cooled conservatories",
+    "image": "https://picsum.photos/seed/sg-merlion-a0/400/300"
+  },
+  {
+    "id": "sg-merlion-a2",
+    "institutionId": "sg-merlion",
+    "name": "Maxwell Food Centre",
+    "type": "food",
+    "distanceMinutes": 14,
+    "description": "Hainanese chicken rice pilgrimage",
+    "image": "https://picsum.photos/seed/sg-merlion-a1/400/300"
+  },
+  {
+    "id": "sg-merlion-a3",
+    "institutionId": "sg-merlion",
+    "name": "Orchard Road",
+    "type": "shopping",
+    "distanceMinutes": 14,
+    "description": "Air-conditioned retail canyon",
+    "image": "https://picsum.photos/seed/sg-merlion-a2/400/300"
+  },
+  {
+    "id": "sg-merlion-a4",
+    "institutionId": "sg-merlion",
+    "name": "Marina Bay Sands",
+    "type": "landmark",
+    "distanceMinutes": 22,
+    "description": "The boat-topped skyline icon",
+    "image": "https://picsum.photos/seed/sg-merlion-a3/400/300"
+  },
+  {
+    "id": "sg-merlion-a5",
+    "institutionId": "sg-merlion",
+    "name": "Sentosa",
+    "type": "nature",
+    "distanceMinutes": 29,
+    "description": "Beaches, luge and cable cars",
+    "image": "https://picsum.photos/seed/sg-merlion-a4/400/300"
+  },
+  {
+    "id": "sg-merlion-a6",
+    "institutionId": "sg-merlion",
+    "name": "Clarke Quay",
+    "type": "nightlife",
+    "distanceMinutes": 13,
+    "description": "Riverside bars and bumboats",
+    "image": "https://picsum.photos/seed/sg-merlion-a5/400/300"
+  },
+  {
+    "id": "sg-changi-a1",
+    "institutionId": "sg-changi",
+    "name": "Gardens by the Bay",
+    "type": "nature",
+    "distanceMinutes": 24,
+    "description": "Supertrees and cooled conservatories",
+    "image": "https://picsum.photos/seed/sg-changi-a0/400/300"
+  },
+  {
+    "id": "sg-changi-a2",
+    "institutionId": "sg-changi",
+    "name": "Maxwell Food Centre",
+    "type": "food",
+    "distanceMinutes": 13,
+    "description": "Hainanese chicken rice pilgrimage",
+    "image": "https://picsum.photos/seed/sg-changi-a1/400/300"
+  },
+  {
+    "id": "sg-changi-a3",
+    "institutionId": "sg-changi",
+    "name": "Orchard Road",
+    "type": "shopping",
+    "distanceMinutes": 15,
+    "description": "Air-conditioned retail canyon",
+    "image": "https://picsum.photos/seed/sg-changi-a2/400/300"
+  },
+  {
+    "id": "sg-changi-a4",
+    "institutionId": "sg-changi",
+    "name": "Marina Bay Sands",
+    "type": "landmark",
+    "distanceMinutes": 21,
+    "description": "The boat-topped skyline icon",
+    "image": "https://picsum.photos/seed/sg-changi-a3/400/300"
+  },
+  {
+    "id": "sg-changi-a5",
+    "institutionId": "sg-changi",
+    "name": "Sentosa",
+    "type": "nature",
+    "distanceMinutes": 31,
+    "description": "Beaches, luge and cable cars",
+    "image": "https://picsum.photos/seed/sg-changi-a4/400/300"
+  },
+  {
+    "id": "sg-changi-a6",
+    "institutionId": "sg-changi",
+    "name": "Clarke Quay",
+    "type": "nightlife",
+    "distanceMinutes": 16,
+    "description": "Riverside bars and bumboats",
+    "image": "https://picsum.photos/seed/sg-changi-a5/400/300"
+  },
+  {
+    "id": "sg-marinagate-a1",
+    "institutionId": "sg-marinagate",
+    "name": "Gardens by the Bay",
+    "type": "nature",
+    "distanceMinutes": 17,
+    "description": "Supertrees and cooled conservatories",
+    "image": "https://picsum.photos/seed/sg-marinagate-a0/400/300"
+  },
+  {
+    "id": "sg-marinagate-a2",
+    "institutionId": "sg-marinagate",
+    "name": "Maxwell Food Centre",
+    "type": "food",
+    "distanceMinutes": 13,
+    "description": "Hainanese chicken rice pilgrimage",
+    "image": "https://picsum.photos/seed/sg-marinagate-a1/400/300"
+  },
+  {
+    "id": "sg-marinagate-a3",
+    "institutionId": "sg-marinagate",
+    "name": "Orchard Road",
+    "type": "shopping",
+    "distanceMinutes": 13,
+    "description": "Air-conditioned retail canyon",
+    "image": "https://picsum.photos/seed/sg-marinagate-a2/400/300"
+  },
+  {
+    "id": "sg-marinagate-a4",
+    "institutionId": "sg-marinagate",
+    "name": "Marina Bay Sands",
+    "type": "landmark",
+    "distanceMinutes": 18,
+    "description": "The boat-topped skyline icon",
+    "image": "https://picsum.photos/seed/sg-marinagate-a3/400/300"
+  },
+  {
+    "id": "sg-marinagate-a5",
+    "institutionId": "sg-marinagate",
+    "name": "Sentosa",
+    "type": "nature",
+    "distanceMinutes": 32,
+    "description": "Beaches, luge and cable cars",
+    "image": "https://picsum.photos/seed/sg-marinagate-a4/400/300"
+  },
+  {
+    "id": "sg-marinagate-a6",
+    "institutionId": "sg-marinagate",
+    "name": "Clarke Quay",
+    "type": "nightlife",
+    "distanceMinutes": 12,
+    "description": "Riverside bars and bumboats",
+    "image": "https://picsum.photos/seed/sg-marinagate-a5/400/300"
+  },
+  {
+    "id": "nz-kauri-a1",
+    "institutionId": "nz-kauri",
+    "name": "Sky Tower",
+    "type": "landmark",
+    "distanceMinutes": 6,
+    "description": "Bungy off it or dine up it",
+    "image": "https://picsum.photos/seed/nz-kauri-a0/400/300"
+  },
+  {
+    "id": "nz-kauri-a2",
+    "institutionId": "nz-kauri",
+    "name": "Mission Bay",
+    "type": "nature",
+    "distanceMinutes": 22,
+    "description": "Beach promenade with volcano views",
+    "image": "https://picsum.photos/seed/nz-kauri-a1/400/300"
+  },
+  {
+    "id": "nz-kauri-a3",
+    "institutionId": "nz-kauri",
+    "name": "Ponsonby Road",
+    "type": "food",
+    "distanceMinutes": 10,
+    "description": "Brunch strip of the city",
+    "image": "https://picsum.photos/seed/nz-kauri-a2/400/300"
+  },
+  {
+    "id": "nz-kauri-a4",
+    "institutionId": "nz-kauri",
+    "name": "Queen Street",
+    "type": "shopping",
+    "distanceMinutes": 4,
+    "description": "Main street from harbour to K-Road",
+    "image": "https://picsum.photos/seed/nz-kauri-a3/400/300"
+  },
+  {
+    "id": "nz-kauri-a5",
+    "institutionId": "nz-kauri",
+    "name": "Eden Park",
+    "type": "sports",
+    "distanceMinutes": 13,
+    "description": "All Blacks home turf",
+    "image": "https://picsum.photos/seed/nz-kauri-a4/400/300"
+  },
+  {
+    "id": "nz-harbourcity-a1",
+    "institutionId": "nz-harbourcity",
+    "name": "Te Papa",
+    "type": "landmark",
+    "distanceMinutes": 5,
+    "description": "The national museum on the waterfront",
+    "image": "https://picsum.photos/seed/nz-harbourcity-a0/400/300"
+  },
+  {
+    "id": "nz-harbourcity-a2",
+    "institutionId": "nz-harbourcity",
+    "name": "Cuba Street",
+    "type": "food",
+    "distanceMinutes": 9,
+    "description": "Bucket fountain, cafés and buskers",
+    "image": "https://picsum.photos/seed/nz-harbourcity-a1/400/300"
+  },
+  {
+    "id": "nz-harbourcity-a3",
+    "institutionId": "nz-harbourcity",
+    "name": "Mount Victoria Lookout",
+    "type": "nature",
+    "distanceMinutes": 12,
+    "description": "360° of harbour and hills",
+    "image": "https://picsum.photos/seed/nz-harbourcity-a2/400/300"
+  },
+  {
+    "id": "nz-harbourcity-a4",
+    "institutionId": "nz-harbourcity",
+    "name": "Oriental Bay",
+    "type": "nature",
+    "distanceMinutes": 12,
+    "description": "City beach five minutes from downtown",
+    "image": "https://picsum.photos/seed/nz-harbourcity-a3/400/300"
+  },
+  {
+    "id": "nz-harbourcity-a5",
+    "institutionId": "nz-harbourcity",
+    "name": "Sky Stadium",
+    "type": "sports",
+    "distanceMinutes": 9,
+    "description": "Concerts and rugby by the quays",
+    "image": "https://picsum.photos/seed/nz-harbourcity-a4/400/300"
+  },
+  {
+    "id": "nz-southernalps-a1",
+    "institutionId": "nz-southernalps",
+    "name": "Hagley Park",
+    "type": "nature",
+    "distanceMinutes": 12,
+    "description": "Vast central park and botanic gardens",
+    "image": "https://picsum.photos/seed/nz-southernalps-a0/400/300"
+  },
+  {
+    "id": "nz-southernalps-a2",
+    "institutionId": "nz-southernalps",
+    "name": "Riverside Market",
+    "type": "food",
+    "distanceMinutes": 13,
+    "description": "Artisan hall on the Avon",
+    "image": "https://picsum.photos/seed/nz-southernalps-a1/400/300"
+  },
+  {
+    "id": "nz-southernalps-a3",
+    "institutionId": "nz-southernalps",
+    "name": "New Regent Street",
+    "type": "shopping",
+    "distanceMinutes": 11,
+    "description": "Pastel Spanish-mission arcade",
+    "image": "https://picsum.photos/seed/nz-southernalps-a2/400/300"
+  },
+  {
+    "id": "nz-southernalps-a4",
+    "institutionId": "nz-southernalps",
+    "name": "Port Hills",
+    "type": "nature",
+    "distanceMinutes": 24,
+    "description": "Mountain-bike trails above the city",
+    "image": "https://picsum.photos/seed/nz-southernalps-a3/400/300"
+  },
+  {
+    "id": "nz-southernalps-a5",
+    "institutionId": "nz-southernalps",
+    "name": "Apollo Projects Stadium",
+    "type": "sports",
+    "distanceMinutes": 11,
+    "description": "Crusaders match days",
+    "image": "https://picsum.photos/seed/nz-southernalps-a4/400/300"
+  },
+  {
+    "id": "nz-kea-a1",
+    "institutionId": "nz-kea",
+    "name": "St Clair Beach",
+    "type": "nature",
+    "distanceMinutes": 19,
+    "description": "Surf breaks and a hot salt-water pool",
+    "image": "https://picsum.photos/seed/nz-kea-a0/400/300"
+  },
+  {
+    "id": "nz-kea-a2",
+    "institutionId": "nz-kea",
+    "name": "Otago Farmers Market",
+    "type": "food",
+    "distanceMinutes": 10,
+    "description": "Saturday morning ritual at the station",
+    "image": "https://picsum.photos/seed/nz-kea-a1/400/300"
+  },
+  {
+    "id": "nz-kea-a3",
+    "institutionId": "nz-kea",
+    "name": "Baldwin Street",
+    "type": "landmark",
+    "distanceMinutes": 16,
+    "description": "The steepest street in the world",
+    "image": "https://picsum.photos/seed/nz-kea-a2/400/300"
+  },
+  {
+    "id": "nz-kea-a4",
+    "institutionId": "nz-kea",
+    "name": "George Street",
+    "type": "shopping",
+    "distanceMinutes": 9,
+    "description": "Student-town main street",
+    "image": "https://picsum.photos/seed/nz-kea-a3/400/300"
+  },
+  {
+    "id": "nz-kea-a5",
+    "institutionId": "nz-kea",
+    "name": "Forsyth Barr Stadium",
+    "type": "sports",
+    "distanceMinutes": 9,
+    "description": "The glasshouse of southern rugby",
+    "image": "https://picsum.photos/seed/nz-kea-a4/400/300"
+  },
+  {
+    "id": "ru-tverskaya-a1",
+    "institutionId": "ru-tverskaya",
+    "name": "Red Square",
+    "type": "landmark",
+    "distanceMinutes": 11,
+    "description": "St Basil's domes and the Kremlin walls",
+    "image": "https://picsum.photos/seed/ru-tverskaya-a0/400/300"
+  },
+  {
+    "id": "ru-tverskaya-a2",
+    "institutionId": "ru-tverskaya",
+    "name": "Gorky Park",
+    "type": "nature",
+    "distanceMinutes": 21,
+    "description": "Skates in winter, lawns in summer",
+    "image": "https://picsum.photos/seed/ru-tverskaya-a1/400/300"
+  },
+  {
+    "id": "ru-tverskaya-a3",
+    "institutionId": "ru-tverskaya",
+    "name": "GUM",
+    "type": "shopping",
+    "distanceMinutes": 18,
+    "description": "Tsarist-era gallery of shops and ice cream",
+    "image": "https://picsum.photos/seed/ru-tverskaya-a2/400/300"
+  },
+  {
+    "id": "ru-tverskaya-a4",
+    "institutionId": "ru-tverskaya",
+    "name": "Arbat Street",
+    "type": "food",
+    "distanceMinutes": 9,
+    "description": "Pedestrian street of cafés and buskers",
+    "image": "https://picsum.photos/seed/ru-tverskaya-a3/400/300"
+  },
+  {
+    "id": "ru-tverskaya-a5",
+    "institutionId": "ru-tverskaya",
+    "name": "Vorobyovy Gory",
+    "type": "nature",
+    "distanceMinutes": 24,
+    "description": "Sparrow Hills viewpoint over the city",
+    "image": "https://picsum.photos/seed/ru-tverskaya-a4/400/300"
+  },
+  {
+    "id": "ru-neva-a1",
+    "institutionId": "ru-neva",
+    "name": "The Hermitage",
+    "type": "landmark",
+    "distanceMinutes": 13,
+    "description": "Three million artworks in the Winter Palace",
+    "image": "https://picsum.photos/seed/ru-neva-a0/400/300"
+  },
+  {
+    "id": "ru-neva-a2",
+    "institutionId": "ru-neva",
+    "name": "Nevsky Prospekt",
+    "type": "shopping",
+    "distanceMinutes": 13,
+    "description": "The grand avenue of the city",
+    "image": "https://picsum.photos/seed/ru-neva-a1/400/300"
+  },
+  {
+    "id": "ru-neva-a3",
+    "institutionId": "ru-neva",
+    "name": "Summer Garden",
+    "type": "nature",
+    "distanceMinutes": 15,
+    "description": "Marble statues and fountain alleys",
+    "image": "https://picsum.photos/seed/ru-neva-a2/400/300"
+  },
+  {
+    "id": "ru-neva-a4",
+    "institutionId": "ru-neva",
+    "name": "Rubinstein Street",
+    "type": "food",
+    "distanceMinutes": 14,
+    "description": "Bar-and-bistro street of the city",
+    "image": "https://picsum.photos/seed/ru-neva-a3/400/300"
+  },
+  {
+    "id": "ru-neva-a5",
+    "institutionId": "ru-neva",
+    "name": "New Holland Island",
+    "type": "nature",
+    "distanceMinutes": 16,
+    "description": "Island park with pop-ups and lawns",
+    "image": "https://picsum.photos/seed/ru-neva-a4/400/300"
+  },
+  {
+    "id": "ru-volga-a1",
+    "institutionId": "ru-volga",
+    "name": "Kazan Kremlin",
+    "type": "landmark",
+    "distanceMinutes": 13,
+    "description": "White-walled fortress with a turquoise mosque",
+    "image": "https://picsum.photos/seed/ru-volga-a0/400/300"
+  },
+  {
+    "id": "ru-volga-a2",
+    "institutionId": "ru-volga",
+    "name": "Bauman Street",
+    "type": "food",
+    "distanceMinutes": 4,
+    "description": "Pedestrian mile of chak-chak and cafés",
+    "image": "https://picsum.photos/seed/ru-volga-a1/400/300"
+  },
+  {
+    "id": "ru-volga-a3",
+    "institutionId": "ru-volga",
+    "name": "Kaban Lake",
+    "type": "nature",
+    "distanceMinutes": 7,
+    "description": "Boardwalk embankment downtown",
+    "image": "https://picsum.photos/seed/ru-volga-a2/400/300"
+  },
+  {
+    "id": "ru-volga-a4",
+    "institutionId": "ru-volga",
+    "name": "Koltso Mall",
+    "type": "shopping",
+    "distanceMinutes": 4,
+    "description": "Central mall on the ring",
+    "image": "https://picsum.photos/seed/ru-volga-a3/400/300"
+  },
+  {
+    "id": "ru-volga-a5",
+    "institutionId": "ru-volga",
+    "name": "Kazan Arena",
+    "type": "sports",
+    "distanceMinutes": 20,
+    "description": "World-Cup stadium on the river",
+    "image": "https://picsum.photos/seed/ru-volga-a4/400/300"
+  },
+  {
+    "id": "ru-novayasibir-a1",
+    "institutionId": "ru-novayasibir",
+    "name": "Opera & Ballet Theatre",
+    "type": "landmark",
+    "distanceMinutes": 12,
+    "description": "The largest theatre building in Russia",
+    "image": "https://picsum.photos/seed/ru-novayasibir-a0/400/300"
+  },
+  {
+    "id": "ru-novayasibir-a2",
+    "institutionId": "ru-novayasibir",
+    "name": "Ob River Embankment",
+    "type": "nature",
+    "distanceMinutes": 18,
+    "description": "Sunset walks along Siberia's great river",
+    "image": "https://picsum.photos/seed/ru-novayasibir-a1/400/300"
+  },
+  {
+    "id": "ru-novayasibir-a3",
+    "institutionId": "ru-novayasibir",
+    "name": "Central Park",
+    "type": "nature",
+    "distanceMinutes": 15,
+    "description": "Ferris wheel and winter ice town",
+    "image": "https://picsum.photos/seed/ru-novayasibir-a2/400/300"
+  },
+  {
+    "id": "ru-novayasibir-a4",
+    "institutionId": "ru-novayasibir",
+    "name": "Aura Mall",
+    "type": "shopping",
+    "distanceMinutes": 15,
+    "description": "Warm refuge with 200 stores",
+    "image": "https://picsum.photos/seed/ru-novayasibir-a3/400/300"
+  },
+  {
+    "id": "ru-novayasibir-a5",
+    "institutionId": "ru-novayasibir",
+    "name": "Akademgorodok",
+    "type": "landmark",
+    "distanceMinutes": 31,
+    "description": "The famous forest science city",
+    "image": "https://picsum.photos/seed/ru-novayasibir-a4/400/300"
+  }
+]
