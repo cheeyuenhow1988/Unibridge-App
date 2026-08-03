@@ -4,13 +4,63 @@ import type { CurrencyCode, FxTable, HomeCountryCode } from '@/types/models';
 
 const fx = fxData as FxTable;
 
-export function convert(amount: number, from: CurrencyCode, to: CurrencyCode): number {
-  if (from === to) return amount;
-  return (amount / fx.rates[from]) * fx.rates[to];
+// Session FX table: starts from the bundled snapshot, upgraded once at launch
+// by initLiveRates(). All conversions in the app read from here.
+let rates: Record<CurrencyCode, number> = { ...fx.rates };
+let ratesSource: 'static' | 'live' = 'static';
+let ratesAsOf = fx.asOf;
+
+export function getRatesMeta(): { source: 'static' | 'live'; asOf: string } {
+  return { source: ratesSource, asOf: ratesAsOf };
 }
 
-export function homeCurrencyFor(homeCountry: HomeCountryCode): CurrencyCode {
-  return HOME_CURRENCY[homeCountry];
+/**
+ * Fetch real-time rates (free, keyless, CORS-open feed). xe.com has no free
+ * API — swap FEED_URL for xe's when a paid key exists; the shape below stays.
+ * Falls back silently to the bundled table when offline or blocked.
+ */
+const FEED_URL = 'https://open.er-api.com/v6/latest/USD';
+
+export async function initLiveRates(timeoutMs = 2500): Promise<void> {
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    const res = await fetch(FEED_URL, { signal: controller.signal });
+    clearTimeout(timer);
+    const json = (await res.json()) as { result?: string; rates?: Record<string, number>; time_last_update_utc?: string };
+    if (json.result === 'success' && json.rates) {
+      const next = { ...rates };
+      let updated = 0;
+      (Object.keys(rates) as CurrencyCode[]).forEach((c) => {
+        const v = json.rates?.[c];
+        if (typeof v === 'number' && Number.isFinite(v) && v > 0) {
+          next[c] = v;
+          updated += 1;
+        }
+      });
+      if (updated >= 5) {
+        rates = next;
+        ratesSource = 'live';
+        ratesAsOf = json.time_last_update_utc
+          ? new Date(json.time_last_update_utc).toISOString().slice(0, 10)
+          : ratesAsOf;
+      }
+    }
+  } catch {
+    // offline / blocked → bundled snapshot stays in effect
+  }
+}
+
+export const ALL_CURRENCIES = Object.keys(fx.rates) as CurrencyCode[];
+
+export function convert(amount: number, from: CurrencyCode, to: CurrencyCode): number {
+  if (from === to) return amount;
+  return (amount / rates[from]) * rates[to];
+}
+
+/** The student's display currency: explicit choice first, else home country's. */
+export function homeCurrencyFor(profile: { homeCountry: HomeCountryCode; currency?: CurrencyCode }): CurrencyCode {
+  return profile.currency ?? HOME_CURRENCY[profile.homeCountry];
 }
 
 function groupDigits(n: number): string {

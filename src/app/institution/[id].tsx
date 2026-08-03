@@ -17,6 +17,7 @@ import { FLAGS } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
+import { useWikiImage } from '@/hooks/useWikiImage';
 import { getInstitution, listCoursesByInstitution } from '@/services/api';
 import { formatDual, homeCurrencyFor } from '@/services/currency';
 import { useProfileStore } from '@/store/useProfileStore';
@@ -27,12 +28,13 @@ export default function InstitutionDetail() {
   const { colors } = useTheme();
   const { width } = useWindowDimensions();
   const profile = useProfileStore((s) => s.profile);
-  const home = profile ? homeCurrencyFor(profile.homeCountry) : 'USD';
+  const home = profile ? homeCurrencyFor(profile) : 'USD';
 
   const state = useAsync(
     async () => Promise.all([getInstitution(id), listCoursesByInstitution(id)]),
     [id],
   );
+  const wikiImage = useWikiImage(state.data?.[0]?.wikipedia ?? '');
 
   if (state.loading) {
     return (
@@ -56,7 +58,7 @@ export default function InstitutionDetail() {
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: spacing.xxxl }}>
         <View>
           <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false}>
-            {institution.images.map((img) => (
+            {(wikiImage ? [wikiImage, ...institution.images.slice(1)] : institution.images).map((img) => (
               <Image key={img} source={{ uri: img }} style={{ width, height: 240 }} contentFit="cover" transition={250} />
             ))}
           </ScrollView>
@@ -75,18 +77,36 @@ export default function InstitutionDetail() {
 
         <View style={{ padding: spacing.lg, gap: spacing.lg }}>
           <View style={{ gap: spacing.sm }}>
-            {institution.verifiedPartner ? (
-              <Badge tone="verified" icon="shield-checkmark" label={t('common.verifiedPartner')} />
-            ) : null}
-            <Text variant="title">{institution.name}</Text>
+            <Row gap={spacing.sm} wrap>
+              {institution.verifiedPartner ? (
+                <Badge tone="verified" icon="shield-checkmark" label={t('common.verifiedPartner')} />
+              ) : null}
+              {institution.ranking ? (
+                <Badge tone="accent" icon="podium-outline" label={t('institution.rankingShort', { rank: institution.ranking })} />
+              ) : null}
+            </Row>
+            <Row gap={spacing.md}>
+              <Image
+                source={{ uri: institution.logo }}
+                style={{ width: 44, height: 44, borderRadius: 10, backgroundColor: '#FFFFFF' }}
+                contentFit="contain"
+              />
+              <Text variant="title" style={{ flex: 1 }}>{institution.name}</Text>
+            </Row>
             <Text variant="body" tone="secondary">{institution.tagline}</Text>
             <Text variant="caption" tone="faint">
               {FLAGS[institution.country]}  {t('institution.cityCountry', { city: institution.city, country: t(`countries.${institution.country}`) })} · {t(`instTypes.${institution.type}`)}
             </Text>
-            <Row gap={spacing.lg}>
+            <Row gap={spacing.lg} wrap>
               <Text variant="caption" tone="secondary">{t('institution.founded', { year: institution.founded })}</Text>
               <Text variant="caption" tone="secondary">
                 {t('institution.students', { count: institution.students.toLocaleString('en') })}
+              </Text>
+            </Row>
+            <Row gap={6}>
+              <Ionicons name="language-outline" size={14} color={colors.accent} />
+              <Text variant="caption" tone="secondary">
+                {t('institution.teachingLanguage')}: {institution.languages.join(' · ')}
               </Text>
             </Row>
           </View>

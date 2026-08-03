@@ -135,17 +135,17 @@ const TUITION = {
 };
 
 const COURSE_NAMES = {
-  business: ['Bachelor of Business Administration', 'Bachelor of Commerce (Finance)', 'Bachelor of International Business', 'Bachelor of Accounting', 'Bachelor of Marketing'],
-  engineering: ['Bachelor of Engineering (Civil)', 'Bachelor of Engineering (Mechanical)', 'Bachelor of Engineering (Electrical)', 'Bachelor of Engineering (Mechatronics)', 'Bachelor of Engineering (Chemical)'],
-  it: ['Bachelor of Computer Science', 'Bachelor of Software Engineering', 'Bachelor of IT (Data Analytics)', 'Bachelor of Cybersecurity', 'Bachelor of Artificial Intelligence'],
-  health: ['Bachelor of Nursing', 'Bachelor of Medicine, Bachelor of Surgery (MBBS)', 'Bachelor of Pharmacy', 'Bachelor of Biomedical Science', 'Bachelor of Physiotherapy'],
-  hospitality: ['Bachelor of Hospitality Management', 'Bachelor of Culinary Arts Management', 'Bachelor of Tourism & Event Management'],
-  design: ['Bachelor of Design (Visual Communication)', 'Bachelor of Interior Architecture', 'Bachelor of Fashion Design', 'Bachelor of Digital Media Design'],
-  law: ['Bachelor of Laws (LLB)', 'Bachelor of Criminology & Justice', 'Bachelor of Legal Studies'],
-  science: ['Bachelor of Science (Mathematics & Statistics)', 'Bachelor of Environmental Science', 'Bachelor of Science (Physics)', 'Bachelor of Data Science'],
-  media: ['Bachelor of Communication & Media', 'Bachelor of Journalism', 'Bachelor of Film & Television'],
-  architecture: ['Bachelor of Architecture', 'Bachelor of Urban & Regional Planning'],
-  education: ['Bachelor of Education (Primary)', 'Bachelor of Early Childhood Education'],
+  business: ['Bachelor of Business Administration', 'Bachelor of Commerce (Finance)', 'Bachelor of International Business', 'Bachelor of Accounting', 'Bachelor of Marketing', 'Bachelor of Human Resource Management', 'Bachelor of Banking & Finance', 'Bachelor of Supply Chain & Logistics', 'Bachelor of Entrepreneurship', 'Bachelor of Economics'],
+  engineering: ['Bachelor of Engineering (Civil)', 'Bachelor of Engineering (Mechanical)', 'Bachelor of Engineering (Electrical)', 'Bachelor of Engineering (Mechatronics)', 'Bachelor of Engineering (Chemical)', 'Bachelor of Engineering (Aerospace)', 'Bachelor of Engineering (Biomedical)', 'Bachelor of Engineering (Environmental)'],
+  it: ['Bachelor of Computer Science', 'Bachelor of Software Engineering', 'Bachelor of IT (Data Analytics)', 'Bachelor of Cybersecurity', 'Bachelor of Artificial Intelligence', 'Bachelor of Game Development', 'Bachelor of Information Systems', 'Bachelor of Networking & Cloud Computing'],
+  health: ['Bachelor of Nursing', 'Bachelor of Medicine, Bachelor of Surgery (MBBS)', 'Bachelor of Pharmacy', 'Bachelor of Biomedical Science', 'Bachelor of Physiotherapy', 'Bachelor of Psychology', 'Bachelor of Nutrition & Dietetics', 'Bachelor of Dental Surgery'],
+  hospitality: ['Bachelor of Hospitality Management', 'Bachelor of Culinary Arts Management', 'Bachelor of Tourism & Event Management', 'Bachelor of International Hotel & Resort Management', 'Bachelor of Aviation Management'],
+  design: ['Bachelor of Design (Visual Communication)', 'Bachelor of Interior Architecture', 'Bachelor of Fashion Design', 'Bachelor of Digital Media Design', 'Bachelor of Graphic Design', 'Bachelor of Industrial & Product Design', 'Bachelor of Animation & Visual Effects'],
+  law: ['Bachelor of Laws (LLB)', 'Bachelor of Criminology & Justice', 'Bachelor of Legal Studies', 'Bachelor of Commercial Law'],
+  science: ['Bachelor of Science (Mathematics & Statistics)', 'Bachelor of Environmental Science', 'Bachelor of Science (Physics)', 'Bachelor of Data Science', 'Bachelor of Biotechnology', 'Bachelor of Actuarial Science', 'Bachelor of Chemistry'],
+  media: ['Bachelor of Communication & Media', 'Bachelor of Journalism', 'Bachelor of Film & Television', 'Bachelor of Advertising & Brand Management', 'Bachelor of Public Relations', 'Bachelor of Broadcasting & Digital Media'],
+  architecture: ['Bachelor of Architecture', 'Bachelor of Urban & Regional Planning', 'Bachelor of Quantity Surveying', 'Bachelor of Construction Management'],
+  education: ['Bachelor of Education (Primary)', 'Bachelor of Early Childhood Education', 'Bachelor of Education (TESL)', 'Bachelor of Sports Science & Physical Education', 'Bachelor of Special Education'],
 };
 const PATHWAY_NAMES = {
   foundation: { business: 'Foundation in Business', it: 'Foundation in Computing', engineering: 'Foundation in Engineering & Science', design: 'Foundation in Art & Design', health: 'Foundation in Health Science', law: 'Foundation in Law & Social Science' },
@@ -277,10 +277,75 @@ const CITY_ATTRACTIONS = {
   Novosibirsk: [['Opera & Ballet Theatre', 'landmark', 10, 'The largest theatre building in Russia'], ['Ob River Embankment', 'nature', 15, "Sunset walks along Siberia's great river"], ['Central Park', 'nature', 10, 'Ferris wheel and winter ice town'], ['Aura Mall', 'shopping', 12, 'Warm refuge with 200 stores'], ['Akademgorodok', 'landmark', 30, 'The famous forest science city']],
 };
 
+// City knowledge for the in-app assistant: [climate, safety]. Indicative,
+// general-knowledge summaries — not live data.
+const CITY_INFO = {
+  Sydney: ['Warm summers 19–27°C, mild winters 8–17°C; beach weather Oct–Apr.', 'Very safe overall; usual big-city awareness late at night around nightlife strips.'],
+  Melbourne: ['Famous "four seasons in a day": summers 14–26°C, winters 6–14°C; pack layers.', 'Very safe and walkable; keep an eye on belongings on late-night trams.'],
+  Brisbane: ['Subtropical: hot humid summers 21–30°C, dry mild winters 10–22°C.', 'Relaxed and safe; sun protection matters more than street crime.'],
+  Perth: ['Sunniest capital: dry hot summers 18–32°C, mild wet winters 8–19°C.', 'Low crime; standard care in the CBD late at night.'],
+  'Kuala Lumpur': ['Hot and humid year-round 24–33°C with afternoon downpours; everything is air-conditioned.', 'Generally safe; watch for bag-snatching on quiet roadsides, use Grab at night.'],
+  Penang: ['Tropical 24–32°C all year; sea breeze evenings, monsoon showers Sep–Nov.', 'Laid-back and safe; usual scooter-traffic caution.'],
+  Cyberjaya: ['Hot and humid 24–33°C; planned green township with lake breezes.', 'Quiet, planned and safe; very low street crime.'],
+  'Johor Bahru': ['Tropical 24–32°C year-round with quick storms.', 'Fine in main areas; keep phones off the roadside kerb and use Grab late.'],
+  Taipei: ['Humid subtropical: muggy summers 26–34°C, damp cool winters 13–18°C; typhoon season Jul–Sep.', 'Among the safest cities in Asia; lost wallets famously come back.'],
+  Hsinchu: ['Windy city: warm summers, mild winters 12–18°C; less rain than Taipei.', 'Very safe science-park town.'],
+  Taichung: ['Mildest big-city climate in Taiwan, 16–30°C, less rain.', 'Very safe; usual scooter awareness.'],
+  Kaohsiung: ['Tropical harbour city 20–32°C; warm even in winter.', 'Safe and friendly; typhoon prep matters more than crime.'],
+  London: ['Mild and grey: summers 14–23°C, winters 3–9°C; light rain anytime.', 'Safe for a mega-city; watch phones near road edges and on the Tube late.'],
+  Manchester: ['Cool and famously drizzly: summers 12–20°C, winters 2–8°C.', 'Student-friendly; standard UK city-centre awareness at night.'],
+  Edinburgh: ['Cool and breezy: summers 11–19°C, winters 1–7°C; bring a windproof coat.', "One of the UK's safest cities."],
+  Birmingham: ['Similar to London but cooler: summers 13–21°C, winters 2–8°C.', 'Fine in the centre and campus areas; usual night-time care.'],
+  Leeds: ['Cool Yorkshire weather: summers 12–20°C, winters 1–7°C.', 'Big student city; stick to lit routes after nights out.'],
+  Singapore: ['Hot and humid 25–32°C every single day; daily short downpours.', 'One of the safest cities in the world, day or night.'],
+  Auckland: ['Oceanic: summers 15–24°C, mild winters 8–15°C; four seasons in a day.', 'Safe and easy-going; standard CBD late-night awareness.'],
+  Wellington: ['Windy capital: summers 13–20°C, winters 6–12°C.', 'Compact and safe; the wind is the biggest hazard.'],
+  Christchurch: ['Dry and sunny: summers 12–23°C, crisp winters 2–12°C.', 'Safe, flat, cycle-friendly.'],
+  Dunedin: ['Coolest of the four: summers 10–19°C, winters 2–10°C; flats can be cold — check heating.', 'Small, safe student city.'],
+  Moscow: ['Real winters: −10 to −4°C Dec–Feb with snow; pleasant summers 14–24°C.', 'Central areas are orderly and well-policed; carry your documents.'],
+  'Saint Petersburg': ['White nights in June; winters −8 to −2°C, summers 13–23°C.', 'Tourist centre is safe; standard care in transit hubs late.'],
+  Kazan: ['Continental: snowy winters −12 to −5°C, warm summers 15–25°C.', 'Calm, student-heavy city.'],
+  Novosibirsk: ['Siberian: winters −20 to −12°C (dress seriously), summers 15–26°C.', 'Safe university districts; winter cold is the main risk.'],
+};
+
 // ---------------------------------------------------------------- build data
+// Language of instruction by country; public Malaysian universities also
+// teach in Malay, Chinese-medium contexts noted where relevant.
+const TEACHING_LANGUAGES = {
+  AU: ['English'], GB: ['English'], NZ: ['English'], SG: ['English'],
+  MY: ['English'], TW: ['Mandarin', 'English'], RU: ['Russian', 'English'],
+};
+const MY_MALAY_ALSO = new Set(['my-um', 'my-usm', 'my-utm']);
+
+// Wikipedia page title (for live campus imagery) + indicative QS-style world
+// ranking (approximate recent values; null = not ranked).
+const INST_META = {
+  'au-monash': ['Monash University', 37], 'au-sydney': ['University of Sydney', 18],
+  'au-uq': ['University of Queensland', 40], 'au-unsw': ['University of New South Wales', 19],
+  'au-unimelb': ['University of Melbourne', 13], 'au-rmit': ['RMIT University', 123],
+  'my-um': ['University of Malaya', 60], 'my-taylors': ["Taylor's University", 251],
+  'my-sunway': ['Sunway University', 539], 'my-mmu': ['Multimedia University', null],
+  'my-usm': ['Universiti Sains Malaysia', 146], 'my-utm': ['Universiti Teknologi Malaysia', 181],
+  'tw-ntu': ['National Taiwan University', 68], 'tw-nthu': ['National Tsing Hua University', 210],
+  'tw-fcu': ['Feng Chia University', null], 'tw-nsysu': ['National Sun Yat-sen University', 427],
+  'gb-manchester': ['University of Manchester', 34], 'gb-leeds': ['University of Leeds', 82],
+  'gb-birmingham': ['University of Birmingham', 80], 'gb-ucl': ['University College London', 9],
+  'gb-kcl': ["King's College London", 40], 'gb-edinburgh': ['University of Edinburgh', 27],
+  'sg-nus': ['National University of Singapore', 8], 'sg-ntusg': ['Nanyang Technological University', 15],
+  'sg-smu': ['Singapore Management University', 511], 'sg-sim': ['Singapore Institute of Management', null],
+  'nz-auckland': ['University of Auckland', 65], 'nz-vuw': ['Victoria University of Wellington', 244],
+  'nz-canterbury': ['University of Canterbury', 261], 'nz-otago': ['University of Otago', 214],
+  'ru-msu': ['Moscow State University', 94], 'ru-itmo': ['ITMO University', 360],
+  'ru-kfu': ['Kazan Federal University', 396], 'ru-nsu': ['Novosibirsk State University', 225],
+};
+
 const institutions = INSTITUTIONS.map(([id, name, short, country, city, type, verified, tagline, founded, students, website]) => ({
   id, name, short, country, city, type,
   verifiedPartner: verified, tagline, founded, students, website,
+  languages: MY_MALAY_ALSO.has(id) ? ['English', 'Bahasa Melayu'] : TEACHING_LANGUAGES[country],
+  logo: `https://logo.clearbit.com/${new URL(website).hostname.replace(/^www\./, '')}`,
+  wikipedia: INST_META[id][0],
+  ranking: INST_META[id][1],
   images: [0, 1, 2].map((n) => `https://picsum.photos/seed/${id}-${n}/800/500`),
 }));
 
@@ -318,10 +383,33 @@ function recognitionFor(field, isMed, dest) {
 }
 
 const courses = [];
-for (const row of INSTITUTIONS) {
+for (const [rowIndex, row] of INSTITUTIONS.entries()) {
   const [instId, , , country, city] = row;
-  const specs = row[11];
+  const explicit = row[11];
   const c = COUNTRIES[country];
+
+  // Densify each institution's catalogue with extra specializations: for the
+  // first two bachelor fields it teaches, add the next unused programme name
+  // (never auto-adding MBBS — medicine only exists where explicitly placed).
+  const specs = [...explicit];
+  const seenFields = [];
+  for (const [field, , level, band] of explicit) {
+    if (level !== 'b' || seenFields.includes(field)) continue;
+    seenFields.push(field);
+    const used = new Set(explicit.filter(([f, , l]) => f === field && l === 'b').map(([, i]) => i));
+    const names = COURSE_NAMES[field];
+    let added = 0;
+    // Offset by institution so different universities surface different
+    // specializations (HR at one, Banking at the next, …).
+    for (let k = 0; k < names.length && added < 2; k += 1) {
+      const idx = (rowIndex + k) % names.length;
+      if (used.has(idx)) continue;
+      if (field === 'health' && idx === 1) continue;
+      specs.push([field, idx, 'b', Math.max(1, band)]);
+      used.add(idx);
+      added += 1;
+    }
+  }
   specs.forEach(([field, nameIdx, levelCode, band], i) => {
     const level = levelCode === 'b' ? 'bachelor' : levelCode === 'f' ? 'foundation' : 'diploma';
     const isMed = level === 'bachelor' && field === 'health' && nameIdx === 1;
@@ -366,6 +454,13 @@ for (const row of INSTITUTIONS) {
     });
   });
 }
+
+const cityInfo = Object.entries(CITY_INFO).map(([city, [climate, safety]]) => ({
+  city,
+  country: CITY_COL[city][0],
+  climate,
+  safety,
+}));
 
 const costOfLiving = Object.entries(CITY_COL).map(([city, [country, rent, food, transport]]) => ({
   city, country, currency: COUNTRIES[country].currency,
@@ -651,6 +746,7 @@ const files = {
   'qualifications.json': QUALIFICATIONS,
   'fx.json': FX,
   'costOfLiving.json': costOfLiving,
+  'cityInfo.json': cityInfo,
   'scholarships.json': scholarships,
   'attractions.json': attractions,
   'ambassadors.json': ambassadors,

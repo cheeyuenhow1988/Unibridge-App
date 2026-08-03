@@ -33,6 +33,14 @@ export interface Institution {
   verifiedPartner: boolean;
   tagline: string;
   website: string;
+  /** Languages of instruction, e.g. ["Mandarin", "English"]. */
+  languages: string[];
+  /** Official-domain logo (Clearbit logo service). */
+  logo: string;
+  /** Wikipedia page title, used to fetch a real campus photo at runtime. */
+  wikipedia: string;
+  /** Indicative QS-style world ranking; null when unranked. */
+  ranking: number | null;
   founded: number;
   students: number;
   images: string[];
@@ -105,6 +113,13 @@ export interface FxTable {
   base: 'USD';
   asOf: string;
   rates: Record<CurrencyCode, number>;
+}
+
+export interface CityInfo {
+  city: string;
+  country: CountryCode;
+  climate: string;
+  safety: string;
 }
 
 export interface CostOfLiving {
@@ -240,6 +255,8 @@ export interface StudentProfile {
   intakeYear: number;
   grades: GradesInput;
   english: { test: EnglishTest; score?: number };
+  /** Explicit display currency; defaults to the home country's currency. */
+  currency?: CurrencyCode;
 }
 
 export type ApplicationStatus =

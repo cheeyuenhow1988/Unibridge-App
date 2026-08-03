@@ -68,7 +68,7 @@ export default function CompareScreen() {
     return new Map(instIds.map((id, i) => [id, all[i]!.sort((a, b) => a.distanceMinutes - b.distanceMinutes).slice(0, 3)]));
   }, [columns.map((c) => c.result.course.id).join(',')]);
 
-  const home = profile ? homeCurrencyFor(profile.homeCountry) : 'USD';
+  const home = profile ? homeCurrencyFor(profile) : 'USD';
   const cheapestId = useMemo(() => {
     if (columns.length === 0) return null;
     return columns.reduce((min, c) =>

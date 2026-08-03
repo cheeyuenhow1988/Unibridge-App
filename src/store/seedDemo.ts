@@ -1,5 +1,6 @@
 import { getDemoSeed } from '@/services/api';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
+import { useAuthStore } from '@/store/useAuthStore';
 import { useCommunityStore } from '@/store/useCommunityStore';
 import { useProfileStore } from '@/store/useProfileStore';
 import { useSavedStore } from '@/store/useSavedStore';
@@ -10,6 +11,7 @@ import { useSavedStore } from '@/store/useSavedStore';
  */
 export async function loadDemoProfile(): Promise<void> {
   const seed = await getDemoSeed();
+  useAuthStore.getState().signIn({ name: seed.profile.name, email: 'aisyah@demo.unibridge.app', provider: 'google' });
   useProfileStore.getState().setProfile(seed.profile);
   useProfileStore.getState().completeOnboarding();
   useSavedStore.getState().setSaved(seed.savedCourseIds);

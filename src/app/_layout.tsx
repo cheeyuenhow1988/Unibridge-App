@@ -6,10 +6,11 @@ import {
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Platform, View } from 'react-native';
 import { ToastHost } from '@/components/ui/Toast';
 import { useTheme } from '@/hooks/useTheme';
+import { initLiveRates } from '@/services/currency';
 import { useProfileStore } from '@/store/useProfileStore';
 
 void SplashScreen.preventAutoHideAsync();
@@ -26,7 +27,13 @@ export default function RootLayout() {
     Manrope_800ExtraBold,
   });
 
-  const ready = fontsLoaded && hydrated;
+  // Upgrade the bundled FX snapshot to live rates before first paint (2.5s cap).
+  const [fxReady, setFxReady] = useState(false);
+  useEffect(() => {
+    void initLiveRates().finally(() => setFxReady(true));
+  }, []);
+
+  const ready = fontsLoaded && hydrated && fxReady;
   useEffect(() => {
     if (ready) void SplashScreen.hideAsync();
   }, [ready]);

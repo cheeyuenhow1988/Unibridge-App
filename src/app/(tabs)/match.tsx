@@ -38,7 +38,7 @@ export default function MatchScreen() {
   const listRef = useRef<FlatList>(null);
   const scrollTop = () => listRef.current?.scrollToOffset({ offset: 0, animated: false });
 
-  const homeCurrency = profile ? homeCurrencyFor(profile.homeCountry) : 'USD';
+  const homeCurrency = profile ? homeCurrencyFor(profile) : 'USD';
   const homeCountryLabel = profile ? t(`countries.${profile.homeCountry}`) : '';
 
   const filtered = useMemo(() => {
@@ -119,6 +119,24 @@ export default function MatchScreen() {
         ListHeaderComponent={
           <View style={{ gap: spacing.lg, paddingTop: spacing.xl, paddingBottom: spacing.lg }}>
             <MatchHero profile={profile} results={matchData.results} matchedCount={filtered.length} />
+
+            <Pressable
+              accessibilityRole="button"
+              onPress={() => router.push('/assistant')}
+              style={({ pressed }) => ({
+                flexDirection: 'row', alignItems: 'center', gap: spacing.md,
+                backgroundColor: colors.accentSoft, borderRadius: radius.lg,
+                paddingHorizontal: spacing.lg, paddingVertical: spacing.md,
+                opacity: pressed ? 0.85 : 1,
+              })}
+            >
+              <Ionicons name="sparkles" size={18} color={colors.accent} />
+              <View style={{ flex: 1 }}>
+                <Text variant="label" tone="accent">{t('assistant.entry')}</Text>
+                <Text variant="caption" tone="secondary">{t('assistant.entrySub')}</Text>
+              </View>
+              <Ionicons name="chevron-forward" size={16} color={colors.accent} />
+            </Pressable>
 
             <Row gap={spacing.sm}>
               {BUCKETS.map(({ key, icon }) => {

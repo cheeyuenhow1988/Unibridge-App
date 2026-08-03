@@ -6,6 +6,7 @@
 import institutionsData from '@/data/institutions.json';
 import coursesData from '@/data/courses.json';
 import qualificationsData from '@/data/qualifications.json';
+import cityInfoData from '@/data/cityInfo.json';
 import costOfLivingData from '@/data/costOfLiving.json';
 import scholarshipsData from '@/data/scholarships.json';
 import attractionsData from '@/data/attractions.json';
@@ -15,7 +16,7 @@ import predepartureData from '@/data/predeparture.json';
 import documentsData from '@/data/documents.json';
 import seedData from '@/data/seed.json';
 import type {
-  Ambassador, Application, Attraction, CommunityEvent, CostOfLiving, CountryCode, Course,
+  Ambassador, Application, Attraction, CityInfo, CommunityEvent, CostOfLiving, CountryCode, Course,
   Coursemate, DocumentTypeId, GroupMessage, Institution, IntakeGroup, PredepartureItem,
   QualificationSystem, Scholarship, StudentProfile, WorkRights,
 } from '@/types/models';
@@ -72,6 +73,10 @@ export async function listCostOfLiving(): Promise<CostOfLiving[]> {
 
 export async function getCostOfLiving(city: string): Promise<CostOfLiving | undefined> {
   return simulate(costOfLiving.find((c) => c.city === city), 150);
+}
+
+export async function listCityInfo(): Promise<CityInfo[]> {
+  return simulate(cityInfoData as CityInfo[], 150);
 }
 
 export async function listScholarships(): Promise<Scholarship[]> {

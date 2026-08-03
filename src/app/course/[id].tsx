@@ -46,7 +46,7 @@ export default function CourseDetail() {
   };
 
   const result = matchData?.resultByCourseId.get(id);
-  const home = profile ? homeCurrencyFor(profile.homeCountry) : 'USD';
+  const home = profile ? homeCurrencyFor(profile) : 'USD';
   const col = result ? matchData?.colByCity.get(result.course.campusCity) : undefined;
   const costs = result && col ? costBreakdown(result.course, col) : null;
   const pathways =

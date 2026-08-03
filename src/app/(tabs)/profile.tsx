@@ -1,21 +1,26 @@
 import { Ionicons } from '@expo/vector-icons';
+import { Image } from 'expo-image';
+import * as ImagePicker from 'expo-image-picker';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { Alert, ScrollView, View } from 'react-native';
+import { Alert, Pressable, ScrollView, View } from 'react-native';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { Chip } from '@/components/ui/Chip';
+import { PickerField } from '@/components/ui/PickerField';
 import { Row, SectionHeader } from '@/components/ui/Misc';
 import { Screen } from '@/components/ui/Screen';
 import { Text } from '@/components/ui/Text';
-import { FLAGS } from '@/constants/countries';
+import { CURRENCY_SYMBOL, FLAGS } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
 import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
-import { formatDual, homeCurrencyFor } from '@/services/currency';
+import { ALL_CURRENCIES, formatDual, getRatesMeta, homeCurrencyFor } from '@/services/currency';
 import { loadDemoProfile } from '@/store/seedDemo';
+import type { CurrencyCode } from '@/types/models';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
+import { useAuthStore } from '@/store/useAuthStore';
 import { useCommunityStore } from '@/store/useCommunityStore';
 import { useProfileStore } from '@/store/useProfileStore';
 import { useSavedStore } from '@/store/useSavedStore';
@@ -28,13 +33,18 @@ export default function ProfileScreen() {
   const setThemePref = useProfileStore((s) => s.setThemePref);
   const language = useProfileStore((s) => s.language);
   const setLanguage = useProfileStore((s) => s.setLanguage);
+  const account = useAuthStore((s) => s.account);
+  const signOut = useAuthStore((s) => s.signOut);
+  const avatarUri = useProfileStore((s) => s.avatarUri);
+  const setAvatar = useProfileStore((s) => s.setAvatar);
+  const patchProfile = useProfileStore((s) => s.patchProfile);
   const resetProfile = useProfileStore((s) => s.reset);
   const savedCourseIds = useSavedStore((s) => s.savedCourseIds);
   const { matchData } = useMatchData();
 
   if (!profile) return <Screen />;
 
-  const home = homeCurrencyFor(profile.homeCountry);
+  const home = homeCurrencyFor(profile);
   const initials = profile.name
     .split(' ')
     .map((w) => w[0])
@@ -54,9 +64,11 @@ export default function ProfileScreen() {
         style: 'destructive',
         onPress: () => {
           resetProfile();
+          setAvatar(null);
+          signOut();
           useSavedStore.setState({ savedCourseIds: [], savedScholarshipIds: [], compareIds: [] });
           useApplicationsStore.setState({ applications: [], notifications: [] });
-          useCommunityStore.setState({ joinedGroupIds: [], localMessages: {}, connections: [], rsvps: [] });
+          useCommunityStore.setState({ joinedGroupIds: [], localMessages: {}, connections: [], rsvps: [], likedPostIds: [] });
           router.replace('/onboarding/welcome');
         },
       },
@@ -68,14 +80,43 @@ export default function ProfileScreen() {
       <ScrollView contentContainerStyle={{ paddingHorizontal: spacing.lg, paddingBottom: spacing.xxxl }} showsVerticalScrollIndicator={false}>
         <View style={{ gap: spacing.lg, paddingTop: spacing.xl }}>
           <Row gap={spacing.lg}>
-            <View
-              style={{
-                width: 72, height: 72, borderRadius: radius.full, backgroundColor: colors.accent,
-                alignItems: 'center', justifyContent: 'center',
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={t('profile.changePhoto')}
+              onPress={async () => {
+                const res = await ImagePicker.launchImageLibraryAsync({
+                  mediaTypes: ['images'],
+                  allowsEditing: true,
+                  aspect: [1, 1],
+                  quality: 0.8,
+                });
+                const asset = res.assets?.[0];
+                if (!res.canceled && asset) setAvatar(asset.uri);
               }}
             >
-              <Text variant="title" color={colors.onAccent}>{initials}</Text>
-            </View>
+              <View
+                style={{
+                  width: 72, height: 72, borderRadius: radius.full, backgroundColor: colors.accent,
+                  alignItems: 'center', justifyContent: 'center', overflow: 'hidden',
+                }}
+              >
+                {avatarUri ? (
+                  <Image source={{ uri: avatarUri }} style={{ width: 72, height: 72 }} contentFit="cover" />
+                ) : (
+                  <Text variant="title" color={colors.onAccent}>{initials}</Text>
+                )}
+              </View>
+              <View
+                style={{
+                  position: 'absolute', bottom: -2, right: -2, width: 26, height: 26,
+                  borderRadius: radius.full, backgroundColor: colors.surface,
+                  borderWidth: 1, borderColor: colors.border,
+                  alignItems: 'center', justifyContent: 'center',
+                }}
+              >
+                <Ionicons name="camera-outline" size={14} color={colors.accent} />
+              </View>
+            </Pressable>
             <View style={{ flex: 1, gap: 4 }}>
               <Text variant="title">{profile.name}</Text>
               <Text variant="caption" tone="secondary">
@@ -125,6 +166,50 @@ export default function ProfileScreen() {
             </Row>
           </Card>
 
+          <Card onPress={() => router.push('/assistant')} style={{ gap: 4 }}>
+            <Row style={{ justifyContent: 'space-between' }}>
+              <Row gap={spacing.sm}>
+                <Ionicons name="sparkles" size={20} color={colors.accent} />
+                <Text variant="label">{t('assistant.title')}</Text>
+              </Row>
+              <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />
+            </Row>
+          </Card>
+
+          <SectionHeader title={t('auth.account')} />
+          {account ? (
+            <Card style={{ gap: spacing.sm }}>
+              <Row gap={spacing.md}>
+                <Ionicons
+                  name={account.provider === 'google' ? 'logo-google' : account.provider === 'apple' ? 'logo-apple' : 'mail-outline'}
+                  size={18}
+                  color={colors.accent}
+                />
+                <View style={{ flex: 1 }}>
+                  <Text variant="label">{account.email}</Text>
+                  <Text variant="caption" tone="faint">
+                    {t(`auth.provider_${account.provider}`)} · {t('common.demo')}
+                  </Text>
+                </View>
+              </Row>
+              <Button
+                label={t('auth.signOut')}
+                variant="danger"
+                size="sm"
+                icon="log-out-outline"
+                onPress={signOut}
+                style={{ alignSelf: 'flex-start' }}
+              />
+            </Card>
+          ) : (
+            <Button
+              label={t('auth.signInCta')}
+              variant="secondary"
+              icon="person-circle-outline"
+              onPress={() => router.push('/onboarding/auth')}
+            />
+          )}
+
           <SectionHeader title={t('profile.savedCourses')} />
           {saved.length === 0 ? (
             <Text variant="caption" tone="faint">{t('profile.savedEmpty')}</Text>
@@ -155,6 +240,19 @@ export default function ProfileScreen() {
               />
             ))}
           </Row>
+
+          <SectionHeader title={t('profile.currencyTitle')} />
+          <PickerField
+            value={profile.currency ?? 'auto'}
+            options={[
+              { value: 'auto', label: t('profile.currencyAuto', { currency: homeCurrencyFor({ homeCountry: profile.homeCountry }) }) },
+              ...ALL_CURRENCIES.map((c) => ({ value: c, label: `${CURRENCY_SYMBOL[c]}  ${c}` })),
+            ]}
+            onChange={(v) => patchProfile({ currency: v === 'auto' ? undefined : (v as CurrencyCode) })}
+          />
+          <Text variant="caption" tone="faint">
+            {t('profile.rates', { source: t(`profile.ratesSource_${getRatesMeta().source}`), asOf: getRatesMeta().asOf })}
+          </Text>
 
           <SectionHeader title={t('profile.language')} />
           <Row gap={spacing.sm} wrap>

@@ -11,7 +11,9 @@ interface ProfileState {
   onboarded: boolean;
   themePref: ThemePref;
   language: AppLanguage;
+  avatarUri: string | null;
   hydrated: boolean;
+  setAvatar: (uri: string | null) => void;
   setProfile: (profile: StudentProfile) => void;
   patchProfile: (patch: Partial<StudentProfile>) => void;
   completeOnboarding: () => void;
@@ -28,7 +30,9 @@ export const useProfileStore = create<ProfileState>()(
       onboarded: false,
       themePref: 'system',
       language: 'en',
+      avatarUri: null,
       hydrated: false,
+      setAvatar: (avatarUri) => set({ avatarUri }),
       setProfile: (profile) => set({ profile }),
       patchProfile: (patch) =>
         set((s) => (s.profile ? { profile: { ...s.profile, ...patch } } : s)),
@@ -41,7 +45,7 @@ export const useProfileStore = create<ProfileState>()(
     {
       name: 'ub-profile',
       storage: createJSONStorage(() => AsyncStorage),
-      partialize: ({ profile, onboarded, themePref, language }) => ({ profile, onboarded, themePref, language }),
+      partialize: ({ profile, onboarded, themePref, language, avatarUri }) => ({ profile, onboarded, themePref, language, avatarUri }),
       onRehydrateStorage: () => (state) => state?.setHydrated(),
     },
   ),

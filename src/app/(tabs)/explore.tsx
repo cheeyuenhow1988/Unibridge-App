@@ -11,6 +11,7 @@ import { EmptyState, ErrorState } from '@/components/ui/States';
 import { Text } from '@/components/ui/Text';
 import { TextField } from '@/components/ui/TextField';
 import { Card } from '@/components/ui/Card';
+import { HCarousel } from '@/components/ui/HCarousel';
 import { DEST_COUNTRIES, FLAGS } from '@/constants/countries';
 import { spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
@@ -35,7 +36,7 @@ export default function ExploreScreen() {
   const sch = useAsync(listScholarships);
   const savedCourseIds = useSavedStore((s) => s.savedCourseIds);
   const { matchData } = useMatchData();
-  const home = profile ? homeCurrencyFor(profile.homeCountry) : 'USD';
+  const home = profile ? homeCurrencyFor(profile) : 'USD';
   const savedCourses = savedCourseIds
     .map((id) => matchData?.resultByCourseId.get(id))
     .filter((r): r is NonNullable<typeof r> => !!r);
@@ -45,9 +46,15 @@ export default function ExploreScreen() {
     return (inst.data ?? []).filter(
       (i) =>
         (!country || i.country === country) &&
-        (!q || i.name.toLowerCase().includes(q) || i.city.toLowerCase().includes(q)),
+        (!q ||
+          i.name.toLowerCase().includes(q) ||
+          i.city.toLowerCase().includes(q) ||
+          // Specialization search: "marketing" finds every institution offering it.
+          (matchData?.results.some(
+            (r) => r.course.institutionId === i.id && r.course.name.toLowerCase().includes(q),
+          ) ?? false)),
     );
-  }, [inst.data, query, country]);
+  }, [inst.data, query, country, matchData]);
 
   const filteredScholarships = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -103,21 +110,17 @@ export default function ExploreScreen() {
                   onChangeText={setQuery}
                   autoCorrect={false}
                 />
-                <FlatList
-                  horizontal
-                  showsHorizontalScrollIndicator={false}
-                  data={DEST_COUNTRIES}
-                  keyExtractor={(c) => c}
-                  contentContainerStyle={{ gap: spacing.sm }}
-                  renderItem={({ item: c }) => (
+                <HCarousel step={240}>
+                  {DEST_COUNTRIES.map((c) => (
                     <Chip
+                      key={c}
                       small
                       label={`${FLAGS[c]} ${t(`countries.${c}`)}`}
                       selected={country === c}
                       onPress={() => setCountry(country === c ? null : c)}
                     />
-                  )}
-                />
+                  ))}
+                </HCarousel>
               </>
             ) : null}
             {segment === 'saved' ? (

@@ -1,6 +1,7 @@
 import { Image } from 'expo-image';
 import { router } from 'expo-router';
-import { Pressable, ScrollView, View } from 'react-native';
+import { Pressable, View } from 'react-native';
+import { HCarousel } from '@/components/ui/HCarousel';
 import { Skeleton } from '@/components/ui/Skeleton';
 import { Text } from '@/components/ui/Text';
 import { FLAGS } from '@/constants/countries';
@@ -22,7 +23,7 @@ export function AmbassadorStrip({ institutionId }: { institutionId: string }) {
   }
   if (!data?.length) return null;
   return (
-    <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: spacing.md }}>
+    <HCarousel step={208}>
       {data.map((amb) => (
         <Pressable
           key={amb.id}
@@ -39,6 +40,6 @@ export function AmbassadorStrip({ institutionId }: { institutionId: string }) {
           <Text variant="caption" tone="faint">{FLAGS[amb.homeCountry]}</Text>
         </Pressable>
       ))}
-    </ScrollView>
+    </HCarousel>
   );
 }

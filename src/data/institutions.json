@@ -11,6 +11,12 @@
     "founded": 1958,
     "students": 86000,
     "website": "https://www.monash.edu",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/monash.edu",
+    "wikipedia": "Monash University",
+    "ranking": 37,
     "images": [
       "https://picsum.photos/seed/au-monash-0/800/500",
       "https://picsum.photos/seed/au-monash-1/800/500",
@@ -29,6 +35,12 @@
     "founded": 1850,
     "students": 70000,
     "website": "https://www.sydney.edu.au",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/sydney.edu.au",
+    "wikipedia": "University of Sydney",
+    "ranking": 18,
     "images": [
       "https://picsum.photos/seed/au-sydney-0/800/500",
       "https://picsum.photos/seed/au-sydney-1/800/500",
@@ -47,6 +59,12 @@
     "founded": 1909,
     "students": 55000,
     "website": "https://www.uq.edu.au",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/uq.edu.au",
+    "wikipedia": "University of Queensland",
+    "ranking": 40,
     "images": [
       "https://picsum.photos/seed/au-uq-0/800/500",
       "https://picsum.photos/seed/au-uq-1/800/500",
@@ -65,6 +83,12 @@
     "founded": 1949,
     "students": 65000,
     "website": "https://www.unsw.edu.au",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/unsw.edu.au",
+    "wikipedia": "University of New South Wales",
+    "ranking": 19,
     "images": [
       "https://picsum.photos/seed/au-unsw-0/800/500",
       "https://picsum.photos/seed/au-unsw-1/800/500",
@@ -83,6 +107,12 @@
     "founded": 1853,
     "students": 54000,
     "website": "https://www.unimelb.edu.au",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/unimelb.edu.au",
+    "wikipedia": "University of Melbourne",
+    "ranking": 13,
     "images": [
       "https://picsum.photos/seed/au-unimelb-0/800/500",
       "https://picsum.photos/seed/au-unimelb-1/800/500",
@@ -101,6 +131,12 @@
     "founded": 1887,
     "students": 87000,
     "website": "https://www.rmit.edu.au",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/rmit.edu.au",
+    "wikipedia": "RMIT University",
+    "ranking": 123,
     "images": [
       "https://picsum.photos/seed/au-rmit-0/800/500",
       "https://picsum.photos/seed/au-rmit-1/800/500",
@@ -119,6 +155,13 @@
     "founded": 1905,
     "students": 27000,
     "website": "https://um.edu.my",
+    "languages": [
+      "English",
+      "Bahasa Melayu"
+    ],
+    "logo": "https://logo.clearbit.com/um.edu.my",
+    "wikipedia": "University of Malaya",
+    "ranking": 60,
     "images": [
       "https://picsum.photos/seed/my-um-0/800/500",
       "https://picsum.photos/seed/my-um-1/800/500",
@@ -137,6 +180,12 @@
     "founded": 1969,
     "students": 12000,
     "website": "https://university.taylors.edu.my",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/university.taylors.edu.my",
+    "wikipedia": "Taylor's University",
+    "ranking": 251,
     "images": [
       "https://picsum.photos/seed/my-taylors-0/800/500",
       "https://picsum.photos/seed/my-taylors-1/800/500",
@@ -155,6 +204,12 @@
     "founded": 1987,
     "students": 10000,
     "website": "https://sunwayuniversity.edu.my",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/sunwayuniversity.edu.my",
+    "wikipedia": "Sunway University",
+    "ranking": 539,
     "images": [
       "https://picsum.photos/seed/my-sunway-0/800/500",
       "https://picsum.photos/seed/my-sunway-1/800/500",
@@ -173,6 +228,12 @@
     "founded": 1996,
     "students": 20000,
     "website": "https://www.mmu.edu.my",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/mmu.edu.my",
+    "wikipedia": "Multimedia University",
+    "ranking": null,
     "images": [
       "https://picsum.photos/seed/my-mmu-0/800/500",
       "https://picsum.photos/seed/my-mmu-1/800/500",
@@ -191,6 +252,13 @@
     "founded": 1969,
     "students": 30000,
     "website": "https://www.usm.my",
+    "languages": [
+      "English",
+      "Bahasa Melayu"
+    ],
+    "logo": "https://logo.clearbit.com/usm.my",
+    "wikipedia": "Universiti Sains Malaysia",
+    "ranking": 146,
     "images": [
       "https://picsum.photos/seed/my-usm-0/800/500",
       "https://picsum.photos/seed/my-usm-1/800/500",
@@ -209,6 +277,13 @@
     "founded": 1972,
     "students": 25000,
     "website": "https://www.utm.my",
+    "languages": [
+      "English",
+      "Bahasa Melayu"
+    ],
+    "logo": "https://logo.clearbit.com/utm.my",
+    "wikipedia": "Universiti Teknologi Malaysia",
+    "ranking": 181,
     "images": [
       "https://picsum.photos/seed/my-utm-0/800/500",
       "https://picsum.photos/seed/my-utm-1/800/500",
@@ -227,6 +302,13 @@
     "founded": 1928,
     "students": 32000,
     "website": "https://www.ntu.edu.tw",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/ntu.edu.tw",
+    "wikipedia": "National Taiwan University",
+    "ranking": 68,
     "images": [
       "https://picsum.photos/seed/tw-ntu-0/800/500",
       "https://picsum.photos/seed/tw-ntu-1/800/500",
@@ -245,6 +327,13 @@
     "founded": 1911,
     "students": 16000,
     "website": "https://www.nthu.edu.tw",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/nthu.edu.tw",
+    "wikipedia": "National Tsing Hua University",
+    "ranking": 210,
     "images": [
       "https://picsum.photos/seed/tw-nthu-0/800/500",
       "https://picsum.photos/seed/tw-nthu-1/800/500",
@@ -263,6 +352,13 @@
     "founded": 1961,
     "students": 20000,
     "website": "https://www.fcu.edu.tw",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/fcu.edu.tw",
+    "wikipedia": "Feng Chia University",
+    "ranking": null,
     "images": [
       "https://picsum.photos/seed/tw-fcu-0/800/500",
       "https://picsum.photos/seed/tw-fcu-1/800/500",
@@ -281,6 +377,13 @@
     "founded": 1980,
     "students": 9500,
     "website": "https://www.nsysu.edu.tw",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/nsysu.edu.tw",
+    "wikipedia": "National Sun Yat-sen University",
+    "ranking": 427,
     "images": [
       "https://picsum.photos/seed/tw-nsysu-0/800/500",
       "https://picsum.photos/seed/tw-nsysu-1/800/500",
@@ -299,6 +402,12 @@
     "founded": 1824,
     "students": 46000,
     "website": "https://www.manchester.ac.uk",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/manchester.ac.uk",
+    "wikipedia": "University of Manchester",
+    "ranking": 34,
     "images": [
       "https://picsum.photos/seed/gb-manchester-0/800/500",
       "https://picsum.photos/seed/gb-manchester-1/800/500",
@@ -317,6 +426,12 @@
     "founded": 1904,
     "students": 39000,
     "website": "https://www.leeds.ac.uk",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/leeds.ac.uk",
+    "wikipedia": "University of Leeds",
+    "ranking": 82,
     "images": [
       "https://picsum.photos/seed/gb-leeds-0/800/500",
       "https://picsum.photos/seed/gb-leeds-1/800/500",
@@ -335,6 +450,12 @@
     "founded": 1900,
     "students": 38000,
     "website": "https://www.birmingham.ac.uk",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/birmingham.ac.uk",
+    "wikipedia": "University of Birmingham",
+    "ranking": 80,
     "images": [
       "https://picsum.photos/seed/gb-birmingham-0/800/500",
       "https://picsum.photos/seed/gb-birmingham-1/800/500",
@@ -353,6 +474,12 @@
     "founded": 1826,
     "students": 51000,
     "website": "https://www.ucl.ac.uk",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/ucl.ac.uk",
+    "wikipedia": "University College London",
+    "ranking": 9,
     "images": [
       "https://picsum.photos/seed/gb-ucl-0/800/500",
       "https://picsum.photos/seed/gb-ucl-1/800/500",
@@ -371,6 +498,12 @@
     "founded": 1829,
     "students": 41000,
     "website": "https://www.kcl.ac.uk",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/kcl.ac.uk",
+    "wikipedia": "King's College London",
+    "ranking": 40,
     "images": [
       "https://picsum.photos/seed/gb-kcl-0/800/500",
       "https://picsum.photos/seed/gb-kcl-1/800/500",
@@ -389,6 +522,12 @@
     "founded": 1583,
     "students": 45000,
     "website": "https://www.ed.ac.uk",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/ed.ac.uk",
+    "wikipedia": "University of Edinburgh",
+    "ranking": 27,
     "images": [
       "https://picsum.photos/seed/gb-edinburgh-0/800/500",
       "https://picsum.photos/seed/gb-edinburgh-1/800/500",
@@ -407,6 +546,12 @@
     "founded": 1905,
     "students": 38000,
     "website": "https://nus.edu.sg",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/nus.edu.sg",
+    "wikipedia": "National University of Singapore",
+    "ranking": 8,
     "images": [
       "https://picsum.photos/seed/sg-nus-0/800/500",
       "https://picsum.photos/seed/sg-nus-1/800/500",
@@ -425,6 +570,12 @@
     "founded": 1991,
     "students": 33000,
     "website": "https://www.ntu.edu.sg",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/ntu.edu.sg",
+    "wikipedia": "Nanyang Technological University",
+    "ranking": 15,
     "images": [
       "https://picsum.photos/seed/sg-ntusg-0/800/500",
       "https://picsum.photos/seed/sg-ntusg-1/800/500",
@@ -443,6 +594,12 @@
     "founded": 2000,
     "students": 10000,
     "website": "https://www.smu.edu.sg",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/smu.edu.sg",
+    "wikipedia": "Singapore Management University",
+    "ranking": 511,
     "images": [
       "https://picsum.photos/seed/sg-smu-0/800/500",
       "https://picsum.photos/seed/sg-smu-1/800/500",
@@ -461,6 +618,12 @@
     "founded": 1964,
     "students": 16000,
     "website": "https://www.sim.edu.sg",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/sim.edu.sg",
+    "wikipedia": "Singapore Institute of Management",
+    "ranking": null,
     "images": [
       "https://picsum.photos/seed/sg-sim-0/800/500",
       "https://picsum.photos/seed/sg-sim-1/800/500",
@@ -479,6 +642,12 @@
     "founded": 1883,
     "students": 40000,
     "website": "https://www.auckland.ac.nz",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/auckland.ac.nz",
+    "wikipedia": "University of Auckland",
+    "ranking": 65,
     "images": [
       "https://picsum.photos/seed/nz-auckland-0/800/500",
       "https://picsum.photos/seed/nz-auckland-1/800/500",
@@ -497,6 +666,12 @@
     "founded": 1897,
     "students": 22000,
     "website": "https://www.wgtn.ac.nz",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/wgtn.ac.nz",
+    "wikipedia": "Victoria University of Wellington",
+    "ranking": 244,
     "images": [
       "https://picsum.photos/seed/nz-vuw-0/800/500",
       "https://picsum.photos/seed/nz-vuw-1/800/500",
@@ -515,6 +690,12 @@
     "founded": 1873,
     "students": 17000,
     "website": "https://www.canterbury.ac.nz",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/canterbury.ac.nz",
+    "wikipedia": "University of Canterbury",
+    "ranking": 261,
     "images": [
       "https://picsum.photos/seed/nz-canterbury-0/800/500",
       "https://picsum.photos/seed/nz-canterbury-1/800/500",
@@ -533,6 +714,12 @@
     "founded": 1869,
     "students": 21000,
     "website": "https://www.otago.ac.nz",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/otago.ac.nz",
+    "wikipedia": "University of Otago",
+    "ranking": 214,
     "images": [
       "https://picsum.photos/seed/nz-otago-0/800/500",
       "https://picsum.photos/seed/nz-otago-1/800/500",
@@ -551,6 +738,13 @@
     "founded": 1755,
     "students": 40000,
     "website": "https://www.msu.ru",
+    "languages": [
+      "Russian",
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/msu.ru",
+    "wikipedia": "Moscow State University",
+    "ranking": 94,
     "images": [
       "https://picsum.photos/seed/ru-msu-0/800/500",
       "https://picsum.photos/seed/ru-msu-1/800/500",
@@ -569,6 +763,13 @@
     "founded": 1900,
     "students": 14000,
     "website": "https://itmo.ru",
+    "languages": [
+      "Russian",
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/itmo.ru",
+    "wikipedia": "ITMO University",
+    "ranking": 360,
     "images": [
       "https://picsum.photos/seed/ru-itmo-0/800/500",
       "https://picsum.photos/seed/ru-itmo-1/800/500",
@@ -587,6 +788,13 @@
     "founded": 1804,
     "students": 45000,
     "website": "https://kpfu.ru",
+    "languages": [
+      "Russian",
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/kpfu.ru",
+    "wikipedia": "Kazan Federal University",
+    "ranking": 396,
     "images": [
       "https://picsum.photos/seed/ru-kfu-0/800/500",
       "https://picsum.photos/seed/ru-kfu-1/800/500",
@@ -605,6 +813,13 @@
     "founded": 1958,
     "students": 8000,
     "website": "https://www.nsu.ru",
+    "languages": [
+      "Russian",
+      "English"
+    ],
+    "logo": "https://logo.clearbit.com/nsu.ru",
+    "wikipedia": "Novosibirsk State University",
+    "ranking": 225,
     "images": [
       "https://picsum.photos/seed/ru-nsu-0/800/500",
       "https://picsum.photos/seed/ru-nsu-1/800/500",

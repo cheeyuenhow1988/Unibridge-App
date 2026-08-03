@@ -6,6 +6,7 @@ import { Alert, Linking, Modal, Pressable, ScrollView, View } from 'react-native
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
+import { HCarousel } from '@/components/ui/HCarousel';
 import { Row } from '@/components/ui/Misc';
 import { Skeleton } from '@/components/ui/Skeleton';
 import { Text } from '@/components/ui/Text';
@@ -52,7 +53,7 @@ export function AttractionsCarousel({ institutionId, city }: { institutionId: st
   }
   return (
     <>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: spacing.md }}>
+      <HCarousel step={196}>
         {(data ?? []).map((a) => (
           <Pressable
             key={a.id}
@@ -77,7 +78,7 @@ export function AttractionsCarousel({ institutionId, city }: { institutionId: st
             </View>
           </Pressable>
         ))}
-      </ScrollView>
+      </HCarousel>
 
       <Modal visible={!!selected} animationType="slide" transparent onRequestClose={() => setSelected(null)}>
         <Pressable style={{ flex: 1, backgroundColor: colors.overlay }} onPress={() => setSelected(null)} />

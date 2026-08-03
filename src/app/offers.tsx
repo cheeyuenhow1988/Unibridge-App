@@ -42,7 +42,7 @@ export default function OffersScreen() {
     );
   }
 
-  const home = homeCurrencyFor(profile.homeCountry);
+  const home = homeCurrencyFor(profile);
   const offers = applications
     .filter((a) => ['offer', 'conditional_offer', 'accepted', 'coe_issued'].includes(a.status))
     .map((a) => {

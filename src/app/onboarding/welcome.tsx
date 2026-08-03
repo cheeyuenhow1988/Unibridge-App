@@ -91,7 +91,7 @@ export default function Welcome() {
                 listRef.current?.scrollToIndex({ index: page + 1, animated: true });
                 setPage(page + 1);
               } else {
-                router.push('/onboarding/profile');
+                router.push('/onboarding/auth');
               }
             }}
           />
