@@ -19,14 +19,15 @@ One committed accent, warm neutrals, semantic bucket colors:
 | Background | `#F6F4EF` warm ivory | `#101917` warm charcoal-green |
 | Surface | `#FFFFFF` | `#1A2421` |
 | Ink | `#172723` | `#ECF2EF` |
-| Accent (teal) | `#0E7C6B` | `#3FCDB1` |
+| Accent (teal) | `#0C6F60` | `#3FCDB1` |
 | Eligible | teal | teal |
-| Borderline | amber `#A85B0A` | `#E8A23D` |
+| Borderline | amber `#96500A` | `#E8A23D` |
 | Pathway | cobalt `#3A57C4` | `#93A9F2` |
-| Verified | gold `#8A6A12` | `#E2C15E` |
+| Verified | gold `#77590E` | `#E2C15E` |
 
-No SaaS-blue defaults, no purple-gradient-on-white, no glassmorphism. Contrast targets
-WCAG 2.1 AA (4.5:1 normal text) in both schemes.
+No SaaS-blue defaults, no purple-gradient-on-white, no glassmorphism. Contrast is
+verified programmatically: every shipped text/background token pair (36 pairs across
+both schemes, including badge-on-soft combinations) meets WCAG 2.1 AA 4.5:1.
 
 ## Space & shape
 
@@ -43,5 +44,21 @@ WCAG 2.1 AA (4.5:1 normal text) in both schemes.
 - Country flags (emoji) as consistent scannability anchors; Ionicons for UI chrome
   (no emoji icons in controls).
 - Status is never color-only: badges pair color with icon + label.
+- Decorative animation respects the OS reduce-motion setting (skeleton pulse goes static).
 - The three Match buckets are the money shot: big Fraunces counts on soft semantic
   fills, one tap to switch, screenshot-ready.
+
+## Design-engine cross-check (ui-ux-pro-max v2.11)
+
+The full `--design-system` run for "international student university admissions
+marketplace / trust / fintech / mobile" recommended: Vibrant & Block-based style,
+micro-interactions, dark-mode support, 200–300ms transitions, large display type —
+**adopted** (block cards, pressed states, full dark scheme, Fraunces display sizes).
+Its pre-delivery checklist drove two fixes: the WCAG audit above (7 token pairs were
+below 4.5:1 and were darkened/adjusted) and reduce-motion support.
+
+Its generic palette pick (gold `#F59E0B` + purple `#8B5CF6` on slate) and IBM Plex Sans
+were **rejected deliberately**: the product brief specifies one deep-teal/cobalt accent
+on warm neutrals, and the companion bencium-innovative-ux-designer skill bans
+purple-accent defaults and interchangeable corporate sans-serifs. Trust-color intent is
+carried by the teal + gold *Verified Partner* accents instead.

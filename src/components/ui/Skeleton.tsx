@@ -1,7 +1,26 @@
 import { useEffect, useState } from 'react';
-import { Animated, View, type StyleProp, type ViewStyle } from 'react-native';
+import { AccessibilityInfo, Animated, View, type StyleProp, type ViewStyle } from 'react-native';
 import { radius, spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/useTheme';
+
+/** Tracks the OS reduce-motion setting so decorative animation can switch off. */
+function useReducedMotion(): boolean {
+  const [reduced, setReduced] = useState(false);
+  useEffect(() => {
+    let mounted = true;
+    AccessibilityInfo.isReduceMotionEnabled()
+      .then((v) => {
+        if (mounted) setReduced(!!v);
+      })
+      .catch(() => undefined);
+    const sub = AccessibilityInfo.addEventListener('reduceMotionChanged', (v) => setReduced(!!v));
+    return () => {
+      mounted = false;
+      sub?.remove();
+    };
+  }, []);
+  return reduced;
+}
 
 interface Props {
   width?: number | `${number}%`;
@@ -12,8 +31,14 @@ interface Props {
 
 export function Skeleton({ width = '100%', height = 16, round, style }: Props) {
   const { colors } = useTheme();
+  const reducedMotion = useReducedMotion();
   const [pulse] = useState(() => new Animated.Value(0.4));
+
   useEffect(() => {
+    if (reducedMotion) {
+      pulse.setValue(0.55);
+      return;
+    }
     const loop = Animated.loop(
       Animated.sequence([
         Animated.timing(pulse, { toValue: 1, duration: 700, useNativeDriver: true }),
@@ -22,7 +47,8 @@ export function Skeleton({ width = '100%', height = 16, round, style }: Props) {
     );
     loop.start();
     return () => loop.stop();
-  }, [pulse]);
+  }, [pulse, reducedMotion]);
+
   return (
     <Animated.View
       style={[
