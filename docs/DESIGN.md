@@ -1,11 +1,14 @@
 # UniBridge design direction
 
-Feel: **optimistic, international, trustworthy** — editorial fintech, not a school portal.
+Feel: **optimistic, international, trustworthy — with Gen-Z energy.** Editorial fintech
+foundation ("Electric Optimism" pass): deep-teal gradient statement moments and an
+electric-lime pop accent layered over the calm ivory trust base.
 
 ## Type
 
-- **Fraunces** (SemiBold/Bold) for display and titles — a characterful serif that gives
-  the app the warm, editorial confidence of modern fintech brands.
+- **Fraunces** (SemiBold/Bold, plus **Black** for hero numerals and gradient headlines) —
+  a characterful serif that gives the app the warm, editorial confidence of modern
+  fintech brands, pushed to poster weight for the moments that should be screenshotted.
 - **Manrope** (400–800) for UI, body and numbers — clear, tabular-friendly, never generic.
 - Scale ≈1.25: display 34 / title 27 / heading 20 / sub 16 / body 15 / caption 12.5 / micro 10.5.
 - Body line-height 1.5×; large headlines tracked −0.5 to −0.7.
@@ -24,6 +27,15 @@ One committed accent, warm neutrals, semantic bucket colors:
 | Borderline | amber `#96500A` | `#E8A23D` |
 | Pathway | cobalt `#3A57C4` | `#93A9F2` |
 | Verified | gold `#77590E` | `#E2C15E` |
+| Pop (lime) | `#C8F14A` on-ink | `#CDF463` |
+| Hero gradient | `#0D7A68 → #083D33` | `#12564A → #0B211D` |
+
+**Electric Optimism rules:** lime is an *energy* accent, never body text — it lives on
+gradients and dark ink (hero CTAs, strength meter, countdown, tags, active dots). The
+teal hero gradient is reserved for brand statement moments: welcome carousel, Match
+greeting card, pre-departure countdown. Everything transactional stays on the trust
+base. White body text on gradients ≥5.2:1; lime labels on gradients are bold/large only
+(≥4.0:1, above the 3:1 large-text threshold); ink on lime ≥11.9:1.
 
 No SaaS-blue defaults, no purple-gradient-on-white, no glassmorphism. Contrast is
 verified programmatically: every shipped text/background token pair (36 pairs across

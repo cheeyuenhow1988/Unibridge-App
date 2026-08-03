@@ -1,4 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
@@ -107,28 +108,35 @@ export default function Predeparture() {
           {t('predeparture.subtitle', { city: result.course.campusCity })}
         </Text>
 
-        <Card tone="accent" style={{ alignItems: 'center', gap: 4 }}>
-          <Text variant="caption" tone="secondary">{t('predeparture.countdown')}</Text>
-          <Text variant="display" tone="accent">
+        <LinearGradient
+          colors={[colors.gradientFrom, colors.gradientTo]}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          style={{ borderRadius: radius.xl, padding: spacing.xl, alignItems: 'center', gap: 4 }}
+        >
+          <Text variant="micro" color={colors.pop} style={{ letterSpacing: 2 }}>
+            {t('predeparture.countdown').toUpperCase()}
+          </Text>
+          <Text variant="hero" color={colors.onGradient}>
             {daysToGo !== null ? t('predeparture.days', { count: daysToGo }) : '—'}
           </Text>
-          <Text variant="caption" tone="secondary">{t('predeparture.toGo', { intake: nextIntake ?? '' })}</Text>
+          <Text variant="caption" color={colors.onGradientSoft}>{t('predeparture.toGo', { intake: nextIntake ?? '' })}</Text>
           <Row style={{ marginTop: spacing.md, justifyContent: 'space-between', width: '100%' }}>
             {(['r7', 'r30'] as const).map((key) => (
               <Row key={key} gap={spacing.sm}>
                 <Switch
                   value={reminders[key]}
                   onValueChange={(v) => setReminders((r) => ({ ...r, [key]: v }))}
-                  trackColor={{ true: colors.accent, false: colors.surfaceAlt }}
+                  trackColor={{ true: colors.pop, false: colors.gradientTrack }}
                   thumbColor={colors.surface}
                 />
-                <Text variant="caption" tone="secondary">
+                <Text variant="caption" color={colors.onGradientSoft}>
                   {key === 'r7' ? t('predeparture.reminder7') : t('predeparture.reminder30')}
                 </Text>
               </Row>
             ))}
           </Row>
-        </Card>
+        </LinearGradient>
 
         <SectionHeader
           title={t('predeparture.checklist', { country: t(`countries.${country}`) })}

@@ -1,5 +1,5 @@
 import '@/i18n';
-import { Fraunces_600SemiBold, Fraunces_700Bold } from '@expo-google-fonts/fraunces';
+import { Fraunces_600SemiBold, Fraunces_700Bold, Fraunces_900Black } from '@expo-google-fonts/fraunces';
 import {
   Manrope_400Regular, Manrope_500Medium, Manrope_600SemiBold, Manrope_700Bold, Manrope_800ExtraBold,
   useFonts,
@@ -19,6 +19,7 @@ export default function RootLayout() {
   const [fontsLoaded] = useFonts({
     Fraunces_600SemiBold,
     Fraunces_700Bold,
+    Fraunces_900Black,
     Manrope_400Regular,
     Manrope_500Medium,
     Manrope_600SemiBold,

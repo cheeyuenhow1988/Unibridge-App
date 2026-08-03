@@ -4,15 +4,15 @@ import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FlatList, Pressable, View } from 'react-native';
 import { DEFAULT_FILTERS, FiltersModal, type MatchFilters } from '@/components/match/FiltersModal';
+import { MatchHero } from '@/components/match/MatchHero';
 import { ResultCard } from '@/components/match/ResultCard';
-import { StrengthCard } from '@/components/match/StrengthCard';
 import { Button } from '@/components/ui/Button';
 import { Row } from '@/components/ui/Misc';
 import { Screen } from '@/components/ui/Screen';
 import { Skeleton, SkeletonCards } from '@/components/ui/Skeleton';
 import { EmptyState, ErrorState } from '@/components/ui/States';
 import { Text } from '@/components/ui/Text';
-import { radius, spacing } from '@/constants/theme';
+import { fonts, radius, spacing } from '@/constants/theme';
 import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
 import { homeCurrencyFor } from '@/services/currency';
@@ -114,17 +114,7 @@ export default function MatchScreen() {
         ItemSeparatorComponent={() => <View style={{ height: spacing.md }} />}
         ListHeaderComponent={
           <View style={{ gap: spacing.lg, paddingTop: spacing.xl, paddingBottom: spacing.lg }}>
-            <View style={{ gap: 2 }}>
-              <Text variant="display">{t('match.greeting', { name: profile.name.split(' ')[0] })}</Text>
-              <Text variant="body" tone="secondary">
-                {t('match.subtitle', {
-                  count: filtered.length,
-                  system: profile.qualification.toUpperCase(),
-                })}
-              </Text>
-            </View>
-
-            <StrengthCard profile={profile} results={matchData.results} />
+            <MatchHero profile={profile} results={matchData.results} matchedCount={filtered.length} />
 
             <Row gap={spacing.sm}>
               {BUCKETS.map(({ key, icon }) => {
@@ -151,7 +141,7 @@ export default function MatchScreen() {
                     }}
                   >
                     <Ionicons name={icon} size={17} color={color} />
-                    <Text variant="title" color={color} style={{ fontSize: 24, lineHeight: 28 }}>
+                    <Text variant="title" color={color} style={{ fontFamily: fonts.black, fontSize: 27, lineHeight: 31 }}>
                       {byBucket[key].length}
                     </Text>
                     <Text variant="micro" tone={selected ? 'primary' : 'faint'}>
@@ -214,6 +204,7 @@ export default function MatchScreen() {
           <Button
             label={t('match.compare', { count: compareIds.length })}
             size="lg"
+            variant="pop"
             icon="git-compare-outline"
             onPress={() => router.push('/compare')}
           />

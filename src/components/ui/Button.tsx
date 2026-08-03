@@ -4,7 +4,7 @@ import { fonts, radius, spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/useTheme';
 import { Text } from '@/components/ui/Text';
 
-type Variant = 'primary' | 'secondary' | 'ghost' | 'danger';
+type Variant = 'primary' | 'secondary' | 'ghost' | 'danger' | 'pop';
 
 interface Props {
   label: string;
@@ -21,10 +21,14 @@ export function Button({ label, onPress, variant = 'primary', size = 'md', icon,
   const { colors } = useTheme();
   const bg =
     variant === 'primary' ? colors.accent
+    : variant === 'pop' ? colors.pop
     : variant === 'danger' ? colors.danger
     : variant === 'secondary' ? colors.surface
     : 'transparent';
-  const fg = variant === 'primary' || variant === 'danger' ? colors.onAccent : colors.accent;
+  const fg =
+    variant === 'pop' ? colors.onPop
+    : variant === 'primary' || variant === 'danger' ? colors.onAccent
+    : colors.accent;
   const height = size === 'lg' ? 54 : size === 'sm' ? 40 : 48;
   return (
     <Pressable

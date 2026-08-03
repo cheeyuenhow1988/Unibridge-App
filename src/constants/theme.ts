@@ -30,6 +30,14 @@ export const light = {
   verifiedSoft: '#F4EACC',
   skeleton: '#E7E3DA',
   overlay: 'rgba(23, 39, 35, 0.55)',
+  pop: '#C8F14A',
+  popSoft: '#EFF8D0',
+  onPop: '#172723',
+  gradientFrom: '#0D7A68',
+  gradientTo: '#083D33',
+  onGradient: '#FFFFFF',
+  onGradientSoft: 'rgba(255, 255, 255, 0.78)',
+  gradientTrack: 'rgba(255, 255, 255, 0.22)',
 } as const;
 
 export const dark: ThemeColors = {
@@ -56,6 +64,14 @@ export const dark: ThemeColors = {
   verifiedSoft: '#2E2711',
   skeleton: '#243029',
   overlay: 'rgba(0, 0, 0, 0.6)',
+  pop: '#CDF463',
+  popSoft: '#2A3313',
+  onPop: '#0A1512',
+  gradientFrom: '#12564A',
+  gradientTo: '#0B211D',
+  onGradient: '#FFFFFF',
+  onGradientSoft: 'rgba(255, 255, 255, 0.78)',
+  gradientTrack: 'rgba(255, 255, 255, 0.22)',
 };
 
 export type ThemeColors = { [K in keyof typeof light]: string };
@@ -67,6 +83,7 @@ export const radius = { sm: 10, md: 14, lg: 20, xl: 28, full: 999 } as const;
 export const fonts = {
   display: 'Fraunces_600SemiBold',
   displayBold: 'Fraunces_700Bold',
+  black: 'Fraunces_900Black',
   regular: 'Manrope_400Regular',
   medium: 'Manrope_500Medium',
   semibold: 'Manrope_600SemiBold',
@@ -75,6 +92,7 @@ export const fonts = {
 } as const;
 
 export const typeScale = {
+  hero: { fontFamily: fonts.black, fontSize: 40, lineHeight: 44, letterSpacing: -1.2 },
   display: { fontFamily: fonts.display, fontSize: 34, lineHeight: 40, letterSpacing: -0.7 },
   title: { fontFamily: fonts.display, fontSize: 27, lineHeight: 33, letterSpacing: -0.5 },
   heading: { fontFamily: fonts.bold, fontSize: 20, lineHeight: 26, letterSpacing: -0.3 },
