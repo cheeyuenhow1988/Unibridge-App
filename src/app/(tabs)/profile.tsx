@@ -26,6 +26,8 @@ export default function ProfileScreen() {
   const profile = useProfileStore((s) => s.profile);
   const themePref = useProfileStore((s) => s.themePref);
   const setThemePref = useProfileStore((s) => s.setThemePref);
+  const language = useProfileStore((s) => s.language);
+  const setLanguage = useProfileStore((s) => s.setLanguage);
   const resetProfile = useProfileStore((s) => s.reset);
   const savedCourseIds = useSavedStore((s) => s.savedCourseIds);
   const { matchData } = useMatchData();
@@ -155,8 +157,10 @@ export default function ProfileScreen() {
           </Row>
 
           <SectionHeader title={t('profile.language')} />
-          <Row>
-            <Chip label={t('profile.english_lang')} selected onPress={() => undefined} />
+          <Row gap={spacing.sm} wrap>
+            {([['en', 'English'], ['ms', 'Bahasa Melayu'], ['zh', '中文']] as const).map(([code, label]) => (
+              <Chip key={code} label={label} selected={language === code} onPress={() => setLanguage(code)} />
+            ))}
           </Row>
 
           <SectionHeader title={t('common.appName')} />

@@ -250,7 +250,7 @@ export default function CourseDetail() {
           <AmbassadorStrip institutionId={institution.id} />
 
           <SectionHeader title={t('institution.aroundCampus')} />
-          <AttractionsCarousel institutionId={institution.id} />
+          <AttractionsCarousel institutionId={institution.id} city={course.campusCity} />
         </View>
       </ScrollView>
 

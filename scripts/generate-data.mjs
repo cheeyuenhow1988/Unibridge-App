@@ -125,13 +125,13 @@ function requirementsForBand(band) {
 
 // ------------------------------------------------------------------- tuition
 const TUITION = {
-  AU: { business: 34000, engineering: 38000, it: 37000, health: 42000, hospitality: 28000, design: 30000, law: 40000, med: 68000 },
-  MY: { business: 26000, engineering: 32000, it: 30000, health: 42000, hospitality: 24000, design: 26000, law: 33000, med: 110000 },
-  TW: { business: 110000, engineering: 130000, it: 125000, health: 150000, hospitality: 100000, design: 105000, law: 120000, med: 220000 },
-  GB: { business: 16500, engineering: 22000, it: 21000, health: 25000, hospitality: 14500, design: 16500, law: 19000, med: 42000 },
-  SG: { business: 32000, engineering: 36000, it: 35000, health: 45000, hospitality: 26000, design: 28000, law: 38000, med: 78000 },
-  NZ: { business: 30000, engineering: 36000, it: 34000, health: 38000, hospitality: 26000, design: 28000, law: 33000, med: 62000 },
-  RU: { business: 320000, engineering: 380000, it: 360000, health: 420000, hospitality: 260000, design: 280000, law: 340000, med: 620000 },
+  AU: { business: 34000, engineering: 38000, it: 37000, health: 42000, hospitality: 28000, design: 30000, law: 40000, science: 36000, media: 33000, architecture: 39000, education: 30000, med: 68000 },
+  MY: { business: 26000, engineering: 32000, it: 30000, health: 42000, hospitality: 24000, design: 26000, law: 33000, science: 30000, media: 26000, architecture: 33000, education: 24000, med: 110000 },
+  TW: { business: 110000, engineering: 130000, it: 125000, health: 150000, hospitality: 100000, design: 105000, law: 120000, science: 120000, media: 105000, architecture: 130000, education: 100000, med: 220000 },
+  GB: { business: 16500, engineering: 22000, it: 21000, health: 25000, hospitality: 14500, design: 16500, law: 19000, science: 21000, media: 17500, architecture: 23000, education: 16000, med: 42000 },
+  SG: { business: 32000, engineering: 36000, it: 35000, health: 45000, hospitality: 26000, design: 28000, law: 38000, science: 34000, media: 30000, architecture: 37000, education: 27000, med: 78000 },
+  NZ: { business: 30000, engineering: 36000, it: 34000, health: 38000, hospitality: 26000, design: 28000, law: 33000, science: 33000, media: 29000, architecture: 36000, education: 28000, med: 62000 },
+  RU: { business: 320000, engineering: 380000, it: 360000, health: 420000, hospitality: 260000, design: 280000, law: 340000, science: 350000, media: 300000, architecture: 380000, education: 260000, med: 620000 },
 };
 
 const COURSE_NAMES = {
@@ -142,90 +142,99 @@ const COURSE_NAMES = {
   hospitality: ['Bachelor of Hospitality Management', 'Bachelor of Culinary Arts Management', 'Bachelor of Tourism & Event Management'],
   design: ['Bachelor of Design (Visual Communication)', 'Bachelor of Interior Architecture', 'Bachelor of Fashion Design', 'Bachelor of Digital Media Design'],
   law: ['Bachelor of Laws (LLB)', 'Bachelor of Criminology & Justice', 'Bachelor of Legal Studies'],
+  science: ['Bachelor of Science (Mathematics & Statistics)', 'Bachelor of Environmental Science', 'Bachelor of Science (Physics)', 'Bachelor of Data Science'],
+  media: ['Bachelor of Communication & Media', 'Bachelor of Journalism', 'Bachelor of Film & Television'],
+  architecture: ['Bachelor of Architecture', 'Bachelor of Urban & Regional Planning'],
+  education: ['Bachelor of Education (Primary)', 'Bachelor of Early Childhood Education'],
 };
 const PATHWAY_NAMES = {
   foundation: { business: 'Foundation in Business', it: 'Foundation in Computing', engineering: 'Foundation in Engineering & Science', design: 'Foundation in Art & Design', health: 'Foundation in Health Science', law: 'Foundation in Law & Social Science' },
   diploma: { it: 'Diploma in Information Technology', business: 'Diploma in Business Management', hospitality: 'Diploma in Hotel Operations', engineering: 'Diploma in Engineering Technology' },
 };
 
-const ENGLISH_BY_FIELD = { business: 6.0, engineering: 6.0, it: 6.0, health: 6.5, hospitality: 5.5, design: 6.0, law: 6.5 };
+const ENGLISH_BY_FIELD = { business: 6.0, engineering: 6.0, it: 6.0, health: 6.5, hospitality: 5.5, design: 6.0, law: 6.5, science: 6.0, media: 6.5, architecture: 6.0, education: 6.5 };
 const TOEFL = { 5.0: 45, 5.5: 55, 6.0: 72, 6.5: 85, 7.0: 95 };
 
 // ------------------------------------------------------------- institutions
+// Real institutions (names, cities, official websites). All figures shown in
+// the app (tuition, requirements, recognition) remain INDICATIVE mock data.
+// tuple: [id, name, short, country, city, type, verifiedPartner, tagline, founded, students, website, courseSpecs]
 // spec per course: [field, nameIdx, level(b|f|d), selectivity]
 const INSTITUTIONS = [
-  ['au-harbourview', 'Harbourview University', 'AU', 'Sydney', 'university', true, 'Global outlook on the harbour since 1964', 1964, 42000,
-    [['business', 0, 'b', 3], ['it', 0, 'b', 4], ['law', 0, 'b', 4], ['health', 0, 'b', 3], ['business', 0, 'f', 0]]],
-  ['au-southernsky', 'Southern Sky University', 'AU', 'Melbourne', 'university', true, 'Research that reaches every horizon', 1958, 51000,
-    [['health', 1, 'b', 5], ['engineering', 0, 'b', 4], ['business', 1, 'b', 4], ['engineering', 0, 'f', 0]]],
-  ['au-coralcoast', 'Coral Coast University', 'AU', 'Brisbane', 'university', false, 'Learn where the sun does', 1975, 28000,
-    [['hospitality', 0, 'b', 3], ['engineering', 1, 'b', 3], ['it', 2, 'b', 3]]],
-  ['au-swanbrook', 'Swanbrook Institute of Technology', 'AU', 'Perth', 'institute', true, 'Hands-on technology education', 1988, 12000,
-    [['it', 1, 'b', 2], ['engineering', 2, 'b', 2], ['it', 0, 'd', 0]]],
-  ['au-marrickville', 'Marrickville College of Design', 'AU', 'Sydney', 'college', false, 'Where Sydney creates', 1992, 4500,
-    [['design', 0, 'b', 2], ['design', 3, 'b', 2], ['design', 0, 'f', 0]]],
-  ['au-kingsford', 'Kingsford Hospitality College', 'AU', 'Melbourne', 'college', true, 'Service excellence, taught by industry', 1985, 6000,
-    [['hospitality', 1, 'b', 2], ['hospitality', 2, 'b', 2], ['hospitality', 0, 'd', 0]]],
+  ['au-monash', 'Monash University', 'Monash', 'AU', 'Melbourne', 'university', true, 'Public research university in Melbourne', 1958, 86000, 'https://www.monash.edu',
+    [['business', 0, 'b', 3], ['health', 1, 'b', 5], ['it', 0, 'b', 4], ['education', 0, 'b', 3], ['business', 0, 'f', 0]]],
+  ['au-sydney', 'University of Sydney', 'USyd', 'AU', 'Sydney', 'university', false, "Australia's first university, established 1850", 1850, 70000, 'https://www.sydney.edu.au',
+    [['law', 0, 'b', 5], ['business', 1, 'b', 4], ['media', 0, 'b', 4]]],
+  ['au-uq', 'University of Queensland', 'UQ', 'AU', 'Brisbane', 'university', false, 'Research-intensive university in Brisbane', 1909, 55000, 'https://www.uq.edu.au',
+    [['engineering', 1, 'b', 4], ['science', 1, 'b', 3], ['hospitality', 2, 'b', 3]]],
+  ['au-unsw', 'UNSW Sydney', 'UNSW', 'AU', 'Sydney', 'university', true, 'Engineering and business powerhouse in Sydney', 1949, 65000, 'https://www.unsw.edu.au',
+    [['engineering', 0, 'b', 4], ['it', 3, 'b', 4], ['architecture', 0, 'b', 4], ['engineering', 0, 'f', 0]]],
+  ['au-unimelb', 'University of Melbourne', 'UniMelb', 'AU', 'Melbourne', 'university', false, "Australia's top-ranked university", 1853, 54000, 'https://www.unimelb.edu.au',
+    [['science', 0, 'b', 5], ['design', 0, 'b', 4], ['law', 0, 'b', 5]]],
+  ['au-rmit', 'RMIT University', 'RMIT', 'AU', 'Melbourne', 'university', true, 'Technology and design university in Melbourne', 1887, 87000, 'https://www.rmit.edu.au',
+    [['design', 3, 'b', 3], ['it', 1, 'b', 3], ['media', 2, 'b', 3], ['it', 0, 'd', 0]]],
 
-  ['my-merdeka', 'Merdeka International University', 'MY', 'Kuala Lumpur', 'university', true, "Malaysia's gateway to the world", 1971, 38000,
-    [['business', 0, 'b', 3], ['health', 1, 'b', 5], ['it', 0, 'b', 3], ['law', 0, 'b', 3], ['business', 0, 'f', 0]]],
-  ['my-straits', 'Straits University College', 'MY', 'Penang', 'college', true, 'Heritage city, modern campus', 1996, 9000,
-    [['business', 2, 'b', 2], ['hospitality', 0, 'b', 2], ['it', 0, 'd', 0]]],
-  ['my-cyberview', 'Cyberview Institute of Technology', 'MY', 'Cyberjaya', 'institute', false, "Built in Malaysia's tech corridor", 2001, 11000,
-    [['it', 1, 'b', 3], ['it', 3, 'b', 3], ['engineering', 3, 'b', 3], ['it', 0, 'd', 0]]],
-  ['my-selangor', 'Selangor College of Hospitality', 'MY', 'Kuala Lumpur', 'college', false, 'From kitchen to boardroom', 1994, 3800,
-    [['hospitality', 1, 'b', 1], ['hospitality', 2, 'b', 1], ['hospitality', 0, 'd', 0]]],
-  ['my-iskandar', 'Iskandar Metropolitan University', 'MY', 'Johor Bahru', 'university', false, 'Southern gateway to opportunity', 2008, 16000,
-    [['engineering', 0, 'b', 2], ['business', 3, 'b', 2], ['design', 0, 'b', 2]]],
+  ['my-um', 'Universiti Malaya', 'UM', 'MY', 'Kuala Lumpur', 'university', false, "Malaysia's oldest research university", 1905, 27000, 'https://um.edu.my',
+    [['health', 1, 'b', 5], ['law', 0, 'b', 4], ['science', 0, 'b', 3]]],
+  ['my-taylors', "Taylor's University", "Taylor's", 'MY', 'Kuala Lumpur', 'university', true, 'Leading private university for hospitality and business', 1969, 12000, 'https://university.taylors.edu.my',
+    [['hospitality', 0, 'b', 3], ['business', 0, 'b', 3], ['design', 0, 'b', 3], ['business', 0, 'f', 0]]],
+  ['my-sunway', 'Sunway University', 'Sunway', 'MY', 'Kuala Lumpur', 'university', true, 'Private university in Sunway City', 1987, 10000, 'https://sunwayuniversity.edu.my',
+    [['business', 2, 'b', 3], ['it', 2, 'b', 3], ['hospitality', 1, 'b', 2], ['it', 0, 'd', 0]]],
+  ['my-mmu', 'Multimedia University', 'MMU', 'MY', 'Cyberjaya', 'university', true, "Malaysia's pioneer digital-technology university", 1996, 20000, 'https://www.mmu.edu.my',
+    [['it', 1, 'b', 3], ['media', 2, 'b', 3], ['engineering', 3, 'b', 3]]],
+  ['my-usm', 'Universiti Sains Malaysia', 'USM', 'MY', 'Penang', 'university', false, 'APEX research university in Penang', 1969, 30000, 'https://www.usm.my',
+    [['science', 1, 'b', 3], ['health', 2, 'b', 4], ['education', 0, 'b', 2]]],
+  ['my-utm', 'Universiti Teknologi Malaysia', 'UTM', 'MY', 'Johor Bahru', 'university', false, 'Engineering-focused university in Johor', 1972, 25000, 'https://www.utm.my',
+    [['engineering', 0, 'b', 3], ['architecture', 0, 'b', 3], ['it', 0, 'b', 3]]],
 
-  ['tw-taipeibay', 'Taipei Bay University', 'TW', 'Taipei', 'university', true, 'Innovation at the heart of Taipei', 1962, 33000,
-    [['it', 0, 'b', 4], ['business', 0, 'b', 3], ['engineering', 2, 'b', 4], ['design', 3, 'b', 3]]],
-  ['tw-formosa', 'Formosa Institute of Science & Technology', 'TW', 'Hsinchu', 'institute', true, 'Next to the fabs, ahead of the curve', 1979, 14000,
-    [['engineering', 3, 'b', 4], ['it', 4, 'b', 4], ['engineering', 0, 'd', 0]]],
-  ['tw-taichung', 'Taichung Central University', 'TW', 'Taichung', 'university', false, 'Balanced learning, central living', 1969, 21000,
-    [['business', 1, 'b', 2], ['design', 0, 'b', 2], ['hospitality', 0, 'b', 2]]],
-  ['tw-kaohsiung', 'Kaohsiung Harbour University', 'TW', 'Kaohsiung', 'university', false, 'Port-city practicality', 1973, 24000,
-    [['health', 1, 'b', 5], ['engineering', 0, 'b', 3], ['health', 0, 'b', 3]]],
+  ['tw-ntu', 'National Taiwan University', 'NTU', 'TW', 'Taipei', 'university', true, "Taiwan's most prestigious university", 1928, 32000, 'https://www.ntu.edu.tw',
+    [['health', 1, 'b', 5], ['it', 0, 'b', 5], ['law', 0, 'b', 4], ['business', 1, 'b', 4]]],
+  ['tw-nthu', 'National Tsing Hua University', 'NTHU', 'TW', 'Hsinchu', 'university', false, 'Elite STEM university beside the science park', 1911, 16000, 'https://www.nthu.edu.tw',
+    [['engineering', 3, 'b', 4], ['science', 2, 'b', 4], ['it', 4, 'b', 4]]],
+  ['tw-fcu', 'Feng Chia University', 'FCU', 'TW', 'Taichung', 'university', true, 'Private comprehensive university in Taichung', 1961, 20000, 'https://www.fcu.edu.tw',
+    [['business', 0, 'b', 2], ['architecture', 1, 'b', 2], ['hospitality', 0, 'b', 2], ['it', 0, 'd', 0]]],
+  ['tw-nsysu', 'National Sun Yat-sen University', 'NSYSU', 'TW', 'Kaohsiung', 'university', false, 'Harbourside national university', 1980, 9500, 'https://www.nsysu.edu.tw',
+    [['business', 1, 'b', 3], ['engineering', 2, 'b', 3], ['media', 0, 'b', 3]]],
 
-  ['gb-albion', 'Albion University London', 'GB', 'London', 'university', true, 'A London institution for the world', 1901, 36000,
-    [['law', 0, 'b', 5], ['business', 1, 'b', 4], ['it', 0, 'b', 4], ['health', 1, 'b', 5]]],
-  ['gb-northgate', 'Northgate University', 'GB', 'Manchester', 'university', true, 'Industry-first learning in the north', 1956, 40000,
-    [['it', 2, 'b', 3], ['engineering', 1, 'b', 3], ['business', 0, 'b', 3], ['business', 0, 'f', 0]]],
-  ['gb-holyrood', 'Holyrood University', 'GB', 'Edinburgh', 'university', true, 'Ancient city, modern minds', 1889, 29000,
-    [['health', 3, 'b', 4], ['business', 2, 'b', 3], ['design', 0, 'b', 3]]],
-  ['gb-brindley', 'Brindley City University', 'GB', 'Birmingham', 'university', false, 'Made in the Midlands', 1971, 26000,
-    [['engineering', 0, 'b', 2], ['it', 3, 'b', 2], ['hospitality', 0, 'b', 2]]],
-  ['gb-thamesbank', 'Thamesbank College of Law', 'GB', 'London', 'college', false, 'The practical route to practice', 1983, 5200,
-    [['law', 0, 'b', 4], ['law', 2, 'b', 2], ['law', 0, 'f', 0]]],
-  ['gb-airevalley', 'Aire Valley Institute', 'GB', 'Leeds', 'institute', false, 'Skills that hold their value', 1998, 7400,
-    [['it', 1, 'b', 1], ['design', 3, 'b', 1], ['it', 0, 'd', 0]]],
+  ['gb-manchester', 'University of Manchester', 'Manchester', 'GB', 'Manchester', 'university', true, 'Russell Group university in the north', 1824, 46000, 'https://www.manchester.ac.uk',
+    [['it', 2, 'b', 4], ['engineering', 1, 'b', 4], ['business', 0, 'b', 4], ['business', 0, 'f', 0]]],
+  ['gb-leeds', 'University of Leeds', 'Leeds', 'GB', 'Leeds', 'university', true, 'Campus university in a student city', 1904, 39000, 'https://www.leeds.ac.uk',
+    [['media', 1, 'b', 3], ['business', 3, 'b', 3], ['science', 1, 'b', 3]]],
+  ['gb-birmingham', 'University of Birmingham', 'Birmingham', 'GB', 'Birmingham', 'university', false, "England's first civic university", 1900, 38000, 'https://www.birmingham.ac.uk',
+    [['engineering', 0, 'b', 3], ['education', 0, 'b', 3], ['law', 2, 'b', 3]]],
+  ['gb-ucl', 'UCL', 'UCL', 'GB', 'London', 'university', false, 'Multidisciplinary research university in Bloomsbury', 1826, 51000, 'https://www.ucl.ac.uk',
+    [['health', 1, 'b', 5], ['architecture', 0, 'b', 5], ['science', 0, 'b', 5]]],
+  ['gb-kcl', "King's College London", 'KCL', 'GB', 'London', 'university', false, 'Historic university on the Thames', 1829, 41000, 'https://www.kcl.ac.uk',
+    [['law', 0, 'b', 5], ['health', 3, 'b', 4], ['media', 0, 'b', 4]]],
+  ['gb-edinburgh', 'University of Edinburgh', 'Edinburgh', 'GB', 'Edinburgh', 'university', false, "Scotland's ancient global university", 1583, 45000, 'https://www.ed.ac.uk',
+    [['it', 0, 'b', 5], ['science', 2, 'b', 4], ['design', 0, 'b', 4]]],
 
-  ['sg-straitsintl', 'Straits International University', 'SG', 'Singapore', 'university', true, "Asia's crossroads campus", 1980, 30000,
-    [['business', 1, 'b', 5], ['it', 0, 'b', 5], ['law', 0, 'b', 4], ['health', 0, 'b', 4]]],
-  ['sg-merlion', 'Merlion College of Design', 'SG', 'Singapore', 'college', true, 'Design for dense cities', 1990, 4800,
-    [['design', 0, 'b', 3], ['design', 2, 'b', 3], ['design', 0, 'f', 0]]],
-  ['sg-changi', 'Changi Institute of Technology', 'SG', 'Singapore', 'institute', true, 'Engineering the everyday', 1986, 13000,
-    [['it', 1, 'b', 3], ['engineering', 2, 'b', 3], ['it', 0, 'd', 0]]],
-  ['sg-marinagate', 'Marina Gate Business School', 'SG', 'Singapore', 'college', false, 'Where commerce meets the bay', 1995, 6800,
-    [['business', 2, 'b', 3], ['business', 4, 'b', 2], ['business', 0, 'f', 0]]],
+  ['sg-nus', 'National University of Singapore', 'NUS', 'SG', 'Singapore', 'university', true, "Asia's leading global university", 1905, 38000, 'https://nus.edu.sg',
+    [['business', 1, 'b', 5], ['it', 0, 'b', 5], ['law', 0, 'b', 5], ['science', 3, 'b', 4]]],
+  ['sg-ntusg', 'Nanyang Technological University', 'NTU Singapore', 'SG', 'Singapore', 'university', false, 'Young, research-intensive and green', 1991, 33000, 'https://www.ntu.edu.sg',
+    [['engineering', 2, 'b', 5], ['media', 0, 'b', 4], ['education', 1, 'b', 4]]],
+  ['sg-smu', 'Singapore Management University', 'SMU', 'SG', 'Singapore', 'university', false, 'City-campus university for business and law', 2000, 10000, 'https://www.smu.edu.sg',
+    [['business', 2, 'b', 4], ['law', 2, 'b', 4], ['it', 2, 'b', 4]]],
+  ['sg-sim', 'Singapore Institute of Management', 'SIM', 'SG', 'Singapore', 'institute', true, 'Private institute with global degree pathways', 1964, 16000, 'https://www.sim.edu.sg',
+    [['business', 0, 'b', 2], ['it', 1, 'b', 2], ['business', 0, 'd', 0], ['business', 0, 'f', 0]]],
 
-  ['nz-kauri', 'Kauri University', 'NZ', 'Auckland', 'university', true, 'Rooted here, reaching everywhere', 1965, 33000,
+  ['nz-auckland', 'University of Auckland', 'Auckland', 'NZ', 'Auckland', 'university', true, "New Zealand's largest university", 1883, 40000, 'https://www.auckland.ac.nz',
     [['business', 0, 'b', 4], ['health', 0, 'b', 3], ['it', 0, 'b', 4], ['business', 0, 'f', 0]]],
-  ['nz-harbourcity', 'Harbour City University', 'NZ', 'Wellington', 'university', false, 'Creative capital thinking', 1972, 21000,
-    [['design', 0, 'b', 3], ['it', 2, 'b', 3], ['law', 0, 'b', 3]]],
-  ['nz-southernalps', 'Southern Alps University', 'NZ', 'Christchurch', 'university', false, 'Engineering a resilient future', 1968, 18000,
-    [['engineering', 0, 'b', 3], ['engineering', 4, 'b', 3], ['business', 1, 'b', 2]]],
-  ['nz-kea', 'Kea Institute of Technology', 'NZ', 'Dunedin', 'institute', false, 'Small classes, big outcomes', 1993, 5600,
-    [['it', 1, 'b', 1], ['hospitality', 0, 'b', 1], ['it', 0, 'd', 0]]],
+  ['nz-vuw', 'Victoria University of Wellington', 'Vic Wellington', 'NZ', 'Wellington', 'university', false, 'Capital-city university strong in law and design', 1897, 22000, 'https://www.wgtn.ac.nz',
+    [['design', 0, 'b', 3], ['law', 0, 'b', 3], ['media', 1, 'b', 3]]],
+  ['nz-canterbury', 'University of Canterbury', 'UC', 'NZ', 'Christchurch', 'university', false, 'Engineering heritage since 1873', 1873, 17000, 'https://www.canterbury.ac.nz',
+    [['engineering', 0, 'b', 3], ['engineering', 4, 'b', 3], ['science', 0, 'b', 2]]],
+  ['nz-otago', 'University of Otago', 'Otago', 'NZ', 'Dunedin', 'university', false, "New Zealand's first university", 1869, 21000, 'https://www.otago.ac.nz',
+    [['health', 2, 'b', 4], ['science', 1, 'b', 2], ['hospitality', 0, 'b', 1]]],
 
-  ['ru-tverskaya', 'Tverskaya State University', 'RU', 'Moscow', 'university', true, 'Classical rigour, modern practice', 1930, 45000,
-    [['health', 1, 'b', 4], ['engineering', 0, 'b', 3], ['it', 0, 'b', 3]]],
-  ['ru-neva', 'Neva State Technical University', 'RU', 'Saint Petersburg', 'university', false, 'Engineering on the Neva', 1935, 38000,
-    [['engineering', 2, 'b', 3], ['engineering', 4, 'b', 3], ['it', 1, 'b', 3]]],
-  ['ru-volga', 'Volga Federal Institute', 'RU', 'Kazan', 'institute', false, 'Affordable, accredited, ambitious', 1961, 15000,
-    [['it', 3, 'b', 2], ['business', 0, 'b', 2], ['it', 0, 'd', 0]]],
-  ['ru-novayasibir', 'Novaya Sibir State University', 'RU', 'Novosibirsk', 'university', false, 'Science city education', 1959, 26000,
-    [['health', 1, 'b', 4], ['health', 2, 'b', 3], ['engineering', 1, 'b', 2]]],
+  ['ru-msu', 'Lomonosov Moscow State University', 'MSU', 'RU', 'Moscow', 'university', true, "Russia's flagship university", 1755, 40000, 'https://www.msu.ru',
+    [['health', 1, 'b', 4], ['science', 0, 'b', 4], ['it', 0, 'b', 3]]],
+  ['ru-itmo', 'ITMO University', 'ITMO', 'RU', 'Saint Petersburg', 'university', true, 'IT-first university famed for programming wins', 1900, 14000, 'https://itmo.ru',
+    [['it', 1, 'b', 3], ['it', 4, 'b', 3], ['engineering', 2, 'b', 3]]],
+  ['ru-kfu', 'Kazan Federal University', 'KFU', 'RU', 'Kazan', 'university', false, "One of Russia's oldest universities", 1804, 45000, 'https://kpfu.ru',
+    [['it', 3, 'b', 2], ['business', 0, 'b', 2], ['education', 0, 'b', 2], ['it', 0, 'd', 0]]],
+  ['ru-nsu', 'Novosibirsk State University', 'NSU', 'RU', 'Novosibirsk', 'university', false, 'Science-city university in Akademgorodok', 1958, 8000, 'https://www.nsu.ru',
+    [['health', 1, 'b', 4], ['science', 2, 'b', 3], ['engineering', 1, 'b', 2]]],
 ];
 
 // ------------------------------------------------------------------- cities
@@ -269,11 +278,9 @@ const CITY_ATTRACTIONS = {
 };
 
 // ---------------------------------------------------------------- build data
-const institutions = INSTITUTIONS.map(([id, name, country, city, type, verified, tagline, founded, students]) => ({
-  id, name, country, city, type,
-  verifiedPartner: verified, tagline, founded, students,
-  email: `admissions@${id.split('-')[1]}.edu`,
-  phone: '+' + { AU: '61 2', MY: '60 3', TW: '886 2', GB: '44 20', SG: '65', NZ: '64 9', RU: '7 495' }[country] + ' ' + String(Math.floor(rand() * 9000000) + 1000000),
+const institutions = INSTITUTIONS.map(([id, name, short, country, city, type, verified, tagline, founded, students, website]) => ({
+  id, name, short, country, city, type,
+  verifiedPartner: verified, tagline, founded, students, website,
   images: [0, 1, 2].map((n) => `https://picsum.photos/seed/${id}-${n}/800/500`),
 }));
 
@@ -312,8 +319,8 @@ function recognitionFor(field, isMed, dest) {
 
 const courses = [];
 for (const row of INSTITUTIONS) {
-  const [instId, , country, city] = row;
-  const specs = row[9];
+  const [instId, , , country, city] = row;
+  const specs = row[11];
   const c = COUNTRIES[country];
   specs.forEach(([field, nameIdx, levelCode, band], i) => {
     const level = levelCode === 'b' ? 'bachelor' : levelCode === 'f' ? 'foundation' : 'diploma';
@@ -329,9 +336,9 @@ for (const row of INSTITUTIONS) {
       : ['TW', 'RU'].includes(country) ? 4 : 3;
     const ielts = level === 'foundation' ? 5.0 : level === 'diploma' ? 5.5 : isMed ? 7.0 : ENGLISH_BY_FIELD[field];
     const requiredDocuments = ['transcript', 'certificate', 'passport', 'english', 'statement', 'financial'];
-    if (field === 'law' || isMed) requiredDocuments.push('recommendation');
+    if (field === 'law' || field === 'education' || isMed) requiredDocuments.push('recommendation');
     if (isMed) requiredDocuments.push('health');
-    if (field === 'design' && level === 'bachelor') requiredDocuments.push('portfolio');
+    if ((field === 'design' || field === 'architecture') && level === 'bachelor') requiredDocuments.push('portfolio');
     courses.push({
       id: `${instId}-c${i + 1}`,
       institutionId: instId,
@@ -367,6 +374,15 @@ const costOfLiving = Object.entries(CITY_COL).map(([city, [country, rent, food, 
   visaFeeOneOff: COUNTRIES[country].visaFee,
 }));
 
+const TYPE_TIPS = {
+  food: ['Go hungry and stall-hop — split dishes so you can try more', 'Weeknights are cheaper and less crowded than weekends'],
+  nature: ['Golden hour is the photo moment — arrive an hour before sunset', 'Wear real shoes; the best viewpoints need a short walk'],
+  shopping: ['Student discounts are common — always show your student ID', 'Weekday mornings are the quietest time to browse'],
+  landmark: ['Book tickets online to skip the queue', 'Free walking tours usually start nearby — check the schedule'],
+  nightlife: ['Go with your intake group and split the ride home', 'Many venues run student nights early in the week'],
+  sports: ["Match-day atmosphere is worth it even if you don't follow the sport", 'Student tickets are usually the cheapest way in'],
+};
+
 const attractions = [];
 for (const inst of institutions) {
   const pool = CITY_ATTRACTIONS[inst.city];
@@ -378,6 +394,7 @@ for (const inst of institutions) {
       distanceMinutes: Math.max(4, mins + Math.floor(rand() * 11) - 5),
       description,
       image: `https://picsum.photos/seed/${inst.id}-a${i}/400/300`,
+      tips: TYPE_TIPS[type],
     });
   });
 }
@@ -413,22 +430,22 @@ const scholarships = [
 
 // --------------------------------------------------------------- ambassadors
 const AMB = [
-  ['Aina Zulkifli', 'MY', 'au-harbourview', 'Bachelor of Business Administration', 2, 'KL girl figuring out Sydney one flat white at a time. Ask me about homestays and part-time café work.', 32],
-  ['Wei Jun Tan', 'MY', 'au-southernsky', 'Bachelor of Engineering (Civil)', 3, 'UEC grad from Penang. I run the Malaysian Students Society BBQ — yes there is sambal.', 11],
-  ['Yi-Chen Lin', 'TW', 'au-harbourview', 'Bachelor of Computer Science', 2, 'Taipei → Sydney. I map every night market substitute this city has.', 44],
-  ['Marcus Lim', 'SG', 'gb-albion', 'Bachelor of Laws (LLB)', 3, 'Mooting, mock trials and meal-prepping in London on a student budget.', 12],
-  ['Putri Wijaya', 'ID', 'my-merdeka', 'Bachelor of Business Administration', 2, 'From Jakarta, at home in KL. Halal food guide and bus-route encyclopaedia.', 47],
-  ['Minh Anh Nguyen', 'VN', 'ru-tverskaya', 'Bachelor of Medicine, Bachelor of Surgery (MBBS)', 4, 'Hanoi to Moscow. Yes, anatomy in two languages is possible — DM me.', 26],
-  ['Zihan Wang', 'CN', 'gb-northgate', 'Bachelor of Software Engineering', 2, 'Chengdu hotpot loyalist reviewing every Manchester hotpot for science.', 59],
-  ['Nurul Izzah', 'MY', 'my-merdeka', 'Bachelor of Laws (LLB)', 3, 'Moot court addict. I mentor SPM leavers on scholarship essays.', 45],
-  ['Chia-Hao Chen', 'TW', 'tw-taipeibay', 'Bachelor of Computer Science', 3, 'GSAT survivor. I intern at a Hsinchu fab on weekdays.', 15],
-  ['Siti Rahmah', 'MY', 'sg-straitsintl', 'Bachelor of Commerce (Finance)', 2, 'JB → SG commuter turned hostelite. Budget spreadsheets are my love language.', 49],
-  ['Dewi Lestari', 'ID', 'sg-straitsintl', 'Bachelor of Computer Science', 3, 'Hackathon regular. I keep a list of every free food event on campus.', 25],
-  ['Thanh Pham', 'VN', 'tw-taipeibay', 'Bachelor of Design (Digital Media Design)', 2, 'Saigon skater sketching Taipei. Portfolio tips welcome.', 53],
-  ['Jia Le Ong', 'SG', 'nz-kauri', 'Bachelor of Business Administration', 2, 'Swapped MRT for hiking boots. Auckland weekends are for waterfalls.', 33],
-  ['Hui Min Teo', 'MY', 'gb-holyrood', 'Bachelor of Biomedical Science', 3, 'Lab days, Munro weekends. Edinburgh winters are survivable, promise.', 20],
-  ['Xin Yi Loh', 'MY', 'my-cyberview', 'Bachelor of Software Engineering', 2, 'Cyberjaya nights, Grab-ride playlists, and open-source everything.', 31],
-  ['Anastasia Kim', 'CN', 'ru-neva', 'Bachelor of Engineering (Electrical)', 3, 'Harbin → St Petersburg. White nights make exam season weirdly fun.', 24],
+  ['Aina Zulkifli', 'MY', 'au-monash', 'Bachelor of Business Administration', 2, 'KL girl figuring out Melbourne one flat white at a time. Ask me about homestays and part-time café work.', 32],
+  ['Wei Jun Tan', 'MY', 'au-unsw', 'Bachelor of Engineering (Civil)', 3, 'UEC grad from Penang. I run the Malaysian Students Society BBQ — yes there is sambal.', 11],
+  ['Yi-Chen Lin', 'TW', 'au-monash', 'Bachelor of Computer Science', 2, 'Taipei → Melbourne. I map every night market substitute this city has.', 44],
+  ['Marcus Lim', 'SG', 'gb-kcl', 'Bachelor of Laws (LLB)', 3, 'Mooting, mock trials and meal-prepping in London on a student budget.', 12],
+  ['Putri Wijaya', 'ID', 'my-um', 'Bachelor of Science (Mathematics & Statistics)', 2, 'From Jakarta, at home in KL. Halal food guide and bus-route encyclopaedia.', 47],
+  ['Minh Anh Nguyen', 'VN', 'ru-msu', 'Bachelor of Medicine, Bachelor of Surgery (MBBS)', 4, 'Hanoi to Moscow. Yes, anatomy in two languages is possible — DM me.', 26],
+  ['Zihan Wang', 'CN', 'gb-manchester', 'Bachelor of IT (Data Analytics)', 2, 'Chengdu hotpot loyalist reviewing every Manchester hotpot for science.', 59],
+  ['Nurul Izzah', 'MY', 'my-um', 'Bachelor of Laws (LLB)', 3, 'Moot court addict. I mentor SPM leavers on scholarship essays.', 45],
+  ['Chia-Hao Chen', 'TW', 'tw-ntu', 'Bachelor of Computer Science', 3, 'GSAT survivor. I intern at a Hsinchu fab on weekdays.', 15],
+  ['Siti Rahmah', 'MY', 'sg-nus', 'Bachelor of Commerce (Finance)', 2, 'JB → SG commuter turned hostelite. Budget spreadsheets are my love language.', 49],
+  ['Dewi Lestari', 'ID', 'sg-nus', 'Bachelor of Computer Science', 3, 'Hackathon regular. I keep a list of every free food event on campus.', 25],
+  ['Thanh Pham', 'VN', 'tw-ntu', 'Bachelor of Business Administration', 2, 'Saigon skater sketching Taipei. Portfolio tips welcome.', 53],
+  ['Jia Le Ong', 'SG', 'nz-auckland', 'Bachelor of Business Administration', 2, 'Swapped MRT for hiking boots. Auckland weekends are for waterfalls.', 33],
+  ['Hui Min Teo', 'MY', 'gb-edinburgh', 'Bachelor of Science (Physics)', 3, 'Lab days, Munro weekends. Edinburgh winters are survivable, promise.', 20],
+  ['Xin Yi Loh', 'MY', 'my-mmu', 'Bachelor of Software Engineering', 2, 'Cyberjaya nights, Grab-ride playlists, and open-source everything.', 31],
+  ['Anastasia Kim', 'CN', 'ru-itmo', 'Bachelor of Software Engineering', 3, 'Harbin → St Petersburg. White nights make exam season weirdly fun.', 24],
 ];
 const POST_TEXTS = [
   'Orientation week done! The seniors literally walk you to your first class here.',
@@ -455,8 +472,7 @@ const ambassadors = AMB.map(([name, homeCountry, institutionId, courseName, year
 
 // ----------------------------------------------------------------- community
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const shortName = (inst) => inst.name.split(' ')[0];
-const groupInsts = ['au-harbourview', 'au-southernsky', 'my-merdeka', 'tw-taipeibay', 'gb-albion', 'gb-northgate', 'sg-straitsintl', 'nz-kauri', 'ru-tverskaya'];
+const groupInsts = ['au-monash', 'au-unsw', 'my-um', 'my-taylors', 'tw-ntu', 'gb-manchester', 'sg-nus', 'nz-auckland', 'ru-itmo'];
 const intakeGroups = groupInsts.map((iid) => {
   const inst = institutions.find((x) => x.id === iid);
   const intake = nextIntakes(inst.country, 4).find((x) => x.startsWith('2027'));
@@ -465,7 +481,7 @@ const intakeGroups = groupInsts.map((iid) => {
     id: `grp-${iid}-${intake}`,
     institutionId: iid,
     intake,
-    name: `${shortName(inst)} ${MONTHS[Number(m) - 1]} 2027`,
+    name: `${inst.short} ${MONTHS[Number(m) - 1]} 2027`,
     members: 40 + Math.floor(rand() * 180),
   };
 });
@@ -512,24 +528,30 @@ const COURSEMATES_RAW = [
 const coursemates = COURSEMATES_RAW.map(([name, homeCountry, courseName, img], i) => ({
   id: `mate-${String(i + 1).padStart(2, '0')}`,
   name, homeCountry, courseName,
-  institutionId: 'au-harbourview',
+  institutionId: 'au-monash',
   intake: '2027-02',
   avatar: `https://i.pravatar.cc/200?img=${img}`,
 }));
 
 const EVENTS = [
-  ['Pre-Departure Briefing: Australia', 'Kuala Lumpur', 'MY', '2026-11-14', 'UniBridge Hub, Bukit Bintang', true, 'Visa walkthrough, packing lists and alumni Q&A for Feb 2027 intakes.'],
-  ['Sydney Newcomers Picnic', 'Sydney', 'AU', '2027-02-20', 'Royal Botanic Garden', true, 'Meet your intake in person — sausage sizzle provided.'],
-  ['Melbourne Airport Pickup Day', 'Melbourne', 'AU', '2027-02-12', 'Tullamarine Airport T2', false, 'Volunteer seniors meet every arriving flight this Saturday.'],
-  ['London Freshers Welcome', 'London', 'GB', '2027-01-18', 'Albion Student Union', true, 'SIM cards, bank sign-ups and free pizza for new internationals.'],
-  ['Taipei Language Exchange Night', 'Taipei', 'TW', '2026-10-08', "Da'an Community Hall", false, 'Practise Mandarin over bubble tea with local buddies.'],
-  ['Singapore Study Abroad Fair', 'Singapore', 'SG', '2026-09-26', 'Suntec Convention Centre', true, 'Meet 40+ institutions; on-the-spot eligibility checks by UniBridge.'],
-  ['Auckland Harbour Walk & Welcome', 'Auckland', 'NZ', '2027-02-27', 'Wynyard Quarter', false, 'Casual walk and gelato for new Kauri students.'],
-  ['Moscow Winter Survival Workshop', 'Moscow', 'RU', '2026-12-05', 'Tverskaya Campus Hall B', false, 'What to wear, how to metro, and where to buy it all.'],
+  ['Study Abroad Expo Malaysia', 'Kuala Lumpur', 'MY', '2026-10-17', 'KLCC Convention Centre', true, 'expo', 'Meet 60+ universities from 7 countries; on-the-spot eligibility checks by UniBridge.'],
+  ['Australia International Education Expo', 'Sydney', 'AU', '2026-11-07', 'ICC Sydney', true, 'expo', 'Universities, visa advisors and scholarship booths under one roof.'],
+  ['Taiwan Higher Education Fair', 'Taipei', 'TW', '2026-09-19', 'Taipei World Trade Center', false, 'expo', 'National and private universities with scholarship counters.'],
+  ['UK University Fair', 'London', 'GB', '2026-10-03', 'Business Design Centre', true, 'expo', 'Meet admissions teams from across the UK in one afternoon.'],
+  ['Singapore Study Abroad Fair', 'Singapore', 'SG', '2026-09-26', 'Suntec Convention Centre', true, 'expo', 'Meet 40+ institutions; on-the-spot eligibility checks by UniBridge.'],
+  ['New Zealand Education Expo', 'Auckland', 'NZ', '2026-09-12', 'Aotea Centre', false, 'expo', 'Universities and institutes from across New Zealand.'],
+  ['Russian Universities Expo', 'Moscow', 'RU', '2026-10-24', 'Expocentre', false, 'expo', 'State universities presenting English-taught programmes.'],
+  ['Pre-Departure Briefing: Australia', 'Kuala Lumpur', 'MY', '2026-11-14', 'UniBridge Hub, Bukit Bintang', true, 'meetup', 'Visa walkthrough, packing lists and alumni Q&A for Feb 2027 intakes.'],
+  ['Sydney Newcomers Picnic', 'Sydney', 'AU', '2027-02-20', 'Royal Botanic Garden', true, 'meetup', 'Meet your intake in person — sausage sizzle provided.'],
+  ['Melbourne Airport Pickup Day', 'Melbourne', 'AU', '2027-02-12', 'Tullamarine Airport T2', false, 'meetup', 'Volunteer seniors meet every arriving flight this Saturday.'],
+  ['London Freshers Welcome', 'London', 'GB', '2027-01-18', 'Student Central, Bloomsbury', true, 'meetup', 'SIM cards, bank sign-ups and free pizza for new internationals.'],
+  ['Taipei Language Exchange Night', 'Taipei', 'TW', '2026-10-08', "Da'an Community Hall", false, 'meetup', 'Practise Mandarin over bubble tea with local buddies.'],
+  ['Auckland Harbour Walk & Welcome', 'Auckland', 'NZ', '2027-02-27', 'Wynyard Quarter', false, 'meetup', 'Casual walk and gelato for new internationals.'],
+  ['Moscow Winter Survival Workshop', 'Moscow', 'RU', '2026-12-05', 'MSU Main Building Hall B', false, 'meetup', 'What to wear, how to metro, and where to buy it all.'],
 ];
-const events = EVENTS.map(([title, city, country, date, venue, sponsored, description], i) => ({
+const events = EVENTS.map(([title, city, country, date, venue, sponsored, kind, description], i) => ({
   id: `evt-${String(i + 1).padStart(2, '0')}`,
-  title, city, country, date, venue, sponsored, description,
+  title, city, country, date, venue, sponsored, kind, description,
   image: `https://picsum.photos/seed/evt-${i}/600/300`,
 }));
 
@@ -585,10 +607,10 @@ const seed_ = {
     },
     english: { test: 'ielts', score: 6.5 },
   },
-  savedCourseIds: ['au-harbourview-c1', 'gb-northgate-c1', 'nz-kauri-c1', 'sg-straitsintl-c1'],
+  savedCourseIds: ['au-monash-c1', 'gb-manchester-c1', 'nz-auckland-c1', 'sg-nus-c1'],
   applications: [
     {
-      id: 'app-demo-1', courseId: 'au-harbourview-c1', status: 'offer',
+      id: 'app-demo-1', courseId: 'au-monash-c1', status: 'offer',
       createdAt: '2026-06-04', updatedAt: '2026-07-28', feeWaived: true,
       history: [
         { status: 'submitted', date: '2026-06-04' },
@@ -598,7 +620,7 @@ const seed_ = {
       ],
     },
     {
-      id: 'app-demo-2', courseId: 'gb-northgate-c1', status: 'conditional_offer',
+      id: 'app-demo-2', courseId: 'gb-manchester-c1', status: 'conditional_offer',
       createdAt: '2026-06-12', updatedAt: '2026-07-15', feeWaived: true,
       history: [
         { status: 'submitted', date: '2026-06-12' },
@@ -607,7 +629,7 @@ const seed_ = {
       ],
     },
     {
-      id: 'app-demo-3', courseId: 'sg-straitsintl-c1', status: 'under_review',
+      id: 'app-demo-3', courseId: 'sg-nus-c1', status: 'under_review',
       createdAt: '2026-07-02', updatedAt: '2026-07-20', feeWaived: true,
       history: [
         { status: 'submitted', date: '2026-07-02' },
@@ -615,7 +637,7 @@ const seed_ = {
       ],
     },
   ],
-  joinedGroupIds: ['grp-au-harbourview-2027-02'],
+  joinedGroupIds: ['grp-au-monash-2027-02'],
   notifications: [
     { id: 'ntf-1', applicationId: 'app-demo-1', status: 'offer', date: '2026-07-28' },
     { id: 'ntf-2', applicationId: 'app-demo-3', status: 'under_review', date: '2026-07-20' },

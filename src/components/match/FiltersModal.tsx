@@ -23,7 +23,10 @@ export interface MatchFilters {
 
 export const DEFAULT_FILTERS: MatchFilters = { country: null, field: null, duration: 'any', budget: null };
 
-const FIELDS: FieldId[] = ['business', 'engineering', 'it', 'health', 'hospitality', 'design', 'law'];
+const FIELDS: FieldId[] = [
+  'business', 'engineering', 'it', 'health', 'science', 'law',
+  'design', 'architecture', 'media', 'education', 'hospitality',
+];
 
 interface Props {
   visible: boolean;

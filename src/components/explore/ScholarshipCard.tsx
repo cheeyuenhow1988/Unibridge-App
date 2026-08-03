@@ -79,6 +79,9 @@ export function ScholarshipCard({ scholarship }: { scholarship: Scholarship }) {
           onPress={() => toggle(scholarship.id)}
         />
       </Row>
+      {saved ? (
+        <Text variant="caption" tone="accent">{t('scholarships.nextSteps')}</Text>
+      ) : null}
     </Card>
   );
 }

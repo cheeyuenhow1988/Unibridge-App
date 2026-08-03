@@ -35,15 +35,15 @@
     }
   },
   "savedCourseIds": [
-    "au-harbourview-c1",
-    "gb-northgate-c1",
-    "nz-kauri-c1",
-    "sg-straitsintl-c1"
+    "au-monash-c1",
+    "gb-manchester-c1",
+    "nz-auckland-c1",
+    "sg-nus-c1"
   ],
   "applications": [
     {
       "id": "app-demo-1",
-      "courseId": "au-harbourview-c1",
+      "courseId": "au-monash-c1",
       "status": "offer",
       "createdAt": "2026-06-04",
       "updatedAt": "2026-07-28",
@@ -69,7 +69,7 @@
     },
     {
       "id": "app-demo-2",
-      "courseId": "gb-northgate-c1",
+      "courseId": "gb-manchester-c1",
       "status": "conditional_offer",
       "createdAt": "2026-06-12",
       "updatedAt": "2026-07-15",
@@ -91,7 +91,7 @@
     },
     {
       "id": "app-demo-3",
-      "courseId": "sg-straitsintl-c1",
+      "courseId": "sg-nus-c1",
       "status": "under_review",
       "createdAt": "2026-07-02",
       "updatedAt": "2026-07-20",
@@ -109,7 +109,7 @@
     }
   ],
   "joinedGroupIds": [
-    "grp-au-harbourview-2027-02"
+    "grp-au-monash-2027-02"
   ],
   "notifications": [
     {

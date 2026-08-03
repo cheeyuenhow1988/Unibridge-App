@@ -202,7 +202,10 @@ export default function CommunityScreen() {
                     <View style={{ padding: spacing.lg, gap: spacing.xs }}>
                       <Row style={{ justifyContent: 'space-between' }}>
                         <Text variant="sub" style={{ flex: 1 }}>{e.title}</Text>
-                        {e.sponsored ? <Badge tone="verified" label={t('community.sponsored')} /> : null}
+                        <Row gap={4}>
+                          {e.kind === 'expo' ? <Badge tone="accent" icon="business" label={t('community.expo')} /> : null}
+                          {e.sponsored ? <Badge tone="verified" label={t('community.sponsored')} /> : null}
+                        </Row>
                       </Row>
                       <Text variant="caption" tone="secondary">
                         {FLAGS[e.country]} {e.city} · {e.date} · {e.venue}

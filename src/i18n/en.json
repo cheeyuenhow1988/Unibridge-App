@@ -73,7 +73,11 @@
     "health": "Medicine & Health",
     "hospitality": "Hospitality",
     "design": "Design",
-    "law": "Law"
+    "law": "Law",
+    "science": "Science",
+    "media": "Media & Communication",
+    "architecture": "Architecture",
+    "education": "Education"
   },
   "levels": {
     "foundation": "Foundation",
@@ -227,13 +231,21 @@
   "institution": {
     "coursesTitle": "Courses",
     "contact": "Contact",
-    "email": "Email",
-    "phone": "Call",
+    "website": "Official website",
+    "socialNote": "Official WhatsApp, Telegram and Facebook channels connect at partner launch — for now these open UniBridge chat with admissions.",
+    "indicative": "Real institution. Tuition, entry requirements and recognition shown here are indicative prototype data — always verify on the official website.",
     "studentsHere": "Students here",
     "aroundCampus": "Around campus",
     "founded": "Founded {{year}}",
     "students": "{{count}} students",
     "cityCountry": "{{city}}, {{country}}"
+  },
+  "attraction": {
+    "whatToDo": "What to do",
+    "openMaps": "Open in Google Maps",
+    "shareSpot": "Share this spot",
+    "photoNote": "Preview photo — open Maps for real views.",
+    "fromCampus": "{{count}} min from campus"
   },
   "course": {
     "overview": "Overview",
@@ -277,6 +289,7 @@
     "eligibility": "Eligibility",
     "addToApplications": "Add to my applications",
     "added": "Added",
+    "nextSteps": "Attached automatically when you apply to a matching course through UniBridge — no separate application needed.",
     "anyNationality": "All nationalities",
     "anyField": "All fields",
     "anyCountry": "All destinations",
@@ -401,6 +414,7 @@
     "rsvp": "RSVP",
     "rsvped": "Going",
     "sponsored": "Sponsored",
+    "expo": "Expo",
     "emptyGroups": "Join an intake group when you accept an offer — or browse below.",
     "emptyFeed": "Ambassador posts will appear here.",
     "emptyMates": "Once you accept an offer, classmates from your intake show up here.",
@@ -435,7 +449,6 @@
     "themeLight": "Light",
     "themeDark": "Dark",
     "language": "Language",
-    "english_lang": "English",
     "documentVault": "Document Vault",
     "savedCourses": "Saved courses",
     "savedEmpty": "Courses you save appear here.",

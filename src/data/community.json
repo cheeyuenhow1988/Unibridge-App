@@ -1,641 +1,641 @@
 {
   "intakeGroups": [
     {
-      "id": "grp-au-harbourview-2027-02",
-      "institutionId": "au-harbourview",
+      "id": "grp-au-monash-2027-02",
+      "institutionId": "au-monash",
       "intake": "2027-02",
-      "name": "Harbourview Feb 2027",
-      "members": 95
+      "name": "Monash Feb 2027",
+      "members": 67
     },
     {
-      "id": "grp-au-southernsky-2027-02",
-      "institutionId": "au-southernsky",
+      "id": "grp-au-unsw-2027-02",
+      "institutionId": "au-unsw",
       "intake": "2027-02",
-      "name": "Southern Feb 2027",
-      "members": 66
+      "name": "UNSW Feb 2027",
+      "members": 105
     },
     {
-      "id": "grp-my-merdeka-2027-01",
-      "institutionId": "my-merdeka",
+      "id": "grp-my-um-2027-01",
+      "institutionId": "my-um",
       "intake": "2027-01",
-      "name": "Merdeka Jan 2027",
-      "members": 130
+      "name": "UM Jan 2027",
+      "members": 43
     },
     {
-      "id": "grp-tw-taipeibay-2027-02",
-      "institutionId": "tw-taipeibay",
+      "id": "grp-my-taylors-2027-01",
+      "institutionId": "my-taylors",
+      "intake": "2027-01",
+      "name": "Taylor's Jan 2027",
+      "members": 55
+    },
+    {
+      "id": "grp-tw-ntu-2027-02",
+      "institutionId": "tw-ntu",
       "intake": "2027-02",
-      "name": "Taipei Feb 2027",
-      "members": 88
-    },
-    {
-      "id": "grp-gb-albion-2027-01",
-      "institutionId": "gb-albion",
-      "intake": "2027-01",
-      "name": "Albion Jan 2027",
-      "members": 135
-    },
-    {
-      "id": "grp-gb-northgate-2027-01",
-      "institutionId": "gb-northgate",
-      "intake": "2027-01",
-      "name": "Northgate Jan 2027",
-      "members": 138
-    },
-    {
-      "id": "grp-sg-straitsintl-2027-01",
-      "institutionId": "sg-straitsintl",
-      "intake": "2027-01",
-      "name": "Straits Jan 2027",
+      "name": "NTU Feb 2027",
       "members": 156
     },
     {
-      "id": "grp-nz-kauri-2027-02",
-      "institutionId": "nz-kauri",
-      "intake": "2027-02",
-      "name": "Kauri Feb 2027",
-      "members": 118
+      "id": "grp-gb-manchester-2027-01",
+      "institutionId": "gb-manchester",
+      "intake": "2027-01",
+      "name": "Manchester Jan 2027",
+      "members": 170
     },
     {
-      "id": "grp-ru-tverskaya-2027-02",
-      "institutionId": "ru-tverskaya",
+      "id": "grp-sg-nus-2027-01",
+      "institutionId": "sg-nus",
+      "intake": "2027-01",
+      "name": "NUS Jan 2027",
+      "members": 212
+    },
+    {
+      "id": "grp-nz-auckland-2027-02",
+      "institutionId": "nz-auckland",
       "intake": "2027-02",
-      "name": "Tverskaya Feb 2027",
-      "members": 64
+      "name": "Auckland Feb 2027",
+      "members": 198
+    },
+    {
+      "id": "grp-ru-itmo-2027-02",
+      "institutionId": "ru-itmo",
+      "intake": "2027-02",
+      "name": "ITMO Feb 2027",
+      "members": 123
     }
   ],
   "groupMessages": [
     {
-      "id": "grp-au-harbourview-2027-02-m1",
-      "groupId": "grp-au-harbourview-2027-02",
+      "id": "grp-au-monash-2027-02-m1",
+      "groupId": "grp-au-monash-2027-02",
       "author": "Aina",
       "avatar": "https://i.pravatar.cc/100?img=32",
       "text": "Hi everyone! Just accepted my offer — see you at orientation! 🎉",
       "time": "2026-07-18T09:00:00Z"
     },
     {
-      "id": "grp-au-harbourview-2027-02-m2",
-      "groupId": "grp-au-harbourview-2027-02",
+      "id": "grp-au-monash-2027-02-m2",
+      "groupId": "grp-au-monash-2027-02",
       "author": "Marcus",
       "avatar": "https://i.pravatar.cc/100?img=12",
       "text": "Anyone else flying in from KL? Thinking of booking the same flight.",
       "time": "2026-07-19T12:17:00Z"
     },
     {
-      "id": "grp-au-harbourview-2027-02-m3",
-      "groupId": "grp-au-harbourview-2027-02",
+      "id": "grp-au-monash-2027-02-m3",
+      "groupId": "grp-au-monash-2027-02",
       "author": "Putri",
       "avatar": "https://i.pravatar.cc/100?img=47",
       "text": "Has anyone sorted accommodation yet? Looking at on-campus vs shared flat.",
       "time": "2026-07-20T15:34:00Z"
     },
     {
-      "id": "grp-au-harbourview-2027-02-m4",
-      "groupId": "grp-au-harbourview-2027-02",
+      "id": "grp-au-monash-2027-02-m4",
+      "groupId": "grp-au-monash-2027-02",
       "author": "Wei Jun",
       "avatar": "https://i.pravatar.cc/100?img=11",
       "text": "The visa appointment took me 20 minutes, bring printed bank statements!",
       "time": "2026-07-21T18:51:00Z"
     },
     {
-      "id": "grp-au-harbourview-2027-02-m5",
-      "groupId": "grp-au-harbourview-2027-02",
+      "id": "grp-au-monash-2027-02-m5",
+      "groupId": "grp-au-monash-2027-02",
       "author": "Yi-Chen",
       "avatar": "https://i.pravatar.cc/100?img=44",
       "text": "Is anyone arriving a week early? Planning a city walk before orientation.",
       "time": "2026-07-22T09:08:00Z"
     },
     {
-      "id": "grp-au-harbourview-2027-02-m6",
-      "groupId": "grp-au-harbourview-2027-02",
+      "id": "grp-au-monash-2027-02-m6",
+      "groupId": "grp-au-monash-2027-02",
       "author": "Minh Anh",
       "avatar": "https://i.pravatar.cc/100?img=26",
       "text": "Pro tip from a senior: buy your transport card at the airport, big queue in town.",
       "time": "2026-07-23T12:25:00Z"
     },
     {
-      "id": "grp-au-harbourview-2027-02-m7",
-      "groupId": "grp-au-harbourview-2027-02",
+      "id": "grp-au-monash-2027-02-m7",
+      "groupId": "grp-au-monash-2027-02",
       "author": "Zihan",
       "avatar": "https://i.pravatar.cc/100?img=59",
       "text": "Just got my CoE today!! It suddenly feels real 😭",
       "time": "2026-07-24T15:42:00Z"
     },
     {
-      "id": "grp-au-harbourview-2027-02-m8",
-      "groupId": "grp-au-harbourview-2027-02",
+      "id": "grp-au-monash-2027-02-m8",
+      "groupId": "grp-au-monash-2027-02",
       "author": "Siti",
       "avatar": "https://i.pravatar.cc/100?img=49",
       "text": "Making a spreadsheet of who lands when — drop your flight if you want airport buddies.",
       "time": "2026-07-25T18:59:00Z"
     },
     {
-      "id": "grp-au-southernsky-2027-02-m1",
-      "groupId": "grp-au-southernsky-2027-02",
+      "id": "grp-au-unsw-2027-02-m1",
+      "groupId": "grp-au-unsw-2027-02",
       "author": "Marcus",
       "avatar": "https://i.pravatar.cc/100?img=12",
       "text": "The visa appointment took me 20 minutes, bring printed bank statements!",
       "time": "2026-07-18T10:00:00Z"
     },
     {
-      "id": "grp-au-southernsky-2027-02-m2",
-      "groupId": "grp-au-southernsky-2027-02",
+      "id": "grp-au-unsw-2027-02-m2",
+      "groupId": "grp-au-unsw-2027-02",
       "author": "Putri",
       "avatar": "https://i.pravatar.cc/100?img=47",
       "text": "Is anyone arriving a week early? Planning a city walk before orientation.",
       "time": "2026-07-19T13:17:00Z"
     },
     {
-      "id": "grp-au-southernsky-2027-02-m3",
-      "groupId": "grp-au-southernsky-2027-02",
+      "id": "grp-au-unsw-2027-02-m3",
+      "groupId": "grp-au-unsw-2027-02",
       "author": "Wei Jun",
       "avatar": "https://i.pravatar.cc/100?img=11",
       "text": "Pro tip from a senior: buy your transport card at the airport, big queue in town.",
       "time": "2026-07-20T16:34:00Z"
     },
     {
-      "id": "grp-au-southernsky-2027-02-m4",
-      "groupId": "grp-au-southernsky-2027-02",
+      "id": "grp-au-unsw-2027-02-m4",
+      "groupId": "grp-au-unsw-2027-02",
       "author": "Yi-Chen",
       "avatar": "https://i.pravatar.cc/100?img=44",
       "text": "Just got my CoE today!! It suddenly feels real 😭",
       "time": "2026-07-21T19:51:00Z"
     },
     {
-      "id": "grp-au-southernsky-2027-02-m5",
-      "groupId": "grp-au-southernsky-2027-02",
+      "id": "grp-au-unsw-2027-02-m5",
+      "groupId": "grp-au-unsw-2027-02",
       "author": "Minh Anh",
       "avatar": "https://i.pravatar.cc/100?img=26",
       "text": "Making a spreadsheet of who lands when — drop your flight if you want airport buddies.",
       "time": "2026-07-22T10:08:00Z"
     },
     {
-      "id": "grp-au-southernsky-2027-02-m6",
-      "groupId": "grp-au-southernsky-2027-02",
+      "id": "grp-au-unsw-2027-02-m6",
+      "groupId": "grp-au-unsw-2027-02",
       "author": "Zihan",
       "avatar": "https://i.pravatar.cc/100?img=59",
       "text": "Which bank is everyone using? Heard the student account has no fees.",
       "time": "2026-07-23T13:25:00Z"
     },
     {
-      "id": "grp-au-southernsky-2027-02-m7",
-      "groupId": "grp-au-southernsky-2027-02",
+      "id": "grp-au-unsw-2027-02-m7",
+      "groupId": "grp-au-unsw-2027-02",
       "author": "Siti",
       "avatar": "https://i.pravatar.cc/100?img=49",
       "text": "Reminder: the uni housing portal opens Monday 9am, alarms on!",
       "time": "2026-07-24T16:42:00Z"
     },
     {
-      "id": "grp-au-southernsky-2027-02-m8",
-      "groupId": "grp-au-southernsky-2027-02",
+      "id": "grp-au-unsw-2027-02-m8",
+      "groupId": "grp-au-unsw-2027-02",
       "author": "Jia Le",
       "avatar": "https://i.pravatar.cc/100?img=33",
       "text": "Hi everyone! Just accepted my offer — see you at orientation! 🎉",
       "time": "2026-07-25T19:59:00Z"
     },
     {
-      "id": "grp-my-merdeka-2027-01-m1",
-      "groupId": "grp-my-merdeka-2027-01",
+      "id": "grp-my-um-2027-01-m1",
+      "groupId": "grp-my-um-2027-01",
       "author": "Putri",
       "avatar": "https://i.pravatar.cc/100?img=47",
       "text": "Just got my CoE today!! It suddenly feels real 😭",
       "time": "2026-07-18T11:00:00Z"
     },
     {
-      "id": "grp-my-merdeka-2027-01-m2",
-      "groupId": "grp-my-merdeka-2027-01",
+      "id": "grp-my-um-2027-01-m2",
+      "groupId": "grp-my-um-2027-01",
       "author": "Wei Jun",
       "avatar": "https://i.pravatar.cc/100?img=11",
       "text": "Making a spreadsheet of who lands when — drop your flight if you want airport buddies.",
       "time": "2026-07-19T14:17:00Z"
     },
     {
-      "id": "grp-my-merdeka-2027-01-m3",
-      "groupId": "grp-my-merdeka-2027-01",
+      "id": "grp-my-um-2027-01-m3",
+      "groupId": "grp-my-um-2027-01",
       "author": "Yi-Chen",
       "avatar": "https://i.pravatar.cc/100?img=44",
       "text": "Which bank is everyone using? Heard the student account has no fees.",
       "time": "2026-07-20T17:34:00Z"
     },
     {
-      "id": "grp-my-merdeka-2027-01-m4",
-      "groupId": "grp-my-merdeka-2027-01",
+      "id": "grp-my-um-2027-01-m4",
+      "groupId": "grp-my-um-2027-01",
       "author": "Minh Anh",
       "avatar": "https://i.pravatar.cc/100?img=26",
       "text": "Reminder: the uni housing portal opens Monday 9am, alarms on!",
       "time": "2026-07-21T20:51:00Z"
     },
     {
-      "id": "grp-my-merdeka-2027-01-m5",
-      "groupId": "grp-my-merdeka-2027-01",
+      "id": "grp-my-um-2027-01-m5",
+      "groupId": "grp-my-um-2027-01",
       "author": "Zihan",
       "avatar": "https://i.pravatar.cc/100?img=59",
       "text": "Hi everyone! Just accepted my offer — see you at orientation! 🎉",
       "time": "2026-07-22T11:08:00Z"
     },
     {
-      "id": "grp-my-merdeka-2027-01-m6",
-      "groupId": "grp-my-merdeka-2027-01",
+      "id": "grp-my-um-2027-01-m6",
+      "groupId": "grp-my-um-2027-01",
       "author": "Siti",
       "avatar": "https://i.pravatar.cc/100?img=49",
       "text": "Anyone else flying in from KL? Thinking of booking the same flight.",
       "time": "2026-07-23T14:25:00Z"
     },
     {
-      "id": "grp-my-merdeka-2027-01-m7",
-      "groupId": "grp-my-merdeka-2027-01",
+      "id": "grp-my-um-2027-01-m7",
+      "groupId": "grp-my-um-2027-01",
       "author": "Jia Le",
       "avatar": "https://i.pravatar.cc/100?img=33",
       "text": "Has anyone sorted accommodation yet? Looking at on-campus vs shared flat.",
       "time": "2026-07-24T17:42:00Z"
     },
     {
-      "id": "grp-my-merdeka-2027-01-m8",
-      "groupId": "grp-my-merdeka-2027-01",
+      "id": "grp-my-um-2027-01-m8",
+      "groupId": "grp-my-um-2027-01",
       "author": "Hui Min",
       "avatar": "https://i.pravatar.cc/100?img=20",
       "text": "The visa appointment took me 20 minutes, bring printed bank statements!",
       "time": "2026-07-25T20:59:00Z"
     },
     {
-      "id": "grp-tw-taipeibay-2027-02-m1",
-      "groupId": "grp-tw-taipeibay-2027-02",
+      "id": "grp-my-taylors-2027-01-m1",
+      "groupId": "grp-my-taylors-2027-01",
       "author": "Wei Jun",
       "avatar": "https://i.pravatar.cc/100?img=11",
       "text": "Reminder: the uni housing portal opens Monday 9am, alarms on!",
       "time": "2026-07-18T12:00:00Z"
     },
     {
-      "id": "grp-tw-taipeibay-2027-02-m2",
-      "groupId": "grp-tw-taipeibay-2027-02",
+      "id": "grp-my-taylors-2027-01-m2",
+      "groupId": "grp-my-taylors-2027-01",
       "author": "Yi-Chen",
       "avatar": "https://i.pravatar.cc/100?img=44",
       "text": "Hi everyone! Just accepted my offer — see you at orientation! 🎉",
       "time": "2026-07-19T15:17:00Z"
     },
     {
-      "id": "grp-tw-taipeibay-2027-02-m3",
-      "groupId": "grp-tw-taipeibay-2027-02",
+      "id": "grp-my-taylors-2027-01-m3",
+      "groupId": "grp-my-taylors-2027-01",
       "author": "Minh Anh",
       "avatar": "https://i.pravatar.cc/100?img=26",
       "text": "Anyone else flying in from KL? Thinking of booking the same flight.",
       "time": "2026-07-20T18:34:00Z"
     },
     {
-      "id": "grp-tw-taipeibay-2027-02-m4",
-      "groupId": "grp-tw-taipeibay-2027-02",
+      "id": "grp-my-taylors-2027-01-m4",
+      "groupId": "grp-my-taylors-2027-01",
       "author": "Zihan",
       "avatar": "https://i.pravatar.cc/100?img=59",
       "text": "Has anyone sorted accommodation yet? Looking at on-campus vs shared flat.",
       "time": "2026-07-21T09:51:00Z"
     },
     {
-      "id": "grp-tw-taipeibay-2027-02-m5",
-      "groupId": "grp-tw-taipeibay-2027-02",
+      "id": "grp-my-taylors-2027-01-m5",
+      "groupId": "grp-my-taylors-2027-01",
       "author": "Siti",
       "avatar": "https://i.pravatar.cc/100?img=49",
       "text": "The visa appointment took me 20 minutes, bring printed bank statements!",
       "time": "2026-07-22T12:08:00Z"
     },
     {
-      "id": "grp-tw-taipeibay-2027-02-m6",
-      "groupId": "grp-tw-taipeibay-2027-02",
+      "id": "grp-my-taylors-2027-01-m6",
+      "groupId": "grp-my-taylors-2027-01",
       "author": "Jia Le",
       "avatar": "https://i.pravatar.cc/100?img=33",
       "text": "Is anyone arriving a week early? Planning a city walk before orientation.",
       "time": "2026-07-23T15:25:00Z"
     },
     {
-      "id": "grp-tw-taipeibay-2027-02-m7",
-      "groupId": "grp-tw-taipeibay-2027-02",
+      "id": "grp-my-taylors-2027-01-m7",
+      "groupId": "grp-my-taylors-2027-01",
       "author": "Hui Min",
       "avatar": "https://i.pravatar.cc/100?img=20",
       "text": "Pro tip from a senior: buy your transport card at the airport, big queue in town.",
       "time": "2026-07-24T18:42:00Z"
     },
     {
-      "id": "grp-tw-taipeibay-2027-02-m8",
-      "groupId": "grp-tw-taipeibay-2027-02",
+      "id": "grp-my-taylors-2027-01-m8",
+      "groupId": "grp-my-taylors-2027-01",
       "author": "Aina",
       "avatar": "https://i.pravatar.cc/100?img=32",
       "text": "Just got my CoE today!! It suddenly feels real 😭",
       "time": "2026-07-25T09:59:00Z"
     },
     {
-      "id": "grp-gb-albion-2027-01-m1",
-      "groupId": "grp-gb-albion-2027-01",
+      "id": "grp-tw-ntu-2027-02-m1",
+      "groupId": "grp-tw-ntu-2027-02",
       "author": "Yi-Chen",
       "avatar": "https://i.pravatar.cc/100?img=44",
       "text": "Has anyone sorted accommodation yet? Looking at on-campus vs shared flat.",
       "time": "2026-07-18T13:00:00Z"
     },
     {
-      "id": "grp-gb-albion-2027-01-m2",
-      "groupId": "grp-gb-albion-2027-01",
+      "id": "grp-tw-ntu-2027-02-m2",
+      "groupId": "grp-tw-ntu-2027-02",
       "author": "Minh Anh",
       "avatar": "https://i.pravatar.cc/100?img=26",
       "text": "The visa appointment took me 20 minutes, bring printed bank statements!",
       "time": "2026-07-19T16:17:00Z"
     },
     {
-      "id": "grp-gb-albion-2027-01-m3",
-      "groupId": "grp-gb-albion-2027-01",
+      "id": "grp-tw-ntu-2027-02-m3",
+      "groupId": "grp-tw-ntu-2027-02",
       "author": "Zihan",
       "avatar": "https://i.pravatar.cc/100?img=59",
       "text": "Is anyone arriving a week early? Planning a city walk before orientation.",
       "time": "2026-07-20T19:34:00Z"
     },
     {
-      "id": "grp-gb-albion-2027-01-m4",
-      "groupId": "grp-gb-albion-2027-01",
+      "id": "grp-tw-ntu-2027-02-m4",
+      "groupId": "grp-tw-ntu-2027-02",
       "author": "Siti",
       "avatar": "https://i.pravatar.cc/100?img=49",
       "text": "Pro tip from a senior: buy your transport card at the airport, big queue in town.",
       "time": "2026-07-21T10:51:00Z"
     },
     {
-      "id": "grp-gb-albion-2027-01-m5",
-      "groupId": "grp-gb-albion-2027-01",
+      "id": "grp-tw-ntu-2027-02-m5",
+      "groupId": "grp-tw-ntu-2027-02",
       "author": "Jia Le",
       "avatar": "https://i.pravatar.cc/100?img=33",
       "text": "Just got my CoE today!! It suddenly feels real 😭",
       "time": "2026-07-22T13:08:00Z"
     },
     {
-      "id": "grp-gb-albion-2027-01-m6",
-      "groupId": "grp-gb-albion-2027-01",
+      "id": "grp-tw-ntu-2027-02-m6",
+      "groupId": "grp-tw-ntu-2027-02",
       "author": "Hui Min",
       "avatar": "https://i.pravatar.cc/100?img=20",
       "text": "Making a spreadsheet of who lands when — drop your flight if you want airport buddies.",
       "time": "2026-07-23T16:25:00Z"
     },
     {
-      "id": "grp-gb-albion-2027-01-m7",
-      "groupId": "grp-gb-albion-2027-01",
+      "id": "grp-tw-ntu-2027-02-m7",
+      "groupId": "grp-tw-ntu-2027-02",
       "author": "Aina",
       "avatar": "https://i.pravatar.cc/100?img=32",
       "text": "Which bank is everyone using? Heard the student account has no fees.",
       "time": "2026-07-24T19:42:00Z"
     },
     {
-      "id": "grp-gb-albion-2027-01-m8",
-      "groupId": "grp-gb-albion-2027-01",
+      "id": "grp-tw-ntu-2027-02-m8",
+      "groupId": "grp-tw-ntu-2027-02",
       "author": "Marcus",
       "avatar": "https://i.pravatar.cc/100?img=12",
       "text": "Reminder: the uni housing portal opens Monday 9am, alarms on!",
       "time": "2026-07-25T10:59:00Z"
     },
     {
-      "id": "grp-gb-northgate-2027-01-m1",
-      "groupId": "grp-gb-northgate-2027-01",
+      "id": "grp-gb-manchester-2027-01-m1",
+      "groupId": "grp-gb-manchester-2027-01",
       "author": "Minh Anh",
       "avatar": "https://i.pravatar.cc/100?img=26",
       "text": "Pro tip from a senior: buy your transport card at the airport, big queue in town.",
       "time": "2026-07-18T14:00:00Z"
     },
     {
-      "id": "grp-gb-northgate-2027-01-m2",
-      "groupId": "grp-gb-northgate-2027-01",
+      "id": "grp-gb-manchester-2027-01-m2",
+      "groupId": "grp-gb-manchester-2027-01",
       "author": "Zihan",
       "avatar": "https://i.pravatar.cc/100?img=59",
       "text": "Just got my CoE today!! It suddenly feels real 😭",
       "time": "2026-07-19T17:17:00Z"
     },
     {
-      "id": "grp-gb-northgate-2027-01-m3",
-      "groupId": "grp-gb-northgate-2027-01",
+      "id": "grp-gb-manchester-2027-01-m3",
+      "groupId": "grp-gb-manchester-2027-01",
       "author": "Siti",
       "avatar": "https://i.pravatar.cc/100?img=49",
       "text": "Making a spreadsheet of who lands when — drop your flight if you want airport buddies.",
       "time": "2026-07-20T20:34:00Z"
     },
     {
-      "id": "grp-gb-northgate-2027-01-m4",
-      "groupId": "grp-gb-northgate-2027-01",
+      "id": "grp-gb-manchester-2027-01-m4",
+      "groupId": "grp-gb-manchester-2027-01",
       "author": "Jia Le",
       "avatar": "https://i.pravatar.cc/100?img=33",
       "text": "Which bank is everyone using? Heard the student account has no fees.",
       "time": "2026-07-21T11:51:00Z"
     },
     {
-      "id": "grp-gb-northgate-2027-01-m5",
-      "groupId": "grp-gb-northgate-2027-01",
+      "id": "grp-gb-manchester-2027-01-m5",
+      "groupId": "grp-gb-manchester-2027-01",
       "author": "Hui Min",
       "avatar": "https://i.pravatar.cc/100?img=20",
       "text": "Reminder: the uni housing portal opens Monday 9am, alarms on!",
       "time": "2026-07-22T14:08:00Z"
     },
     {
-      "id": "grp-gb-northgate-2027-01-m6",
-      "groupId": "grp-gb-northgate-2027-01",
+      "id": "grp-gb-manchester-2027-01-m6",
+      "groupId": "grp-gb-manchester-2027-01",
       "author": "Aina",
       "avatar": "https://i.pravatar.cc/100?img=32",
       "text": "Hi everyone! Just accepted my offer — see you at orientation! 🎉",
       "time": "2026-07-23T17:25:00Z"
     },
     {
-      "id": "grp-gb-northgate-2027-01-m7",
-      "groupId": "grp-gb-northgate-2027-01",
+      "id": "grp-gb-manchester-2027-01-m7",
+      "groupId": "grp-gb-manchester-2027-01",
       "author": "Marcus",
       "avatar": "https://i.pravatar.cc/100?img=12",
       "text": "Anyone else flying in from KL? Thinking of booking the same flight.",
       "time": "2026-07-24T20:42:00Z"
     },
     {
-      "id": "grp-gb-northgate-2027-01-m8",
-      "groupId": "grp-gb-northgate-2027-01",
+      "id": "grp-gb-manchester-2027-01-m8",
+      "groupId": "grp-gb-manchester-2027-01",
       "author": "Putri",
       "avatar": "https://i.pravatar.cc/100?img=47",
       "text": "Has anyone sorted accommodation yet? Looking at on-campus vs shared flat.",
       "time": "2026-07-25T11:59:00Z"
     },
     {
-      "id": "grp-sg-straitsintl-2027-01-m1",
-      "groupId": "grp-sg-straitsintl-2027-01",
+      "id": "grp-sg-nus-2027-01-m1",
+      "groupId": "grp-sg-nus-2027-01",
       "author": "Zihan",
       "avatar": "https://i.pravatar.cc/100?img=59",
       "text": "Which bank is everyone using? Heard the student account has no fees.",
       "time": "2026-07-18T15:00:00Z"
     },
     {
-      "id": "grp-sg-straitsintl-2027-01-m2",
-      "groupId": "grp-sg-straitsintl-2027-01",
+      "id": "grp-sg-nus-2027-01-m2",
+      "groupId": "grp-sg-nus-2027-01",
       "author": "Siti",
       "avatar": "https://i.pravatar.cc/100?img=49",
       "text": "Reminder: the uni housing portal opens Monday 9am, alarms on!",
       "time": "2026-07-19T18:17:00Z"
     },
     {
-      "id": "grp-sg-straitsintl-2027-01-m3",
-      "groupId": "grp-sg-straitsintl-2027-01",
+      "id": "grp-sg-nus-2027-01-m3",
+      "groupId": "grp-sg-nus-2027-01",
       "author": "Jia Le",
       "avatar": "https://i.pravatar.cc/100?img=33",
       "text": "Hi everyone! Just accepted my offer — see you at orientation! 🎉",
       "time": "2026-07-20T09:34:00Z"
     },
     {
-      "id": "grp-sg-straitsintl-2027-01-m4",
-      "groupId": "grp-sg-straitsintl-2027-01",
+      "id": "grp-sg-nus-2027-01-m4",
+      "groupId": "grp-sg-nus-2027-01",
       "author": "Hui Min",
       "avatar": "https://i.pravatar.cc/100?img=20",
       "text": "Anyone else flying in from KL? Thinking of booking the same flight.",
       "time": "2026-07-21T12:51:00Z"
     },
     {
-      "id": "grp-sg-straitsintl-2027-01-m5",
-      "groupId": "grp-sg-straitsintl-2027-01",
+      "id": "grp-sg-nus-2027-01-m5",
+      "groupId": "grp-sg-nus-2027-01",
       "author": "Aina",
       "avatar": "https://i.pravatar.cc/100?img=32",
       "text": "Has anyone sorted accommodation yet? Looking at on-campus vs shared flat.",
       "time": "2026-07-22T15:08:00Z"
     },
     {
-      "id": "grp-sg-straitsintl-2027-01-m6",
-      "groupId": "grp-sg-straitsintl-2027-01",
+      "id": "grp-sg-nus-2027-01-m6",
+      "groupId": "grp-sg-nus-2027-01",
       "author": "Marcus",
       "avatar": "https://i.pravatar.cc/100?img=12",
       "text": "The visa appointment took me 20 minutes, bring printed bank statements!",
       "time": "2026-07-23T18:25:00Z"
     },
     {
-      "id": "grp-sg-straitsintl-2027-01-m7",
-      "groupId": "grp-sg-straitsintl-2027-01",
+      "id": "grp-sg-nus-2027-01-m7",
+      "groupId": "grp-sg-nus-2027-01",
       "author": "Putri",
       "avatar": "https://i.pravatar.cc/100?img=47",
       "text": "Is anyone arriving a week early? Planning a city walk before orientation.",
       "time": "2026-07-24T09:42:00Z"
     },
     {
-      "id": "grp-sg-straitsintl-2027-01-m8",
-      "groupId": "grp-sg-straitsintl-2027-01",
+      "id": "grp-sg-nus-2027-01-m8",
+      "groupId": "grp-sg-nus-2027-01",
       "author": "Wei Jun",
       "avatar": "https://i.pravatar.cc/100?img=11",
       "text": "Pro tip from a senior: buy your transport card at the airport, big queue in town.",
       "time": "2026-07-25T12:59:00Z"
     },
     {
-      "id": "grp-nz-kauri-2027-02-m1",
-      "groupId": "grp-nz-kauri-2027-02",
+      "id": "grp-nz-auckland-2027-02-m1",
+      "groupId": "grp-nz-auckland-2027-02",
       "author": "Siti",
       "avatar": "https://i.pravatar.cc/100?img=49",
       "text": "Anyone else flying in from KL? Thinking of booking the same flight.",
       "time": "2026-07-18T16:00:00Z"
     },
     {
-      "id": "grp-nz-kauri-2027-02-m2",
-      "groupId": "grp-nz-kauri-2027-02",
+      "id": "grp-nz-auckland-2027-02-m2",
+      "groupId": "grp-nz-auckland-2027-02",
       "author": "Jia Le",
       "avatar": "https://i.pravatar.cc/100?img=33",
       "text": "Has anyone sorted accommodation yet? Looking at on-campus vs shared flat.",
       "time": "2026-07-19T19:17:00Z"
     },
     {
-      "id": "grp-nz-kauri-2027-02-m3",
-      "groupId": "grp-nz-kauri-2027-02",
+      "id": "grp-nz-auckland-2027-02-m3",
+      "groupId": "grp-nz-auckland-2027-02",
       "author": "Hui Min",
       "avatar": "https://i.pravatar.cc/100?img=20",
       "text": "The visa appointment took me 20 minutes, bring printed bank statements!",
       "time": "2026-07-20T10:34:00Z"
     },
     {
-      "id": "grp-nz-kauri-2027-02-m4",
-      "groupId": "grp-nz-kauri-2027-02",
+      "id": "grp-nz-auckland-2027-02-m4",
+      "groupId": "grp-nz-auckland-2027-02",
       "author": "Aina",
       "avatar": "https://i.pravatar.cc/100?img=32",
       "text": "Is anyone arriving a week early? Planning a city walk before orientation.",
       "time": "2026-07-21T13:51:00Z"
     },
     {
-      "id": "grp-nz-kauri-2027-02-m5",
-      "groupId": "grp-nz-kauri-2027-02",
+      "id": "grp-nz-auckland-2027-02-m5",
+      "groupId": "grp-nz-auckland-2027-02",
       "author": "Marcus",
       "avatar": "https://i.pravatar.cc/100?img=12",
       "text": "Pro tip from a senior: buy your transport card at the airport, big queue in town.",
       "time": "2026-07-22T16:08:00Z"
     },
     {
-      "id": "grp-nz-kauri-2027-02-m6",
-      "groupId": "grp-nz-kauri-2027-02",
+      "id": "grp-nz-auckland-2027-02-m6",
+      "groupId": "grp-nz-auckland-2027-02",
       "author": "Putri",
       "avatar": "https://i.pravatar.cc/100?img=47",
       "text": "Just got my CoE today!! It suddenly feels real 😭",
       "time": "2026-07-23T19:25:00Z"
     },
     {
-      "id": "grp-nz-kauri-2027-02-m7",
-      "groupId": "grp-nz-kauri-2027-02",
+      "id": "grp-nz-auckland-2027-02-m7",
+      "groupId": "grp-nz-auckland-2027-02",
       "author": "Wei Jun",
       "avatar": "https://i.pravatar.cc/100?img=11",
       "text": "Making a spreadsheet of who lands when — drop your flight if you want airport buddies.",
       "time": "2026-07-24T10:42:00Z"
     },
     {
-      "id": "grp-nz-kauri-2027-02-m8",
-      "groupId": "grp-nz-kauri-2027-02",
+      "id": "grp-nz-auckland-2027-02-m8",
+      "groupId": "grp-nz-auckland-2027-02",
       "author": "Yi-Chen",
       "avatar": "https://i.pravatar.cc/100?img=44",
       "text": "Which bank is everyone using? Heard the student account has no fees.",
       "time": "2026-07-25T13:59:00Z"
     },
     {
-      "id": "grp-ru-tverskaya-2027-02-m1",
-      "groupId": "grp-ru-tverskaya-2027-02",
+      "id": "grp-ru-itmo-2027-02-m1",
+      "groupId": "grp-ru-itmo-2027-02",
       "author": "Jia Le",
       "avatar": "https://i.pravatar.cc/100?img=33",
       "text": "Is anyone arriving a week early? Planning a city walk before orientation.",
       "time": "2026-07-18T17:00:00Z"
     },
     {
-      "id": "grp-ru-tverskaya-2027-02-m2",
-      "groupId": "grp-ru-tverskaya-2027-02",
+      "id": "grp-ru-itmo-2027-02-m2",
+      "groupId": "grp-ru-itmo-2027-02",
       "author": "Hui Min",
       "avatar": "https://i.pravatar.cc/100?img=20",
       "text": "Pro tip from a senior: buy your transport card at the airport, big queue in town.",
       "time": "2026-07-19T20:17:00Z"
     },
     {
-      "id": "grp-ru-tverskaya-2027-02-m3",
-      "groupId": "grp-ru-tverskaya-2027-02",
+      "id": "grp-ru-itmo-2027-02-m3",
+      "groupId": "grp-ru-itmo-2027-02",
       "author": "Aina",
       "avatar": "https://i.pravatar.cc/100?img=32",
       "text": "Just got my CoE today!! It suddenly feels real 😭",
       "time": "2026-07-20T11:34:00Z"
     },
     {
-      "id": "grp-ru-tverskaya-2027-02-m4",
-      "groupId": "grp-ru-tverskaya-2027-02",
+      "id": "grp-ru-itmo-2027-02-m4",
+      "groupId": "grp-ru-itmo-2027-02",
       "author": "Marcus",
       "avatar": "https://i.pravatar.cc/100?img=12",
       "text": "Making a spreadsheet of who lands when — drop your flight if you want airport buddies.",
       "time": "2026-07-21T14:51:00Z"
     },
     {
-      "id": "grp-ru-tverskaya-2027-02-m5",
-      "groupId": "grp-ru-tverskaya-2027-02",
+      "id": "grp-ru-itmo-2027-02-m5",
+      "groupId": "grp-ru-itmo-2027-02",
       "author": "Putri",
       "avatar": "https://i.pravatar.cc/100?img=47",
       "text": "Which bank is everyone using? Heard the student account has no fees.",
       "time": "2026-07-22T17:08:00Z"
     },
     {
-      "id": "grp-ru-tverskaya-2027-02-m6",
-      "groupId": "grp-ru-tverskaya-2027-02",
+      "id": "grp-ru-itmo-2027-02-m6",
+      "groupId": "grp-ru-itmo-2027-02",
       "author": "Wei Jun",
       "avatar": "https://i.pravatar.cc/100?img=11",
       "text": "Reminder: the uni housing portal opens Monday 9am, alarms on!",
       "time": "2026-07-23T20:25:00Z"
     },
     {
-      "id": "grp-ru-tverskaya-2027-02-m7",
-      "groupId": "grp-ru-tverskaya-2027-02",
+      "id": "grp-ru-itmo-2027-02-m7",
+      "groupId": "grp-ru-itmo-2027-02",
       "author": "Yi-Chen",
       "avatar": "https://i.pravatar.cc/100?img=44",
       "text": "Hi everyone! Just accepted my offer — see you at orientation! 🎉",
       "time": "2026-07-24T11:42:00Z"
     },
     {
-      "id": "grp-ru-tverskaya-2027-02-m8",
-      "groupId": "grp-ru-tverskaya-2027-02",
+      "id": "grp-ru-itmo-2027-02-m8",
+      "groupId": "grp-ru-itmo-2027-02",
       "author": "Minh Anh",
       "avatar": "https://i.pravatar.cc/100?img=26",
       "text": "Anyone else flying in from KL? Thinking of booking the same flight.",
@@ -648,7 +648,7 @@
       "name": "Farah Hassan",
       "homeCountry": "MY",
       "courseName": "Bachelor of Business Administration",
-      "institutionId": "au-harbourview",
+      "institutionId": "au-monash",
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=21"
     },
@@ -657,7 +657,7 @@
       "name": "Kai Wen Ng",
       "homeCountry": "MY",
       "courseName": "Bachelor of Computer Science",
-      "institutionId": "au-harbourview",
+      "institutionId": "au-monash",
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=65"
     },
@@ -666,7 +666,7 @@
       "name": "Budi Santoso",
       "homeCountry": "ID",
       "courseName": "Bachelor of Business Administration",
-      "institutionId": "au-harbourview",
+      "institutionId": "au-monash",
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=68"
     },
@@ -675,7 +675,7 @@
       "name": "Linh Tran",
       "homeCountry": "VN",
       "courseName": "Bachelor of Laws (LLB)",
-      "institutionId": "au-harbourview",
+      "institutionId": "au-monash",
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=16"
     },
@@ -684,7 +684,7 @@
       "name": "Cheng Wu",
       "homeCountry": "CN",
       "courseName": "Bachelor of Computer Science",
-      "institutionId": "au-harbourview",
+      "institutionId": "au-monash",
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=61"
     },
@@ -693,7 +693,7 @@
       "name": "Amirah Yusof",
       "homeCountry": "MY",
       "courseName": "Bachelor of Nursing",
-      "institutionId": "au-harbourview",
+      "institutionId": "au-monash",
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=27"
     },
@@ -702,7 +702,7 @@
       "name": "Hsin-Yu Chang",
       "homeCountry": "TW",
       "courseName": "Bachelor of Business Administration",
-      "institutionId": "au-harbourview",
+      "institutionId": "au-monash",
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=41"
     },
@@ -711,7 +711,7 @@
       "name": "Ryan Teo",
       "homeCountry": "SG",
       "courseName": "Bachelor of Computer Science",
-      "institutionId": "au-harbourview",
+      "institutionId": "au-monash",
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=60"
     },
@@ -720,7 +720,7 @@
       "name": "Sari Dewi",
       "homeCountry": "ID",
       "courseName": "Bachelor of Nursing",
-      "institutionId": "au-harbourview",
+      "institutionId": "au-monash",
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=43"
     },
@@ -729,7 +729,7 @@
       "name": "Quang Le",
       "homeCountry": "VN",
       "courseName": "Bachelor of Business Administration",
-      "institutionId": "au-harbourview",
+      "institutionId": "au-monash",
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=51"
     },
@@ -738,7 +738,7 @@
       "name": "Mei Ling Chua",
       "homeCountry": "MY",
       "courseName": "Bachelor of Laws (LLB)",
-      "institutionId": "au-harbourview",
+      "institutionId": "au-monash",
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=38"
     },
@@ -747,7 +747,7 @@
       "name": "Arif Rahman",
       "homeCountry": "MY",
       "courseName": "Bachelor of Computer Science",
-      "institutionId": "au-harbourview",
+      "institutionId": "au-monash",
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=64"
     }
@@ -755,91 +755,171 @@
   "events": [
     {
       "id": "evt-01",
-      "title": "Pre-Departure Briefing: Australia",
+      "title": "Study Abroad Expo Malaysia",
       "city": "Kuala Lumpur",
       "country": "MY",
-      "date": "2026-11-14",
-      "venue": "UniBridge Hub, Bukit Bintang",
+      "date": "2026-10-17",
+      "venue": "KLCC Convention Centre",
       "sponsored": true,
-      "description": "Visa walkthrough, packing lists and alumni Q&A for Feb 2027 intakes.",
+      "kind": "expo",
+      "description": "Meet 60+ universities from 7 countries; on-the-spot eligibility checks by UniBridge.",
       "image": "https://picsum.photos/seed/evt-0/600/300"
     },
     {
       "id": "evt-02",
-      "title": "Sydney Newcomers Picnic",
+      "title": "Australia International Education Expo",
       "city": "Sydney",
       "country": "AU",
-      "date": "2027-02-20",
-      "venue": "Royal Botanic Garden",
+      "date": "2026-11-07",
+      "venue": "ICC Sydney",
       "sponsored": true,
-      "description": "Meet your intake in person — sausage sizzle provided.",
+      "kind": "expo",
+      "description": "Universities, visa advisors and scholarship booths under one roof.",
       "image": "https://picsum.photos/seed/evt-1/600/300"
     },
     {
       "id": "evt-03",
-      "title": "Melbourne Airport Pickup Day",
-      "city": "Melbourne",
-      "country": "AU",
-      "date": "2027-02-12",
-      "venue": "Tullamarine Airport T2",
+      "title": "Taiwan Higher Education Fair",
+      "city": "Taipei",
+      "country": "TW",
+      "date": "2026-09-19",
+      "venue": "Taipei World Trade Center",
       "sponsored": false,
-      "description": "Volunteer seniors meet every arriving flight this Saturday.",
+      "kind": "expo",
+      "description": "National and private universities with scholarship counters.",
       "image": "https://picsum.photos/seed/evt-2/600/300"
     },
     {
       "id": "evt-04",
-      "title": "London Freshers Welcome",
+      "title": "UK University Fair",
       "city": "London",
       "country": "GB",
-      "date": "2027-01-18",
-      "venue": "Albion Student Union",
+      "date": "2026-10-03",
+      "venue": "Business Design Centre",
       "sponsored": true,
-      "description": "SIM cards, bank sign-ups and free pizza for new internationals.",
+      "kind": "expo",
+      "description": "Meet admissions teams from across the UK in one afternoon.",
       "image": "https://picsum.photos/seed/evt-3/600/300"
     },
     {
       "id": "evt-05",
-      "title": "Taipei Language Exchange Night",
-      "city": "Taipei",
-      "country": "TW",
-      "date": "2026-10-08",
-      "venue": "Da'an Community Hall",
-      "sponsored": false,
-      "description": "Practise Mandarin over bubble tea with local buddies.",
-      "image": "https://picsum.photos/seed/evt-4/600/300"
-    },
-    {
-      "id": "evt-06",
       "title": "Singapore Study Abroad Fair",
       "city": "Singapore",
       "country": "SG",
       "date": "2026-09-26",
       "venue": "Suntec Convention Centre",
       "sponsored": true,
+      "kind": "expo",
       "description": "Meet 40+ institutions; on-the-spot eligibility checks by UniBridge.",
+      "image": "https://picsum.photos/seed/evt-4/600/300"
+    },
+    {
+      "id": "evt-06",
+      "title": "New Zealand Education Expo",
+      "city": "Auckland",
+      "country": "NZ",
+      "date": "2026-09-12",
+      "venue": "Aotea Centre",
+      "sponsored": false,
+      "kind": "expo",
+      "description": "Universities and institutes from across New Zealand.",
       "image": "https://picsum.photos/seed/evt-5/600/300"
     },
     {
       "id": "evt-07",
+      "title": "Russian Universities Expo",
+      "city": "Moscow",
+      "country": "RU",
+      "date": "2026-10-24",
+      "venue": "Expocentre",
+      "sponsored": false,
+      "kind": "expo",
+      "description": "State universities presenting English-taught programmes.",
+      "image": "https://picsum.photos/seed/evt-6/600/300"
+    },
+    {
+      "id": "evt-08",
+      "title": "Pre-Departure Briefing: Australia",
+      "city": "Kuala Lumpur",
+      "country": "MY",
+      "date": "2026-11-14",
+      "venue": "UniBridge Hub, Bukit Bintang",
+      "sponsored": true,
+      "kind": "meetup",
+      "description": "Visa walkthrough, packing lists and alumni Q&A for Feb 2027 intakes.",
+      "image": "https://picsum.photos/seed/evt-7/600/300"
+    },
+    {
+      "id": "evt-09",
+      "title": "Sydney Newcomers Picnic",
+      "city": "Sydney",
+      "country": "AU",
+      "date": "2027-02-20",
+      "venue": "Royal Botanic Garden",
+      "sponsored": true,
+      "kind": "meetup",
+      "description": "Meet your intake in person — sausage sizzle provided.",
+      "image": "https://picsum.photos/seed/evt-8/600/300"
+    },
+    {
+      "id": "evt-10",
+      "title": "Melbourne Airport Pickup Day",
+      "city": "Melbourne",
+      "country": "AU",
+      "date": "2027-02-12",
+      "venue": "Tullamarine Airport T2",
+      "sponsored": false,
+      "kind": "meetup",
+      "description": "Volunteer seniors meet every arriving flight this Saturday.",
+      "image": "https://picsum.photos/seed/evt-9/600/300"
+    },
+    {
+      "id": "evt-11",
+      "title": "London Freshers Welcome",
+      "city": "London",
+      "country": "GB",
+      "date": "2027-01-18",
+      "venue": "Student Central, Bloomsbury",
+      "sponsored": true,
+      "kind": "meetup",
+      "description": "SIM cards, bank sign-ups and free pizza for new internationals.",
+      "image": "https://picsum.photos/seed/evt-10/600/300"
+    },
+    {
+      "id": "evt-12",
+      "title": "Taipei Language Exchange Night",
+      "city": "Taipei",
+      "country": "TW",
+      "date": "2026-10-08",
+      "venue": "Da'an Community Hall",
+      "sponsored": false,
+      "kind": "meetup",
+      "description": "Practise Mandarin over bubble tea with local buddies.",
+      "image": "https://picsum.photos/seed/evt-11/600/300"
+    },
+    {
+      "id": "evt-13",
       "title": "Auckland Harbour Walk & Welcome",
       "city": "Auckland",
       "country": "NZ",
       "date": "2027-02-27",
       "venue": "Wynyard Quarter",
       "sponsored": false,
-      "description": "Casual walk and gelato for new Kauri students.",
-      "image": "https://picsum.photos/seed/evt-6/600/300"
+      "kind": "meetup",
+      "description": "Casual walk and gelato for new internationals.",
+      "image": "https://picsum.photos/seed/evt-12/600/300"
     },
     {
-      "id": "evt-08",
+      "id": "evt-14",
       "title": "Moscow Winter Survival Workshop",
       "city": "Moscow",
       "country": "RU",
       "date": "2026-12-05",
-      "venue": "Tverskaya Campus Hall B",
+      "venue": "MSU Main Building Hall B",
       "sponsored": false,
+      "kind": "meetup",
       "description": "What to wear, how to metro, and where to buy it all.",
-      "image": "https://picsum.photos/seed/evt-7/600/300"
+      "image": "https://picsum.photos/seed/evt-13/600/300"
     }
   ]
 }

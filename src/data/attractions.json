@@ -1,1523 +1,2264 @@
 [
   {
-    "id": "au-harbourview-a1",
-    "institutionId": "au-harbourview",
-    "name": "Bondi Beach",
-    "type": "nature",
-    "distanceMinutes": 38,
-    "description": "Iconic surf beach at the start of the coastal walk",
-    "image": "https://picsum.photos/seed/au-harbourview-a0/400/300"
-  },
-  {
-    "id": "au-harbourview-a2",
-    "institutionId": "au-harbourview",
-    "name": "Sydney Opera House",
-    "type": "landmark",
-    "distanceMinutes": 10,
-    "description": "The sails everyone flies here to see",
-    "image": "https://picsum.photos/seed/au-harbourview-a1/400/300"
-  },
-  {
-    "id": "au-harbourview-a3",
-    "institutionId": "au-harbourview",
-    "name": "Spice Alley",
-    "type": "food",
-    "distanceMinutes": 9,
-    "description": "Lantern-lit laneway of Asian hawker eateries",
-    "image": "https://picsum.photos/seed/au-harbourview-a2/400/300"
-  },
-  {
-    "id": "au-harbourview-a4",
-    "institutionId": "au-harbourview",
-    "name": "The Rocks Markets",
-    "type": "shopping",
-    "distanceMinutes": 10,
-    "description": "Weekend stalls under the Harbour Bridge",
-    "image": "https://picsum.photos/seed/au-harbourview-a3/400/300"
-  },
-  {
-    "id": "au-harbourview-a5",
-    "institutionId": "au-harbourview",
-    "name": "Royal Botanic Garden",
-    "type": "nature",
-    "distanceMinutes": 10,
-    "description": "Harbourside lawns ten minutes from downtown",
-    "image": "https://picsum.photos/seed/au-harbourview-a4/400/300"
-  },
-  {
-    "id": "au-southernsky-a1",
-    "institutionId": "au-southernsky",
+    "id": "au-monash-a1",
+    "institutionId": "au-monash",
     "name": "Queen Victoria Market",
     "type": "food",
     "distanceMinutes": 11,
     "description": "Historic sheds of produce, doughnuts and bratwurst",
-    "image": "https://picsum.photos/seed/au-southernsky-a0/400/300"
+    "image": "https://picsum.photos/seed/au-monash-a0/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "au-southernsky-a2",
-    "institutionId": "au-southernsky",
+    "id": "au-monash-a2",
+    "institutionId": "au-monash",
     "name": "Hosier Lane",
     "type": "landmark",
-    "distanceMinutes": 9,
+    "distanceMinutes": 7,
     "description": "Ever-changing street-art laneway",
-    "image": "https://picsum.photos/seed/au-southernsky-a1/400/300"
+    "image": "https://picsum.photos/seed/au-monash-a1/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "au-southernsky-a3",
-    "institutionId": "au-southernsky",
+    "id": "au-monash-a3",
+    "institutionId": "au-monash",
     "name": "St Kilda Beach",
     "type": "nature",
-    "distanceMinutes": 22,
+    "distanceMinutes": 29,
     "description": "Sunset pier with a resident penguin colony",
-    "image": "https://picsum.photos/seed/au-southernsky-a2/400/300"
+    "image": "https://picsum.photos/seed/au-monash-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "au-southernsky-a4",
-    "institutionId": "au-southernsky",
+    "id": "au-monash-a4",
+    "institutionId": "au-monash",
     "name": "Melbourne Cricket Ground",
     "type": "sports",
     "distanceMinutes": 17,
     "description": "The MCG — sport is a religion here",
-    "image": "https://picsum.photos/seed/au-southernsky-a3/400/300"
+    "image": "https://picsum.photos/seed/au-monash-a3/400/300",
+    "tips": [
+      "Match-day atmosphere is worth it even if you don't follow the sport",
+      "Student tickets are usually the cheapest way in"
+    ]
   },
   {
-    "id": "au-southernsky-a5",
-    "institutionId": "au-southernsky",
+    "id": "au-monash-a5",
+    "institutionId": "au-monash",
     "name": "Lygon Street",
     "type": "food",
-    "distanceMinutes": 9,
+    "distanceMinutes": 8,
     "description": "Melbourne's original Little Italy",
-    "image": "https://picsum.photos/seed/au-southernsky-a4/400/300"
+    "image": "https://picsum.photos/seed/au-monash-a4/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "au-coralcoast-a1",
-    "institutionId": "au-coralcoast",
+    "id": "au-sydney-a1",
+    "institutionId": "au-sydney",
+    "name": "Bondi Beach",
+    "type": "nature",
+    "distanceMinutes": 35,
+    "description": "Iconic surf beach at the start of the coastal walk",
+    "image": "https://picsum.photos/seed/au-sydney-a0/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
+  },
+  {
+    "id": "au-sydney-a2",
+    "institutionId": "au-sydney",
+    "name": "Sydney Opera House",
+    "type": "landmark",
+    "distanceMinutes": 10,
+    "description": "The sails everyone flies here to see",
+    "image": "https://picsum.photos/seed/au-sydney-a1/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
+  },
+  {
+    "id": "au-sydney-a3",
+    "institutionId": "au-sydney",
+    "name": "Spice Alley",
+    "type": "food",
+    "distanceMinutes": 11,
+    "description": "Lantern-lit laneway of Asian hawker eateries",
+    "image": "https://picsum.photos/seed/au-sydney-a2/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
+  },
+  {
+    "id": "au-sydney-a4",
+    "institutionId": "au-sydney",
+    "name": "The Rocks Markets",
+    "type": "shopping",
+    "distanceMinutes": 19,
+    "description": "Weekend stalls under the Harbour Bridge",
+    "image": "https://picsum.photos/seed/au-sydney-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
+  },
+  {
+    "id": "au-sydney-a5",
+    "institutionId": "au-sydney",
+    "name": "Royal Botanic Garden",
+    "type": "nature",
+    "distanceMinutes": 15,
+    "description": "Harbourside lawns ten minutes from downtown",
+    "image": "https://picsum.photos/seed/au-sydney-a4/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
+  },
+  {
+    "id": "au-uq-a1",
+    "institutionId": "au-uq",
     "name": "South Bank Parklands",
     "type": "nature",
-    "distanceMinutes": 8,
+    "distanceMinutes": 7,
     "description": "City beach, lagoon and free BBQs",
-    "image": "https://picsum.photos/seed/au-coralcoast-a0/400/300"
+    "image": "https://picsum.photos/seed/au-uq-a0/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "au-coralcoast-a2",
-    "institutionId": "au-coralcoast",
+    "id": "au-uq-a2",
+    "institutionId": "au-uq",
     "name": "Eat Street Northshore",
     "type": "food",
-    "distanceMinutes": 28,
+    "distanceMinutes": 29,
     "description": "Container-village night market",
-    "image": "https://picsum.photos/seed/au-coralcoast-a1/400/300"
+    "image": "https://picsum.photos/seed/au-uq-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "au-coralcoast-a3",
-    "institutionId": "au-coralcoast",
+    "id": "au-uq-a3",
+    "institutionId": "au-uq",
     "name": "Story Bridge",
     "type": "landmark",
-    "distanceMinutes": 19,
+    "distanceMinutes": 18,
     "description": "Climb it or picnic under it",
-    "image": "https://picsum.photos/seed/au-coralcoast-a2/400/300"
+    "image": "https://picsum.photos/seed/au-uq-a2/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "au-coralcoast-a4",
-    "institutionId": "au-coralcoast",
+    "id": "au-uq-a4",
+    "institutionId": "au-uq",
     "name": "Queen Street Mall",
     "type": "shopping",
-    "distanceMinutes": 10,
+    "distanceMinutes": 8,
     "description": "Open-air retail heart of the city",
-    "image": "https://picsum.photos/seed/au-coralcoast-a3/400/300"
+    "image": "https://picsum.photos/seed/au-uq-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "au-coralcoast-a5",
-    "institutionId": "au-coralcoast",
+    "id": "au-uq-a5",
+    "institutionId": "au-uq",
     "name": "Suncorp Stadium",
     "type": "sports",
     "distanceMinutes": 12,
     "description": "Rugby league nights are electric",
-    "image": "https://picsum.photos/seed/au-coralcoast-a4/400/300"
+    "image": "https://picsum.photos/seed/au-uq-a4/400/300",
+    "tips": [
+      "Match-day atmosphere is worth it even if you don't follow the sport",
+      "Student tickets are usually the cheapest way in"
+    ]
   },
   {
-    "id": "au-swanbrook-a1",
-    "institutionId": "au-swanbrook",
-    "name": "Cottesloe Beach",
-    "type": "nature",
-    "distanceMinutes": 23,
-    "description": "Indian Ocean sunsets and Norfolk pines",
-    "image": "https://picsum.photos/seed/au-swanbrook-a0/400/300"
-  },
-  {
-    "id": "au-swanbrook-a2",
-    "institutionId": "au-swanbrook",
-    "name": "Kings Park",
-    "type": "nature",
-    "distanceMinutes": 8,
-    "description": "One of the largest inner-city parks in the world",
-    "image": "https://picsum.photos/seed/au-swanbrook-a1/400/300"
-  },
-  {
-    "id": "au-swanbrook-a3",
-    "institutionId": "au-swanbrook",
-    "name": "Fremantle Markets",
-    "type": "shopping",
-    "distanceMinutes": 25,
-    "description": "Victorian-era market hall by the port",
-    "image": "https://picsum.photos/seed/au-swanbrook-a2/400/300"
-  },
-  {
-    "id": "au-swanbrook-a4",
-    "institutionId": "au-swanbrook",
-    "name": "Elizabeth Quay",
-    "type": "landmark",
-    "distanceMinutes": 14,
-    "description": "Riverfront promenade and public art",
-    "image": "https://picsum.photos/seed/au-swanbrook-a3/400/300"
-  },
-  {
-    "id": "au-swanbrook-a5",
-    "institutionId": "au-swanbrook",
-    "name": "Optus Stadium",
-    "type": "sports",
-    "distanceMinutes": 22,
-    "description": "AFL derbies under lights",
-    "image": "https://picsum.photos/seed/au-swanbrook-a4/400/300"
-  },
-  {
-    "id": "au-marrickville-a1",
-    "institutionId": "au-marrickville",
+    "id": "au-unsw-a1",
+    "institutionId": "au-unsw",
     "name": "Bondi Beach",
     "type": "nature",
-    "distanceMinutes": 37,
+    "distanceMinutes": 35,
     "description": "Iconic surf beach at the start of the coastal walk",
-    "image": "https://picsum.photos/seed/au-marrickville-a0/400/300"
+    "image": "https://picsum.photos/seed/au-unsw-a0/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "au-marrickville-a2",
-    "institutionId": "au-marrickville",
+    "id": "au-unsw-a2",
+    "institutionId": "au-unsw",
     "name": "Sydney Opera House",
     "type": "landmark",
-    "distanceMinutes": 17,
+    "distanceMinutes": 14,
     "description": "The sails everyone flies here to see",
-    "image": "https://picsum.photos/seed/au-marrickville-a1/400/300"
+    "image": "https://picsum.photos/seed/au-unsw-a1/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "au-marrickville-a3",
-    "institutionId": "au-marrickville",
+    "id": "au-unsw-a3",
+    "institutionId": "au-unsw",
     "name": "Spice Alley",
     "type": "food",
-    "distanceMinutes": 5,
+    "distanceMinutes": 11,
     "description": "Lantern-lit laneway of Asian hawker eateries",
-    "image": "https://picsum.photos/seed/au-marrickville-a2/400/300"
+    "image": "https://picsum.photos/seed/au-unsw-a2/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "au-marrickville-a4",
-    "institutionId": "au-marrickville",
+    "id": "au-unsw-a4",
+    "institutionId": "au-unsw",
     "name": "The Rocks Markets",
     "type": "shopping",
-    "distanceMinutes": 20,
+    "distanceMinutes": 10,
     "description": "Weekend stalls under the Harbour Bridge",
-    "image": "https://picsum.photos/seed/au-marrickville-a3/400/300"
+    "image": "https://picsum.photos/seed/au-unsw-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "au-marrickville-a5",
-    "institutionId": "au-marrickville",
+    "id": "au-unsw-a5",
+    "institutionId": "au-unsw",
     "name": "Royal Botanic Garden",
     "type": "nature",
-    "distanceMinutes": 14,
+    "distanceMinutes": 15,
     "description": "Harbourside lawns ten minutes from downtown",
-    "image": "https://picsum.photos/seed/au-marrickville-a4/400/300"
+    "image": "https://picsum.photos/seed/au-unsw-a4/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "au-kingsford-a1",
-    "institutionId": "au-kingsford",
+    "id": "au-unimelb-a1",
+    "institutionId": "au-unimelb",
     "name": "Queen Victoria Market",
     "type": "food",
-    "distanceMinutes": 15,
+    "distanceMinutes": 14,
     "description": "Historic sheds of produce, doughnuts and bratwurst",
-    "image": "https://picsum.photos/seed/au-kingsford-a0/400/300"
+    "image": "https://picsum.photos/seed/au-unimelb-a0/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "au-kingsford-a2",
-    "institutionId": "au-kingsford",
+    "id": "au-unimelb-a2",
+    "institutionId": "au-unimelb",
     "name": "Hosier Lane",
     "type": "landmark",
     "distanceMinutes": 4,
     "description": "Ever-changing street-art laneway",
-    "image": "https://picsum.photos/seed/au-kingsford-a1/400/300"
+    "image": "https://picsum.photos/seed/au-unimelb-a1/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "au-kingsford-a3",
-    "institutionId": "au-kingsford",
+    "id": "au-unimelb-a3",
+    "institutionId": "au-unimelb",
     "name": "St Kilda Beach",
     "type": "nature",
-    "distanceMinutes": 21,
+    "distanceMinutes": 26,
     "description": "Sunset pier with a resident penguin colony",
-    "image": "https://picsum.photos/seed/au-kingsford-a2/400/300"
+    "image": "https://picsum.photos/seed/au-unimelb-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "au-kingsford-a4",
-    "institutionId": "au-kingsford",
+    "id": "au-unimelb-a4",
+    "institutionId": "au-unimelb",
     "name": "Melbourne Cricket Ground",
     "type": "sports",
     "distanceMinutes": 10,
     "description": "The MCG — sport is a religion here",
-    "image": "https://picsum.photos/seed/au-kingsford-a3/400/300"
+    "image": "https://picsum.photos/seed/au-unimelb-a3/400/300",
+    "tips": [
+      "Match-day atmosphere is worth it even if you don't follow the sport",
+      "Student tickets are usually the cheapest way in"
+    ]
   },
   {
-    "id": "au-kingsford-a5",
-    "institutionId": "au-kingsford",
+    "id": "au-unimelb-a5",
+    "institutionId": "au-unimelb",
     "name": "Lygon Street",
     "type": "food",
-    "distanceMinutes": 10,
+    "distanceMinutes": 9,
     "description": "Melbourne's original Little Italy",
-    "image": "https://picsum.photos/seed/au-kingsford-a4/400/300"
+    "image": "https://picsum.photos/seed/au-unimelb-a4/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "my-merdeka-a1",
-    "institutionId": "my-merdeka",
+    "id": "au-rmit-a1",
+    "institutionId": "au-rmit",
+    "name": "Queen Victoria Market",
+    "type": "food",
+    "distanceMinutes": 5,
+    "description": "Historic sheds of produce, doughnuts and bratwurst",
+    "image": "https://picsum.photos/seed/au-rmit-a0/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
+  },
+  {
+    "id": "au-rmit-a2",
+    "institutionId": "au-rmit",
+    "name": "Hosier Lane",
+    "type": "landmark",
+    "distanceMinutes": 5,
+    "description": "Ever-changing street-art laneway",
+    "image": "https://picsum.photos/seed/au-rmit-a1/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
+  },
+  {
+    "id": "au-rmit-a3",
+    "institutionId": "au-rmit",
+    "name": "St Kilda Beach",
+    "type": "nature",
+    "distanceMinutes": 28,
+    "description": "Sunset pier with a resident penguin colony",
+    "image": "https://picsum.photos/seed/au-rmit-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
+  },
+  {
+    "id": "au-rmit-a4",
+    "institutionId": "au-rmit",
+    "name": "Melbourne Cricket Ground",
+    "type": "sports",
+    "distanceMinutes": 15,
+    "description": "The MCG — sport is a religion here",
+    "image": "https://picsum.photos/seed/au-rmit-a3/400/300",
+    "tips": [
+      "Match-day atmosphere is worth it even if you don't follow the sport",
+      "Student tickets are usually the cheapest way in"
+    ]
+  },
+  {
+    "id": "au-rmit-a5",
+    "institutionId": "au-rmit",
+    "name": "Lygon Street",
+    "type": "food",
+    "distanceMinutes": 7,
+    "description": "Melbourne's original Little Italy",
+    "image": "https://picsum.photos/seed/au-rmit-a4/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
+  },
+  {
+    "id": "my-um-a1",
+    "institutionId": "my-um",
     "name": "Petronas Twin Towers",
     "type": "landmark",
-    "distanceMinutes": 15,
+    "distanceMinutes": 11,
     "description": "The skyline shot of Malaysia",
-    "image": "https://picsum.photos/seed/my-merdeka-a0/400/300"
+    "image": "https://picsum.photos/seed/my-um-a0/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "my-merdeka-a2",
-    "institutionId": "my-merdeka",
+    "id": "my-um-a2",
+    "institutionId": "my-um",
     "name": "Jalan Alor",
     "type": "food",
-    "distanceMinutes": 13,
+    "distanceMinutes": 16,
     "description": "Late-night satay and char kuey teow street",
-    "image": "https://picsum.photos/seed/my-merdeka-a1/400/300"
+    "image": "https://picsum.photos/seed/my-um-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "my-merdeka-a3",
-    "institutionId": "my-merdeka",
+    "id": "my-um-a3",
+    "institutionId": "my-um",
     "name": "Batu Caves",
     "type": "nature",
-    "distanceMinutes": 44,
+    "distanceMinutes": 40,
     "description": "Rainbow steps to a limestone temple cave",
-    "image": "https://picsum.photos/seed/my-merdeka-a2/400/300"
+    "image": "https://picsum.photos/seed/my-um-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "my-merdeka-a4",
-    "institutionId": "my-merdeka",
+    "id": "my-um-a4",
+    "institutionId": "my-um",
     "name": "Pavilion KL",
     "type": "shopping",
-    "distanceMinutes": 5,
+    "distanceMinutes": 13,
     "description": "Glitzy mall in Bukit Bintang",
-    "image": "https://picsum.photos/seed/my-merdeka-a3/400/300"
+    "image": "https://picsum.photos/seed/my-um-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "my-merdeka-a5",
-    "institutionId": "my-merdeka",
+    "id": "my-um-a5",
+    "institutionId": "my-um",
     "name": "Changkat Bukit Bintang",
     "type": "nightlife",
-    "distanceMinutes": 14,
+    "distanceMinutes": 10,
     "description": "Bar street that wakes after dark",
-    "image": "https://picsum.photos/seed/my-merdeka-a4/400/300"
+    "image": "https://picsum.photos/seed/my-um-a4/400/300",
+    "tips": [
+      "Go with your intake group and split the ride home",
+      "Many venues run student nights early in the week"
+    ]
   },
   {
-    "id": "my-straits-a1",
-    "institutionId": "my-straits",
-    "name": "George Town Street Art",
+    "id": "my-taylors-a1",
+    "institutionId": "my-taylors",
+    "name": "Petronas Twin Towers",
     "type": "landmark",
-    "distanceMinutes": 20,
-    "description": "Hunt the famous wrought-iron murals",
-    "image": "https://picsum.photos/seed/my-straits-a0/400/300"
+    "distanceMinutes": 14,
+    "description": "The skyline shot of Malaysia",
+    "image": "https://picsum.photos/seed/my-taylors-a0/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "my-straits-a2",
-    "institutionId": "my-straits",
-    "name": "Gurney Drive Hawker Centre",
+    "id": "my-taylors-a2",
+    "institutionId": "my-taylors",
+    "name": "Jalan Alor",
     "type": "food",
-    "distanceMinutes": 8,
-    "description": "Assam laksa by the seafront",
-    "image": "https://picsum.photos/seed/my-straits-a1/400/300"
+    "distanceMinutes": 7,
+    "description": "Late-night satay and char kuey teow street",
+    "image": "https://picsum.photos/seed/my-taylors-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "my-straits-a3",
-    "institutionId": "my-straits",
-    "name": "Penang Hill",
-    "type": "nature",
-    "distanceMinutes": 32,
-    "description": "Funicular ride above the heritage city",
-    "image": "https://picsum.photos/seed/my-straits-a2/400/300"
-  },
-  {
-    "id": "my-straits-a4",
-    "institutionId": "my-straits",
-    "name": "Gurney Plaza",
-    "type": "shopping",
-    "distanceMinutes": 8,
-    "description": "Seafront mall with everything",
-    "image": "https://picsum.photos/seed/my-straits-a3/400/300"
-  },
-  {
-    "id": "my-straits-a5",
-    "institutionId": "my-straits",
-    "name": "Batu Ferringhi",
+    "id": "my-taylors-a3",
+    "institutionId": "my-taylors",
+    "name": "Batu Caves",
     "type": "nature",
     "distanceMinutes": 35,
-    "description": "Beach strip with a night market",
-    "image": "https://picsum.photos/seed/my-straits-a4/400/300"
+    "description": "Rainbow steps to a limestone temple cave",
+    "image": "https://picsum.photos/seed/my-taylors-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "my-cyberview-a1",
-    "institutionId": "my-cyberview",
+    "id": "my-taylors-a4",
+    "institutionId": "my-taylors",
+    "name": "Pavilion KL",
+    "type": "shopping",
+    "distanceMinutes": 11,
+    "description": "Glitzy mall in Bukit Bintang",
+    "image": "https://picsum.photos/seed/my-taylors-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
+  },
+  {
+    "id": "my-taylors-a5",
+    "institutionId": "my-taylors",
+    "name": "Changkat Bukit Bintang",
+    "type": "nightlife",
+    "distanceMinutes": 13,
+    "description": "Bar street that wakes after dark",
+    "image": "https://picsum.photos/seed/my-taylors-a4/400/300",
+    "tips": [
+      "Go with your intake group and split the ride home",
+      "Many venues run student nights early in the week"
+    ]
+  },
+  {
+    "id": "my-sunway-a1",
+    "institutionId": "my-sunway",
+    "name": "Petronas Twin Towers",
+    "type": "landmark",
+    "distanceMinutes": 12,
+    "description": "The skyline shot of Malaysia",
+    "image": "https://picsum.photos/seed/my-sunway-a0/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
+  },
+  {
+    "id": "my-sunway-a2",
+    "institutionId": "my-sunway",
+    "name": "Jalan Alor",
+    "type": "food",
+    "distanceMinutes": 14,
+    "description": "Late-night satay and char kuey teow street",
+    "image": "https://picsum.photos/seed/my-sunway-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
+  },
+  {
+    "id": "my-sunway-a3",
+    "institutionId": "my-sunway",
+    "name": "Batu Caves",
+    "type": "nature",
+    "distanceMinutes": 37,
+    "description": "Rainbow steps to a limestone temple cave",
+    "image": "https://picsum.photos/seed/my-sunway-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
+  },
+  {
+    "id": "my-sunway-a4",
+    "institutionId": "my-sunway",
+    "name": "Pavilion KL",
+    "type": "shopping",
+    "distanceMinutes": 8,
+    "description": "Glitzy mall in Bukit Bintang",
+    "image": "https://picsum.photos/seed/my-sunway-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
+  },
+  {
+    "id": "my-sunway-a5",
+    "institutionId": "my-sunway",
+    "name": "Changkat Bukit Bintang",
+    "type": "nightlife",
+    "distanceMinutes": 15,
+    "description": "Bar street that wakes after dark",
+    "image": "https://picsum.photos/seed/my-sunway-a4/400/300",
+    "tips": [
+      "Go with your intake group and split the ride home",
+      "Many venues run student nights early in the week"
+    ]
+  },
+  {
+    "id": "my-mmu-a1",
+    "institutionId": "my-mmu",
     "name": "Cyberjaya Lake Gardens",
     "type": "nature",
     "distanceMinutes": 14,
     "description": "Morning-run loop around the lake",
-    "image": "https://picsum.photos/seed/my-cyberview-a0/400/300"
+    "image": "https://picsum.photos/seed/my-mmu-a0/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "my-cyberview-a2",
-    "institutionId": "my-cyberview",
+    "id": "my-mmu-a2",
+    "institutionId": "my-mmu",
     "name": "Tamarind Square",
     "type": "food",
-    "distanceMinutes": 4,
+    "distanceMinutes": 8,
     "description": "Cafés and a famous 24-hour bookshop",
-    "image": "https://picsum.photos/seed/my-cyberview-a1/400/300"
+    "image": "https://picsum.photos/seed/my-mmu-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "my-cyberview-a3",
-    "institutionId": "my-cyberview",
+    "id": "my-mmu-a3",
+    "institutionId": "my-mmu",
     "name": "IOI City Mall",
     "type": "shopping",
-    "distanceMinutes": 25,
+    "distanceMinutes": 17,
     "description": "Mega-mall with an indoor ice rink",
-    "image": "https://picsum.photos/seed/my-cyberview-a2/400/300"
+    "image": "https://picsum.photos/seed/my-mmu-a2/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "my-cyberview-a4",
-    "institutionId": "my-cyberview",
+    "id": "my-mmu-a4",
+    "institutionId": "my-mmu",
     "name": "Putra Mosque",
     "type": "landmark",
-    "distanceMinutes": 21,
+    "distanceMinutes": 18,
     "description": "Rose-pink mosque on Putrajaya lake",
-    "image": "https://picsum.photos/seed/my-cyberview-a3/400/300"
+    "image": "https://picsum.photos/seed/my-mmu-a3/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "my-cyberview-a5",
-    "institutionId": "my-cyberview",
+    "id": "my-mmu-a5",
+    "institutionId": "my-mmu",
     "name": "Putrajaya Wetlands Park",
     "type": "nature",
-    "distanceMinutes": 23,
+    "distanceMinutes": 16,
     "description": "Kayaks and flamingo sightings",
-    "image": "https://picsum.photos/seed/my-cyberview-a4/400/300"
+    "image": "https://picsum.photos/seed/my-mmu-a4/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "my-selangor-a1",
-    "institutionId": "my-selangor",
-    "name": "Petronas Twin Towers",
+    "id": "my-usm-a1",
+    "institutionId": "my-usm",
+    "name": "George Town Street Art",
     "type": "landmark",
-    "distanceMinutes": 14,
-    "description": "The skyline shot of Malaysia",
-    "image": "https://picsum.photos/seed/my-selangor-a0/400/300"
-  },
-  {
-    "id": "my-selangor-a2",
-    "institutionId": "my-selangor",
-    "name": "Jalan Alor",
-    "type": "food",
-    "distanceMinutes": 13,
-    "description": "Late-night satay and char kuey teow street",
-    "image": "https://picsum.photos/seed/my-selangor-a1/400/300"
-  },
-  {
-    "id": "my-selangor-a3",
-    "institutionId": "my-selangor",
-    "name": "Batu Caves",
-    "type": "nature",
-    "distanceMinutes": 38,
-    "description": "Rainbow steps to a limestone temple cave",
-    "image": "https://picsum.photos/seed/my-selangor-a2/400/300"
-  },
-  {
-    "id": "my-selangor-a4",
-    "institutionId": "my-selangor",
-    "name": "Pavilion KL",
-    "type": "shopping",
-    "distanceMinutes": 11,
-    "description": "Glitzy mall in Bukit Bintang",
-    "image": "https://picsum.photos/seed/my-selangor-a3/400/300"
-  },
-  {
-    "id": "my-selangor-a5",
-    "institutionId": "my-selangor",
-    "name": "Changkat Bukit Bintang",
-    "type": "nightlife",
     "distanceMinutes": 10,
-    "description": "Bar street that wakes after dark",
-    "image": "https://picsum.photos/seed/my-selangor-a4/400/300"
+    "description": "Hunt the famous wrought-iron murals",
+    "image": "https://picsum.photos/seed/my-usm-a0/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "my-iskandar-a1",
-    "institutionId": "my-iskandar",
+    "id": "my-usm-a2",
+    "institutionId": "my-usm",
+    "name": "Gurney Drive Hawker Centre",
+    "type": "food",
+    "distanceMinutes": 12,
+    "description": "Assam laksa by the seafront",
+    "image": "https://picsum.photos/seed/my-usm-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
+  },
+  {
+    "id": "my-usm-a3",
+    "institutionId": "my-usm",
+    "name": "Penang Hill",
+    "type": "nature",
+    "distanceMinutes": 32,
+    "description": "Funicular ride above the heritage city",
+    "image": "https://picsum.photos/seed/my-usm-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
+  },
+  {
+    "id": "my-usm-a4",
+    "institutionId": "my-usm",
+    "name": "Gurney Plaza",
+    "type": "shopping",
+    "distanceMinutes": 14,
+    "description": "Seafront mall with everything",
+    "image": "https://picsum.photos/seed/my-usm-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
+  },
+  {
+    "id": "my-usm-a5",
+    "institutionId": "my-usm",
+    "name": "Batu Ferringhi",
+    "type": "nature",
+    "distanceMinutes": 40,
+    "description": "Beach strip with a night market",
+    "image": "https://picsum.photos/seed/my-usm-a4/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
+  },
+  {
+    "id": "my-utm-a1",
+    "institutionId": "my-utm",
     "name": "Legoland Malaysia",
     "type": "landmark",
-    "distanceMinutes": 33,
+    "distanceMinutes": 25,
     "description": "Theme park a bus ride from campus",
-    "image": "https://picsum.photos/seed/my-iskandar-a0/400/300"
+    "image": "https://picsum.photos/seed/my-utm-a0/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "my-iskandar-a2",
-    "institutionId": "my-iskandar",
+    "id": "my-utm-a2",
+    "institutionId": "my-utm",
     "name": "Jalan Dhoby",
     "type": "food",
-    "distanceMinutes": 8,
+    "distanceMinutes": 15,
     "description": "Heritage shophouse cafés and banana cake",
-    "image": "https://picsum.photos/seed/my-iskandar-a1/400/300"
+    "image": "https://picsum.photos/seed/my-utm-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "my-iskandar-a3",
-    "institutionId": "my-iskandar",
+    "id": "my-utm-a3",
+    "institutionId": "my-utm",
     "name": "Danga Bay",
     "type": "nature",
     "distanceMinutes": 14,
     "description": "Waterfront promenade facing Singapore",
-    "image": "https://picsum.photos/seed/my-iskandar-a2/400/300"
+    "image": "https://picsum.photos/seed/my-utm-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "my-iskandar-a4",
-    "institutionId": "my-iskandar",
+    "id": "my-utm-a4",
+    "institutionId": "my-utm",
     "name": "Johor Premium Outlets",
     "type": "shopping",
-    "distanceMinutes": 39,
+    "distanceMinutes": 40,
     "description": "Discount designer runs",
-    "image": "https://picsum.photos/seed/my-iskandar-a3/400/300"
+    "image": "https://picsum.photos/seed/my-utm-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "my-iskandar-a5",
-    "institutionId": "my-iskandar",
+    "id": "my-utm-a5",
+    "institutionId": "my-utm",
     "name": "Arulmigu Sri Rajakaliamman",
     "type": "landmark",
-    "distanceMinutes": 14,
+    "distanceMinutes": 8,
     "description": "The glass temple of JB",
-    "image": "https://picsum.photos/seed/my-iskandar-a4/400/300"
+    "image": "https://picsum.photos/seed/my-utm-a4/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "tw-taipeibay-a1",
-    "institutionId": "tw-taipeibay",
+    "id": "tw-ntu-a1",
+    "institutionId": "tw-ntu",
     "name": "Shilin Night Market",
     "type": "food",
-    "distanceMinutes": 25,
+    "distanceMinutes": 16,
     "description": "Fried chicken bigger than your face",
-    "image": "https://picsum.photos/seed/tw-taipeibay-a0/400/300"
+    "image": "https://picsum.photos/seed/tw-ntu-a0/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "tw-taipeibay-a2",
-    "institutionId": "tw-taipeibay",
+    "id": "tw-ntu-a2",
+    "institutionId": "tw-ntu",
     "name": "Taipei 101",
     "type": "landmark",
-    "distanceMinutes": 19,
+    "distanceMinutes": 10,
     "description": "Bamboo-shaped icon with a summit view",
-    "image": "https://picsum.photos/seed/tw-taipeibay-a1/400/300"
+    "image": "https://picsum.photos/seed/tw-ntu-a1/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "tw-taipeibay-a3",
-    "institutionId": "tw-taipeibay",
+    "id": "tw-ntu-a3",
+    "institutionId": "tw-ntu",
     "name": "Elephant Mountain",
     "type": "nature",
-    "distanceMinutes": 19,
+    "distanceMinutes": 18,
     "description": "Short hike, best skyline photo in town",
-    "image": "https://picsum.photos/seed/tw-taipeibay-a2/400/300"
+    "image": "https://picsum.photos/seed/tw-ntu-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "tw-taipeibay-a4",
-    "institutionId": "tw-taipeibay",
+    "id": "tw-ntu-a4",
+    "institutionId": "tw-ntu",
     "name": "Ximending",
     "type": "shopping",
     "distanceMinutes": 15,
     "description": "Neon street fashion district",
-    "image": "https://picsum.photos/seed/tw-taipeibay-a3/400/300"
+    "image": "https://picsum.photos/seed/tw-ntu-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "tw-taipeibay-a5",
-    "institutionId": "tw-taipeibay",
+    "id": "tw-ntu-a5",
+    "institutionId": "tw-ntu",
     "name": "Beitou Hot Springs",
     "type": "nature",
-    "distanceMinutes": 33,
+    "distanceMinutes": 36,
     "description": "Steaming public baths on the MRT line",
-    "image": "https://picsum.photos/seed/tw-taipeibay-a4/400/300"
+    "image": "https://picsum.photos/seed/tw-ntu-a4/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "tw-formosa-a1",
-    "institutionId": "tw-formosa",
+    "id": "tw-nthu-a1",
+    "institutionId": "tw-nthu",
     "name": "East Gate (Yingxi Gate)",
     "type": "landmark",
-    "distanceMinutes": 6,
+    "distanceMinutes": 14,
     "description": "City gate ringed by a moat park",
-    "image": "https://picsum.photos/seed/tw-formosa-a0/400/300"
+    "image": "https://picsum.photos/seed/tw-nthu-a0/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "tw-formosa-a2",
-    "institutionId": "tw-formosa",
+    "id": "tw-nthu-a2",
+    "institutionId": "tw-nthu",
     "name": "Beipu Old Street",
     "type": "food",
-    "distanceMinutes": 32,
+    "distanceMinutes": 25,
     "description": "Hakka lei cha and persimmon cakes",
-    "image": "https://picsum.photos/seed/tw-formosa-a1/400/300"
+    "image": "https://picsum.photos/seed/tw-nthu-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "tw-formosa-a3",
-    "institutionId": "tw-formosa",
+    "id": "tw-nthu-a3",
+    "institutionId": "tw-nthu",
     "name": "Big City Mall",
     "type": "shopping",
-    "distanceMinutes": 6,
+    "distanceMinutes": 10,
     "description": "Everything mall next to the station",
-    "image": "https://picsum.photos/seed/tw-formosa-a2/400/300"
+    "image": "https://picsum.photos/seed/tw-nthu-a2/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "tw-formosa-a4",
-    "institutionId": "tw-formosa",
+    "id": "tw-nthu-a4",
+    "institutionId": "tw-nthu",
     "name": "Hsinchu Park",
     "type": "nature",
-    "distanceMinutes": 15,
+    "distanceMinutes": 17,
     "description": "Cherry blossoms and a glass museum",
-    "image": "https://picsum.photos/seed/tw-formosa-a3/400/300"
+    "image": "https://picsum.photos/seed/tw-nthu-a3/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "tw-formosa-a5",
-    "institutionId": "tw-formosa",
+    "id": "tw-nthu-a5",
+    "institutionId": "tw-nthu",
     "name": "17km Coastline Bikeway",
     "type": "sports",
-    "distanceMinutes": 24,
+    "distanceMinutes": 18,
     "description": "Flat seaside ride past wind turbines",
-    "image": "https://picsum.photos/seed/tw-formosa-a4/400/300"
+    "image": "https://picsum.photos/seed/tw-nthu-a4/400/300",
+    "tips": [
+      "Match-day atmosphere is worth it even if you don't follow the sport",
+      "Student tickets are usually the cheapest way in"
+    ]
   },
   {
-    "id": "tw-taichung-a1",
-    "institutionId": "tw-taichung",
+    "id": "tw-fcu-a1",
+    "institutionId": "tw-fcu",
     "name": "Fengjia Night Market",
     "type": "food",
-    "distanceMinutes": 11,
+    "distanceMinutes": 17,
     "description": "Taiwan's biggest night market",
-    "image": "https://picsum.photos/seed/tw-taichung-a0/400/300"
+    "image": "https://picsum.photos/seed/tw-fcu-a0/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "tw-taichung-a2",
-    "institutionId": "tw-taichung",
+    "id": "tw-fcu-a2",
+    "institutionId": "tw-fcu",
     "name": "Rainbow Village",
     "type": "landmark",
-    "distanceMinutes": 25,
+    "distanceMinutes": 21,
     "description": "A settlement saved by paint",
-    "image": "https://picsum.photos/seed/tw-taichung-a1/400/300"
+    "image": "https://picsum.photos/seed/tw-fcu-a1/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "tw-taichung-a3",
-    "institutionId": "tw-taichung",
+    "id": "tw-fcu-a3",
+    "institutionId": "tw-fcu",
     "name": "Gaomei Wetlands",
     "type": "nature",
-    "distanceMinutes": 49,
+    "distanceMinutes": 45,
     "description": "Windmill boardwalk at golden hour",
-    "image": "https://picsum.photos/seed/tw-taichung-a2/400/300"
+    "image": "https://picsum.photos/seed/tw-fcu-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "tw-taichung-a4",
-    "institutionId": "tw-taichung",
+    "id": "tw-fcu-a4",
+    "institutionId": "tw-fcu",
     "name": "Miyahara",
     "type": "shopping",
-    "distanceMinutes": 8,
+    "distanceMinutes": 16,
     "description": "Ophthalmology hall turned ice-cream palace",
-    "image": "https://picsum.photos/seed/tw-taichung-a3/400/300"
+    "image": "https://picsum.photos/seed/tw-fcu-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "tw-taichung-a5",
-    "institutionId": "tw-taichung",
+    "id": "tw-fcu-a5",
+    "institutionId": "tw-fcu",
     "name": "Taichung Park",
     "type": "nature",
-    "distanceMinutes": 15,
+    "distanceMinutes": 6,
     "description": "Lake pavilion from 1908",
-    "image": "https://picsum.photos/seed/tw-taichung-a4/400/300"
+    "image": "https://picsum.photos/seed/tw-fcu-a4/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "tw-kaohsiung-a1",
-    "institutionId": "tw-kaohsiung",
+    "id": "tw-nsysu-a1",
+    "institutionId": "tw-nsysu",
     "name": "Liuhe Night Market",
     "type": "food",
-    "distanceMinutes": 8,
+    "distanceMinutes": 17,
     "description": "Seafood skewers by the harbour",
-    "image": "https://picsum.photos/seed/tw-kaohsiung-a0/400/300"
+    "image": "https://picsum.photos/seed/tw-nsysu-a0/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "tw-kaohsiung-a2",
-    "institutionId": "tw-kaohsiung",
+    "id": "tw-nsysu-a2",
+    "institutionId": "tw-nsysu",
     "name": "Pier-2 Art Center",
     "type": "landmark",
-    "distanceMinutes": 17,
+    "distanceMinutes": 16,
     "description": "Warehouses full of installations",
-    "image": "https://picsum.photos/seed/tw-kaohsiung-a1/400/300"
+    "image": "https://picsum.photos/seed/tw-nsysu-a1/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "tw-kaohsiung-a3",
-    "institutionId": "tw-kaohsiung",
+    "id": "tw-nsysu-a3",
+    "institutionId": "tw-nsysu",
     "name": "Lotus Pond",
     "type": "nature",
-    "distanceMinutes": 22,
+    "distanceMinutes": 25,
     "description": "Dragon and Tiger pagodas",
-    "image": "https://picsum.photos/seed/tw-kaohsiung-a2/400/300"
+    "image": "https://picsum.photos/seed/tw-nsysu-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "tw-kaohsiung-a4",
-    "institutionId": "tw-kaohsiung",
+    "id": "tw-nsysu-a4",
+    "institutionId": "tw-nsysu",
     "name": "Dream Mall",
     "type": "shopping",
-    "distanceMinutes": 12,
+    "distanceMinutes": 14,
     "description": "Rooftop ferris wheel views",
-    "image": "https://picsum.photos/seed/tw-kaohsiung-a3/400/300"
+    "image": "https://picsum.photos/seed/tw-nsysu-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "tw-kaohsiung-a5",
-    "institutionId": "tw-kaohsiung",
+    "id": "tw-nsysu-a5",
+    "institutionId": "tw-nsysu",
     "name": "Cijin Island",
     "type": "nature",
-    "distanceMinutes": 24,
+    "distanceMinutes": 26,
     "description": "Ferry, seafood street, black-sand beach",
-    "image": "https://picsum.photos/seed/tw-kaohsiung-a4/400/300"
+    "image": "https://picsum.photos/seed/tw-nsysu-a4/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "gb-albion-a1",
-    "institutionId": "gb-albion",
-    "name": "Borough Market",
-    "type": "food",
-    "distanceMinutes": 11,
-    "description": "A thousand years of market eating",
-    "image": "https://picsum.photos/seed/gb-albion-a0/400/300"
-  },
-  {
-    "id": "gb-albion-a2",
-    "institutionId": "gb-albion",
-    "name": "British Museum",
-    "type": "landmark",
-    "distanceMinutes": 14,
-    "description": "The world under one roof, free entry",
-    "image": "https://picsum.photos/seed/gb-albion-a1/400/300"
-  },
-  {
-    "id": "gb-albion-a3",
-    "institutionId": "gb-albion",
-    "name": "Hyde Park",
-    "type": "nature",
-    "distanceMinutes": 13,
-    "description": "Rowboats, deck chairs, speakers corner",
-    "image": "https://picsum.photos/seed/gb-albion-a2/400/300"
-  },
-  {
-    "id": "gb-albion-a4",
-    "institutionId": "gb-albion",
-    "name": "Oxford Street",
-    "type": "shopping",
-    "distanceMinutes": 7,
-    "description": "A mile and a half of flagship stores",
-    "image": "https://picsum.photos/seed/gb-albion-a3/400/300"
-  },
-  {
-    "id": "gb-albion-a5",
-    "institutionId": "gb-albion",
-    "name": "Shoreditch",
-    "type": "nightlife",
-    "distanceMinutes": 21,
-    "description": "Street art by day, bars by night",
-    "image": "https://picsum.photos/seed/gb-albion-a4/400/300"
-  },
-  {
-    "id": "gb-northgate-a1",
-    "institutionId": "gb-northgate",
+    "id": "gb-manchester-a1",
+    "institutionId": "gb-manchester",
     "name": "Old Trafford",
     "type": "sports",
-    "distanceMinutes": 24,
+    "distanceMinutes": 18,
     "description": "The Theatre of Dreams",
-    "image": "https://picsum.photos/seed/gb-northgate-a0/400/300"
+    "image": "https://picsum.photos/seed/gb-manchester-a0/400/300",
+    "tips": [
+      "Match-day atmosphere is worth it even if you don't follow the sport",
+      "Student tickets are usually the cheapest way in"
+    ]
   },
   {
-    "id": "gb-northgate-a2",
-    "institutionId": "gb-northgate",
+    "id": "gb-manchester-a2",
+    "institutionId": "gb-manchester",
     "name": "Northern Quarter",
     "type": "nightlife",
-    "distanceMinutes": 6,
+    "distanceMinutes": 9,
     "description": "Indie bars and record shops",
-    "image": "https://picsum.photos/seed/gb-northgate-a1/400/300"
+    "image": "https://picsum.photos/seed/gb-manchester-a1/400/300",
+    "tips": [
+      "Go with your intake group and split the ride home",
+      "Many venues run student nights early in the week"
+    ]
   },
   {
-    "id": "gb-northgate-a3",
-    "institutionId": "gb-northgate",
+    "id": "gb-manchester-a3",
+    "institutionId": "gb-manchester",
     "name": "Curry Mile",
     "type": "food",
-    "distanceMinutes": 13,
+    "distanceMinutes": 8,
     "description": "A mile of South Asian flavour in Rusholme",
-    "image": "https://picsum.photos/seed/gb-northgate-a2/400/300"
+    "image": "https://picsum.photos/seed/gb-manchester-a2/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "gb-northgate-a4",
-    "institutionId": "gb-northgate",
+    "id": "gb-manchester-a4",
+    "institutionId": "gb-manchester",
     "name": "Manchester Arndale",
     "type": "shopping",
-    "distanceMinutes": 4,
+    "distanceMinutes": 8,
     "description": "City-centre retail giant",
-    "image": "https://picsum.photos/seed/gb-northgate-a3/400/300"
+    "image": "https://picsum.photos/seed/gb-manchester-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "gb-northgate-a5",
-    "institutionId": "gb-northgate",
+    "id": "gb-manchester-a5",
+    "institutionId": "gb-manchester",
     "name": "Heaton Park",
     "type": "nature",
-    "distanceMinutes": 21,
+    "distanceMinutes": 23,
     "description": "Six hundred acres of green escape",
-    "image": "https://picsum.photos/seed/gb-northgate-a4/400/300"
+    "image": "https://picsum.photos/seed/gb-manchester-a4/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "gb-holyrood-a1",
-    "institutionId": "gb-holyrood",
-    "name": "Arthur's Seat",
-    "type": "nature",
-    "distanceMinutes": 24,
-    "description": "An extinct volcano in the city",
-    "image": "https://picsum.photos/seed/gb-holyrood-a0/400/300"
-  },
-  {
-    "id": "gb-holyrood-a2",
-    "institutionId": "gb-holyrood",
-    "name": "Royal Mile",
-    "type": "landmark",
-    "distanceMinutes": 7,
-    "description": "Castle to palace through the Old Town",
-    "image": "https://picsum.photos/seed/gb-holyrood-a1/400/300"
-  },
-  {
-    "id": "gb-holyrood-a3",
-    "institutionId": "gb-holyrood",
-    "name": "Princes Street",
-    "type": "shopping",
-    "distanceMinutes": 5,
-    "description": "Shopping with a castle backdrop",
-    "image": "https://picsum.photos/seed/gb-holyrood-a2/400/300"
-  },
-  {
-    "id": "gb-holyrood-a4",
-    "institutionId": "gb-holyrood",
-    "name": "Grassmarket",
-    "type": "nightlife",
-    "distanceMinutes": 11,
-    "description": "Historic square of pubs and folk music",
-    "image": "https://picsum.photos/seed/gb-holyrood-a3/400/300"
-  },
-  {
-    "id": "gb-holyrood-a5",
-    "institutionId": "gb-holyrood",
-    "name": "Portobello Beach",
-    "type": "nature",
-    "distanceMinutes": 31,
-    "description": "Seaside promenade and saunas",
-    "image": "https://picsum.photos/seed/gb-holyrood-a4/400/300"
-  },
-  {
-    "id": "gb-brindley-a1",
-    "institutionId": "gb-brindley",
-    "name": "Bullring & Grand Central",
-    "type": "shopping",
-    "distanceMinutes": 12,
-    "description": "The famous Selfridges discs",
-    "image": "https://picsum.photos/seed/gb-brindley-a0/400/300"
-  },
-  {
-    "id": "gb-brindley-a2",
-    "institutionId": "gb-brindley",
-    "name": "Digbeth",
-    "type": "food",
-    "distanceMinutes": 16,
-    "description": "Street food yards in the creative quarter",
-    "image": "https://picsum.photos/seed/gb-brindley-a1/400/300"
-  },
-  {
-    "id": "gb-brindley-a3",
-    "institutionId": "gb-brindley",
-    "name": "Cadbury World",
-    "type": "landmark",
-    "distanceMinutes": 27,
-    "description": "Chocolate heritage in Bournville",
-    "image": "https://picsum.photos/seed/gb-brindley-a2/400/300"
-  },
-  {
-    "id": "gb-brindley-a4",
-    "institutionId": "gb-brindley",
-    "name": "Cannon Hill Park",
-    "type": "nature",
-    "distanceMinutes": 16,
-    "description": "Boating lake and the MAC arts centre",
-    "image": "https://picsum.photos/seed/gb-brindley-a3/400/300"
-  },
-  {
-    "id": "gb-brindley-a5",
-    "institutionId": "gb-brindley",
-    "name": "Broad Street",
-    "type": "nightlife",
-    "distanceMinutes": 10,
-    "description": "Clubs along the canal side",
-    "image": "https://picsum.photos/seed/gb-brindley-a4/400/300"
-  },
-  {
-    "id": "gb-thamesbank-a1",
-    "institutionId": "gb-thamesbank",
-    "name": "Borough Market",
-    "type": "food",
-    "distanceMinutes": 12,
-    "description": "A thousand years of market eating",
-    "image": "https://picsum.photos/seed/gb-thamesbank-a0/400/300"
-  },
-  {
-    "id": "gb-thamesbank-a2",
-    "institutionId": "gb-thamesbank",
-    "name": "British Museum",
-    "type": "landmark",
-    "distanceMinutes": 7,
-    "description": "The world under one roof, free entry",
-    "image": "https://picsum.photos/seed/gb-thamesbank-a1/400/300"
-  },
-  {
-    "id": "gb-thamesbank-a3",
-    "institutionId": "gb-thamesbank",
-    "name": "Hyde Park",
-    "type": "nature",
-    "distanceMinutes": 17,
-    "description": "Rowboats, deck chairs, speakers corner",
-    "image": "https://picsum.photos/seed/gb-thamesbank-a2/400/300"
-  },
-  {
-    "id": "gb-thamesbank-a4",
-    "institutionId": "gb-thamesbank",
-    "name": "Oxford Street",
-    "type": "shopping",
-    "distanceMinutes": 12,
-    "description": "A mile and a half of flagship stores",
-    "image": "https://picsum.photos/seed/gb-thamesbank-a3/400/300"
-  },
-  {
-    "id": "gb-thamesbank-a5",
-    "institutionId": "gb-thamesbank",
-    "name": "Shoreditch",
-    "type": "nightlife",
-    "distanceMinutes": 18,
-    "description": "Street art by day, bars by night",
-    "image": "https://picsum.photos/seed/gb-thamesbank-a4/400/300"
-  },
-  {
-    "id": "gb-airevalley-a1",
-    "institutionId": "gb-airevalley",
+    "id": "gb-leeds-a1",
+    "institutionId": "gb-leeds",
     "name": "Trinity Leeds",
     "type": "shopping",
     "distanceMinutes": 4,
     "description": "Glass-roofed shopping quarter",
-    "image": "https://picsum.photos/seed/gb-airevalley-a0/400/300"
+    "image": "https://picsum.photos/seed/gb-leeds-a0/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "gb-airevalley-a2",
-    "institutionId": "gb-airevalley",
+    "id": "gb-leeds-a2",
+    "institutionId": "gb-leeds",
     "name": "Kirkgate Market",
     "type": "food",
-    "distanceMinutes": 6,
+    "distanceMinutes": 12,
     "description": "One of the largest indoor markets in Europe",
-    "image": "https://picsum.photos/seed/gb-airevalley-a1/400/300"
+    "image": "https://picsum.photos/seed/gb-leeds-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "gb-airevalley-a3",
-    "institutionId": "gb-airevalley",
+    "id": "gb-leeds-a3",
+    "institutionId": "gb-leeds",
     "name": "Roundhay Park",
     "type": "nature",
-    "distanceMinutes": 15,
+    "distanceMinutes": 22,
     "description": "Lakes, gorges and Tropical World",
-    "image": "https://picsum.photos/seed/gb-airevalley-a2/400/300"
+    "image": "https://picsum.photos/seed/gb-leeds-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "gb-airevalley-a4",
-    "institutionId": "gb-airevalley",
+    "id": "gb-leeds-a4",
+    "institutionId": "gb-leeds",
     "name": "Headingley Stadium",
     "type": "sports",
-    "distanceMinutes": 12,
+    "distanceMinutes": 20,
     "description": "Cricket and rugby league history",
-    "image": "https://picsum.photos/seed/gb-airevalley-a3/400/300"
+    "image": "https://picsum.photos/seed/gb-leeds-a3/400/300",
+    "tips": [
+      "Match-day atmosphere is worth it even if you don't follow the sport",
+      "Student tickets are usually the cheapest way in"
+    ]
   },
   {
-    "id": "gb-airevalley-a5",
-    "institutionId": "gb-airevalley",
+    "id": "gb-leeds-a5",
+    "institutionId": "gb-leeds",
     "name": "Call Lane",
     "type": "nightlife",
-    "distanceMinutes": 13,
+    "distanceMinutes": 12,
     "description": "Bar-hopping central",
-    "image": "https://picsum.photos/seed/gb-airevalley-a4/400/300"
+    "image": "https://picsum.photos/seed/gb-leeds-a4/400/300",
+    "tips": [
+      "Go with your intake group and split the ride home",
+      "Many venues run student nights early in the week"
+    ]
   },
   {
-    "id": "sg-straitsintl-a1",
-    "institutionId": "sg-straitsintl",
+    "id": "gb-birmingham-a1",
+    "institutionId": "gb-birmingham",
+    "name": "Bullring & Grand Central",
+    "type": "shopping",
+    "distanceMinutes": 7,
+    "description": "The famous Selfridges discs",
+    "image": "https://picsum.photos/seed/gb-birmingham-a0/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
+  },
+  {
+    "id": "gb-birmingham-a2",
+    "institutionId": "gb-birmingham",
+    "name": "Digbeth",
+    "type": "food",
+    "distanceMinutes": 12,
+    "description": "Street food yards in the creative quarter",
+    "image": "https://picsum.photos/seed/gb-birmingham-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
+  },
+  {
+    "id": "gb-birmingham-a3",
+    "institutionId": "gb-birmingham",
+    "name": "Cadbury World",
+    "type": "landmark",
+    "distanceMinutes": 28,
+    "description": "Chocolate heritage in Bournville",
+    "image": "https://picsum.photos/seed/gb-birmingham-a2/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
+  },
+  {
+    "id": "gb-birmingham-a4",
+    "institutionId": "gb-birmingham",
+    "name": "Cannon Hill Park",
+    "type": "nature",
+    "distanceMinutes": 11,
+    "description": "Boating lake and the MAC arts centre",
+    "image": "https://picsum.photos/seed/gb-birmingham-a3/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
+  },
+  {
+    "id": "gb-birmingham-a5",
+    "institutionId": "gb-birmingham",
+    "name": "Broad Street",
+    "type": "nightlife",
+    "distanceMinutes": 12,
+    "description": "Clubs along the canal side",
+    "image": "https://picsum.photos/seed/gb-birmingham-a4/400/300",
+    "tips": [
+      "Go with your intake group and split the ride home",
+      "Many venues run student nights early in the week"
+    ]
+  },
+  {
+    "id": "gb-ucl-a1",
+    "institutionId": "gb-ucl",
+    "name": "Borough Market",
+    "type": "food",
+    "distanceMinutes": 13,
+    "description": "A thousand years of market eating",
+    "image": "https://picsum.photos/seed/gb-ucl-a0/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
+  },
+  {
+    "id": "gb-ucl-a2",
+    "institutionId": "gb-ucl",
+    "name": "British Museum",
+    "type": "landmark",
+    "distanceMinutes": 15,
+    "description": "The world under one roof, free entry",
+    "image": "https://picsum.photos/seed/gb-ucl-a1/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
+  },
+  {
+    "id": "gb-ucl-a3",
+    "institutionId": "gb-ucl",
+    "name": "Hyde Park",
+    "type": "nature",
+    "distanceMinutes": 19,
+    "description": "Rowboats, deck chairs, speakers corner",
+    "image": "https://picsum.photos/seed/gb-ucl-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
+  },
+  {
+    "id": "gb-ucl-a4",
+    "institutionId": "gb-ucl",
+    "name": "Oxford Street",
+    "type": "shopping",
+    "distanceMinutes": 6,
+    "description": "A mile and a half of flagship stores",
+    "image": "https://picsum.photos/seed/gb-ucl-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
+  },
+  {
+    "id": "gb-ucl-a5",
+    "institutionId": "gb-ucl",
+    "name": "Shoreditch",
+    "type": "nightlife",
+    "distanceMinutes": 20,
+    "description": "Street art by day, bars by night",
+    "image": "https://picsum.photos/seed/gb-ucl-a4/400/300",
+    "tips": [
+      "Go with your intake group and split the ride home",
+      "Many venues run student nights early in the week"
+    ]
+  },
+  {
+    "id": "gb-kcl-a1",
+    "institutionId": "gb-kcl",
+    "name": "Borough Market",
+    "type": "food",
+    "distanceMinutes": 19,
+    "description": "A thousand years of market eating",
+    "image": "https://picsum.photos/seed/gb-kcl-a0/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
+  },
+  {
+    "id": "gb-kcl-a2",
+    "institutionId": "gb-kcl",
+    "name": "British Museum",
+    "type": "landmark",
+    "distanceMinutes": 8,
+    "description": "The world under one roof, free entry",
+    "image": "https://picsum.photos/seed/gb-kcl-a1/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
+  },
+  {
+    "id": "gb-kcl-a3",
+    "institutionId": "gb-kcl",
+    "name": "Hyde Park",
+    "type": "nature",
+    "distanceMinutes": 20,
+    "description": "Rowboats, deck chairs, speakers corner",
+    "image": "https://picsum.photos/seed/gb-kcl-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
+  },
+  {
+    "id": "gb-kcl-a4",
+    "institutionId": "gb-kcl",
+    "name": "Oxford Street",
+    "type": "shopping",
+    "distanceMinutes": 6,
+    "description": "A mile and a half of flagship stores",
+    "image": "https://picsum.photos/seed/gb-kcl-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
+  },
+  {
+    "id": "gb-kcl-a5",
+    "institutionId": "gb-kcl",
+    "name": "Shoreditch",
+    "type": "nightlife",
+    "distanceMinutes": 22,
+    "description": "Street art by day, bars by night",
+    "image": "https://picsum.photos/seed/gb-kcl-a4/400/300",
+    "tips": [
+      "Go with your intake group and split the ride home",
+      "Many venues run student nights early in the week"
+    ]
+  },
+  {
+    "id": "gb-edinburgh-a1",
+    "institutionId": "gb-edinburgh",
+    "name": "Arthur's Seat",
+    "type": "nature",
+    "distanceMinutes": 22,
+    "description": "An extinct volcano in the city",
+    "image": "https://picsum.photos/seed/gb-edinburgh-a0/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
+  },
+  {
+    "id": "gb-edinburgh-a2",
+    "institutionId": "gb-edinburgh",
+    "name": "Royal Mile",
+    "type": "landmark",
+    "distanceMinutes": 5,
+    "description": "Castle to palace through the Old Town",
+    "image": "https://picsum.photos/seed/gb-edinburgh-a1/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
+  },
+  {
+    "id": "gb-edinburgh-a3",
+    "institutionId": "gb-edinburgh",
+    "name": "Princes Street",
+    "type": "shopping",
+    "distanceMinutes": 9,
+    "description": "Shopping with a castle backdrop",
+    "image": "https://picsum.photos/seed/gb-edinburgh-a2/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
+  },
+  {
+    "id": "gb-edinburgh-a4",
+    "institutionId": "gb-edinburgh",
+    "name": "Grassmarket",
+    "type": "nightlife",
+    "distanceMinutes": 4,
+    "description": "Historic square of pubs and folk music",
+    "image": "https://picsum.photos/seed/gb-edinburgh-a3/400/300",
+    "tips": [
+      "Go with your intake group and split the ride home",
+      "Many venues run student nights early in the week"
+    ]
+  },
+  {
+    "id": "gb-edinburgh-a5",
+    "institutionId": "gb-edinburgh",
+    "name": "Portobello Beach",
+    "type": "nature",
+    "distanceMinutes": 32,
+    "description": "Seaside promenade and saunas",
+    "image": "https://picsum.photos/seed/gb-edinburgh-a4/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
+  },
+  {
+    "id": "sg-nus-a1",
+    "institutionId": "sg-nus",
     "name": "Gardens by the Bay",
     "type": "nature",
-    "distanceMinutes": 21,
+    "distanceMinutes": 18,
     "description": "Supertrees and cooled conservatories",
-    "image": "https://picsum.photos/seed/sg-straitsintl-a0/400/300"
+    "image": "https://picsum.photos/seed/sg-nus-a0/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "sg-straitsintl-a2",
-    "institutionId": "sg-straitsintl",
+    "id": "sg-nus-a2",
+    "institutionId": "sg-nus",
     "name": "Maxwell Food Centre",
     "type": "food",
-    "distanceMinutes": 20,
+    "distanceMinutes": 12,
     "description": "Hainanese chicken rice pilgrimage",
-    "image": "https://picsum.photos/seed/sg-straitsintl-a1/400/300"
+    "image": "https://picsum.photos/seed/sg-nus-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "sg-straitsintl-a3",
-    "institutionId": "sg-straitsintl",
+    "id": "sg-nus-a3",
+    "institutionId": "sg-nus",
     "name": "Orchard Road",
     "type": "shopping",
-    "distanceMinutes": 11,
+    "distanceMinutes": 16,
     "description": "Air-conditioned retail canyon",
-    "image": "https://picsum.photos/seed/sg-straitsintl-a2/400/300"
+    "image": "https://picsum.photos/seed/sg-nus-a2/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "sg-straitsintl-a4",
-    "institutionId": "sg-straitsintl",
+    "id": "sg-nus-a4",
+    "institutionId": "sg-nus",
     "name": "Marina Bay Sands",
     "type": "landmark",
-    "distanceMinutes": 16,
+    "distanceMinutes": 24,
     "description": "The boat-topped skyline icon",
-    "image": "https://picsum.photos/seed/sg-straitsintl-a3/400/300"
+    "image": "https://picsum.photos/seed/sg-nus-a3/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "sg-straitsintl-a5",
-    "institutionId": "sg-straitsintl",
+    "id": "sg-nus-a5",
+    "institutionId": "sg-nus",
     "name": "Sentosa",
     "type": "nature",
-    "distanceMinutes": 31,
+    "distanceMinutes": 28,
     "description": "Beaches, luge and cable cars",
-    "image": "https://picsum.photos/seed/sg-straitsintl-a4/400/300"
+    "image": "https://picsum.photos/seed/sg-nus-a4/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "sg-straitsintl-a6",
-    "institutionId": "sg-straitsintl",
+    "id": "sg-nus-a6",
+    "institutionId": "sg-nus",
     "name": "Clarke Quay",
     "type": "nightlife",
-    "distanceMinutes": 13,
+    "distanceMinutes": 18,
     "description": "Riverside bars and bumboats",
-    "image": "https://picsum.photos/seed/sg-straitsintl-a5/400/300"
+    "image": "https://picsum.photos/seed/sg-nus-a5/400/300",
+    "tips": [
+      "Go with your intake group and split the ride home",
+      "Many venues run student nights early in the week"
+    ]
   },
   {
-    "id": "sg-merlion-a1",
-    "institutionId": "sg-merlion",
+    "id": "sg-ntusg-a1",
+    "institutionId": "sg-ntusg",
     "name": "Gardens by the Bay",
     "type": "nature",
     "distanceMinutes": 19,
     "description": "Supertrees and cooled conservatories",
-    "image": "https://picsum.photos/seed/sg-merlion-a0/400/300"
+    "image": "https://picsum.photos/seed/sg-ntusg-a0/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "sg-merlion-a2",
-    "institutionId": "sg-merlion",
+    "id": "sg-ntusg-a2",
+    "institutionId": "sg-ntusg",
     "name": "Maxwell Food Centre",
     "type": "food",
-    "distanceMinutes": 14,
+    "distanceMinutes": 11,
     "description": "Hainanese chicken rice pilgrimage",
-    "image": "https://picsum.photos/seed/sg-merlion-a1/400/300"
+    "image": "https://picsum.photos/seed/sg-ntusg-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "sg-merlion-a3",
-    "institutionId": "sg-merlion",
+    "id": "sg-ntusg-a3",
+    "institutionId": "sg-ntusg",
     "name": "Orchard Road",
     "type": "shopping",
-    "distanceMinutes": 14,
+    "distanceMinutes": 19,
     "description": "Air-conditioned retail canyon",
-    "image": "https://picsum.photos/seed/sg-merlion-a2/400/300"
+    "image": "https://picsum.photos/seed/sg-ntusg-a2/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "sg-merlion-a4",
-    "institutionId": "sg-merlion",
+    "id": "sg-ntusg-a4",
+    "institutionId": "sg-ntusg",
     "name": "Marina Bay Sands",
     "type": "landmark",
-    "distanceMinutes": 22,
+    "distanceMinutes": 19,
     "description": "The boat-topped skyline icon",
-    "image": "https://picsum.photos/seed/sg-merlion-a3/400/300"
+    "image": "https://picsum.photos/seed/sg-ntusg-a3/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "sg-merlion-a5",
-    "institutionId": "sg-merlion",
+    "id": "sg-ntusg-a5",
+    "institutionId": "sg-ntusg",
     "name": "Sentosa",
     "type": "nature",
-    "distanceMinutes": 29,
+    "distanceMinutes": 25,
     "description": "Beaches, luge and cable cars",
-    "image": "https://picsum.photos/seed/sg-merlion-a4/400/300"
+    "image": "https://picsum.photos/seed/sg-ntusg-a4/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "sg-merlion-a6",
-    "institutionId": "sg-merlion",
+    "id": "sg-ntusg-a6",
+    "institutionId": "sg-ntusg",
     "name": "Clarke Quay",
     "type": "nightlife",
-    "distanceMinutes": 13,
+    "distanceMinutes": 18,
     "description": "Riverside bars and bumboats",
-    "image": "https://picsum.photos/seed/sg-merlion-a5/400/300"
+    "image": "https://picsum.photos/seed/sg-ntusg-a5/400/300",
+    "tips": [
+      "Go with your intake group and split the ride home",
+      "Many venues run student nights early in the week"
+    ]
   },
   {
-    "id": "sg-changi-a1",
-    "institutionId": "sg-changi",
+    "id": "sg-smu-a1",
+    "institutionId": "sg-smu",
     "name": "Gardens by the Bay",
     "type": "nature",
-    "distanceMinutes": 24,
+    "distanceMinutes": 21,
     "description": "Supertrees and cooled conservatories",
-    "image": "https://picsum.photos/seed/sg-changi-a0/400/300"
+    "image": "https://picsum.photos/seed/sg-smu-a0/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "sg-changi-a2",
-    "institutionId": "sg-changi",
+    "id": "sg-smu-a2",
+    "institutionId": "sg-smu",
     "name": "Maxwell Food Centre",
     "type": "food",
-    "distanceMinutes": 13,
+    "distanceMinutes": 19,
     "description": "Hainanese chicken rice pilgrimage",
-    "image": "https://picsum.photos/seed/sg-changi-a1/400/300"
+    "image": "https://picsum.photos/seed/sg-smu-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "sg-changi-a3",
-    "institutionId": "sg-changi",
+    "id": "sg-smu-a3",
+    "institutionId": "sg-smu",
     "name": "Orchard Road",
     "type": "shopping",
-    "distanceMinutes": 15,
+    "distanceMinutes": 19,
     "description": "Air-conditioned retail canyon",
-    "image": "https://picsum.photos/seed/sg-changi-a2/400/300"
+    "image": "https://picsum.photos/seed/sg-smu-a2/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "sg-changi-a4",
-    "institutionId": "sg-changi",
+    "id": "sg-smu-a4",
+    "institutionId": "sg-smu",
     "name": "Marina Bay Sands",
     "type": "landmark",
-    "distanceMinutes": 21,
+    "distanceMinutes": 17,
     "description": "The boat-topped skyline icon",
-    "image": "https://picsum.photos/seed/sg-changi-a3/400/300"
+    "image": "https://picsum.photos/seed/sg-smu-a3/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "sg-changi-a5",
-    "institutionId": "sg-changi",
+    "id": "sg-smu-a5",
+    "institutionId": "sg-smu",
     "name": "Sentosa",
     "type": "nature",
     "distanceMinutes": 31,
     "description": "Beaches, luge and cable cars",
-    "image": "https://picsum.photos/seed/sg-changi-a4/400/300"
+    "image": "https://picsum.photos/seed/sg-smu-a4/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "sg-changi-a6",
-    "institutionId": "sg-changi",
+    "id": "sg-smu-a6",
+    "institutionId": "sg-smu",
     "name": "Clarke Quay",
     "type": "nightlife",
-    "distanceMinutes": 16,
+    "distanceMinutes": 15,
     "description": "Riverside bars and bumboats",
-    "image": "https://picsum.photos/seed/sg-changi-a5/400/300"
+    "image": "https://picsum.photos/seed/sg-smu-a5/400/300",
+    "tips": [
+      "Go with your intake group and split the ride home",
+      "Many venues run student nights early in the week"
+    ]
   },
   {
-    "id": "sg-marinagate-a1",
-    "institutionId": "sg-marinagate",
+    "id": "sg-sim-a1",
+    "institutionId": "sg-sim",
     "name": "Gardens by the Bay",
     "type": "nature",
     "distanceMinutes": 17,
     "description": "Supertrees and cooled conservatories",
-    "image": "https://picsum.photos/seed/sg-marinagate-a0/400/300"
+    "image": "https://picsum.photos/seed/sg-sim-a0/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "sg-marinagate-a2",
-    "institutionId": "sg-marinagate",
+    "id": "sg-sim-a2",
+    "institutionId": "sg-sim",
     "name": "Maxwell Food Centre",
     "type": "food",
-    "distanceMinutes": 13,
+    "distanceMinutes": 10,
     "description": "Hainanese chicken rice pilgrimage",
-    "image": "https://picsum.photos/seed/sg-marinagate-a1/400/300"
+    "image": "https://picsum.photos/seed/sg-sim-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "sg-marinagate-a3",
-    "institutionId": "sg-marinagate",
+    "id": "sg-sim-a3",
+    "institutionId": "sg-sim",
     "name": "Orchard Road",
     "type": "shopping",
-    "distanceMinutes": 13,
+    "distanceMinutes": 17,
     "description": "Air-conditioned retail canyon",
-    "image": "https://picsum.photos/seed/sg-marinagate-a2/400/300"
+    "image": "https://picsum.photos/seed/sg-sim-a2/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "sg-marinagate-a4",
-    "institutionId": "sg-marinagate",
+    "id": "sg-sim-a4",
+    "institutionId": "sg-sim",
     "name": "Marina Bay Sands",
     "type": "landmark",
-    "distanceMinutes": 18,
+    "distanceMinutes": 22,
     "description": "The boat-topped skyline icon",
-    "image": "https://picsum.photos/seed/sg-marinagate-a3/400/300"
+    "image": "https://picsum.photos/seed/sg-sim-a3/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "sg-marinagate-a5",
-    "institutionId": "sg-marinagate",
+    "id": "sg-sim-a5",
+    "institutionId": "sg-sim",
     "name": "Sentosa",
     "type": "nature",
-    "distanceMinutes": 32,
+    "distanceMinutes": 28,
     "description": "Beaches, luge and cable cars",
-    "image": "https://picsum.photos/seed/sg-marinagate-a4/400/300"
+    "image": "https://picsum.photos/seed/sg-sim-a4/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "sg-marinagate-a6",
-    "institutionId": "sg-marinagate",
+    "id": "sg-sim-a6",
+    "institutionId": "sg-sim",
     "name": "Clarke Quay",
     "type": "nightlife",
-    "distanceMinutes": 12,
+    "distanceMinutes": 13,
     "description": "Riverside bars and bumboats",
-    "image": "https://picsum.photos/seed/sg-marinagate-a5/400/300"
+    "image": "https://picsum.photos/seed/sg-sim-a5/400/300",
+    "tips": [
+      "Go with your intake group and split the ride home",
+      "Many venues run student nights early in the week"
+    ]
   },
   {
-    "id": "nz-kauri-a1",
-    "institutionId": "nz-kauri",
+    "id": "nz-auckland-a1",
+    "institutionId": "nz-auckland",
     "name": "Sky Tower",
     "type": "landmark",
-    "distanceMinutes": 6,
+    "distanceMinutes": 8,
     "description": "Bungy off it or dine up it",
-    "image": "https://picsum.photos/seed/nz-kauri-a0/400/300"
+    "image": "https://picsum.photos/seed/nz-auckland-a0/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "nz-kauri-a2",
-    "institutionId": "nz-kauri",
+    "id": "nz-auckland-a2",
+    "institutionId": "nz-auckland",
     "name": "Mission Bay",
     "type": "nature",
-    "distanceMinutes": 22,
+    "distanceMinutes": 15,
     "description": "Beach promenade with volcano views",
-    "image": "https://picsum.photos/seed/nz-kauri-a1/400/300"
+    "image": "https://picsum.photos/seed/nz-auckland-a1/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "nz-kauri-a3",
-    "institutionId": "nz-kauri",
+    "id": "nz-auckland-a3",
+    "institutionId": "nz-auckland",
     "name": "Ponsonby Road",
     "type": "food",
-    "distanceMinutes": 10,
+    "distanceMinutes": 9,
     "description": "Brunch strip of the city",
-    "image": "https://picsum.photos/seed/nz-kauri-a2/400/300"
+    "image": "https://picsum.photos/seed/nz-auckland-a2/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "nz-kauri-a4",
-    "institutionId": "nz-kauri",
+    "id": "nz-auckland-a4",
+    "institutionId": "nz-auckland",
     "name": "Queen Street",
     "type": "shopping",
-    "distanceMinutes": 4,
+    "distanceMinutes": 13,
     "description": "Main street from harbour to K-Road",
-    "image": "https://picsum.photos/seed/nz-kauri-a3/400/300"
+    "image": "https://picsum.photos/seed/nz-auckland-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "nz-kauri-a5",
-    "institutionId": "nz-kauri",
+    "id": "nz-auckland-a5",
+    "institutionId": "nz-auckland",
     "name": "Eden Park",
     "type": "sports",
-    "distanceMinutes": 13,
+    "distanceMinutes": 16,
     "description": "All Blacks home turf",
-    "image": "https://picsum.photos/seed/nz-kauri-a4/400/300"
+    "image": "https://picsum.photos/seed/nz-auckland-a4/400/300",
+    "tips": [
+      "Match-day atmosphere is worth it even if you don't follow the sport",
+      "Student tickets are usually the cheapest way in"
+    ]
   },
   {
-    "id": "nz-harbourcity-a1",
-    "institutionId": "nz-harbourcity",
+    "id": "nz-vuw-a1",
+    "institutionId": "nz-vuw",
     "name": "Te Papa",
     "type": "landmark",
-    "distanceMinutes": 5,
+    "distanceMinutes": 15,
     "description": "The national museum on the waterfront",
-    "image": "https://picsum.photos/seed/nz-harbourcity-a0/400/300"
+    "image": "https://picsum.photos/seed/nz-vuw-a0/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "nz-harbourcity-a2",
-    "institutionId": "nz-harbourcity",
+    "id": "nz-vuw-a2",
+    "institutionId": "nz-vuw",
     "name": "Cuba Street",
     "type": "food",
-    "distanceMinutes": 9,
+    "distanceMinutes": 4,
     "description": "Bucket fountain, cafés and buskers",
-    "image": "https://picsum.photos/seed/nz-harbourcity-a1/400/300"
+    "image": "https://picsum.photos/seed/nz-vuw-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "nz-harbourcity-a3",
-    "institutionId": "nz-harbourcity",
+    "id": "nz-vuw-a3",
+    "institutionId": "nz-vuw",
     "name": "Mount Victoria Lookout",
     "type": "nature",
-    "distanceMinutes": 12,
+    "distanceMinutes": 11,
     "description": "360° of harbour and hills",
-    "image": "https://picsum.photos/seed/nz-harbourcity-a2/400/300"
+    "image": "https://picsum.photos/seed/nz-vuw-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "nz-harbourcity-a4",
-    "institutionId": "nz-harbourcity",
+    "id": "nz-vuw-a4",
+    "institutionId": "nz-vuw",
     "name": "Oriental Bay",
     "type": "nature",
-    "distanceMinutes": 12,
+    "distanceMinutes": 13,
     "description": "City beach five minutes from downtown",
-    "image": "https://picsum.photos/seed/nz-harbourcity-a3/400/300"
+    "image": "https://picsum.photos/seed/nz-vuw-a3/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "nz-harbourcity-a5",
-    "institutionId": "nz-harbourcity",
+    "id": "nz-vuw-a5",
+    "institutionId": "nz-vuw",
     "name": "Sky Stadium",
     "type": "sports",
-    "distanceMinutes": 9,
+    "distanceMinutes": 8,
     "description": "Concerts and rugby by the quays",
-    "image": "https://picsum.photos/seed/nz-harbourcity-a4/400/300"
+    "image": "https://picsum.photos/seed/nz-vuw-a4/400/300",
+    "tips": [
+      "Match-day atmosphere is worth it even if you don't follow the sport",
+      "Student tickets are usually the cheapest way in"
+    ]
   },
   {
-    "id": "nz-southernalps-a1",
-    "institutionId": "nz-southernalps",
+    "id": "nz-canterbury-a1",
+    "institutionId": "nz-canterbury",
     "name": "Hagley Park",
     "type": "nature",
-    "distanceMinutes": 12,
+    "distanceMinutes": 9,
     "description": "Vast central park and botanic gardens",
-    "image": "https://picsum.photos/seed/nz-southernalps-a0/400/300"
+    "image": "https://picsum.photos/seed/nz-canterbury-a0/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "nz-southernalps-a2",
-    "institutionId": "nz-southernalps",
+    "id": "nz-canterbury-a2",
+    "institutionId": "nz-canterbury",
     "name": "Riverside Market",
     "type": "food",
-    "distanceMinutes": 13,
+    "distanceMinutes": 7,
     "description": "Artisan hall on the Avon",
-    "image": "https://picsum.photos/seed/nz-southernalps-a1/400/300"
+    "image": "https://picsum.photos/seed/nz-canterbury-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "nz-southernalps-a3",
-    "institutionId": "nz-southernalps",
+    "id": "nz-canterbury-a3",
+    "institutionId": "nz-canterbury",
     "name": "New Regent Street",
     "type": "shopping",
-    "distanceMinutes": 11,
+    "distanceMinutes": 7,
     "description": "Pastel Spanish-mission arcade",
-    "image": "https://picsum.photos/seed/nz-southernalps-a2/400/300"
+    "image": "https://picsum.photos/seed/nz-canterbury-a2/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "nz-southernalps-a4",
-    "institutionId": "nz-southernalps",
+    "id": "nz-canterbury-a4",
+    "institutionId": "nz-canterbury",
     "name": "Port Hills",
     "type": "nature",
-    "distanceMinutes": 24,
+    "distanceMinutes": 27,
     "description": "Mountain-bike trails above the city",
-    "image": "https://picsum.photos/seed/nz-southernalps-a3/400/300"
+    "image": "https://picsum.photos/seed/nz-canterbury-a3/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "nz-southernalps-a5",
-    "institutionId": "nz-southernalps",
+    "id": "nz-canterbury-a5",
+    "institutionId": "nz-canterbury",
     "name": "Apollo Projects Stadium",
     "type": "sports",
-    "distanceMinutes": 11,
+    "distanceMinutes": 14,
     "description": "Crusaders match days",
-    "image": "https://picsum.photos/seed/nz-southernalps-a4/400/300"
+    "image": "https://picsum.photos/seed/nz-canterbury-a4/400/300",
+    "tips": [
+      "Match-day atmosphere is worth it even if you don't follow the sport",
+      "Student tickets are usually the cheapest way in"
+    ]
   },
   {
-    "id": "nz-kea-a1",
-    "institutionId": "nz-kea",
+    "id": "nz-otago-a1",
+    "institutionId": "nz-otago",
     "name": "St Clair Beach",
     "type": "nature",
-    "distanceMinutes": 19,
+    "distanceMinutes": 13,
     "description": "Surf breaks and a hot salt-water pool",
-    "image": "https://picsum.photos/seed/nz-kea-a0/400/300"
+    "image": "https://picsum.photos/seed/nz-otago-a0/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "nz-kea-a2",
-    "institutionId": "nz-kea",
+    "id": "nz-otago-a2",
+    "institutionId": "nz-otago",
     "name": "Otago Farmers Market",
     "type": "food",
-    "distanceMinutes": 10,
+    "distanceMinutes": 14,
     "description": "Saturday morning ritual at the station",
-    "image": "https://picsum.photos/seed/nz-kea-a1/400/300"
+    "image": "https://picsum.photos/seed/nz-otago-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "nz-kea-a3",
-    "institutionId": "nz-kea",
+    "id": "nz-otago-a3",
+    "institutionId": "nz-otago",
     "name": "Baldwin Street",
     "type": "landmark",
-    "distanceMinutes": 16,
+    "distanceMinutes": 10,
     "description": "The steepest street in the world",
-    "image": "https://picsum.photos/seed/nz-kea-a2/400/300"
+    "image": "https://picsum.photos/seed/nz-otago-a2/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "nz-kea-a4",
-    "institutionId": "nz-kea",
+    "id": "nz-otago-a4",
+    "institutionId": "nz-otago",
     "name": "George Street",
     "type": "shopping",
-    "distanceMinutes": 9,
+    "distanceMinutes": 5,
     "description": "Student-town main street",
-    "image": "https://picsum.photos/seed/nz-kea-a3/400/300"
+    "image": "https://picsum.photos/seed/nz-otago-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "nz-kea-a5",
-    "institutionId": "nz-kea",
+    "id": "nz-otago-a5",
+    "institutionId": "nz-otago",
     "name": "Forsyth Barr Stadium",
     "type": "sports",
-    "distanceMinutes": 9,
+    "distanceMinutes": 11,
     "description": "The glasshouse of southern rugby",
-    "image": "https://picsum.photos/seed/nz-kea-a4/400/300"
+    "image": "https://picsum.photos/seed/nz-otago-a4/400/300",
+    "tips": [
+      "Match-day atmosphere is worth it even if you don't follow the sport",
+      "Student tickets are usually the cheapest way in"
+    ]
   },
   {
-    "id": "ru-tverskaya-a1",
-    "institutionId": "ru-tverskaya",
+    "id": "ru-msu-a1",
+    "institutionId": "ru-msu",
     "name": "Red Square",
     "type": "landmark",
-    "distanceMinutes": 11,
+    "distanceMinutes": 16,
     "description": "St Basil's domes and the Kremlin walls",
-    "image": "https://picsum.photos/seed/ru-tverskaya-a0/400/300"
+    "image": "https://picsum.photos/seed/ru-msu-a0/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "ru-tverskaya-a2",
-    "institutionId": "ru-tverskaya",
+    "id": "ru-msu-a2",
+    "institutionId": "ru-msu",
     "name": "Gorky Park",
     "type": "nature",
     "distanceMinutes": 21,
     "description": "Skates in winter, lawns in summer",
-    "image": "https://picsum.photos/seed/ru-tverskaya-a1/400/300"
+    "image": "https://picsum.photos/seed/ru-msu-a1/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "ru-tverskaya-a3",
-    "institutionId": "ru-tverskaya",
+    "id": "ru-msu-a3",
+    "institutionId": "ru-msu",
     "name": "GUM",
     "type": "shopping",
-    "distanceMinutes": 18,
+    "distanceMinutes": 12,
     "description": "Tsarist-era gallery of shops and ice cream",
-    "image": "https://picsum.photos/seed/ru-tverskaya-a2/400/300"
+    "image": "https://picsum.photos/seed/ru-msu-a2/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "ru-tverskaya-a4",
-    "institutionId": "ru-tverskaya",
+    "id": "ru-msu-a4",
+    "institutionId": "ru-msu",
     "name": "Arbat Street",
     "type": "food",
-    "distanceMinutes": 9,
+    "distanceMinutes": 10,
     "description": "Pedestrian street of cafés and buskers",
-    "image": "https://picsum.photos/seed/ru-tverskaya-a3/400/300"
+    "image": "https://picsum.photos/seed/ru-msu-a3/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "ru-tverskaya-a5",
-    "institutionId": "ru-tverskaya",
+    "id": "ru-msu-a5",
+    "institutionId": "ru-msu",
     "name": "Vorobyovy Gory",
     "type": "nature",
-    "distanceMinutes": 24,
+    "distanceMinutes": 23,
     "description": "Sparrow Hills viewpoint over the city",
-    "image": "https://picsum.photos/seed/ru-tverskaya-a4/400/300"
+    "image": "https://picsum.photos/seed/ru-msu-a4/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "ru-neva-a1",
-    "institutionId": "ru-neva",
+    "id": "ru-itmo-a1",
+    "institutionId": "ru-itmo",
     "name": "The Hermitage",
     "type": "landmark",
-    "distanceMinutes": 13,
+    "distanceMinutes": 10,
     "description": "Three million artworks in the Winter Palace",
-    "image": "https://picsum.photos/seed/ru-neva-a0/400/300"
+    "image": "https://picsum.photos/seed/ru-itmo-a0/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "ru-neva-a2",
-    "institutionId": "ru-neva",
+    "id": "ru-itmo-a2",
+    "institutionId": "ru-itmo",
     "name": "Nevsky Prospekt",
     "type": "shopping",
-    "distanceMinutes": 13,
+    "distanceMinutes": 10,
     "description": "The grand avenue of the city",
-    "image": "https://picsum.photos/seed/ru-neva-a1/400/300"
+    "image": "https://picsum.photos/seed/ru-itmo-a1/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "ru-neva-a3",
-    "institutionId": "ru-neva",
+    "id": "ru-itmo-a3",
+    "institutionId": "ru-itmo",
     "name": "Summer Garden",
     "type": "nature",
-    "distanceMinutes": 15,
+    "distanceMinutes": 12,
     "description": "Marble statues and fountain alleys",
-    "image": "https://picsum.photos/seed/ru-neva-a2/400/300"
+    "image": "https://picsum.photos/seed/ru-itmo-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "ru-neva-a4",
-    "institutionId": "ru-neva",
+    "id": "ru-itmo-a4",
+    "institutionId": "ru-itmo",
     "name": "Rubinstein Street",
     "type": "food",
-    "distanceMinutes": 14,
+    "distanceMinutes": 6,
     "description": "Bar-and-bistro street of the city",
-    "image": "https://picsum.photos/seed/ru-neva-a3/400/300"
+    "image": "https://picsum.photos/seed/ru-itmo-a3/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "ru-neva-a5",
-    "institutionId": "ru-neva",
+    "id": "ru-itmo-a5",
+    "institutionId": "ru-itmo",
     "name": "New Holland Island",
     "type": "nature",
-    "distanceMinutes": 16,
+    "distanceMinutes": 14,
     "description": "Island park with pop-ups and lawns",
-    "image": "https://picsum.photos/seed/ru-neva-a4/400/300"
+    "image": "https://picsum.photos/seed/ru-itmo-a4/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "ru-volga-a1",
-    "institutionId": "ru-volga",
+    "id": "ru-kfu-a1",
+    "institutionId": "ru-kfu",
     "name": "Kazan Kremlin",
     "type": "landmark",
-    "distanceMinutes": 13,
+    "distanceMinutes": 8,
     "description": "White-walled fortress with a turquoise mosque",
-    "image": "https://picsum.photos/seed/ru-volga-a0/400/300"
+    "image": "https://picsum.photos/seed/ru-kfu-a0/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "ru-volga-a2",
-    "institutionId": "ru-volga",
+    "id": "ru-kfu-a2",
+    "institutionId": "ru-kfu",
     "name": "Bauman Street",
     "type": "food",
     "distanceMinutes": 4,
     "description": "Pedestrian mile of chak-chak and cafés",
-    "image": "https://picsum.photos/seed/ru-volga-a1/400/300"
+    "image": "https://picsum.photos/seed/ru-kfu-a1/400/300",
+    "tips": [
+      "Go hungry and stall-hop — split dishes so you can try more",
+      "Weeknights are cheaper and less crowded than weekends"
+    ]
   },
   {
-    "id": "ru-volga-a3",
-    "institutionId": "ru-volga",
+    "id": "ru-kfu-a3",
+    "institutionId": "ru-kfu",
     "name": "Kaban Lake",
     "type": "nature",
-    "distanceMinutes": 7,
+    "distanceMinutes": 10,
     "description": "Boardwalk embankment downtown",
-    "image": "https://picsum.photos/seed/ru-volga-a2/400/300"
+    "image": "https://picsum.photos/seed/ru-kfu-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "ru-volga-a4",
-    "institutionId": "ru-volga",
+    "id": "ru-kfu-a4",
+    "institutionId": "ru-kfu",
     "name": "Koltso Mall",
     "type": "shopping",
     "distanceMinutes": 4,
     "description": "Central mall on the ring",
-    "image": "https://picsum.photos/seed/ru-volga-a3/400/300"
+    "image": "https://picsum.photos/seed/ru-kfu-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "ru-volga-a5",
-    "institutionId": "ru-volga",
+    "id": "ru-kfu-a5",
+    "institutionId": "ru-kfu",
     "name": "Kazan Arena",
     "type": "sports",
-    "distanceMinutes": 20,
+    "distanceMinutes": 21,
     "description": "World-Cup stadium on the river",
-    "image": "https://picsum.photos/seed/ru-volga-a4/400/300"
+    "image": "https://picsum.photos/seed/ru-kfu-a4/400/300",
+    "tips": [
+      "Match-day atmosphere is worth it even if you don't follow the sport",
+      "Student tickets are usually the cheapest way in"
+    ]
   },
   {
-    "id": "ru-novayasibir-a1",
-    "institutionId": "ru-novayasibir",
+    "id": "ru-nsu-a1",
+    "institutionId": "ru-nsu",
     "name": "Opera & Ballet Theatre",
     "type": "landmark",
-    "distanceMinutes": 12,
+    "distanceMinutes": 7,
     "description": "The largest theatre building in Russia",
-    "image": "https://picsum.photos/seed/ru-novayasibir-a0/400/300"
+    "image": "https://picsum.photos/seed/ru-nsu-a0/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   },
   {
-    "id": "ru-novayasibir-a2",
-    "institutionId": "ru-novayasibir",
+    "id": "ru-nsu-a2",
+    "institutionId": "ru-nsu",
     "name": "Ob River Embankment",
     "type": "nature",
-    "distanceMinutes": 18,
+    "distanceMinutes": 15,
     "description": "Sunset walks along Siberia's great river",
-    "image": "https://picsum.photos/seed/ru-novayasibir-a1/400/300"
+    "image": "https://picsum.photos/seed/ru-nsu-a1/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "ru-novayasibir-a3",
-    "institutionId": "ru-novayasibir",
+    "id": "ru-nsu-a3",
+    "institutionId": "ru-nsu",
     "name": "Central Park",
     "type": "nature",
-    "distanceMinutes": 15,
+    "distanceMinutes": 9,
     "description": "Ferris wheel and winter ice town",
-    "image": "https://picsum.photos/seed/ru-novayasibir-a2/400/300"
+    "image": "https://picsum.photos/seed/ru-nsu-a2/400/300",
+    "tips": [
+      "Golden hour is the photo moment — arrive an hour before sunset",
+      "Wear real shoes; the best viewpoints need a short walk"
+    ]
   },
   {
-    "id": "ru-novayasibir-a4",
-    "institutionId": "ru-novayasibir",
+    "id": "ru-nsu-a4",
+    "institutionId": "ru-nsu",
     "name": "Aura Mall",
     "type": "shopping",
-    "distanceMinutes": 15,
+    "distanceMinutes": 14,
     "description": "Warm refuge with 200 stores",
-    "image": "https://picsum.photos/seed/ru-novayasibir-a3/400/300"
+    "image": "https://picsum.photos/seed/ru-nsu-a3/400/300",
+    "tips": [
+      "Student discounts are common — always show your student ID",
+      "Weekday mornings are the quietest time to browse"
+    ]
   },
   {
-    "id": "ru-novayasibir-a5",
-    "institutionId": "ru-novayasibir",
+    "id": "ru-nsu-a5",
+    "institutionId": "ru-nsu",
     "name": "Akademgorodok",
     "type": "landmark",
-    "distanceMinutes": 31,
+    "distanceMinutes": 35,
     "description": "The famous forest science city",
-    "image": "https://picsum.photos/seed/ru-novayasibir-a4/400/300"
+    "image": "https://picsum.photos/seed/ru-nsu-a4/400/300",
+    "tips": [
+      "Book tickets online to skip the queue",
+      "Free walking tours usually start nearby — check the schedule"
+    ]
   }
 ]

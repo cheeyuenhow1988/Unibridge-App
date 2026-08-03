@@ -5,7 +5,8 @@ export type CurrencyCode =
   | 'IDR' | 'VND' | 'CNY' | 'USD';
 
 export type FieldId =
-  | 'business' | 'engineering' | 'it' | 'health' | 'hospitality' | 'design' | 'law';
+  | 'business' | 'engineering' | 'it' | 'health' | 'hospitality' | 'design' | 'law'
+  | 'science' | 'media' | 'architecture' | 'education';
 
 export type CourseLevel = 'foundation' | 'diploma' | 'bachelor';
 
@@ -24,13 +25,14 @@ export type AttractionType =
 export interface Institution {
   id: string;
   name: string;
+  /** Short display name for group titles and tight layouts, e.g. "Monash". */
+  short: string;
   country: CountryCode;
   city: string;
   type: InstitutionType;
   verifiedPartner: boolean;
   tagline: string;
-  email: string;
-  phone: string;
+  website: string;
   founded: number;
   students: number;
   images: string[];
@@ -140,6 +142,7 @@ export interface Attraction {
   distanceMinutes: number;
   description: string;
   image: string;
+  tips: string[];
 }
 
 export interface AmbassadorPost {
@@ -197,6 +200,7 @@ export interface CommunityEvent {
   date: string;
   venue: string;
   sponsored: boolean;
+  kind: 'meetup' | 'expo';
   image: string;
   description: string;
 }

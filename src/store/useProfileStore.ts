@@ -4,16 +4,19 @@ import { createJSONStorage, persist } from 'zustand/middleware';
 import type { StudentProfile } from '@/types/models';
 
 export type ThemePref = 'system' | 'light' | 'dark';
+export type AppLanguage = 'en' | 'ms' | 'zh';
 
 interface ProfileState {
   profile: StudentProfile | null;
   onboarded: boolean;
   themePref: ThemePref;
+  language: AppLanguage;
   hydrated: boolean;
   setProfile: (profile: StudentProfile) => void;
   patchProfile: (patch: Partial<StudentProfile>) => void;
   completeOnboarding: () => void;
   setThemePref: (pref: ThemePref) => void;
+  setLanguage: (language: AppLanguage) => void;
   setHydrated: () => void;
   reset: () => void;
 }
@@ -24,19 +27,21 @@ export const useProfileStore = create<ProfileState>()(
       profile: null,
       onboarded: false,
       themePref: 'system',
+      language: 'en',
       hydrated: false,
       setProfile: (profile) => set({ profile }),
       patchProfile: (patch) =>
         set((s) => (s.profile ? { profile: { ...s.profile, ...patch } } : s)),
       completeOnboarding: () => set({ onboarded: true }),
       setThemePref: (themePref) => set({ themePref }),
+      setLanguage: (language) => set({ language }),
       setHydrated: () => set({ hydrated: true }),
       reset: () => set({ profile: null, onboarded: false }),
     }),
     {
       name: 'ub-profile',
       storage: createJSONStorage(() => AsyncStorage),
-      partialize: ({ profile, onboarded, themePref }) => ({ profile, onboarded, themePref }),
+      partialize: ({ profile, onboarded, themePref, language }) => ({ profile, onboarded, themePref, language }),
       onRehydrateStorage: () => (state) => state?.setHydrated(),
     },
   ),

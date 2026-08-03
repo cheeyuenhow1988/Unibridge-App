@@ -91,20 +91,13 @@ export default function InstitutionDetail() {
             </Row>
           </View>
 
-          <Row gap={spacing.sm}>
+          <Row gap={spacing.sm} wrap>
             <Button
-              label={t('institution.email')}
-              icon="mail-outline"
+              label={t('institution.website')}
+              icon="globe-outline"
               variant="secondary"
               size="sm"
-              onPress={() => void Linking.openURL(`mailto:${institution.email}`)}
-            />
-            <Button
-              label={t('institution.phone')}
-              icon="call-outline"
-              variant="secondary"
-              size="sm"
-              onPress={() => void Linking.openURL(`tel:${institution.phone.replace(/\s/g, '')}`)}
+              onPress={() => void Linking.openURL(institution.website)}
             />
             <Button
               label={t('course.askQuestion')}
@@ -113,6 +106,33 @@ export default function InstitutionDetail() {
               onPress={() => router.push(`/chat/${institution.id}`)}
             />
           </Row>
+          <View style={{ gap: spacing.sm }}>
+            <Row gap={spacing.sm} wrap>
+              {([
+                ['logo-whatsapp', 'WhatsApp'],
+                ['paper-plane-outline', 'Telegram'],
+                ['logo-facebook', 'Facebook'],
+              ] as const).map(([icon, label]) => (
+                <Pressable
+                  key={label}
+                  accessibilityRole="button"
+                  onPress={() => router.push(`/chat/${institution.id}`)}
+                  style={({ pressed }) => ({
+                    flexDirection: 'row', alignItems: 'center', gap: 6,
+                    borderRadius: radius.full, borderWidth: 1, borderColor: colors.border,
+                    backgroundColor: colors.surface, paddingHorizontal: spacing.md, minHeight: 36,
+                    opacity: pressed ? 0.85 : 1,
+                  })}
+                >
+                  <Ionicons name={icon} size={15} color={colors.accent} />
+                  <Text variant="caption" tone="secondary">{label}</Text>
+                </Pressable>
+              ))}
+            </Row>
+            <Text variant="caption" tone="faint">{t('institution.socialNote')}</Text>
+          </View>
+
+          <Text variant="caption" tone="faint">{t('institution.indicative')}</Text>
 
           <SectionHeader title={t('institution.coursesTitle')} />
           <View style={{ gap: spacing.md }}>
@@ -137,7 +157,7 @@ export default function InstitutionDetail() {
           <AmbassadorStrip institutionId={institution.id} />
 
           <SectionHeader title={t('institution.aroundCampus')} />
-          <AttractionsCarousel institutionId={institution.id} />
+          <AttractionsCarousel institutionId={institution.id} city={institution.city} />
         </View>
       </ScrollView>
     </Screen>
