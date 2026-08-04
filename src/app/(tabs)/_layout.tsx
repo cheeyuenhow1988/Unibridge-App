@@ -1,6 +1,8 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
 import { useTranslation } from 'react-i18next';
+import { View } from 'react-native';
+import { SosButton } from '@/components/safety/SosButton';
 import { fonts } from '@/constants/theme';
 import { useTheme } from '@/hooks/useTheme';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
@@ -19,7 +21,8 @@ export default function TabsLayout() {
   const { colors } = useTheme();
   const unread = useApplicationsStore((s) => s.notifications.filter((n) => !n.read).length);
   return (
-    <Tabs
+    <View style={{ flex: 1 }}>
+      <Tabs
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarActiveTintColor: colors.accent,
@@ -45,6 +48,8 @@ export default function TabsLayout() {
       <Tabs.Screen name="assistant" options={{ title: t('tabs.assistant') }} />
       <Tabs.Screen name="community" options={{ title: t('tabs.community') }} />
       <Tabs.Screen name="profile" options={{ title: t('tabs.profile') }} />
-    </Tabs>
+      </Tabs>
+      <SosButton />
+    </View>
   );
 }

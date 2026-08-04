@@ -102,6 +102,8 @@
       "ambassadorId": "amb-01",
       "duration": 46,
       "views": 12800,
+      "institutionId": "au-monash",
+      "reality": false,
       "thumb": "https://picsum.photos/seed/short-0/420/640"
     },
     {
@@ -110,6 +112,8 @@
       "ambassadorId": "amb-10",
       "duration": 58,
       "views": 22400,
+      "institutionId": "sg-nus",
+      "reality": false,
       "thumb": "https://picsum.photos/seed/short-1/420/640"
     },
     {
@@ -118,6 +122,8 @@
       "ambassadorId": "amb-03",
       "duration": 41,
       "views": 9800,
+      "institutionId": "au-monash",
+      "reality": false,
       "thumb": "https://picsum.photos/seed/short-2/420/640"
     },
     {
@@ -126,6 +132,8 @@
       "ambassadorId": "amb-07",
       "duration": 38,
       "views": 7600,
+      "institutionId": "gb-manchester",
+      "reality": false,
       "thumb": "https://picsum.photos/seed/short-3/420/640"
     },
     {
@@ -134,6 +142,8 @@
       "ambassadorId": "amb-02",
       "duration": 52,
       "views": 5400,
+      "institutionId": "au-unsw",
+      "reality": false,
       "thumb": "https://picsum.photos/seed/short-4/420/640"
     },
     {
@@ -142,6 +152,8 @@
       "ambassadorId": "amb-05",
       "duration": 44,
       "views": 15200,
+      "institutionId": "my-um",
+      "reality": false,
       "thumb": "https://picsum.photos/seed/short-5/420/640"
     },
     {
@@ -150,6 +162,8 @@
       "ambassadorId": "amb-13",
       "duration": 49,
       "views": 4300,
+      "institutionId": "nz-auckland",
+      "reality": false,
       "thumb": "https://picsum.photos/seed/short-6/420/640"
     },
     {
@@ -158,6 +172,8 @@
       "ambassadorId": "amb-16",
       "duration": 55,
       "views": 6100,
+      "institutionId": "ru-itmo",
+      "reality": false,
       "thumb": "https://picsum.photos/seed/short-7/420/640"
     },
     {
@@ -166,6 +182,8 @@
       "ambassadorId": "amb-04",
       "duration": 60,
       "views": 31900,
+      "institutionId": "gb-kcl",
+      "reality": false,
       "thumb": "https://picsum.photos/seed/short-8/420/640"
     },
     {
@@ -174,7 +192,59 @@
       "ambassadorId": "amb-08",
       "duration": 47,
       "views": 18700,
+      "institutionId": "my-um",
+      "reality": false,
       "thumb": "https://picsum.photos/seed/short-9/420/640"
+    },
+    {
+      "id": "short-11",
+      "title": "3 things nobody told me about studying Business at Monash",
+      "ambassadorId": "amb-01",
+      "duration": 62,
+      "views": 8400,
+      "institutionId": "au-monash",
+      "reality": true,
+      "thumb": "https://picsum.photos/seed/short-10/420/640?grayscale"
+    },
+    {
+      "id": "short-12",
+      "title": "3 things nobody told me about Data Analytics at Manchester",
+      "ambassadorId": "amb-07",
+      "duration": 58,
+      "views": 6900,
+      "institutionId": "gb-manchester",
+      "reality": true,
+      "thumb": "https://picsum.photos/seed/short-11/420/640?grayscale"
+    },
+    {
+      "id": "short-13",
+      "title": "3 things nobody told me about Finance at NUS",
+      "ambassadorId": "amb-10",
+      "duration": 66,
+      "views": 9100,
+      "institutionId": "sg-nus",
+      "reality": true,
+      "thumb": "https://picsum.photos/seed/short-12/420/640?grayscale"
+    },
+    {
+      "id": "short-14",
+      "title": "3 things nobody told me about CS at U of T (the winters)",
+      "ambassadorId": "amb-18",
+      "duration": 54,
+      "views": 7300,
+      "institutionId": "ca-utoronto",
+      "reality": true,
+      "thumb": "https://picsum.photos/seed/short-13/420/640?grayscale"
+    },
+    {
+      "id": "short-15",
+      "title": "3 things nobody told me about Law at UM",
+      "ambassadorId": "amb-08",
+      "duration": 59,
+      "views": 5200,
+      "institutionId": "my-um",
+      "reality": true,
+      "thumb": "https://picsum.photos/seed/short-14/420/640?grayscale"
     }
   ],
   "coinRules": [

@@ -863,7 +863,9 @@
       "courseName": "Bachelor of Business Administration",
       "institutionId": "au-monash",
       "intake": "2027-02",
-      "avatar": "https://i.pravatar.cc/200?img=21"
+      "avatar": "https://i.pravatar.cc/200?img=21",
+      "arrivalDate": "2027-02-08",
+      "travelOptIn": true
     },
     {
       "id": "mate-02",
@@ -872,7 +874,9 @@
       "courseName": "Bachelor of Computer Science",
       "institutionId": "au-monash",
       "intake": "2027-02",
-      "avatar": "https://i.pravatar.cc/200?img=65"
+      "avatar": "https://i.pravatar.cc/200?img=65",
+      "arrivalDate": "2027-02-13",
+      "travelOptIn": true
     },
     {
       "id": "mate-03",
@@ -881,7 +885,9 @@
       "courseName": "Bachelor of Business Administration",
       "institutionId": "au-monash",
       "intake": "2027-02",
-      "avatar": "https://i.pravatar.cc/200?img=68"
+      "avatar": "https://i.pravatar.cc/200?img=68",
+      "arrivalDate": "2027-02-18",
+      "travelOptIn": false
     },
     {
       "id": "mate-04",
@@ -890,7 +896,9 @@
       "courseName": "Bachelor of Laws (LLB)",
       "institutionId": "au-monash",
       "intake": "2027-02",
-      "avatar": "https://i.pravatar.cc/200?img=16"
+      "avatar": "https://i.pravatar.cc/200?img=16",
+      "arrivalDate": "2027-02-23",
+      "travelOptIn": true
     },
     {
       "id": "mate-05",
@@ -899,7 +907,9 @@
       "courseName": "Bachelor of Computer Science",
       "institutionId": "au-monash",
       "intake": "2027-02",
-      "avatar": "https://i.pravatar.cc/200?img=61"
+      "avatar": "https://i.pravatar.cc/200?img=61",
+      "arrivalDate": "2027-02-12",
+      "travelOptIn": true
     },
     {
       "id": "mate-06",
@@ -908,7 +918,9 @@
       "courseName": "Bachelor of Nursing",
       "institutionId": "au-monash",
       "intake": "2027-02",
-      "avatar": "https://i.pravatar.cc/200?img=27"
+      "avatar": "https://i.pravatar.cc/200?img=27",
+      "arrivalDate": "2027-02-17",
+      "travelOptIn": false
     },
     {
       "id": "mate-07",
@@ -917,7 +929,9 @@
       "courseName": "Bachelor of Business Administration",
       "institutionId": "au-monash",
       "intake": "2027-02",
-      "avatar": "https://i.pravatar.cc/200?img=41"
+      "avatar": "https://i.pravatar.cc/200?img=41",
+      "arrivalDate": "2027-02-22",
+      "travelOptIn": true
     },
     {
       "id": "mate-08",
@@ -926,7 +940,9 @@
       "courseName": "Bachelor of Computer Science",
       "institutionId": "au-monash",
       "intake": "2027-02",
-      "avatar": "https://i.pravatar.cc/200?img=60"
+      "avatar": "https://i.pravatar.cc/200?img=60",
+      "arrivalDate": "2027-02-11",
+      "travelOptIn": true
     },
     {
       "id": "mate-09",
@@ -935,7 +951,9 @@
       "courseName": "Bachelor of Nursing",
       "institutionId": "au-monash",
       "intake": "2027-02",
-      "avatar": "https://i.pravatar.cc/200?img=43"
+      "avatar": "https://i.pravatar.cc/200?img=43",
+      "arrivalDate": "2027-02-16",
+      "travelOptIn": false
     },
     {
       "id": "mate-10",
@@ -944,7 +962,9 @@
       "courseName": "Bachelor of Business Administration",
       "institutionId": "au-monash",
       "intake": "2027-02",
-      "avatar": "https://i.pravatar.cc/200?img=51"
+      "avatar": "https://i.pravatar.cc/200?img=51",
+      "arrivalDate": "2027-02-21",
+      "travelOptIn": true
     },
     {
       "id": "mate-11",
@@ -953,7 +973,9 @@
       "courseName": "Bachelor of Laws (LLB)",
       "institutionId": "au-monash",
       "intake": "2027-02",
-      "avatar": "https://i.pravatar.cc/200?img=38"
+      "avatar": "https://i.pravatar.cc/200?img=38",
+      "arrivalDate": "2027-02-10",
+      "travelOptIn": true
     },
     {
       "id": "mate-12",
@@ -962,7 +984,9 @@
       "courseName": "Bachelor of Computer Science",
       "institutionId": "au-monash",
       "intake": "2027-02",
-      "avatar": "https://i.pravatar.cc/200?img=64"
+      "avatar": "https://i.pravatar.cc/200?img=64",
+      "arrivalDate": "2027-02-15",
+      "travelOptIn": false
     }
   ],
   "events": [

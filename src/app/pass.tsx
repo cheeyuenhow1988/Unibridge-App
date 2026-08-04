@@ -20,9 +20,9 @@ const HERO: [string, string] = ['#2447DB', '#0B7A47'];
 const GOLD = '#B8923B';
 const COL = 52;
 
-const APPLY_ROWS = ['match', 'compare', 'apps', 'timeline', 'review', 'team', 'mail', 'predep', 'life', 'community'] as const;
+const APPLY_ROWS = ['match', 'compare', 'apps', 'timeline', 'review', 'team', 'mail', 'predep', 'life', 'community', 'safety'] as const;
 const ARRIVAL_ROWS = ['fastTrack', 'scholar', 'helpline', 'sim', 'bank', 'pickup'] as const;
-const FREE_ROWS = new Set(['match', 'community']);
+const FREE_ROWS = new Set(['match', 'community', 'safety']);
 
 export default function SeasonPassScreen() {
   const { t } = useTranslation();

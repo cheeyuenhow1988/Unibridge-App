@@ -19,7 +19,9 @@ import { getCourse, getInstitution, listScholarships } from '@/services/api';
 import { hapticSuccess } from '@/services/haptics';
 import { formatMoney } from '@/services/currency';
 import { LockChip, UpgradeSheet } from '@/components/plan/UpgradeSheet';
+import { ContactSheet } from '@/components/safety/ContactSheet';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
+import { useProfileStore } from '@/store/useProfileStore';
 import { FREE_ACTIVE_APPLICATIONS, usePlan } from '@/store/usePlanStore';
 import { useSavedStore } from '@/store/useSavedStore';
 import { useVaultStore } from '@/store/useVaultStore';
@@ -40,8 +42,10 @@ export default function ApplyFlow() {
   const [scholarshipId, setScholarshipId] = useState<string>('none');
   const [appId, setAppId] = useState<string | null>(null);
   const [upgradeOpen, setUpgradeOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
   const plan = usePlan();
   const activeApplications = useApplicationsStore((s) => s.applications.length);
+  const emergencyContact = useProfileStore((s) => s.profile?.emergencyContact);
 
   const state = useAsync(async () => {
     const course = await getCourse(courseId);
@@ -84,6 +88,12 @@ export default function ApplyFlow() {
   const shortlisted = scholarships.filter((s) => savedScholarshipIds.includes(s.id));
 
   const submit = () => {
+    // Safety first: an emergency contact is required before the first
+    // application — free for everyone, never gated.
+    if (!emergencyContact) {
+      setContactOpen(true);
+      return;
+    }
     // Free tier runs one active application at a time — sheet, not a hard block.
     if (plan === 'free' && activeApplications >= FREE_ACTIVE_APPLICATIONS) {
       setUpgradeOpen(true);
@@ -277,6 +287,7 @@ export default function ApplyFlow() {
         )}
       </ScrollView>
       <UpgradeSheet visible={upgradeOpen} context="apply" onClose={() => setUpgradeOpen(false)} />
+      <ContactSheet visible={contactOpen} onClose={() => setContactOpen(false)} />
     </Screen>
   );
 }

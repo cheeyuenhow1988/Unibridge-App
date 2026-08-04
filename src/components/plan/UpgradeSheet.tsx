@@ -24,6 +24,7 @@ const COMPARISON: { id: string; free: boolean }[] = [
   { id: 'predep', free: false },
   { id: 'life', free: false },
   { id: 'community', free: true },
+  { id: 'safety', free: true },
 ];
 
 interface Props {

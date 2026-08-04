@@ -17,7 +17,11 @@
     "utilitiesMonthly": 220,
     "eatingOutMeal": 22,
     "insuranceYearly": 650,
-    "visaFeeOneOff": 1600
+    "visaFeeOneOff": 1600,
+    "verifiedBy": [
+      "amb-02"
+    ],
+    "lastVerified": "2026-07-22"
   },
   {
     "city": "Melbourne",
@@ -37,7 +41,12 @@
     "utilitiesMonthly": 220,
     "eatingOutMeal": 22,
     "insuranceYearly": 650,
-    "visaFeeOneOff": 1600
+    "visaFeeOneOff": 1600,
+    "verifiedBy": [
+      "amb-01",
+      "amb-03"
+    ],
+    "lastVerified": "2026-07-07"
   },
   {
     "city": "Brisbane",
@@ -57,7 +66,9 @@
     "utilitiesMonthly": 220,
     "eatingOutMeal": 22,
     "insuranceYearly": 650,
-    "visaFeeOneOff": 1600
+    "visaFeeOneOff": 1600,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Perth",
@@ -77,7 +88,9 @@
     "utilitiesMonthly": 220,
     "eatingOutMeal": 22,
     "insuranceYearly": 650,
-    "visaFeeOneOff": 1600
+    "visaFeeOneOff": 1600,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Kuala Lumpur",
@@ -97,7 +110,12 @@
     "utilitiesMonthly": 250,
     "eatingOutMeal": 12,
     "insuranceYearly": 600,
-    "visaFeeOneOff": 2000
+    "visaFeeOneOff": 2000,
+    "verifiedBy": [
+      "amb-05",
+      "amb-08"
+    ],
+    "lastVerified": "2026-07-16"
   },
   {
     "city": "Penang",
@@ -117,7 +135,9 @@
     "utilitiesMonthly": 250,
     "eatingOutMeal": 12,
     "insuranceYearly": 600,
-    "visaFeeOneOff": 2000
+    "visaFeeOneOff": 2000,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Cyberjaya",
@@ -137,7 +157,11 @@
     "utilitiesMonthly": 250,
     "eatingOutMeal": 12,
     "insuranceYearly": 600,
-    "visaFeeOneOff": 2000
+    "visaFeeOneOff": 2000,
+    "verifiedBy": [
+      "amb-15"
+    ],
+    "lastVerified": "2026-07-07"
   },
   {
     "city": "Johor Bahru",
@@ -157,7 +181,9 @@
     "utilitiesMonthly": 250,
     "eatingOutMeal": 12,
     "insuranceYearly": 600,
-    "visaFeeOneOff": 2000
+    "visaFeeOneOff": 2000,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Taipei",
@@ -177,7 +203,12 @@
     "utilitiesMonthly": 2200,
     "eatingOutMeal": 120,
     "insuranceYearly": 10000,
-    "visaFeeOneOff": 3000
+    "visaFeeOneOff": 3000,
+    "verifiedBy": [
+      "amb-09",
+      "amb-12"
+    ],
+    "lastVerified": "2026-07-22"
   },
   {
     "city": "Hsinchu",
@@ -197,7 +228,9 @@
     "utilitiesMonthly": 2200,
     "eatingOutMeal": 120,
     "insuranceYearly": 10000,
-    "visaFeeOneOff": 3000
+    "visaFeeOneOff": 3000,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Taichung",
@@ -217,7 +250,9 @@
     "utilitiesMonthly": 2200,
     "eatingOutMeal": 120,
     "insuranceYearly": 10000,
-    "visaFeeOneOff": 3000
+    "visaFeeOneOff": 3000,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Kaohsiung",
@@ -237,7 +272,9 @@
     "utilitiesMonthly": 2200,
     "eatingOutMeal": 120,
     "insuranceYearly": 10000,
-    "visaFeeOneOff": 3000
+    "visaFeeOneOff": 3000,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "London",
@@ -257,7 +294,11 @@
     "utilitiesMonthly": 160,
     "eatingOutMeal": 14,
     "insuranceYearly": 776,
-    "visaFeeOneOff": 490
+    "visaFeeOneOff": 490,
+    "verifiedBy": [
+      "amb-04"
+    ],
+    "lastVerified": "2026-07-22"
   },
   {
     "city": "Manchester",
@@ -277,7 +318,11 @@
     "utilitiesMonthly": 160,
     "eatingOutMeal": 14,
     "insuranceYearly": 776,
-    "visaFeeOneOff": 490
+    "visaFeeOneOff": 490,
+    "verifiedBy": [
+      "amb-07"
+    ],
+    "lastVerified": "2026-07-10"
   },
   {
     "city": "Edinburgh",
@@ -297,7 +342,11 @@
     "utilitiesMonthly": 160,
     "eatingOutMeal": 14,
     "insuranceYearly": 776,
-    "visaFeeOneOff": 490
+    "visaFeeOneOff": 490,
+    "verifiedBy": [
+      "amb-14"
+    ],
+    "lastVerified": "2026-07-07"
   },
   {
     "city": "Birmingham",
@@ -317,7 +366,9 @@
     "utilitiesMonthly": 160,
     "eatingOutMeal": 14,
     "insuranceYearly": 776,
-    "visaFeeOneOff": 490
+    "visaFeeOneOff": 490,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Leeds",
@@ -337,7 +388,9 @@
     "utilitiesMonthly": 160,
     "eatingOutMeal": 14,
     "insuranceYearly": 776,
-    "visaFeeOneOff": 490
+    "visaFeeOneOff": 490,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Singapore",
@@ -357,7 +410,12 @@
     "utilitiesMonthly": 180,
     "eatingOutMeal": 9,
     "insuranceYearly": 500,
-    "visaFeeOneOff": 90
+    "visaFeeOneOff": 90,
+    "verifiedBy": [
+      "amb-10",
+      "amb-11"
+    ],
+    "lastVerified": "2026-07-07"
   },
   {
     "city": "Auckland",
@@ -377,7 +435,11 @@
     "utilitiesMonthly": 200,
     "eatingOutMeal": 20,
     "insuranceYearly": 700,
-    "visaFeeOneOff": 750
+    "visaFeeOneOff": 750,
+    "verifiedBy": [
+      "amb-13"
+    ],
+    "lastVerified": "2026-07-04"
   },
   {
     "city": "Wellington",
@@ -397,7 +459,9 @@
     "utilitiesMonthly": 200,
     "eatingOutMeal": 20,
     "insuranceYearly": 700,
-    "visaFeeOneOff": 750
+    "visaFeeOneOff": 750,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Christchurch",
@@ -417,7 +481,9 @@
     "utilitiesMonthly": 200,
     "eatingOutMeal": 20,
     "insuranceYearly": 700,
-    "visaFeeOneOff": 750
+    "visaFeeOneOff": 750,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Dunedin",
@@ -437,7 +503,9 @@
     "utilitiesMonthly": 200,
     "eatingOutMeal": 20,
     "insuranceYearly": 700,
-    "visaFeeOneOff": 750
+    "visaFeeOneOff": 750,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Moscow",
@@ -457,7 +525,11 @@
     "utilitiesMonthly": 6000,
     "eatingOutMeal": 500,
     "insuranceYearly": 15000,
-    "visaFeeOneOff": 6000
+    "visaFeeOneOff": 6000,
+    "verifiedBy": [
+      "amb-06"
+    ],
+    "lastVerified": "2026-07-22"
   },
   {
     "city": "Saint Petersburg",
@@ -477,7 +549,11 @@
     "utilitiesMonthly": 6000,
     "eatingOutMeal": 500,
     "insuranceYearly": 15000,
-    "visaFeeOneOff": 6000
+    "visaFeeOneOff": 6000,
+    "verifiedBy": [
+      "amb-16"
+    ],
+    "lastVerified": "2026-07-04"
   },
   {
     "city": "Kazan",
@@ -497,7 +573,9 @@
     "utilitiesMonthly": 6000,
     "eatingOutMeal": 500,
     "insuranceYearly": 15000,
-    "visaFeeOneOff": 6000
+    "visaFeeOneOff": 6000,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Novosibirsk",
@@ -517,7 +595,9 @@
     "utilitiesMonthly": 6000,
     "eatingOutMeal": 500,
     "insuranceYearly": 15000,
-    "visaFeeOneOff": 6000
+    "visaFeeOneOff": 6000,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Boston",
@@ -537,7 +617,9 @@
     "utilitiesMonthly": 180,
     "eatingOutMeal": 18,
     "insuranceYearly": 2000,
-    "visaFeeOneOff": 535
+    "visaFeeOneOff": 535,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "New York",
@@ -557,7 +639,11 @@
     "utilitiesMonthly": 180,
     "eatingOutMeal": 18,
     "insuranceYearly": 2000,
-    "visaFeeOneOff": 535
+    "visaFeeOneOff": 535,
+    "verifiedBy": [
+      "amb-17"
+    ],
+    "lastVerified": "2026-07-04"
   },
   {
     "city": "Los Angeles",
@@ -577,7 +663,9 @@
     "utilitiesMonthly": 180,
     "eatingOutMeal": 18,
     "insuranceYearly": 2000,
-    "visaFeeOneOff": 535
+    "visaFeeOneOff": 535,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Chicago",
@@ -597,7 +685,9 @@
     "utilitiesMonthly": 180,
     "eatingOutMeal": 18,
     "insuranceYearly": 2000,
-    "visaFeeOneOff": 535
+    "visaFeeOneOff": 535,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Toronto",
@@ -617,7 +707,12 @@
     "utilitiesMonthly": 150,
     "eatingOutMeal": 17,
     "insuranceYearly": 900,
-    "visaFeeOneOff": 235
+    "visaFeeOneOff": 235,
+    "verifiedBy": [
+      "amb-18",
+      "amb-20"
+    ],
+    "lastVerified": "2026-07-25"
   },
   {
     "city": "Vancouver",
@@ -637,7 +732,9 @@
     "utilitiesMonthly": 150,
     "eatingOutMeal": 17,
     "insuranceYearly": 900,
-    "visaFeeOneOff": 235
+    "visaFeeOneOff": 235,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Montreal",
@@ -657,7 +754,9 @@
     "utilitiesMonthly": 150,
     "eatingOutMeal": 17,
     "insuranceYearly": 900,
-    "visaFeeOneOff": 235
+    "visaFeeOneOff": 235,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Beijing",
@@ -677,7 +776,11 @@
     "utilitiesMonthly": 400,
     "eatingOutMeal": 25,
     "insuranceYearly": 800,
-    "visaFeeOneOff": 800
+    "visaFeeOneOff": 800,
+    "verifiedBy": [
+      "amb-19"
+    ],
+    "lastVerified": "2026-07-25"
   },
   {
     "city": "Shanghai",
@@ -697,7 +800,9 @@
     "utilitiesMonthly": 400,
     "eatingOutMeal": 25,
     "insuranceYearly": 800,
-    "visaFeeOneOff": 800
+    "visaFeeOneOff": 800,
+    "verifiedBy": [],
+    "lastVerified": null
   },
   {
     "city": "Guangzhou",
@@ -717,6 +822,8 @@
     "utilitiesMonthly": 400,
     "eatingOutMeal": 25,
     "insuranceYearly": 800,
-    "visaFeeOneOff": 800
+    "visaFeeOneOff": 800,
+    "verifiedBy": [],
+    "lastVerified": null
   }
 ]

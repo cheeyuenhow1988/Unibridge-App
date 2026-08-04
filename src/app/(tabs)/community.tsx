@@ -29,6 +29,7 @@ export default function CommunityScreen() {
   const { colors } = useTheme();
   const [segment, setSegment] = useState<Segment>('groups');
   const [playing, setPlaying] = useState<Short | null>(null);
+  const [shortFilter, setShortFilter] = useState<'all' | 'campus' | 'reality'>('all');
   const supportB = useAsync(() => getSupportBundle(), []);
   const joinedGroupIds = useCommunityStore((s) => s.joinedGroupIds);
   const joinGroup = useCommunityStore((s) => s.joinGroup);
@@ -130,8 +131,21 @@ export default function CommunityScreen() {
                     <Text variant="label">{t('shorts.title')}</Text>
                     <Badge tone="accent" label={t('common.beta')} />
                   </Row>
+                  <Row gap={spacing.sm}>
+                    {(['all', 'campus', 'reality'] as const).map((f) => (
+                      <Chip
+                        key={f}
+                        small
+                        label={t(`shorts.filter_${f}`)}
+                        selected={shortFilter === f}
+                        onPress={() => setShortFilter(f)}
+                      />
+                    ))}
+                  </Row>
                   <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: spacing.sm }}>
-                    {(supportB.data?.shorts ?? []).map((s) => (
+                    {(supportB.data?.shorts ?? [])
+                      .filter((sh) => (shortFilter === 'all' ? true : shortFilter === 'reality' ? sh.reality : !sh.reality))
+                      .map((s) => (
                       <Pressable key={s.id} accessibilityRole="button" onPress={() => setPlaying(s)}>
                         <View style={{ width: 116, gap: 4 }}>
                           <View style={{ borderRadius: radius.lg, overflow: 'hidden' }}>
@@ -145,6 +159,16 @@ export default function CommunityScreen() {
                               <Ionicons name="play" size={10} color="#FFFFFF" />
                               <Text variant="caption" color="#FFFFFF">{s.duration}s</Text>
                             </View>
+                            {s.reality ? (
+                              <View
+                                style={{
+                                  position: 'absolute', top: 6, left: 6, backgroundColor: 'rgba(0,0,0,0.7)',
+                                  borderRadius: radius.sm, paddingHorizontal: 6, paddingVertical: 2,
+                                }}
+                              >
+                                <Text variant="micro" color="#F2C14E">{t('shorts.realityTag').toUpperCase()}</Text>
+                              </View>
+                            ) : null}
                           </View>
                           <Text variant="caption" numberOfLines={2}>{s.title}</Text>
                         </View>

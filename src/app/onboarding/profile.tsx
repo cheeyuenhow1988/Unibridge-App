@@ -20,6 +20,10 @@ interface FormValues {
   nationality: HomeCountryCode;
   qualification: QualificationId;
   intakeYear: number;
+  ecName: string;
+  ecRelationship: string;
+  ecPhone: string;
+  ecEmail: string;
 }
 
 export default function ProfileSetup() {
@@ -35,6 +39,10 @@ export default function ProfileSetup() {
       nationality: existing?.nationality ?? 'MY',
       qualification: existing?.qualification ?? 'spm',
       intakeYear: existing?.intakeYear ?? 2027,
+      ecName: existing?.emergencyContact?.name ?? '',
+      ecRelationship: existing?.emergencyContact?.relationship ?? '',
+      ecPhone: existing?.emergencyContact?.phone ?? '',
+      ecEmail: existing?.emergencyContact?.email ?? '',
     },
   });
 
@@ -44,11 +52,16 @@ export default function ProfileSetup() {
     emoji: FLAGS[c],
   }));
 
-  const onNext = handleSubmit((values) => {
+  const onNext = handleSubmit(({ ecName, ecRelationship, ecPhone, ecEmail, ...values }) => {
     setProfile({
       ...values,
       grades: existing?.qualification === values.qualification ? existing?.grades ?? {} : {},
       english: existing?.english ?? { test: 'none' },
+      // Optional here — but required before the first application submits.
+      emergencyContact:
+        ecName.trim() && ecPhone.trim()
+          ? { name: ecName.trim(), relationship: ecRelationship.trim(), phone: ecPhone.trim(), email: ecEmail.trim() }
+          : existing?.emergencyContact,
     });
     router.push('/onboarding/grades');
   });
@@ -128,6 +141,39 @@ export default function ProfileSetup() {
               options={[2026, 2027, 2028].map((y) => ({ value: y, label: String(y) }))}
               onChange={field.onChange}
             />
+          )}
+        />
+
+        <View style={{ gap: spacing.xs }}>
+          <Text variant="label">{t('safety.contactTitle')}</Text>
+          <Text variant="caption" tone="secondary">{t('onboarding.emergencySub')}</Text>
+        </View>
+        <Controller
+          control={control}
+          name="ecName"
+          render={({ field }) => (
+            <TextField label={t('safety.contactName')} value={field.value} onChangeText={field.onChange} autoCapitalize="words" />
+          )}
+        />
+        <Controller
+          control={control}
+          name="ecRelationship"
+          render={({ field }) => (
+            <TextField label={t('safety.contactRelationship')} placeholder={t('safety.relationshipPlaceholder')} value={field.value} onChangeText={field.onChange} />
+          )}
+        />
+        <Controller
+          control={control}
+          name="ecPhone"
+          render={({ field }) => (
+            <TextField label={t('safety.contactPhone')} value={field.value} onChangeText={field.onChange} keyboardType="phone-pad" />
+          )}
+        />
+        <Controller
+          control={control}
+          name="ecEmail"
+          render={({ field }) => (
+            <TextField label={t('safety.contactEmail')} value={field.value} onChangeText={field.onChange} keyboardType="email-address" autoCapitalize="none" />
           )}
         />
 

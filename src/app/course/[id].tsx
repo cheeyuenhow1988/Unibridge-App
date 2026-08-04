@@ -3,6 +3,8 @@ import { router, useLocalSearchParams } from 'expo-router';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, View } from 'react-native';
+import { RealityShorts } from '@/components/community/RealityShorts';
+import { VerifiedCostBadge } from '@/components/cost/VerifiedCostBadge';
 import { AmbassadorStrip } from '@/components/explore/AmbassadorStrip';
 import { AttractionsCarousel } from '@/components/explore/AttractionsCarousel';
 import { CityCostSheet } from '@/components/explore/CityCostSheet';
@@ -211,6 +213,7 @@ export default function CourseDetail() {
             <Text variant="caption" tone="secondary">
               {t('course.trueCostSubtitle', { years: t('common.years', { count: course.durationYears }), currency: home })}
             </Text>
+            {col ? <VerifiedCostBadge col={col} /> : null}
             {costRow(t('course.tuition'), costs.tuitionTotal)}
             <Pressable accessibilityRole="button" onPress={() => setCostSheetOpen(true)}>
               <Row style={{ justifyContent: 'space-between', paddingVertical: spacing.xs }}>
@@ -291,6 +294,7 @@ export default function CourseDetail() {
 
           <SectionHeader title={t('institution.studentsHere')} />
           <AmbassadorStrip institutionId={institution.id} />
+          <RealityShorts institutionId={institution.id} />
 
           <SectionHeader title={t('institution.aroundCampus')} />
           <AttractionsCarousel institutionId={institution.id} city={course.campusCity} />

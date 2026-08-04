@@ -1,9 +1,10 @@
 import { Ionicons } from '@expo/vector-icons';
+import { useState } from 'react';
 import { Image } from 'expo-image';
 import * as ImagePicker from 'expo-image-picker';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { Alert, Pressable, ScrollView, View } from 'react-native';
+import { Alert, Modal, Pressable, ScrollView, View } from 'react-native';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
@@ -51,6 +52,7 @@ export default function ProfileScreen() {
   const setPlanTo = usePlanStore((s) => s.setPlan);
   const applications = useApplicationsStore((s) => s.applications);
   const vaultDocs = useVaultStore((s) => s.documents);
+  const [parentShareOpen, setParentShareOpen] = useState(false);
   const earnedCount =
     (profile ? 1 : 0) +
     (profile && (profile.grades.subjects?.length || profile.grades.total !== undefined) ? 1 : 0) +
@@ -68,6 +70,8 @@ export default function ProfileScreen() {
     .slice(0, 2)
     .join('')
     .toUpperCase();
+
+  const shareCode = 'UB-' + Array.from(profile.name).reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 46656, 7).toString(36).toUpperCase().padStart(3, '0') + '-' + String(profile.name.length * 7 % 100).padStart(2, '0');
 
   const saved = savedCourseIds
     .map((id) => matchData?.resultByCourseId.get(id))
@@ -203,6 +207,36 @@ export default function ProfileScreen() {
                 <View>
                   <Text variant="label">{t('rewards.title')}</Text>
                   <Text variant="caption" tone="faint">🪙 {coins} · {t('rewards.badgesShort', { count: earnedCount })}</Text>
+                </View>
+              </Row>
+              <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />
+            </Row>
+          </Card>
+
+          <SectionHeader title={t('safety.title')} />
+          <Card onPress={() => router.push('/safety')} style={{ gap: 4 }}>
+            <Row style={{ justifyContent: 'space-between' }}>
+              <Row gap={spacing.sm}>
+                <Ionicons name="shield-checkmark" size={20} color="#0E7490" />
+                <View>
+                  <Text variant="label">{t('safety.title')}</Text>
+                  <Text variant="caption" tone="faint">
+                    {profile?.emergencyContact
+                      ? t('safety.cardSubSet', { name: profile.emergencyContact.name })
+                      : t('safety.cardSubUnset')}
+                  </Text>
+                </View>
+              </Row>
+              <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />
+            </Row>
+          </Card>
+          <Card onPress={() => setParentShareOpen(true)} style={{ gap: 4 }}>
+            <Row style={{ justifyContent: 'space-between' }}>
+              <Row gap={spacing.sm}>
+                <Ionicons name="people-circle-outline" size={20} color="#0E7490" />
+                <View>
+                  <Text variant="label">{t('parent.share')}</Text>
+                  <Text variant="caption" tone="faint">{t('parent.shareSub')}</Text>
                 </View>
               </Row>
               <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />
@@ -353,6 +387,35 @@ export default function ProfileScreen() {
           </Text>
         </View>
       </ScrollView>
+
+      <Modal visible={parentShareOpen} animationType="fade" transparent onRequestClose={() => setParentShareOpen(false)}>
+        <Pressable style={{ flex: 1, backgroundColor: colors.overlay, justifyContent: 'center', padding: spacing.xl }} onPress={() => setParentShareOpen(false)}>
+          <Pressable onPress={(e) => e.stopPropagation()}>
+            <View style={{ backgroundColor: colors.bg, borderRadius: radius.xl, padding: spacing.xl, gap: spacing.md }}>
+              <Row gap={spacing.sm}>
+                <Ionicons name="people-circle-outline" size={22} color="#0E7490" />
+                <Text variant="title">{t('parent.share')}</Text>
+              </Row>
+              <Text variant="body" tone="secondary">{t('parent.shareHint')}</Text>
+              <View style={{ backgroundColor: colors.surfaceAlt, borderRadius: radius.lg, padding: spacing.lg, alignItems: 'center', gap: 2 }}>
+                <Text variant="micro" tone="faint">{t('parent.shareCode').toUpperCase()}</Text>
+                <Text variant="heading" tone="accent">{shareCode}</Text>
+              </View>
+              <Text variant="caption" tone="secondary">{t('parent.scopeNote')}</Text>
+              <Button
+                label={t('parent.viewDemo')}
+                icon="eye-outline"
+                variant="secondary"
+                onPress={() => {
+                  setParentShareOpen(false);
+                  router.push('/parent');
+                }}
+              />
+              <Text variant="caption" tone="faint" center>{t('safety.mockNote')}</Text>
+            </View>
+          </Pressable>
+        </Pressable>
+      </Modal>
     </Screen>
   );
 }

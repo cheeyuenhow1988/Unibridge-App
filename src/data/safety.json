@@ -1,0 +1,436 @@
+{
+  "emergencyLines": {
+    "AU": {
+      "police": "000",
+      "ambulance": "000",
+      "fire": "000"
+    },
+    "MY": {
+      "police": "999",
+      "ambulance": "999",
+      "fire": "994"
+    },
+    "TW": {
+      "police": "110",
+      "ambulance": "119",
+      "fire": "119"
+    },
+    "GB": {
+      "police": "999",
+      "ambulance": "999",
+      "fire": "999"
+    },
+    "SG": {
+      "police": "999",
+      "ambulance": "995",
+      "fire": "995"
+    },
+    "NZ": {
+      "police": "111",
+      "ambulance": "111",
+      "fire": "111"
+    },
+    "RU": {
+      "police": "102",
+      "ambulance": "103",
+      "fire": "101"
+    },
+    "US": {
+      "police": "911",
+      "ambulance": "911",
+      "fire": "911"
+    },
+    "CA": {
+      "police": "911",
+      "ambulance": "911",
+      "fire": "911"
+    },
+    "CN": {
+      "police": "110",
+      "ambulance": "120",
+      "fire": "119"
+    }
+  },
+  "embassies": {
+    "AU": {
+      "MY": {
+        "name": "Malaysian High Commission",
+        "city": "Canberra",
+        "address": "7 Perth Avenue, Yarralumla ACT",
+        "phone": "+61 2 6120 0000",
+        "afterHours": "+61 4 1900 0001"
+      },
+      "TW": {
+        "name": "Taipei Economic and Cultural Office",
+        "city": "Canberra",
+        "address": "Tourism House, 40 Blackall Street, Barton ACT",
+        "phone": "+61 2 6120 1000"
+      },
+      "SG": {
+        "name": "Singapore High Commission",
+        "city": "Canberra",
+        "address": "17 Forster Crescent, Yarralumla ACT",
+        "phone": "+61 2 6270 0000",
+        "afterHours": "+61 4 1900 0002"
+      },
+      "ID": {
+        "name": "Embassy of Indonesia",
+        "city": "Canberra",
+        "address": "8 Darwin Avenue, Yarralumla ACT",
+        "phone": "+61 2 6250 0000",
+        "afterHours": "+61 4 1900 0003"
+      },
+      "VN": {
+        "name": "Embassy of Vietnam",
+        "city": "Canberra",
+        "address": "6 Timbarra Crescent, O’Malley ACT",
+        "phone": "+61 2 6286 0000"
+      },
+      "CN": {
+        "name": "Embassy of China",
+        "city": "Canberra",
+        "address": "15 Coronation Drive, Yarralumla ACT",
+        "phone": "+61 2 6228 0000",
+        "afterHours": "+61 4 1900 0004"
+      }
+    },
+    "MY": {
+      "MY": null,
+      "TW": {
+        "name": "Taipei Economic and Cultural Office in Malaysia",
+        "city": "Kuala Lumpur",
+        "address": "Level 7, Menara Yayasan Tun Razak, Jalan Bukit Bintang",
+        "phone": "+60 3 2161 0000"
+      },
+      "SG": {
+        "name": "Singapore High Commission",
+        "city": "Kuala Lumpur",
+        "address": "209 Jalan Tun Razak",
+        "phone": "+60 3 2161 6000",
+        "afterHours": "+60 12 000 0002"
+      },
+      "ID": {
+        "name": "Embassy of Indonesia",
+        "city": "Kuala Lumpur",
+        "address": "233 Jalan Tun Razak",
+        "phone": "+60 3 2116 0000",
+        "afterHours": "+60 12 000 0003"
+      },
+      "VN": {
+        "name": "Embassy of Vietnam",
+        "city": "Kuala Lumpur",
+        "address": "4 Persiaran Stonor",
+        "phone": "+60 3 2148 0000"
+      },
+      "CN": {
+        "name": "Embassy of China",
+        "city": "Kuala Lumpur",
+        "address": "229 Jalan Ampang",
+        "phone": "+60 3 2143 0000",
+        "afterHours": "+60 12 000 0004"
+      }
+    },
+    "TW": {
+      "MY": {
+        "name": "Malaysian Friendship & Trade Centre",
+        "city": "Taipei",
+        "address": "8F, San Ho Plastics Building, Hsin Yi District",
+        "phone": "+886 2 2716 0000"
+      },
+      "TW": null,
+      "SG": {
+        "name": "Singapore Trade Office in Taipei",
+        "city": "Taipei",
+        "address": "9F, 85 Ren Ai Road Section 4",
+        "phone": "+886 2 2772 0000"
+      },
+      "ID": {
+        "name": "Indonesian Economic and Trade Office",
+        "city": "Taipei",
+        "address": "6F, 550 Rui Guang Road, Neihu District",
+        "phone": "+886 2 8752 0000"
+      },
+      "VN": {
+        "name": "Vietnam Economic and Cultural Office",
+        "city": "Taipei",
+        "address": "3F, 65 Sung Chiang Road",
+        "phone": "+886 2 2516 0000"
+      },
+      "CN": {
+        "name": "Cross-strait student service line (ARATS)",
+        "city": "Taipei",
+        "address": "Hotline service — no walk-in office",
+        "phone": "+886 2 2712 0000"
+      }
+    },
+    "GB": {
+      "MY": {
+        "name": "Malaysian High Commission",
+        "city": "London",
+        "address": "45 Belgrave Square",
+        "phone": "+44 20 7235 0000",
+        "afterHours": "+44 77 0000 0001"
+      },
+      "TW": {
+        "name": "Taipei Representative Office in the UK",
+        "city": "London",
+        "address": "50 Grosvenor Gardens",
+        "phone": "+44 20 7881 0000"
+      },
+      "SG": {
+        "name": "Singapore High Commission",
+        "city": "London",
+        "address": "9 Wilton Crescent",
+        "phone": "+44 20 7235 8000",
+        "afterHours": "+44 77 0000 0002"
+      },
+      "ID": {
+        "name": "Embassy of Indonesia",
+        "city": "London",
+        "address": "30 Great Peter Street",
+        "phone": "+44 20 7499 0000",
+        "afterHours": "+44 77 0000 0003"
+      },
+      "VN": {
+        "name": "Embassy of Vietnam",
+        "city": "London",
+        "address": "12-14 Victoria Road",
+        "phone": "+44 20 7937 0000"
+      },
+      "CN": {
+        "name": "Embassy of China",
+        "city": "London",
+        "address": "49-51 Portland Place",
+        "phone": "+44 20 7299 0000",
+        "afterHours": "+44 77 0000 0004"
+      }
+    },
+    "SG": {
+      "MY": {
+        "name": "Malaysian High Commission",
+        "city": "Singapore",
+        "address": "301 Jervois Road",
+        "phone": "+65 6235 0000",
+        "afterHours": "+65 8000 0001"
+      },
+      "TW": {
+        "name": "Taipei Representative Office in Singapore",
+        "city": "Singapore",
+        "address": "460 Alexandra Road, PSA Building",
+        "phone": "+65 6500 0000"
+      },
+      "SG": null,
+      "ID": {
+        "name": "Embassy of Indonesia",
+        "city": "Singapore",
+        "address": "7 Chatsworth Road",
+        "phone": "+65 6737 0000",
+        "afterHours": "+65 8000 0002"
+      },
+      "VN": {
+        "name": "Embassy of Vietnam",
+        "city": "Singapore",
+        "address": "10 Leedon Park",
+        "phone": "+65 6462 0000"
+      },
+      "CN": {
+        "name": "Embassy of China",
+        "city": "Singapore",
+        "address": "150 Tanglin Road",
+        "phone": "+65 6418 0000",
+        "afterHours": "+65 8000 0003"
+      }
+    },
+    "NZ": {
+      "MY": {
+        "name": "Malaysian High Commission",
+        "city": "Wellington",
+        "address": "10 Washington Avenue, Brooklyn",
+        "phone": "+64 4 385 0000"
+      },
+      "TW": {
+        "name": "Taipei Economic and Cultural Office",
+        "city": "Wellington",
+        "address": "Level 23, Majestic Centre, 100 Willis Street",
+        "phone": "+64 4 473 0000"
+      },
+      "SG": {
+        "name": "Singapore High Commission",
+        "city": "Wellington",
+        "address": "17 Kabul Street, Khandallah",
+        "phone": "+64 4 470 0000"
+      },
+      "ID": {
+        "name": "Embassy of Indonesia",
+        "city": "Wellington",
+        "address": "70 Glen Road, Kelburn",
+        "phone": "+64 4 475 0000"
+      },
+      "VN": {
+        "name": "Embassy of Vietnam",
+        "city": "Wellington",
+        "address": "Level 21, Grand Plimmer Tower",
+        "phone": "+64 4 473 5000"
+      },
+      "CN": {
+        "name": "Embassy of China",
+        "city": "Wellington",
+        "address": "2-6 Glenmore Street, Kelburn",
+        "phone": "+64 4 472 0000"
+      }
+    },
+    "RU": {
+      "MY": {
+        "name": "Embassy of Malaysia",
+        "city": "Moscow",
+        "address": "Mosfilmovskaya Ulitsa 50",
+        "phone": "+7 495 147 0000"
+      },
+      "TW": {
+        "name": "Taipei-Moscow Coordination Commission Office",
+        "city": "Moscow",
+        "address": "24/2 Tverskaya Street, Korpus 1",
+        "phone": "+7 495 956 0000"
+      },
+      "SG": {
+        "name": "Embassy of Singapore",
+        "city": "Moscow",
+        "address": "Per. Kamennaya Sloboda 5",
+        "phone": "+7 499 241 0000"
+      },
+      "ID": {
+        "name": "Embassy of Indonesia",
+        "city": "Moscow",
+        "address": "Novokuznetskaya Ulitsa 12",
+        "phone": "+7 495 951 0000"
+      },
+      "VN": {
+        "name": "Embassy of Vietnam",
+        "city": "Moscow",
+        "address": "Bolshaya Pirogovskaya 13",
+        "phone": "+7 499 245 0000"
+      },
+      "CN": {
+        "name": "Embassy of China",
+        "city": "Moscow",
+        "address": "Ulitsa Druzhby 6",
+        "phone": "+7 499 143 0000"
+      }
+    },
+    "US": {
+      "MY": {
+        "name": "Embassy of Malaysia",
+        "city": "Washington DC",
+        "address": "3516 International Court NW",
+        "phone": "+1 202 572 0000",
+        "afterHours": "+1 202 600 0001"
+      },
+      "TW": {
+        "name": "Taipei Economic and Cultural Representative Office",
+        "city": "Washington DC",
+        "address": "4201 Wisconsin Avenue NW",
+        "phone": "+1 202 895 0000"
+      },
+      "SG": {
+        "name": "Embassy of Singapore",
+        "city": "Washington DC",
+        "address": "3501 International Place NW",
+        "phone": "+1 202 537 0000",
+        "afterHours": "+1 202 600 0002"
+      },
+      "ID": {
+        "name": "Embassy of Indonesia",
+        "city": "Washington DC",
+        "address": "2020 Massachusetts Avenue NW",
+        "phone": "+1 202 775 0000",
+        "afterHours": "+1 202 600 0003"
+      },
+      "VN": {
+        "name": "Embassy of Vietnam",
+        "city": "Washington DC",
+        "address": "1233 20th Street NW",
+        "phone": "+1 202 861 0000"
+      },
+      "CN": {
+        "name": "Embassy of China",
+        "city": "Washington DC",
+        "address": "3505 International Place NW",
+        "phone": "+1 202 495 0000",
+        "afterHours": "+1 202 600 0004"
+      }
+    },
+    "CA": {
+      "MY": {
+        "name": "High Commission of Malaysia",
+        "city": "Ottawa",
+        "address": "60 Boteler Street",
+        "phone": "+1 613 241 0000",
+        "afterHours": "+1 613 600 0001"
+      },
+      "TW": {
+        "name": "Taipei Economic and Cultural Office",
+        "city": "Ottawa",
+        "address": "45 O’Connor Street, Suite 1960",
+        "phone": "+1 613 231 0000"
+      },
+      "SG": {
+        "name": "Embassy of Singapore (accredited to Canada)",
+        "city": "Washington DC",
+        "address": "3501 International Place NW",
+        "phone": "+1 202 537 0000"
+      },
+      "ID": {
+        "name": "Embassy of Indonesia",
+        "city": "Ottawa",
+        "address": "55 Parkdale Avenue",
+        "phone": "+1 613 724 0000"
+      },
+      "VN": {
+        "name": "Embassy of Vietnam",
+        "city": "Ottawa",
+        "address": "55 MacKay Street",
+        "phone": "+1 613 236 0000"
+      },
+      "CN": {
+        "name": "Embassy of China",
+        "city": "Ottawa",
+        "address": "515 St. Patrick Street",
+        "phone": "+1 613 789 0000"
+      }
+    },
+    "CN": {
+      "MY": {
+        "name": "Embassy of Malaysia",
+        "city": "Beijing",
+        "address": "2 Liangmaqiao Bei Jie, Chaoyang District",
+        "phone": "+86 10 6532 0000",
+        "afterHours": "+86 138 0000 0001"
+      },
+      "TW": {
+        "name": "Straits Exchange Foundation 24h line (Taipei)",
+        "city": "Taipei",
+        "address": "Hotline service for students in the mainland",
+        "phone": "+886 2 2712 9000"
+      },
+      "SG": {
+        "name": "Embassy of Singapore",
+        "city": "Beijing",
+        "address": "1 Xiushui Bei Jie, Jianguomenwai",
+        "phone": "+86 10 6532 1000"
+      },
+      "ID": {
+        "name": "Embassy of Indonesia",
+        "city": "Beijing",
+        "address": "4 Dongzhimenwai Da Jie, Chaoyang District",
+        "phone": "+86 10 6532 5000"
+      },
+      "VN": {
+        "name": "Embassy of Vietnam",
+        "city": "Beijing",
+        "address": "32 Guanghua Road, Jianguomenwai",
+        "phone": "+86 10 6532 1100"
+      },
+      "CN": null
+    }
+  }
+}

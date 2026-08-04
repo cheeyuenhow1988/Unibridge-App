@@ -12,7 +12,10 @@ interface ProfileState {
   themePref: ThemePref;
   language: AppLanguage;
   avatarUri: string | null;
+  /** Opt-in to travel-buddy matching with verified coursemates. */
+  travelBuddyOptIn: boolean;
   hydrated: boolean;
+  setTravelBuddyOptIn: (on: boolean) => void;
   setAvatar: (uri: string | null) => void;
   setProfile: (profile: StudentProfile) => void;
   patchProfile: (patch: Partial<StudentProfile>) => void;
@@ -31,7 +34,9 @@ export const useProfileStore = create<ProfileState>()(
       themePref: 'system',
       language: 'en',
       avatarUri: null,
+      travelBuddyOptIn: false,
       hydrated: false,
+      setTravelBuddyOptIn: (travelBuddyOptIn) => set({ travelBuddyOptIn }),
       setAvatar: (avatarUri) => set({ avatarUri }),
       setProfile: (profile) => set({ profile }),
       patchProfile: (patch) =>
@@ -40,12 +45,12 @@ export const useProfileStore = create<ProfileState>()(
       setThemePref: (themePref) => set({ themePref }),
       setLanguage: (language) => set({ language }),
       setHydrated: () => set({ hydrated: true }),
-      reset: () => set({ profile: null, onboarded: false }),
+      reset: () => set({ profile: null, onboarded: false, travelBuddyOptIn: false }),
     }),
     {
       name: 'ub-profile',
       storage: createJSONStorage(() => AsyncStorage),
-      partialize: ({ profile, onboarded, themePref, language, avatarUri }) => ({ profile, onboarded, themePref, language, avatarUri }),
+      partialize: ({ profile, onboarded, themePref, language, avatarUri, travelBuddyOptIn }) => ({ profile, onboarded, themePref, language, avatarUri, travelBuddyOptIn }),
       onRehydrateStorage: () => (state) => state?.setHydrated(),
     },
   ),

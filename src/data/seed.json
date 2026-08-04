@@ -32,6 +32,12 @@
     "english": {
       "test": "ielts",
       "score": 6.5
+    },
+    "emergencyContact": {
+      "name": "Rahman Bin Yusof",
+      "relationship": "Father",
+      "phone": "+60 12-000 0000",
+      "email": "rahman@family.example"
     }
   },
   "savedCourseIds": [

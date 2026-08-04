@@ -1,10 +1,11 @@
 import { Ionicons } from '@expo/vector-icons';
+import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-import { Pressable, Switch, View } from 'react-native';
+import { Alert, Linking, Pressable, Switch, View } from 'react-native';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
@@ -19,10 +20,14 @@ import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
-import { getPredepartureChecklist, getSupportBundle, getWorkRights } from '@/services/api';
+import { getPredepartureChecklist, getSafety, getSupportBundle, getWorkRights, listCoursemates, listIntakeGroups } from '@/services/api';
 import { LockChip, UpgradeSheet } from '@/components/plan/UpgradeSheet';
+import { SAFETY_TEAL } from '@/components/safety/EmergencySheet';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
 import { usePlan } from '@/store/usePlanStore';
+import { useProfileStore } from '@/store/useProfileStore';
+import { toast } from '@/store/useToastStore';
+import type { HomeCountryCode } from '@/types/models';
 
 interface PickupForm {
   name: string;
@@ -43,6 +48,12 @@ export default function Predeparture() {
   const [upgradeOpen, setUpgradeOpen] = useState(false);
   const plan = usePlan();
   const supportB = useAsync(() => getSupportBundle(), []);
+  const safetyB = useAsync(() => getSafety(), []);
+  const mates = useAsync(() => listCoursemates(), []);
+  const groups = useAsync(() => listIntakeGroups(), []);
+  const nationality = useProfileStore((s) => (s.profile?.nationality ?? 'MY') as HomeCountryCode);
+  const buddyOptIn = useProfileStore((s) => s.travelBuddyOptIn);
+  const setBuddyOptIn = useProfileStore((s) => s.setTravelBuddyOptIn);
 
   const result = application ? matchData?.resultByCourseId.get(application.courseId) : undefined;
   const country = result?.course.country;
@@ -254,6 +265,90 @@ export default function Predeparture() {
             onPress={savePickup}
           />
         </Card>
+
+        <SectionHeader
+          title={t('buddy.title')}
+          right={
+            <Pressable
+              accessibilityRole="button"
+              onPress={() => Alert.alert(t('buddy.whySafe'), t('buddy.whySafeBody'))}
+              hitSlop={8}
+            >
+              <Row gap={4}>
+                <Ionicons name="information-circle-outline" size={15} color={colors.accent} />
+                <Text variant="caption" tone="accent">{t('buddy.whySafe')}</Text>
+              </Row>
+            </Pressable>
+          }
+        />
+        <Card style={{ gap: spacing.md }}>
+          <Row gap={spacing.md}>
+            <Switch
+              value={buddyOptIn}
+              onValueChange={setBuddyOptIn}
+              trackColor={{ true: colors.accent, false: colors.surfaceAlt }}
+              thumbColor={colors.surface}
+            />
+            <View style={{ flex: 1 }}>
+              <Text variant="bodyMedium">{t('buddy.optIn')}</Text>
+              <Text variant="caption" tone="faint">{t('buddy.sub')}</Text>
+            </View>
+          </Row>
+          {buddyOptIn ? (() => {
+            const matches = (mates.data ?? []).filter(
+              (m) => m.travelOptIn && m.institutionId === result.institution.id && m.intake === (application.intake ?? m.intake),
+            );
+            if (matches.length === 0) {
+              return <Text variant="caption" tone="secondary">{t('buddy.none')}</Text>;
+            }
+            const group = (groups.data ?? []).find((g) => g.institutionId === result.institution.id);
+            return (
+              <View style={{ gap: spacing.sm }}>
+                {matches.map((m) => (
+                  <Row key={m.id} gap={spacing.md}>
+                    <Image source={{ uri: m.avatar }} style={{ width: 40, height: 40, borderRadius: radius.full, backgroundColor: colors.surfaceAlt }} />
+                    <View style={{ flex: 1 }}>
+                      <Text variant="label">{m.name}</Text>
+                      <Text variant="caption" tone="faint">
+                        {FLAGS[m.homeCountry]} {m.courseName} · {t('buddy.arrives', { date: m.arrivalDate ?? '' })}
+                      </Text>
+                    </View>
+                    <Button
+                      label={t('buddy.sayHi')}
+                      size="sm"
+                      variant="secondary"
+                      onPress={() => {
+                        toast(t('buddy.sentHi', { name: m.name }));
+                        if (group) router.push(`/group/${group.id}`);
+                      }}
+                    />
+                  </Row>
+                ))}
+              </View>
+            );
+          })() : null}
+        </Card>
+
+        {(() => {
+          const embassy = safetyB.data?.embassies[country]?.[nationality];
+          if (!embassy) return null;
+          return (
+            <>
+              <SectionHeader title={t('safety.embassyTitle')} />
+              <Card style={{ gap: 4 }}>
+                <Row gap={spacing.sm}>
+                  <Ionicons name="business-outline" size={16} color={SAFETY_TEAL} />
+                  <Text variant="label" style={{ flex: 1 }}>{embassy.name}</Text>
+                </Row>
+                <Text variant="caption" tone="secondary">{embassy.address}, {embassy.city}</Text>
+                <Pressable accessibilityRole="button" onPress={() => Linking.openURL(`tel:${embassy.phone.replace(/\s/g, '')}`)}>
+                  <Text variant="caption" color={SAFETY_TEAL}>{embassy.phone}</Text>
+                </Pressable>
+                <Text variant="micro" tone="faint">{t('safety.verifyNote')}</Text>
+              </Card>
+            </>
+          );
+        })()}
 
         <SectionHeader title={t('predeparture.workRights')} />
         {workRights.data ? (

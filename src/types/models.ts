@@ -148,6 +148,10 @@ export interface Short {
   duration: number;
   views: number;
   thumb: string;
+  /** Institution the clip is about, for surfacing on course pages. */
+  institutionId?: string;
+  /** Unscripted "what nobody tells you" clip — raw thumbnail treatment. */
+  reality?: boolean;
 }
 
 export interface CoinRule {
@@ -239,6 +243,9 @@ export interface CostOfLiving {
   city: string;
   country: CountryCode;
   currency: CurrencyCode;
+  /** Ambassador IDs who confirmed these figures; empty = show "Estimated". */
+  verifiedBy?: string[];
+  lastVerified?: string | null;
   /** Budget default used in totals: shared room in a suburb. */
   rentMonthly: number;
   rentOptions: RentOptions;
@@ -323,6 +330,10 @@ export interface Coursemate {
   courseName: string;
   intake: string;
   avatar: string;
+  /** Planned arrival date for travel-buddy matching. */
+  arrivalDate?: string;
+  /** Opted in to coordinating travel with coursemates. */
+  travelOptIn?: boolean;
 }
 
 export interface CommunityEvent {
@@ -351,6 +362,28 @@ export interface PredepartureItem {
   category: 'visa' | 'money' | 'insurance' | 'housing' | 'sim' | 'banking' | 'other';
 }
 
+// ------------------------------------------------------------------ safety
+
+export interface EmergencyLines {
+  police: string;
+  ambulance: string;
+  fire: string;
+}
+
+export interface EmbassyEntry {
+  name: string;
+  city: string;
+  address: string;
+  phone: string;
+  afterHours?: string;
+}
+
+export interface SafetyBundle {
+  emergencyLines: Record<CountryCode, EmergencyLines>;
+  /** embassies[destination][nationality]; null = studying in home country. */
+  embassies: Record<CountryCode, Record<HomeCountryCode, EmbassyEntry | null>>;
+}
+
 // ---------- Student-side models (stores) ----------
 
 export interface SubjectGrade {
@@ -365,6 +398,13 @@ export interface GradesInput {
 
 export type EnglishTest = 'ielts' | 'toefl' | 'none';
 
+export interface EmergencyContact {
+  name: string;
+  relationship: string;
+  phone: string;
+  email: string;
+}
+
 export interface StudentProfile {
   name: string;
   homeCountry: HomeCountryCode;
@@ -375,6 +415,8 @@ export interface StudentProfile {
   english: { test: EnglishTest; score?: number };
   /** Explicit display currency; defaults to the home country's currency. */
   currency?: CurrencyCode;
+  /** Parent/guardian reachable in an emergency — required before the first application. */
+  emergencyContact?: EmergencyContact;
 }
 
 export type ApplicationStatus =

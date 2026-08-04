@@ -1028,6 +1028,132 @@ const ambassadors = AMB.map(([name, homeCountry, institutionId, courseName, year
   })),
 }));
 
+// Community-verified cost data: ambassadors living in a city vouch for its
+// figures. Cities with no ambassador stay unverified — the UI must then show
+// an "Estimated" label, never a fake badge.
+{
+  const cityByInst = Object.fromEntries(institutions.map((x) => [x.id, x.city]));
+  for (const col of costOfLiving) {
+    const verifiers = ambassadors.filter((a) => cityByInst[a.institutionId] === col.city).map((a) => a.id);
+    col.verifiedBy = verifiers;
+    col.lastVerified = verifiers.length ? `2026-07-${String(4 + ((col.city.length * 3) % 24)).padStart(2, '0')}` : null;
+  }
+}
+
+// -------------------------------------------------------------------- safety
+// Trust layer data: separate emergency lines per country plus the nearest
+// home-country mission for each nationality x destination. Names and cities
+// are the real missions; addresses and phones are indicative for the
+// prototype (rounded numbers) and the UI says to verify before travelling.
+const EMERGENCY_LINES = {
+  AU: { police: '000', ambulance: '000', fire: '000' },
+  MY: { police: '999', ambulance: '999', fire: '994' },
+  TW: { police: '110', ambulance: '119', fire: '119' },
+  GB: { police: '999', ambulance: '999', fire: '999' },
+  SG: { police: '999', ambulance: '995', fire: '995' },
+  NZ: { police: '111', ambulance: '111', fire: '111' },
+  RU: { police: '102', ambulance: '103', fire: '101' },
+  US: { police: '911', ambulance: '911', fire: '911' },
+  CA: { police: '911', ambulance: '911', fire: '911' },
+  CN: { police: '110', ambulance: '120', fire: '119' },
+};
+
+// [name, city, address, phone, afterHours|null]; null entry = studying at home.
+const EMBASSIES_RAW = {
+  AU: {
+    MY: ['Malaysian High Commission', 'Canberra', '7 Perth Avenue, Yarralumla ACT', '+61 2 6120 0000', '+61 4 1900 0001'],
+    TW: ['Taipei Economic and Cultural Office', 'Canberra', 'Tourism House, 40 Blackall Street, Barton ACT', '+61 2 6120 1000', null],
+    SG: ['Singapore High Commission', 'Canberra', '17 Forster Crescent, Yarralumla ACT', '+61 2 6270 0000', '+61 4 1900 0002'],
+    ID: ['Embassy of Indonesia', 'Canberra', '8 Darwin Avenue, Yarralumla ACT', '+61 2 6250 0000', '+61 4 1900 0003'],
+    VN: ['Embassy of Vietnam', 'Canberra', '6 Timbarra Crescent, O’Malley ACT', '+61 2 6286 0000', null],
+    CN: ['Embassy of China', 'Canberra', '15 Coronation Drive, Yarralumla ACT', '+61 2 6228 0000', '+61 4 1900 0004'],
+  },
+  MY: {
+    MY: null,
+    TW: ['Taipei Economic and Cultural Office in Malaysia', 'Kuala Lumpur', 'Level 7, Menara Yayasan Tun Razak, Jalan Bukit Bintang', '+60 3 2161 0000', null],
+    SG: ['Singapore High Commission', 'Kuala Lumpur', '209 Jalan Tun Razak', '+60 3 2161 6000', '+60 12 000 0002'],
+    ID: ['Embassy of Indonesia', 'Kuala Lumpur', '233 Jalan Tun Razak', '+60 3 2116 0000', '+60 12 000 0003'],
+    VN: ['Embassy of Vietnam', 'Kuala Lumpur', '4 Persiaran Stonor', '+60 3 2148 0000', null],
+    CN: ['Embassy of China', 'Kuala Lumpur', '229 Jalan Ampang', '+60 3 2143 0000', '+60 12 000 0004'],
+  },
+  TW: {
+    MY: ['Malaysian Friendship & Trade Centre', 'Taipei', '8F, San Ho Plastics Building, Hsin Yi District', '+886 2 2716 0000', null],
+    TW: null,
+    SG: ['Singapore Trade Office in Taipei', 'Taipei', '9F, 85 Ren Ai Road Section 4', '+886 2 2772 0000', null],
+    ID: ['Indonesian Economic and Trade Office', 'Taipei', '6F, 550 Rui Guang Road, Neihu District', '+886 2 8752 0000', null],
+    VN: ['Vietnam Economic and Cultural Office', 'Taipei', '3F, 65 Sung Chiang Road', '+886 2 2516 0000', null],
+    CN: ['Cross-strait student service line (ARATS)', 'Taipei', 'Hotline service — no walk-in office', '+886 2 2712 0000', null],
+  },
+  GB: {
+    MY: ['Malaysian High Commission', 'London', '45 Belgrave Square', '+44 20 7235 0000', '+44 77 0000 0001'],
+    TW: ['Taipei Representative Office in the UK', 'London', '50 Grosvenor Gardens', '+44 20 7881 0000', null],
+    SG: ['Singapore High Commission', 'London', '9 Wilton Crescent', '+44 20 7235 8000', '+44 77 0000 0002'],
+    ID: ['Embassy of Indonesia', 'London', '30 Great Peter Street', '+44 20 7499 0000', '+44 77 0000 0003'],
+    VN: ['Embassy of Vietnam', 'London', '12-14 Victoria Road', '+44 20 7937 0000', null],
+    CN: ['Embassy of China', 'London', '49-51 Portland Place', '+44 20 7299 0000', '+44 77 0000 0004'],
+  },
+  SG: {
+    MY: ['Malaysian High Commission', 'Singapore', '301 Jervois Road', '+65 6235 0000', '+65 8000 0001'],
+    TW: ['Taipei Representative Office in Singapore', 'Singapore', '460 Alexandra Road, PSA Building', '+65 6500 0000', null],
+    SG: null,
+    ID: ['Embassy of Indonesia', 'Singapore', '7 Chatsworth Road', '+65 6737 0000', '+65 8000 0002'],
+    VN: ['Embassy of Vietnam', 'Singapore', '10 Leedon Park', '+65 6462 0000', null],
+    CN: ['Embassy of China', 'Singapore', '150 Tanglin Road', '+65 6418 0000', '+65 8000 0003'],
+  },
+  NZ: {
+    MY: ['Malaysian High Commission', 'Wellington', '10 Washington Avenue, Brooklyn', '+64 4 385 0000', null],
+    TW: ['Taipei Economic and Cultural Office', 'Wellington', 'Level 23, Majestic Centre, 100 Willis Street', '+64 4 473 0000', null],
+    SG: ['Singapore High Commission', 'Wellington', '17 Kabul Street, Khandallah', '+64 4 470 0000', null],
+    ID: ['Embassy of Indonesia', 'Wellington', '70 Glen Road, Kelburn', '+64 4 475 0000', null],
+    VN: ['Embassy of Vietnam', 'Wellington', 'Level 21, Grand Plimmer Tower', '+64 4 473 5000', null],
+    CN: ['Embassy of China', 'Wellington', '2-6 Glenmore Street, Kelburn', '+64 4 472 0000', null],
+  },
+  RU: {
+    MY: ['Embassy of Malaysia', 'Moscow', 'Mosfilmovskaya Ulitsa 50', '+7 495 147 0000', null],
+    TW: ['Taipei-Moscow Coordination Commission Office', 'Moscow', '24/2 Tverskaya Street, Korpus 1', '+7 495 956 0000', null],
+    SG: ['Embassy of Singapore', 'Moscow', 'Per. Kamennaya Sloboda 5', '+7 499 241 0000', null],
+    ID: ['Embassy of Indonesia', 'Moscow', 'Novokuznetskaya Ulitsa 12', '+7 495 951 0000', null],
+    VN: ['Embassy of Vietnam', 'Moscow', 'Bolshaya Pirogovskaya 13', '+7 499 245 0000', null],
+    CN: ['Embassy of China', 'Moscow', 'Ulitsa Druzhby 6', '+7 499 143 0000', null],
+  },
+  US: {
+    MY: ['Embassy of Malaysia', 'Washington DC', '3516 International Court NW', '+1 202 572 0000', '+1 202 600 0001'],
+    TW: ['Taipei Economic and Cultural Representative Office', 'Washington DC', '4201 Wisconsin Avenue NW', '+1 202 895 0000', null],
+    SG: ['Embassy of Singapore', 'Washington DC', '3501 International Place NW', '+1 202 537 0000', '+1 202 600 0002'],
+    ID: ['Embassy of Indonesia', 'Washington DC', '2020 Massachusetts Avenue NW', '+1 202 775 0000', '+1 202 600 0003'],
+    VN: ['Embassy of Vietnam', 'Washington DC', '1233 20th Street NW', '+1 202 861 0000', null],
+    CN: ['Embassy of China', 'Washington DC', '3505 International Place NW', '+1 202 495 0000', '+1 202 600 0004'],
+  },
+  CA: {
+    MY: ['High Commission of Malaysia', 'Ottawa', '60 Boteler Street', '+1 613 241 0000', '+1 613 600 0001'],
+    TW: ['Taipei Economic and Cultural Office', 'Ottawa', '45 O’Connor Street, Suite 1960', '+1 613 231 0000', null],
+    SG: ['Embassy of Singapore (accredited to Canada)', 'Washington DC', '3501 International Place NW', '+1 202 537 0000', null],
+    ID: ['Embassy of Indonesia', 'Ottawa', '55 Parkdale Avenue', '+1 613 724 0000', null],
+    VN: ['Embassy of Vietnam', 'Ottawa', '55 MacKay Street', '+1 613 236 0000', null],
+    CN: ['Embassy of China', 'Ottawa', '515 St. Patrick Street', '+1 613 789 0000', null],
+  },
+  CN: {
+    MY: ['Embassy of Malaysia', 'Beijing', '2 Liangmaqiao Bei Jie, Chaoyang District', '+86 10 6532 0000', '+86 138 0000 0001'],
+    TW: ['Straits Exchange Foundation 24h line (Taipei)', 'Taipei', 'Hotline service for students in the mainland', '+886 2 2712 9000', null],
+    SG: ['Embassy of Singapore', 'Beijing', '1 Xiushui Bei Jie, Jianguomenwai', '+86 10 6532 1000', null],
+    ID: ['Embassy of Indonesia', 'Beijing', '4 Dongzhimenwai Da Jie, Chaoyang District', '+86 10 6532 5000', null],
+    VN: ['Embassy of Vietnam', 'Beijing', '32 Guanghua Road, Jianguomenwai', '+86 10 6532 1100', null],
+    CN: null,
+  },
+};
+const embassies = Object.fromEntries(
+  Object.entries(EMBASSIES_RAW).map(([dest, byNat]) => [
+    dest,
+    Object.fromEntries(
+      Object.entries(byNat).map(([nat, e]) => [
+        nat,
+        e ? { name: e[0], city: e[1], address: e[2], phone: e[3], afterHours: e[4] ?? undefined } : null,
+      ]),
+    ),
+  ]),
+);
+const safety = { emergencyLines: EMERGENCY_LINES, embassies };
+
 // ----------------------------------------------------------------- community
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const groupInsts = ['au-monash', 'au-unsw', 'my-um', 'my-taylors', 'tw-ntu', 'gb-manchester', 'sg-nus', 'nz-auckland', 'ru-itmo', 'us-nyu', 'ca-utoronto', 'cn-tsinghua'];
@@ -1089,6 +1215,10 @@ const coursemates = COURSEMATES_RAW.map(([name, homeCountry, courseName, img], i
   institutionId: 'au-monash',
   intake: '2027-02',
   avatar: `https://i.pravatar.cc/200?img=${img}`,
+  // Travel-buddy layer: arrival dates cluster in the two weeks before intake;
+  // roughly two thirds have opted in to coordinating travel.
+  arrivalDate: `2027-02-${String(8 + ((i * 5) % 16)).padStart(2, '0')}`,
+  travelOptIn: i % 3 !== 2,
 }));
 
 const EVENTS = [
@@ -1256,21 +1386,32 @@ const mails = [
   id, institutionId, applicationId, kind, subject, snippet, date, read,
 }));
 
+// Reality Check entries (last flag) are unscripted "what nobody tells you"
+// clips tied to an ambassador's institution and surfaced on course pages.
+const AMB_INST = Object.fromEntries(ambassadors.map((a) => [a.id, a.institutionId]));
 const shorts = [
-  ['Day in my life at Monash', 'amb-01', 46, 12800],
-  ['NUS hostel room tour', 'amb-10', 58, 22400],
-  ['What RM30 buys in Taipei night markets', 'amb-03', 41, 9800],
-  ['Manchester rain survival kit', 'amb-07', 38, 7600],
-  ['My UNSW civil-eng lab day', 'amb-02', 52, 5400],
-  ['Cooking dorm dinner for RM8', 'amb-05', 44, 15200],
-  ['Auckland weekend hike with intake mates', 'amb-13', 49, 4300],
-  ['St Petersburg white nights walk', 'amb-16', 55, 6100],
-  ['Visa interview: what they asked me', 'amb-04', 60, 31900],
-  ['First week tips I wish I knew', 'amb-08', 47, 18700],
-].map(([title, ambassadorId, duration, views], i) => ({
+  ['Day in my life at Monash', 'amb-01', 46, 12800, false],
+  ['NUS hostel room tour', 'amb-10', 58, 22400, false],
+  ['What RM30 buys in Taipei night markets', 'amb-03', 41, 9800, false],
+  ['Manchester rain survival kit', 'amb-07', 38, 7600, false],
+  ['My UNSW civil-eng lab day', 'amb-02', 52, 5400, false],
+  ['Cooking dorm dinner for RM8', 'amb-05', 44, 15200, false],
+  ['Auckland weekend hike with intake mates', 'amb-13', 49, 4300, false],
+  ['St Petersburg white nights walk', 'amb-16', 55, 6100, false],
+  ['Visa interview: what they asked me', 'amb-04', 60, 31900, false],
+  ['First week tips I wish I knew', 'amb-08', 47, 18700, false],
+  ['3 things nobody told me about studying Business at Monash', 'amb-01', 62, 8400, true],
+  ['3 things nobody told me about Data Analytics at Manchester', 'amb-07', 58, 6900, true],
+  ['3 things nobody told me about Finance at NUS', 'amb-10', 66, 9100, true],
+  ['3 things nobody told me about CS at U of T (the winters)', 'amb-18', 54, 7300, true],
+  ['3 things nobody told me about Law at UM', 'amb-08', 59, 5200, true],
+].map(([title, ambassadorId, duration, views, reality], i) => ({
   id: `short-${String(i + 1).padStart(2, '0')}`,
   title, ambassadorId, duration, views,
-  thumb: `https://picsum.photos/seed/short-${i}/420/640`,
+  institutionId: AMB_INST[ambassadorId],
+  reality,
+  // Reality clips get an unpolished grayscale still to signal raw honesty.
+  thumb: `https://picsum.photos/seed/short-${i}/420/640${reality ? '?grayscale' : ''}`,
 }));
 
 // Coin rules and redemption catalog — ids map to i18n labels.
@@ -1325,6 +1466,12 @@ const seed_ = {
       ],
     },
     english: { test: 'ielts', score: 6.5 },
+    emergencyContact: {
+      name: 'Rahman Bin Yusof',
+      relationship: 'Father',
+      phone: '+60 12-000 0000',
+      email: 'rahman@family.example',
+    },
   },
   savedCourseIds: ['au-monash-c1', 'gb-manchester-c1', 'nz-auckland-c1', 'sg-nus-c1'],
   applications: [
@@ -1381,6 +1528,7 @@ const files = {
   'flights.json': flights,
   'studentLife.json': studentLife,
   'support.json': support,
+  'safety.json': safety,
 };
 for (const [file, data] of Object.entries(files)) {
   writeFileSync(join(OUT, file), JSON.stringify(data, null, 2) + '\n');

@@ -6,6 +6,7 @@ import { useMemo, useRef, useState, type PropsWithChildren } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Alert, Platform, Pressable, ScrollView, View } from 'react-native';
 import { captureRef } from 'react-native-view-shot';
+import { VerifiedCostBadge } from '@/components/cost/VerifiedCostBadge';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Row } from '@/components/ui/Misc';
@@ -29,7 +30,7 @@ const LABEL_W = 104;
 const COL_W = 224;
 const HEIGHTS = {
   header: 128, eligibility: 56, tuitionSemester: 60, tuitionYear: 60, tuitionTotal: 60,
-  living: 96, trueTotal: 96, durationIntakes: 76, english: 52, recognition: 56, attractions: 210, actions: 64,
+  living: 126, trueTotal: 96, durationIntakes: 76, english: 52, recognition: 56, attractions: 210, actions: 64,
 } as const;
 
 function Cell({ height, children, center }: PropsWithChildren<{ height: number; center?: boolean }>) {
@@ -58,7 +59,7 @@ export default function CompareScreen() {
       .filter((r): r is NonNullable<typeof r> => !!r)
       .map((result) => {
         const col = matchData.colByCity.get(result.course.campusCity)!;
-        return { result, costs: costBreakdown(result.course, col) };
+        return { result, col, costs: costBreakdown(result.course, col) };
       });
   }, [matchData, profile, compareIds]);
 
@@ -167,7 +168,7 @@ export default function CompareScreen() {
               ))}
             </View>
             <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingRight: spacing.lg }}>
-              {columns.map(({ result, costs }) => {
+              {columns.map(({ result, col, costs }) => {
                 const { course, institution } = result;
                 const cheapest = course.id === cheapestId;
                 const saved = savedIds.includes(course.id);
@@ -203,6 +204,7 @@ export default function CompareScreen() {
                     <Cell height={HEIGHTS.living}>
                       <View style={{ gap: 2 }}>
                         <Text variant="bodyMedium">{formatMoney(costs.livingMonthly, costs.currency)}</Text>
+                        <VerifiedCostBadge col={col} />
                         <Text variant="caption" tone="faint">
                           {t('compare.rent')} {formatMoney(costs.rentMonthly, costs.currency)} · {t('compare.food')}{' '}
                           {formatMoney(costs.foodMonthly, costs.currency)}
