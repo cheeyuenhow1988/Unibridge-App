@@ -14,11 +14,11 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/monash.edu",
+    "logo": "https://www.google.com/s2/favicons?domain=monash.edu&sz=128",
     "wikipedia": "Monash University",
     "ranking": 37,
     "images": [
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Monashcaulfield2.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Monash_Learning_and_Teaching_Building_(43797320625).jpg?width=1000",
       "https://picsum.photos/seed/au-monash-1/800/500",
       "https://picsum.photos/seed/au-monash-2/800/500"
     ],
@@ -46,7 +46,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/sydney.edu.au",
+    "logo": "https://www.google.com/s2/favicons?domain=sydney.edu.au&sz=128",
     "wikipedia": "University of Sydney",
     "ranking": 18,
     "images": [
@@ -70,7 +70,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/uq.edu.au",
+    "logo": "https://www.google.com/s2/favicons?domain=uq.edu.au&sz=128",
     "wikipedia": "University of Queensland",
     "ranking": 40,
     "images": [
@@ -94,7 +94,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/unsw.edu.au",
+    "logo": "https://www.google.com/s2/favicons?domain=unsw.edu.au&sz=128",
     "wikipedia": "University of New South Wales",
     "ranking": 19,
     "images": [
@@ -118,11 +118,11 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/unimelb.edu.au",
+    "logo": "https://www.google.com/s2/favicons?domain=unimelb.edu.au&sz=128",
     "wikipedia": "University of Melbourne",
     "ranking": 13,
     "images": [
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Trinity_college_university_of_melbourne.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Baillieu_Library.JPG?width=1000",
       "https://picsum.photos/seed/au-unimelb-1/800/500",
       "https://picsum.photos/seed/au-unimelb-2/800/500"
     ]
@@ -142,7 +142,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/rmit.edu.au",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/RMIT_University_Logo.svg/330px-RMIT_University_Logo.svg.png",
     "wikipedia": "RMIT University",
     "ranking": 123,
     "images": [
@@ -167,7 +167,7 @@
       "English",
       "Bahasa Melayu"
     ],
-    "logo": "https://logo.clearbit.com/um.edu.my",
+    "logo": "https://www.google.com/s2/favicons?domain=um.edu.my&sz=128",
     "wikipedia": "University of Malaya",
     "ranking": 60,
     "images": [
@@ -191,7 +191,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/university.taylors.edu.my",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/69/Logo-Taylors-University.png",
     "wikipedia": "Taylor's University",
     "ranking": 251,
     "images": [
@@ -215,7 +215,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/sunwayuniversity.edu.my",
+    "logo": "https://www.google.com/s2/favicons?domain=sunwayuniversity.edu.my&sz=128",
     "wikipedia": "Sunway University",
     "ranking": 539,
     "images": [
@@ -239,7 +239,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/mmu.edu.my",
+    "logo": "https://www.mmu.edu.my/favicon.ico",
     "wikipedia": "Multimedia University",
     "ranking": null,
     "images": [
@@ -264,7 +264,7 @@
       "English",
       "Bahasa Melayu"
     ],
-    "logo": "https://logo.clearbit.com/usm.my",
+    "logo": "https://www.usm.my/images/favicon/favicon.png",
     "wikipedia": "Universiti Sains Malaysia",
     "ranking": 146,
     "images": [
@@ -289,7 +289,7 @@
       "English",
       "Bahasa Melayu"
     ],
-    "logo": "https://logo.clearbit.com/utm.my",
+    "logo": "https://www.google.com/s2/favicons?domain=utm.my&sz=128",
     "wikipedia": "Universiti Teknologi Malaysia",
     "ranking": 181,
     "images": [
@@ -314,7 +314,7 @@
       "Mandarin",
       "English"
     ],
-    "logo": "https://logo.clearbit.com/ntu.edu.tw",
+    "logo": "https://www.ntu.edu.tw/images/favicon/apple-touch-icon.png",
     "wikipedia": "National Taiwan University",
     "ranking": 68,
     "images": [
@@ -339,7 +339,7 @@
       "Mandarin",
       "English"
     ],
-    "logo": "https://logo.clearbit.com/nthu.edu.tw",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/NTHU_Round_Seal.svg/330px-NTHU_Round_Seal.svg.png",
     "wikipedia": "National Tsing Hua University",
     "ranking": 210,
     "images": [
@@ -364,7 +364,7 @@
       "Mandarin",
       "English"
     ],
-    "logo": "https://logo.clearbit.com/fcu.edu.tw",
+    "logo": "https://www.fcu.edu.tw/favicon.ico",
     "wikipedia": "Feng Chia University",
     "ranking": null,
     "images": [
@@ -389,7 +389,7 @@
       "Mandarin",
       "English"
     ],
-    "logo": "https://logo.clearbit.com/nsysu.edu.tw",
+    "logo": "https://www.nsysu.edu.tw/var/file/0/1000/img/84/touch-icon-iphone.png",
     "wikipedia": "National Sun Yat-sen University",
     "ranking": 427,
     "images": [
@@ -413,7 +413,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/manchester.ac.uk",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Manchester_University_Logo_%282%29.png/330px-Manchester_University_Logo_%282%29.png",
     "wikipedia": "University of Manchester",
     "ranking": 34,
     "images": [
@@ -437,7 +437,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/leeds.ac.uk",
+    "logo": "https://www.google.com/s2/favicons?domain=leeds.ac.uk&sz=128",
     "wikipedia": "University of Leeds",
     "ranking": 82,
     "images": [
@@ -461,7 +461,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/birmingham.ac.uk",
+    "logo": "https://www.google.com/s2/favicons?domain=birmingham.ac.uk&sz=128",
     "wikipedia": "University of Birmingham",
     "ranking": 80,
     "images": [
@@ -485,7 +485,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/ucl.ac.uk",
+    "logo": "https://www.google.com/s2/favicons?domain=ucl.ac.uk&sz=128",
     "wikipedia": "University College London",
     "ranking": 9,
     "images": [
@@ -509,11 +509,11 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/kcl.ac.uk",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Kcl-logo.svg/330px-Kcl-logo.svg.png",
     "wikipedia": "King's College London",
     "ranking": 40,
     "images": [
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Strand102.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/King's_College_London_Bush_House_Building_3.jpg?width=1000",
       "https://picsum.photos/seed/gb-kcl-1/800/500",
       "https://picsum.photos/seed/gb-kcl-2/800/500"
     ]
@@ -533,7 +533,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/ed.ac.uk",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/University_of_Edinburgh_ceremonial_roundel.svg/330px-University_of_Edinburgh_ceremonial_roundel.svg.png",
     "wikipedia": "University of Edinburgh",
     "ranking": 27,
     "images": [
@@ -557,7 +557,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/nus.edu.sg",
+    "logo": "https://www.google.com/s2/favicons?domain=nus.edu.sg&sz=128",
     "wikipedia": "National University of Singapore",
     "ranking": 8,
     "images": [
@@ -581,7 +581,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/ntu.edu.sg",
+    "logo": "https://www.google.com/s2/favicons?domain=ntu.edu.sg&sz=128",
     "wikipedia": "Nanyang Technological University",
     "ranking": 15,
     "images": [
@@ -605,7 +605,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/smu.edu.sg",
+    "logo": "https://www.google.com/s2/favicons?domain=smu.edu.sg&sz=128",
     "wikipedia": "Singapore Management University",
     "ranking": 511,
     "images": [
@@ -629,7 +629,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/sim.edu.sg",
+    "logo": "https://www.google.com/s2/favicons?domain=sim.edu.sg&sz=128",
     "wikipedia": "Singapore Institute of Management",
     "ranking": null,
     "images": [
@@ -653,7 +653,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/auckland.ac.nz",
+    "logo": "https://www.google.com/s2/favicons?domain=auckland.ac.nz&sz=128",
     "wikipedia": "University of Auckland",
     "ranking": 65,
     "images": [
@@ -677,7 +677,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/wgtn.ac.nz",
+    "logo": "https://icons.duckduckgo.com/ip3/wgtn.ac.nz.ico",
     "wikipedia": "Victoria University of Wellington",
     "ranking": 244,
     "images": [
@@ -701,7 +701,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/canterbury.ac.nz",
+    "logo": "https://www.google.com/s2/favicons?domain=canterbury.ac.nz&sz=128",
     "wikipedia": "University of Canterbury",
     "ranking": 261,
     "images": [
@@ -725,7 +725,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/otago.ac.nz",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/University_of_Otago_Logo.jpg/330px-University_of_Otago_Logo.jpg",
     "wikipedia": "University of Otago",
     "ranking": 214,
     "images": [
@@ -750,7 +750,7 @@
       "Russian",
       "English"
     ],
-    "logo": "https://logo.clearbit.com/msu.ru",
+    "logo": "https://www.google.com/s2/favicons?domain=msu.ru&sz=128",
     "wikipedia": "Moscow State University",
     "ranking": 94,
     "images": [
@@ -775,7 +775,7 @@
       "Russian",
       "English"
     ],
-    "logo": "https://logo.clearbit.com/itmo.ru",
+    "logo": "https://www.google.com/s2/favicons?domain=itmo.ru&sz=128",
     "wikipedia": "ITMO University",
     "ranking": 360,
     "images": [
@@ -800,7 +800,7 @@
       "Russian",
       "English"
     ],
-    "logo": "https://logo.clearbit.com/kpfu.ru",
+    "logo": "https://www.google.com/s2/favicons?domain=kpfu.ru&sz=128",
     "wikipedia": "Kazan Federal University",
     "ranking": 396,
     "images": [
@@ -825,7 +825,7 @@
       "Russian",
       "English"
     ],
-    "logo": "https://logo.clearbit.com/nsu.ru",
+    "logo": "https://www.google.com/s2/favicons?domain=nsu.ru&sz=128",
     "wikipedia": "Novosibirsk State University",
     "ranking": 225,
     "images": [
@@ -849,7 +849,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/mit.edu",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/MIT_2023_red_logo.svg/330px-MIT_2023_red_logo.svg.png",
     "wikipedia": "Massachusetts Institute of Technology",
     "ranking": 1,
     "images": [
@@ -873,7 +873,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/bu.edu",
+    "logo": "https://www.google.com/s2/favicons?domain=bu.edu&sz=128",
     "wikipedia": "Boston University",
     "ranking": 108,
     "images": [
@@ -897,7 +897,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/nyu.edu",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Nyu_short_color.svg/330px-Nyu_short_color.svg.png",
     "wikipedia": "New York University",
     "ranking": 43,
     "images": [
@@ -929,7 +929,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/ucla.edu",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/University_of_California%2C_Los_Angeles_logo.svg/330px-University_of_California%2C_Los_Angeles_logo.svg.png",
     "wikipedia": "University of California, Los Angeles",
     "ranking": 42,
     "images": [
@@ -953,11 +953,11 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/uchicago.edu",
+    "logo": "https://www.google.com/s2/favicons?domain=uchicago.edu&sz=128",
     "wikipedia": "University of Chicago",
     "ranking": 21,
     "images": [
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Campus_Spring.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Harper_Library_from_the_Midway_Plaisance.JPG?width=1000",
       "https://picsum.photos/seed/us-uchicago-1/800/500",
       "https://picsum.photos/seed/us-uchicago-2/800/500"
     ]
@@ -977,7 +977,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/smc.edu",
+    "logo": "https://www.google.com/s2/favicons?domain=smc.edu&sz=128",
     "wikipedia": "Santa Monica College",
     "ranking": null,
     "images": [
@@ -1001,7 +1001,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/ice.edu",
+    "logo": "https://www.google.com/s2/favicons?domain=ice.edu&sz=128",
     "wikipedia": "Institute of Culinary Education",
     "ranking": null,
     "images": [
@@ -1025,7 +1025,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/utoronto.ca",
+    "logo": "https://www.google.com/s2/favicons?domain=utoronto.ca&sz=128",
     "wikipedia": "University of Toronto",
     "ranking": 25,
     "images": [
@@ -1049,7 +1049,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/ubc.ca",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/British_columbia_ca_univ_logo.svg/330px-British_columbia_ca_univ_logo.svg.png",
     "wikipedia": "University of British Columbia",
     "ranking": 38,
     "images": [
@@ -1073,7 +1073,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/mcgill.ca",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Mcgill_univ_ca_logo.png/330px-Mcgill_univ_ca_logo.png",
     "wikipedia": "McGill University",
     "ranking": 29,
     "images": [
@@ -1097,7 +1097,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/yorku.ca",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Logo_York_University.svg/330px-Logo_York_University.svg.png",
     "wikipedia": "York University",
     "ranking": 353,
     "images": [
@@ -1121,7 +1121,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/georgebrown.ca",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/George_Brown_College_logo.svg/330px-George_Brown_College_logo.svg.png",
     "wikipedia": "George Brown College",
     "ranking": null,
     "images": [
@@ -1146,7 +1146,7 @@
       "Mandarin",
       "English"
     ],
-    "logo": "https://logo.clearbit.com/tsinghua.edu.cn",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tsinghua_University_Logo.svg/330px-Tsinghua_University_Logo.svg.png",
     "wikipedia": "Tsinghua University",
     "ranking": 20,
     "images": [
@@ -1171,7 +1171,7 @@
       "Mandarin",
       "English"
     ],
-    "logo": "https://logo.clearbit.com/pku.edu.cn",
+    "logo": "https://www.google.com/s2/favicons?domain=pku.edu.cn&sz=128",
     "wikipedia": "Peking University",
     "ranking": 14,
     "images": [
@@ -1196,11 +1196,11 @@
       "Mandarin",
       "English"
     ],
-    "logo": "https://logo.clearbit.com/fudan.edu.cn",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Fudan_University_Logo.svg/330px-Fudan_University_Logo.svg.png",
     "wikipedia": "Fudan University",
     "ranking": 39,
     "images": [
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Fudan_university.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Fudan-xianghuitang.jpg?width=1000",
       "https://picsum.photos/seed/cn-fudan-1/800/500",
       "https://picsum.photos/seed/cn-fudan-2/800/500"
     ]
@@ -1221,7 +1221,7 @@
       "Mandarin",
       "English"
     ],
-    "logo": "https://logo.clearbit.com/sysu.edu.cn",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/f/fb/Sun_Yat-sen_University_Logo.png",
     "wikipedia": "Sun Yat-sen University",
     "ranking": 319,
     "images": [
@@ -1246,7 +1246,7 @@
       "Mandarin",
       "English"
     ],
-    "logo": "https://logo.clearbit.com/bhi.edu.cn",
+    "logo": "https://www.google.com/s2/favicons?domain=bhi.edu.cn&sz=128",
     "wikipedia": "Beijing Hospitality Institute",
     "ranking": null,
     "images": [
@@ -1270,7 +1270,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/angliss.edu.au",
+    "logo": "https://www.google.com/s2/favicons?domain=angliss.edu.au&sz=128",
     "wikipedia": "William Angliss Institute",
     "ranking": null,
     "images": [
@@ -1294,7 +1294,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/berjaya.edu.my",
+    "logo": "https://www.google.com/s2/favicons?domain=berjaya.edu.my&sz=128",
     "wikipedia": "Berjaya University College",
     "ranking": null,
     "images": [
@@ -1319,7 +1319,7 @@
       "Mandarin",
       "English"
     ],
-    "logo": "https://logo.clearbit.com/nkuht.edu.tw",
+    "logo": "https://www.nkuht.edu.tw/var/file/0/1000/msys_1000_2891624_61864.ico",
     "wikipedia": "National Kaohsiung University of Hospitality and Tourism",
     "ranking": null,
     "images": [
@@ -1343,7 +1343,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/cordonbleu.edu",
+    "logo": "https://www.google.com/s2/favicons?domain=cordonbleu.edu&sz=128",
     "wikipedia": "Le Cordon Bleu",
     "ranking": null,
     "images": [
@@ -1375,7 +1375,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/cordonbleu.edu",
+    "logo": "https://www.google.com/s2/favicons?domain=cordonbleu.edu&sz=128",
     "wikipedia": "Le Cordon Bleu",
     "ranking": null,
     "images": [
@@ -1407,7 +1407,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/shatec.sg",
+    "logo": "https://www.google.com/s2/favicons?domain=shatec.sg&sz=128",
     "wikipedia": "SHATEC",
     "ranking": null,
     "images": [
@@ -1431,7 +1431,7 @@
     "languages": [
       "English"
     ],
-    "logo": "https://logo.clearbit.com/monash.edu.my",
+    "logo": "https://www.google.com/s2/favicons?domain=monash.edu.my&sz=128",
     "wikipedia": "Monash University Malaysia Campus",
     "ranking": null,
     "images": [
@@ -1464,7 +1464,7 @@
       "Mandarin",
       "English"
     ],
-    "logo": "https://logo.clearbit.com/shanghai.nyu.edu",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Nyu_short_color.svg/330px-Nyu_short_color.svg.png",
     "wikipedia": "New York University Shanghai",
     "ranking": null,
     "images": [

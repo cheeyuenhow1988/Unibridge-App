@@ -461,11 +461,11 @@ const INST_META = {
 // checked photo from the article's media list. Verified 2026-08-03.
 // Institutions absent here have no usable free photo → abstract placeholder.
 const INST_PHOTO = {
-  'au-monash': 'Monashcaulfield2.jpg',
+  'au-monash': 'Monash Learning and Teaching Building (43797320625).jpg',
   'au-sydney': 'University of Sydney Main Quadrangle.jpg',
   'au-uq': 'UQ-SteeleBldg800.jpg',
   'au-unsw': 'Main Walkway, Lower campus UNSW.jpg',
-  'au-unimelb': 'Trinity college university of melbourne.jpg',
+  'au-unimelb': 'Baillieu Library.JPG',
   'au-rmit': 'RMIT University Building 01.jpg',
   'my-um': 'Universiti Malaya KL gate.jpg',
   'my-taylors': 'Taylors Lakeside Campus.jpg',
@@ -480,7 +480,7 @@ const INST_PHOTO = {
   'gb-leeds': 'Parkinson Building, Leeds University, England-12Sept2010.jpg',
   'gb-birmingham': 'Aston Webb buildings in snow, The University of Birmingham, Dec 2009.jpg',
   'gb-ucl': 'Wilkins Building 1, UCL, London - Diliff.jpg',
-  'gb-kcl': 'Strand102.jpg',
+  'gb-kcl': "King's College London Bush House Building 3.jpg",
   'gb-edinburgh': 'Old College Quad.jpg',
   'sg-nus': 'NUS, University Cultural Centre 3, Nov 06.JPG',
   'sg-ntusg': 'NTU Administration Building.JPG',
@@ -497,7 +497,7 @@ const INST_PHOTO = {
   'us-bu': 'BU College of Communication.jpg',
   'us-nyu': 'NYU07.JPG',
   'us-ucla': 'Royce Hall, University of California, Los Angeles (23-09-2003).jpg',
-  'us-uchicago': 'Campus Spring.jpg',
+  'us-uchicago': 'Harper Library from the Midway Plaisance.JPG',
   'us-smc': 'Smctheaterartsbuilding.JPG',
   'ca-utoronto': 'UofTConvocationHall.jpg',
   'ca-ubc': 'Irving K. Barber Library.jpg',
@@ -506,7 +506,7 @@ const INST_PHOTO = {
   'ca-georgebrown': 'GBC Casa Loma 02.jpg',
   'cn-tsinghua': 'Thu gate.JPG',
   'cn-pku': 'PekingUniversityPic6.jpg',
-  'cn-fudan': 'Fudan university.jpg',
+  'cn-fudan': 'Fudan-xianghuitang.jpg',
   'cn-sysu': 'Zhongda ZH3.jpg',
   'my-berjaya': 'Berjaya Times Square (211030).jpg',
   'gb-lcb': 'Paris 06 2012 Cordon Bleu 3149.jpg',
@@ -517,11 +517,53 @@ const INST_PHOTO = {
 const commonsPhoto = (name) =>
   `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(name.replace(/ /g, '_'))}?width=1000`;
 
+// Official logos, resolved and fetch-verified per institution on 2026-08-04.
+// Preferred source is the school's Wikipedia/Wikidata logo file (rendered
+// PNG thumb), then the school's own published favicon/touch-icon; everyone
+// else uses the official site favicon via Google's s2 service. Clearbit —
+// the previous source — sunset its free logo API, which broke every logo.
+// BHI, BERJAYA UC and SHATEC publish no fetchable mark: they intentionally
+// fall through to the app's initial-letter tile.
+const LOGO_URL = {
+  'au-rmit': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/RMIT_University_Logo.svg/330px-RMIT_University_Logo.svg.png',
+  'my-um': 'https://www.google.com/s2/favicons?domain=um.edu.my&sz=128',
+  'my-taylors': 'https://upload.wikimedia.org/wikipedia/commons/6/69/Logo-Taylors-University.png',
+  'my-mmu': 'https://www.mmu.edu.my/favicon.ico',
+  'my-usm': 'https://www.usm.my/images/favicon/favicon.png',
+  'tw-ntu': 'https://www.ntu.edu.tw/images/favicon/apple-touch-icon.png',
+  'tw-nthu': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/NTHU_Round_Seal.svg/330px-NTHU_Round_Seal.svg.png',
+  'tw-fcu': 'https://www.fcu.edu.tw/favicon.ico',
+  'tw-nsysu': 'https://www.nsysu.edu.tw/var/file/0/1000/img/84/touch-icon-iphone.png',
+  'tw-nkuht': 'https://www.nkuht.edu.tw/var/file/0/1000/msys_1000_2891624_61864.ico',
+  'gb-manchester': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Manchester_University_Logo_%282%29.png/330px-Manchester_University_Logo_%282%29.png',
+  'gb-kcl': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Kcl-logo.svg/330px-Kcl-logo.svg.png',
+  'gb-edinburgh': 'https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/University_of_Edinburgh_ceremonial_roundel.svg/330px-University_of_Edinburgh_ceremonial_roundel.svg.png',
+  'nz-otago': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/University_of_Otago_Logo.jpg/330px-University_of_Otago_Logo.jpg',
+  'nz-vuw': 'https://icons.duckduckgo.com/ip3/wgtn.ac.nz.ico',
+  'us-mit': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/MIT_2023_red_logo.svg/330px-MIT_2023_red_logo.svg.png',
+  'us-nyu': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Nyu_short_color.svg/330px-Nyu_short_color.svg.png',
+  'us-ucla': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/University_of_California%2C_Los_Angeles_logo.svg/330px-University_of_California%2C_Los_Angeles_logo.svg.png',
+  'ca-ubc': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/British_columbia_ca_univ_logo.svg/330px-British_columbia_ca_univ_logo.svg.png',
+  'ca-mcgill': 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Mcgill_univ_ca_logo.png/330px-Mcgill_univ_ca_logo.png',
+  'ca-york': 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Logo_York_University.svg/330px-Logo_York_University.svg.png',
+  'ca-georgebrown': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/George_Brown_College_logo.svg/330px-George_Brown_College_logo.svg.png',
+  'cn-tsinghua': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tsinghua_University_Logo.svg/330px-Tsinghua_University_Logo.svg.png',
+  'cn-fudan': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Fudan_University_Logo.svg/330px-Fudan_University_Logo.svg.png',
+  'cn-sysu': 'https://upload.wikimedia.org/wikipedia/en/f/fb/Sun_Yat-sen_University_Logo.png',
+  'cn-nyush': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Nyu_short_color.svg/330px-Nyu_short_color.svg.png',
+  'us-ice': 'https://www.google.com/s2/favicons?domain=ice.edu&sz=128',
+};
+const logoFor = (id, website) => {
+  if (LOGO_URL[id]) return LOGO_URL[id];
+  const domain = new URL(website).hostname.replace(/^www\./, '');
+  return `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
+};
+
 const institutions = INSTITUTIONS.map(([id, name, short, country, city, type, verified, tagline, founded, students, website]) => ({
   id, name, short, country, city, type,
   verifiedPartner: verified, tagline, founded, students, website,
   languages: MY_MALAY_ALSO.has(id) ? ['English', 'Bahasa Melayu'] : TEACHING_LANGUAGES[country],
-  logo: `https://logo.clearbit.com/${new URL(website).hostname.replace(/^www\./, '')}`,
+  logo: logoFor(id, website),
   wikipedia: INST_META[id][0],
   ranking: INST_META[id][1],
   images: [
