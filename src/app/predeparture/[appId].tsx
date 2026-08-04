@@ -102,7 +102,7 @@ export default function Predeparture() {
   // Free tier gets the universal checklist; the pass unlocks the
   // destination-specific one.
   const activeChecklist =
-    (plan === 'season_pass' ? checklist.data : supportB.data?.genericChecklist) ?? [];
+    (plan !== 'free' ? checklist.data : supportB.data?.genericChecklist) ?? [];
 
   return (
     <Screen scroll edges={['top', 'bottom']}>
@@ -151,7 +151,7 @@ export default function Predeparture() {
 
         <SectionHeader
           title={
-            plan === 'season_pass'
+            plan !== 'free'
               ? t('predeparture.checklist', { country: t(`countries.${country}`) })
               : t('predeparture.checklistGeneric')
           }

@@ -79,7 +79,7 @@ export default function ApplyFlow() {
 
   const { course, institution, scholarships } = state.data;
   // Fee waivers at Verified Partners are a Season Pass perk.
-  const feeWaived = institution.verifiedPartner && plan === 'season_pass';
+  const feeWaived = institution.verifiedPartner && plan !== 'free';
   const doneCount = checklist.filter((c) => c.done).length;
   const shortlisted = scholarships.filter((s) => savedScholarshipIds.includes(s.id));
 
@@ -173,14 +173,14 @@ export default function ApplyFlow() {
                   <View style={{ paddingVertical: spacing.sm, gap: 4 }}>
                     <Row gap={spacing.sm}>
                       <Ionicons
-                        name={plan === 'season_pass' ? 'shield-checkmark' : 'lock-closed'}
+                        name={plan !== 'free' ? 'shield-checkmark' : 'lock-closed'}
                         size={18}
-                        color={plan === 'season_pass' ? colors.eligible : colors.inkFaint}
+                        color={plan !== 'free' ? colors.eligible : colors.inkFaint}
                       />
-                      <Text variant="body" tone={plan === 'season_pass' ? 'primary' : 'faint'} style={{ flex: 1 }}>
+                      <Text variant="body" tone={plan !== 'free' ? 'primary' : 'faint'} style={{ flex: 1 }}>
                         {t('apply.reviewedStep')}
                       </Text>
-                      {plan === 'season_pass' ? (
+                      {plan !== 'free' ? (
                         <Badge tone="eligible" icon="checkmark" label={t('pass.colPass')} />
                       ) : (
                         <LockChip onPress={() => setUpgradeOpen(true)} />
@@ -188,11 +188,11 @@ export default function ApplyFlow() {
                     </Row>
                     <Row gap={spacing.sm}>
                       <Ionicons
-                        name={plan === 'season_pass' ? 'chatbox-ellipses-outline' : 'lock-closed'}
+                        name={plan !== 'free' ? 'chatbox-ellipses-outline' : 'lock-closed'}
                         size={18}
-                        color={plan === 'season_pass' ? colors.accent : colors.inkFaint}
+                        color={plan !== 'free' ? colors.accent : colors.inkFaint}
                       />
-                      {plan === 'season_pass' ? (
+                      {plan !== 'free' ? (
                         <Pressable
                           accessibilityRole="button"
                           onPress={() => toast(t('apply.sopSent'))}

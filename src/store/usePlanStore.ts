@@ -3,7 +3,7 @@ import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 import { useRewardsStore } from '@/store/useRewardsStore';
 
-export type Plan = 'free' | 'season_pass';
+export type Plan = 'free' | 'season_pass' | 'vip';
 
 /** One-time purchase, no subscription — editable constants. */
 export const SEASON_PASS_PRICE_USD = 49.99;
@@ -18,6 +18,8 @@ interface PlanState {
   setPlan: (plan: Plan) => void;
   /** Mock purchase: unlocks the pass and grants the bonus coins once. */
   purchase: () => void;
+  /** Mock VIP purchase: everything in Season Pass plus arrival services. */
+  purchaseVip: () => void;
   reset: () => void;
 }
 
@@ -27,9 +29,15 @@ export const usePlanStore = create<PlanState>()(
       plan: 'free',
       setPlan: (plan) => set({ plan }),
       purchase: () => {
-        if (get().plan === 'season_pass') return;
+        if (get().plan !== 'free') return;
         set({ plan: 'season_pass' });
         useRewardsStore.getState().earn('rule_pass_bonus', PASS_BONUS_COINS);
+      },
+      purchaseVip: () => {
+        const from = get().plan;
+        if (from === 'vip') return;
+        set({ plan: 'vip' });
+        if (from === 'free') useRewardsStore.getState().earn('rule_pass_bonus', PASS_BONUS_COINS);
       },
       reset: () => set({ plan: 'free' }),
     }),

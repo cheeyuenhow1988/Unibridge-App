@@ -94,16 +94,16 @@ export default function ApplicationDetail() {
         <Card style={{ gap: 0 }}>
           <Row style={{ justifyContent: 'space-between', marginBottom: spacing.md }}>
             <Text variant="label">{t('applications.timeline')}</Text>
-            {plan === 'season_pass' ? (
+            {plan !== 'free' ? (
               <Badge tone="accent" icon="flash" label={t('pass.priority')} />
             ) : (
               <LockChip onPress={() => setUpgrade('timeline')} />
             )}
           </Row>
-          {(plan === 'season_pass' ? APPLICATION_TIMELINE : BASIC_TIMELINE).map((status, i, timeline) => {
-            const shownIdx = timeline.indexOf(plan === 'season_pass' ? application.status : BASIC_MAP[application.status]);
+          {(plan !== 'free' ? APPLICATION_TIMELINE : BASIC_TIMELINE).map((status, i, timeline) => {
+            const shownIdx = timeline.indexOf(plan !== 'free' ? application.status : BASIC_MAP[application.status]);
             const entry = application.history.find((h) => h.status === status);
-            const done = i < shownIdx || (plan === 'season_pass' ? !!entry : i < shownIdx);
+            const done = i < shownIdx || (plan !== 'free' ? !!entry : i < shownIdx);
             const current = i === shownIdx;
             const last = i === timeline.length - 1;
             return (
@@ -182,7 +182,7 @@ export default function ApplicationDetail() {
           </Card>
         ) : null}
 
-        {support.data && plan === 'season_pass' ? (
+        {support.data && plan !== 'free' ? (
           <Card style={{ gap: spacing.md }}>
             <Row style={{ justifyContent: 'space-between' }}>
               <Row gap={spacing.sm}>

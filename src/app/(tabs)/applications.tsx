@@ -152,7 +152,7 @@ export default function ApplicationsScreen() {
                   {instName(item.courseId)}
                 </Text>
                 <Row gap={6}>
-                  {plan === 'season_pass' ? <Badge tone="accent" icon="flash" label={t('pass.priority')} /> : null}
+                  {plan !== 'free' ? <Badge tone="accent" icon="flash" label={t('pass.priority')} /> : null}
                   <Badge tone={STATUS_TONE[item.status]} label={t(`status.${item.status}`)} />
                 </Row>
               </Row>

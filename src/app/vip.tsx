@@ -7,7 +7,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import { Text } from '@/components/ui/Text';
 import { radius, spacing } from '@/constants/theme';
-import { VIP_BUNDLE_PRICE_USD } from '@/store/usePlanStore';
+import { VIP_BUNDLE_PRICE_USD, usePlan, usePlanStore } from '@/store/usePlanStore';
 import { toast } from '@/store/useToastStore';
 const GOLD = '#D9B45B';
 const GOLD_SOFT = 'rgba(217, 180, 91, 0.16)';
@@ -21,6 +21,8 @@ const BENEFITS = [
 
 export default function VipScreen() {
   const { t } = useTranslation();
+  const plan = usePlan();
+  const purchaseVip = usePlanStore((s) => s.purchaseVip);
   return (
     <View style={{ flex: 1, backgroundColor: INK_DARK }}>
       <StatusBar style="light" />
@@ -58,22 +60,41 @@ export default function VipScreen() {
           <View style={{ alignItems: 'center', gap: spacing.sm }}>
             <Text variant="caption" color={TEXT_SOFT}>{t('vip.oneTime')}</Text>
             <Text variant="display" color={GOLD}>US${VIP_BUNDLE_PRICE_USD}</Text>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+              <Ionicons name="key" size={14} color={GOLD} />
+              <Text variant="caption" color={TEXT_SOFT}>{t('vip.includesPass')}</Text>
+            </View>
           </View>
 
-          <LinearGradient
-            colors={[GOLD, '#B8923B']}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 1 }}
-            style={{ borderRadius: radius.full }}
-          >
-            <Pressable
-              accessibilityRole="button"
-              onPress={() => toast(t('vip.mockNote'))}
-              style={({ pressed }) => ({ paddingVertical: 16, alignItems: 'center', opacity: pressed ? 0.85 : 1 })}
+          {plan === 'vip' ? (
+            <View
+              style={{
+                borderRadius: radius.full, borderWidth: 1, borderColor: GOLD, backgroundColor: GOLD_SOFT,
+                paddingVertical: 14, alignItems: 'center', flexDirection: 'row', justifyContent: 'center', gap: 8,
+              }}
             >
-              <Text variant="label" color={INK_DARK}>{t('vip.cta')}</Text>
-            </Pressable>
-          </LinearGradient>
+              <Ionicons name="checkmark-circle" size={18} color={GOLD} />
+              <Text variant="label" color={GOLD}>{t('vip.owned')}</Text>
+            </View>
+          ) : (
+            <LinearGradient
+              colors={[GOLD, '#B8923B']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              style={{ borderRadius: radius.full }}
+            >
+              <Pressable
+                accessibilityRole="button"
+                onPress={() => {
+                  purchaseVip();
+                  toast(t('vip.purchased'));
+                }}
+                style={({ pressed }) => ({ paddingVertical: 16, alignItems: 'center', opacity: pressed ? 0.85 : 1 })}
+              >
+                <Text variant="label" color={INK_DARK}>{t('vip.cta')}</Text>
+              </Pressable>
+            </LinearGradient>
+          )}
           <Text variant="caption" color={TEXT_SOFT} center>{t('vip.mockNote')}</Text>
         </ScrollView>
       </SafeAreaView>

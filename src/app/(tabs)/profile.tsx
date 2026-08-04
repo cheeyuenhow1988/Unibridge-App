@@ -213,6 +213,7 @@ export default function ProfileScreen() {
           <Row gap={spacing.sm}>
             <Chip label={t('pass.colFree')} selected={plan === 'free'} onPress={() => setPlanTo('free')} />
             <Chip label={t('pass.title')} selected={plan === 'season_pass'} onPress={() => setPlanTo('season_pass')} />
+            <Chip label={t('pass.colVip')} selected={plan === 'vip'} onPress={() => setPlanTo('vip')} />
           </Row>
           <Card onPress={() => router.push('/pass')} style={{ gap: 4 }}>
             <Row style={{ justifyContent: 'space-between' }}>
@@ -221,7 +222,7 @@ export default function ProfileScreen() {
                 <View>
                   <Text variant="label">{t('pass.title')}</Text>
                   <Text variant="caption" tone="faint">
-                    {plan === 'season_pass' ? t('pass.owned') : t('pass.headline')}
+                    {plan !== 'free' ? t('pass.owned') : t('pass.headline')}
                   </Text>
                 </View>
               </Row>
@@ -235,7 +236,7 @@ export default function ProfileScreen() {
                 <Ionicons name="diamond" size={20} color="#B8923B" />
                 <View>
                   <Text variant="label">{t('vip.title')}</Text>
-                  <Text variant="caption" tone="faint">{t('vip.entrySub')}</Text>
+                  <Text variant="caption" tone="faint">{plan === 'vip' ? t('vip.owned') : t('vip.entrySub')}</Text>
                 </View>
               </Row>
               <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />
