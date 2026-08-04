@@ -752,6 +752,7 @@
     "lockedTeam": "Buka coach dan tim dukungan bernama dengan Season Pass.",
     "lockedMail": "Surat lama terbuka dengan Season Pass.",
     "lockedPredep": "Ini daftar umum — daftar khusus {{country}} hadir dengan Season Pass.",
+    "lockedLife": "Lebih banyak lowongan & kamar terbuka dengan Season Pass.",
     "lockedTimeline": "Linimasa penuh dengan Season Pass",
     "conciergeTitle": "Concierge",
     "conciergeBody": "Layanan aplikasi kelas premium yang dikelola manusia, di atas Season Pass.",
@@ -763,6 +764,7 @@
     "row_team": "Coach & tim dukungan bernama",
     "row_mail": "Kotak masuk surat universitas penuh",
     "row_predep": "Pra-keberangkatan per negara",
+    "row_life": "Kerja paruh waktu & sewa kamar",
     "row_community": "Komunitas, Shorts & Hadiah",
     "ctx_apply": "Kamu mencoba mendaftar ke kampus ke-2 — buka aplikasi tanpa batas dengan Season Pass.",
     "ctx_compare": "Gratis bisa membandingkan 2 — buka hingga 4 dengan Season Pass.",
@@ -770,6 +772,7 @@
     "ctx_mail": "Kotak masuk universitas penuh terbuka dengan Season Pass.",
     "ctx_timeline": "Lihat setiap sub-status dengan Season Pass.",
     "ctx_predep": "Dapatkan daftar khusus destinasimu dengan Season Pass.",
+    "ctx_life": "Lihat semua kerja paruh waktu dan kamar yang dibagikan pelajar dengan Season Pass.",
     "ctx_generic": "Fitur ini bagian dari Season Pass."
   }
 }

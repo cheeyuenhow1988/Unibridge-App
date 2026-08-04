@@ -752,6 +752,7 @@
     "lockedTeam": "解锁你的专属规划导师与支持团队（季票权益）。",
     "lockedMail": "更早的邮件随季票解锁。",
     "lockedPredep": "这是通用清单——{{country}}专属清单随季票提供。",
+    "lockedLife": "更多兼职与租房信息随季票解锁。",
     "lockedTimeline": "完整时间线（季票）",
     "conciergeTitle": "管家服务",
     "conciergeBody": "在季票之上的全程真人代办服务。",
@@ -763,6 +764,7 @@
     "row_team": "专属导师与支持团队",
     "row_mail": "完整大学邮件收件箱",
     "row_predep": "按国家定制的行前清单",
+    "row_life": "兼职与租房信息",
     "row_community": "社区、短视频与奖励",
     "ctx_apply": "你正在申请第2所学校——用季票解锁不限量申请。",
     "ctx_compare": "免费版可对比2所——季票解锁至多4所。",
@@ -770,6 +772,7 @@
     "ctx_mail": "完整大学收件箱随季票解锁。",
     "ctx_timeline": "用季票查看每个细分状态。",
     "ctx_predep": "用季票获取专属目的地清单。",
+    "ctx_life": "季票解锁学长学姐分享的全部兼职与租房信息。",
     "ctx_generic": "此功能属于季票权益。"
   }
 }

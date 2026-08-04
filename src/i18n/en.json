@@ -756,6 +756,7 @@
     "lockedTeam": "Unlock your named coach and support team with Season Pass.",
     "lockedMail": "Older mail unlocks with Season Pass.",
     "lockedPredep": "This is the universal list — the {{country}}-specific checklist comes with Season Pass.",
+    "lockedLife": "More student-shared listings unlock with Season Pass.",
     "lockedTimeline": "Full timeline with Season Pass",
     "conciergeTitle": "Concierge",
     "conciergeBody": "White-glove, human-managed application service on top of Season Pass.",
@@ -767,6 +768,7 @@
     "row_team": "Named coach & support team",
     "row_mail": "Full university-mail inbox",
     "row_predep": "Country-personalized pre-departure",
+    "row_life": "Part-time jobs & room rentals",
     "row_community": "Community, Shorts & Rewards",
     "ctx_apply": "You're trying to apply to a 2nd school — unlock unlimited applications with Season Pass.",
     "ctx_compare": "You can compare 2 on Free — unlock up to 4 side by side with Season Pass.",
@@ -774,6 +776,7 @@
     "ctx_mail": "Your full university inbox unlocks with Season Pass.",
     "ctx_timeline": "See every sub-status, not just the big three, with Season Pass.",
     "ctx_predep": "Get the checklist tailored to your exact destination with Season Pass.",
+    "ctx_life": "See every part-time job and room shared by students with Season Pass.",
     "ctx_generic": "This feature is part of Season Pass."
   }
 }

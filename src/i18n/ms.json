@@ -752,6 +752,7 @@
     "lockedTeam": "Buka jurulatih dan pasukan sokongan bernama anda dengan Pas Musim.",
     "lockedMail": "Mel lama dibuka dengan Pas Musim.",
     "lockedPredep": "Ini senarai umum — senarai khusus {{country}} datang dengan Pas Musim.",
+    "lockedLife": "Lebih banyak senarai daripada pelajar dibuka dengan Pas Musim.",
     "lockedTimeline": "Garis masa penuh dengan Pas Musim",
     "conciergeTitle": "Concierge",
     "conciergeBody": "Khidmat permohonan diurus manusia sepenuhnya, di atas Pas Musim.",
@@ -763,6 +764,7 @@
     "row_team": "Jurulatih & pasukan sokongan bernama",
     "row_mail": "Peti mel universiti penuh",
     "row_predep": "Pra-berlepas ikut negara",
+    "row_life": "Kerja sambilan & sewa bilik",
     "row_community": "Komuniti, Shorts & Ganjaran",
     "ctx_apply": "Anda cuba memohon sekolah ke-2 — buka permohonan tanpa had dengan Pas Musim.",
     "ctx_compare": "Percuma boleh banding 2 — buka hingga 4 dengan Pas Musim.",
@@ -770,6 +772,7 @@
     "ctx_mail": "Peti masuk universiti penuh dibuka dengan Pas Musim.",
     "ctx_timeline": "Lihat setiap sub-status dengan Pas Musim.",
     "ctx_predep": "Dapatkan senarai khusus destinasi anda dengan Pas Musim.",
+    "ctx_life": "Lihat semua kerja sambilan dan bilik yang dikongsi pelajar dengan Pas Musim.",
     "ctx_generic": "Ciri ini sebahagian daripada Pas Musim."
   }
 }

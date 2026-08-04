@@ -18,7 +18,7 @@ import { toast } from '@/store/useToastStore';
 // dark-gold VIP arrival bundle so the two offers never blur together.
 const HERO: [string, string] = ['#2447DB', '#0B7A47'];
 
-const ROWS = ['match', 'compare', 'apps', 'timeline', 'review', 'team', 'mail', 'predep', 'community'] as const;
+const ROWS = ['match', 'compare', 'apps', 'timeline', 'review', 'team', 'mail', 'predep', 'life', 'community'] as const;
 const FREE_ROWS = new Set(['match', 'community']);
 
 export default function SeasonPassScreen() {

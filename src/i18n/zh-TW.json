@@ -752,6 +752,7 @@
     "lockedTeam": "解鎖你的專屬規劃導師與支援團隊（季票權益）。",
     "lockedMail": "更早的郵件隨季票解鎖。",
     "lockedPredep": "這是通用清單——{{country}}專屬清單隨季票提供。",
+    "lockedLife": "更多兼職與租屋資訊隨季票解鎖。",
     "lockedTimeline": "完整時間線（季票）",
     "conciergeTitle": "管家服務",
     "conciergeBody": "在季票之上的全程真人代辦服務。",
@@ -763,6 +764,7 @@
     "row_team": "專屬導師與支援團隊",
     "row_mail": "完整大學郵件收件匣",
     "row_predep": "依國家客製的行前清單",
+    "row_life": "兼職與租屋資訊",
     "row_community": "社群、短影音與獎勵",
     "ctx_apply": "你正在申請第2所學校——用季票解鎖不限量申請。",
     "ctx_compare": "免費版可比較2所——季票解鎖至多4所。",
@@ -770,6 +772,7 @@
     "ctx_mail": "完整大學收件匣隨季票解鎖。",
     "ctx_timeline": "用季票查看每個細分狀態。",
     "ctx_predep": "用季票取得專屬目的地清單。",
+    "ctx_life": "季票解鎖學長姐分享的全部兼職與租屋資訊。",
     "ctx_generic": "此功能屬於季票權益。"
   }
 }

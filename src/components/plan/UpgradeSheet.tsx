@@ -11,7 +11,7 @@ import { useTheme } from '@/hooks/useTheme';
 import { SEASON_PASS_PRICE_USD, usePlanStore } from '@/store/usePlanStore';
 import { toast } from '@/store/useToastStore';
 
-export type UpgradeContext = 'apply' | 'compare' | 'team' | 'mail' | 'timeline' | 'predep' | 'generic';
+export type UpgradeContext = 'apply' | 'compare' | 'team' | 'mail' | 'timeline' | 'predep' | 'life' | 'generic';
 
 const COMPARISON: { id: string; free: boolean }[] = [
   { id: 'match', free: true },
@@ -22,6 +22,7 @@ const COMPARISON: { id: string; free: boolean }[] = [
   { id: 'team', free: false },
   { id: 'mail', free: false },
   { id: 'predep', free: false },
+  { id: 'life', free: false },
   { id: 'community', free: true },
 ];
 

@@ -3,6 +3,7 @@ import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, View } from 'react-native';
+import { LockChip, UpgradeSheet } from '@/components/plan/UpgradeSheet';
 import { Badge } from '@/components/ui/Badge';
 import { Card } from '@/components/ui/Card';
 import { Chip } from '@/components/ui/Chip';
@@ -18,8 +19,12 @@ import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
 import { getStudentLife, getWorkRights, listInstitutions } from '@/services/api';
 import { formatApprox, formatMoney, homeCurrencyFor } from '@/services/currency';
+import { usePlan } from '@/store/usePlanStore';
 import { useProfileStore } from '@/store/useProfileStore';
 import type { CountryCode, CurrencyCode, LifeSharedBy } from '@/types/models';
+
+/** Free tier sees the first listing of each kind; the rest need Season Pass. */
+const FREE_LIFE_LIMIT = 1;
 
 /** Student Life hub — jobs, rooms, wheels and safety for a study city,
  * every item shared by a verified student already there. */
@@ -39,6 +44,8 @@ export default function StudentLifeHub() {
   const life = state.data?.[0];
   const country = (state.data?.[1] ?? []).find((i) => i.city === city)?.country as CountryCode | undefined;
   const rights = useAsync(async () => (country ? getWorkRights(country) : undefined), [country]);
+  const plan = usePlan();
+  const [upgradeOpen, setUpgradeOpen] = useState(false);
 
   if (state.loading) {
     return (
@@ -112,39 +119,79 @@ export default function StudentLifeHub() {
           </Row>
         ) : null}
         <View style={{ gap: spacing.md }}>
-          {jobs.map((j) => (
-            <Card key={j.id} style={{ gap: 4 }}>
-              <Row style={{ justifyContent: 'space-between' }}>
-                <Text variant="sub" style={{ flex: 1 }}>{j.role}</Text>
-                {j.onCampus ? <Badge tone="verified" icon="school" label={t('life.onCampus')} /> : null}
-              </Row>
-              <Text variant="caption" tone="secondary">
-                {j.spot ? t('life.near', { spot: j.spot }) : city}
-              </Text>
-              <Text variant="bodyMedium" tone="accent">
-                {formatMoney(j.payHourMin, localCurrency)}–{formatMoney(j.payHourMax, localCurrency)} {t('life.perHour')}
-              </Text>
-              {sharedBy(j.sharedBy)}
-            </Card>
-          ))}
+          {jobs.map((j, idx) => {
+            if (plan === 'free' && idx >= FREE_LIFE_LIMIT) {
+              return (
+                <Card key={j.id} onPress={() => setUpgradeOpen(true)} style={{ gap: 6 }}>
+                  <View style={{ opacity: 0.35 }} pointerEvents="none">
+                    <Row style={{ justifyContent: 'space-between' }}>
+                      <Text variant="sub" style={{ flex: 1 }}>██████ ████</Text>
+                      {j.onCampus ? <Badge tone="verified" icon="school" label={t('life.onCampus')} /> : null}
+                    </Row>
+                    <Text variant="caption" tone="secondary">{city}</Text>
+                    <Text variant="bodyMedium" tone="accent">███–███ {t('life.perHour')}</Text>
+                  </View>
+                  <LockChip onPress={() => setUpgradeOpen(true)} />
+                </Card>
+              );
+            }
+            return (
+              <Card key={j.id} style={{ gap: 4 }}>
+                <Row style={{ justifyContent: 'space-between' }}>
+                  <Text variant="sub" style={{ flex: 1 }}>{j.role}</Text>
+                  {j.onCampus ? <Badge tone="verified" icon="school" label={t('life.onCampus')} /> : null}
+                </Row>
+                <Text variant="caption" tone="secondary">
+                  {j.spot ? t('life.near', { spot: j.spot }) : city}
+                </Text>
+                <Text variant="bodyMedium" tone="accent">
+                  {formatMoney(j.payHourMin, localCurrency)}–{formatMoney(j.payHourMax, localCurrency)} {t('life.perHour')}
+                </Text>
+                {sharedBy(j.sharedBy)}
+              </Card>
+            );
+          })}
+          {plan === 'free' && jobs.length > FREE_LIFE_LIMIT ? (
+            <Text variant="caption" tone="accent" center>{t('pass.lockedLife')}</Text>
+          ) : null}
         </View>
 
         <SectionHeader title={t('life.housingTitle')} />
         <View style={{ gap: spacing.md }}>
-          {homes.map((h) => (
-            <Card key={h.id} style={{ gap: 4 }}>
-              <Row style={{ justifyContent: 'space-between' }}>
-                <Text variant="sub" style={{ flex: 1 }}>{t(`life.kind_${h.kind}`)}</Text>
-                {h.verified ? <Badge tone="verified" icon="shield-checkmark" label={t('life.verifiedListing')} /> : null}
-              </Row>
-              <Text variant="caption" tone="secondary">{t('life.minToCampus', { count: h.minutesToCampus })}</Text>
-              <Text variant="bodyMedium" tone="accent">
-                {formatMoney(h.priceMonthly, localCurrency)} {t('common.perMonth')}
-                {localCurrency !== home ? `  ·  ${formatApprox(h.priceMonthly, localCurrency, home)}` : ''}
-              </Text>
-              {sharedBy(h.sharedBy)}
-            </Card>
-          ))}
+          {homes.map((h, idx) => {
+            if (plan === 'free' && idx >= FREE_LIFE_LIMIT) {
+              return (
+                <Card key={h.id} onPress={() => setUpgradeOpen(true)} style={{ gap: 6 }}>
+                  <View style={{ opacity: 0.35 }} pointerEvents="none">
+                    <Row style={{ justifyContent: 'space-between' }}>
+                      <Text variant="sub" style={{ flex: 1 }}>██████ ██████</Text>
+                      {h.verified ? <Badge tone="verified" icon="shield-checkmark" label={t('life.verifiedListing')} /> : null}
+                    </Row>
+                    <Text variant="caption" tone="secondary">{city}</Text>
+                    <Text variant="bodyMedium" tone="accent">████ {t('common.perMonth')}</Text>
+                  </View>
+                  <LockChip onPress={() => setUpgradeOpen(true)} />
+                </Card>
+              );
+            }
+            return (
+              <Card key={h.id} style={{ gap: 4 }}>
+                <Row style={{ justifyContent: 'space-between' }}>
+                  <Text variant="sub" style={{ flex: 1 }}>{t(`life.kind_${h.kind}`)}</Text>
+                  {h.verified ? <Badge tone="verified" icon="shield-checkmark" label={t('life.verifiedListing')} /> : null}
+                </Row>
+                <Text variant="caption" tone="secondary">{t('life.minToCampus', { count: h.minutesToCampus })}</Text>
+                <Text variant="bodyMedium" tone="accent">
+                  {formatMoney(h.priceMonthly, localCurrency)} {t('common.perMonth')}
+                  {localCurrency !== home ? `  ·  ${formatApprox(h.priceMonthly, localCurrency, home)}` : ''}
+                </Text>
+                {sharedBy(h.sharedBy)}
+              </Card>
+            );
+          })}
+          {plan === 'free' && homes.length > FREE_LIFE_LIMIT ? (
+            <Text variant="caption" tone="accent" center>{t('pass.lockedLife')}</Text>
+          ) : null}
         </View>
 
         <SectionHeader title={t('life.wheelsTitle')} />
@@ -194,6 +241,7 @@ export default function StudentLifeHub() {
           {country ? `${FLAGS[country]} ` : ''}{t('life.indicative')}
         </Text>
       </View>
+      <UpgradeSheet visible={upgradeOpen} context="life" onClose={() => setUpgradeOpen(false)} />
     </Screen>
   );
 }
