@@ -23,8 +23,11 @@ import type { CurrencyCode } from '@/types/models';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
 import { useAuthStore } from '@/store/useAuthStore';
 import { useCommunityStore } from '@/store/useCommunityStore';
+import { useMailStore } from '@/store/useMailStore';
 import { useProfileStore } from '@/store/useProfileStore';
+import { useRewardsStore } from '@/store/useRewardsStore';
 import { useSavedStore } from '@/store/useSavedStore';
+import { useVaultStore } from '@/store/useVaultStore';
 
 export default function ProfileScreen() {
   const { t } = useTranslation();
@@ -42,6 +45,16 @@ export default function ProfileScreen() {
   const resetProfile = useProfileStore((s) => s.reset);
   const savedCourseIds = useSavedStore((s) => s.savedCourseIds);
   const { matchData } = useMatchData();
+  const coins = useRewardsStore((s) => s.coins);
+  const applications = useApplicationsStore((s) => s.applications);
+  const vaultDocs = useVaultStore((s) => s.documents);
+  const earnedCount =
+    (profile ? 1 : 0) +
+    (profile && (profile.grades.subjects?.length || profile.grades.total !== undefined) ? 1 : 0) +
+    (vaultDocs.length >= 4 ? 1 : 0) +
+    (applications.length > 0 ? 1 : 0) +
+    (applications.some((a) => ['conditional_offer', 'offer', 'accepted', 'coe_issued'].includes(a.status)) ? 1 : 0) +
+    (applications.some((a) => ['accepted', 'coe_issued'].includes(a.status)) ? 1 : 0);
 
   if (!profile) return <Screen />;
 
@@ -70,6 +83,8 @@ export default function ProfileScreen() {
           useSavedStore.setState({ savedCourseIds: [], savedScholarshipIds: [], compareIds: [] });
           useApplicationsStore.setState({ applications: [], notifications: [] });
           useCommunityStore.setState({ joinedGroupIds: [], localMessages: {}, connections: [], rsvps: [], likedPostIds: [] });
+          useRewardsStore.getState().reset();
+          useMailStore.getState().reset();
           router.replace('/onboarding/welcome');
         },
       },
@@ -172,6 +187,32 @@ export default function ProfileScreen() {
               <Row gap={spacing.sm}>
                 <Ionicons name="sparkles" size={20} color={colors.accent} />
                 <Text variant="label">{t('assistant.title')}</Text>
+              </Row>
+              <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />
+            </Row>
+          </Card>
+
+          <Card onPress={() => router.push('/rewards')} style={{ gap: 4 }}>
+            <Row style={{ justifyContent: 'space-between' }}>
+              <Row gap={spacing.sm}>
+                <Ionicons name="trophy-outline" size={20} color={colors.accent} />
+                <View>
+                  <Text variant="label">{t('rewards.title')}</Text>
+                  <Text variant="caption" tone="faint">🪙 {coins} · {t('rewards.badgesShort', { count: earnedCount })}</Text>
+                </View>
+              </Row>
+              <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />
+            </Row>
+          </Card>
+
+          <Card onPress={() => router.push('/vip')} style={{ gap: 4, borderColor: '#D9B45B', borderWidth: 1 }}>
+            <Row style={{ justifyContent: 'space-between' }}>
+              <Row gap={spacing.sm}>
+                <Ionicons name="diamond" size={20} color="#B8923B" />
+                <View>
+                  <Text variant="label">{t('vip.title')}</Text>
+                  <Text variant="caption" tone="faint">{t('vip.entrySub')}</Text>
+                </View>
               </Row>
               <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />
             </Row>

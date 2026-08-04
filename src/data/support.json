@@ -1,0 +1,232 @@
+{
+  "team": [
+    {
+      "id": "staff-1",
+      "name": "Melati Zainal",
+      "role": "coach",
+      "avatar": "https://i.pravatar.cc/300?img=36",
+      "phone": "+60 3-0000 0001",
+      "email": "melati@unibridge.example"
+    },
+    {
+      "id": "staff-2",
+      "name": "Ryan Goh",
+      "role": "support",
+      "avatar": "https://i.pravatar.cc/300?img=53",
+      "phone": "+60 3-0000 0002",
+      "email": "ryan@unibridge.example"
+    },
+    {
+      "id": "staff-3",
+      "name": "Priya Nair",
+      "role": "visa",
+      "avatar": "https://i.pravatar.cc/300?img=45",
+      "phone": "+60 3-0000 0003",
+      "email": "priya@unibridge.example"
+    },
+    {
+      "id": "staff-4",
+      "name": "Daniel Craig Lim",
+      "role": "coach",
+      "avatar": "https://i.pravatar.cc/300?img=12",
+      "phone": "+60 3-0000 0004",
+      "email": "daniel@unibridge.example"
+    }
+  ],
+  "mails": [
+    {
+      "id": "mail-1",
+      "institutionId": "au-monash",
+      "applicationId": "app-demo-1",
+      "kind": "offer",
+      "subject": "Your offer letter — Bachelor of Business Administration",
+      "snippet": "Congratulations! Attached is your Letter of Offer for the February 2027 intake. Reply to accept within 28 days.",
+      "date": "2026-07-28",
+      "read": false
+    },
+    {
+      "id": "mail-2",
+      "institutionId": "au-monash",
+      "applicationId": "app-demo-1",
+      "kind": "document_request",
+      "subject": "Certified English translation needed",
+      "snippet": "Please upload a certified translation of your UEC transcript to complete your file.",
+      "date": "2026-07-30",
+      "read": false
+    },
+    {
+      "id": "mail-3",
+      "institutionId": "gb-manchester",
+      "applicationId": "app-demo-2",
+      "kind": "conditional",
+      "subject": "Conditional offer — condition details inside",
+      "snippet": "Your offer is conditional on IELTS 6.5 (no band below 6.0). Book your test and send results by 30 Nov.",
+      "date": "2026-07-15",
+      "read": false
+    },
+    {
+      "id": "mail-4",
+      "institutionId": "sg-nus",
+      "applicationId": "app-demo-3",
+      "kind": "interview",
+      "subject": "Interview invitation — Business (Finance)",
+      "snippet": "You are invited to a 20-minute online interview. Choose a slot from the booking link within 7 days.",
+      "date": "2026-07-21",
+      "read": false
+    },
+    {
+      "id": "mail-5",
+      "institutionId": "au-monash",
+      "applicationId": "app-demo-1",
+      "kind": "event",
+      "subject": "Offer-holder webinar: housing & enrolment",
+      "snippet": "Join our offer-holder session on 15 Aug for enrolment steps, housing ballot dates and unit selection.",
+      "date": "2026-08-01",
+      "read": true
+    },
+    {
+      "id": "mail-6",
+      "institutionId": "gb-manchester",
+      "applicationId": "app-demo-2",
+      "kind": "newsletter",
+      "subject": "International scholars newsletter — August",
+      "snippet": "Scholarship deadlines, pre-CAS checks and a campus tour recording for offer holders.",
+      "date": "2026-08-02",
+      "read": true
+    }
+  ],
+  "shorts": [
+    {
+      "id": "short-01",
+      "title": "Day in my life at Monash",
+      "ambassadorId": "amb-01",
+      "duration": 46,
+      "views": 12800,
+      "thumb": "https://picsum.photos/seed/short-0/420/640"
+    },
+    {
+      "id": "short-02",
+      "title": "NUS hostel room tour",
+      "ambassadorId": "amb-10",
+      "duration": 58,
+      "views": 22400,
+      "thumb": "https://picsum.photos/seed/short-1/420/640"
+    },
+    {
+      "id": "short-03",
+      "title": "What RM30 buys in Taipei night markets",
+      "ambassadorId": "amb-03",
+      "duration": 41,
+      "views": 9800,
+      "thumb": "https://picsum.photos/seed/short-2/420/640"
+    },
+    {
+      "id": "short-04",
+      "title": "Manchester rain survival kit",
+      "ambassadorId": "amb-07",
+      "duration": 38,
+      "views": 7600,
+      "thumb": "https://picsum.photos/seed/short-3/420/640"
+    },
+    {
+      "id": "short-05",
+      "title": "My UNSW civil-eng lab day",
+      "ambassadorId": "amb-02",
+      "duration": 52,
+      "views": 5400,
+      "thumb": "https://picsum.photos/seed/short-4/420/640"
+    },
+    {
+      "id": "short-06",
+      "title": "Cooking dorm dinner for RM8",
+      "ambassadorId": "amb-05",
+      "duration": 44,
+      "views": 15200,
+      "thumb": "https://picsum.photos/seed/short-5/420/640"
+    },
+    {
+      "id": "short-07",
+      "title": "Auckland weekend hike with intake mates",
+      "ambassadorId": "amb-13",
+      "duration": 49,
+      "views": 4300,
+      "thumb": "https://picsum.photos/seed/short-6/420/640"
+    },
+    {
+      "id": "short-08",
+      "title": "St Petersburg white nights walk",
+      "ambassadorId": "amb-16",
+      "duration": 55,
+      "views": 6100,
+      "thumb": "https://picsum.photos/seed/short-7/420/640"
+    },
+    {
+      "id": "short-09",
+      "title": "Visa interview: what they asked me",
+      "ambassadorId": "amb-04",
+      "duration": 60,
+      "views": 31900,
+      "thumb": "https://picsum.photos/seed/short-8/420/640"
+    },
+    {
+      "id": "short-10",
+      "title": "First week tips I wish I knew",
+      "ambassadorId": "amb-08",
+      "duration": 47,
+      "views": 18700,
+      "thumb": "https://picsum.photos/seed/short-9/420/640"
+    }
+  ],
+  "coinRules": [
+    {
+      "id": "profile",
+      "coins": 20
+    },
+    {
+      "id": "grades",
+      "coins": 30
+    },
+    {
+      "id": "english",
+      "coins": 25
+    },
+    {
+      "id": "document",
+      "coins": 10
+    },
+    {
+      "id": "application",
+      "coins": 60
+    },
+    {
+      "id": "referral",
+      "coins": 80
+    },
+    {
+      "id": "daily",
+      "coins": 5
+    }
+  ],
+  "redemptions": [
+    {
+      "id": "vip-discount",
+      "coins": 400
+    },
+    {
+      "id": "fee-waiver",
+      "coins": 300
+    },
+    {
+      "id": "doc-review",
+      "coins": 200
+    },
+    {
+      "id": "event-ticket",
+      "coins": 150
+    },
+    {
+      "id": "sim-topup",
+      "coins": 250
+    }
+  ]
+}

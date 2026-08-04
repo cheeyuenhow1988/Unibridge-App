@@ -174,6 +174,22 @@ export default function StudentLifeHub() {
           </Card>
         ) : null}
 
+        <SectionHeader title={t('life.financeTitle')} />
+        <Card tone="alt" style={{ gap: spacing.md }}>
+          {(['loans', 'forex', 'transfer', 'tuitionPay', 'bank'] as const).map((f) => (
+            <Row key={f} gap={spacing.md}>
+              <Ionicons
+                name={{ loans: 'cash-outline', forex: 'card-outline', transfer: 'swap-horizontal-outline', tuitionPay: 'receipt-outline', bank: 'business-outline' }[f] as never}
+                size={18}
+                color={colors.accent}
+              />
+              <Text variant="body" tone="secondary" style={{ flex: 1 }}>{t(`life.finance_${f}`)}</Text>
+              <Badge tone="neutral" label={t('common.comingSoon')} />
+            </Row>
+          ))}
+          <Text variant="caption" tone="faint">{t('life.financeNote')}</Text>
+        </Card>
+
         <Text variant="caption" tone="faint" center>
           {country ? `${FLAGS[country]} ` : ''}{t('life.indicative')}
         </Text>

@@ -1942,5 +1942,587 @@
       "https://picsum.photos/seed/cn-jnu-1/800/500",
       "https://picsum.photos/seed/cn-jnu-2/800/500"
     ]
+  },
+  {
+    "id": "au-deakin",
+    "name": "Deakin University",
+    "short": "Deakin",
+    "country": "AU",
+    "city": "Melbourne",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Practical degrees with strong industry placements",
+    "founded": 1974,
+    "students": 61000,
+    "website": "https://www.deakin.edu.au",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Deakin_Worldly_Strip_Logo.jpg",
+    "wikipedia": "Deakin University",
+    "ranking": 197,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Deakin_University_Burwood_Campus.jpg?width=1000",
+      "https://picsum.photos/seed/au-deakin-1/800/500",
+      "https://picsum.photos/seed/au-deakin-2/800/500"
+    ]
+  },
+  {
+    "id": "au-macquarie",
+    "name": "Macquarie University",
+    "short": "Macquarie",
+    "country": "AU",
+    "city": "Sydney",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Home of Australia's first actuarial programme",
+    "founded": 1964,
+    "students": 45000,
+    "website": "https://www.mq.edu.au",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Macquarie_University_International_brandmark_%E2%80%93_Horizontal_configuration.svg/330px-Macquarie_University_International_brandmark_%E2%80%93_Horizontal_configuration.svg.png",
+    "wikipedia": "Macquarie University",
+    "ranking": 133,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Macquarie_University_New_Library_2011.jpg?width=1000",
+      "https://picsum.photos/seed/au-macquarie-1/800/500",
+      "https://picsum.photos/seed/au-macquarie-2/800/500"
+    ]
+  },
+  {
+    "id": "au-griffith",
+    "name": "Griffith University",
+    "short": "Griffith",
+    "country": "AU",
+    "city": "Brisbane",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Hotel-school heritage and health strength in Brisbane",
+    "founded": 1971,
+    "students": 55000,
+    "website": "https://www.griffith.edu.au",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=griffith.edu.au&sz=128",
+    "wikipedia": "Griffith University",
+    "ranking": 239,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Griffith_University.jpg?width=1000",
+      "https://picsum.photos/seed/au-griffith-1/800/500",
+      "https://picsum.photos/seed/au-griffith-2/800/500"
+    ]
+  },
+  {
+    "id": "au-holmesglen",
+    "name": "Holmesglen Institute",
+    "short": "Holmesglen",
+    "country": "AU",
+    "city": "Melbourne",
+    "type": "institute",
+    "verifiedPartner": false,
+    "tagline": "One of Victoria's largest TAFE institutes",
+    "founded": 1982,
+    "students": 30000,
+    "website": "https://holmesglen.edu.au",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=holmesglen.edu.au&sz=128",
+    "wikipedia": "Holmesglen Institute",
+    "ranking": null,
+    "images": [
+      "https://picsum.photos/seed/au-holmesglen-0/800/500",
+      "https://picsum.photos/seed/au-holmesglen-1/800/500",
+      "https://picsum.photos/seed/au-holmesglen-2/800/500"
+    ]
+  },
+  {
+    "id": "my-apu",
+    "name": "Asia Pacific University of Technology & Innovation",
+    "short": "APU",
+    "country": "MY",
+    "city": "Kuala Lumpur",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Tech-first campus with one of Malaysia's most international student bodies",
+    "founded": 1993,
+    "students": 13000,
+    "website": "https://www.apu.edu.my",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=apu.edu.my&sz=128",
+    "wikipedia": "Asia Pacific University of Technology & Innovation",
+    "ranking": 621,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/UCTI_Interior.jpg?width=1000",
+      "https://picsum.photos/seed/my-apu-1/800/500",
+      "https://picsum.photos/seed/my-apu-2/800/500"
+    ]
+  },
+  {
+    "id": "my-help",
+    "name": "HELP University",
+    "short": "HELP",
+    "country": "MY",
+    "city": "Kuala Lumpur",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Psychology and business pioneer in KL",
+    "founded": 1986,
+    "students": 8000,
+    "website": "https://university.help.edu.my",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=university.help.edu.my&sz=128",
+    "wikipedia": "HELP University",
+    "ranking": null,
+    "images": [
+      "https://picsum.photos/seed/my-help-0/800/500",
+      "https://picsum.photos/seed/my-help-1/800/500",
+      "https://picsum.photos/seed/my-help-2/800/500"
+    ]
+  },
+  {
+    "id": "my-inti",
+    "name": "INTI International University",
+    "short": "INTI",
+    "country": "MY",
+    "city": "Kuala Lumpur",
+    "type": "college",
+    "verifiedPartner": false,
+    "tagline": "Transfer pathways to partner universities worldwide",
+    "founded": 1986,
+    "students": 13000,
+    "website": "https://newinti.edu.my",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=newinti.edu.my&sz=128",
+    "wikipedia": "INTI International University",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/INTI_Nilai_Student_Centre.png?width=1000",
+      "https://picsum.photos/seed/my-inti-1/800/500",
+      "https://picsum.photos/seed/my-inti-2/800/500"
+    ]
+  },
+  {
+    "id": "tw-nccu",
+    "name": "National Chengchi University",
+    "short": "NCCU",
+    "country": "TW",
+    "city": "Taipei",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Taiwan's home of social sciences, business and media",
+    "founded": 1927,
+    "students": 16000,
+    "website": "https://www.nccu.edu.tw",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=nccu.edu.tw&sz=128",
+    "wikipedia": "National Chengchi University",
+    "ranking": 587,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/NCCU_Shiwei_Hall_20220815.jpg?width=1000",
+      "https://picsum.photos/seed/tw-nccu-1/800/500",
+      "https://picsum.photos/seed/tw-nccu-2/800/500"
+    ]
+  },
+  {
+    "id": "tw-tku",
+    "name": "Tamkang University",
+    "short": "TKU",
+    "country": "TW",
+    "city": "Taipei",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Long-established private university by the Tamsui river",
+    "founded": 1950,
+    "students": 24000,
+    "website": "https://www.tku.edu.tw",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=tku.edu.tw&sz=128",
+    "wikipedia": "Tamkang University",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lanyang_Campus%2C_Tamkang_University_20060322.jpg?width=1000",
+      "https://picsum.photos/seed/tw-tku-1/800/500",
+      "https://picsum.photos/seed/tw-tku-2/800/500"
+    ]
+  },
+  {
+    "id": "gb-lse",
+    "name": "London School of Economics",
+    "short": "LSE",
+    "country": "GB",
+    "city": "London",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "The social-science powerhouse on Houghton Street",
+    "founded": 1895,
+    "students": 12000,
+    "website": "https://www.lse.ac.uk",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/London_school_of_economics_logo_with_name.svg/330px-London_school_of_economics_logo_with_name.svg.png",
+    "wikipedia": "London School of Economics",
+    "ranking": 50,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/LondonSchoolofEconomics_cford.jpg?width=1000",
+      "https://picsum.photos/seed/gb-lse-1/800/500",
+      "https://picsum.photos/seed/gb-lse-2/800/500"
+    ]
+  },
+  {
+    "id": "gb-kingston",
+    "name": "Kingston University",
+    "short": "Kingston",
+    "country": "GB",
+    "city": "London",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "London design school with famous fashion alumni",
+    "founded": 1899,
+    "students": 16000,
+    "website": "https://www.kingston.ac.uk",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Kingston_University_logo.svg/330px-Kingston_University_logo.svg.png",
+    "wikipedia": "Kingston University",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Knights_Park_Campus.jpg?width=1000",
+      "https://picsum.photos/seed/gb-kingston-1/800/500",
+      "https://picsum.photos/seed/gb-kingston-2/800/500"
+    ]
+  },
+  {
+    "id": "sg-sit",
+    "name": "Singapore Institute of Technology",
+    "short": "SIT",
+    "country": "SG",
+    "city": "Singapore",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Singapore's university of applied learning",
+    "founded": 2009,
+    "students": 12000,
+    "website": "https://www.singaporetech.edu.sg",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=singaporetech.edu.sg&sz=128",
+    "wikipedia": "Singapore Institute of Technology",
+    "ranking": null,
+    "images": [
+      "https://picsum.photos/seed/sg-sit-0/800/500",
+      "https://picsum.photos/seed/sg-sit-1/800/500",
+      "https://picsum.photos/seed/sg-sit-2/800/500"
+    ]
+  },
+  {
+    "id": "sg-np",
+    "name": "Ngee Ann Polytechnic",
+    "short": "NP",
+    "country": "SG",
+    "city": "Singapore",
+    "type": "college",
+    "verifiedPartner": false,
+    "tagline": "Polytechnic diplomas with strong industry links",
+    "founded": 1963,
+    "students": 14000,
+    "website": "https://www.np.edu.sg",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=np.edu.sg&sz=128",
+    "wikipedia": "Ngee Ann Polytechnic",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/NPcampus.JPG?width=1000",
+      "https://picsum.photos/seed/sg-np-1/800/500",
+      "https://picsum.photos/seed/sg-np-2/800/500"
+    ]
+  },
+  {
+    "id": "nz-massey",
+    "name": "Massey University",
+    "short": "Massey",
+    "country": "NZ",
+    "city": "Wellington",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Design, agriculture and distance-learning pioneer",
+    "founded": 1927,
+    "students": 27000,
+    "website": "https://www.massey.ac.nz",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=massey.ac.nz&sz=128",
+    "wikipedia": "Massey University",
+    "ranking": 239,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Masseyalbany2005.JPG?width=1000",
+      "https://picsum.photos/seed/nz-massey-1/800/500",
+      "https://picsum.photos/seed/nz-massey-2/800/500"
+    ]
+  },
+  {
+    "id": "nz-lincoln",
+    "name": "Lincoln University",
+    "short": "Lincoln",
+    "country": "NZ",
+    "city": "Christchurch",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "New Zealand's specialist land-based university",
+    "founded": 1878,
+    "students": 3500,
+    "website": "https://www.lincoln.ac.nz",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/LU_logo.jpg/330px-LU_logo.jpg",
+    "wikipedia": "Lincoln University (New Zealand)",
+    "ranking": 362,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Ivey_Hall%2C_Lincoln_University%2C_New_Zealand.jpg?width=1000",
+      "https://picsum.photos/seed/nz-lincoln-1/800/500",
+      "https://picsum.photos/seed/nz-lincoln-2/800/500"
+    ]
+  },
+  {
+    "id": "ru-spbu",
+    "name": "Saint Petersburg State University",
+    "short": "SPbU",
+    "country": "RU",
+    "city": "Saint Petersburg",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Russia's first university, on the Neva embankment",
+    "founded": 1724,
+    "students": 30000,
+    "website": "https://english.spbu.ru",
+    "languages": [
+      "Russian",
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=english.spbu.ru&sz=128",
+    "wikipedia": "Saint Petersburg State University",
+    "ranking": 365,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Spb_06-2012_University_Embankment_06.jpg?width=1000",
+      "https://picsum.photos/seed/ru-spbu-1/800/500",
+      "https://picsum.photos/seed/ru-spbu-2/800/500"
+    ]
+  },
+  {
+    "id": "ru-mipt",
+    "name": "Moscow Institute of Physics and Technology",
+    "short": "MIPT",
+    "country": "RU",
+    "city": "Moscow",
+    "type": "institute",
+    "verifiedPartner": false,
+    "tagline": "The legendary Phystech — physics olympiad royalty",
+    "founded": 1946,
+    "students": 7000,
+    "website": "https://mipt.ru",
+    "languages": [
+      "Russian",
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=mipt.ru&sz=128",
+    "wikipedia": "Moscow Institute of Physics and Technology",
+    "ranking": 302,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Mipt_phystech.jpg?width=1000",
+      "https://picsum.photos/seed/ru-mipt-1/800/500",
+      "https://picsum.photos/seed/ru-mipt-2/800/500"
+    ]
+  },
+  {
+    "id": "us-depaul",
+    "name": "DePaul University",
+    "short": "DePaul",
+    "country": "US",
+    "city": "Chicago",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "America's largest Catholic university, in the Loop",
+    "founded": 1898,
+    "students": 21000,
+    "website": "https://www.depaul.edu",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=depaul.edu&sz=128",
+    "wikipedia": "DePaul University",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/StudentCenterDePaul.jpg?width=1000",
+      "https://picsum.photos/seed/us-depaul-1/800/500",
+      "https://picsum.photos/seed/us-depaul-2/800/500"
+    ]
+  },
+  {
+    "id": "us-pace",
+    "name": "Pace University",
+    "short": "Pace",
+    "country": "US",
+    "city": "New York",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Opposite City Hall, steps from Wall Street internships",
+    "founded": 1906,
+    "students": 13000,
+    "website": "https://www.pace.edu",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Pace_University_Logo.svg/330px-Pace_University_Logo.svg.png",
+    "wikipedia": "Pace University",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/PaceUniversity.JPG?width=1000",
+      "https://picsum.photos/seed/us-pace-1/800/500",
+      "https://picsum.photos/seed/us-pace-2/800/500"
+    ]
+  },
+  {
+    "id": "us-umb",
+    "name": "University of Massachusetts Boston",
+    "short": "UMass Boston",
+    "country": "US",
+    "city": "Boston",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Harbour-side public research university",
+    "founded": 1964,
+    "students": 16000,
+    "website": "https://www.umb.edu",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=umb.edu&sz=128",
+    "wikipedia": "University of Massachusetts Boston",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/UMass_Boston_campus.jpg?width=1000",
+      "https://picsum.photos/seed/us-umb-1/800/500",
+      "https://picsum.photos/seed/us-umb-2/800/500"
+    ]
+  },
+  {
+    "id": "ca-seneca",
+    "name": "Seneca Polytechnic",
+    "short": "Seneca",
+    "country": "CA",
+    "city": "Toronto",
+    "type": "college",
+    "verifiedPartner": true,
+    "tagline": "Canada's largest college — big on co-op work terms",
+    "founded": 1967,
+    "students": 45000,
+    "website": "https://www.senecapolytechnic.ca",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=senecapolytechnic.ca&sz=128",
+    "wikipedia": "Seneca Polytechnic",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Seneca_CITE_Building_K_-_front_exterior_view.jpg?width=1000",
+      "https://picsum.photos/seed/ca-seneca-1/800/500",
+      "https://picsum.photos/seed/ca-seneca-2/800/500"
+    ]
+  },
+  {
+    "id": "ca-langara",
+    "name": "Langara College",
+    "short": "Langara",
+    "country": "CA",
+    "city": "Vancouver",
+    "type": "college",
+    "verifiedPartner": false,
+    "tagline": "The famous university-transfer college of Vancouver",
+    "founded": 1965,
+    "students": 21000,
+    "website": "https://langara.ca",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=langara.ca&sz=128",
+    "wikipedia": "Langara College",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/LangaraCollege2007-small.jpg?width=1000",
+      "https://picsum.photos/seed/ca-langara-1/800/500",
+      "https://picsum.photos/seed/ca-langara-2/800/500"
+    ]
+  },
+  {
+    "id": "cn-ecnu",
+    "name": "East China Normal University",
+    "short": "ECNU",
+    "country": "CN",
+    "city": "Shanghai",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "China's leading teacher-training university in Shanghai",
+    "founded": 1951,
+    "students": 35000,
+    "website": "https://www.ecnu.edu.cn",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=ecnu.edu.cn&sz=128",
+    "wikipedia": "East China Normal University",
+    "ranking": 501,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/%E5%8D%8E%E4%B8%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E6%80%9D%E7%BE%A4%E5%A0%82.jpg?width=1000",
+      "https://picsum.photos/seed/cn-ecnu-1/800/500",
+      "https://picsum.photos/seed/cn-ecnu-2/800/500"
+    ]
+  },
+  {
+    "id": "cn-scut",
+    "name": "South China University of Technology",
+    "short": "SCUT",
+    "country": "CN",
+    "city": "Guangzhou",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Engineering and architecture flagship of the south",
+    "founded": 1952,
+    "students": 46000,
+    "website": "https://www.scut.edu.cn",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=scut.edu.cn&sz=128",
+    "wikipedia": "South China University of Technology",
+    "ranking": 437,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/South_China_University_of_Technology_South_Gate.jpg?width=1000",
+      "https://picsum.photos/seed/cn-scut-1/800/500",
+      "https://picsum.photos/seed/cn-scut-2/800/500"
+    ]
   }
 ]

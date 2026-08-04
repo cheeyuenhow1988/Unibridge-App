@@ -17,10 +17,11 @@ import documentsData from '@/data/documents.json';
 import seedData from '@/data/seed.json';
 import flightsData from '@/data/flights.json';
 import studentLifeData from '@/data/studentLife.json';
+import supportData from '@/data/support.json';
 import type {
   Ambassador, Application, Attraction, CityInfo, CommunityEvent, CostOfLiving, CountryCode, Course,
   Coursemate, DocumentTypeId, FlightFares, GroupMessage, Institution, IntakeGroup, PredepartureItem,
-  QualificationSystem, Scholarship, StudentLife, StudentProfile, WorkRights,
+  QualificationSystem, Scholarship, StudentLife, StudentProfile, SupportBundle, WorkRights,
 } from '@/types/models';
 
 const institutions = institutionsData as Institution[];
@@ -87,6 +88,10 @@ export async function getFlightFares(): Promise<FlightFares> {
 
 export async function getStudentLife(): Promise<StudentLife> {
   return simulate(studentLifeData as unknown as StudentLife, 150);
+}
+
+export async function getSupportBundle(): Promise<SupportBundle> {
+  return simulate(supportData as unknown as SupportBundle, 120);
 }
 
 export async function listScholarships(): Promise<Scholarship[]> {

@@ -5,84 +5,84 @@
       "institutionId": "au-monash",
       "intake": "2027-02",
       "name": "Monash Feb 2027",
-      "members": 189
+      "members": 215
     },
     {
       "id": "grp-au-unsw-2027-02",
       "institutionId": "au-unsw",
       "intake": "2027-02",
       "name": "UNSW Feb 2027",
-      "members": 102
+      "members": 72
     },
     {
       "id": "grp-my-um-2027-01",
       "institutionId": "my-um",
       "intake": "2027-01",
       "name": "UM Jan 2027",
-      "members": 76
+      "members": 162
     },
     {
       "id": "grp-my-taylors-2027-01",
       "institutionId": "my-taylors",
       "intake": "2027-01",
       "name": "Taylor's Jan 2027",
-      "members": 133
+      "members": 167
     },
     {
       "id": "grp-tw-ntu-2027-02",
       "institutionId": "tw-ntu",
       "intake": "2027-02",
       "name": "NTU Feb 2027",
-      "members": 177
+      "members": 142
     },
     {
       "id": "grp-gb-manchester-2027-01",
       "institutionId": "gb-manchester",
       "intake": "2027-01",
       "name": "Manchester Jan 2027",
-      "members": 120
+      "members": 138
     },
     {
       "id": "grp-sg-nus-2027-01",
       "institutionId": "sg-nus",
       "intake": "2027-01",
       "name": "NUS Jan 2027",
-      "members": 127
+      "members": 153
     },
     {
       "id": "grp-nz-auckland-2027-02",
       "institutionId": "nz-auckland",
       "intake": "2027-02",
       "name": "Auckland Feb 2027",
-      "members": 85
+      "members": 201
     },
     {
       "id": "grp-ru-itmo-2027-02",
       "institutionId": "ru-itmo",
       "intake": "2027-02",
       "name": "ITMO Feb 2027",
-      "members": 129
+      "members": 178
     },
     {
       "id": "grp-us-nyu-2027-01",
       "institutionId": "us-nyu",
       "intake": "2027-01",
       "name": "NYU Jan 2027",
-      "members": 46
+      "members": 40
     },
     {
       "id": "grp-ca-utoronto-2027-01",
       "institutionId": "ca-utoronto",
       "intake": "2027-01",
       "name": "UofT Jan 2027",
-      "members": 195
+      "members": 50
     },
     {
       "id": "grp-cn-tsinghua-2027-03",
       "institutionId": "cn-tsinghua",
       "intake": "2027-03",
       "name": "Tsinghua Mar 2027",
-      "members": 105
+      "members": 57
     }
   ],
   "groupMessages": [

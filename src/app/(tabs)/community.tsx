@@ -17,9 +17,10 @@ import { FLAGS } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
-import { listAmbassadors, listCoursemates, listEvents, listInstitutions, listIntakeGroups } from '@/services/api';
+import { getSupportBundle, listAmbassadors, listCoursemates, listEvents, listInstitutions, listIntakeGroups } from '@/services/api';
 import { hapticTap } from '@/services/haptics';
 import { useCommunityStore } from '@/store/useCommunityStore';
+import type { Short } from '@/types/models';
 
 type Segment = 'groups' | 'feed' | 'mates' | 'events';
 
@@ -27,6 +28,8 @@ export default function CommunityScreen() {
   const { t } = useTranslation();
   const { colors } = useTheme();
   const [segment, setSegment] = useState<Segment>('groups');
+  const [playing, setPlaying] = useState<Short | null>(null);
+  const supportB = useAsync(() => getSupportBundle(), []);
   const joinedGroupIds = useCommunityStore((s) => s.joinedGroupIds);
   const joinGroup = useCommunityStore((s) => s.joinGroup);
   const connections = useCommunityStore((s) => s.connections);
@@ -121,6 +124,35 @@ export default function CommunityScreen() {
 
           {segment === 'feed' ? (
             <View style={{ gap: spacing.md }}>
+              {(supportB.data?.shorts.length ?? 0) > 0 ? (
+                <View style={{ gap: spacing.sm }}>
+                  <Row style={{ justifyContent: 'space-between' }}>
+                    <Text variant="label">{t('shorts.title')}</Text>
+                    <Badge tone="accent" label={t('common.beta')} />
+                  </Row>
+                  <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: spacing.sm }}>
+                    {(supportB.data?.shorts ?? []).map((s) => (
+                      <Pressable key={s.id} accessibilityRole="button" onPress={() => setPlaying(s)}>
+                        <View style={{ width: 116, gap: 4 }}>
+                          <View style={{ borderRadius: radius.lg, overflow: 'hidden' }}>
+                            <Image source={{ uri: s.thumb }} style={{ width: 116, height: 176 }} contentFit="cover" />
+                            <View
+                              style={{
+                                position: 'absolute', bottom: 6, left: 6, flexDirection: 'row', alignItems: 'center', gap: 4,
+                                backgroundColor: 'rgba(0,0,0,0.55)', borderRadius: radius.full, paddingHorizontal: 8, paddingVertical: 2,
+                              }}
+                            >
+                              <Ionicons name="play" size={10} color="#FFFFFF" />
+                              <Text variant="caption" color="#FFFFFF">{s.duration}s</Text>
+                            </View>
+                          </View>
+                          <Text variant="caption" numberOfLines={2}>{s.title}</Text>
+                        </View>
+                      </Pressable>
+                    ))}
+                  </ScrollView>
+                </View>
+              ) : null}
               {feed.length === 0 ? <EmptyState icon="images-outline" title={t('community.emptyFeed')} /> : null}
               {feed.map(({ ambassador, post }) => (
                 <Card key={post.id} padded={false}>
@@ -253,6 +285,38 @@ export default function CommunityScreen() {
           ) : null}
         </View>
       </ScrollView>
+
+      {playing ? (
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={t('common.close')}
+          onPress={() => setPlaying(null)}
+          style={{
+            position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+            backgroundColor: 'rgba(0,0,0,0.92)', alignItems: 'center', justifyContent: 'center',
+          }}
+        >
+          <View style={{ width: '78%', maxWidth: 340, gap: spacing.md }}>
+            <View style={{ borderRadius: radius.xl, overflow: 'hidden' }}>
+              <Image source={{ uri: playing.thumb }} style={{ width: '100%', aspectRatio: 9 / 16 }} contentFit="cover" />
+              <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, alignItems: 'center', justifyContent: 'center' }}>
+                <View
+                  style={{
+                    width: 64, height: 64, borderRadius: radius.full, backgroundColor: 'rgba(255,255,255,0.25)',
+                    alignItems: 'center', justifyContent: 'center',
+                  }}
+                >
+                  <Ionicons name="play" size={30} color="#FFFFFF" />
+                </View>
+              </View>
+            </View>
+            <Text variant="sub" color="#FFFFFF" center>{playing.title}</Text>
+            <Text variant="caption" color="rgba(255,255,255,0.7)" center>
+              {playing.duration}s · {playing.views.toLocaleString('en')} {t('shorts.views')} · {t('shorts.mockNote')}
+            </Text>
+          </View>
+        </Pressable>
+      ) : null}
     </Screen>
   );
 }

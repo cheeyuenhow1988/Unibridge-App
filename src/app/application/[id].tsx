@@ -1,8 +1,9 @@
 import { Ionicons } from '@expo/vector-icons';
+import { Image } from 'expo-image';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, View } from 'react-native';
+import { Linking, Pressable, View } from 'react-native';
 import { DepositModal } from '@/components/applications/DepositModal';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
@@ -14,8 +15,10 @@ import { ErrorState } from '@/components/ui/States';
 import { Text } from '@/components/ui/Text';
 import { FLAGS } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
+import { useAsync } from '@/hooks/useAsync';
 import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
+import { getSupportBundle } from '@/services/api';
 import { hapticSuccess } from '@/services/haptics';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
 import { APPLICATION_TIMELINE } from '@/types/models';
@@ -29,6 +32,8 @@ export default function ApplicationDetail() {
   const advanceStatus = useApplicationsStore((s) => s.advanceStatus);
   const acceptOffer = useApplicationsStore((s) => s.acceptOffer);
   const [depositOpen, setDepositOpen] = useState(false);
+  const [fullTeam, setFullTeam] = useState(false);
+  const support = useAsync(() => getSupportBundle(), []);
 
   if (loading) {
     return (
@@ -128,6 +133,50 @@ export default function ApplicationDetail() {
             variant="secondary"
             onPress={() => router.push(`/predeparture/${application.id}`)}
           />
+        ) : null}
+
+        {support.data ? (
+          <Card style={{ gap: spacing.md }}>
+            <Row style={{ justifyContent: 'space-between' }}>
+              <Row gap={spacing.sm}>
+                <Ionicons name="people-circle-outline" size={20} color={colors.accent} />
+                <Text variant="label">{t('team.title', { count: support.data.team.length })}</Text>
+              </Row>
+              <Pressable accessibilityRole="button" onPress={() => setFullTeam(!fullTeam)} hitSlop={8}>
+                <Text variant="caption" tone="accent">
+                  {fullTeam ? t('common.close') : t('team.viewFull')}
+                </Text>
+              </Pressable>
+            </Row>
+            {(fullTeam ? support.data.team : support.data.team.slice(0, 2)).map((s) => (
+              <Row key={s.id} gap={spacing.md}>
+                <Image source={{ uri: s.avatar }} style={{ width: 40, height: 40, borderRadius: radius.full }} />
+                <View style={{ flex: 1 }}>
+                  <Text variant="sub">{s.name}</Text>
+                  <Text variant="caption" tone="faint">{t(`team.role_${s.role}`)} · {t('common.demo')}</Text>
+                </View>
+                <Pressable
+                  accessibilityRole="button"
+                  accessibilityLabel={`${t('team.call')} ${s.name}`}
+                  onPress={() => void Linking.openURL(`tel:${s.phone.replace(/[^+\d]/g, '')}`)}
+                  hitSlop={8}
+                  style={{ padding: spacing.sm }}
+                >
+                  <Ionicons name="call-outline" size={18} color={colors.accent} />
+                </Pressable>
+                <Pressable
+                  accessibilityRole="button"
+                  accessibilityLabel={`${t('team.email')} ${s.name}`}
+                  onPress={() => void Linking.openURL(`mailto:${s.email}`)}
+                  hitSlop={8}
+                  style={{ padding: spacing.sm }}
+                >
+                  <Ionicons name="mail-outline" size={18} color={colors.accent} />
+                </Pressable>
+              </Row>
+            ))}
+            <Text variant="caption" tone="faint">{t('team.note')}</Text>
+          </Card>
         ) : null}
 
         {canAdvance ? (

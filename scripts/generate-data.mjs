@@ -336,6 +336,55 @@ const INSTITUTIONS = [
     [['education', 0, 'b', 4], ['education', 1, 'b', 3], ['science', 0, 'b', 3]]],
   ['cn-jnu', 'Jinan University', 'JNU', 'CN', 'Guangzhou', 'university', true, 'The overseas-Chinese university — most international student body in China', 1906, 40000, 'https://www.jnu.edu.cn',
     [['business', 0, 'b', 2], ['media', 0, 'b', 2], ['health', 3, 'b', 2], ['business', 0, 'f', 0]]],
+
+  ['au-deakin', 'Deakin University', 'Deakin', 'AU', 'Melbourne', 'university', true, 'Practical degrees with strong industry placements', 1974, 61000, 'https://www.deakin.edu.au',
+    [['health', 0, 'b', 3], ['business', 5, 'b', 3], ['education', 3, 'b', 3], ['business', 0, 'd', 0]]],
+  ['au-macquarie', 'Macquarie University', 'Macquarie', 'AU', 'Sydney', 'university', false, "Home of Australia's first actuarial programme", 1964, 45000, 'https://www.mq.edu.au',
+    [['science', 5, 'b', 3], ['business', 6, 'b', 3], ['media', 4, 'b', 3]]],
+  ['au-griffith', 'Griffith University', 'Griffith', 'AU', 'Brisbane', 'university', true, 'Hotel-school heritage and health strength in Brisbane', 1971, 55000, 'https://www.griffith.edu.au',
+    [['hospitality', 2, 'b', 2], ['health', 6, 'b', 3], ['media', 5, 'b', 3], ['business', 0, 'f', 0]]],
+  ['au-holmesglen', 'Holmesglen Institute', 'Holmesglen', 'AU', 'Melbourne', 'institute', false, "One of Victoria's largest TAFE institutes", 1982, 30000, 'https://holmesglen.edu.au',
+    [['hospitality', 0, 'd', 0], ['business', 0, 'd', 0], ['it', 0, 'd', 0]]],
+  ['my-apu', 'Asia Pacific University of Technology & Innovation', 'APU', 'MY', 'Kuala Lumpur', 'university', true, "Tech-first campus with one of Malaysia's most international student bodies", 1993, 13000, 'https://www.apu.edu.my',
+    [['it', 4, 'b', 2], ['it', 3, 'b', 2], ['business', 8, 'b', 2], ['it', 0, 'd', 0]]],
+  ['my-help', 'HELP University', 'HELP', 'MY', 'Kuala Lumpur', 'university', false, 'Psychology and business pioneer in KL', 1986, 8000, 'https://university.help.edu.my',
+    [['health', 5, 'b', 2], ['business', 0, 'b', 2], ['law', 2, 'b', 2], ['business', 0, 'f', 0]]],
+  ['my-inti', 'INTI International University', 'INTI', 'MY', 'Kuala Lumpur', 'college', false, 'Transfer pathways to partner universities worldwide', 1986, 13000, 'https://newinti.edu.my',
+    [['business', 0, 'd', 0], ['it', 0, 'd', 0], ['hospitality', 0, 'd', 0]]],
+  ['tw-nccu', 'National Chengchi University', 'NCCU', 'TW', 'Taipei', 'university', false, "Taiwan's home of social sciences, business and media", 1927, 16000, 'https://www.nccu.edu.tw',
+    [['business', 1, 'b', 3], ['media', 0, 'b', 3], ['law', 0, 'b', 3]]],
+  ['tw-tku', 'Tamkang University', 'TKU', 'TW', 'Taipei', 'university', false, 'Long-established private university by the Tamsui river', 1950, 24000, 'https://www.tku.edu.tw',
+    [['business', 0, 'b', 2], ['engineering', 0, 'b', 2], ['media', 5, 'b', 2], ['it', 0, 'd', 0]]],
+  ['gb-lse', 'London School of Economics', 'LSE', 'GB', 'London', 'university', false, 'The social-science powerhouse on Houghton Street', 1895, 12000, 'https://www.lse.ac.uk',
+    [['business', 9, 'b', 5], ['law', 0, 'b', 5], ['science', 0, 'b', 5]]],
+  ['gb-kingston', 'Kingston University', 'Kingston', 'GB', 'London', 'university', false, 'London design school with famous fashion alumni', 1899, 16000, 'https://www.kingston.ac.uk',
+    [['design', 2, 'b', 2], ['design', 4, 'b', 2], ['business', 0, 'b', 2], ['business', 0, 'f', 0]]],
+  ['sg-sit', 'Singapore Institute of Technology', 'SIT', 'SG', 'Singapore', 'university', false, "Singapore's university of applied learning", 2009, 12000, 'https://www.singaporetech.edu.sg',
+    [['engineering', 6, 'b', 3], ['it', 7, 'b', 3], ['hospitality', 3, 'b', 2]]],
+  ['sg-np', 'Ngee Ann Polytechnic', 'NP', 'SG', 'Singapore', 'college', false, 'Polytechnic diplomas with strong industry links', 1963, 14000, 'https://www.np.edu.sg',
+    [['business', 0, 'd', 0], ['media', 0, 'd', 0], ['it', 0, 'd', 0]]],
+  ['nz-massey', 'Massey University', 'Massey', 'NZ', 'Wellington', 'university', false, 'Design, agriculture and distance-learning pioneer', 1927, 27000, 'https://www.massey.ac.nz',
+    [['design', 0, 'b', 3], ['business', 0, 'b', 2], ['science', 4, 'b', 2], ['business', 0, 'd', 0]]],
+  ['nz-lincoln', 'Lincoln University', 'Lincoln', 'NZ', 'Christchurch', 'university', false, "New Zealand's specialist land-based university", 1878, 3500, 'https://www.lincoln.ac.nz',
+    [['science', 1, 'b', 2], ['business', 7, 'b', 2], ['hospitality', 2, 'b', 2]]],
+  ['ru-spbu', 'Saint Petersburg State University', 'SPbU', 'RU', 'Saint Petersburg', 'university', false, "Russia's first university, on the Neva embankment", 1724, 30000, 'https://english.spbu.ru',
+    [['science', 0, 'b', 4], ['law', 0, 'b', 3], ['media', 1, 'b', 3]]],
+  ['ru-mipt', 'Moscow Institute of Physics and Technology', 'MIPT', 'RU', 'Moscow', 'institute', false, 'The legendary Phystech — physics olympiad royalty', 1946, 7000, 'https://mipt.ru',
+    [['science', 2, 'b', 5], ['engineering', 5, 'b', 5], ['it', 4, 'b', 5]]],
+  ['us-depaul', 'DePaul University', 'DePaul', 'US', 'Chicago', 'university', false, "America's largest Catholic university, in the Loop", 1898, 21000, 'https://www.depaul.edu',
+    [['business', 0, 'b', 2], ['media', 2, 'b', 2], ['it', 5, 'b', 2], ['business', 0, 'd', 0]]],
+  ['us-pace', 'Pace University', 'Pace', 'US', 'New York', 'university', false, 'Opposite City Hall, steps from Wall Street internships', 1906, 13000, 'https://www.pace.edu',
+    [['business', 0, 'b', 2], ['law', 1, 'b', 2], ['it', 6, 'b', 2]]],
+  ['us-umb', 'University of Massachusetts Boston', 'UMass Boston', 'US', 'Boston', 'university', false, 'Harbour-side public research university', 1964, 16000, 'https://www.umb.edu',
+    [['business', 3, 'b', 2], ['health', 0, 'b', 2], ['science', 3, 'b', 2]]],
+  ['ca-seneca', 'Seneca Polytechnic', 'Seneca', 'CA', 'Toronto', 'college', true, "Canada's largest college — big on co-op work terms", 1967, 45000, 'https://www.senecapolytechnic.ca',
+    [['business', 0, 'd', 0], ['it', 0, 'd', 0], ['media', 0, 'd', 0]]],
+  ['ca-langara', 'Langara College', 'Langara', 'CA', 'Vancouver', 'college', false, 'The famous university-transfer college of Vancouver', 1965, 21000, 'https://langara.ca',
+    [['business', 0, 'd', 0], ['it', 0, 'd', 0], ['hospitality', 0, 'd', 0]]],
+  ['cn-ecnu', 'East China Normal University', 'ECNU', 'CN', 'Shanghai', 'university', false, "China's leading teacher-training university in Shanghai", 1951, 35000, 'https://www.ecnu.edu.cn',
+    [['education', 0, 'b', 3], ['education', 4, 'b', 3], ['science', 6, 'b', 3]]],
+  ['cn-scut', 'South China University of Technology', 'SCUT', 'CN', 'Guangzhou', 'university', false, 'Engineering and architecture flagship of the south', 1952, 46000, 'https://www.scut.edu.cn',
+    [['engineering', 0, 'b', 3], ['architecture', 0, 'b', 3], ['it', 1, 'b', 3]]],
 ];
 
 // Branch-campus links (both directions get a "same family" cross-reference).
@@ -502,6 +551,18 @@ const INST_META = {
   'ca-vcc': ['Vancouver Community College', null], 'cn-sjtu': ['Shanghai Jiao Tong University', 45],
   'cn-tongji': ['Tongji University', 192], 'cn-bnu': ['Beijing Normal University', 271],
   'cn-jnu': ['Jinan University', 606],
+  'au-deakin': ['Deakin University', 197], 'au-macquarie': ['Macquarie University', 133],
+  'au-griffith': ['Griffith University', 239], 'au-holmesglen': ['Holmesglen Institute', null],
+  'my-apu': ['Asia Pacific University of Technology & Innovation', 621], 'my-help': ['HELP University', null],
+  'my-inti': ['INTI International University', null], 'tw-nccu': ['National Chengchi University', 587],
+  'tw-tku': ['Tamkang University', null], 'gb-lse': ['London School of Economics', 50],
+  'gb-kingston': ['Kingston University', null], 'sg-sit': ['Singapore Institute of Technology', null],
+  'sg-np': ['Ngee Ann Polytechnic', null], 'nz-massey': ['Massey University', 239],
+  'nz-lincoln': ['Lincoln University (New Zealand)', 362], 'ru-spbu': ['Saint Petersburg State University', 365],
+  'ru-mipt': ['Moscow Institute of Physics and Technology', 302], 'us-depaul': ['DePaul University', null],
+  'us-pace': ['Pace University', null], 'us-umb': ['University of Massachusetts Boston', null],
+  'ca-seneca': ['Seneca Polytechnic', null], 'ca-langara': ['Langara College', null],
+  'cn-ecnu': ['East China Normal University', 501], 'cn-scut': ['South China University of Technology', 437],
 };
 
 // Verified real campus photos (Wikimedia Commons filenames) resolved from each
@@ -578,6 +639,27 @@ const INST_PHOTO = {
   'cn-bnu': 'BNU Gate.jpg',
   'cn-jnu': 'Jnu gate.jpg',
   'cn-sjtu': 'Shanghai Jiao Tong University 1.jpg',
+  'au-deakin': 'Deakin University Burwood Campus.jpg',
+  'au-macquarie': 'Macquarie University New Library 2011.jpg',
+  'au-griffith': 'Griffith University.jpg',
+  'my-apu': 'UCTI Interior.jpg',
+  'my-inti': 'INTI Nilai Student Centre.png',
+  'tw-nccu': 'NCCU Shiwei Hall 20220815.jpg',
+  'tw-tku': 'Lanyang Campus, Tamkang University 20060322.jpg',
+  'gb-lse': 'LondonSchoolofEconomics cford.jpg',
+  'gb-kingston': 'Knights Park Campus.jpg',
+  'sg-np': 'NPcampus.JPG',
+  'nz-massey': 'Masseyalbany2005.JPG',
+  'nz-lincoln': 'Ivey Hall, Lincoln University, New Zealand.jpg',
+  'ru-spbu': 'Spb 06-2012 University Embankment 06.jpg',
+  'ru-mipt': 'Mipt phystech.jpg',
+  'us-depaul': 'StudentCenterDePaul.jpg',
+  'us-pace': 'PaceUniversity.JPG',
+  'us-umb': 'UMass Boston campus.jpg',
+  'ca-seneca': 'Seneca CITE Building K - front exterior view.jpg',
+  'ca-langara': 'LangaraCollege2007-small.jpg',
+  'cn-ecnu': '华东师范大学思群堂.jpg',
+  'cn-scut': 'South China University of Technology South Gate.jpg',
 };
 const commonsPhoto = (name) =>
   `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(name.replace(/ /g, '_'))}?width=1000`;
@@ -624,6 +706,12 @@ const LOGO_URL = {
   'ca-vcc': 'https://upload.wikimedia.org/wikipedia/commons/1/1a/Vancouver_Community_College_logo.png',
   'nz-aut': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Logo_of_Auckland_University_of_Technology.svg/330px-Logo_of_Auckland_University_of_Technology.svg.png',
   'gb-imperial': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Imperial_College_London_new_logo.png/330px-Imperial_College_London_new_logo.png',
+  'au-deakin': 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Deakin_Worldly_Strip_Logo.jpg',
+  'au-macquarie': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Macquarie_University_International_brandmark_%E2%80%93_Horizontal_configuration.svg/330px-Macquarie_University_International_brandmark_%E2%80%93_Horizontal_configuration.svg.png',
+  'gb-lse': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/London_school_of_economics_logo_with_name.svg/330px-London_school_of_economics_logo_with_name.svg.png',
+  'gb-kingston': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Kingston_University_logo.svg/330px-Kingston_University_logo.svg.png',
+  'nz-lincoln': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/LU_logo.jpg/330px-LU_logo.jpg',
+  'us-pace': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Pace_University_Logo.svg/330px-Pace_University_Logo.svg.png',
 };
 const logoFor = (id, website) => {
   if (LOGO_URL[id]) return LOGO_URL[id];
@@ -1145,6 +1233,58 @@ const studentLife = {
   ),
 };
 
+// ------------------------------------------------------- support & rewards
+// Human support team (clearly-mock contact details on the .example domain),
+// the unified university-mail inbox for the seeded applications, shorts, and
+// the rewards catalog. Labels that are UI concepts live in i18n; mail bodies
+// are "from universities" and stay in English like other institution data.
+const supportTeam = [
+  { id: 'staff-1', name: 'Melati Zainal', role: 'coach', avatar: 'https://i.pravatar.cc/300?img=36', phone: '+60 3-0000 0001', email: 'melati@unibridge.example' },
+  { id: 'staff-2', name: 'Ryan Goh', role: 'support', avatar: 'https://i.pravatar.cc/300?img=53', phone: '+60 3-0000 0002', email: 'ryan@unibridge.example' },
+  { id: 'staff-3', name: 'Priya Nair', role: 'visa', avatar: 'https://i.pravatar.cc/300?img=45', phone: '+60 3-0000 0003', email: 'priya@unibridge.example' },
+  { id: 'staff-4', name: 'Daniel Craig Lim', role: 'coach', avatar: 'https://i.pravatar.cc/300?img=12', phone: '+60 3-0000 0004', email: 'daniel@unibridge.example' },
+];
+
+const mails = [
+  ['mail-1', 'au-monash', 'app-demo-1', 'offer', 'Your offer letter — Bachelor of Business Administration', 'Congratulations! Attached is your Letter of Offer for the February 2027 intake. Reply to accept within 28 days.', '2026-07-28', false],
+  ['mail-2', 'au-monash', 'app-demo-1', 'document_request', 'Certified English translation needed', 'Please upload a certified translation of your UEC transcript to complete your file.', '2026-07-30', false],
+  ['mail-3', 'gb-manchester', 'app-demo-2', 'conditional', 'Conditional offer — condition details inside', 'Your offer is conditional on IELTS 6.5 (no band below 6.0). Book your test and send results by 30 Nov.', '2026-07-15', false],
+  ['mail-4', 'sg-nus', 'app-demo-3', 'interview', 'Interview invitation — Business (Finance)', 'You are invited to a 20-minute online interview. Choose a slot from the booking link within 7 days.', '2026-07-21', false],
+  ['mail-5', 'au-monash', 'app-demo-1', 'event', 'Offer-holder webinar: housing & enrolment', 'Join our offer-holder session on 15 Aug for enrolment steps, housing ballot dates and unit selection.', '2026-08-01', true],
+  ['mail-6', 'gb-manchester', 'app-demo-2', 'newsletter', 'International scholars newsletter — August', 'Scholarship deadlines, pre-CAS checks and a campus tour recording for offer holders.', '2026-08-02', true],
+].map(([id, institutionId, applicationId, kind, subject, snippet, date, read]) => ({
+  id, institutionId, applicationId, kind, subject, snippet, date, read,
+}));
+
+const shorts = [
+  ['Day in my life at Monash', 'amb-01', 46, 12800],
+  ['NUS hostel room tour', 'amb-10', 58, 22400],
+  ['What RM30 buys in Taipei night markets', 'amb-03', 41, 9800],
+  ['Manchester rain survival kit', 'amb-07', 38, 7600],
+  ['My UNSW civil-eng lab day', 'amb-02', 52, 5400],
+  ['Cooking dorm dinner for RM8', 'amb-05', 44, 15200],
+  ['Auckland weekend hike with intake mates', 'amb-13', 49, 4300],
+  ['St Petersburg white nights walk', 'amb-16', 55, 6100],
+  ['Visa interview: what they asked me', 'amb-04', 60, 31900],
+  ['First week tips I wish I knew', 'amb-08', 47, 18700],
+].map(([title, ambassadorId, duration, views], i) => ({
+  id: `short-${String(i + 1).padStart(2, '0')}`,
+  title, ambassadorId, duration, views,
+  thumb: `https://picsum.photos/seed/short-${i}/420/640`,
+}));
+
+// Coin rules and redemption catalog — ids map to i18n labels.
+const coinRules = [
+  { id: 'profile', coins: 20 }, { id: 'grades', coins: 30 }, { id: 'english', coins: 25 },
+  { id: 'document', coins: 10 }, { id: 'application', coins: 60 }, { id: 'referral', coins: 80 },
+  { id: 'daily', coins: 5 },
+];
+const redemptions = [
+  { id: 'vip-discount', coins: 400 }, { id: 'fee-waiver', coins: 300 },
+  { id: 'doc-review', coins: 200 }, { id: 'event-ticket', coins: 150 }, { id: 'sim-topup', coins: 250 },
+];
+const support = { team: supportTeam, mails, shorts, coinRules, redemptions };
+
 // -------------------------------------------------------------------- vault
 const documents = [
   { id: 'transcript', hasExpiry: false }, { id: 'certificate', hasExpiry: false },
@@ -1227,6 +1367,7 @@ const files = {
   'seed.json': seed_,
   'flights.json': flights,
   'studentLife.json': studentLife,
+  'support.json': support,
 };
 for (const [file, data] of Object.entries(files)) {
   writeFileSync(join(OUT, file), JSON.stringify(data, null, 2) + '\n');

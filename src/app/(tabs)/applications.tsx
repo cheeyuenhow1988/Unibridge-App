@@ -11,9 +11,12 @@ import { SkeletonCards } from '@/components/ui/Skeleton';
 import { EmptyState, ErrorState } from '@/components/ui/States';
 import { Text } from '@/components/ui/Text';
 import { radius, spacing } from '@/constants/theme';
+import { useAsync } from '@/hooks/useAsync';
 import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
+import { getSupportBundle } from '@/services/api';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
+import { useMailStore } from '@/store/useMailStore';
 import { useSavedStore } from '@/store/useSavedStore';
 import { APPLICATION_TIMELINE, type ApplicationStatus } from '@/types/models';
 
@@ -34,6 +37,8 @@ export default function ApplicationsScreen() {
   const notifications = useApplicationsStore((s) => s.notifications);
   const dismissNotification = useApplicationsStore((s) => s.dismissNotification);
   const savedScholarshipIds = useSavedStore((s) => s.savedScholarshipIds);
+  const support = useAsync(() => getSupportBundle(), []);
+  const mailReadIds = useMailStore((s) => s.readIds);
 
   if (loading) {
     return (
@@ -52,6 +57,7 @@ export default function ApplicationsScreen() {
 
   const offers = applications.filter((a) => a.status === 'offer' || a.status === 'conditional_offer');
   const unread = notifications.filter((n) => !n.read).slice(0, 2);
+  const mailUnread = (support.data?.mails ?? []).filter((m) => !m.read && !mailReadIds.includes(m.id)).length;
 
   const courseName = (courseId: string) => matchData.resultByCourseId.get(courseId)?.course.name ?? courseId;
   const instName = (courseId: string) => matchData.resultByCourseId.get(courseId)?.institution.name ?? '';
@@ -66,6 +72,30 @@ export default function ApplicationsScreen() {
         ListHeaderComponent={
           <View style={{ gap: spacing.lg, paddingTop: spacing.xl, paddingBottom: spacing.lg }}>
             <Text variant="display">{t('applications.title')}</Text>
+
+            <Card onPress={() => router.push('/mail')} style={{ gap: 4 }}>
+              <Row style={{ justifyContent: 'space-between' }}>
+                <Row gap={spacing.sm} style={{ flex: 1 }}>
+                  <Ionicons name="mail-unread-outline" size={20} color={colors.accent} />
+                  <View style={{ flex: 1 }}>
+                    <Text variant="label">{t('mail.title')}</Text>
+                    <Text variant="caption" tone="faint">{t('mail.entrySub')}</Text>
+                  </View>
+                </Row>
+                {mailUnread > 0 ? (
+                  <View
+                    style={{
+                      minWidth: 22, height: 22, borderRadius: 11, backgroundColor: colors.danger,
+                      alignItems: 'center', justifyContent: 'center', paddingHorizontal: 6,
+                    }}
+                  >
+                    <Text variant="caption" color={colors.onAccent}>{mailUnread}</Text>
+                  </View>
+                ) : (
+                  <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />
+                )}
+              </Row>
+            </Card>
 
             {unread.map((n) => (
               <Card key={n.id} tone="accent" style={{ gap: 4 }}>

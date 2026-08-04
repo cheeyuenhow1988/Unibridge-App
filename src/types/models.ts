@@ -117,6 +117,57 @@ export interface FxTable {
   rates: Record<CurrencyCode, number>;
 }
 
+export type StaffRole = 'coach' | 'support' | 'visa';
+
+export interface SupportStaff {
+  id: string;
+  name: string;
+  role: StaffRole;
+  avatar: string;
+  phone: string;
+  email: string;
+}
+
+export type MailKind = 'offer' | 'document_request' | 'conditional' | 'interview' | 'event' | 'newsletter';
+
+export interface UniversityMail {
+  id: string;
+  institutionId: string;
+  applicationId: string;
+  kind: MailKind;
+  subject: string;
+  snippet: string;
+  date: string;
+  read: boolean;
+}
+
+export interface Short {
+  id: string;
+  title: string;
+  ambassadorId: string;
+  duration: number;
+  views: number;
+  thumb: string;
+}
+
+export interface CoinRule {
+  id: string;
+  coins: number;
+}
+
+export interface RedemptionItem {
+  id: string;
+  coins: number;
+}
+
+export interface SupportBundle {
+  team: SupportStaff[];
+  mails: UniversityMail[];
+  shorts: Short[];
+  coinRules: CoinRule[];
+  redemptions: RedemptionItem[];
+}
+
 export interface LifeSharedBy {
   id: string;
   name: string;
