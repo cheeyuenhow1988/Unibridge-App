@@ -6,6 +6,7 @@ import { FlatList, Pressable, View } from 'react-native';
 import { DEFAULT_FILTERS, FiltersModal, type MatchFilters } from '@/components/match/FiltersModal';
 import { MatchHero } from '@/components/match/MatchHero';
 import { ResultCard } from '@/components/match/ResultCard';
+import { UpgradeSheet } from '@/components/plan/UpgradeSheet';
 import { Button } from '@/components/ui/Button';
 import { Row } from '@/components/ui/Misc';
 import { Screen } from '@/components/ui/Screen';
@@ -35,6 +36,7 @@ export default function MatchScreen() {
   const [bucket, setBucket] = useState<MatchStatus>('eligible');
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [filters, setFilters] = useState<MatchFilters>(DEFAULT_FILTERS);
+  const [upgradeOpen, setUpgradeOpen] = useState(false);
   const listRef = useRef<FlatList>(null);
   const scrollTop = () => listRef.current?.scrollToOffset({ offset: 0, animated: false });
 
@@ -246,7 +248,12 @@ export default function MatchScreen() {
           </View>
         }
         renderItem={({ item }) => (
-          <ResultCard result={item} homeCurrency={homeCurrency} homeCountryLabel={homeCountryLabel} />
+          <ResultCard
+            result={item}
+            homeCurrency={homeCurrency}
+            homeCountryLabel={homeCountryLabel}
+            onCompareBlocked={() => setUpgradeOpen(true)}
+          />
         )}
         ListEmptyComponent={
           <EmptyState
@@ -319,6 +326,7 @@ export default function MatchScreen() {
         countryCounts={countryCounts}
         cheapestNoBudget={cheapestNoBudget}
       />
+      <UpgradeSheet visible={upgradeOpen} context="compare" onClose={() => setUpgradeOpen(false)} />
     </Screen>
   );
 }

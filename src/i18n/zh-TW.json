@@ -359,7 +359,10 @@
     "submittedTitle": "申請已提交！",
     "submittedBody": "在「申請」標籤頁跟蹤進度，每一步我們都會通知你。",
     "viewApplication": "檢視申請",
-    "missingWarning": "缺少材料也可以提交，院校稍後會補充索取。"
+    "missingWarning": "缺少材料也可以提交，院校稍後會補充索取。",
+    "reviewedStep": "提交前由UniBridge審核",
+    "sopRequest": "申請文書/個人陳述回饋",
+    "sopSent": "已提交——48小時內回饋（展示）"
   },
   "applications": {
     "title": "申請",
@@ -414,7 +417,8 @@
       "sim": "電話卡",
       "banking": "銀行",
       "other": "必備"
-    }
+    },
+    "checklistGeneric": "通用清單"
   },
   "community": {
     "title": "社群",
@@ -709,7 +713,6 @@
     "rule_application": "提交一份申請",
     "rule_referral": "推薦朋友",
     "rule_daily": "每日簽到",
-    "item_vip-discount": "VIP通票立減RM200",
     "item_fee-waiver": "申請費減免（認證合作院校）",
     "item_doc-review": "團隊免費審核資料",
     "item_event-ticket": "教育展門票",
@@ -718,11 +721,55 @@
     "checkedIn": "已簽到——明天再來！",
     "checkInOk": "+5金幣——連擊繼續！",
     "streakDays": "連續 {{count}} 天",
-    "streakNote": "每天簽到累積連擊，獎勵計入金幣紀錄。"
+    "streakNote": "每天簽到累積連擊，獎勵計入金幣紀錄。",
+    "badgesHero": "記錄旅程的每個階段",
+    "badgesEarnedShort": "已獲得 {{count}} 枚徽章",
+    "badgesTap": "點按徽章了解更多",
+    "streakHero": "每天簽到，火焰不滅",
+    "rule_pass_bonus": "季票獎勵",
+    "item_pass-discount": "季票立減US$10"
   },
   "shorts": {
     "title": "短影音",
     "views": "次觀看",
     "mockNote": "正式版可播放——原型預覽"
+  },
+  "pass": {
+    "title": "季票",
+    "headline": "申請更多學校，獲得更多支援。",
+    "sub": "一次購買，涵蓋整個申請季——永不訂閱。",
+    "colFree": "免費",
+    "colPass": "季票",
+    "oneTime": "一次性 · 無訂閱",
+    "cta": "解鎖季票",
+    "purchased": "季票已解鎖！獎勵金幣已入帳 🎉",
+    "owned": "季票已啟用 ✓",
+    "learnMore": "查看全部權益",
+    "mockNote": "原型展示——不會真實扣款。",
+    "chip": "季票",
+    "planTitle": "你的方案",
+    "priority": "優先",
+    "lockedTeam": "解鎖你的專屬規劃導師與支援團隊（季票權益）。",
+    "lockedMail": "更早的郵件隨季票解鎖。",
+    "lockedPredep": "這是通用清單——{{country}}專屬清單隨季票提供。",
+    "lockedTimeline": "完整時間線（季票）",
+    "conciergeTitle": "管家服務",
+    "conciergeBody": "在季票之上的全程真人代辦服務。",
+    "row_match": "不限次配對，全部結果",
+    "row_compare": "並排比較至多4所（免費：2）",
+    "row_apps": "同時申請不限量（免費：1）",
+    "row_timeline": "完整細分狀態時間線",
+    "row_review": "「UniBridge已審核」+文書回饋",
+    "row_team": "專屬導師與支援團隊",
+    "row_mail": "完整大學郵件收件匣",
+    "row_predep": "依國家客製的行前清單",
+    "row_community": "社群、短影音與獎勵",
+    "ctx_apply": "你正在申請第2所學校——用季票解鎖不限量申請。",
+    "ctx_compare": "免費版可比較2所——季票解鎖至多4所。",
+    "ctx_team": "認識你的專屬導師與團隊——季票功能。",
+    "ctx_mail": "完整大學收件匣隨季票解鎖。",
+    "ctx_timeline": "用季票查看每個細分狀態。",
+    "ctx_predep": "用季票取得專屬目的地清單。",
+    "ctx_generic": "此功能屬於季票權益。"
   }
 }

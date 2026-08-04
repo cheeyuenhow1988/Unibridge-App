@@ -17,6 +17,7 @@ import { useTheme } from '@/hooks/useTheme';
 import { getSupportBundle } from '@/services/api';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
 import { useMailStore } from '@/store/useMailStore';
+import { usePlan } from '@/store/usePlanStore';
 import { useSavedStore } from '@/store/useSavedStore';
 import { APPLICATION_TIMELINE, type ApplicationStatus } from '@/types/models';
 
@@ -39,6 +40,7 @@ export default function ApplicationsScreen() {
   const savedScholarshipIds = useSavedStore((s) => s.savedScholarshipIds);
   const support = useAsync(() => getSupportBundle(), []);
   const mailReadIds = useMailStore((s) => s.readIds);
+  const plan = usePlan();
 
   if (loading) {
     return (
@@ -149,7 +151,10 @@ export default function ApplicationsScreen() {
                 <Text variant="caption" tone="secondary" style={{ flex: 1 }} numberOfLines={1}>
                   {instName(item.courseId)}
                 </Text>
-                <Badge tone={STATUS_TONE[item.status]} label={t(`status.${item.status}`)} />
+                <Row gap={6}>
+                  {plan === 'season_pass' ? <Badge tone="accent" icon="flash" label={t('pass.priority')} /> : null}
+                  <Badge tone={STATUS_TONE[item.status]} label={t(`status.${item.status}`)} />
+                </Row>
               </Row>
               <Text variant="sub" numberOfLines={2}>{courseName(item.courseId)}</Text>
               <Row gap={5}>

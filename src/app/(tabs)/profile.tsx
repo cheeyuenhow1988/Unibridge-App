@@ -24,6 +24,7 @@ import { useApplicationsStore } from '@/store/useApplicationsStore';
 import { useAuthStore } from '@/store/useAuthStore';
 import { useCommunityStore } from '@/store/useCommunityStore';
 import { useMailStore } from '@/store/useMailStore';
+import { usePlanStore } from '@/store/usePlanStore';
 import { useProfileStore } from '@/store/useProfileStore';
 import { useRewardsStore } from '@/store/useRewardsStore';
 import { useSavedStore } from '@/store/useSavedStore';
@@ -46,6 +47,8 @@ export default function ProfileScreen() {
   const savedCourseIds = useSavedStore((s) => s.savedCourseIds);
   const { matchData } = useMatchData();
   const coins = useRewardsStore((s) => s.coins);
+  const plan = usePlanStore((s) => s.plan);
+  const setPlanTo = usePlanStore((s) => s.setPlan);
   const applications = useApplicationsStore((s) => s.applications);
   const vaultDocs = useVaultStore((s) => s.documents);
   const earnedCount =
@@ -85,6 +88,7 @@ export default function ProfileScreen() {
           useCommunityStore.setState({ joinedGroupIds: [], localMessages: {}, connections: [], rsvps: [], likedPostIds: [] });
           useRewardsStore.getState().reset();
           useMailStore.getState().reset();
+          usePlanStore.getState().reset();
           router.replace('/onboarding/welcome');
         },
       },
@@ -199,6 +203,26 @@ export default function ProfileScreen() {
                 <View>
                   <Text variant="label">{t('rewards.title')}</Text>
                   <Text variant="caption" tone="faint">🪙 {coins} · {t('rewards.badgesShort', { count: earnedCount })}</Text>
+                </View>
+              </Row>
+              <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />
+            </Row>
+          </Card>
+
+          <SectionHeader title={t('pass.planTitle')} />
+          <Row gap={spacing.sm}>
+            <Chip label={t('pass.colFree')} selected={plan === 'free'} onPress={() => setPlanTo('free')} />
+            <Chip label={t('pass.title')} selected={plan === 'season_pass'} onPress={() => setPlanTo('season_pass')} />
+          </Row>
+          <Card onPress={() => router.push('/pass')} style={{ gap: 4 }}>
+            <Row style={{ justifyContent: 'space-between' }}>
+              <Row gap={spacing.sm}>
+                <Ionicons name="key" size={20} color={colors.accent} />
+                <View>
+                  <Text variant="label">{t('pass.title')}</Text>
+                  <Text variant="caption" tone="faint">
+                    {plan === 'season_pass' ? t('pass.owned') : t('pass.headline')}
+                  </Text>
                 </View>
               </Row>
               <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />

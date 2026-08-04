@@ -1280,10 +1280,23 @@ const coinRules = [
   { id: 'daily', coins: 5 },
 ];
 const redemptions = [
-  { id: 'vip-discount', coins: 400 }, { id: 'fee-waiver', coins: 300 },
+  { id: 'pass-discount', coins: 400 }, { id: 'fee-waiver', coins: 300 },
   { id: 'doc-review', coins: 200 }, { id: 'event-ticket', coins: 150 }, { id: 'sim-topup', coins: 250 },
 ];
-const support = { team: supportTeam, mails, shorts, coinRules, redemptions };
+// Universal (free-tier) pre-departure checklist — country-personalized
+// versions are a Season Pass perk.
+const genericChecklist = [
+  ['Passport valid 6+ months beyond arrival', 'visa'],
+  ['Apply for your student visa early', 'visa'],
+  ['Book accommodation for your first weeks', 'housing'],
+  ['Arrange health and travel insurance', 'insurance'],
+  ['Prepare certified copies of transcripts', 'other'],
+  ['Plan your first-month budget in local currency', 'money'],
+  ['Order a SIM or eSIM that works on arrival', 'sim'],
+  ['Save emergency contacts somewhere offline', 'other'],
+].map(([label, category], i) => ({ id: `gen-${i + 1}`, label, category }));
+
+const support = { team: supportTeam, mails, shorts, coinRules, redemptions, genericChecklist };
 
 // -------------------------------------------------------------------- vault
 const documents = [

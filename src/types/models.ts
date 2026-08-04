@@ -166,6 +166,8 @@ export interface SupportBundle {
   shorts: Short[];
   coinRules: CoinRule[];
   redemptions: RedemptionItem[];
+  /** Universal free-tier pre-departure list; country lists are pass-only. */
+  genericChecklist: PredepartureItem[];
 }
 
 export interface LifeSharedBy {

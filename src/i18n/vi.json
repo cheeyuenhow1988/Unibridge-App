@@ -359,7 +359,10 @@
     "submittedTitle": "Đã nộp hồ sơ!",
     "submittedBody": "Theo dõi tiến trình ở tab Hồ sơ. Chúng tôi sẽ báo bạn từng bước.",
     "viewApplication": "Xem hồ sơ",
-    "missingWarning": "Bạn có thể nộp khi còn thiếu giấy tờ, trường sẽ yêu cầu bổ sung sau."
+    "missingWarning": "Bạn có thể nộp khi còn thiếu giấy tờ, trường sẽ yêu cầu bổ sung sau.",
+    "reviewedStep": "UniBridge rà soát trước khi nộp",
+    "sopRequest": "Yêu cầu góp ý SOP / bài luận",
+    "sopSent": "Đã gửi yêu cầu — phản hồi trong 48 giờ (demo)"
   },
   "applications": {
     "title": "Hồ sơ",
@@ -414,7 +417,8 @@
       "sim": "SIM & data",
       "banking": "Ngân hàng",
       "other": "Thiết yếu"
-    }
+    },
+    "checklistGeneric": "Danh sách chung"
   },
   "community": {
     "title": "Cộng đồng",
@@ -709,7 +713,6 @@
     "rule_application": "Nộp một bộ hồ sơ",
     "rule_referral": "Giới thiệu bạn bè",
     "rule_daily": "Điểm danh mỗi ngày",
-    "item_vip-discount": "Giảm RM200 cho vé VIP",
     "item_fee-waiver": "Miễn phí nộp hồ sơ (Đối tác xác thực)",
     "item_doc-review": "Đội ngũ rà soát hồ sơ miễn phí",
     "item_event-ticket": "Vé triển lãm du học",
@@ -718,11 +721,55 @@
     "checkedIn": "Đã điểm danh — mai quay lại nhé!",
     "checkInOk": "+5 xu — giữ chuỗi nào!",
     "streakDays": "Chuỗi {{count}} ngày",
-    "streakNote": "Điểm danh mỗi ngày để nuôi chuỗi. Thưởng cộng vào lịch sử xu."
+    "streakNote": "Điểm danh mỗi ngày để nuôi chuỗi. Thưởng cộng vào lịch sử xu.",
+    "badgesHero": "Cho từng chặng hành trình của bạn",
+    "badgesEarnedShort": "Bạn đã đạt {{count}} huy hiệu",
+    "badgesTap": "Chạm huy hiệu để xem thêm",
+    "streakHero": "Điểm danh mỗi ngày, giữ lửa cháy",
+    "rule_pass_bonus": "Thưởng Season Pass",
+    "item_pass-discount": "Giảm US$10 cho Season Pass"
   },
   "shorts": {
     "title": "Shorts",
     "views": "lượt xem",
     "mockNote": "Video phát khi ra mắt — bản xem trước nguyên mẫu"
+  },
+  "pass": {
+    "title": "Season Pass",
+    "headline": "Nộp nhiều trường hơn. Được hỗ trợ nhiều hơn.",
+    "sub": "Mua một lần cho cả mùa nộp hồ sơ — không bao giờ có thuê bao.",
+    "colFree": "Miễn phí",
+    "colPass": "Pass",
+    "oneTime": "Một lần · Không thuê bao",
+    "cta": "Mở khóa Season Pass",
+    "purchased": "Đã mở Season Pass! Cộng xu thưởng 🎉",
+    "owned": "Season Pass đang hoạt động ✓",
+    "learnMore": "Xem mọi thứ bao gồm",
+    "mockNote": "Bản nguyên mẫu — không thu tiền thật.",
+    "chip": "Season Pass",
+    "planTitle": "Gói của bạn",
+    "priority": "Ưu tiên",
+    "lockedTeam": "Mở khóa cố vấn và đội hỗ trợ có tên của bạn với Season Pass.",
+    "lockedMail": "Thư cũ mở khóa với Season Pass.",
+    "lockedPredep": "Đây là danh sách chung — danh sách riêng cho {{country}} có với Season Pass.",
+    "lockedTimeline": "Dòng thời gian đầy đủ với Season Pass",
+    "conciergeTitle": "Concierge",
+    "conciergeBody": "Dịch vụ làm hồ sơ trọn gói do con người phụ trách, trên nền Season Pass.",
+    "row_match": "So khớp không giới hạn, mọi kết quả",
+    "row_compare": "So sánh tối đa 4 (Miễn phí: 2)",
+    "row_apps": "Nộp đồng thời không giới hạn (Miễn phí: 1)",
+    "row_timeline": "Dòng thời gian đầy đủ",
+    "row_review": "\"UniBridge đã rà soát\" + góp ý SOP",
+    "row_team": "Cố vấn & đội hỗ trợ có tên",
+    "row_mail": "Hộp thư trường đầy đủ",
+    "row_predep": "Trước khi bay theo từng nước",
+    "row_community": "Cộng đồng, Shorts & Phần thưởng",
+    "ctx_apply": "Bạn đang nộp trường thứ 2 — mở nộp không giới hạn với Season Pass.",
+    "ctx_compare": "Miễn phí so sánh 2 — mở tối đa 4 với Season Pass.",
+    "ctx_team": "Gặp cố vấn và đội có tên — tính năng Season Pass.",
+    "ctx_mail": "Hộp thư trường đầy đủ mở với Season Pass.",
+    "ctx_timeline": "Xem mọi trạng thái chi tiết với Season Pass.",
+    "ctx_predep": "Nhận danh sách đúng điểm đến của bạn với Season Pass.",
+    "ctx_generic": "Tính năng này thuộc Season Pass."
   }
 }

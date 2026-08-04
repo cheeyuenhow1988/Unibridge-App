@@ -18,9 +18,12 @@ import { useTheme } from '@/hooks/useTheme';
 import { getCourse, getInstitution, listScholarships } from '@/services/api';
 import { hapticSuccess } from '@/services/haptics';
 import { formatMoney } from '@/services/currency';
+import { LockChip, UpgradeSheet } from '@/components/plan/UpgradeSheet';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
+import { FREE_ACTIVE_APPLICATIONS, usePlan } from '@/store/usePlanStore';
 import { useSavedStore } from '@/store/useSavedStore';
 import { useVaultStore } from '@/store/useVaultStore';
+import { toast } from '@/store/useToastStore';
 
 type Step = 'checklist' | 'review' | 'done';
 
@@ -36,6 +39,9 @@ export default function ApplyFlow() {
   const [intake, setIntake] = useState<string | undefined>();
   const [scholarshipId, setScholarshipId] = useState<string>('none');
   const [appId, setAppId] = useState<string | null>(null);
+  const [upgradeOpen, setUpgradeOpen] = useState(false);
+  const plan = usePlan();
+  const activeApplications = useApplicationsStore((s) => s.applications.length);
 
   const state = useAsync(async () => {
     const course = await getCourse(courseId);
@@ -72,11 +78,17 @@ export default function ApplyFlow() {
   }
 
   const { course, institution, scholarships } = state.data;
-  const feeWaived = institution.verifiedPartner;
+  // Fee waivers at Verified Partners are a Season Pass perk.
+  const feeWaived = institution.verifiedPartner && plan === 'season_pass';
   const doneCount = checklist.filter((c) => c.done).length;
   const shortlisted = scholarships.filter((s) => savedScholarshipIds.includes(s.id));
 
   const submit = () => {
+    // Free tier runs one active application at a time — sheet, not a hard block.
+    if (plan === 'free' && activeApplications >= FREE_ACTIVE_APPLICATIONS) {
+      setUpgradeOpen(true);
+      return;
+    }
     const app = startApplication(
       course.id,
       feeWaived,
@@ -158,6 +170,44 @@ export default function ApplyFlow() {
                       </Row>
                     </View>
                   ))}
+                  <View style={{ paddingVertical: spacing.sm, gap: 4 }}>
+                    <Row gap={spacing.sm}>
+                      <Ionicons
+                        name={plan === 'season_pass' ? 'shield-checkmark' : 'lock-closed'}
+                        size={18}
+                        color={plan === 'season_pass' ? colors.eligible : colors.inkFaint}
+                      />
+                      <Text variant="body" tone={plan === 'season_pass' ? 'primary' : 'faint'} style={{ flex: 1 }}>
+                        {t('apply.reviewedStep')}
+                      </Text>
+                      {plan === 'season_pass' ? (
+                        <Badge tone="eligible" icon="checkmark" label={t('pass.colPass')} />
+                      ) : (
+                        <LockChip onPress={() => setUpgradeOpen(true)} />
+                      )}
+                    </Row>
+                    <Row gap={spacing.sm}>
+                      <Ionicons
+                        name={plan === 'season_pass' ? 'chatbox-ellipses-outline' : 'lock-closed'}
+                        size={18}
+                        color={plan === 'season_pass' ? colors.accent : colors.inkFaint}
+                      />
+                      {plan === 'season_pass' ? (
+                        <Pressable
+                          accessibilityRole="button"
+                          onPress={() => toast(t('apply.sopSent'))}
+                          style={{ flex: 1 }}
+                        >
+                          <Text variant="body" tone="accent">{t('apply.sopRequest')}</Text>
+                        </Pressable>
+                      ) : (
+                        <>
+                          <Text variant="body" tone="faint" style={{ flex: 1 }}>{t('apply.sopRequest')}</Text>
+                          <LockChip onPress={() => setUpgradeOpen(true)} />
+                        </>
+                      )}
+                    </Row>
+                  </View>
                 </Card>
                 <Button
                   label={t('apply.openVault')}
@@ -226,6 +276,7 @@ export default function ApplyFlow() {
           </>
         )}
       </ScrollView>
+      <UpgradeSheet visible={upgradeOpen} context="apply" onClose={() => setUpgradeOpen(false)} />
     </Screen>
   );
 }

@@ -362,7 +362,10 @@
     "submittedTitle": "Application submitted!",
     "submittedBody": "Track its progress in the Applications tab. We'll notify you at every step.",
     "viewApplication": "View application",
-    "missingWarning": "You can submit with missing documents, but the institution will request them later."
+    "missingWarning": "You can submit with missing documents, but the institution will request them later.",
+    "reviewedStep": "Reviewed by UniBridge before submission",
+    "sopRequest": "Request SOP / personal-statement feedback",
+    "sopSent": "Request sent — feedback within 48h (demo)"
   },
   "applications": {
     "title": "Applications",
@@ -418,7 +421,8 @@
       "sim": "SIM & data",
       "banking": "Banking",
       "other": "Essentials"
-    }
+    },
+    "checklistGeneric": "Universal checklist"
   },
   "community": {
     "title": "Community",
@@ -713,7 +717,6 @@
     "rule_application": "Submit an application",
     "rule_referral": "Refer a friend",
     "rule_daily": "Daily check-in",
-    "item_vip-discount": "RM200 off the VIP pass",
     "item_fee-waiver": "Application-fee waiver (Verified Partners)",
     "item_doc-review": "Free document review by our team",
     "item_event-ticket": "Education-expo event ticket",
@@ -722,11 +725,55 @@
     "checkedIn": "Checked in — come back tomorrow!",
     "checkInOk": "+5 coins — streak going!",
     "streakDays": "{{count}}-day streak",
-    "streakNote": "Check in daily to grow your streak. Bonuses land in your coin history."
+    "streakNote": "Check in daily to grow your streak. Bonuses land in your coin history.",
+    "badgesHero": "For every stage of your journey",
+    "badgesEarnedShort": "You have earned {{count}} badges",
+    "badgesTap": "Tap a badge to know more",
+    "streakHero": "Check in daily, keep the flame alive",
+    "rule_pass_bonus": "Season Pass bonus",
+    "item_pass-discount": "US$10 off the Season Pass"
   },
   "shorts": {
     "title": "Shorts",
     "views": "views",
     "mockNote": "Video plays at launch — prototype preview"
+  },
+  "pass": {
+    "title": "Season Pass",
+    "headline": "Apply to more schools. Get more support.",
+    "sub": "One-time purchase for your whole application cycle — no subscription, ever.",
+    "colFree": "Free",
+    "colPass": "Pass",
+    "oneTime": "One-time · No subscription",
+    "cta": "Unlock Season Pass",
+    "purchased": "Season Pass unlocked! Bonus coins added 🎉",
+    "owned": "Season Pass active ✓",
+    "learnMore": "See everything included",
+    "mockNote": "Prototype — no real payment is taken.",
+    "chip": "Season Pass",
+    "planTitle": "Your plan",
+    "priority": "Priority",
+    "lockedTeam": "Unlock your named coach and support team with Season Pass.",
+    "lockedMail": "Older mail unlocks with Season Pass.",
+    "lockedPredep": "This is the universal list — the {{country}}-specific checklist comes with Season Pass.",
+    "lockedTimeline": "Full timeline with Season Pass",
+    "conciergeTitle": "Concierge",
+    "conciergeBody": "White-glove, human-managed application service on top of Season Pass.",
+    "row_match": "Unlimited matching, all results",
+    "row_compare": "Compare up to 4 side by side (Free: 2)",
+    "row_apps": "Unlimited simultaneous applications (Free: 1)",
+    "row_timeline": "Full granular status timeline",
+    "row_review": "\"Reviewed by UniBridge\" + SOP feedback",
+    "row_team": "Named coach & support team",
+    "row_mail": "Full university-mail inbox",
+    "row_predep": "Country-personalized pre-departure",
+    "row_community": "Community, Shorts & Rewards",
+    "ctx_apply": "You're trying to apply to a 2nd school — unlock unlimited applications with Season Pass.",
+    "ctx_compare": "You can compare 2 on Free — unlock up to 4 side by side with Season Pass.",
+    "ctx_team": "Meet your named coach and support team — a Season Pass feature.",
+    "ctx_mail": "Your full university inbox unlocks with Season Pass.",
+    "ctx_timeline": "See every sub-status, not just the big three, with Season Pass.",
+    "ctx_predep": "Get the checklist tailored to your exact destination with Season Pass.",
+    "ctx_generic": "This feature is part of Season Pass."
   }
 }

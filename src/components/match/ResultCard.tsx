@@ -11,6 +11,7 @@ import { radius, spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/useTheme';
 import { formatDual } from '@/services/currency';
 import { hapticTap } from '@/services/haptics';
+import { FREE_COMPARE_LIMIT, usePlan } from '@/store/usePlanStore';
 import { useSavedStore } from '@/store/useSavedStore';
 import { toast } from '@/store/useToastStore';
 import type { CurrencyCode, MatchResult } from '@/types/models';
@@ -20,15 +21,18 @@ interface Props {
   homeCurrency: CurrencyCode;
   homeCountryLabel: string;
   compareMode?: boolean;
+  /** Called when a free-tier user tries to compare beyond the cap. */
+  onCompareBlocked?: () => void;
 }
 
-export function ResultCard({ result, homeCurrency, homeCountryLabel, compareMode = true }: Props) {
+export function ResultCard({ result, homeCurrency, homeCountryLabel, compareMode = true, onCompareBlocked }: Props) {
   const { t } = useTranslation();
   const { colors } = useTheme();
   const savedIds = useSavedStore((s) => s.savedCourseIds);
   const toggleSaved = useSavedStore((s) => s.toggleSaved);
   const compareIds = useSavedStore((s) => s.compareIds);
   const toggleCompare = useSavedStore((s) => s.toggleCompare);
+  const plan = usePlan();
 
   const { course, institution, status } = result;
   const statusColor = { eligible: colors.eligible, borderline: colors.borderline, pathway: colors.pathway }[status];
@@ -98,7 +102,14 @@ export function ResultCard({ result, homeCurrency, homeCountryLabel, compareMode
                 accessibilityRole="checkbox"
                 accessibilityState={{ checked: comparing }}
                 hitSlop={10}
-                onPress={() => toggleCompare(course.id)}
+                onPress={() => {
+                  // Free tier compares 2 side by side; the sheet explains the cap.
+                  if (!comparing && plan === 'free' && compareIds.length >= FREE_COMPARE_LIMIT) {
+                    onCompareBlocked?.();
+                    return;
+                  }
+                  toggleCompare(course.id);
+                }}
               >
                 <Row gap={5}>
                   <Ionicons

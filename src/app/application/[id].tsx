@@ -20,8 +20,17 @@ import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
 import { getSupportBundle } from '@/services/api';
 import { hapticSuccess } from '@/services/haptics';
+import { LockChip, UpgradeSheet, type UpgradeContext } from '@/components/plan/UpgradeSheet';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
-import { APPLICATION_TIMELINE } from '@/types/models';
+import { usePlan } from '@/store/usePlanStore';
+import { APPLICATION_TIMELINE, type ApplicationStatus } from '@/types/models';
+
+// Free tier tracks the three big moments; the pass unlocks every sub-status.
+const BASIC_TIMELINE: ApplicationStatus[] = ['submitted', 'offer', 'accepted'];
+const BASIC_MAP: Record<ApplicationStatus, ApplicationStatus> = {
+  submitted: 'submitted', under_review: 'submitted', conditional_offer: 'offer',
+  offer: 'offer', accepted: 'accepted', coe_issued: 'accepted',
+};
 
 export default function ApplicationDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -33,6 +42,8 @@ export default function ApplicationDetail() {
   const acceptOffer = useApplicationsStore((s) => s.acceptOffer);
   const [depositOpen, setDepositOpen] = useState(false);
   const [fullTeam, setFullTeam] = useState(false);
+  const [upgrade, setUpgrade] = useState<UpgradeContext | null>(null);
+  const plan = usePlan();
   const support = useAsync(() => getSupportBundle(), []);
 
   if (loading) {
@@ -81,12 +92,20 @@ export default function ApplicationDetail() {
         </View>
 
         <Card style={{ gap: 0 }}>
-          <Text variant="label" style={{ marginBottom: spacing.md }}>{t('applications.timeline')}</Text>
-          {APPLICATION_TIMELINE.map((status, i) => {
+          <Row style={{ justifyContent: 'space-between', marginBottom: spacing.md }}>
+            <Text variant="label">{t('applications.timeline')}</Text>
+            {plan === 'season_pass' ? (
+              <Badge tone="accent" icon="flash" label={t('pass.priority')} />
+            ) : (
+              <LockChip onPress={() => setUpgrade('timeline')} />
+            )}
+          </Row>
+          {(plan === 'season_pass' ? APPLICATION_TIMELINE : BASIC_TIMELINE).map((status, i, timeline) => {
+            const shownIdx = timeline.indexOf(plan === 'season_pass' ? application.status : BASIC_MAP[application.status]);
             const entry = application.history.find((h) => h.status === status);
-            const done = i < currentIdx || !!entry;
-            const current = i === currentIdx;
-            const last = i === APPLICATION_TIMELINE.length - 1;
+            const done = i < shownIdx || (plan === 'season_pass' ? !!entry : i < shownIdx);
+            const current = i === shownIdx;
+            const last = i === timeline.length - 1;
             return (
               <Row key={status} gap={spacing.md} style={{ alignItems: 'stretch' }}>
                 <View style={{ alignItems: 'center', width: 24 }}>
@@ -135,12 +154,40 @@ export default function ApplicationDetail() {
           />
         ) : null}
 
-        {support.data ? (
+        {support.data && plan === 'free' ? (
+          <Card style={{ gap: spacing.sm }}>
+            <Row style={{ justifyContent: 'space-between' }}>
+              <Row gap={spacing.sm}>
+                <Ionicons name="people-circle-outline" size={20} color={colors.accent} />
+                <Text variant="label">{t('team.title')}</Text>
+              </Row>
+              <LockChip onPress={() => setUpgrade('team')} />
+            </Row>
+            <Pressable accessibilityRole="button" onPress={() => setUpgrade('team')}>
+              <View style={{ opacity: 0.35, gap: spacing.md }} pointerEvents="none">
+                {support.data.team.slice(0, 2).map((s) => (
+                  <Row key={s.id} gap={spacing.md}>
+                    <Image source={{ uri: s.avatar }} style={{ width: 40, height: 40, borderRadius: radius.full }} blurRadius={8} />
+                    <View style={{ flex: 1 }}>
+                      <Text variant="sub">██████ ████</Text>
+                      <Text variant="caption" tone="faint">{t(`team.role_${s.role}`)}</Text>
+                    </View>
+                    <Ionicons name="call-outline" size={18} color={colors.inkFaint} />
+                    <Ionicons name="mail-outline" size={18} color={colors.inkFaint} />
+                  </Row>
+                ))}
+              </View>
+            </Pressable>
+            <Text variant="caption" tone="accent">{t('pass.lockedTeam')}</Text>
+          </Card>
+        ) : null}
+
+        {support.data && plan === 'season_pass' ? (
           <Card style={{ gap: spacing.md }}>
             <Row style={{ justifyContent: 'space-between' }}>
               <Row gap={spacing.sm}>
                 <Ionicons name="people-circle-outline" size={20} color={colors.accent} />
-                <Text variant="label">{t('team.title', { count: support.data.team.length })}</Text>
+                <Text variant="label">{t('team.title')}</Text>
               </Row>
               <Pressable accessibilityRole="button" onPress={() => setFullTeam(!fullTeam)} hitSlop={8}>
                 <Text variant="caption" tone="accent">
@@ -198,6 +245,7 @@ export default function ApplicationDetail() {
         ) : null}
       </View>
 
+      <UpgradeSheet visible={upgrade !== null} context={upgrade ?? 'generic'} onClose={() => setUpgrade(null)} />
       <DepositModal
         visible={depositOpen}
         course={course}

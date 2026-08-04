@@ -13,8 +13,13 @@ import { spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
 import { getSupportBundle, listInstitutions } from '@/services/api';
+import { LockChip, UpgradeSheet } from '@/components/plan/UpgradeSheet';
 import { useMailStore } from '@/store/useMailStore';
+import { usePlan } from '@/store/usePlanStore';
 import type { MailKind } from '@/types/models';
+import { useState } from 'react';
+
+const FREE_MAIL_LIMIT = 3;
 
 const KIND_TONE: Record<MailKind, 'eligible' | 'borderline' | 'pathway' | 'accent' | 'neutral'> = {
   offer: 'eligible',
@@ -32,6 +37,8 @@ export default function MailScreen() {
   const state = useAsync(async () => Promise.all([getSupportBundle(), listInstitutions()]), []);
   const readIds = useMailStore((s) => s.readIds);
   const markRead = useMailStore((s) => s.markRead);
+  const plan = usePlan();
+  const [upgradeOpen, setUpgradeOpen] = useState(false);
 
   if (state.loading) {
     return (
@@ -65,8 +72,23 @@ export default function MailScreen() {
       </Row>
 
       <View style={{ gap: spacing.md, paddingBottom: spacing.xxxl }}>
-        {mails.map((m) => {
+        {mails.map((m, idx) => {
           const unread = !m.read && !readIds.includes(m.id);
+          const locked = plan === 'free' && idx >= FREE_MAIL_LIMIT;
+          if (locked) {
+            return (
+              <Card key={m.id} onPress={() => setUpgradeOpen(true)} style={{ gap: 6 }}>
+                <View style={{ opacity: 0.35 }} pointerEvents="none">
+                  <Row style={{ justifyContent: 'space-between' }}>
+                    <Text variant="caption" tone="secondary">{instName(m.institutionId)} · {m.date}</Text>
+                    <Badge tone={KIND_TONE[m.kind]} label={t(`mail.kind_${m.kind}`)} />
+                  </Row>
+                  <Text variant="sub">█████ ██████ ███████</Text>
+                </View>
+                <LockChip onPress={() => setUpgradeOpen(true)} />
+              </Card>
+            );
+          }
           return (
             <Card key={m.id} onPress={() => markRead(m.id)} style={{ gap: 6 }}>
               <Row style={{ justifyContent: 'space-between' }}>
@@ -83,8 +105,12 @@ export default function MailScreen() {
             </Card>
           );
         })}
+        {plan === 'free' && mails.length > FREE_MAIL_LIMIT ? (
+          <Text variant="caption" tone="accent" center>{t('pass.lockedMail')}</Text>
+        ) : null}
         <Text variant="caption" tone="faint" center>{t('mail.note')}</Text>
       </View>
+      <UpgradeSheet visible={upgradeOpen} context="mail" onClose={() => setUpgradeOpen(false)} />
     </Screen>
   );
 }

@@ -359,7 +359,10 @@
     "submittedTitle": "Permohonan dihantar!",
     "submittedBody": "Jejaki kemajuannya dalam tab Permohonan. Kami akan maklumkan anda pada setiap langkah.",
     "viewApplication": "Lihat permohonan",
-    "missingWarning": "Anda boleh hantar dengan dokumen yang tiada, tetapi institusi akan memintanya kemudian."
+    "missingWarning": "Anda boleh hantar dengan dokumen yang tiada, tetapi institusi akan memintanya kemudian.",
+    "reviewedStep": "Disemak oleh UniBridge sebelum hantar",
+    "sopRequest": "Minta maklum balas SOP / penyataan peribadi",
+    "sopSent": "Permintaan dihantar — maklum balas dalam 48 jam (demo)"
   },
   "applications": {
     "title": "Permohonan",
@@ -414,7 +417,8 @@
       "sim": "SIM & data",
       "banking": "Perbankan",
       "other": "Keperluan"
-    }
+    },
+    "checklistGeneric": "Senarai semak umum"
   },
   "community": {
     "title": "Komuniti",
@@ -709,7 +713,6 @@
     "rule_application": "Hantar permohonan",
     "rule_referral": "Rujuk rakan",
     "rule_daily": "Daftar masuk harian",
-    "item_vip-discount": "RM200 diskaun pas VIP",
     "item_fee-waiver": "Pengecualian yuran permohonan (Rakan Sah)",
     "item_doc-review": "Semakan dokumen percuma oleh pasukan kami",
     "item_event-ticket": "Tiket ekspo pendidikan",
@@ -718,11 +721,55 @@
     "checkedIn": "Sudah daftar — kembali esok!",
     "checkInOk": "+5 syiling — rentetan berjalan!",
     "streakDays": "Rentetan {{count}} hari",
-    "streakNote": "Daftar masuk setiap hari untuk membina rentetan. Bonus masuk ke sejarah syiling anda."
+    "streakNote": "Daftar masuk setiap hari untuk membina rentetan. Bonus masuk ke sejarah syiling anda.",
+    "badgesHero": "Untuk setiap peringkat perjalanan anda",
+    "badgesEarnedShort": "Anda telah memperoleh {{count}} lencana",
+    "badgesTap": "Ketik lencana untuk maklumat lanjut",
+    "streakHero": "Daftar masuk setiap hari, kekalkan api",
+    "rule_pass_bonus": "Bonus Pas Musim",
+    "item_pass-discount": "Diskaun US$10 Pas Musim"
   },
   "shorts": {
     "title": "Shorts",
     "views": "tontonan",
     "mockNote": "Video dimainkan semasa pelancaran — pratonton prototaip"
+  },
+  "pass": {
+    "title": "Pas Musim",
+    "headline": "Mohon lebih banyak sekolah. Dapat lebih sokongan.",
+    "sub": "Belian sekali untuk seluruh kitaran permohonan anda — tiada langganan.",
+    "colFree": "Percuma",
+    "colPass": "Pas",
+    "oneTime": "Sekali sahaja · Tiada langganan",
+    "cta": "Buka Pas Musim",
+    "purchased": "Pas Musim dibuka! Syiling bonus ditambah 🎉",
+    "owned": "Pas Musim aktif ✓",
+    "learnMore": "Lihat semua yang termasuk",
+    "mockNote": "Prototaip — tiada bayaran sebenar.",
+    "chip": "Pas Musim",
+    "planTitle": "Pelan anda",
+    "priority": "Keutamaan",
+    "lockedTeam": "Buka jurulatih dan pasukan sokongan bernama anda dengan Pas Musim.",
+    "lockedMail": "Mel lama dibuka dengan Pas Musim.",
+    "lockedPredep": "Ini senarai umum — senarai khusus {{country}} datang dengan Pas Musim.",
+    "lockedTimeline": "Garis masa penuh dengan Pas Musim",
+    "conciergeTitle": "Concierge",
+    "conciergeBody": "Khidmat permohonan diurus manusia sepenuhnya, di atas Pas Musim.",
+    "row_match": "Padanan tanpa had, semua keputusan",
+    "row_compare": "Banding hingga 4 serentak (Percuma: 2)",
+    "row_apps": "Permohonan serentak tanpa had (Percuma: 1)",
+    "row_timeline": "Garis masa status penuh",
+    "row_review": "\"Disemak oleh UniBridge\" + maklum balas SOP",
+    "row_team": "Jurulatih & pasukan sokongan bernama",
+    "row_mail": "Peti mel universiti penuh",
+    "row_predep": "Pra-berlepas ikut negara",
+    "row_community": "Komuniti, Shorts & Ganjaran",
+    "ctx_apply": "Anda cuba memohon sekolah ke-2 — buka permohonan tanpa had dengan Pas Musim.",
+    "ctx_compare": "Percuma boleh banding 2 — buka hingga 4 dengan Pas Musim.",
+    "ctx_team": "Kenali jurulatih dan pasukan bernama anda — ciri Pas Musim.",
+    "ctx_mail": "Peti masuk universiti penuh dibuka dengan Pas Musim.",
+    "ctx_timeline": "Lihat setiap sub-status dengan Pas Musim.",
+    "ctx_predep": "Dapatkan senarai khusus destinasi anda dengan Pas Musim.",
+    "ctx_generic": "Ciri ini sebahagian daripada Pas Musim."
   }
 }

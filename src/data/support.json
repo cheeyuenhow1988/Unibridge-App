@@ -209,7 +209,7 @@
   ],
   "redemptions": [
     {
-      "id": "vip-discount",
+      "id": "pass-discount",
       "coins": 400
     },
     {
@@ -227,6 +227,48 @@
     {
       "id": "sim-topup",
       "coins": 250
+    }
+  ],
+  "genericChecklist": [
+    {
+      "id": "gen-1",
+      "label": "Passport valid 6+ months beyond arrival",
+      "category": "visa"
+    },
+    {
+      "id": "gen-2",
+      "label": "Apply for your student visa early",
+      "category": "visa"
+    },
+    {
+      "id": "gen-3",
+      "label": "Book accommodation for your first weeks",
+      "category": "housing"
+    },
+    {
+      "id": "gen-4",
+      "label": "Arrange health and travel insurance",
+      "category": "insurance"
+    },
+    {
+      "id": "gen-5",
+      "label": "Prepare certified copies of transcripts",
+      "category": "other"
+    },
+    {
+      "id": "gen-6",
+      "label": "Plan your first-month budget in local currency",
+      "category": "money"
+    },
+    {
+      "id": "gen-7",
+      "label": "Order a SIM or eSIM that works on arrival",
+      "category": "sim"
+    },
+    {
+      "id": "gen-8",
+      "label": "Save emergency contacts somewhere offline",
+      "category": "other"
     }
   ]
 }

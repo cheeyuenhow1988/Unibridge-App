@@ -19,8 +19,10 @@ import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
-import { getPredepartureChecklist, getWorkRights } from '@/services/api';
+import { getPredepartureChecklist, getSupportBundle, getWorkRights } from '@/services/api';
+import { LockChip, UpgradeSheet } from '@/components/plan/UpgradeSheet';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
+import { usePlan } from '@/store/usePlanStore';
 
 interface PickupForm {
   name: string;
@@ -38,6 +40,9 @@ export default function Predeparture() {
   const [checked, setChecked] = useState<Record<string, boolean>>({});
   const [reminders, setReminders] = useState<Record<string, boolean>>({ r7: true, r30: false });
   const [pickupSaved, setPickupSaved] = useState(false);
+  const [upgradeOpen, setUpgradeOpen] = useState(false);
+  const plan = usePlan();
+  const supportB = useAsync(() => getSupportBundle(), []);
 
   const result = application ? matchData?.resultByCourseId.get(application.courseId) : undefined;
   const country = result?.course.country;
@@ -94,6 +99,10 @@ export default function Predeparture() {
   });
 
   const doneCount = Object.values(checked).filter(Boolean).length;
+  // Free tier gets the universal checklist; the pass unlocks the
+  // destination-specific one.
+  const activeChecklist =
+    (plan === 'season_pass' ? checklist.data : supportB.data?.genericChecklist) ?? [];
 
   return (
     <Screen scroll edges={['top', 'bottom']}>
@@ -141,11 +150,25 @@ export default function Predeparture() {
         </LinearGradient>
 
         <SectionHeader
-          title={t('predeparture.checklist', { country: t(`countries.${country}`) })}
-          right={<Text variant="caption" tone="faint">{doneCount}/{checklist.data?.length ?? 0}</Text>}
+          title={
+            plan === 'season_pass'
+              ? t('predeparture.checklist', { country: t(`countries.${country}`) })
+              : t('predeparture.checklistGeneric')
+          }
+          right={<Text variant="caption" tone="faint">{doneCount}/{activeChecklist.length}</Text>}
         />
+        {plan === 'free' ? (
+          <Card tone="alt" style={{ gap: spacing.xs }}>
+            <Row style={{ justifyContent: 'space-between' }}>
+              <Text variant="caption" tone="secondary" style={{ flex: 1 }}>
+                {t('pass.lockedPredep', { country: t(`countries.${country}`) })}
+              </Text>
+              <LockChip onPress={() => setUpgradeOpen(true)} />
+            </Row>
+          </Card>
+        ) : null}
         <Card padded={false}>
-          {(checklist.data ?? []).map((item, i) => {
+          {activeChecklist.map((item, i) => {
             const done = !!checked[item.id];
             return (
               <Pressable
@@ -250,6 +273,7 @@ export default function Predeparture() {
           </Card>
         ) : null}
       </View>
+      <UpgradeSheet visible={upgradeOpen} context="predep" onClose={() => setUpgradeOpen(false)} />
     </Screen>
   );
 }

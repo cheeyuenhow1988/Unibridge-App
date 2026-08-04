@@ -7,10 +7,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import { Text } from '@/components/ui/Text';
 import { radius, spacing } from '@/constants/theme';
+import { VIP_BUNDLE_PRICE_USD } from '@/store/usePlanStore';
 import { toast } from '@/store/useToastStore';
-
-/** One-time VIP pass — static premium upsell, mock checkout. */
-const PRICE_RM = 1999;
 const GOLD = '#D9B45B';
 const GOLD_SOFT = 'rgba(217, 180, 91, 0.16)';
 const INK_DARK = '#0B0E14';
@@ -59,7 +57,7 @@ export default function VipScreen() {
 
           <View style={{ alignItems: 'center', gap: spacing.sm }}>
             <Text variant="caption" color={TEXT_SOFT}>{t('vip.oneTime')}</Text>
-            <Text variant="display" color={GOLD}>RM {PRICE_RM.toLocaleString('en')}</Text>
+            <Text variant="display" color={GOLD}>US${VIP_BUNDLE_PRICE_USD}</Text>
           </View>
 
           <LinearGradient
