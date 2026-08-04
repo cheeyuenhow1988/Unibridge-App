@@ -480,7 +480,8 @@
     "currencyAuto": "Automatik ({{currency}} — negara asal)",
     "rates": "Kadar tukaran: {{source}}, dikemas kini {{asOf}}. Akan ditukar ke suapan xe.com apabila kunci API ditambah.",
     "ratesSource_live": "langsung",
-    "ratesSource_static": "snapshot luar talian"
+    "ratesSource_static": "snapshot luar talian",
+    "build": "Binaan {{id}}"
   },
   "chat": {
     "title": "Tanya {{name}}",

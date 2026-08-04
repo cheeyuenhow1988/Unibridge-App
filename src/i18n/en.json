@@ -484,7 +484,8 @@
     "resetConfirm": "This deletes your account, profile, photo, saved items and applications from this device. Continue?",
     "loadDemo": "Load demo profile",
     "about": "UniBridge prototype — all institutions and data are fictional.",
-    "homeCurrency": "Home currency"
+    "homeCurrency": "Home currency",
+    "build": "Build {{id}}"
   },
   "auth": {
     "title": "Create your account",

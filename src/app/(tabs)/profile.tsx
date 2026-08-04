@@ -14,6 +14,7 @@ import { Screen } from '@/components/ui/Screen';
 import { Text } from '@/components/ui/Text';
 import { CURRENCY_SYMBOL, FLAGS } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
+import { BUILD_ID } from '@/constants/version';
 import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
 import { ALL_CURRENCIES, formatDual, getRatesMeta, homeCurrencyFor } from '@/services/currency';
@@ -273,6 +274,9 @@ export default function ProfileScreen() {
           <Button label={t('profile.resetApp')} variant="danger" icon="trash-outline" onPress={resetAll} />
           <Text variant="caption" tone="faint" center style={{ marginTop: spacing.md }}>
             {t('profile.about')}
+          </Text>
+          <Text variant="caption" tone="faint" center>
+            {t('profile.build', { id: BUILD_ID })}
           </Text>
         </View>
       </ScrollView>

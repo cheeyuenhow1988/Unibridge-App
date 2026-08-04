@@ -11,11 +11,21 @@ interface Props {
   radius?: number;
 }
 
-/** Official-domain logo (Clearbit) with a graceful initial-letter fallback. */
+const faviconFor = (website: string) =>
+  `https://www.google.com/s2/favicons?domain=${new URL(website).hostname.replace(/^www\./, '')}&sz=128`;
+
+/**
+ * Verified official logo with a resilient chain: the baked logo URL first,
+ * then the school's official favicon (covers networks where the primary
+ * host is blocked), then an initial-letter tile.
+ */
 export function InstLogo({ institution, size = 26, radius = 6 }: Props) {
   const { colors } = useTheme();
-  const [failed, setFailed] = useState(false);
-  if (failed) {
+  const [stage, setStage] = useState(0);
+  const favicon = faviconFor(institution.website);
+  const uri = stage === 0 ? institution.logo : favicon;
+
+  if (stage >= 2) {
     return (
       <View
         style={{
@@ -31,10 +41,10 @@ export function InstLogo({ institution, size = 26, radius = 6 }: Props) {
   }
   return (
     <Image
-      source={{ uri: institution.logo }}
+      source={{ uri }}
       style={{ width: size, height: size, borderRadius: radius, backgroundColor: '#FFFFFF' }}
       contentFit="contain"
-      onError={() => setFailed(true)}
+      onError={() => setStage(uri === favicon ? 2 : stage + 1)}
     />
   );
 }

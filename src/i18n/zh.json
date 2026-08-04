@@ -480,7 +480,8 @@
     "currencyAuto": "自动（{{currency}}——家乡国家）",
     "rates": "汇率：{{source}}，更新于 {{asOf}}。添加 API 密钥后可切换到 xe.com 数据源。",
     "ratesSource_live": "实时",
-    "ratesSource_static": "离线快照"
+    "ratesSource_static": "离线快照",
+    "build": "版本 {{id}}"
   },
   "chat": {
     "title": "咨询{{name}}",
