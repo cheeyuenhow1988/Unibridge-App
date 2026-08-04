@@ -211,7 +211,9 @@
       "localWaived": "Sinh viên bản địa — miễn yêu cầu tiếng Anh"
     },
     "pathwayVia": "Có lộ trình qua {{name}}",
-    "yourScore": "Điểm của bạn: {{score}}"
+    "yourScore": "Điểm của bạn: {{score}}",
+    "zeroBudgetHint": "Không có lựa chọn nào vừa tất cả bộ lọc — ngân sách là nút thắt. Lựa chọn rẻ nhất khớp các bộ lọc còn lại tốn ≈{{amount}}/năm chi phí thật. Tăng hoặc bỏ ngân sách để thấy nó:",
+    "zeroComboHint": "Không ngành nào khớp tổ hợp này — bỏ bớt một bộ lọc để xem lựa chọn."
   },
   "compare": {
     "title": "So sánh",

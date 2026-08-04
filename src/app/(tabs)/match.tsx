@@ -81,6 +81,46 @@ export default function MatchScreen() {
     return [...new Set([0.25, 0.5, 0.75].map((q) => nice(costs[Math.floor(costs.length * q)]!)))];
   }, [matchData, homeCurrency]);
 
+  // Per-country result counts under the other active filters, so the modal
+  // shows which countries the current budget/duration actually reaches.
+  const countryCounts = useMemo(() => {
+    const counts: Partial<Record<string, number>> = {};
+    if (!matchData) return counts;
+    for (const r of matchData.results) {
+      const { course } = r;
+      if (filters.field && course.field !== filters.field) continue;
+      if (filters.duration === 'short' && course.durationYears > 2) continue;
+      if (filters.duration === 'medium' && (course.durationYears < 3 || course.durationYears > 4)) continue;
+      if (filters.duration === 'long' && course.durationYears < 5) continue;
+      if (filters.budget) {
+        const col = matchData.colByCity.get(course.campusCity);
+        if (col && trueAnnualIn(course, col, homeCurrency) > filters.budget) continue;
+      }
+      counts[course.country] = (counts[course.country] ?? 0) + 1;
+    }
+    return counts;
+  }, [matchData, filters, homeCurrency]);
+
+  // Cheapest option matching everything except the budget — powers the
+  // zero-results explanation ("raise the budget to ≈X to include it").
+  const cheapestNoBudget = useMemo(() => {
+    if (!matchData) return null;
+    let min: number | null = null;
+    for (const r of matchData.results) {
+      const { course } = r;
+      if (filters.country && course.country !== filters.country) continue;
+      if (filters.field && course.field !== filters.field) continue;
+      if (filters.duration === 'short' && course.durationYears > 2) continue;
+      if (filters.duration === 'medium' && (course.durationYears < 3 || course.durationYears > 4)) continue;
+      if (filters.duration === 'long' && course.durationYears < 5) continue;
+      const col = matchData.colByCity.get(course.campusCity);
+      if (!col) continue;
+      const cost = trueAnnualIn(course, col, homeCurrency);
+      if (min === null || cost < min) min = cost;
+    }
+    return min;
+  }, [matchData, filters, homeCurrency]);
+
   const activeFilterCount =
     (filters.country ? 1 : 0) + (filters.field ? 1 : 0) + (filters.duration !== 'any' ? 1 : 0) + (filters.budget ? 1 : 0);
 
@@ -276,6 +316,8 @@ export default function MatchScreen() {
         resultCount={filtered.length}
         budgetPresets={budgetPresets}
         homeCurrency={homeCurrency}
+        countryCounts={countryCounts}
+        cheapestNoBudget={cheapestNoBudget}
       />
     </Screen>
   );

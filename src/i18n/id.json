@@ -211,7 +211,9 @@
       "localWaived": "Pelajar lokal — syarat bahasa Inggris dibebaskan"
     },
     "pathwayVia": "Ada jalur lewat {{name}}",
-    "yourScore": "Skormu: {{score}}"
+    "yourScore": "Skormu: {{score}}",
+    "zeroBudgetHint": "Tidak ada yang cocok dengan semua filter ini — anggarannya penyebabnya. Opsi termurah yang cocok dengan filter lain biayanya ≈{{amount}}/tahun. Naikkan atau kosongkan anggaran untuk memasukkannya:",
+    "zeroComboHint": "Tidak ada jurusan yang cocok dengan kombinasi ini — hapus salah satu filter untuk melihat opsi."
   },
   "compare": {
     "title": "Bandingkan",

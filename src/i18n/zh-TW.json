@@ -211,7 +211,9 @@
     "pathwayVia": "可經 {{name}} 銜接",
     "yourScore": "你的分數：{{score}}",
     "strengthDocs_other": "檔案庫缺少 {{count}} 份材料——申請前先補齊",
-    "clearCompare": "清除所選"
+    "clearCompare": "清除所選",
+    "zeroBudgetHint": "這些篩選組合下沒有結果——預算是關鍵。符合其他條件的最便宜選項真實花費約 {{amount}}/年。提高或清除預算即可看到：",
+    "zeroComboHint": "沒有課程符合這個組合——清除其中一個篩選條件即可看到選項。"
   },
   "compare": {
     "title": "對比",

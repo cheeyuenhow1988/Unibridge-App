@@ -36,9 +36,13 @@ interface Props {
   resultCount: number;
   budgetPresets: number[];
   homeCurrency: CurrencyCode;
+  /** Results per country under the other active filters — 0 means the budget/duration rules that country out. */
+  countryCounts: Partial<Record<string, number>>;
+  /** Cheapest true-annual cost matching every filter except budget; null when nothing matches at all. */
+  cheapestNoBudget: number | null;
 }
 
-export function FiltersModal({ visible, onClose, filters, onChange, resultCount, budgetPresets, homeCurrency }: Props) {
+export function FiltersModal({ visible, onClose, filters, onChange, resultCount, budgetPresets, homeCurrency, countryCounts, cheapestNoBudget }: Props) {
   const { t } = useTranslation();
   const { colors } = useTheme();
 
@@ -73,14 +77,18 @@ export function FiltersModal({ visible, onClose, filters, onChange, resultCount,
             t('match.filterCountry'),
             <Row wrap gap={spacing.sm}>
               <Chip label={t('match.filterDurationAny')} selected={!filters.country} onPress={() => onChange({ ...filters, country: null })} />
-              {DEST_COUNTRIES.map((c) => (
-                <Chip
-                  key={c}
-                  label={`${FLAGS[c]} ${t(`countries.${c}`)}`}
-                  selected={filters.country === c}
-                  onPress={() => onChange({ ...filters, country: filters.country === c ? null : c })}
-                />
-              ))}
+              {DEST_COUNTRIES.map((c) => {
+                const n = countryCounts[c] ?? 0;
+                return (
+                  <View key={c} style={{ opacity: filters.country === c || n > 0 ? 1 : 0.4 }}>
+                    <Chip
+                      label={`${FLAGS[c]} ${t(`countries.${c}`)} · ${n}`}
+                      selected={filters.country === c}
+                      onPress={() => onChange({ ...filters, country: filters.country === c ? null : c })}
+                    />
+                  </View>
+                );
+              })}
             </Row>,
           )}
 
@@ -138,6 +146,21 @@ export function FiltersModal({ visible, onClose, filters, onChange, resultCount,
             </Row>,
           )}
 
+          {resultCount === 0 ? (
+            <View style={{ backgroundColor: colors.surfaceAlt, borderRadius: radius.lg, padding: spacing.lg, gap: spacing.sm }}>
+              <Text variant="caption" tone="secondary">
+                {filters.budget && cheapestNoBudget
+                  ? t('match.zeroBudgetHint', { amount: formatMoney(cheapestNoBudget, homeCurrency) })
+                  : t('match.zeroComboHint')}
+              </Text>
+              {filters.budget && cheapestNoBudget ? (
+                <Chip
+                  label={t('match.filterBudgetAny')}
+                  onPress={() => onChange({ ...filters, budget: null })}
+                />
+              ) : null}
+            </View>
+          ) : null}
           <Button label={t('match.applyFilters', { count: resultCount })} size="lg" onPress={onClose} />
         </ScrollView>
       </SafeAreaView>
