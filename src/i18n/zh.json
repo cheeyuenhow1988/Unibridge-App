@@ -593,5 +593,10 @@
     "flightLow": "淡季",
     "flightPeak": "旺季（假期）",
     "flightNote": "您的国家与该城市之间的往返经济舱估价——提前 2–3 个月预订可拿到淡季价。"
+  },
+  "instTypesPlural": {
+    "university": "大学",
+    "college": "学院",
+    "institute": "专业学院"
   }
 }

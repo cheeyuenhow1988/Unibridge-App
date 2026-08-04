@@ -20,10 +20,18 @@ import { listInstitutions, listScholarships } from '@/services/api';
 import { formatDual, homeCurrencyFor } from '@/services/currency';
 import { useProfileStore } from '@/store/useProfileStore';
 import { useSavedStore } from '@/store/useSavedStore';
-import type { CountryCode } from '@/types/models';
+import type { CountryCode, Institution, InstitutionType } from '@/types/models';
 import { router } from 'expo-router';
 
 type Segment = 'institutions' | 'scholarships' | 'saved';
+
+// The directory never mixes everything together: it is grouped by country,
+// and inside each country by kind — universities, then colleges, institutes.
+const TYPE_ORDER: InstitutionType[] = ['university', 'college', 'institute'];
+type ExploreRow =
+  | { kind: 'country'; key: string; country: CountryCode; count: number }
+  | { kind: 'type'; key: string; type: InstitutionType; count: number }
+  | { kind: 'inst'; key: string; institution: Institution };
 
 export default function ExploreScreen() {
   const { t } = useTranslation();
@@ -56,6 +64,24 @@ export default function ExploreScreen() {
     );
   }, [inst.data, query, country, matchData]);
 
+  const rows = useMemo(() => {
+    const out: ExploreRow[] = [];
+    for (const c of DEST_COUNTRIES) {
+      const inCountry = filteredInstitutions.filter((i) => i.country === c);
+      if (inCountry.length === 0) continue;
+      out.push({ kind: 'country', key: `c-${c}`, country: c, count: inCountry.length });
+      for (const ty of TYPE_ORDER) {
+        const ofType = inCountry
+          .filter((i) => i.type === ty)
+          .sort((a, b) => (a.ranking ?? 9999) - (b.ranking ?? 9999) || a.name.localeCompare(b.name));
+        if (ofType.length === 0) continue;
+        out.push({ kind: 'type', key: `t-${c}-${ty}`, type: ty, count: ofType.length });
+        ofType.forEach((i) => out.push({ kind: 'inst', key: i.id, institution: i }));
+      }
+    }
+    return out;
+  }, [filteredInstitutions]);
+
   const filteredScholarships = useMemo(() => {
     const q = query.trim().toLowerCase();
     return (sch.data ?? [])
@@ -76,12 +102,30 @@ export default function ExploreScreen() {
 
   return (
     <Screen padded={false}>
-      <FlatList
-        data={segment === 'institutions' ? filteredInstitutions : []}
-        keyExtractor={(i) => i.id}
+      <FlatList<ExploreRow>
+        data={segment === 'institutions' ? rows : []}
+        keyExtractor={(r) => r.key}
         contentContainerStyle={{ paddingHorizontal: spacing.lg, paddingBottom: spacing.xxxl }}
         ItemSeparatorComponent={() => <View style={{ height: spacing.md }} />}
-        renderItem={({ item }) => <InstitutionCard institution={item} />}
+        renderItem={({ item }) => {
+          if (item.kind === 'country') {
+            return (
+              <Row gap={spacing.sm} style={{ paddingTop: spacing.lg }}>
+                <Text variant="title">{FLAGS[item.country]}</Text>
+                <Text variant="title" style={{ flex: 1 }}>{t(`countries.${item.country}`)}</Text>
+                <Text variant="caption" tone="faint">{item.count}</Text>
+              </Row>
+            );
+          }
+          if (item.kind === 'type') {
+            return (
+              <Text variant="label" tone="accent">
+                {t(`instTypesPlural.${item.type}`)} · {item.count}
+              </Text>
+            );
+          }
+          return <InstitutionCard institution={item.institution} />;
+        }}
         ListHeaderComponent={
           <View style={{ gap: spacing.lg, paddingTop: spacing.xl, paddingBottom: spacing.lg }}>
             <Text variant="display">{t('tabs.explore')}</Text>

@@ -593,5 +593,10 @@
     "flightLow": "Musim biasa",
     "flightPeak": "Musim puncak (cuti)",
     "flightNote": "Anggaran kelas ekonomi pergi-balik antara negara asal anda dan bandar ini — tempah 2–3 bulan awal untuk harga musim biasa."
+  },
+  "instTypesPlural": {
+    "university": "Universiti",
+    "college": "Kolej",
+    "institute": "Institut"
   }
 }

@@ -597,5 +597,10 @@
     "flightLow": "Low season",
     "flightPeak": "Peak season (holidays)",
     "flightNote": "Round-trip economy estimate between your home country and this city — book 2–3 months ahead for low-season prices."
+  },
+  "instTypesPlural": {
+    "university": "Universities",
+    "college": "Colleges",
+    "institute": "Institutes"
   }
 }
