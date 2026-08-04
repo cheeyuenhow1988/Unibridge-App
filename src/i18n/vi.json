@@ -441,7 +441,7 @@
     "emptyMates": "Khi bạn nhận thư mời, bạn học cùng kỳ sẽ hiện ở đây.",
     "emptyEvents": "Chưa có sự kiện gần bạn.",
     "arrivalTitle": "Dịch vụ khi hạ cánh",
-    "arrivalTeaser": "Nhà ở, việc làm, xe & hỗ trợ — sắp ra mắt.",
+    "arrivalTeaser": "Việc làm, phòng ở, xe & mẹo — từ sinh viên đang ở đó.",
     "you": "Bạn"
   },
   "arrival": {
@@ -601,5 +601,29 @@
     "university": "Đại học",
     "college": "Trường cao đẳng",
     "institute": "Học viện"
+  },
+  "life": {
+    "title": "Đời sống sinh viên",
+    "subtitle": "Việc làm, phòng ở, xe cộ và mẹo bản địa — do sinh viên đang ở đó chia sẻ.",
+    "safetyTitle": "An toàn trước tiên",
+    "safetyBody": "Số khẩn cấp tại {{country}}: {{number}}. Mẹo ở đây từ sinh viên đã xác thực; danh sách là dữ liệu nguyên mẫu tham khảo — luôn xem phòng và gặp nhà tuyển dụng trực tiếp.",
+    "safetyBodyNoCountry": "Mẹo ở đây từ sinh viên đã xác thực; danh sách là dữ liệu nguyên mẫu tham khảo.",
+    "jobsTitle": "Việc làm thêm",
+    "jobsCap": "Giới hạn visa sinh viên: {{hours}} giờ/tuần trong kỳ học",
+    "onCampus": "Trong trường",
+    "near": "Gần {{spot}}",
+    "perHour": "/giờ",
+    "housingTitle": "Chỗ thuê",
+    "kind_dorm": "Ký túc xá trong trường",
+    "kind_roomSuburb": "Phòng nhà ghép — ngoại ô",
+    "kind_roomCentral": "Phòng nhà ghép — trung tâm",
+    "kind_studio": "Studio",
+    "minToCampus": "{{count}} phút đến trường",
+    "verifiedListing": "Tin đã xác thực",
+    "wheelsTitle": "Xe cộ & đi lại",
+    "usedCar": "Xe cũ",
+    "rentalDay": "Thuê / ngày",
+    "sharedBy": "Chia sẻ bởi {{name}} · sinh viên {{inst}}",
+    "indicative": "Dữ liệu nguyên mẫu tham khảo — đối tác và tin thật kết nối khi ra mắt."
   }
 }

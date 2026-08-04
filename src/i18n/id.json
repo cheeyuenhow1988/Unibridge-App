@@ -441,7 +441,7 @@
     "emptyMates": "Begitu kamu menerima tawaran, teman seangkatanmu muncul di sini.",
     "emptyEvents": "Belum ada acara di dekatmu.",
     "arrivalTitle": "Layanan kedatangan",
-    "arrivalTeaser": "Tempat tinggal, kerja, kendaraan & bantuan — segera hadir.",
+    "arrivalTeaser": "Kerja, kamar, kendaraan & tips — dari mahasiswa yang sudah di sana.",
     "you": "Kamu"
   },
   "arrival": {
@@ -601,5 +601,29 @@
     "university": "Universitas",
     "college": "Kolese",
     "institute": "Institut"
+  },
+  "life": {
+    "title": "Kehidupan mahasiswa",
+    "subtitle": "Kerja, kamar, kendaraan, dan tips lokal — dibagikan mahasiswa yang sudah di sana.",
+    "safetyTitle": "Keselamatan dulu",
+    "safetyBody": "Nomor darurat di {{country}}: {{number}}. Tips di sini dari mahasiswa terverifikasi; daftar adalah data prototipe indikatif — selalu lihat kamar dan temui pemberi kerja langsung.",
+    "safetyBodyNoCountry": "Tips di sini dari mahasiswa terverifikasi; daftar adalah data prototipe indikatif.",
+    "jobsTitle": "Kerja paruh waktu",
+    "jobsCap": "Batas visa pelajar: {{hours}} jam/minggu saat kuliah",
+    "onCampus": "Di kampus",
+    "near": "Dekat {{spot}}",
+    "perHour": "/jam",
+    "housingTitle": "Tempat sewa",
+    "kind_dorm": "Asrama kampus",
+    "kind_roomSuburb": "Kamar rumah berbagi — pinggiran",
+    "kind_roomCentral": "Kamar rumah berbagi — pusat kota",
+    "kind_studio": "Studio",
+    "minToCampus": "{{count}} mnt ke kampus",
+    "verifiedListing": "Daftar terverifikasi",
+    "wheelsTitle": "Kendaraan & transportasi",
+    "usedCar": "Mobil bekas",
+    "rentalDay": "Sewa / hari",
+    "sharedBy": "Dibagikan {{name}} · mahasiswa {{inst}}",
+    "indicative": "Data prototipe indikatif — mitra dan daftar asli terhubung saat peluncuran."
   }
 }

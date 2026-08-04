@@ -441,7 +441,7 @@
     "emptyMates": "Selepas anda menerima tawaran, rakan sekelas dari kemasukan anda muncul di sini.",
     "emptyEvents": "Tiada acara berdekatan anda buat masa ini.",
     "arrivalTitle": "Perkhidmatan ketibaan",
-    "arrivalTeaser": "Penginapan, kerja, kenderaan & bantuan — akan tiba.",
+    "arrivalTeaser": "Kerja, bilik, kenderaan & tip — daripada pelajar yang sudah di sana.",
     "you": "Anda"
   },
   "arrival": {
@@ -601,5 +601,29 @@
     "university": "Universiti",
     "college": "Kolej",
     "institute": "Institut"
+  },
+  "life": {
+    "title": "Kehidupan pelajar",
+    "subtitle": "Kerja, bilik, kenderaan dan tip tempatan — dikongsi pelajar yang sudah di sana.",
+    "safetyTitle": "Keselamatan dahulu",
+    "safetyBody": "Nombor kecemasan di {{country}}: {{number}}. Tip di sini daripada pelajar yang disahkan; senarai adalah data prototaip indikatif — sentiasa lihat bilik dan jumpa majikan secara langsung.",
+    "safetyBodyNoCountry": "Tip di sini daripada pelajar yang disahkan; senarai adalah data prototaip indikatif.",
+    "jobsTitle": "Kerja sambilan",
+    "jobsCap": "Had visa pelajar: {{hours}} jam/minggu semasa penggal",
+    "onCampus": "Dalam kampus",
+    "near": "Berhampiran {{spot}}",
+    "perHour": "/jam",
+    "housingTitle": "Tempat untuk disewa",
+    "kind_dorm": "Kediaman dalam kampus",
+    "kind_roomSuburb": "Bilik rumah kongsi — pinggir bandar",
+    "kind_roomCentral": "Bilik rumah kongsi — pusat bandar",
+    "kind_studio": "Studio",
+    "minToCampus": "{{count}} minit ke kampus",
+    "verifiedListing": "Senarai disahkan",
+    "wheelsTitle": "Kenderaan & pergerakan",
+    "usedCar": "Kereta terpakai",
+    "rentalDay": "Sewa / hari",
+    "sharedBy": "Dikongsi oleh {{name}} · pelajar {{inst}}",
+    "indicative": "Data prototaip indikatif — rakan kongsi dan senarai sebenar disambungkan semasa pelancaran."
   }
 }

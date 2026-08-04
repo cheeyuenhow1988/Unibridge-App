@@ -445,7 +445,7 @@
     "emptyMates": "Once you accept an offer, classmates from your intake show up here.",
     "emptyEvents": "No events near you yet.",
     "arrivalTitle": "Arrival services",
-    "arrivalTeaser": "Housing, jobs, wheels & help — landing soon.",
+    "arrivalTeaser": "Jobs, rooms, wheels & tips — from students already there.",
     "you": "You"
   },
   "arrival": {
@@ -605,5 +605,29 @@
     "university": "Universities",
     "college": "Colleges",
     "institute": "Institutes"
+  },
+  "life": {
+    "title": "Student life",
+    "subtitle": "Jobs, rooms, wheels and local tips — shared by students already there.",
+    "safetyTitle": "Safety first",
+    "safetyBody": "Emergency number in {{country}}: {{number}}. Tips here come from verified students; listings are indicative prototype data — always view a room and meet an employer in person.",
+    "safetyBodyNoCountry": "Tips here come from verified students; listings are indicative prototype data.",
+    "jobsTitle": "Part-time jobs",
+    "jobsCap": "Student-visa cap: {{hours}} hrs/week during term",
+    "onCampus": "On campus",
+    "near": "Near {{spot}}",
+    "perHour": "/hr",
+    "housingTitle": "Places to rent",
+    "kind_dorm": "On-campus residence",
+    "kind_roomSuburb": "Room in shared house — suburb",
+    "kind_roomCentral": "Room in shared house — central",
+    "kind_studio": "Studio",
+    "minToCampus": "{{count}} min to campus",
+    "verifiedListing": "Verified listing",
+    "wheelsTitle": "Wheels & getting around",
+    "usedCar": "Used car",
+    "rentalDay": "Rental / day",
+    "sharedBy": "Shared by {{name}} · {{inst}} student",
+    "indicative": "Indicative prototype data — partners and real listings connect at launch."
   }
 }

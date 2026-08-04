@@ -1,0 +1,3927 @@
+{
+  "emergency": {
+    "AU": "000",
+    "MY": "999",
+    "TW": "110",
+    "GB": "999",
+    "SG": "999",
+    "NZ": "111",
+    "RU": "112",
+    "US": "911",
+    "CA": "911",
+    "CN": "110"
+  },
+  "jobsByCity": {
+    "Sydney": [
+      {
+        "id": "job-sydney-1",
+        "city": "Sydney",
+        "role": "Café barista",
+        "spot": "Spice Alley",
+        "payHourMin": 24,
+        "payHourMax": 27.2,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-02",
+          "name": "Wei Jun Tan",
+          "inst": "UNSW"
+        }
+      },
+      {
+        "id": "job-sydney-2",
+        "city": "Sydney",
+        "role": "Retail assistant",
+        "spot": "The Rocks Markets",
+        "payHourMin": 25.2,
+        "payHourMax": 29.6,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-02",
+          "name": "Wei Jun Tan",
+          "inst": "UNSW"
+        }
+      },
+      {
+        "id": "job-sydney-3",
+        "city": "Sydney",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 26.4,
+        "payHourMax": 32,
+        "onCampus": true,
+        "sharedBy": {
+          "id": "amb-02",
+          "name": "Wei Jun Tan",
+          "inst": "UNSW"
+        }
+      },
+      {
+        "id": "job-sydney-4",
+        "city": "Sydney",
+        "role": "Private tutor (your best subject)",
+        "spot": "The Rocks Markets",
+        "payHourMin": 24,
+        "payHourMax": 27.2,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-02",
+          "name": "Wei Jun Tan",
+          "inst": "UNSW"
+        }
+      },
+      {
+        "id": "job-sydney-5",
+        "city": "Sydney",
+        "role": "Restaurant server",
+        "spot": "Spice Alley",
+        "payHourMin": 25.2,
+        "payHourMax": 29.6,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-02",
+          "name": "Wei Jun Tan",
+          "inst": "UNSW"
+        }
+      }
+    ],
+    "Melbourne": [
+      {
+        "id": "job-melbourne-1",
+        "city": "Melbourne",
+        "role": "Café barista",
+        "spot": "Queen Victoria Market",
+        "payHourMin": 24,
+        "payHourMax": 27.2,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-01",
+          "name": "Aina Zulkifli",
+          "inst": "Monash"
+        }
+      },
+      {
+        "id": "job-melbourne-2",
+        "city": "Melbourne",
+        "role": "Retail assistant",
+        "spot": "Lygon Street",
+        "payHourMin": 25.2,
+        "payHourMax": 29.6,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-01",
+          "name": "Aina Zulkifli",
+          "inst": "Monash"
+        }
+      },
+      {
+        "id": "job-melbourne-3",
+        "city": "Melbourne",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 26.4,
+        "payHourMax": 32,
+        "onCampus": true,
+        "sharedBy": {
+          "id": "amb-01",
+          "name": "Aina Zulkifli",
+          "inst": "Monash"
+        }
+      },
+      {
+        "id": "job-melbourne-4",
+        "city": "Melbourne",
+        "role": "Private tutor (your best subject)",
+        "spot": "Lygon Street",
+        "payHourMin": 24,
+        "payHourMax": 27.2,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-01",
+          "name": "Aina Zulkifli",
+          "inst": "Monash"
+        }
+      },
+      {
+        "id": "job-melbourne-5",
+        "city": "Melbourne",
+        "role": "Restaurant server",
+        "spot": "Queen Victoria Market",
+        "payHourMin": 25.2,
+        "payHourMax": 29.6,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-01",
+          "name": "Aina Zulkifli",
+          "inst": "Monash"
+        }
+      }
+    ],
+    "Brisbane": [
+      {
+        "id": "job-brisbane-1",
+        "city": "Brisbane",
+        "role": "Café barista",
+        "spot": "Eat Street Northshore",
+        "payHourMin": 24,
+        "payHourMax": 27.2,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-brisbane-2",
+        "city": "Brisbane",
+        "role": "Retail assistant",
+        "spot": "Queen Street Mall",
+        "payHourMin": 25.2,
+        "payHourMax": 29.6,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-brisbane-3",
+        "city": "Brisbane",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 26.4,
+        "payHourMax": 32,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-brisbane-4",
+        "city": "Brisbane",
+        "role": "Private tutor (your best subject)",
+        "spot": "Queen Street Mall",
+        "payHourMin": 24,
+        "payHourMax": 27.2,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-brisbane-5",
+        "city": "Brisbane",
+        "role": "Restaurant server",
+        "spot": "Eat Street Northshore",
+        "payHourMin": 25.2,
+        "payHourMax": 29.6,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Perth": [
+      {
+        "id": "job-perth-1",
+        "city": "Perth",
+        "role": "Café barista",
+        "spot": "Fremantle Markets",
+        "payHourMin": 24,
+        "payHourMax": 27.2,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-perth-2",
+        "city": "Perth",
+        "role": "Retail assistant",
+        "spot": "Fremantle Markets",
+        "payHourMin": 25.2,
+        "payHourMax": 29.6,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-perth-3",
+        "city": "Perth",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 26.4,
+        "payHourMax": 32,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-perth-4",
+        "city": "Perth",
+        "role": "Private tutor (your best subject)",
+        "spot": "Fremantle Markets",
+        "payHourMin": 24,
+        "payHourMax": 27.2,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-perth-5",
+        "city": "Perth",
+        "role": "Restaurant server",
+        "spot": "Fremantle Markets",
+        "payHourMin": 25.2,
+        "payHourMax": 29.6,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Kuala Lumpur": [
+      {
+        "id": "job-kualalumpur-1",
+        "city": "Kuala Lumpur",
+        "role": "Café barista",
+        "spot": "Jalan Alor",
+        "payHourMin": 9,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-05",
+          "name": "Putri Wijaya",
+          "inst": "UM"
+        }
+      },
+      {
+        "id": "job-kualalumpur-2",
+        "city": "Kuala Lumpur",
+        "role": "Retail assistant",
+        "spot": "Pavilion KL",
+        "payHourMin": 9.45,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-05",
+          "name": "Putri Wijaya",
+          "inst": "UM"
+        }
+      },
+      {
+        "id": "job-kualalumpur-3",
+        "city": "Kuala Lumpur",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 9.9,
+        "payHourMax": 15,
+        "onCampus": true,
+        "sharedBy": {
+          "id": "amb-05",
+          "name": "Putri Wijaya",
+          "inst": "UM"
+        }
+      },
+      {
+        "id": "job-kualalumpur-4",
+        "city": "Kuala Lumpur",
+        "role": "Private tutor (your best subject)",
+        "spot": "Pavilion KL",
+        "payHourMin": 9,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-05",
+          "name": "Putri Wijaya",
+          "inst": "UM"
+        }
+      },
+      {
+        "id": "job-kualalumpur-5",
+        "city": "Kuala Lumpur",
+        "role": "Restaurant server",
+        "spot": "Jalan Alor",
+        "payHourMin": 9.45,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-05",
+          "name": "Putri Wijaya",
+          "inst": "UM"
+        }
+      }
+    ],
+    "Penang": [
+      {
+        "id": "job-penang-1",
+        "city": "Penang",
+        "role": "Café barista",
+        "spot": "Gurney Drive Hawker Centre",
+        "payHourMin": 9,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-penang-2",
+        "city": "Penang",
+        "role": "Retail assistant",
+        "spot": "Gurney Plaza",
+        "payHourMin": 9.45,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-penang-3",
+        "city": "Penang",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 9.9,
+        "payHourMax": 15,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-penang-4",
+        "city": "Penang",
+        "role": "Private tutor (your best subject)",
+        "spot": "Gurney Plaza",
+        "payHourMin": 9,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-penang-5",
+        "city": "Penang",
+        "role": "Restaurant server",
+        "spot": "Gurney Drive Hawker Centre",
+        "payHourMin": 9.45,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Cyberjaya": [
+      {
+        "id": "job-cyberjaya-1",
+        "city": "Cyberjaya",
+        "role": "Café barista",
+        "spot": "Tamarind Square",
+        "payHourMin": 9,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-15",
+          "name": "Xin Yi Loh",
+          "inst": "MMU"
+        }
+      },
+      {
+        "id": "job-cyberjaya-2",
+        "city": "Cyberjaya",
+        "role": "Retail assistant",
+        "spot": "IOI City Mall",
+        "payHourMin": 9.45,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-15",
+          "name": "Xin Yi Loh",
+          "inst": "MMU"
+        }
+      },
+      {
+        "id": "job-cyberjaya-3",
+        "city": "Cyberjaya",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 9.9,
+        "payHourMax": 15,
+        "onCampus": true,
+        "sharedBy": {
+          "id": "amb-15",
+          "name": "Xin Yi Loh",
+          "inst": "MMU"
+        }
+      },
+      {
+        "id": "job-cyberjaya-4",
+        "city": "Cyberjaya",
+        "role": "Private tutor (your best subject)",
+        "spot": "IOI City Mall",
+        "payHourMin": 9,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-15",
+          "name": "Xin Yi Loh",
+          "inst": "MMU"
+        }
+      },
+      {
+        "id": "job-cyberjaya-5",
+        "city": "Cyberjaya",
+        "role": "Restaurant server",
+        "spot": "Tamarind Square",
+        "payHourMin": 9.45,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-15",
+          "name": "Xin Yi Loh",
+          "inst": "MMU"
+        }
+      }
+    ],
+    "Johor Bahru": [
+      {
+        "id": "job-johorbahru-1",
+        "city": "Johor Bahru",
+        "role": "Café barista",
+        "spot": "Jalan Dhoby",
+        "payHourMin": 9,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-johorbahru-2",
+        "city": "Johor Bahru",
+        "role": "Retail assistant",
+        "spot": "Johor Premium Outlets",
+        "payHourMin": 9.45,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-johorbahru-3",
+        "city": "Johor Bahru",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 9.9,
+        "payHourMax": 15,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-johorbahru-4",
+        "city": "Johor Bahru",
+        "role": "Private tutor (your best subject)",
+        "spot": "Johor Premium Outlets",
+        "payHourMin": 9,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-johorbahru-5",
+        "city": "Johor Bahru",
+        "role": "Restaurant server",
+        "spot": "Jalan Dhoby",
+        "payHourMin": 9.45,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Taipei": [
+      {
+        "id": "job-taipei-1",
+        "city": "Taipei",
+        "role": "Café barista",
+        "spot": "Shilin Night Market",
+        "payHourMin": 190,
+        "payHourMax": 212.5,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-09",
+          "name": "Chia-Hao Chen",
+          "inst": "NTU"
+        }
+      },
+      {
+        "id": "job-taipei-2",
+        "city": "Taipei",
+        "role": "Retail assistant",
+        "spot": "Ximending",
+        "payHourMin": 199.5,
+        "payHourMax": 231.25,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-09",
+          "name": "Chia-Hao Chen",
+          "inst": "NTU"
+        }
+      },
+      {
+        "id": "job-taipei-3",
+        "city": "Taipei",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 209,
+        "payHourMax": 250,
+        "onCampus": true,
+        "sharedBy": {
+          "id": "amb-09",
+          "name": "Chia-Hao Chen",
+          "inst": "NTU"
+        }
+      },
+      {
+        "id": "job-taipei-4",
+        "city": "Taipei",
+        "role": "Private tutor (your best subject)",
+        "spot": "Ximending",
+        "payHourMin": 190,
+        "payHourMax": 212.5,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-09",
+          "name": "Chia-Hao Chen",
+          "inst": "NTU"
+        }
+      },
+      {
+        "id": "job-taipei-5",
+        "city": "Taipei",
+        "role": "Restaurant server",
+        "spot": "Shilin Night Market",
+        "payHourMin": 199.5,
+        "payHourMax": 231.25,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-09",
+          "name": "Chia-Hao Chen",
+          "inst": "NTU"
+        }
+      }
+    ],
+    "Hsinchu": [
+      {
+        "id": "job-hsinchu-1",
+        "city": "Hsinchu",
+        "role": "Café barista",
+        "spot": "Beipu Old Street",
+        "payHourMin": 190,
+        "payHourMax": 212.5,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-hsinchu-2",
+        "city": "Hsinchu",
+        "role": "Retail assistant",
+        "spot": "Big City Mall",
+        "payHourMin": 199.5,
+        "payHourMax": 231.25,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-hsinchu-3",
+        "city": "Hsinchu",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 209,
+        "payHourMax": 250,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-hsinchu-4",
+        "city": "Hsinchu",
+        "role": "Private tutor (your best subject)",
+        "spot": "Big City Mall",
+        "payHourMin": 190,
+        "payHourMax": 212.5,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-hsinchu-5",
+        "city": "Hsinchu",
+        "role": "Restaurant server",
+        "spot": "Beipu Old Street",
+        "payHourMin": 199.5,
+        "payHourMax": 231.25,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Taichung": [
+      {
+        "id": "job-taichung-1",
+        "city": "Taichung",
+        "role": "Café barista",
+        "spot": "Fengjia Night Market",
+        "payHourMin": 190,
+        "payHourMax": 212.5,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-taichung-2",
+        "city": "Taichung",
+        "role": "Retail assistant",
+        "spot": "Miyahara",
+        "payHourMin": 199.5,
+        "payHourMax": 231.25,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-taichung-3",
+        "city": "Taichung",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 209,
+        "payHourMax": 250,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-taichung-4",
+        "city": "Taichung",
+        "role": "Private tutor (your best subject)",
+        "spot": "Miyahara",
+        "payHourMin": 190,
+        "payHourMax": 212.5,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-taichung-5",
+        "city": "Taichung",
+        "role": "Restaurant server",
+        "spot": "Fengjia Night Market",
+        "payHourMin": 199.5,
+        "payHourMax": 231.25,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Kaohsiung": [
+      {
+        "id": "job-kaohsiung-1",
+        "city": "Kaohsiung",
+        "role": "Café barista",
+        "spot": "Liuhe Night Market",
+        "payHourMin": 190,
+        "payHourMax": 212.5,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-kaohsiung-2",
+        "city": "Kaohsiung",
+        "role": "Retail assistant",
+        "spot": "Dream Mall",
+        "payHourMin": 199.5,
+        "payHourMax": 231.25,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-kaohsiung-3",
+        "city": "Kaohsiung",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 209,
+        "payHourMax": 250,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-kaohsiung-4",
+        "city": "Kaohsiung",
+        "role": "Private tutor (your best subject)",
+        "spot": "Dream Mall",
+        "payHourMin": 190,
+        "payHourMax": 212.5,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-kaohsiung-5",
+        "city": "Kaohsiung",
+        "role": "Restaurant server",
+        "spot": "Liuhe Night Market",
+        "payHourMin": 199.5,
+        "payHourMax": 231.25,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "London": [
+      {
+        "id": "job-london-1",
+        "city": "London",
+        "role": "Café barista",
+        "spot": "Borough Market",
+        "payHourMin": 11.5,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-04",
+          "name": "Marcus Lim",
+          "inst": "KCL"
+        }
+      },
+      {
+        "id": "job-london-2",
+        "city": "London",
+        "role": "Retail assistant",
+        "spot": "Oxford Street",
+        "payHourMin": 12.08,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-04",
+          "name": "Marcus Lim",
+          "inst": "KCL"
+        }
+      },
+      {
+        "id": "job-london-3",
+        "city": "London",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 12.65,
+        "payHourMax": 15,
+        "onCampus": true,
+        "sharedBy": {
+          "id": "amb-04",
+          "name": "Marcus Lim",
+          "inst": "KCL"
+        }
+      },
+      {
+        "id": "job-london-4",
+        "city": "London",
+        "role": "Private tutor (your best subject)",
+        "spot": "Oxford Street",
+        "payHourMin": 11.5,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-04",
+          "name": "Marcus Lim",
+          "inst": "KCL"
+        }
+      },
+      {
+        "id": "job-london-5",
+        "city": "London",
+        "role": "Restaurant server",
+        "spot": "Borough Market",
+        "payHourMin": 12.08,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-04",
+          "name": "Marcus Lim",
+          "inst": "KCL"
+        }
+      }
+    ],
+    "Manchester": [
+      {
+        "id": "job-manchester-1",
+        "city": "Manchester",
+        "role": "Café barista",
+        "spot": "Curry Mile",
+        "payHourMin": 11.5,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-07",
+          "name": "Zihan Wang",
+          "inst": "Manchester"
+        }
+      },
+      {
+        "id": "job-manchester-2",
+        "city": "Manchester",
+        "role": "Retail assistant",
+        "spot": "Manchester Arndale",
+        "payHourMin": 12.08,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-07",
+          "name": "Zihan Wang",
+          "inst": "Manchester"
+        }
+      },
+      {
+        "id": "job-manchester-3",
+        "city": "Manchester",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 12.65,
+        "payHourMax": 15,
+        "onCampus": true,
+        "sharedBy": {
+          "id": "amb-07",
+          "name": "Zihan Wang",
+          "inst": "Manchester"
+        }
+      },
+      {
+        "id": "job-manchester-4",
+        "city": "Manchester",
+        "role": "Private tutor (your best subject)",
+        "spot": "Manchester Arndale",
+        "payHourMin": 11.5,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-07",
+          "name": "Zihan Wang",
+          "inst": "Manchester"
+        }
+      },
+      {
+        "id": "job-manchester-5",
+        "city": "Manchester",
+        "role": "Restaurant server",
+        "spot": "Curry Mile",
+        "payHourMin": 12.08,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-07",
+          "name": "Zihan Wang",
+          "inst": "Manchester"
+        }
+      }
+    ],
+    "Edinburgh": [
+      {
+        "id": "job-edinburgh-1",
+        "city": "Edinburgh",
+        "role": "Café barista",
+        "spot": "Princes Street",
+        "payHourMin": 11.5,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-14",
+          "name": "Hui Min Teo",
+          "inst": "Edinburgh"
+        }
+      },
+      {
+        "id": "job-edinburgh-2",
+        "city": "Edinburgh",
+        "role": "Retail assistant",
+        "spot": "Princes Street",
+        "payHourMin": 12.08,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-14",
+          "name": "Hui Min Teo",
+          "inst": "Edinburgh"
+        }
+      },
+      {
+        "id": "job-edinburgh-3",
+        "city": "Edinburgh",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 12.65,
+        "payHourMax": 15,
+        "onCampus": true,
+        "sharedBy": {
+          "id": "amb-14",
+          "name": "Hui Min Teo",
+          "inst": "Edinburgh"
+        }
+      },
+      {
+        "id": "job-edinburgh-4",
+        "city": "Edinburgh",
+        "role": "Private tutor (your best subject)",
+        "spot": "Princes Street",
+        "payHourMin": 11.5,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-14",
+          "name": "Hui Min Teo",
+          "inst": "Edinburgh"
+        }
+      },
+      {
+        "id": "job-edinburgh-5",
+        "city": "Edinburgh",
+        "role": "Restaurant server",
+        "spot": "Princes Street",
+        "payHourMin": 12.08,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-14",
+          "name": "Hui Min Teo",
+          "inst": "Edinburgh"
+        }
+      }
+    ],
+    "Birmingham": [
+      {
+        "id": "job-birmingham-1",
+        "city": "Birmingham",
+        "role": "Café barista",
+        "spot": "Bullring & Grand Central",
+        "payHourMin": 11.5,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-birmingham-2",
+        "city": "Birmingham",
+        "role": "Retail assistant",
+        "spot": "Digbeth",
+        "payHourMin": 12.08,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-birmingham-3",
+        "city": "Birmingham",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 12.65,
+        "payHourMax": 15,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-birmingham-4",
+        "city": "Birmingham",
+        "role": "Private tutor (your best subject)",
+        "spot": "Digbeth",
+        "payHourMin": 11.5,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-birmingham-5",
+        "city": "Birmingham",
+        "role": "Restaurant server",
+        "spot": "Bullring & Grand Central",
+        "payHourMin": 12.08,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Leeds": [
+      {
+        "id": "job-leeds-1",
+        "city": "Leeds",
+        "role": "Café barista",
+        "spot": "Trinity Leeds",
+        "payHourMin": 11.5,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-leeds-2",
+        "city": "Leeds",
+        "role": "Retail assistant",
+        "spot": "Kirkgate Market",
+        "payHourMin": 12.08,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-leeds-3",
+        "city": "Leeds",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 12.65,
+        "payHourMax": 15,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-leeds-4",
+        "city": "Leeds",
+        "role": "Private tutor (your best subject)",
+        "spot": "Kirkgate Market",
+        "payHourMin": 11.5,
+        "payHourMax": 12.75,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-leeds-5",
+        "city": "Leeds",
+        "role": "Restaurant server",
+        "spot": "Trinity Leeds",
+        "payHourMin": 12.08,
+        "payHourMax": 13.87,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Singapore": [
+      {
+        "id": "job-singapore-1",
+        "city": "Singapore",
+        "role": "Café barista",
+        "spot": "Maxwell Food Centre",
+        "payHourMin": 10,
+        "payHourMax": 13.6,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-10",
+          "name": "Siti Rahmah",
+          "inst": "NUS"
+        }
+      },
+      {
+        "id": "job-singapore-2",
+        "city": "Singapore",
+        "role": "Retail assistant",
+        "spot": "Orchard Road",
+        "payHourMin": 10.5,
+        "payHourMax": 14.8,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-10",
+          "name": "Siti Rahmah",
+          "inst": "NUS"
+        }
+      },
+      {
+        "id": "job-singapore-3",
+        "city": "Singapore",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 11,
+        "payHourMax": 16,
+        "onCampus": true,
+        "sharedBy": {
+          "id": "amb-10",
+          "name": "Siti Rahmah",
+          "inst": "NUS"
+        }
+      },
+      {
+        "id": "job-singapore-4",
+        "city": "Singapore",
+        "role": "Private tutor (your best subject)",
+        "spot": "Orchard Road",
+        "payHourMin": 10,
+        "payHourMax": 13.6,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-10",
+          "name": "Siti Rahmah",
+          "inst": "NUS"
+        }
+      },
+      {
+        "id": "job-singapore-5",
+        "city": "Singapore",
+        "role": "Restaurant server",
+        "spot": "Maxwell Food Centre",
+        "payHourMin": 10.5,
+        "payHourMax": 14.8,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-10",
+          "name": "Siti Rahmah",
+          "inst": "NUS"
+        }
+      }
+    ],
+    "Auckland": [
+      {
+        "id": "job-auckland-1",
+        "city": "Auckland",
+        "role": "Café barista",
+        "spot": "Ponsonby Road",
+        "payHourMin": 23.5,
+        "payHourMax": 23.8,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-13",
+          "name": "Jia Le Ong",
+          "inst": "Auckland"
+        }
+      },
+      {
+        "id": "job-auckland-2",
+        "city": "Auckland",
+        "role": "Retail assistant",
+        "spot": "Queen Street",
+        "payHourMin": 24.68,
+        "payHourMax": 25.9,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-13",
+          "name": "Jia Le Ong",
+          "inst": "Auckland"
+        }
+      },
+      {
+        "id": "job-auckland-3",
+        "city": "Auckland",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 25.85,
+        "payHourMax": 28,
+        "onCampus": true,
+        "sharedBy": {
+          "id": "amb-13",
+          "name": "Jia Le Ong",
+          "inst": "Auckland"
+        }
+      },
+      {
+        "id": "job-auckland-4",
+        "city": "Auckland",
+        "role": "Private tutor (your best subject)",
+        "spot": "Queen Street",
+        "payHourMin": 23.5,
+        "payHourMax": 23.8,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-13",
+          "name": "Jia Le Ong",
+          "inst": "Auckland"
+        }
+      },
+      {
+        "id": "job-auckland-5",
+        "city": "Auckland",
+        "role": "Restaurant server",
+        "spot": "Ponsonby Road",
+        "payHourMin": 24.68,
+        "payHourMax": 25.9,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-13",
+          "name": "Jia Le Ong",
+          "inst": "Auckland"
+        }
+      }
+    ],
+    "Wellington": [
+      {
+        "id": "job-wellington-1",
+        "city": "Wellington",
+        "role": "Café barista",
+        "spot": "Cuba Street",
+        "payHourMin": 23.5,
+        "payHourMax": 23.8,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-wellington-2",
+        "city": "Wellington",
+        "role": "Retail assistant",
+        "spot": "Cuba Street",
+        "payHourMin": 24.68,
+        "payHourMax": 25.9,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-wellington-3",
+        "city": "Wellington",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 25.85,
+        "payHourMax": 28,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-wellington-4",
+        "city": "Wellington",
+        "role": "Private tutor (your best subject)",
+        "spot": "Cuba Street",
+        "payHourMin": 23.5,
+        "payHourMax": 23.8,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-wellington-5",
+        "city": "Wellington",
+        "role": "Restaurant server",
+        "spot": "Cuba Street",
+        "payHourMin": 24.68,
+        "payHourMax": 25.9,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Christchurch": [
+      {
+        "id": "job-christchurch-1",
+        "city": "Christchurch",
+        "role": "Café barista",
+        "spot": "Riverside Market",
+        "payHourMin": 23.5,
+        "payHourMax": 23.8,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-christchurch-2",
+        "city": "Christchurch",
+        "role": "Retail assistant",
+        "spot": "New Regent Street",
+        "payHourMin": 24.68,
+        "payHourMax": 25.9,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-christchurch-3",
+        "city": "Christchurch",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 25.85,
+        "payHourMax": 28,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-christchurch-4",
+        "city": "Christchurch",
+        "role": "Private tutor (your best subject)",
+        "spot": "New Regent Street",
+        "payHourMin": 23.5,
+        "payHourMax": 23.8,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-christchurch-5",
+        "city": "Christchurch",
+        "role": "Restaurant server",
+        "spot": "Riverside Market",
+        "payHourMin": 24.68,
+        "payHourMax": 25.9,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Dunedin": [
+      {
+        "id": "job-dunedin-1",
+        "city": "Dunedin",
+        "role": "Café barista",
+        "spot": "Otago Farmers Market",
+        "payHourMin": 23.5,
+        "payHourMax": 23.8,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-dunedin-2",
+        "city": "Dunedin",
+        "role": "Retail assistant",
+        "spot": "George Street",
+        "payHourMin": 24.68,
+        "payHourMax": 25.9,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-dunedin-3",
+        "city": "Dunedin",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 25.85,
+        "payHourMax": 28,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-dunedin-4",
+        "city": "Dunedin",
+        "role": "Private tutor (your best subject)",
+        "spot": "George Street",
+        "payHourMin": 23.5,
+        "payHourMax": 23.8,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-dunedin-5",
+        "city": "Dunedin",
+        "role": "Restaurant server",
+        "spot": "Otago Farmers Market",
+        "payHourMin": 24.68,
+        "payHourMax": 25.9,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Moscow": [
+      {
+        "id": "job-moscow-1",
+        "city": "Moscow",
+        "role": "Café barista",
+        "spot": "GUM",
+        "payHourMin": 350,
+        "payHourMax": 510,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-06",
+          "name": "Minh Anh Nguyen",
+          "inst": "MSU"
+        }
+      },
+      {
+        "id": "job-moscow-2",
+        "city": "Moscow",
+        "role": "Retail assistant",
+        "spot": "Arbat Street",
+        "payHourMin": 367.5,
+        "payHourMax": 555,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-06",
+          "name": "Minh Anh Nguyen",
+          "inst": "MSU"
+        }
+      },
+      {
+        "id": "job-moscow-3",
+        "city": "Moscow",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 385,
+        "payHourMax": 600,
+        "onCampus": true,
+        "sharedBy": {
+          "id": "amb-06",
+          "name": "Minh Anh Nguyen",
+          "inst": "MSU"
+        }
+      },
+      {
+        "id": "job-moscow-4",
+        "city": "Moscow",
+        "role": "Private tutor (your best subject)",
+        "spot": "Arbat Street",
+        "payHourMin": 350,
+        "payHourMax": 510,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-06",
+          "name": "Minh Anh Nguyen",
+          "inst": "MSU"
+        }
+      },
+      {
+        "id": "job-moscow-5",
+        "city": "Moscow",
+        "role": "Restaurant server",
+        "spot": "GUM",
+        "payHourMin": 367.5,
+        "payHourMax": 555,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-06",
+          "name": "Minh Anh Nguyen",
+          "inst": "MSU"
+        }
+      }
+    ],
+    "Saint Petersburg": [
+      {
+        "id": "job-saintpetersburg-1",
+        "city": "Saint Petersburg",
+        "role": "Café barista",
+        "spot": "Nevsky Prospekt",
+        "payHourMin": 350,
+        "payHourMax": 510,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-16",
+          "name": "Anastasia Kim",
+          "inst": "ITMO"
+        }
+      },
+      {
+        "id": "job-saintpetersburg-2",
+        "city": "Saint Petersburg",
+        "role": "Retail assistant",
+        "spot": "Rubinstein Street",
+        "payHourMin": 367.5,
+        "payHourMax": 555,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-16",
+          "name": "Anastasia Kim",
+          "inst": "ITMO"
+        }
+      },
+      {
+        "id": "job-saintpetersburg-3",
+        "city": "Saint Petersburg",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 385,
+        "payHourMax": 600,
+        "onCampus": true,
+        "sharedBy": {
+          "id": "amb-16",
+          "name": "Anastasia Kim",
+          "inst": "ITMO"
+        }
+      },
+      {
+        "id": "job-saintpetersburg-4",
+        "city": "Saint Petersburg",
+        "role": "Private tutor (your best subject)",
+        "spot": "Rubinstein Street",
+        "payHourMin": 350,
+        "payHourMax": 510,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-16",
+          "name": "Anastasia Kim",
+          "inst": "ITMO"
+        }
+      },
+      {
+        "id": "job-saintpetersburg-5",
+        "city": "Saint Petersburg",
+        "role": "Restaurant server",
+        "spot": "Nevsky Prospekt",
+        "payHourMin": 367.5,
+        "payHourMax": 555,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-16",
+          "name": "Anastasia Kim",
+          "inst": "ITMO"
+        }
+      }
+    ],
+    "Kazan": [
+      {
+        "id": "job-kazan-1",
+        "city": "Kazan",
+        "role": "Café barista",
+        "spot": "Bauman Street",
+        "payHourMin": 350,
+        "payHourMax": 510,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-kazan-2",
+        "city": "Kazan",
+        "role": "Retail assistant",
+        "spot": "Koltso Mall",
+        "payHourMin": 367.5,
+        "payHourMax": 555,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-kazan-3",
+        "city": "Kazan",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 385,
+        "payHourMax": 600,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-kazan-4",
+        "city": "Kazan",
+        "role": "Private tutor (your best subject)",
+        "spot": "Koltso Mall",
+        "payHourMin": 350,
+        "payHourMax": 510,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-kazan-5",
+        "city": "Kazan",
+        "role": "Restaurant server",
+        "spot": "Bauman Street",
+        "payHourMin": 367.5,
+        "payHourMax": 555,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Novosibirsk": [
+      {
+        "id": "job-novosibirsk-1",
+        "city": "Novosibirsk",
+        "role": "Café barista",
+        "spot": "Aura Mall",
+        "payHourMin": 350,
+        "payHourMax": 510,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-novosibirsk-2",
+        "city": "Novosibirsk",
+        "role": "Retail assistant",
+        "spot": "Aura Mall",
+        "payHourMin": 367.5,
+        "payHourMax": 555,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-novosibirsk-3",
+        "city": "Novosibirsk",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 385,
+        "payHourMax": 600,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-novosibirsk-4",
+        "city": "Novosibirsk",
+        "role": "Private tutor (your best subject)",
+        "spot": "Aura Mall",
+        "payHourMin": 350,
+        "payHourMax": 510,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-novosibirsk-5",
+        "city": "Novosibirsk",
+        "role": "Restaurant server",
+        "spot": "Aura Mall",
+        "payHourMin": 367.5,
+        "payHourMax": 555,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Boston": [
+      {
+        "id": "job-boston-1",
+        "city": "Boston",
+        "role": "Café barista",
+        "spot": "Quincy Market",
+        "payHourMin": 15,
+        "payHourMax": 18.7,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-boston-2",
+        "city": "Boston",
+        "role": "Retail assistant",
+        "spot": "Newbury Street",
+        "payHourMin": 15.75,
+        "payHourMax": 20.35,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-boston-3",
+        "city": "Boston",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 16.5,
+        "payHourMax": 22,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-boston-4",
+        "city": "Boston",
+        "role": "Private tutor (your best subject)",
+        "spot": "Newbury Street",
+        "payHourMin": 15,
+        "payHourMax": 18.7,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-boston-5",
+        "city": "Boston",
+        "role": "Restaurant server",
+        "spot": "Quincy Market",
+        "payHourMin": 15.75,
+        "payHourMax": 20.35,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "New York": [
+      {
+        "id": "job-newyork-1",
+        "city": "New York",
+        "role": "Café barista",
+        "spot": "Chelsea Market",
+        "payHourMin": 15,
+        "payHourMax": 18.7,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-17",
+          "name": "Grace Huang",
+          "inst": "NYU"
+        }
+      },
+      {
+        "id": "job-newyork-2",
+        "city": "New York",
+        "role": "Retail assistant",
+        "spot": "Fifth Avenue",
+        "payHourMin": 15.75,
+        "payHourMax": 20.35,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-17",
+          "name": "Grace Huang",
+          "inst": "NYU"
+        }
+      },
+      {
+        "id": "job-newyork-3",
+        "city": "New York",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 16.5,
+        "payHourMax": 22,
+        "onCampus": true,
+        "sharedBy": {
+          "id": "amb-17",
+          "name": "Grace Huang",
+          "inst": "NYU"
+        }
+      },
+      {
+        "id": "job-newyork-4",
+        "city": "New York",
+        "role": "Private tutor (your best subject)",
+        "spot": "Fifth Avenue",
+        "payHourMin": 15,
+        "payHourMax": 18.7,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-17",
+          "name": "Grace Huang",
+          "inst": "NYU"
+        }
+      },
+      {
+        "id": "job-newyork-5",
+        "city": "New York",
+        "role": "Restaurant server",
+        "spot": "Chelsea Market",
+        "payHourMin": 15.75,
+        "payHourMax": 20.35,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-17",
+          "name": "Grace Huang",
+          "inst": "NYU"
+        }
+      }
+    ],
+    "Los Angeles": [
+      {
+        "id": "job-losangeles-1",
+        "city": "Los Angeles",
+        "role": "Café barista",
+        "spot": "Grand Central Market",
+        "payHourMin": 15,
+        "payHourMax": 18.7,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-losangeles-2",
+        "city": "Los Angeles",
+        "role": "Retail assistant",
+        "spot": "The Grove",
+        "payHourMin": 15.75,
+        "payHourMax": 20.35,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-losangeles-3",
+        "city": "Los Angeles",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 16.5,
+        "payHourMax": 22,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-losangeles-4",
+        "city": "Los Angeles",
+        "role": "Private tutor (your best subject)",
+        "spot": "The Grove",
+        "payHourMin": 15,
+        "payHourMax": 18.7,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-losangeles-5",
+        "city": "Los Angeles",
+        "role": "Restaurant server",
+        "spot": "Grand Central Market",
+        "payHourMin": 15.75,
+        "payHourMax": 20.35,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Chicago": [
+      {
+        "id": "job-chicago-1",
+        "city": "Chicago",
+        "role": "Café barista",
+        "spot": "West Loop",
+        "payHourMin": 15,
+        "payHourMax": 18.7,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-chicago-2",
+        "city": "Chicago",
+        "role": "Retail assistant",
+        "spot": "Magnificent Mile",
+        "payHourMin": 15.75,
+        "payHourMax": 20.35,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-chicago-3",
+        "city": "Chicago",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 16.5,
+        "payHourMax": 22,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-chicago-4",
+        "city": "Chicago",
+        "role": "Private tutor (your best subject)",
+        "spot": "Magnificent Mile",
+        "payHourMin": 15,
+        "payHourMax": 18.7,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-chicago-5",
+        "city": "Chicago",
+        "role": "Restaurant server",
+        "spot": "West Loop",
+        "payHourMin": 15.75,
+        "payHourMax": 20.35,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Toronto": [
+      {
+        "id": "job-toronto-1",
+        "city": "Toronto",
+        "role": "Café barista",
+        "spot": "St. Lawrence Market",
+        "payHourMin": 16.5,
+        "payHourMax": 18.7,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-18",
+          "name": "Daniel Wong",
+          "inst": "UofT"
+        }
+      },
+      {
+        "id": "job-toronto-2",
+        "city": "Toronto",
+        "role": "Retail assistant",
+        "spot": "CF Toronto Eaton Centre",
+        "payHourMin": 17.33,
+        "payHourMax": 20.35,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-18",
+          "name": "Daniel Wong",
+          "inst": "UofT"
+        }
+      },
+      {
+        "id": "job-toronto-3",
+        "city": "Toronto",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 18.15,
+        "payHourMax": 22,
+        "onCampus": true,
+        "sharedBy": {
+          "id": "amb-18",
+          "name": "Daniel Wong",
+          "inst": "UofT"
+        }
+      },
+      {
+        "id": "job-toronto-4",
+        "city": "Toronto",
+        "role": "Private tutor (your best subject)",
+        "spot": "CF Toronto Eaton Centre",
+        "payHourMin": 16.5,
+        "payHourMax": 18.7,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-18",
+          "name": "Daniel Wong",
+          "inst": "UofT"
+        }
+      },
+      {
+        "id": "job-toronto-5",
+        "city": "Toronto",
+        "role": "Restaurant server",
+        "spot": "St. Lawrence Market",
+        "payHourMin": 17.33,
+        "payHourMax": 20.35,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-18",
+          "name": "Daniel Wong",
+          "inst": "UofT"
+        }
+      }
+    ],
+    "Vancouver": [
+      {
+        "id": "job-vancouver-1",
+        "city": "Vancouver",
+        "role": "Café barista",
+        "spot": "Granville Island",
+        "payHourMin": 16.5,
+        "payHourMax": 18.7,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-vancouver-2",
+        "city": "Vancouver",
+        "role": "Retail assistant",
+        "spot": "Robson Street",
+        "payHourMin": 17.33,
+        "payHourMax": 20.35,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-vancouver-3",
+        "city": "Vancouver",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 18.15,
+        "payHourMax": 22,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-vancouver-4",
+        "city": "Vancouver",
+        "role": "Private tutor (your best subject)",
+        "spot": "Robson Street",
+        "payHourMin": 16.5,
+        "payHourMax": 18.7,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-vancouver-5",
+        "city": "Vancouver",
+        "role": "Restaurant server",
+        "spot": "Granville Island",
+        "payHourMin": 17.33,
+        "payHourMax": 20.35,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Montreal": [
+      {
+        "id": "job-montreal-1",
+        "city": "Montreal",
+        "role": "Café barista",
+        "spot": "Jean-Talon Market",
+        "payHourMin": 16.5,
+        "payHourMax": 18.7,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-montreal-2",
+        "city": "Montreal",
+        "role": "Retail assistant",
+        "spot": "Sainte-Catherine Street",
+        "payHourMin": 17.33,
+        "payHourMax": 20.35,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-montreal-3",
+        "city": "Montreal",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 18.15,
+        "payHourMax": 22,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-montreal-4",
+        "city": "Montreal",
+        "role": "Private tutor (your best subject)",
+        "spot": "Sainte-Catherine Street",
+        "payHourMin": 16.5,
+        "payHourMax": 18.7,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-montreal-5",
+        "city": "Montreal",
+        "role": "Restaurant server",
+        "spot": "Jean-Talon Market",
+        "payHourMin": 17.33,
+        "payHourMax": 20.35,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Beijing": [
+      {
+        "id": "job-beijing-1",
+        "city": "Beijing",
+        "role": "Café barista",
+        "spot": "Wangfujing Street",
+        "payHourMin": 25,
+        "payHourMax": 51,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-19",
+          "name": "Xiao Chen",
+          "inst": "Tsinghua"
+        }
+      },
+      {
+        "id": "job-beijing-2",
+        "city": "Beijing",
+        "role": "Retail assistant",
+        "spot": "Wangfujing Street",
+        "payHourMin": 26.25,
+        "payHourMax": 55.5,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-19",
+          "name": "Xiao Chen",
+          "inst": "Tsinghua"
+        }
+      },
+      {
+        "id": "job-beijing-3",
+        "city": "Beijing",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 27.5,
+        "payHourMax": 60,
+        "onCampus": true,
+        "sharedBy": {
+          "id": "amb-19",
+          "name": "Xiao Chen",
+          "inst": "Tsinghua"
+        }
+      },
+      {
+        "id": "job-beijing-4",
+        "city": "Beijing",
+        "role": "Private tutor (your best subject)",
+        "spot": "Wangfujing Street",
+        "payHourMin": 25,
+        "payHourMax": 51,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-19",
+          "name": "Xiao Chen",
+          "inst": "Tsinghua"
+        }
+      },
+      {
+        "id": "job-beijing-5",
+        "city": "Beijing",
+        "role": "Restaurant server",
+        "spot": "Wangfujing Street",
+        "payHourMin": 26.25,
+        "payHourMax": 55.5,
+        "onCampus": false,
+        "sharedBy": {
+          "id": "amb-19",
+          "name": "Xiao Chen",
+          "inst": "Tsinghua"
+        }
+      }
+    ],
+    "Shanghai": [
+      {
+        "id": "job-shanghai-1",
+        "city": "Shanghai",
+        "role": "Café barista",
+        "spot": "Tianzifang",
+        "payHourMin": 25,
+        "payHourMax": 51,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-shanghai-2",
+        "city": "Shanghai",
+        "role": "Retail assistant",
+        "spot": "City God Temple food street",
+        "payHourMin": 26.25,
+        "payHourMax": 55.5,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-shanghai-3",
+        "city": "Shanghai",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 27.5,
+        "payHourMax": 60,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-shanghai-4",
+        "city": "Shanghai",
+        "role": "Private tutor (your best subject)",
+        "spot": "City God Temple food street",
+        "payHourMin": 25,
+        "payHourMax": 51,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-shanghai-5",
+        "city": "Shanghai",
+        "role": "Restaurant server",
+        "spot": "Tianzifang",
+        "payHourMin": 26.25,
+        "payHourMax": 55.5,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ],
+    "Guangzhou": [
+      {
+        "id": "job-guangzhou-1",
+        "city": "Guangzhou",
+        "role": "Café barista",
+        "spot": "Beijing Road",
+        "payHourMin": 25,
+        "payHourMax": 51,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-guangzhou-2",
+        "city": "Guangzhou",
+        "role": "Retail assistant",
+        "spot": "Taotaoju dim sum",
+        "payHourMin": 26.25,
+        "payHourMax": 55.5,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-guangzhou-3",
+        "city": "Guangzhou",
+        "role": "Campus library assistant",
+        "spot": null,
+        "payHourMin": 27.5,
+        "payHourMax": 60,
+        "onCampus": true,
+        "sharedBy": null
+      },
+      {
+        "id": "job-guangzhou-4",
+        "city": "Guangzhou",
+        "role": "Private tutor (your best subject)",
+        "spot": "Taotaoju dim sum",
+        "payHourMin": 25,
+        "payHourMax": 51,
+        "onCampus": false,
+        "sharedBy": null
+      },
+      {
+        "id": "job-guangzhou-5",
+        "city": "Guangzhou",
+        "role": "Restaurant server",
+        "spot": "Beijing Road",
+        "payHourMin": 26.25,
+        "payHourMax": 55.5,
+        "onCampus": false,
+        "sharedBy": null
+      }
+    ]
+  },
+  "housingByCity": {
+    "Sydney": [
+      {
+        "id": "home-sydney-1",
+        "city": "Sydney",
+        "kind": "dorm",
+        "priceMonthly": 1450,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-02",
+          "name": "Wei Jun Tan",
+          "inst": "UNSW"
+        }
+      },
+      {
+        "id": "home-sydney-2",
+        "city": "Sydney",
+        "kind": "roomSuburb",
+        "priceMonthly": 1200,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-02",
+          "name": "Wei Jun Tan",
+          "inst": "UNSW"
+        }
+      },
+      {
+        "id": "home-sydney-3",
+        "city": "Sydney",
+        "kind": "roomCentral",
+        "priceMonthly": 1700,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-02",
+          "name": "Wei Jun Tan",
+          "inst": "UNSW"
+        }
+      },
+      {
+        "id": "home-sydney-4",
+        "city": "Sydney",
+        "kind": "studio",
+        "priceMonthly": 2100,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-02",
+          "name": "Wei Jun Tan",
+          "inst": "UNSW"
+        }
+      }
+    ],
+    "Melbourne": [
+      {
+        "id": "home-melbourne-1",
+        "city": "Melbourne",
+        "kind": "dorm",
+        "priceMonthly": 1250,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-01",
+          "name": "Aina Zulkifli",
+          "inst": "Monash"
+        }
+      },
+      {
+        "id": "home-melbourne-2",
+        "city": "Melbourne",
+        "kind": "roomSuburb",
+        "priceMonthly": 1000,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-01",
+          "name": "Aina Zulkifli",
+          "inst": "Monash"
+        }
+      },
+      {
+        "id": "home-melbourne-3",
+        "city": "Melbourne",
+        "kind": "roomCentral",
+        "priceMonthly": 1500,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-01",
+          "name": "Aina Zulkifli",
+          "inst": "Monash"
+        }
+      },
+      {
+        "id": "home-melbourne-4",
+        "city": "Melbourne",
+        "kind": "studio",
+        "priceMonthly": 1900,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-01",
+          "name": "Aina Zulkifli",
+          "inst": "Monash"
+        }
+      }
+    ],
+    "Brisbane": [
+      {
+        "id": "home-brisbane-1",
+        "city": "Brisbane",
+        "kind": "dorm",
+        "priceMonthly": 1150,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-brisbane-2",
+        "city": "Brisbane",
+        "kind": "roomSuburb",
+        "priceMonthly": 950,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-brisbane-3",
+        "city": "Brisbane",
+        "kind": "roomCentral",
+        "priceMonthly": 1350,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-brisbane-4",
+        "city": "Brisbane",
+        "kind": "studio",
+        "priceMonthly": 1700,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Perth": [
+      {
+        "id": "home-perth-1",
+        "city": "Perth",
+        "kind": "dorm",
+        "priceMonthly": 1100,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-perth-2",
+        "city": "Perth",
+        "kind": "roomSuburb",
+        "priceMonthly": 900,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-perth-3",
+        "city": "Perth",
+        "kind": "roomCentral",
+        "priceMonthly": 1250,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-perth-4",
+        "city": "Perth",
+        "kind": "studio",
+        "priceMonthly": 1550,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Kuala Lumpur": [
+      {
+        "id": "home-kualalumpur-1",
+        "city": "Kuala Lumpur",
+        "kind": "dorm",
+        "priceMonthly": 1050,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-05",
+          "name": "Putri Wijaya",
+          "inst": "UM"
+        }
+      },
+      {
+        "id": "home-kualalumpur-2",
+        "city": "Kuala Lumpur",
+        "kind": "roomSuburb",
+        "priceMonthly": 800,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-05",
+          "name": "Putri Wijaya",
+          "inst": "UM"
+        }
+      },
+      {
+        "id": "home-kualalumpur-3",
+        "city": "Kuala Lumpur",
+        "kind": "roomCentral",
+        "priceMonthly": 1300,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-05",
+          "name": "Putri Wijaya",
+          "inst": "UM"
+        }
+      },
+      {
+        "id": "home-kualalumpur-4",
+        "city": "Kuala Lumpur",
+        "kind": "studio",
+        "priceMonthly": 1500,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-05",
+          "name": "Putri Wijaya",
+          "inst": "UM"
+        }
+      }
+    ],
+    "Penang": [
+      {
+        "id": "home-penang-1",
+        "city": "Penang",
+        "kind": "dorm",
+        "priceMonthly": 850,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-penang-2",
+        "city": "Penang",
+        "kind": "roomSuburb",
+        "priceMonthly": 650,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-penang-3",
+        "city": "Penang",
+        "kind": "roomCentral",
+        "priceMonthly": 1000,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-penang-4",
+        "city": "Penang",
+        "kind": "studio",
+        "priceMonthly": 1200,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Cyberjaya": [
+      {
+        "id": "home-cyberjaya-1",
+        "city": "Cyberjaya",
+        "kind": "dorm",
+        "priceMonthly": 850,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-15",
+          "name": "Xin Yi Loh",
+          "inst": "MMU"
+        }
+      },
+      {
+        "id": "home-cyberjaya-2",
+        "city": "Cyberjaya",
+        "kind": "roomSuburb",
+        "priceMonthly": 700,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-15",
+          "name": "Xin Yi Loh",
+          "inst": "MMU"
+        }
+      },
+      {
+        "id": "home-cyberjaya-3",
+        "city": "Cyberjaya",
+        "kind": "roomCentral",
+        "priceMonthly": 1000,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-15",
+          "name": "Xin Yi Loh",
+          "inst": "MMU"
+        }
+      },
+      {
+        "id": "home-cyberjaya-4",
+        "city": "Cyberjaya",
+        "kind": "studio",
+        "priceMonthly": 1300,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-15",
+          "name": "Xin Yi Loh",
+          "inst": "MMU"
+        }
+      }
+    ],
+    "Johor Bahru": [
+      {
+        "id": "home-johorbahru-1",
+        "city": "Johor Bahru",
+        "kind": "dorm",
+        "priceMonthly": 750,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-johorbahru-2",
+        "city": "Johor Bahru",
+        "kind": "roomSuburb",
+        "priceMonthly": 600,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-johorbahru-3",
+        "city": "Johor Bahru",
+        "kind": "roomCentral",
+        "priceMonthly": 900,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-johorbahru-4",
+        "city": "Johor Bahru",
+        "kind": "studio",
+        "priceMonthly": 1100,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Taipei": [
+      {
+        "id": "home-taipei-1",
+        "city": "Taipei",
+        "kind": "dorm",
+        "priceMonthly": 11500,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-09",
+          "name": "Chia-Hao Chen",
+          "inst": "NTU"
+        }
+      },
+      {
+        "id": "home-taipei-2",
+        "city": "Taipei",
+        "kind": "roomSuburb",
+        "priceMonthly": 9000,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-09",
+          "name": "Chia-Hao Chen",
+          "inst": "NTU"
+        }
+      },
+      {
+        "id": "home-taipei-3",
+        "city": "Taipei",
+        "kind": "roomCentral",
+        "priceMonthly": 14000,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-09",
+          "name": "Chia-Hao Chen",
+          "inst": "NTU"
+        }
+      },
+      {
+        "id": "home-taipei-4",
+        "city": "Taipei",
+        "kind": "studio",
+        "priceMonthly": 15000,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-09",
+          "name": "Chia-Hao Chen",
+          "inst": "NTU"
+        }
+      }
+    ],
+    "Hsinchu": [
+      {
+        "id": "home-hsinchu-1",
+        "city": "Hsinchu",
+        "kind": "dorm",
+        "priceMonthly": 8500,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-hsinchu-2",
+        "city": "Hsinchu",
+        "kind": "roomSuburb",
+        "priceMonthly": 7000,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-hsinchu-3",
+        "city": "Hsinchu",
+        "kind": "roomCentral",
+        "priceMonthly": 10000,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-hsinchu-4",
+        "city": "Hsinchu",
+        "kind": "studio",
+        "priceMonthly": 11000,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Taichung": [
+      {
+        "id": "home-taichung-1",
+        "city": "Taichung",
+        "kind": "dorm",
+        "priceMonthly": 8000,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-taichung-2",
+        "city": "Taichung",
+        "kind": "roomSuburb",
+        "priceMonthly": 6500,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-taichung-3",
+        "city": "Taichung",
+        "kind": "roomCentral",
+        "priceMonthly": 9500,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-taichung-4",
+        "city": "Taichung",
+        "kind": "studio",
+        "priceMonthly": 10000,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Kaohsiung": [
+      {
+        "id": "home-kaohsiung-1",
+        "city": "Kaohsiung",
+        "kind": "dorm",
+        "priceMonthly": 7500,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-kaohsiung-2",
+        "city": "Kaohsiung",
+        "kind": "roomSuburb",
+        "priceMonthly": 6000,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-kaohsiung-3",
+        "city": "Kaohsiung",
+        "kind": "roomCentral",
+        "priceMonthly": 9000,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-kaohsiung-4",
+        "city": "Kaohsiung",
+        "kind": "studio",
+        "priceMonthly": 9500,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "London": [
+      {
+        "id": "home-london-1",
+        "city": "London",
+        "kind": "dorm",
+        "priceMonthly": 1000,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-04",
+          "name": "Marcus Lim",
+          "inst": "KCL"
+        }
+      },
+      {
+        "id": "home-london-2",
+        "city": "London",
+        "kind": "roomSuburb",
+        "priceMonthly": 800,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-04",
+          "name": "Marcus Lim",
+          "inst": "KCL"
+        }
+      },
+      {
+        "id": "home-london-3",
+        "city": "London",
+        "kind": "roomCentral",
+        "priceMonthly": 1200,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-04",
+          "name": "Marcus Lim",
+          "inst": "KCL"
+        }
+      },
+      {
+        "id": "home-london-4",
+        "city": "London",
+        "kind": "studio",
+        "priceMonthly": 1400,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-04",
+          "name": "Marcus Lim",
+          "inst": "KCL"
+        }
+      }
+    ],
+    "Manchester": [
+      {
+        "id": "home-manchester-1",
+        "city": "Manchester",
+        "kind": "dorm",
+        "priceMonthly": 650,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-07",
+          "name": "Zihan Wang",
+          "inst": "Manchester"
+        }
+      },
+      {
+        "id": "home-manchester-2",
+        "city": "Manchester",
+        "kind": "roomSuburb",
+        "priceMonthly": 550,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-07",
+          "name": "Zihan Wang",
+          "inst": "Manchester"
+        }
+      },
+      {
+        "id": "home-manchester-3",
+        "city": "Manchester",
+        "kind": "roomCentral",
+        "priceMonthly": 750,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-07",
+          "name": "Zihan Wang",
+          "inst": "Manchester"
+        }
+      },
+      {
+        "id": "home-manchester-4",
+        "city": "Manchester",
+        "kind": "studio",
+        "priceMonthly": 900,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-07",
+          "name": "Zihan Wang",
+          "inst": "Manchester"
+        }
+      }
+    ],
+    "Edinburgh": [
+      {
+        "id": "home-edinburgh-1",
+        "city": "Edinburgh",
+        "kind": "dorm",
+        "priceMonthly": 700,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-14",
+          "name": "Hui Min Teo",
+          "inst": "Edinburgh"
+        }
+      },
+      {
+        "id": "home-edinburgh-2",
+        "city": "Edinburgh",
+        "kind": "roomSuburb",
+        "priceMonthly": 600,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-14",
+          "name": "Hui Min Teo",
+          "inst": "Edinburgh"
+        }
+      },
+      {
+        "id": "home-edinburgh-3",
+        "city": "Edinburgh",
+        "kind": "roomCentral",
+        "priceMonthly": 800,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-14",
+          "name": "Hui Min Teo",
+          "inst": "Edinburgh"
+        }
+      },
+      {
+        "id": "home-edinburgh-4",
+        "city": "Edinburgh",
+        "kind": "studio",
+        "priceMonthly": 950,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-14",
+          "name": "Hui Min Teo",
+          "inst": "Edinburgh"
+        }
+      }
+    ],
+    "Birmingham": [
+      {
+        "id": "home-birmingham-1",
+        "city": "Birmingham",
+        "kind": "dorm",
+        "priceMonthly": 600,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-birmingham-2",
+        "city": "Birmingham",
+        "kind": "roomSuburb",
+        "priceMonthly": 500,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-birmingham-3",
+        "city": "Birmingham",
+        "kind": "roomCentral",
+        "priceMonthly": 700,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-birmingham-4",
+        "city": "Birmingham",
+        "kind": "studio",
+        "priceMonthly": 850,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Leeds": [
+      {
+        "id": "home-leeds-1",
+        "city": "Leeds",
+        "kind": "dorm",
+        "priceMonthly": 550,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-leeds-2",
+        "city": "Leeds",
+        "kind": "roomSuburb",
+        "priceMonthly": 480,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-leeds-3",
+        "city": "Leeds",
+        "kind": "roomCentral",
+        "priceMonthly": 650,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-leeds-4",
+        "city": "Leeds",
+        "kind": "studio",
+        "priceMonthly": 800,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Singapore": [
+      {
+        "id": "home-singapore-1",
+        "city": "Singapore",
+        "kind": "dorm",
+        "priceMonthly": 1350,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-10",
+          "name": "Siti Rahmah",
+          "inst": "NUS"
+        }
+      },
+      {
+        "id": "home-singapore-2",
+        "city": "Singapore",
+        "kind": "roomSuburb",
+        "priceMonthly": 1100,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-10",
+          "name": "Siti Rahmah",
+          "inst": "NUS"
+        }
+      },
+      {
+        "id": "home-singapore-3",
+        "city": "Singapore",
+        "kind": "roomCentral",
+        "priceMonthly": 1600,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-10",
+          "name": "Siti Rahmah",
+          "inst": "NUS"
+        }
+      },
+      {
+        "id": "home-singapore-4",
+        "city": "Singapore",
+        "kind": "studio",
+        "priceMonthly": 2100,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-10",
+          "name": "Siti Rahmah",
+          "inst": "NUS"
+        }
+      }
+    ],
+    "Auckland": [
+      {
+        "id": "home-auckland-1",
+        "city": "Auckland",
+        "kind": "dorm",
+        "priceMonthly": 1150,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-13",
+          "name": "Jia Le Ong",
+          "inst": "Auckland"
+        }
+      },
+      {
+        "id": "home-auckland-2",
+        "city": "Auckland",
+        "kind": "roomSuburb",
+        "priceMonthly": 950,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-13",
+          "name": "Jia Le Ong",
+          "inst": "Auckland"
+        }
+      },
+      {
+        "id": "home-auckland-3",
+        "city": "Auckland",
+        "kind": "roomCentral",
+        "priceMonthly": 1300,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-13",
+          "name": "Jia Le Ong",
+          "inst": "Auckland"
+        }
+      },
+      {
+        "id": "home-auckland-4",
+        "city": "Auckland",
+        "kind": "studio",
+        "priceMonthly": 1650,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-13",
+          "name": "Jia Le Ong",
+          "inst": "Auckland"
+        }
+      }
+    ],
+    "Wellington": [
+      {
+        "id": "home-wellington-1",
+        "city": "Wellington",
+        "kind": "dorm",
+        "priceMonthly": 1000,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-wellington-2",
+        "city": "Wellington",
+        "kind": "roomSuburb",
+        "priceMonthly": 850,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-wellington-3",
+        "city": "Wellington",
+        "kind": "roomCentral",
+        "priceMonthly": 1150,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-wellington-4",
+        "city": "Wellington",
+        "kind": "studio",
+        "priceMonthly": 1500,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Christchurch": [
+      {
+        "id": "home-christchurch-1",
+        "city": "Christchurch",
+        "kind": "dorm",
+        "priceMonthly": 900,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-christchurch-2",
+        "city": "Christchurch",
+        "kind": "roomSuburb",
+        "priceMonthly": 750,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-christchurch-3",
+        "city": "Christchurch",
+        "kind": "roomCentral",
+        "priceMonthly": 1000,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-christchurch-4",
+        "city": "Christchurch",
+        "kind": "studio",
+        "priceMonthly": 1300,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Dunedin": [
+      {
+        "id": "home-dunedin-1",
+        "city": "Dunedin",
+        "kind": "dorm",
+        "priceMonthly": 750,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-dunedin-2",
+        "city": "Dunedin",
+        "kind": "roomSuburb",
+        "priceMonthly": 650,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-dunedin-3",
+        "city": "Dunedin",
+        "kind": "roomCentral",
+        "priceMonthly": 850,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-dunedin-4",
+        "city": "Dunedin",
+        "kind": "studio",
+        "priceMonthly": 1100,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Moscow": [
+      {
+        "id": "home-moscow-1",
+        "city": "Moscow",
+        "kind": "dorm",
+        "priceMonthly": 37500,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-06",
+          "name": "Minh Anh Nguyen",
+          "inst": "MSU"
+        }
+      },
+      {
+        "id": "home-moscow-2",
+        "city": "Moscow",
+        "kind": "roomSuburb",
+        "priceMonthly": 30000,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-06",
+          "name": "Minh Anh Nguyen",
+          "inst": "MSU"
+        }
+      },
+      {
+        "id": "home-moscow-3",
+        "city": "Moscow",
+        "kind": "roomCentral",
+        "priceMonthly": 45000,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-06",
+          "name": "Minh Anh Nguyen",
+          "inst": "MSU"
+        }
+      },
+      {
+        "id": "home-moscow-4",
+        "city": "Moscow",
+        "kind": "studio",
+        "priceMonthly": 50000,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-06",
+          "name": "Minh Anh Nguyen",
+          "inst": "MSU"
+        }
+      }
+    ],
+    "Saint Petersburg": [
+      {
+        "id": "home-saintpetersburg-1",
+        "city": "Saint Petersburg",
+        "kind": "dorm",
+        "priceMonthly": 27000,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-16",
+          "name": "Anastasia Kim",
+          "inst": "ITMO"
+        }
+      },
+      {
+        "id": "home-saintpetersburg-2",
+        "city": "Saint Petersburg",
+        "kind": "roomSuburb",
+        "priceMonthly": 22000,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-16",
+          "name": "Anastasia Kim",
+          "inst": "ITMO"
+        }
+      },
+      {
+        "id": "home-saintpetersburg-3",
+        "city": "Saint Petersburg",
+        "kind": "roomCentral",
+        "priceMonthly": 32000,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-16",
+          "name": "Anastasia Kim",
+          "inst": "ITMO"
+        }
+      },
+      {
+        "id": "home-saintpetersburg-4",
+        "city": "Saint Petersburg",
+        "kind": "studio",
+        "priceMonthly": 38000,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-16",
+          "name": "Anastasia Kim",
+          "inst": "ITMO"
+        }
+      }
+    ],
+    "Kazan": [
+      {
+        "id": "home-kazan-1",
+        "city": "Kazan",
+        "kind": "dorm",
+        "priceMonthly": 18500,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-kazan-2",
+        "city": "Kazan",
+        "kind": "roomSuburb",
+        "priceMonthly": 15000,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-kazan-3",
+        "city": "Kazan",
+        "kind": "roomCentral",
+        "priceMonthly": 22000,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-kazan-4",
+        "city": "Kazan",
+        "kind": "studio",
+        "priceMonthly": 26000,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Novosibirsk": [
+      {
+        "id": "home-novosibirsk-1",
+        "city": "Novosibirsk",
+        "kind": "dorm",
+        "priceMonthly": 16000,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-novosibirsk-2",
+        "city": "Novosibirsk",
+        "kind": "roomSuburb",
+        "priceMonthly": 13000,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-novosibirsk-3",
+        "city": "Novosibirsk",
+        "kind": "roomCentral",
+        "priceMonthly": 19000,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-novosibirsk-4",
+        "city": "Novosibirsk",
+        "kind": "studio",
+        "priceMonthly": 23000,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Boston": [
+      {
+        "id": "home-boston-1",
+        "city": "Boston",
+        "kind": "dorm",
+        "priceMonthly": 1300,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-boston-2",
+        "city": "Boston",
+        "kind": "roomSuburb",
+        "priceMonthly": 1100,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-boston-3",
+        "city": "Boston",
+        "kind": "roomCentral",
+        "priceMonthly": 1500,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-boston-4",
+        "city": "Boston",
+        "kind": "studio",
+        "priceMonthly": 2400,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "New York": [
+      {
+        "id": "home-newyork-1",
+        "city": "New York",
+        "kind": "dorm",
+        "priceMonthly": 1550,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-17",
+          "name": "Grace Huang",
+          "inst": "NYU"
+        }
+      },
+      {
+        "id": "home-newyork-2",
+        "city": "New York",
+        "kind": "roomSuburb",
+        "priceMonthly": 1300,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-17",
+          "name": "Grace Huang",
+          "inst": "NYU"
+        }
+      },
+      {
+        "id": "home-newyork-3",
+        "city": "New York",
+        "kind": "roomCentral",
+        "priceMonthly": 1800,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-17",
+          "name": "Grace Huang",
+          "inst": "NYU"
+        }
+      },
+      {
+        "id": "home-newyork-4",
+        "city": "New York",
+        "kind": "studio",
+        "priceMonthly": 2800,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-17",
+          "name": "Grace Huang",
+          "inst": "NYU"
+        }
+      }
+    ],
+    "Los Angeles": [
+      {
+        "id": "home-losangeles-1",
+        "city": "Los Angeles",
+        "kind": "dorm",
+        "priceMonthly": 1300,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-losangeles-2",
+        "city": "Los Angeles",
+        "kind": "roomSuburb",
+        "priceMonthly": 1100,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-losangeles-3",
+        "city": "Los Angeles",
+        "kind": "roomCentral",
+        "priceMonthly": 1500,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-losangeles-4",
+        "city": "Los Angeles",
+        "kind": "studio",
+        "priceMonthly": 2200,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Chicago": [
+      {
+        "id": "home-chicago-1",
+        "city": "Chicago",
+        "kind": "dorm",
+        "priceMonthly": 1050,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-chicago-2",
+        "city": "Chicago",
+        "kind": "roomSuburb",
+        "priceMonthly": 900,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-chicago-3",
+        "city": "Chicago",
+        "kind": "roomCentral",
+        "priceMonthly": 1200,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-chicago-4",
+        "city": "Chicago",
+        "kind": "studio",
+        "priceMonthly": 1800,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Toronto": [
+      {
+        "id": "home-toronto-1",
+        "city": "Toronto",
+        "kind": "dorm",
+        "priceMonthly": 1200,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-18",
+          "name": "Daniel Wong",
+          "inst": "UofT"
+        }
+      },
+      {
+        "id": "home-toronto-2",
+        "city": "Toronto",
+        "kind": "roomSuburb",
+        "priceMonthly": 1000,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-18",
+          "name": "Daniel Wong",
+          "inst": "UofT"
+        }
+      },
+      {
+        "id": "home-toronto-3",
+        "city": "Toronto",
+        "kind": "roomCentral",
+        "priceMonthly": 1400,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-18",
+          "name": "Daniel Wong",
+          "inst": "UofT"
+        }
+      },
+      {
+        "id": "home-toronto-4",
+        "city": "Toronto",
+        "kind": "studio",
+        "priceMonthly": 1900,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-18",
+          "name": "Daniel Wong",
+          "inst": "UofT"
+        }
+      }
+    ],
+    "Vancouver": [
+      {
+        "id": "home-vancouver-1",
+        "city": "Vancouver",
+        "kind": "dorm",
+        "priceMonthly": 1250,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-vancouver-2",
+        "city": "Vancouver",
+        "kind": "roomSuburb",
+        "priceMonthly": 1050,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-vancouver-3",
+        "city": "Vancouver",
+        "kind": "roomCentral",
+        "priceMonthly": 1450,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-vancouver-4",
+        "city": "Vancouver",
+        "kind": "studio",
+        "priceMonthly": 2000,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Montreal": [
+      {
+        "id": "home-montreal-1",
+        "city": "Montreal",
+        "kind": "dorm",
+        "priceMonthly": 850,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-montreal-2",
+        "city": "Montreal",
+        "kind": "roomSuburb",
+        "priceMonthly": 700,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-montreal-3",
+        "city": "Montreal",
+        "kind": "roomCentral",
+        "priceMonthly": 950,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-montreal-4",
+        "city": "Montreal",
+        "kind": "studio",
+        "priceMonthly": 1300,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Beijing": [
+      {
+        "id": "home-beijing-1",
+        "city": "Beijing",
+        "kind": "dorm",
+        "priceMonthly": 3750,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-19",
+          "name": "Xiao Chen",
+          "inst": "Tsinghua"
+        }
+      },
+      {
+        "id": "home-beijing-2",
+        "city": "Beijing",
+        "kind": "roomSuburb",
+        "priceMonthly": 3000,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": {
+          "id": "amb-19",
+          "name": "Xiao Chen",
+          "inst": "Tsinghua"
+        }
+      },
+      {
+        "id": "home-beijing-3",
+        "city": "Beijing",
+        "kind": "roomCentral",
+        "priceMonthly": 4500,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-19",
+          "name": "Xiao Chen",
+          "inst": "Tsinghua"
+        }
+      },
+      {
+        "id": "home-beijing-4",
+        "city": "Beijing",
+        "kind": "studio",
+        "priceMonthly": 5500,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": {
+          "id": "amb-19",
+          "name": "Xiao Chen",
+          "inst": "Tsinghua"
+        }
+      }
+    ],
+    "Shanghai": [
+      {
+        "id": "home-shanghai-1",
+        "city": "Shanghai",
+        "kind": "dorm",
+        "priceMonthly": 4100,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-shanghai-2",
+        "city": "Shanghai",
+        "kind": "roomSuburb",
+        "priceMonthly": 3200,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-shanghai-3",
+        "city": "Shanghai",
+        "kind": "roomCentral",
+        "priceMonthly": 5000,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-shanghai-4",
+        "city": "Shanghai",
+        "kind": "studio",
+        "priceMonthly": 6000,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ],
+    "Guangzhou": [
+      {
+        "id": "home-guangzhou-1",
+        "city": "Guangzhou",
+        "kind": "dorm",
+        "priceMonthly": 2700,
+        "minutesToCampus": 5,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-guangzhou-2",
+        "city": "Guangzhou",
+        "kind": "roomSuburb",
+        "priceMonthly": 2200,
+        "minutesToCampus": 25,
+        "verified": true,
+        "sharedBy": null
+      },
+      {
+        "id": "home-guangzhou-3",
+        "city": "Guangzhou",
+        "kind": "roomCentral",
+        "priceMonthly": 3200,
+        "minutesToCampus": 12,
+        "verified": false,
+        "sharedBy": null
+      },
+      {
+        "id": "home-guangzhou-4",
+        "city": "Guangzhou",
+        "kind": "studio",
+        "priceMonthly": 4000,
+        "minutesToCampus": 20,
+        "verified": false,
+        "sharedBy": null
+      }
+    ]
+  },
+  "carsByCountry": {
+    "AU": {
+      "country": "AU",
+      "currency": "AUD",
+      "usedCar": [
+        8000,
+        18000
+      ],
+      "rentalDay": [
+        45,
+        80
+      ],
+      "note": "An overseas licence works at first; rules differ by state. Weekend car-shares are the student favourite."
+    },
+    "MY": {
+      "country": "MY",
+      "currency": "MYR",
+      "usedCar": [
+        15000,
+        35000
+      ],
+      "rentalDay": [
+        80,
+        150
+      ],
+      "note": "Grab is cheap and everywhere — most students skip owning a car."
+    },
+    "TW": {
+      "country": "TW",
+      "currency": "TWD",
+      "usedCar": [
+        80000,
+        200000
+      ],
+      "rentalDay": [
+        1500,
+        2500
+      ],
+      "note": "Scooter culture: you need a local licence, and helmets are non-negotiable."
+    },
+    "GB": {
+      "country": "GB",
+      "currency": "GBP",
+      "usedCar": [
+        3000,
+        8000
+      ],
+      "rentalDay": [
+        35,
+        60
+      ],
+      "note": "Insurance for young drivers is brutal — students live on trains and buses."
+    },
+    "SG": {
+      "country": "SG",
+      "currency": "SGD",
+      "usedCar": null,
+      "rentalDay": [
+        80,
+        150
+      ],
+      "note": "COE makes cars luxury items — the MRT reaches every campus."
+    },
+    "NZ": {
+      "country": "NZ",
+      "currency": "NZD",
+      "usedCar": [
+        4000,
+        10000
+      ],
+      "rentalDay": [
+        40,
+        70
+      ],
+      "note": "Cheap used cars everywhere; convert your licence within 12 months."
+    },
+    "RU": {
+      "country": "RU",
+      "currency": "RUB",
+      "usedCar": [
+        400000,
+        900000
+      ],
+      "rentalDay": [
+        2500,
+        4500
+      ],
+      "note": "The metro beats driving in Moscow and St Petersburg."
+    },
+    "US": {
+      "country": "US",
+      "currency": "USD",
+      "usedCar": [
+        6000,
+        15000
+      ],
+      "rentalDay": [
+        40,
+        80
+      ],
+      "note": "A car helps in Los Angeles; Boston, New York and Chicago transit is enough."
+    },
+    "CA": {
+      "country": "CA",
+      "currency": "CAD",
+      "usedCar": [
+        7000,
+        16000
+      ],
+      "rentalDay": [
+        45,
+        85
+      ],
+      "note": "Winter tyres are law in parts of Canada; student transit passes are discounted."
+    },
+    "CN": {
+      "country": "CN",
+      "currency": "CNY",
+      "usedCar": [
+        40000,
+        100000
+      ],
+      "rentalDay": [
+        200,
+        400
+      ],
+      "note": "Foreign licences need local conversion — DiDi and the metro cover everything."
+    }
+  }
+}

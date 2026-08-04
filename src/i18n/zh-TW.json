@@ -441,7 +441,7 @@
     "emptyMates": "接受錄取後，同期入學的同學會出現在這裡。",
     "emptyEvents": "附近暫時沒有活動。",
     "arrivalTitle": "落地服務",
-    "arrivalTeaser": "住宿、工作、用車與支援——即將上線。",
+    "arrivalTeaser": "兼職、租屋、用車與攻略——來自已在當地的學生。",
     "you": "我"
   },
   "arrival": {
@@ -601,5 +601,29 @@
     "university": "大學",
     "college": "學院",
     "institute": "專業學院"
+  },
+  "life": {
+    "title": "留學生活",
+    "subtitle": "兼職、租屋、用車和在地攻略——由已在當地的學長姊分享。",
+    "safetyTitle": "安全第一",
+    "safetyBody": "{{country}}緊急電話：{{number}}。這裡的建議來自已驗證的在校學生；條目為原型參考資料——看房和面試請務必當面進行。",
+    "safetyBodyNoCountry": "這裡的建議來自已驗證的在校學生；條目為原型參考資料。",
+    "jobsTitle": "兼職工作",
+    "jobsCap": "學生簽證上限：學期內每週 {{hours}} 小時",
+    "onCampus": "校內",
+    "near": "{{spot}}附近",
+    "perHour": "/小時",
+    "housingTitle": "租屋選擇",
+    "kind_dorm": "校內宿舍",
+    "kind_roomSuburb": "合租房間——郊區",
+    "kind_roomCentral": "合租房間——市中心",
+    "kind_studio": "套房",
+    "minToCampus": "距學校 {{count}} 分鐘",
+    "verifiedListing": "已驗證房源",
+    "wheelsTitle": "用車與出行",
+    "usedCar": "二手車",
+    "rentalDay": "租車/天",
+    "sharedBy": "{{name}} 分享 · {{inst}} 在校生",
+    "indicative": "原型參考資料——正式上線後接入合作方與真實房源。"
   }
 }

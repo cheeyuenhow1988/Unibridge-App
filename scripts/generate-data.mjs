@@ -1077,6 +1077,74 @@ const FLIGHTS = {
 };
 const flights = { currency: 'USD', roundTrip: true, fares: FLIGHTS };
 
+// ------------------------------------------------------------- student life
+// Jobs, rooms, wheels and safety per study city — every listing is shared by
+// a real ambassador student from that city where one exists. Pay and prices
+// are indicative 2026 figures in local currency.
+const WAGES = { AU: [24, 32], MY: [9, 15], TW: [190, 250], GB: [11.5, 15], SG: [10, 16], NZ: [23.5, 28], RU: [350, 600], US: [15, 22], CA: [16.5, 22], CN: [25, 60] };
+const EMERGENCY = { AU: '000', MY: '999', TW: '110', GB: '999', SG: '999', NZ: '111', RU: '112', US: '911', CA: '911', CN: '110' };
+const JOB_ROLES = [
+  ['Café barista', false],
+  ['Retail assistant', false],
+  ['Campus library assistant', true],
+  ['Private tutor (your best subject)', false],
+  ['Restaurant server', false],
+];
+const CAR_GUIDES = {
+  AU: { usedCar: [8000, 18000], rentalDay: [45, 80], note: 'An overseas licence works at first; rules differ by state. Weekend car-shares are the student favourite.' },
+  MY: { usedCar: [15000, 35000], rentalDay: [80, 150], note: 'Grab is cheap and everywhere — most students skip owning a car.' },
+  TW: { usedCar: [80000, 200000], rentalDay: [1500, 2500], note: 'Scooter culture: you need a local licence, and helmets are non-negotiable.' },
+  GB: { usedCar: [3000, 8000], rentalDay: [35, 60], note: 'Insurance for young drivers is brutal — students live on trains and buses.' },
+  SG: { usedCar: null, rentalDay: [80, 150], note: 'COE makes cars luxury items — the MRT reaches every campus.' },
+  NZ: { usedCar: [4000, 10000], rentalDay: [40, 70], note: 'Cheap used cars everywhere; convert your licence within 12 months.' },
+  RU: { usedCar: [400000, 900000], rentalDay: [2500, 4500], note: 'The metro beats driving in Moscow and St Petersburg.' },
+  US: { usedCar: [6000, 15000], rentalDay: [40, 80], note: 'A car helps in Los Angeles; Boston, New York and Chicago transit is enough.' },
+  CA: { usedCar: [7000, 16000], rentalDay: [45, 85], note: 'Winter tyres are law in parts of Canada; student transit passes are discounted.' },
+  CN: { usedCar: [40000, 100000], rentalDay: [200, 400], note: 'Foreign licences need local conversion — DiDi and the metro cover everything.' },
+};
+
+// Ambassador per city (via their institution) for "shared by" attribution.
+const ambCityIndex = {};
+AMB.forEach(([name, , instId], i) => {
+  const inst = INSTITUTIONS.find((r) => r[0] === instId);
+  if (inst && !ambCityIndex[inst[4]]) {
+    ambCityIndex[inst[4]] = { id: `amb-${String(i + 1).padStart(2, '0')}`, name, inst: inst[2] };
+  }
+});
+
+const jobsByCity = {};
+const housingByCity = {};
+for (const [city, [country]] of Object.entries(CITY_COL)) {
+  const [wMin, wMax] = WAGES[country];
+  const spots = (CITY_ATTRACTIONS[city] ?? []).filter(([, type]) => type === 'food' || type === 'shopping');
+  const sharedBy = ambCityIndex[city] ?? null;
+  jobsByCity[city] = JOB_ROLES.map(([role, onCampus], i) => ({
+    id: `job-${city.replace(/\W/g, '').toLowerCase()}-${i + 1}`,
+    city,
+    role,
+    spot: onCampus ? null : (spots[i % Math.max(spots.length, 1)]?.[0] ?? null),
+    payHourMin: Math.round(wMin * (1 + (i % 3) * 0.05) * 100) / 100,
+    payHourMax: Math.round(wMax * (0.85 + (i % 3) * 0.075) * 100) / 100,
+    onCampus,
+    sharedBy,
+  }));
+  const rent = RENT_DETAIL[city];
+  housingByCity[city] = [
+    { kind: 'dorm', priceMonthly: round50((rent[0] + rent[1]) / 2), minutesToCampus: 5, verified: true },
+    { kind: 'roomSuburb', priceMonthly: rent[0], minutesToCampus: 25, verified: true },
+    { kind: 'roomCentral', priceMonthly: rent[1], minutesToCampus: 12, verified: false },
+    { kind: 'studio', priceMonthly: rent[2], minutesToCampus: 20, verified: false },
+  ].map((h, i) => ({ id: `home-${city.replace(/\W/g, '').toLowerCase()}-${i + 1}`, city, ...h, sharedBy }));
+}
+const studentLife = {
+  emergency: EMERGENCY,
+  jobsByCity,
+  housingByCity,
+  carsByCountry: Object.fromEntries(
+    Object.entries(CAR_GUIDES).map(([cc, g]) => [cc, { country: cc, currency: COUNTRIES[cc].currency, ...g }]),
+  ),
+};
+
 // -------------------------------------------------------------------- vault
 const documents = [
   { id: 'transcript', hasExpiry: false }, { id: 'certificate', hasExpiry: false },
@@ -1158,6 +1226,7 @@ const files = {
   'documents.json': documents,
   'seed.json': seed_,
   'flights.json': flights,
+  'studentLife.json': studentLife,
 };
 for (const [file, data] of Object.entries(files)) {
   writeFileSync(join(OUT, file), JSON.stringify(data, null, 2) + '\n');

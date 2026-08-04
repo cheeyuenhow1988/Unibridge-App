@@ -441,7 +441,7 @@
     "emptyMates": "接受录取后，同期入学的同学会出现在这里。",
     "emptyEvents": "附近暂时没有活动。",
     "arrivalTitle": "落地服务",
-    "arrivalTeaser": "住宿、工作、用车与支持——即将上线。",
+    "arrivalTeaser": "兼职、租房、用车与攻略——来自已在当地的学生。",
     "you": "我"
   },
   "arrival": {
@@ -601,5 +601,29 @@
     "university": "大学",
     "college": "学院",
     "institute": "专业学院"
+  },
+  "life": {
+    "title": "留学生活",
+    "subtitle": "兼职、租房、用车和本地攻略——由已在当地的学长学姐分享。",
+    "safetyTitle": "安全第一",
+    "safetyBody": "{{country}}紧急电话：{{number}}。这里的建议来自已验证的在校学生；条目为原型参考数据——看房和面试请务必线下当面进行。",
+    "safetyBodyNoCountry": "这里的建议来自已验证的在校学生；条目为原型参考数据。",
+    "jobsTitle": "兼职工作",
+    "jobsCap": "学生签证上限：学期内每周 {{hours}} 小时",
+    "onCampus": "校内",
+    "near": "{{spot}}附近",
+    "perHour": "/小时",
+    "housingTitle": "租房选择",
+    "kind_dorm": "校内宿舍",
+    "kind_roomSuburb": "合租房间——郊区",
+    "kind_roomCentral": "合租房间——市中心",
+    "kind_studio": "单间公寓",
+    "minToCampus": "距学校 {{count}} 分钟",
+    "verifiedListing": "已验证房源",
+    "wheelsTitle": "用车与出行",
+    "usedCar": "二手车",
+    "rentalDay": "租车/天",
+    "sharedBy": "{{name}} 分享 · {{inst}} 在校生",
+    "indicative": "原型参考数据——正式上线后接入合作方与真实房源。"
   }
 }

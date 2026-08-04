@@ -16,10 +16,11 @@ import predepartureData from '@/data/predeparture.json';
 import documentsData from '@/data/documents.json';
 import seedData from '@/data/seed.json';
 import flightsData from '@/data/flights.json';
+import studentLifeData from '@/data/studentLife.json';
 import type {
   Ambassador, Application, Attraction, CityInfo, CommunityEvent, CostOfLiving, CountryCode, Course,
   Coursemate, DocumentTypeId, FlightFares, GroupMessage, Institution, IntakeGroup, PredepartureItem,
-  QualificationSystem, Scholarship, StudentProfile, WorkRights,
+  QualificationSystem, Scholarship, StudentLife, StudentProfile, WorkRights,
 } from '@/types/models';
 
 const institutions = institutionsData as Institution[];
@@ -82,6 +83,10 @@ export async function listCityInfo(): Promise<CityInfo[]> {
 
 export async function getFlightFares(): Promise<FlightFares> {
   return simulate(flightsData as unknown as FlightFares, 100);
+}
+
+export async function getStudentLife(): Promise<StudentLife> {
+  return simulate(studentLifeData as unknown as StudentLife, 150);
 }
 
 export async function listScholarships(): Promise<Scholarship[]> {

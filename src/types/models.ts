@@ -117,6 +117,48 @@ export interface FxTable {
   rates: Record<CurrencyCode, number>;
 }
 
+export interface LifeSharedBy {
+  id: string;
+  name: string;
+  inst: string;
+}
+
+export interface JobListing {
+  id: string;
+  city: string;
+  role: string;
+  spot: string | null;
+  payHourMin: number;
+  payHourMax: number;
+  onCampus: boolean;
+  sharedBy: LifeSharedBy | null;
+}
+
+export interface HousingListing {
+  id: string;
+  city: string;
+  kind: 'dorm' | 'roomSuburb' | 'roomCentral' | 'studio';
+  priceMonthly: number;
+  minutesToCampus: number;
+  verified: boolean;
+  sharedBy: LifeSharedBy | null;
+}
+
+export interface CarGuide {
+  country: CountryCode;
+  currency: CurrencyCode;
+  usedCar: [number, number] | null;
+  rentalDay: [number, number];
+  note: string;
+}
+
+export interface StudentLife {
+  emergency: Record<CountryCode, string>;
+  jobsByCity: Record<string, JobListing[]>;
+  housingByCity: Record<string, HousingListing[]>;
+  carsByCountry: Record<CountryCode, CarGuide>;
+}
+
 export interface FlightFares {
   currency: 'USD';
   roundTrip: boolean;
