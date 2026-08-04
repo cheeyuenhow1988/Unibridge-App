@@ -1480,5 +1480,467 @@
         "country": "US"
       }
     ]
+  },
+  {
+    "id": "gb-imperial",
+    "name": "Imperial College London",
+    "short": "Imperial",
+    "country": "GB",
+    "city": "London",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Science, engineering, medicine and business in South Kensington",
+    "founded": 1907,
+    "students": 22000,
+    "website": "https://www.imperial.ac.uk",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Imperial_College_London_new_logo.png/330px-Imperial_College_London_new_logo.png",
+    "wikipedia": "Imperial College London",
+    "ranking": 2,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Imperial_College_London_down_Exhibition_Road.jpg?width=1000",
+      "https://picsum.photos/seed/gb-imperial-1/800/500",
+      "https://picsum.photos/seed/gb-imperial-2/800/500"
+    ]
+  },
+  {
+    "id": "au-uts",
+    "name": "University of Technology Sydney",
+    "short": "UTS",
+    "country": "AU",
+    "city": "Sydney",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Innovation-driven tech university in central Sydney",
+    "founded": 1988,
+    "students": 45000,
+    "website": "https://www.uts.edu.au",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=uts.edu.au&sz=128",
+    "wikipedia": "University of Technology Sydney",
+    "ranking": 96,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Ultimo_UTS_Tower.JPG?width=1000",
+      "https://picsum.photos/seed/au-uts-1/800/500",
+      "https://picsum.photos/seed/au-uts-2/800/500"
+    ]
+  },
+  {
+    "id": "my-ucsi",
+    "name": "UCSI University",
+    "short": "UCSI",
+    "country": "MY",
+    "city": "Kuala Lumpur",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Private university famed for music, culinary and health sciences",
+    "founded": 1986,
+    "students": 12000,
+    "website": "https://www.ucsiuniversity.edu.my",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=ucsiuniversity.edu.my&sz=128",
+    "wikipedia": "UCSI University",
+    "ranking": 265,
+    "images": [
+      "https://picsum.photos/seed/my-ucsi-0/800/500",
+      "https://picsum.photos/seed/my-ucsi-1/800/500",
+      "https://picsum.photos/seed/my-ucsi-2/800/500"
+    ]
+  },
+  {
+    "id": "tw-ntust",
+    "name": "National Taiwan University of Science and Technology",
+    "short": "Taiwan Tech",
+    "country": "TW",
+    "city": "Taipei",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Taiwan's leading technological university",
+    "founded": 1974,
+    "students": 10000,
+    "website": "https://www.ntust.edu.tw",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=ntust.edu.tw&sz=128",
+    "wikipedia": "National Taiwan University of Science and Technology",
+    "ranking": 397,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/%E5%9C%8B%E7%AB%8B%E5%8F%B0%E7%81%A3%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%B8%E7%A0%94%E6%8F%9A%E5%A4%A7%E6%A8%93.JPG?width=1000",
+      "https://picsum.photos/seed/tw-ntust-1/800/500",
+      "https://picsum.photos/seed/tw-ntust-2/800/500"
+    ]
+  },
+  {
+    "id": "sg-tp",
+    "name": "Temasek Polytechnic",
+    "short": "TP",
+    "country": "SG",
+    "city": "Singapore",
+    "type": "college",
+    "verifiedPartner": false,
+    "tagline": "Polytechnic diplomas that pathway into every Singapore university",
+    "founded": 1990,
+    "students": 13000,
+    "website": "https://www.tp.edu.sg",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=tp.edu.sg&sz=128",
+    "wikipedia": "Temasek Polytechnic",
+    "ranking": null,
+    "images": [
+      "https://picsum.photos/seed/sg-tp-0/800/500",
+      "https://picsum.photos/seed/sg-tp-1/800/500",
+      "https://picsum.photos/seed/sg-tp-2/800/500"
+    ]
+  },
+  {
+    "id": "nz-aut",
+    "name": "Auckland University of Technology",
+    "short": "AUT",
+    "country": "NZ",
+    "city": "Auckland",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "New Zealand's newest and fastest-growing university",
+    "founded": 2000,
+    "students": 29000,
+    "website": "https://www.aut.ac.nz",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Logo_of_Auckland_University_of_Technology.svg/330px-Logo_of_Auckland_University_of_Technology.svg.png",
+    "wikipedia": "Auckland University of Technology",
+    "ranking": 412,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Auckland_University_of_Technology.jpg?width=1000",
+      "https://picsum.photos/seed/nz-aut-1/800/500",
+      "https://picsum.photos/seed/nz-aut-2/800/500"
+    ]
+  },
+  {
+    "id": "ru-hse",
+    "name": "HSE University",
+    "short": "HSE",
+    "country": "RU",
+    "city": "Moscow",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Russia's top school for economics and data science",
+    "founded": 1992,
+    "students": 45000,
+    "website": "https://www.hse.ru",
+    "languages": [
+      "Russian",
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=hse.ru&sz=128",
+    "wikipedia": "Higher School of Economics",
+    "ranking": 399,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_Durasov_Palace_asv2018-08.jpg?width=1000",
+      "https://picsum.photos/seed/ru-hse-1/800/500",
+      "https://picsum.photos/seed/ru-hse-2/800/500"
+    ]
+  },
+  {
+    "id": "us-columbia",
+    "name": "Columbia University",
+    "short": "Columbia",
+    "country": "US",
+    "city": "New York",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Ivy League university in Upper Manhattan",
+    "founded": 1754,
+    "students": 33000,
+    "website": "https://www.columbia.edu",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=columbia.edu&sz=128",
+    "wikipedia": "Columbia University",
+    "ranking": 34,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Columbia_University_-_Low_Memorial_Library_(48170370506).jpg?width=1000",
+      "https://picsum.photos/seed/us-columbia-1/800/500",
+      "https://picsum.photos/seed/us-columbia-2/800/500"
+    ]
+  },
+  {
+    "id": "us-northeastern",
+    "name": "Northeastern University",
+    "short": "Northeastern",
+    "country": "US",
+    "city": "Boston",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Co-op pioneer — paid work terms built into every degree",
+    "founded": 1898,
+    "students": 28000,
+    "website": "https://www.northeastern.edu",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=northeastern.edu&sz=128",
+    "wikipedia": "Northeastern University",
+    "ranking": 344,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Northeastern_University.jpg?width=1000",
+      "https://picsum.photos/seed/us-northeastern-1/800/500",
+      "https://picsum.photos/seed/us-northeastern-2/800/500"
+    ]
+  },
+  {
+    "id": "us-fit",
+    "name": "Fashion Institute of Technology",
+    "short": "FIT",
+    "country": "US",
+    "city": "New York",
+    "type": "institute",
+    "verifiedPartner": false,
+    "tagline": "New York's public college of fashion and design",
+    "founded": 1944,
+    "students": 8000,
+    "website": "https://www.fitnyc.edu",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=fitnyc.edu&sz=128",
+    "wikipedia": "Fashion Institute of Technology",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/The_Museum_at_FIT_(48206542922).jpg?width=1000",
+      "https://picsum.photos/seed/us-fit-1/800/500",
+      "https://picsum.photos/seed/us-fit-2/800/500"
+    ]
+  },
+  {
+    "id": "us-iit",
+    "name": "Illinois Institute of Technology",
+    "short": "Illinois Tech",
+    "country": "US",
+    "city": "Chicago",
+    "type": "institute",
+    "verifiedPartner": false,
+    "tagline": "Chicago tech university on a Mies van der Rohe campus",
+    "founded": 1890,
+    "students": 7000,
+    "website": "https://www.iit.edu",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Illinois_tech_logo.png/330px-Illinois_tech_logo.png",
+    "wikipedia": "Illinois Institute of Technology",
+    "ranking": 437,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/IIT_Main_Building.jpg?width=1000",
+      "https://picsum.photos/seed/us-iit-1/800/500",
+      "https://picsum.photos/seed/us-iit-2/800/500"
+    ]
+  },
+  {
+    "id": "ca-tmu",
+    "name": "Toronto Metropolitan University",
+    "short": "TMU",
+    "country": "CA",
+    "city": "Toronto",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "City-builder university on Yonge Street",
+    "founded": 1948,
+    "students": 45000,
+    "website": "https://www.torontomu.ca",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/TMU_logo.svg/330px-TMU_logo.svg.png",
+    "wikipedia": "Toronto Metropolitan University",
+    "ranking": null,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_Met_Student_Learning_Centre_at_night_2022.jpg?width=1000",
+      "https://picsum.photos/seed/ca-tmu-1/800/500",
+      "https://picsum.photos/seed/ca-tmu-2/800/500"
+    ]
+  },
+  {
+    "id": "ca-sfu",
+    "name": "Simon Fraser University",
+    "short": "SFU",
+    "country": "CA",
+    "city": "Vancouver",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Mountain-top campus above metro Vancouver",
+    "founded": 1965,
+    "students": 37000,
+    "website": "https://www.sfu.ca",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/SFU-block-logo.svg/330px-SFU-block-logo.svg.png",
+    "wikipedia": "Simon Fraser University",
+    "ranking": 318,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Academic_quad_at_sfu.jpg?width=1000",
+      "https://picsum.photos/seed/ca-sfu-1/800/500",
+      "https://picsum.photos/seed/ca-sfu-2/800/500"
+    ]
+  },
+  {
+    "id": "ca-concordia",
+    "name": "Concordia University",
+    "short": "Concordia",
+    "country": "CA",
+    "city": "Montreal",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "Next-generation urban university in Montreal",
+    "founded": 1974,
+    "students": 50000,
+    "website": "https://www.concordia.ca",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Concordia_univ_montreal_textlogo.png/330px-Concordia_univ_montreal_textlogo.png",
+    "wikipedia": "Concordia University",
+    "ranking": 387,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/JMSB.jpg?width=1000",
+      "https://picsum.photos/seed/ca-concordia-1/800/500",
+      "https://picsum.photos/seed/ca-concordia-2/800/500"
+    ]
+  },
+  {
+    "id": "ca-vcc",
+    "name": "Vancouver Community College",
+    "short": "VCC",
+    "country": "CA",
+    "city": "Vancouver",
+    "type": "college",
+    "verifiedPartner": false,
+    "tagline": "Downtown college for culinary, baking and trades",
+    "founded": 1965,
+    "students": 14000,
+    "website": "https://www.vcc.ca",
+    "languages": [
+      "English"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Vancouver_Community_College_logo.png",
+    "wikipedia": "Vancouver Community College",
+    "ranking": null,
+    "images": [
+      "https://picsum.photos/seed/ca-vcc-0/800/500",
+      "https://picsum.photos/seed/ca-vcc-1/800/500",
+      "https://picsum.photos/seed/ca-vcc-2/800/500"
+    ]
+  },
+  {
+    "id": "cn-sjtu",
+    "name": "Shanghai Jiao Tong University",
+    "short": "SJTU",
+    "country": "CN",
+    "city": "Shanghai",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Elite C9 engineering university in Shanghai",
+    "founded": 1896,
+    "students": 46000,
+    "website": "https://www.sjtu.edu.cn",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=sjtu.edu.cn&sz=128",
+    "wikipedia": "Shanghai Jiao Tong University",
+    "ranking": 45,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_Jiao_Tong_University_1.jpg?width=1000",
+      "https://picsum.photos/seed/cn-sjtu-1/800/500",
+      "https://picsum.photos/seed/cn-sjtu-2/800/500"
+    ]
+  },
+  {
+    "id": "cn-tongji",
+    "name": "Tongji University",
+    "short": "Tongji",
+    "country": "CN",
+    "city": "Shanghai",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "Architecture and engineering powerhouse",
+    "founded": 1907,
+    "students": 36000,
+    "website": "https://www.tongji.edu.cn",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=tongji.edu.cn&sz=128",
+    "wikipedia": "Tongji University",
+    "ranking": 192,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Tongjidaxue_Tushuguan.JPG?width=1000",
+      "https://picsum.photos/seed/cn-tongji-1/800/500",
+      "https://picsum.photos/seed/cn-tongji-2/800/500"
+    ]
+  },
+  {
+    "id": "cn-bnu",
+    "name": "Beijing Normal University",
+    "short": "BNU",
+    "country": "CN",
+    "city": "Beijing",
+    "type": "university",
+    "verifiedPartner": false,
+    "tagline": "China's leading university for education",
+    "founded": 1902,
+    "students": 27000,
+    "website": "https://www.bnu.edu.cn",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=bnu.edu.cn&sz=128",
+    "wikipedia": "Beijing Normal University",
+    "ranking": 271,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/BNU_Gate.jpg?width=1000",
+      "https://picsum.photos/seed/cn-bnu-1/800/500",
+      "https://picsum.photos/seed/cn-bnu-2/800/500"
+    ]
+  },
+  {
+    "id": "cn-jnu",
+    "name": "Jinan University",
+    "short": "JNU",
+    "country": "CN",
+    "city": "Guangzhou",
+    "type": "university",
+    "verifiedPartner": true,
+    "tagline": "The overseas-Chinese university — most international student body in China",
+    "founded": 1906,
+    "students": 40000,
+    "website": "https://www.jnu.edu.cn",
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=jnu.edu.cn&sz=128",
+    "wikipedia": "Jinan University",
+    "ranking": 606,
+    "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Jnu_gate.jpg?width=1000",
+      "https://picsum.photos/seed/cn-jnu-1/800/500",
+      "https://picsum.photos/seed/cn-jnu-2/800/500"
+    ]
   }
 ]

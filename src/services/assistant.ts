@@ -39,13 +39,13 @@ export interface AssistantCtx {
   home: CurrencyCode;
 }
 
-const WEATHER_RE = /(weather|climate|rain|snow|cold|hot|temperature|cuaca|sejuk|panas|天气|气候|下雨|冷|热)/i;
-const SAFETY_RE = /(safe|safety|crime|danger|selamat|jenayah|bahaya|安全|治安|危险)/i;
-const COST_RE = /(cost|rent|living|expensive|cheap|price|kos|sewa|murah|mahal|生活费|房租|贵|便宜)/i;
-const STUDY_RE = /(what.*(study|course|major)|study what|choose.*(study|course)|belajar apa|tak tahu.*belajar|读什么|学什么|不知道读)/i;
-const WHERE_RE = /(where.*study|which country|country.*(study|choose)|negara mana|去哪.*(读|留学)|哪个国家)/i;
-const BUDGET_RE = /(budget|afford|enough|cukup|bajet|mampu|预算|够|负担)/i;
-const GREET_RE = /^(hi|hello|hey|hai|helo|你好|哈喽|嗨)\b/i;
+const WEATHER_RE = /(weather|climate|rain|snow|cold|hot|temperature|cuaca|sejuk|panas|thời tiết|khí hậu|mưa|lạnh|nóng|天气|气候|下雨|冷|热|天氣|氣候|熱)/i;
+const SAFETY_RE = /(safe|safety|crime|danger|selamat|jenayah|bahaya|aman|an toàn|trị an|安全|治安|危险|危險)/i;
+const COST_RE = /(cost|rent|living|expensive|cheap|price|kos|sewa|murah|mahal|biaya|chi phí|tiền thuê|rẻ|đắt|生活费|房租|贵|便宜|生活費|貴)/i;
+const STUDY_RE = /(what.*(study|course|major)|study what|choose.*(study|course)|belajar apa|tak tahu.*belajar|kuliah apa|nên học gì|học gì|读什么|学什么|不知道读|讀什麼|學什麼|不知道讀)/i;
+const WHERE_RE = /(where.*study|which country|country.*(study|choose)|negara mana|kuliah di mana|học ở đâu|nước nào|去哪.*(读|留学|讀|留學)|哪个国家|哪個國家)/i;
+const BUDGET_RE = /(budget|afford|enough|cukup|bajet|mampu|anggaran|ngân sách|đủ tiền|预算|够|负担|預算|夠|負擔)/i;
+const GREET_RE = /^(hi|hello|hey|hai|helo|halo|chào|xin chào|你好|哈喽|嗨)\b/i;
 
 function annualCost(r: MatchResult, ctx: AssistantCtx): number {
   const col = ctx.matchData.colByCity.get(r.course.campusCity);
@@ -99,17 +99,17 @@ const WHERE_COUNTRIES: Record<string, CountryCode[]> = {
 
 // Free-text field detection for the interview (en + basic ms/zh keywords).
 const FIELD_KEYWORDS: [RegExp, FieldId[]][] = [
-  [/(market|hr|human resource|account|financ|bank|business|econom|entrepreneur|supply|logistic|perniagaan|niaga|商|金融|市场|会计|营销)/i, ['business']],
-  [/(software|coding|program|computer|\bit\b|data|cyber|game|\bai\b|komputer|程序|编程|电脑|数据|计算机)/i, ['it']],
-  [/(doctor|medic|nurse|pharma|physio|dentist|psycholog|health|doktor|jururawat|医|护理|药|心理)/i, ['health']],
-  [/(civil|mechanic|electric|mechatronic|aero|engineer|jurutera|kejuruteraan|工程)/i, ['engineering']],
-  [/(interior|fashion|graphic|animation|product design|design|reka bentuk|设计|时装|动画)/i, ['design']],
-  [/(law|legal|lawyer|undang|律师|法律)/i, ['law']],
-  [/(film|media|journal|advertis|public relation|broadcast|传媒|新闻|媒体)/i, ['media']],
-  [/(teach|education|tesl|guru|pendidikan|教育|老师|教师)/i, ['education']],
-  [/(hotel|chef|culinar|tourism|hospitality|aviation|cabin|masak|pelancongan|酒店|厨|旅游|烹饪)/i, ['hospitality']],
-  [/(architect|urban|quantity survey|construction|seni bina|建筑)/i, ['architecture']],
-  [/(physic|chemist|biolog|biotech|math|actuar|science|sains|物理|化学|生物|数学|科学)/i, ['science']],
+  [/(market|hr|human resource|account|financ|bank|business|econom|entrepreneur|supply|logistic|perniagaan|niaga|bisnis|akuntansi|pemasaran|kinh doanh|tài chính|kế toán|商|金融|市场|会计|营销|市場|會計|營銷)/i, ['business']],
+  [/(software|coding|program|computer|\bit\b|data|cyber|game|\bai\b|komputer|koding|lập trình|máy tính|công nghệ thông tin|程序|编程|电脑|数据|计算机|程式|編程|電腦|數據|計算機)/i, ['it']],
+  [/(doctor|medic|nurse|pharma|physio|dentist|psycholog|health|doktor|jururawat|dokter|perawat|farmasi|bác sĩ|y tá|y khoa|điều dưỡng|dược|医|护理|药|心理|醫|護理|藥)/i, ['health']],
+  [/(civil|mechanic|electric|mechatronic|aero|engineer|jurutera|kejuruteraan|teknik|insinyur|kỹ thuật|kỹ sư|工程)/i, ['engineering']],
+  [/(interior|fashion|graphic|animation|product design|design|reka bentuk|desain|thiết kế|thời trang|设计|时装|动画|設計|時裝|動畫)/i, ['design']],
+  [/(law|legal|lawyer|undang|hukum|luật|律师|法律|律師)/i, ['law']],
+  [/(film|media|journal|advertis|public relation|broadcast|jurnalistik|truyền thông|báo chí|传媒|新闻|媒体|傳媒|新聞|媒體)/i, ['media']],
+  [/(teach|education|tesl|guru|pendidikan|giáo viên|sư phạm|教育|老师|教师|老師|教師)/i, ['education']],
+  [/(hotel|chef|culinar|tourism|hospitality|aviation|cabin|masak|pelancongan|kuliner|perhotelan|pariwisata|khách sạn|đầu bếp|nấu ăn|ẩm thực|du lịch|酒店|厨|旅游|烹饪|廚|旅遊|烹飪)/i, ['hospitality']],
+  [/(architect|urban|quantity survey|construction|seni bina|arsitektur|kiến trúc|建筑|建築)/i, ['architecture']],
+  [/(physic|chemist|biolog|biotech|math|actuar|science|sains|fisika|kimia|vật lý|hóa học|toán|khoa học|物理|化学|生物|数学|科学|化學|數學|科學)/i, ['science']],
 ];
 
 function detectFields(text: string): FieldId[] | null {

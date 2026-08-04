@@ -4,7 +4,7 @@ import { createJSONStorage, persist } from 'zustand/middleware';
 import type { StudentProfile } from '@/types/models';
 
 export type ThemePref = 'system' | 'light' | 'dark';
-export type AppLanguage = 'en' | 'ms' | 'zh';
+export type AppLanguage = 'en' | 'ms' | 'id' | 'vi' | 'zh' | 'zh-TW';
 
 interface ProfileState {
   profile: StudentProfile | null;

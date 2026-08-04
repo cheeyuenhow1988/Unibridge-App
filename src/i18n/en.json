@@ -50,7 +50,8 @@
     "posts": "Posts",
     "likes": "{{count}} likes",
     "year": "Year {{year}}",
-    "at": "at"
+    "at": "at",
+    "resetting": "Resetting the app…"
   },
   "tabs": {
     "match": "Match",
@@ -483,7 +484,7 @@
     "resetApp": "Delete app data",
     "resetConfirm": "This deletes your account, profile, photo, saved items and applications from this device. Continue?",
     "loadDemo": "Load demo profile",
-    "about": "UniBridge prototype — all institutions and data are fictional.",
+    "about": "UniBridge prototype — real institutions, indicative data. Always verify on official websites.",
     "homeCurrency": "Home currency",
     "build": "Build {{id}}"
   },

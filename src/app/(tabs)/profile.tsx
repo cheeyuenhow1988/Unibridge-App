@@ -257,7 +257,14 @@ export default function ProfileScreen() {
 
           <SectionHeader title={t('profile.language')} />
           <Row gap={spacing.sm} wrap>
-            {([['en', 'English'], ['ms', 'Bahasa Melayu'], ['zh', '中文']] as const).map(([code, label]) => (
+            {([
+              ['en', 'English'],
+              ['ms', 'Bahasa Melayu'],
+              ['id', 'Bahasa Indonesia'],
+              ['vi', 'Tiếng Việt'],
+              ['zh', '中文（简体）'],
+              ['zh-TW', '中文（繁體）'],
+            ] as const).map(([code, label]) => (
               <Chip key={code} label={label} selected={language === code} onPress={() => setLanguage(code)} />
             ))}
           </Row>

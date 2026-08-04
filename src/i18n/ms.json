@@ -48,7 +48,8 @@
     "removedToast": "Dibuang daripada simpanan",
     "copiedToClipboard": "Disalin — tampal di mana-mana",
     "soon": "akan datang",
-    "demo": "Demo"
+    "demo": "Demo",
+    "resetting": "Menetapkan semula aplikasi…"
   },
   "tabs": {
     "match": "Padanan",
@@ -473,7 +474,7 @@
     "resetApp": "Padam data apl",
     "resetConfirm": "Ini memadam akaun, profil, foto, simpanan dan permohonan anda daripada peranti ini. Teruskan?",
     "loadDemo": "Muatkan profil demo",
-    "about": "Prototaip UniBridge — nama institusi adalah sebenar; yuran, syarat dan pengiktirafan hanyalah data anggaran.",
+    "about": "Prototaip UniBridge — institusi sebenar, data indikatif. Sentiasa sahkan di laman web rasmi.",
     "homeCurrency": "Mata wang asal",
     "changePhoto": "Tukar foto",
     "currencyTitle": "Mata wang",

@@ -48,7 +48,8 @@
     "removedToast": "已取消收藏",
     "copiedToClipboard": "已复制——随处粘贴",
     "soon": "即将上线",
-    "demo": "演示"
+    "demo": "演示",
+    "resetting": "正在重置应用…"
   },
   "tabs": {
     "match": "匹配",
@@ -473,7 +474,7 @@
     "resetApp": "删除应用数据",
     "resetConfirm": "这将从本设备删除你的账号、资料、照片、收藏和申请记录。继续吗？",
     "loadDemo": "载入演示账号",
-    "about": "UniBridge 原型——院校名称为真实名称；学费、要求与认可度均为演示数据。",
+    "about": "UniBridge 原型 — 真实院校、参考数据。请以官方网站为准。",
     "homeCurrency": "本国货币",
     "changePhoto": "更换照片",
     "currencyTitle": "货币",
