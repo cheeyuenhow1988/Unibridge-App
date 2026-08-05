@@ -119,7 +119,15 @@
     "statement": "個人陳述",
     "financial": "資金證明",
     "portfolio": "作品集",
-    "health": "體檢報告"
+    "health": "體檢報告",
+    "certificateDesc": "畢業證書或文憑",
+    "passportDesc": "照片頁——抵達後需有 6 個月以上效期",
+    "englishDesc": "IELTS、TOEFL 或同等成績單",
+    "recommendationDesc": "老師的推薦信——部分課程需要",
+    "statementDesc": "說明為何選擇該課程的短文——不是銀行對帳單",
+    "financialDesc": "銀行對帳單或擔保信,證明可支付第一年費用",
+    "portfolioDesc": "作品集——僅藝術、設計、音樂或建築課程需要",
+    "healthDesc": "健康檢查 / 疫苗紀錄——部分國家要求"
   },
   "status": {
     "submitted": "已提交",
@@ -370,7 +378,8 @@
     "expiresOn": "{{date}} 到期",
     "removeConfirm": "移除這份檔案？",
     "expirySaved": "有效期已儲存",
-    "transcriptSystem": "上傳你的{{system}}成績單"
+    "transcriptSystem": "上傳你的{{system}}成績單",
+    "optional": "選填"
   },
   "apply": {
     "title": "申請",

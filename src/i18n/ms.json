@@ -119,7 +119,15 @@
     "statement": "Pernyataan peribadi",
     "financial": "Bukti kewangan",
     "portfolio": "Portfolio",
-    "health": "Pemeriksaan kesihatan"
+    "health": "Pemeriksaan kesihatan",
+    "certificateDesc": "Sijil tamat sekolah atau diploma",
+    "passportDesc": "Halaman bergambar — sah 6+ bulan selepas ketibaan",
+    "englishDesc": "Keputusan IELTS, TOEFL atau setara",
+    "recommendationDesc": "Surat sokongan daripada guru — sesetengah kursus memerlukannya",
+    "statementDesc": "Esei ringkas sebab anda mahu kursus ini — bukan penyata bank",
+    "financialDesc": "Penyata bank atau surat penaja menunjukkan anda mampu biayai tahun 1",
+    "portfolioDesc": "Contoh hasil kerja — hanya untuk kursus seni, reka bentuk, muzik atau seni bina",
+    "healthDesc": "Pemeriksaan kesihatan / rekod vaksin — sesetengah negara memerlukannya"
   },
   "status": {
     "submitted": "Dihantar",
@@ -370,7 +378,8 @@
     "expiresOn": "Luput {{date}}",
     "removeConfirm": "Buang dokumen ini?",
     "expirySaved": "Tarikh luput disimpan",
-    "transcriptSystem": "Muat naik transkrip / slip keputusan {{system}} anda"
+    "transcriptSystem": "Muat naik transkrip / slip keputusan {{system}} anda",
+    "optional": "Pilihan"
   },
   "apply": {
     "title": "Mohon",

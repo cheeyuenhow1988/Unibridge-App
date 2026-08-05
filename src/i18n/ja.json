@@ -117,7 +117,15 @@
     "statement": "志望理由書",
     "financial": "資金証明",
     "portfolio": "ポートフォリオ",
-    "health": "健康診断書"
+    "health": "健康診断書",
+    "certificateDesc": "卒業証明書",
+    "passportDesc": "顔写真ページ — 入国後6か月以上の有効期限が必要",
+    "englishDesc": "IELTS・TOEFL などのスコア",
+    "recommendationDesc": "先生からの推薦状 — 一部のコースで必要",
+    "statementDesc": "志望理由の小論文 — 銀行の残高証明ではありません",
+    "financialDesc": "残高証明書または保証人の書類 — 1年目の費用を証明",
+    "portfolioDesc": "作品集 — 美術・デザイン・音楽・建築コースのみ",
+    "healthDesc": "健康診断・ワクチン記録 — 一部の国で必要"
   },
   "status": {
     "submitted": "提出済み",
@@ -368,7 +376,8 @@
     "expiresOn": "{{date}}に期限",
     "expirySaved": "有効期限を保存しました",
     "removeConfirm": "この書類を削除しますか？",
-    "transcriptSystem": "{{system}}の成績証明書をアップロードしてください"
+    "transcriptSystem": "{{system}}の成績証明書をアップロードしてください",
+    "optional": "任意"
   },
   "apply": {
     "title": "出願",

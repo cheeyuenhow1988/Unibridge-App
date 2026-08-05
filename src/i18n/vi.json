@@ -117,7 +117,15 @@
     "statement": "Bài luận cá nhân",
     "financial": "Chứng minh tài chính",
     "portfolio": "Hồ sơ tác phẩm (portfolio)",
-    "health": "Khám sức khỏe"
+    "health": "Khám sức khỏe",
+    "certificateDesc": "Bằng tốt nghiệp hoặc chứng chỉ",
+    "passportDesc": "Trang ảnh — còn hạn 6+ tháng sau khi nhập cảnh",
+    "englishDesc": "Kết quả IELTS, TOEFL hoặc tương đương",
+    "recommendationDesc": "Thư giới thiệu từ giáo viên — một số ngành yêu cầu",
+    "statementDesc": "Bài luận ngắn vì sao bạn chọn ngành này — không phải sao kê ngân hàng",
+    "financialDesc": "Sao kê ngân hàng hoặc thư bảo trợ chứng minh đủ chi phí năm 1",
+    "portfolioDesc": "Hồ sơ tác phẩm — chỉ cho ngành nghệ thuật, thiết kế, âm nhạc, kiến trúc",
+    "healthDesc": "Khám sức khỏe / sổ tiêm chủng — một số nước yêu cầu"
   },
   "status": {
     "submitted": "Đã nộp",
@@ -368,7 +376,8 @@
     "expiresOn": "Hết hạn {{date}}",
     "expirySaved": "Đã lưu ngày hết hạn",
     "removeConfirm": "Xóa giấy tờ này?",
-    "transcriptSystem": "Tải lên học bạ / bảng điểm {{system}} của bạn"
+    "transcriptSystem": "Tải lên học bạ / bảng điểm {{system}} của bạn",
+    "optional": "Tùy chọn"
   },
   "apply": {
     "title": "Nộp hồ sơ",

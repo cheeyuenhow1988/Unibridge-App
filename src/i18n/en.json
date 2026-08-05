@@ -119,7 +119,15 @@
     "statement": "Personal statement",
     "financial": "Proof of funds",
     "portfolio": "Portfolio",
-    "health": "Health examination"
+    "health": "Health examination",
+    "certificateDesc": "School-leaving certificate or diploma",
+    "passportDesc": "Photo page — valid 6+ months beyond arrival",
+    "englishDesc": "IELTS, TOEFL or equivalent score report",
+    "recommendationDesc": "Reference letter from a teacher — some courses ask for it",
+    "statementDesc": "A short essay on why you want this course — not a bank statement",
+    "financialDesc": "Bank statement or sponsor letter showing you can fund year 1",
+    "portfolioDesc": "Work samples — only for art, design, music or architecture courses",
+    "healthDesc": "Medical check-up / vaccination record — some countries require it"
   },
   "status": {
     "submitted": "Submitted",
@@ -371,7 +379,8 @@
     "expiresOn": "Expires {{date}}",
     "expirySaved": "Expiry date saved",
     "removeConfirm": "Remove this document?",
-    "transcriptSystem": "Upload your {{system}} transcript / result slip"
+    "transcriptSystem": "Upload your {{system}} transcript / result slip",
+    "optional": "Optional"
   },
   "apply": {
     "title": "Apply",

@@ -119,7 +119,15 @@
     "statement": "个人陈述",
     "financial": "资金证明",
     "portfolio": "作品集",
-    "health": "体检报告"
+    "health": "体检报告",
+    "certificateDesc": "毕业证书或文凭",
+    "passportDesc": "照片页——抵达后需有 6 个月以上有效期",
+    "englishDesc": "IELTS、TOEFL 或同等成绩单",
+    "recommendationDesc": "老师的推荐信——部分课程需要",
+    "statementDesc": "说明为何选择该课程的短文——不是银行流水",
+    "financialDesc": "银行流水或担保信,证明可支付第一年费用",
+    "portfolioDesc": "作品集——仅艺术、设计、音乐或建筑课程需要",
+    "healthDesc": "体检 / 疫苗记录——部分国家要求"
   },
   "status": {
     "submitted": "已提交",
@@ -370,7 +378,8 @@
     "expiresOn": "{{date}} 到期",
     "removeConfirm": "移除这份文件？",
     "expirySaved": "有效期已保存",
-    "transcriptSystem": "上传你的{{system}}成绩单"
+    "transcriptSystem": "上传你的{{system}}成绩单",
+    "optional": "可选"
   },
   "apply": {
     "title": "申请",

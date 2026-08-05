@@ -117,7 +117,15 @@
     "statement": "자기소개서",
     "financial": "재정 증명",
     "portfolio": "포트폴리오",
-    "health": "건강 검진"
+    "health": "건강 검진",
+    "certificateDesc": "졸업증명서",
+    "passportDesc": "사진 면 — 입국 후 6개월 이상 유효해야 함",
+    "englishDesc": "IELTS, TOEFL 또는 동등 성적",
+    "recommendationDesc": "교사 추천서 — 일부 과정에서 요구",
+    "statementDesc": "지원 동기를 담은 짧은 에세이 — 은행 명세서가 아닙니다",
+    "financialDesc": "은행 잔고 증명 또는 후원 서류 — 1년 차 비용 증명",
+    "portfolioDesc": "작품 포트폴리오 — 미술·디자인·음악·건축 과정만",
+    "healthDesc": "건강검진 / 예방접종 기록 — 일부 국가에서 요구"
   },
   "status": {
     "submitted": "제출됨",
@@ -368,7 +376,8 @@
     "expiresOn": "{{date}} 만료",
     "expirySaved": "만료일을 저장했어요",
     "removeConfirm": "이 서류를 삭제할까요?",
-    "transcriptSystem": "{{system}} 성적표를 업로드하세요"
+    "transcriptSystem": "{{system}} 성적표를 업로드하세요",
+    "optional": "선택"
   },
   "apply": {
     "title": "지원",

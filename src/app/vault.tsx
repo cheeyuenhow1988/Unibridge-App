@@ -79,6 +79,9 @@ const DOC_ICONS: Record<DocumentTypeId, keyof typeof Ionicons.glyphMap> = {
 
 type DocStatus = 'uploaded' | 'missing' | 'expiringSoon' | 'expired';
 
+/** Not required for a first application — badge these "Optional", not "Missing". */
+const OPTIONAL_DOCS: DocumentTypeId[] = ['recommendation', 'portfolio', 'health'];
+
 export default function VaultScreen() {
   const { t } = useTranslation();
   const { colors } = useTheme();
@@ -195,6 +198,9 @@ export default function VaultScreen() {
                         {t('vault.transcriptSystem', { system: systemName })}
                       </Text>
                     ) : null}
+                    {type !== 'transcript' && !doc ? (
+                      <Text variant="caption" tone="faint">{t(`docs.${type}Desc`)}</Text>
+                    ) : null}
                     {doc ? (
                       <Text variant="caption" tone="faint" numberOfLines={1}>
                         {doc.name} · {t('vault.uploadedOn', { date: doc.uploadedAt.slice(0, 10) })}
@@ -205,7 +211,14 @@ export default function VaultScreen() {
                     ) : null}
                   </View>
                 </Row>
-                <Badge tone={tone} label={t(`vault.${status}`)} />
+                <Badge
+                  tone={tone}
+                  label={
+                    status === 'missing' && OPTIONAL_DOCS.includes(type)
+                      ? t('vault.optional')
+                      : t(`vault.${status}`)
+                  }
+                />
               </Row>
 
               <Row gap={spacing.sm} wrap>

@@ -117,7 +117,15 @@
     "statement": "Esai pribadi",
     "financial": "Bukti dana",
     "portfolio": "Portofolio",
-    "health": "Pemeriksaan kesehatan"
+    "health": "Pemeriksaan kesehatan",
+    "certificateDesc": "Ijazah atau sertifikat kelulusan sekolah",
+    "passportDesc": "Halaman foto — berlaku 6+ bulan setelah kedatangan",
+    "englishDesc": "Hasil IELTS, TOEFL, atau setara",
+    "recommendationDesc": "Surat rekomendasi dari guru — beberapa jurusan memintanya",
+    "statementDesc": "Esai singkat alasanmu memilih jurusan ini — bukan rekening koran",
+    "financialDesc": "Rekening koran atau surat sponsor sebagai bukti dana tahun pertama",
+    "portfolioDesc": "Contoh karya — hanya untuk jurusan seni, desain, musik, atau arsitektur",
+    "healthDesc": "Pemeriksaan kesehatan / catatan vaksin — beberapa negara mewajibkannya"
   },
   "status": {
     "submitted": "Terkirim",
@@ -368,7 +376,8 @@
     "expiresOn": "Kedaluwarsa {{date}}",
     "expirySaved": "Tanggal kedaluwarsa disimpan",
     "removeConfirm": "Hapus dokumen ini?",
-    "transcriptSystem": "Unggah transkrip / ijazah {{system}} kamu"
+    "transcriptSystem": "Unggah transkrip / ijazah {{system}} kamu",
+    "optional": "Opsional"
   },
   "apply": {
     "title": "Daftar",
