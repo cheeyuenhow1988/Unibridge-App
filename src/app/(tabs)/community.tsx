@@ -39,6 +39,8 @@ export default function CommunityScreen() {
   const setMateVisible = useProfileStore((s) => s.setMateVisible);
   const mateShowCourse = useProfileStore((s) => s.mateShowCourse);
   const setMateShowCourse = useProfileStore((s) => s.setMateShowCourse);
+  const mateLookingFor = useProfileStore((s) => s.mateLookingFor);
+  const toggleMateLookingFor = useProfileStore((s) => s.toggleMateLookingFor);
   const [shortFilter, setShortFilter] = useState<'all' | 'campus' | 'reality'>('all');
   const supportB = useAsync(() => getSupportBundle(), []);
   const joinedGroupIds = useCommunityStore((s) => s.joinedGroupIds);
@@ -349,6 +351,21 @@ export default function CommunityScreen() {
               <View style={{ gap: spacing.md }}>
                 <Card style={{ gap: spacing.sm }}>
                   <Text variant="label">{t('community.myVisibility')}</Text>
+                  <View style={{ gap: 2 }}>
+                    <Text variant="bodyMedium">{t('community.lookingMine')}</Text>
+                    <Text variant="caption" tone="faint">{t('community.lookingMineSub')}</Text>
+                  </View>
+                  <Row wrap gap={spacing.sm}>
+                    {(['housing', 'study', 'travel', 'friends', 'sports', 'foodie'] as const).map((k) => (
+                      <Chip
+                        key={k}
+                        small
+                        label={t(`community.looking_${k}`)}
+                        selected={mateLookingFor.includes(k)}
+                        onPress={() => toggleMateLookingFor(k)}
+                      />
+                    ))}
+                  </Row>
                   <Row style={{ justifyContent: 'space-between' }}>
                     <View style={{ flex: 1, paddingRight: spacing.md }}>
                       <Text variant="bodyMedium">{t('community.visibleToggle')}</Text>

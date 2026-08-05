@@ -4,7 +4,7 @@ import { Image } from 'expo-image';
 import * as ImagePicker from 'expo-image-picker';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { Alert, Linking, Modal, Pressable, ScrollView, Switch, View } from 'react-native';
+import { Alert, Linking, Modal, Pressable, ScrollView, View } from 'react-native';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
@@ -39,12 +39,6 @@ export default function ProfileScreen() {
   const setThemePref = useProfileStore((s) => s.setThemePref);
   const language = useProfileStore((s) => s.language);
   const setLanguage = useProfileStore((s) => s.setLanguage);
-  const mateVisible = useProfileStore((s) => s.mateVisible);
-  const setMateVisible = useProfileStore((s) => s.setMateVisible);
-  const mateShowCourse = useProfileStore((s) => s.mateShowCourse);
-  const setMateShowCourse = useProfileStore((s) => s.setMateShowCourse);
-  const mateLookingFor = useProfileStore((s) => s.mateLookingFor);
-  const toggleMateLookingFor = useProfileStore((s) => s.toggleMateLookingFor);
   const account = useAuthStore((s) => s.account);
   const signOut = useAuthStore((s) => s.signOut);
   const avatarUri = useProfileStore((s) => s.avatarUri);
@@ -216,42 +210,6 @@ export default function ProfileScreen() {
                 </View>
               </Row>
               <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />
-            </Row>
-          </Card>
-
-          <Card style={{ gap: spacing.md }}>
-            <Row gap={spacing.sm}>
-              <Ionicons name="people-outline" size={20} color={colors.accent} />
-              <Text variant="label">{t('community.mates')}</Text>
-            </Row>
-            <View style={{ gap: spacing.xs }}>
-              <Text variant="bodyMedium">{t('community.lookingMine')}</Text>
-              <Text variant="caption" tone="faint">{t('community.lookingMineSub')}</Text>
-            </View>
-            <Row wrap gap={spacing.sm}>
-              {(['housing', 'study', 'travel', 'friends', 'sports', 'foodie'] as const).map((k) => (
-                <Chip
-                  key={k}
-                  small
-                  label={t(`community.looking_${k}`)}
-                  selected={mateLookingFor.includes(k)}
-                  onPress={() => toggleMateLookingFor(k)}
-                />
-              ))}
-            </Row>
-            <Row style={{ justifyContent: 'space-between' }}>
-              <View style={{ flex: 1, paddingRight: spacing.md }}>
-                <Text variant="bodyMedium">{t('community.visibleToggle')}</Text>
-                <Text variant="caption" tone="faint">{t('community.visibleSub')}</Text>
-              </View>
-              <Switch value={mateVisible} onValueChange={setMateVisible} />
-            </Row>
-            <Row style={{ justifyContent: 'space-between', opacity: mateVisible ? 1 : 0.45 }}>
-              <View style={{ flex: 1, paddingRight: spacing.md }}>
-                <Text variant="bodyMedium">{t('community.showCourseToggle')}</Text>
-                <Text variant="caption" tone="faint">{t('community.showCourseSub')}</Text>
-              </View>
-              <Switch value={mateShowCourse && mateVisible} onValueChange={setMateShowCourse} disabled={!mateVisible} />
             </Row>
           </Card>
 
