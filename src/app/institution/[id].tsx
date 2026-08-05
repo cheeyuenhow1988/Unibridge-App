@@ -6,6 +6,7 @@ import { Alert, Linking, Pressable, ScrollView, View, useWindowDimensions } from
 import { AmbassadorStrip } from '@/components/explore/AmbassadorStrip';
 import { AttractionsCarousel } from '@/components/explore/AttractionsCarousel';
 import { InstLogo } from '@/components/explore/InstLogo';
+import { ScholarshipCard } from '@/components/explore/ScholarshipCard';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
@@ -18,9 +19,18 @@ import { FLAGS } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
-import { getInstitution, listCoursesByInstitution } from '@/services/api';
+import { getInstitution, listCoursesByInstitution, listScholarships } from '@/services/api';
 import { formatDual, homeCurrencyFor } from '@/services/currency';
 import { useProfileStore } from '@/store/useProfileStore';
+import type { QualificationId } from '@/types/models';
+
+/** Vintage of the generated dataset, shown on the freshness note. */
+const DATA_CHECKED = '2026-08';
+
+const QUAL_LABEL: Record<QualificationId, string> = {
+  spm: 'SPM', stpm: 'STPM', uec: 'UEC', alevels: 'A-Levels', ib: 'IB',
+  hkdse: 'HKDSE', gsat: 'GSAT', atar: 'ATAR', gpa: 'GPA',
+};
 
 export default function InstitutionDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -31,7 +41,7 @@ export default function InstitutionDetail() {
   const home = profile ? homeCurrencyFor(profile) : 'USD';
 
   const state = useAsync(
-    async () => Promise.all([getInstitution(id), listCoursesByInstitution(id)]),
+    async () => Promise.all([getInstitution(id), listCoursesByInstitution(id), listScholarships()]),
     [id],
   );
 
@@ -51,6 +61,23 @@ export default function InstitutionDetail() {
     );
   }
   const courses = state.data?.[1] ?? [];
+
+  // Scholarships this school offers itself, then country-wide ones students
+  // here can also use.
+  const allScholarships = state.data?.[2] ?? [];
+  const ownScholarships = allScholarships.filter((s) => s.provider === institution.name);
+  const countryScholarships = allScholarships
+    .filter((s) => s.provider !== institution.name && s.destinationCountry === institution.country)
+    .slice(0, 2);
+
+  // Honest requirements summary across this school's courses.
+  const qual = profile?.qualification;
+  const ielts = courses.map((c) => c.english.ielts);
+  const ieltsMin = ielts.length ? Math.min(...ielts) : null;
+  const ieltsMax = ielts.length ? Math.max(...ielts) : null;
+  const easiest = qual && courses.length
+    ? [...courses].sort((a, b) => a.selectivity - b.selectivity)[0]
+    : undefined;
 
   return (
     <Screen padded={false} edges={[]}>
@@ -152,6 +179,57 @@ export default function InstitutionDetail() {
 
           <Text variant="caption" tone="faint">{t('institution.indicative')}</Text>
 
+          <SectionHeader title={t('institution.reqTitle')} />
+          <Card style={{ gap: spacing.sm }}>
+            {ieltsMin !== null ? (
+              <Row style={{ justifyContent: 'space-between' }}>
+                <Text variant="caption" tone="secondary">{t('institution.reqEnglish')}</Text>
+                <Text variant="caption">
+                  IELTS {ieltsMin === ieltsMax ? ieltsMin : `${ieltsMin}–${ieltsMax}`}
+                </Text>
+              </Row>
+            ) : null}
+            {qual && easiest ? (
+              <Row style={{ justifyContent: 'space-between' }}>
+                <Text variant="caption" tone="secondary">
+                  {t('institution.reqYourQual', { qual: QUAL_LABEL[qual] })}
+                </Text>
+                <Text variant="caption">
+                  {t('institution.reqFrom', { display: easiest.requirements[qual].display })}
+                </Text>
+              </Row>
+            ) : null}
+            <Text variant="caption" tone="faint">{t('institution.reqVary')}</Text>
+            <Row gap={6}>
+              <Ionicons name="time-outline" size={13} color={colors.eligible} />
+              <Text variant="caption" tone="secondary" style={{ flex: 1 }}>
+                {t('institution.dataChecked', { date: DATA_CHECKED })}
+              </Text>
+            </Row>
+          </Card>
+
+          <SectionHeader title={t('institution.scholarshipsTitle')} />
+          {ownScholarships.length === 0 && countryScholarships.length === 0 ? (
+            <Card tone="alt">
+              <Text variant="caption" tone="secondary">{t('institution.scholarshipsNone')}</Text>
+            </Card>
+          ) : (
+            <View style={{ gap: spacing.md }}>
+              {ownScholarships.map((s) => (
+                <ScholarshipCard key={s.id} scholarship={s} />
+              ))}
+              {countryScholarships.length > 0 ? (
+                <Text variant="caption" tone="faint">{t('institution.scholarshipsCountry')}</Text>
+              ) : null}
+              {countryScholarships.map((s) => (
+                <ScholarshipCard key={s.id} scholarship={s} />
+              ))}
+              <Text variant="caption" tone="faint">
+                {t('institution.dataChecked', { date: DATA_CHECKED })}
+              </Text>
+            </View>
+          )}
+
           {institution.campuses?.length ? (
             <>
               <SectionHeader title={t('institution.otherCampuses')} />
@@ -185,6 +263,11 @@ export default function InstitutionDetail() {
                 <Text variant="caption" tone="faint">
                   {t(`levels.${course.level}`)} · {t('common.years', { count: course.durationYears })} · {t(`fields.${course.field}`)}
                 </Text>
+                {qual ? (
+                  <Text variant="caption" tone="secondary">
+                    {QUAL_LABEL[qual]}: {course.requirements[qual].display} · IELTS {course.english.ielts}
+                  </Text>
+                ) : null}
                 <Row style={{ justifyContent: 'space-between' }}>
                   <Text variant="bodyMedium" tone="accent">
                     {formatDual(course.tuitionPerYear, course.currency, home)}{' '}

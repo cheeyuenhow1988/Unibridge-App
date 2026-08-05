@@ -255,7 +255,16 @@
     "rankingShort": "QS #{{rank}}",
     "rankingNote": "Xếp hạng thế giới kiểu QS, mang tính tham khảo",
     "otherCampuses": "Cơ sở khác",
-    "campusFeesNote": "Cùng hệ thống trường, khác quốc gia — học phí và sinh hoạt phí khác nhau. Chạm để so sánh."
+    "campusFeesNote": "Cùng hệ thống trường, khác quốc gia — học phí và sinh hoạt phí khác nhau. Chạm để so sánh.",
+    "reqTitle": "Điều kiện đầu vào",
+    "reqEnglish": "Tiếng Anh",
+    "reqYourQual": "{{qual}} của bạn",
+    "reqFrom": "từ {{display}}",
+    "reqVary": "Điều kiện khác nhau theo khóa — mở bất kỳ khóa nào để xem bảng đầy đủ mọi hệ điểm.",
+    "dataChecked": "Kiểm tra {{date}} — luôn xác nhận trên trang web chính thức.",
+    "scholarshipsTitle": "Học bổng",
+    "scholarshipsNone": "Chưa có học bổng nào cho trường này — học bổng toàn quốc có thể vẫn áp dụng.",
+    "scholarshipsCountry": "Học bổng toàn quốc sinh viên ở đây cũng dùng được:"
   },
   "attraction": {
     "whatToDo": "Chơi gì ở đây",

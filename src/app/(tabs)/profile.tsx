@@ -364,6 +364,10 @@ export default function ProfileScreen() {
               ['vi', 'Tiếng Việt'],
               ['zh', '中文（简体）'],
               ['zh-TW', '中文（繁體）'],
+              ['th', 'ไทย'],
+              ['hi', 'हिन्दी'],
+              ['ja', '日本語'],
+              ['ko', '한국어'],
             ] as const).map(([code, label]) => (
               <Chip key={code} label={label} selected={language === code} onPress={() => setLanguage(code)} />
             ))}

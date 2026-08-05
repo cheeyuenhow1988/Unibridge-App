@@ -6,6 +6,10 @@ import id from '@/i18n/id.json';
 import vi from '@/i18n/vi.json';
 import zh from '@/i18n/zh.json';
 import zhTW from '@/i18n/zh-TW.json';
+import th from '@/i18n/th.json';
+import hi from '@/i18n/hi.json';
+import ja from '@/i18n/ja.json';
+import ko from '@/i18n/ko.json';
 
 void i18n.use(initReactI18next).init({
   resources: {
@@ -15,6 +19,10 @@ void i18n.use(initReactI18next).init({
     vi: { translation: vi },
     zh: { translation: zh },
     'zh-TW': { translation: zhTW },
+    th: { translation: th },
+    hi: { translation: hi },
+    ja: { translation: ja },
+    ko: { translation: ko },
   },
   lng: 'en',
   fallbackLng: 'en',

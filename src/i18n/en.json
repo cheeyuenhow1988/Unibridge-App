@@ -258,7 +258,16 @@
     "rankingShort": "QS #{{rank}}",
     "rankingNote": "Indicative QS-style world ranking",
     "otherCampuses": "Other campuses",
-    "campusFeesNote": "Same institution family, different country — tuition and living costs differ. Tap to compare."
+    "campusFeesNote": "Same institution family, different country — tuition and living costs differ. Tap to compare.",
+    "reqTitle": "Entry requirements",
+    "reqEnglish": "English",
+    "reqYourQual": "Your {{qual}}",
+    "reqFrom": "from {{display}}",
+    "reqVary": "Requirements vary by course — open any course for the full table across all grading systems.",
+    "dataChecked": "Checked {{date}} — always confirm on the official website.",
+    "scholarshipsTitle": "Scholarships",
+    "scholarshipsNone": "No scholarships listed for this school right now — country-wide awards may still apply.",
+    "scholarshipsCountry": "Country-wide awards students here can also use:"
   },
   "attraction": {
     "whatToDo": "What to do",

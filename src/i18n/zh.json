@@ -49,7 +49,9 @@
     "copiedToClipboard": "已复制——随处粘贴",
     "soon": "即将上线",
     "demo": "演示",
-    "resetting": "正在重置应用…"
+    "resetting": "正在重置应用…",
+    "minutes": "{{count}} 分钟",
+    "likes": "{{count}} 个赞"
   },
   "tabs": {
     "match": "匹配",
@@ -255,7 +257,16 @@
     "rankingShort": "QS 第{{rank}}名",
     "rankingNote": "QS 风格世界排名（参考值）",
     "otherCampuses": "其他校区",
-    "campusFeesNote": "同一院校品牌、不同国家——学费与生活费不同。点按对比。"
+    "campusFeesNote": "同一院校品牌、不同国家——学费与生活费不同。点按对比。",
+    "reqTitle": "入学要求",
+    "reqEnglish": "英语",
+    "reqYourQual": "你的{{qual}}",
+    "reqFrom": "{{display}} 起",
+    "reqVary": "各课程要求不同——打开任一课程可查看所有评分体系的完整表格。",
+    "dataChecked": "核对于 {{date}}——请以官网为准。",
+    "scholarshipsTitle": "奖学金",
+    "scholarshipsNone": "该校暂无专属奖学金——全国性奖学金可能仍然适用。",
+    "scholarshipsCountry": "在这里就读也可申请的全国性奖学金："
   },
   "attraction": {
     "whatToDo": "玩什么",

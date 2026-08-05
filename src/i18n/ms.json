@@ -49,7 +49,9 @@
     "copiedToClipboard": "Disalin — tampal di mana-mana",
     "soon": "akan datang",
     "demo": "Demo",
-    "resetting": "Menetapkan semula aplikasi…"
+    "resetting": "Menetapkan semula aplikasi…",
+    "minutes": "{{count}} minit",
+    "likes": "{{count}} suka"
   },
   "tabs": {
     "match": "Padanan",
@@ -255,7 +257,16 @@
     "rankingShort": "QS #{{rank}}",
     "rankingNote": "Kedudukan dunia gaya QS (anggaran)",
     "otherCampuses": "Kampus lain",
-    "campusFeesNote": "Keluarga institusi yang sama, negara berbeza — yuran dan kos sara hidup berbeza. Ketik untuk bandingkan."
+    "campusFeesNote": "Keluarga institusi yang sama, negara berbeza — yuran dan kos sara hidup berbeza. Ketik untuk bandingkan.",
+    "reqTitle": "Syarat kemasukan",
+    "reqEnglish": "Bahasa Inggeris",
+    "reqYourQual": "{{qual}} anda",
+    "reqFrom": "dari {{display}}",
+    "reqVary": "Syarat berbeza ikut kursus — buka mana-mana kursus untuk jadual penuh semua sistem gred.",
+    "dataChecked": "Disemak {{date}} — sentiasa sahkan di laman web rasmi.",
+    "scholarshipsTitle": "Biasiswa",
+    "scholarshipsNone": "Tiada biasiswa disenaraikan untuk sekolah ini buat masa ini — anugerah seluruh negara mungkin masih layak.",
+    "scholarshipsCountry": "Anugerah seluruh negara yang turut boleh digunakan:"
   },
   "attraction": {
     "whatToDo": "Apa yang boleh dibuat",

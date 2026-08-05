@@ -255,7 +255,16 @@
     "rankingShort": "QS #{{rank}}",
     "rankingNote": "Peringkat dunia gaya QS, indikatif",
     "otherCampuses": "Kampus lain",
-    "campusFeesNote": "Satu keluarga institusi, beda negara — biaya kuliah dan hidup berbeda. Ketuk untuk membandingkan."
+    "campusFeesNote": "Satu keluarga institusi, beda negara — biaya kuliah dan hidup berbeda. Ketuk untuk membandingkan.",
+    "reqTitle": "Syarat masuk",
+    "reqEnglish": "Bahasa Inggris",
+    "reqYourQual": "{{qual}}-mu",
+    "reqFrom": "mulai {{display}}",
+    "reqVary": "Syarat berbeda per kursus — buka kursus mana pun untuk tabel lengkap semua sistem nilai.",
+    "dataChecked": "Diperiksa {{date}} — selalu konfirmasi di situs resmi.",
+    "scholarshipsTitle": "Beasiswa",
+    "scholarshipsNone": "Belum ada beasiswa terdaftar untuk sekolah ini — beasiswa tingkat negara mungkin tetap berlaku.",
+    "scholarshipsCountry": "Beasiswa tingkat negara yang juga bisa dipakai:"
   },
   "attraction": {
     "whatToDo": "Ngapain di sini",

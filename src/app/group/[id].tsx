@@ -15,13 +15,18 @@ import { useTheme } from '@/hooks/useTheme';
 import { getIntakeGroup, listGroupMessages } from '@/services/api';
 import { useCommunityStore } from '@/store/useCommunityStore';
 import { useProfileStore } from '@/store/useProfileStore';
+import type { GroupMessage } from '@/types/models';
+
+// Stable fallback: a fresh [] per snapshot makes useSyncExternalStore loop
+// forever (React error #185), so the empty case must share one reference.
+const NO_MESSAGES: GroupMessage[] = [];
 
 export default function GroupChat() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const { t } = useTranslation();
   const { colors } = useTheme();
   const profile = useProfileStore((s) => s.profile);
-  const localMessages = useCommunityStore((s) => s.localMessages[id] ?? []);
+  const localMessages = useCommunityStore((s) => s.localMessages[id] ?? NO_MESSAGES);
   const sendMessage = useCommunityStore((s) => s.sendMessage);
   const [draft, setDraft] = useState('');
   const listRef = useRef<FlatList>(null);

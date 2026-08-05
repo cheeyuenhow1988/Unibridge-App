@@ -49,7 +49,9 @@
     "copiedToClipboard": "已複製——隨處貼上",
     "soon": "即將上線",
     "demo": "演示",
-    "resetting": "正在重置應用…"
+    "resetting": "正在重置應用…",
+    "minutes": "{{count}} 分鐘",
+    "likes": "{{count}} 個讚"
   },
   "tabs": {
     "match": "匹配",
@@ -255,7 +257,16 @@
     "rankingShort": "QS 第{{rank}}名",
     "rankingNote": "QS 風格世界排名（參考值）",
     "otherCampuses": "其他校區",
-    "campusFeesNote": "同一院校品牌、不同國家——學費與生活費不同。點按對比。"
+    "campusFeesNote": "同一院校品牌、不同國家——學費與生活費不同。點按對比。",
+    "reqTitle": "入學要求",
+    "reqEnglish": "英語",
+    "reqYourQual": "你的{{qual}}",
+    "reqFrom": "{{display}} 起",
+    "reqVary": "各課程要求不同——打開任一課程可查看所有評分制度的完整表格。",
+    "dataChecked": "核對於 {{date}}——請以官網為準。",
+    "scholarshipsTitle": "獎學金",
+    "scholarshipsNone": "該校暫無專屬獎學金——全國性獎學金可能仍然適用。",
+    "scholarshipsCountry": "在這裡就讀也可申請的全國性獎學金："
   },
   "attraction": {
     "whatToDo": "玩什麼",
