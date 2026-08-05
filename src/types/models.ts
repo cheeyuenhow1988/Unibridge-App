@@ -293,6 +293,10 @@ export interface Attraction {
   description: string;
   image: string;
   tips: string[];
+  /** Food spots only — indicative sample rating with a live Google link. */
+  rating?: number;
+  reviewCount?: number;
+  reviewSnippet?: string;
 }
 
 export interface AmbassadorPost {

@@ -237,7 +237,13 @@
     "emptyEligibleTitle": "Belum ada yang memenuhi syarat — ini alasannya",
     "emptyEligibleNoEnglish": "Nilaimu cukup, tapi belum ada tes bahasa Inggris di profil — jadi semua {{count}} kecocokan ada di Ambang. Tambahkan skor IELTS/TOEFL (perkiraan pun boleh) dan semuanya pindah ke sini.",
     "addEnglishCta": "Tambah skor bahasa Inggris",
-    "filterCountryMulti": "Ketuk beberapa negara untuk menggabungkannya."
+    "filterCountryMulti": "Ketuk beberapa negara untuk menggabungkannya.",
+    "emptyNoFilters_eligible": "Belum ada yang langsung memenuhi syarat",
+    "emptyNoFiltersBody_eligible": "Tambahkan tes Bahasa Inggris atau perbarui nilai untuk masuk langsung — Borderline menunjukkan yang hampir.",
+    "emptyNoFilters_borderline": "Tidak ada kursus borderline",
+    "emptyNoFiltersBody_borderline": "Semua kecocokan jelas: memenuhi syarat sekarang atau bisa lewat jalur pathway.",
+    "emptyNoFilters_pathway": "Tidak perlu pathway 🎉",
+    "emptyNoFiltersBody_pathway": "Nilaimu memenuhi syarat langsung — jalur foundation dan diploma hanya muncul jika masuk langsung tidak terjangkau."
   },
   "compare": {
     "title": "Bandingkan",
@@ -296,7 +302,10 @@
     "reviewsSampleNote": "Ulasan contoh untuk prototipe — feed ulasan Google asli terhubung saat rilis.",
     "knowMore": "Pelajari lebih",
     "prevPhoto": "Foto sebelumnya",
-    "nextPhoto": "Foto berikutnya"
+    "nextPhoto": "Foto berikutnya",
+    "foodTitle": "Kafe & kuliner terdekat",
+    "foodMins": "{{count}} mnt dari kampus",
+    "foodSampleNote": "Rating contoh untuk prototipe — ketuk untuk ulasan Google langsung."
   },
   "attraction": {
     "whatToDo": "Ngapain di sini",

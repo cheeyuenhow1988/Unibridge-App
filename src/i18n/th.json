@@ -237,7 +237,13 @@
     "emptyEligibleTitle": "ยังไม่มีที่ผ่านเกณฑ์ — นี่คือเหตุผล",
     "emptyEligibleNoEnglish": "เกรดของคุณถึงเกณฑ์ แต่โปรไฟล์ยังไม่มีผลสอบภาษาอังกฤษ — ทั้ง {{count}} รายการจึงอยู่ที่เฉียดเกณฑ์ เพิ่มคะแนน IELTS/TOEFL (คะแนนคาดการณ์ก็ได้) แล้วจะย้ายมาที่นี่",
     "addEnglishCta": "เพิ่มคะแนนภาษาอังกฤษ",
-    "filterCountryMulti": "แตะหลายประเทศเพื่อเลือกพร้อมกัน"
+    "filterCountryMulti": "แตะหลายประเทศเพื่อเลือกพร้อมกัน",
+    "emptyNoFilters_eligible": "ยังไม่มีหลักสูตรที่ผ่านตรง",
+    "emptyNoFiltersBody_eligible": "เพิ่มผลสอบภาษาอังกฤษหรืออัปเดตเกรดเพื่อเข้าตรง — Borderline แสดงที่ใกล้เคียง",
+    "emptyNoFilters_borderline": "ไม่มีหลักสูตร Borderline",
+    "emptyNoFiltersBody_borderline": "ทุกผลชัดเจน: ผ่านตอนนี้หรือไปทางเส้นทางเตรียมเข้า",
+    "emptyNoFilters_pathway": "ไม่ต้องใช้เส้นทางเตรียมเข้า 🎉",
+    "emptyNoFiltersBody_pathway": "ผลของคุณผ่านตรงทั้งหมด — เส้นทาง Foundation/Diploma จะแสดงเมื่อเข้าตรงไม่ได้เท่านั้น"
   },
   "compare": {
     "title": "เปรียบเทียบ",
@@ -296,7 +302,10 @@
     "reviewsSampleNote": "รีวิวตัวอย่างสำหรับต้นแบบ — รีวิว Google จริงจะเชื่อมต่อเมื่อเปิดตัว",
     "knowMore": "รู้เพิ่มเติม",
     "prevPhoto": "รูปก่อนหน้า",
-    "nextPhoto": "รูปถัดไป"
+    "nextPhoto": "รูปถัดไป",
+    "foodTitle": "คาเฟ่และร้านอาหารใกล้เคียง",
+    "foodMins": "{{count}} นาทีจากมหาลัย",
+    "foodSampleNote": "คะแนนตัวอย่างสำหรับต้นแบบ — แตะเพื่อดูรีวิว Google จริง"
   },
   "attraction": {
     "whatToDo": "ทำอะไรได้บ้าง",

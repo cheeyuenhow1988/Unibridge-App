@@ -22,7 +22,7 @@ import { FLAGS } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
-import { getInstitution, getSchoolReviews, listCoursesByInstitution, listScholarships } from '@/services/api';
+import { getInstitution, getSchoolReviews, listCoursesByInstitution, listFoodNearby, listScholarships } from '@/services/api';
 import { formatDual, homeCurrencyFor } from '@/services/currency';
 import { useProfileStore } from '@/store/useProfileStore';
 import type { QualificationId } from '@/types/models';
@@ -49,6 +49,7 @@ export default function InstitutionDetail() {
     [id],
   );
   const reviews = useAsync(() => getSchoolReviews(id), [id]);
+  const eats = useAsync(() => listFoodNearby(id), [id]);
   const [photoIdx, setPhotoIdx] = useState(0);
   const galleryRef = useRef<ScrollView>(null);
 
@@ -447,6 +448,51 @@ export default function InstitutionDetail() {
 
           <SectionHeader title={t('institution.aroundCampus')} />
           <AttractionsCarousel institutionId={institution.id} city={institution.city} />
+
+          {eats.data?.length ? (
+            <>
+              <SectionHeader title={t('institution.foodTitle')} />
+              <Card style={{ gap: spacing.md }}>
+                {eats.data.map((f) => (
+                  <View key={f.id} style={{ gap: 3 }}>
+                    <Row style={{ justifyContent: 'space-between' }}>
+                      <Text variant="label" style={{ flex: 1 }}>{f.name}</Text>
+                      {f.rating ? (
+                        <Row gap={3}>
+                          <Ionicons name="star" size={13} color="#F2A93B" />
+                          <Text variant="caption">
+                            {f.rating.toFixed(1)}{f.reviewCount ? ` (${f.reviewCount.toLocaleString('en')})` : ''}
+                          </Text>
+                        </Row>
+                      ) : null}
+                    </Row>
+                    <Text variant="caption" tone="secondary">
+                      {t('institution.foodMins', { count: f.distanceMinutes })} · {f.description}
+                    </Text>
+                    {f.reviewSnippet ? (
+                      <Text variant="caption" tone="faint">
+                        “{f.reviewSnippet}” · {t('institution.reviewsSampleTag')}
+                      </Text>
+                    ) : null}
+                    <Pressable
+                      accessibilityRole="button"
+                      onPress={() =>
+                        void Linking.openURL(
+                          `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${f.name} ${institution.city}`)}`,
+                        )
+                      }
+                    >
+                      <Row gap={4}>
+                        <Ionicons name="logo-google" size={12} color={colors.accent} />
+                        <Text variant="caption" tone="accent">{t('institution.reviewsOnGoogle')}</Text>
+                      </Row>
+                    </Pressable>
+                  </View>
+                ))}
+                <Text variant="caption" tone="faint">{t('institution.foodSampleNote')}</Text>
+              </Card>
+            </>
+          ) : null}
         </View>
       </ScrollView>
     </Screen>

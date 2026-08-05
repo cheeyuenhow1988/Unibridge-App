@@ -283,13 +283,21 @@ export default function MatchScreen() {
               ctaLabel={t('match.addEnglishCta')}
               onCta={() => router.push('/onboarding/grades')}
             />
-          ) : (
+          ) : activeFilterCount > 0 ? (
             <EmptyState
               icon="funnel-outline"
               title={t('match.emptyBucket')}
               body={t('match.emptyBucketCta')}
-              ctaLabel={activeFilterCount ? t('match.clearFilters') : undefined}
-              onCta={activeFilterCount ? () => setFilters(DEFAULT_FILTERS) : undefined}
+              ctaLabel={t('match.clearFilters')}
+              onCta={() => setFilters(DEFAULT_FILTERS)}
+            />
+          ) : (
+            // No filters set — "loosen your filters" would be nonsense. An
+            // empty bucket here is usually GOOD news; say what it means.
+            <EmptyState
+              icon={bucket === 'pathway' ? 'trending-up-outline' : 'checkmark-circle-outline'}
+              title={t(`match.emptyNoFilters_${bucket}`)}
+              body={t(`match.emptyNoFiltersBody_${bucket}`)}
             />
           )
         }

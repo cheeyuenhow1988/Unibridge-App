@@ -240,7 +240,13 @@
     "emptyEligibleTitle": "Nothing eligible yet — here’s why",
     "emptyEligibleNoEnglish": "Your grades qualify, but there’s no English test on your profile — so all {{count}} matches sit in Borderline. Add an IELTS/TOEFL score (even an expected one) and they move here.",
     "addEnglishCta": "Add English score",
-    "filterCountryMulti": "Tap several countries to combine them."
+    "filterCountryMulti": "Tap several countries to combine them.",
+    "emptyNoFilters_eligible": "Nothing is directly eligible yet",
+    "emptyNoFiltersBody_eligible": "Add an English test or update your grades to unlock direct entry — Borderline shows what is close.",
+    "emptyNoFilters_borderline": "No borderline courses",
+    "emptyNoFiltersBody_borderline": "Every match is clear-cut: either eligible now or reachable through a pathway.",
+    "emptyNoFilters_pathway": "No pathway needed 🎉",
+    "emptyNoFiltersBody_pathway": "Your results qualify you directly — foundation and diploma routes only appear when direct entry is out of reach."
   },
   "compare": {
     "title": "Compare",
@@ -299,7 +305,10 @@
     "reviewsSampleNote": "Sample reviews for the prototype — the live Google reviews feed connects at launch.",
     "knowMore": "Know more",
     "prevPhoto": "Previous photo",
-    "nextPhoto": "Next photo"
+    "nextPhoto": "Next photo",
+    "foodTitle": "Cafés & food nearby",
+    "foodMins": "{{count}} min from campus",
+    "foodSampleNote": "Sample ratings for the prototype — tap a spot for live Google reviews."
   },
   "attraction": {
     "whatToDo": "What to do",

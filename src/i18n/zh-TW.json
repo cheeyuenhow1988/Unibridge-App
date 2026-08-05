@@ -239,7 +239,13 @@
     "emptyEligibleTitle": "還沒有符合條件的——原因在這裡",
     "emptyEligibleNoEnglish": "你的成績達標，但檔案裡還沒有英語成績——所以全部 {{count}} 個配對都在「邊緣」裡。加入雅思/托福成績（預估分也行），它們就會移到這裡。",
     "addEnglishCta": "加入英語成績",
-    "filterCountryMulti": "可點選多個國家組合篩選。"
+    "filterCountryMulti": "可點選多個國家組合篩選。",
+    "emptyNoFilters_eligible": "暫無可直接入讀的課程",
+    "emptyNoFiltersBody_eligible": "新增英語成績或更新成績即可解鎖直接入學——「邊緣」顯示接近的課程。",
+    "emptyNoFilters_borderline": "沒有邊緣課程",
+    "emptyNoFiltersBody_borderline": "每個配對都很明確:要麼現在就符合,要麼可經預科路徑達成。",
+    "emptyNoFilters_pathway": "無需預科路徑 🎉",
+    "emptyNoFiltersBody_pathway": "你的成績可直接入學——只有當無法直接入學時才會顯示預科與文憑路徑。"
   },
   "compare": {
     "title": "對比",
@@ -298,7 +304,10 @@
     "reviewsSampleNote": "原型示例評價——正式版將接入真實的 Google 評價。",
     "knowMore": "了解更多",
     "prevPhoto": "上一張照片",
-    "nextPhoto": "下一張照片"
+    "nextPhoto": "下一張照片",
+    "foodTitle": "附近咖啡與美食",
+    "foodMins": "距校園 {{count}} 分鐘",
+    "foodSampleNote": "原型示例評分——點按查看即時 Google 評價。"
   },
   "attraction": {
     "whatToDo": "玩什麼",

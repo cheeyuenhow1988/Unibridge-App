@@ -10,7 +10,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.5,
+    "reviewCount": 1553,
+    "reviewSnippet": "Friendly staff and quick service even at peak hour."
   },
   {
     "id": "au-monash-a2",
@@ -62,7 +65,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1797,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "au-sydney-a1",
@@ -101,7 +107,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.7,
+    "reviewCount": 1675,
+    "reviewSnippet": "Solid late-night option close to campus."
   },
   {
     "id": "au-sydney-a4",
@@ -153,7 +162,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1066,
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
   },
   {
     "id": "au-uq-a3",
@@ -231,7 +243,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.7,
+    "reviewCount": 1401,
+    "reviewSnippet": "Friendly staff and quick service even at peak hour."
   },
   {
     "id": "au-unsw-a4",
@@ -270,7 +285,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1690,
+    "reviewSnippet": "A student favourite — go early on weekends."
   },
   {
     "id": "au-unimelb-a2",
@@ -322,7 +340,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1934,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "au-rmit-a1",
@@ -335,7 +356,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.5,
+    "reviewCount": 1279,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "au-rmit-a2",
@@ -387,7 +411,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1523,
+    "reviewSnippet": "Solid late-night option close to campus."
   },
   {
     "id": "my-um-a1",
@@ -413,7 +440,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1066,
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
   },
   {
     "id": "my-um-a3",
@@ -478,7 +508,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1751,
+    "reviewSnippet": "Solid late-night option close to campus."
   },
   {
     "id": "my-taylors-a3",
@@ -543,7 +576,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1614,
+    "reviewSnippet": "A student favourite — go early on weekends."
   },
   {
     "id": "my-sunway-a3",
@@ -608,7 +644,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1203,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "my-mmu-a3",
@@ -673,7 +712,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1203,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "my-usm-a3",
@@ -738,7 +780,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1203,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "my-utm-a3",
@@ -790,7 +835,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1142,
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
   },
   {
     "id": "tw-ntu-a2",
@@ -868,7 +916,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1340,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "tw-nthu-a3",
@@ -920,7 +971,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1142,
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
   },
   {
     "id": "tw-fcu-a2",
@@ -985,7 +1039,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1416,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "tw-nsysu-a2",
@@ -1076,7 +1133,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.7,
+    "reviewCount": 2223,
+    "reviewSnippet": "Friendly staff and quick service even at peak hour."
   },
   {
     "id": "gb-manchester-a4",
@@ -1128,7 +1188,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1477,
+    "reviewSnippet": "Friendly staff and quick service even at peak hour."
   },
   {
     "id": "gb-leeds-a3",
@@ -1193,7 +1256,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 2162,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "gb-birmingham-a3",
@@ -1245,7 +1311,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1142,
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
   },
   {
     "id": "gb-ucl-a2",
@@ -1310,7 +1379,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1142,
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
   },
   {
     "id": "gb-kcl-a2",
@@ -1453,7 +1525,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1203,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "sg-nus-a3",
@@ -1531,7 +1606,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1477,
+    "reviewSnippet": "Friendly staff and quick service even at peak hour."
   },
   {
     "id": "sg-ntusg-a3",
@@ -1609,7 +1687,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1203,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "sg-smu-a3",
@@ -1687,7 +1768,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1203,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "sg-sim-a3",
@@ -1778,7 +1862,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.7,
+    "reviewCount": 1949,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "nz-auckland-a4",
@@ -1830,7 +1917,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1203,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "nz-vuw-a3",
@@ -1895,7 +1985,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 2162,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "nz-canterbury-a3",
@@ -1960,7 +2053,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1477,
+    "reviewSnippet": "Friendly staff and quick service even at peak hour."
   },
   {
     "id": "nz-otago-a3",
@@ -2051,7 +2147,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.5,
+    "reviewCount": 1325,
+    "reviewSnippet": "Friendly staff and quick service even at peak hour."
   },
   {
     "id": "ru-msu-a5",
@@ -2116,7 +2215,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1462,
+    "reviewSnippet": "A student favourite — go early on weekends."
   },
   {
     "id": "ru-itmo-a5",
@@ -2155,7 +2257,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1203,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "ru-kfu-a3",
@@ -2298,7 +2403,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.4,
+    "reviewCount": 1264,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "us-mit-a4",
@@ -2363,7 +2471,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.7,
+    "reviewCount": 1127,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "us-bu-a4",
@@ -2428,7 +2539,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.4,
+    "reviewCount": 1264,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "us-nyu-a4",
@@ -2493,7 +2607,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.7,
+    "reviewCount": 1401,
+    "reviewSnippet": "Friendly staff and quick service even at peak hour."
   },
   {
     "id": "us-ucla-a4",
@@ -2558,7 +2675,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.7,
+    "reviewCount": 1949,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "us-uchicago-a4",
@@ -2623,7 +2743,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.4,
+    "reviewCount": 1264,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "us-smc-a4",
@@ -2688,7 +2811,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.4,
+    "reviewCount": 1264,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "us-ice-a4",
@@ -2740,7 +2866,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1888,
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
   },
   {
     "id": "ca-utoronto-a3",
@@ -2805,7 +2934,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1203,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "ca-ubc-a3",
@@ -2883,7 +3015,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.7,
+    "reviewCount": 1675,
+    "reviewSnippet": "Solid late-night option close to campus."
   },
   {
     "id": "ca-mcgill-a4",
@@ -2935,7 +3070,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1340,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "ca-york-a3",
@@ -3000,7 +3138,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 2299,
+    "reviewSnippet": "Friendly staff and quick service even at peak hour."
   },
   {
     "id": "ca-georgebrown-a3",
@@ -3078,7 +3219,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.7,
+    "reviewCount": 1949,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "cn-tsinghua-a4",
@@ -3143,7 +3287,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.4,
+    "reviewCount": 1264,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "cn-pku-a4",
@@ -3221,7 +3368,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.5,
+    "reviewCount": 1599,
+    "reviewSnippet": "Solid late-night option close to campus."
   },
   {
     "id": "cn-fudan-a5",
@@ -3286,7 +3436,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1462,
+    "reviewSnippet": "A student favourite — go early on weekends."
   },
   {
     "id": "cn-sysu-a5",
@@ -3338,7 +3491,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.4,
+    "reviewCount": 1264,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "cn-bhi-a4",
@@ -3377,7 +3533,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1690,
+    "reviewSnippet": "A student favourite — go early on weekends."
   },
   {
     "id": "au-angliss-a2",
@@ -3429,7 +3588,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1934,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "my-berjaya-a1",
@@ -3455,7 +3617,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1751,
+    "reviewSnippet": "Solid late-night option close to campus."
   },
   {
     "id": "my-berjaya-a3",
@@ -3507,7 +3672,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1416,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "tw-nkuht-a2",
@@ -3572,7 +3740,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1142,
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
   },
   {
     "id": "gb-lcb-a2",
@@ -3650,7 +3821,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1203,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "nz-lcb-a3",
@@ -3715,7 +3889,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1614,
+    "reviewSnippet": "A student favourite — go early on weekends."
   },
   {
     "id": "sg-shatec-a3",
@@ -3793,7 +3970,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1614,
+    "reviewSnippet": "A student favourite — go early on weekends."
   },
   {
     "id": "my-monash-a3",
@@ -3884,7 +4064,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.5,
+    "reviewCount": 1599,
+    "reviewSnippet": "Solid late-night option close to campus."
   },
   {
     "id": "cn-nyush-a5",
@@ -3910,7 +4093,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.5,
+    "reviewCount": 1827,
+    "reviewSnippet": "Solid late-night option close to campus."
   },
   {
     "id": "gb-imperial-a2",
@@ -4001,7 +4187,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.4,
+    "reviewCount": 1264,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "au-uts-a4",
@@ -4053,7 +4242,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1340,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "my-ucsi-a3",
@@ -4105,7 +4297,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1416,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "tw-ntust-a2",
@@ -4183,7 +4378,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1066,
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
   },
   {
     "id": "sg-tp-a3",
@@ -4274,7 +4472,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.4,
+    "reviewCount": 1264,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "nz-aut-a4",
@@ -4352,7 +4553,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.5,
+    "reviewCount": 1325,
+    "reviewSnippet": "Friendly staff and quick service even at peak hour."
   },
   {
     "id": "ru-hse-a5",
@@ -4404,7 +4608,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.7,
+    "reviewCount": 1949,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "us-columbia-a4",
@@ -4469,7 +4676,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.7,
+    "reviewCount": 2497,
+    "reviewSnippet": "Solid late-night option close to campus."
   },
   {
     "id": "us-northeastern-a4",
@@ -4534,7 +4744,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.4,
+    "reviewCount": 1264,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "us-fit-a4",
@@ -4599,7 +4812,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.4,
+    "reviewCount": 1264,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "us-iit-a4",
@@ -4651,7 +4867,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1203,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "ca-tmu-a3",
@@ -4716,7 +4935,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1203,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "ca-sfu-a3",
@@ -4794,7 +5016,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.4,
+    "reviewCount": 2086,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "ca-concordia-a4",
@@ -4846,7 +5071,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1203,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "ca-vcc-a3",
@@ -4937,7 +5165,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1462,
+    "reviewSnippet": "A student favourite — go early on weekends."
   },
   {
     "id": "cn-sjtu-a5",
@@ -5002,7 +5233,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1736,
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
   },
   {
     "id": "cn-tongji-a5",
@@ -5054,7 +5288,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.4,
+    "reviewCount": 1264,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "cn-bnu-a4",
@@ -5132,7 +5369,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.5,
+    "reviewCount": 1325,
+    "reviewSnippet": "Friendly staff and quick service even at peak hour."
   },
   {
     "id": "cn-jnu-a5",
@@ -5158,7 +5398,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.5,
+    "reviewCount": 1553,
+    "reviewSnippet": "Friendly staff and quick service even at peak hour."
   },
   {
     "id": "au-deakin-a2",
@@ -5210,7 +5453,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1797,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "au-macquarie-a1",
@@ -5249,7 +5495,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.4,
+    "reviewCount": 2086,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "au-macquarie-a4",
@@ -5301,7 +5550,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1888,
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
   },
   {
     "id": "au-griffith-a3",
@@ -5353,7 +5605,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.5,
+    "reviewCount": 2101,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "au-holmesglen-a2",
@@ -5405,7 +5660,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 2345,
+    "reviewSnippet": "Solid late-night option close to campus."
   },
   {
     "id": "my-apu-a1",
@@ -5431,7 +5689,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1203,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "my-apu-a3",
@@ -5496,7 +5757,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1340,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "my-help-a3",
@@ -5561,7 +5825,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1340,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "my-inti-a3",
@@ -5613,7 +5880,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.5,
+    "reviewCount": 1279,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "tw-nccu-a2",
@@ -5678,7 +5948,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1142,
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
   },
   {
     "id": "tw-tku-a2",
@@ -5743,7 +6016,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1142,
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
   },
   {
     "id": "gb-lse-a2",
@@ -5808,7 +6084,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.5,
+    "reviewCount": 1827,
+    "reviewSnippet": "Solid late-night option close to campus."
   },
   {
     "id": "gb-kingston-a2",
@@ -5886,7 +6165,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1203,
+    "reviewSnippet": "Cheap, generous portions — packed at lunch."
   },
   {
     "id": "sg-sit-a3",
@@ -5964,7 +6246,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1066,
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
   },
   {
     "id": "sg-np-a3",
@@ -6042,7 +6327,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1614,
+    "reviewSnippet": "A student favourite — go early on weekends."
   },
   {
     "id": "nz-massey-a3",
@@ -6107,7 +6395,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1751,
+    "reviewSnippet": "Solid late-night option close to campus."
   },
   {
     "id": "nz-lincoln-a3",
@@ -6198,7 +6489,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1462,
+    "reviewSnippet": "A student favourite — go early on weekends."
   },
   {
     "id": "ru-spbu-a5",
@@ -6263,7 +6557,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1462,
+    "reviewSnippet": "A student favourite — go early on weekends."
   },
   {
     "id": "ru-mipt-a5",
@@ -6315,7 +6612,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.7,
+    "reviewCount": 1675,
+    "reviewSnippet": "Solid late-night option close to campus."
   },
   {
     "id": "us-depaul-a4",
@@ -6380,7 +6680,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.7,
+    "reviewCount": 1401,
+    "reviewSnippet": "Friendly staff and quick service even at peak hour."
   },
   {
     "id": "us-pace-a4",
@@ -6445,7 +6748,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.4,
+    "reviewCount": 1264,
+    "reviewSnippet": "Perfect study-break spot between classes."
   },
   {
     "id": "us-umb-a4",
@@ -6497,7 +6803,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.6,
+    "reviewCount": 1614,
+    "reviewSnippet": "A student favourite — go early on weekends."
   },
   {
     "id": "ca-seneca-a3",
@@ -6562,7 +6871,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.3,
+    "reviewCount": 1751,
+    "reviewSnippet": "Solid late-night option close to campus."
   },
   {
     "id": "ca-langara-a3",
@@ -6653,7 +6965,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1462,
+    "reviewSnippet": "A student favourite — go early on weekends."
   },
   {
     "id": "cn-ecnu-a5",
@@ -6718,7 +7033,10 @@
     "tips": [
       "Go hungry and stall-hop — split dishes so you can try more",
       "Weeknights are cheaper and less crowded than weekends"
-    ]
+    ],
+    "rating": 4.2,
+    "reviewCount": 1462,
+    "reviewSnippet": "A student favourite — go early on weekends."
   },
   {
     "id": "cn-scut-a5",

@@ -239,7 +239,13 @@
     "emptyEligibleTitle": "Belum ada yang layak — ini sebabnya",
     "emptyEligibleNoEnglish": "Gred anda mencukupi, tetapi tiada ujian Bahasa Inggeris pada profil — jadi semua {{count}} padanan berada di Sempadan. Tambah skor IELTS/TOEFL (jangkaan pun boleh) dan ia berpindah ke sini.",
     "addEnglishCta": "Tambah skor Bahasa Inggeris",
-    "filterCountryMulti": "Ketik beberapa negara untuk menggabungkannya."
+    "filterCountryMulti": "Ketik beberapa negara untuk menggabungkannya.",
+    "emptyNoFilters_eligible": "Belum ada yang layak terus",
+    "emptyNoFiltersBody_eligible": "Tambah ujian Bahasa Inggeris atau kemas kini gred untuk kemasukan terus — Sempadan menunjukkan yang hampir.",
+    "emptyNoFilters_borderline": "Tiada kursus sempadan",
+    "emptyNoFiltersBody_borderline": "Setiap padanan jelas: sama ada layak sekarang atau boleh dicapai melalui laluan.",
+    "emptyNoFilters_pathway": "Tiada laluan diperlukan 🎉",
+    "emptyNoFiltersBody_pathway": "Keputusan anda melayakkan kemasukan terus — laluan asasi dan diploma hanya muncul apabila kemasukan terus di luar capaian."
   },
   "compare": {
     "title": "Banding",
@@ -298,7 +304,10 @@
     "reviewsSampleNote": "Ulasan contoh untuk prototaip — suapan ulasan Google sebenar disambungkan semasa pelancaran.",
     "knowMore": "Ketahui lagi",
     "prevPhoto": "Foto sebelumnya",
-    "nextPhoto": "Foto seterusnya"
+    "nextPhoto": "Foto seterusnya",
+    "foodTitle": "Kafe & makanan berdekatan",
+    "foodMins": "{{count}} min dari kampus",
+    "foodSampleNote": "Penarafan contoh untuk prototaip — ketik untuk ulasan Google langsung."
   },
   "attraction": {
     "whatToDo": "Apa yang boleh dibuat",

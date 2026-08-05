@@ -1046,10 +1046,22 @@ const TYPE_TIPS = {
   sports: ["Match-day atmosphere is worth it even if you don't follow the sport", 'Student tickets are usually the cheapest way in'],
 };
 
+// Sample review lines for food spots — clearly labelled indicative in the UI,
+// with a live Google-reviews link beside them.
+const FOOD_REVIEWS = [
+  'Great coffee and plenty of laptop-friendly seats.',
+  'Cheap, generous portions — packed at lunch.',
+  'Perfect study-break spot between classes.',
+  'Friendly staff and quick service even at peak hour.',
+  'A student favourite — go early on weekends.',
+  'Solid late-night option close to campus.',
+];
+
 const attractions = [];
 for (const inst of institutions) {
   const pool = CITY_ATTRACTIONS[inst.city];
   pool.forEach(([name, type, mins, description], i) => {
+    const isFood = type === 'food';
     attractions.push({
       id: `${inst.id}-a${i + 1}`,
       institutionId: inst.id,
@@ -1058,6 +1070,13 @@ for (const inst of institutions) {
       description,
       image: `https://picsum.photos/seed/${inst.id}-a${i}/400/300`,
       tips: TYPE_TIPS[type],
+      ...(isFood
+        ? {
+            rating: Math.round((4.2 + ((inst.id.length * 3 + i) % 6) / 10) * 10) / 10,
+            reviewCount: 320 + ((inst.id.length * 137 + i * 61) % 3700),
+            reviewSnippet: FOOD_REVIEWS[(inst.id.length + i) % FOOD_REVIEWS.length],
+          }
+        : {}),
     });
   });
 }

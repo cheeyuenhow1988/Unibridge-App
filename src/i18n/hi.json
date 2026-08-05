@@ -240,7 +240,13 @@
     "emptyEligibleTitle": "अभी कुछ योग्य नहीं — वजह यह है",
     "emptyEligibleNoEnglish": "आपके ग्रेड पर्याप्त हैं, पर प्रोफ़ाइल में अंग्रेज़ी टेस्ट नहीं है — इसलिए सभी {{count}} मैच सीमा पर हैं। IELTS/TOEFL स्कोर जोड़ें (अनुमानित भी चलेगा) और वे यहाँ आ जाएँगे।",
     "addEnglishCta": "अंग्रेज़ी स्कोर जोड़ें",
-    "filterCountryMulti": "कई देश चुनने के लिए उन पर टैप करें।"
+    "filterCountryMulti": "कई देश चुनने के लिए उन पर टैप करें।",
+    "emptyNoFilters_eligible": "अभी कुछ भी सीधे योग्य नहीं",
+    "emptyNoFiltersBody_eligible": "सीधे प्रवेश के लिए अंग्रेज़ी टेस्ट जोड़ें या ग्रेड अपडेट करें — Borderline नज़दीकी कोर्स दिखाता है।",
+    "emptyNoFilters_borderline": "कोई बॉर्डरलाइन कोर्स नहीं",
+    "emptyNoFiltersBody_borderline": "हर मिलान स्पष्ट है: अभी योग्य या पाथवे से पहुँच योग्य।",
+    "emptyNoFilters_pathway": "पाथवे की ज़रूरत नहीं 🎉",
+    "emptyNoFiltersBody_pathway": "आपके अंक सीधे प्रवेश दिलाते हैं — फाउंडेशन/डिप्लोमा रास्ते तभी दिखते हैं जब सीधा प्रवेश संभव न हो।"
   },
   "compare": {
     "title": "तुलना",
@@ -299,7 +305,10 @@
     "reviewsSampleNote": "प्रोटोटाइप के लिए नमूना समीक्षाएँ — असली Google समीक्षा फ़ीड लॉन्च पर जुड़ेगी।",
     "knowMore": "और जानें",
     "prevPhoto": "पिछली फ़ोटो",
-    "nextPhoto": "अगली फ़ोटो"
+    "nextPhoto": "अगली फ़ोटो",
+    "foodTitle": "पास के कैफ़े और खाना",
+    "foodMins": "कैंपस से {{count}} मिनट",
+    "foodSampleNote": "प्रोटोटाइप के नमूना रेटिंग — लाइव Google समीक्षा के लिए टैप करें।"
   },
   "attraction": {
     "whatToDo": "क्या करें",

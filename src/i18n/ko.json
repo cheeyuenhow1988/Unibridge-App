@@ -237,7 +237,13 @@
     "emptyEligibleTitle": "아직 바로 지원 가능한 게 없어요 — 이유는 이래요",
     "emptyEligibleNoEnglish": "성적은 충분한데 프로필에 영어 시험이 없어서 {{count}}개 매칭이 모두 경계선에 있어요. IELTS/TOEFL 점수(예상 점수도 OK)를 추가하면 여기로 옮겨져요.",
     "addEnglishCta": "영어 점수 추가",
-    "filterCountryMulti": "여러 국가를 탭해 함께 선택할 수 있어요."
+    "filterCountryMulti": "여러 국가를 탭해 함께 선택할 수 있어요.",
+    "emptyNoFilters_eligible": "아직 바로 지원 가능한 과정이 없어요",
+    "emptyNoFiltersBody_eligible": "영어 시험을 추가하거나 성적을 업데이트하면 바로 입학이 열려요. 보더라인에 근접 과정이 표시됩니다.",
+    "emptyNoFilters_borderline": "보더라인 과정이 없어요",
+    "emptyNoFiltersBody_borderline": "모든 매칭이 명확해요: 지금 가능하거나 패스웨이로 도달 가능하거나.",
+    "emptyNoFilters_pathway": "패스웨이가 필요 없어요 🎉",
+    "emptyNoFiltersBody_pathway": "성적으로 바로 입학할 수 있어요. 파운데이션/디플로마 경로는 직접 입학이 어려울 때만 표시됩니다."
   },
   "compare": {
     "title": "비교",
@@ -296,7 +302,10 @@
     "reviewsSampleNote": "프로토타입용 샘플 리뷰 — 실제 Google 리뷰는 출시 때 연결돼요.",
     "knowMore": "더 알아보기",
     "prevPhoto": "이전 사진",
-    "nextPhoto": "다음 사진"
+    "nextPhoto": "다음 사진",
+    "foodTitle": "근처 카페 & 맛집",
+    "foodMins": "캠퍼스에서 {{count}}분",
+    "foodSampleNote": "프로토타입 샘플 평점입니다. 탭하면 실제 Google 리뷰를 볼 수 있어요."
   },
   "attraction": {
     "whatToDo": "즐길 거리",

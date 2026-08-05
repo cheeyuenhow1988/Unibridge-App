@@ -237,7 +237,13 @@
     "emptyEligibleTitle": "Chưa có mục đủ điều kiện — lý do đây",
     "emptyEligibleNoEnglish": "Điểm của bạn đạt, nhưng hồ sơ chưa có bài thi tiếng Anh — nên cả {{count}} kết quả nằm ở Cận kề. Thêm điểm IELTS/TOEFL (dự kiến cũng được) là chúng chuyển sang đây.",
     "addEnglishCta": "Thêm điểm tiếng Anh",
-    "filterCountryMulti": "Chạm nhiều quốc gia để chọn cùng lúc."
+    "filterCountryMulti": "Chạm nhiều quốc gia để chọn cùng lúc.",
+    "emptyNoFilters_eligible": "Chưa có ngành đủ điều kiện trực tiếp",
+    "emptyNoFiltersBody_eligible": "Thêm bài thi tiếng Anh hoặc cập nhật điểm để vào thẳng — Cận kề cho thấy các ngành gần đạt.",
+    "emptyNoFilters_borderline": "Không có ngành cận kề",
+    "emptyNoFiltersBody_borderline": "Mọi kết quả đều rõ ràng: đủ điều kiện ngay hoặc đi qua lộ trình.",
+    "emptyNoFilters_pathway": "Không cần lộ trình 🎉",
+    "emptyNoFiltersBody_pathway": "Điểm của bạn đủ vào thẳng — lộ trình dự bị và cao đẳng chỉ xuất hiện khi không thể vào thẳng."
   },
   "compare": {
     "title": "So sánh",
@@ -296,7 +302,10 @@
     "reviewsSampleNote": "Đánh giá mẫu cho bản thử — nguồn đánh giá Google thật kết nối khi ra mắt.",
     "knowMore": "Tìm hiểu thêm",
     "prevPhoto": "Ảnh trước",
-    "nextPhoto": "Ảnh tiếp theo"
+    "nextPhoto": "Ảnh tiếp theo",
+    "foodTitle": "Quán cà phê & ăn uống gần trường",
+    "foodMins": "{{count}} phút từ trường",
+    "foodSampleNote": "Điểm mẫu cho nguyên mẫu — chạm để xem đánh giá Google trực tiếp."
   },
   "attraction": {
     "whatToDo": "Chơi gì ở đây",

@@ -237,7 +237,13 @@
     "emptyEligibleTitle": "まだ出願可がありません — 理由はこちら",
     "emptyEligibleNoEnglish": "成績は基準を満たしていますが、プロフィールに英語試験がないため、{{count}}件すべてがボーダーラインにあります。IELTS/TOEFLのスコア（見込みでも可）を追加すると、ここに移動します。",
     "addEnglishCta": "英語スコアを追加",
-    "filterCountryMulti": "複数の国をタップして組み合わせられます。"
+    "filterCountryMulti": "複数の国をタップして組み合わせられます。",
+    "emptyNoFilters_eligible": "まだ直接出願できるコースがありません",
+    "emptyNoFiltersBody_eligible": "英語テストを追加するか成績を更新すると直接入学が解放されます。ボーダーラインに近いコースが表示されます。",
+    "emptyNoFilters_borderline": "ボーダーラインのコースはありません",
+    "emptyNoFiltersBody_borderline": "すべての判定が明確です:今すぐ出願可能か、パスウェイ経由で到達可能かのどちらかです。",
+    "emptyNoFilters_pathway": "パスウェイは不要です 🎉",
+    "emptyNoFiltersBody_pathway": "あなたの成績で直接入学できます。ファウンデーション/ディプロマ経由は直接入学が難しい場合にのみ表示されます。"
   },
   "compare": {
     "title": "比較",
@@ -296,7 +302,10 @@
     "reviewsSampleNote": "プロトタイプ用のサンプルレビュー — 実際のGoogleレビューはリリース時に接続。",
     "knowMore": "詳しく見る",
     "prevPhoto": "前の写真",
-    "nextPhoto": "次の写真"
+    "nextPhoto": "次の写真",
+    "foodTitle": "近くのカフェ・グルメ",
+    "foodMins": "キャンパスから{{count}}分",
+    "foodSampleNote": "プロトタイプのサンプル評価です。タップするとGoogleの実際のレビューが見られます。"
   },
   "attraction": {
     "whatToDo": "楽しみ方",

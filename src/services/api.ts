@@ -108,6 +108,23 @@ export async function listScholarships(): Promise<Scholarship[]> {
   return simulate(scholarships);
 }
 
+/** Food spots around this school's city (deduped, own campus first, max 3) —
+ * powers the "Cafés & food nearby" card with its sample ratings. */
+export async function listFoodNearby(institutionId: string): Promise<Attraction[]> {
+  const inst = institutions.find((i) => i.id === institutionId);
+  if (!inst) return simulate([], 150);
+  const cityIds = new Set(institutions.filter((i) => i.city === inst.city).map((i) => i.id));
+  const seen = new Set<string>();
+  const out: Attraction[] = [];
+  for (const a of attractions) {
+    if (a.type !== 'food' || !cityIds.has(a.institutionId) || seen.has(a.name)) continue;
+    seen.add(a.name);
+    out.push(a);
+  }
+  out.sort((a, b) => (a.institutionId === institutionId ? -1 : b.institutionId === institutionId ? 1 : 0));
+  return simulate(out.slice(0, 3), 200);
+}
+
 export async function listAttractions(institutionId: string): Promise<Attraction[]> {
   return simulate(attractions.filter((a) => a.institutionId === institutionId), 250);
 }
