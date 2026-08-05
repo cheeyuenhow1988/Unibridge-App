@@ -1,5 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
+import { LinearGradient } from 'expo-linear-gradient';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -96,6 +97,11 @@ export default function InstitutionDetail() {
               <Image key={img} source={{ uri: img }} style={{ width, height: 240 }} contentFit="cover" transition={250} />
             ))}
           </ScrollView>
+          <LinearGradient
+            colors={['rgba(0,0,0,0.5)', 'transparent']}
+            style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 110 }}
+            pointerEvents="none"
+          />
           {institution.images.length > 1 ? (
             <View
               style={{

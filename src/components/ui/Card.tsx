@@ -22,7 +22,7 @@ export function Card({ children, onPress, style, padded = true, tone = 'surface'
     borderColor: colors.border,
     ...(padded ? { padding: spacing.lg } : { overflow: 'hidden' as const }),
     ...(scheme === 'light'
-      ? { shadowColor: '#172723', shadowOpacity: 0.05, shadowRadius: 12, shadowOffset: { width: 0, height: 4 }, elevation: 2 }
+      ? { shadowColor: '#1B2A5B', shadowOpacity: 0.08, shadowRadius: 18, shadowOffset: { width: 0, height: 7 }, elevation: 3 }
       : null),
   };
   if (!onPress) return <View style={[base, style]}>{children}</View>;

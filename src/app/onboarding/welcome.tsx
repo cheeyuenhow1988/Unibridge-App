@@ -1,9 +1,10 @@
+import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FlatList, Pressable, View, useWindowDimensions } from 'react-native';
+import { FlatList, Pressable, StyleSheet, View, useWindowDimensions } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button } from '@/components/ui/Button';
 import { Text } from '@/components/ui/Text';
@@ -17,6 +18,14 @@ const SLIDES = [
   { key: '2', tag: 'onboarding.slide2Tag', titleA: 'onboarding.slide2TitleA', titleB: 'onboarding.slide2TitleB', body: 'onboarding.slide2Body' },
   { key: '3', tag: 'onboarding.slide3Tag', titleA: 'onboarding.slide3TitleA', titleB: 'onboarding.slide3TitleB', body: 'onboarding.slide3Body' },
 ] as const;
+
+// Real, byte-verified campus photos (same Commons pipeline as the school
+// galleries) — one backdrop per slide, crossfading as the pager moves.
+const BACKDROPS = [
+  'Main_Walkway,_Lower_campus_UNSW.jpg',
+  'University_of_Sydney_Main_Quadrangle.jpg',
+  'NUS,_University_Cultural_Centre_3,_Nov_06.JPG',
+].map((f) => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(f)}?width=1200`);
 
 export default function Welcome() {
   const { t } = useTranslation();
@@ -33,7 +42,18 @@ export default function Welcome() {
   };
 
   return (
-    <LinearGradient colors={[colors.gradientFrom, colors.gradientTo]} style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: '#0B1735' }}>
+      <Image
+        source={{ uri: BACKDROPS[page] ?? BACKDROPS[0] }}
+        style={StyleSheet.absoluteFill}
+        contentFit="cover"
+        transition={500}
+      />
+      <LinearGradient
+        colors={['rgba(9, 18, 46, 0.42)', 'rgba(9, 18, 46, 0.68)', 'rgba(7, 13, 34, 0.94)']}
+        locations={[0, 0.45, 1]}
+        style={StyleSheet.absoluteFill}
+      />
       <StatusBar style="light" />
       <SafeAreaView edges={['top', 'bottom']} style={{ flex: 1 }}>
         <View style={{ alignItems: 'center', paddingTop: spacing.xl, gap: spacing.xs }}>
@@ -107,6 +127,6 @@ export default function Welcome() {
           </Pressable>
         </View>
       </SafeAreaView>
-    </LinearGradient>
+    </View>
   );
 }

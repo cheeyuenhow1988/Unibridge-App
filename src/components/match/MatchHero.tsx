@@ -52,8 +52,22 @@ export function MatchHero({ profile, results, matchedCount }: Props) {
       colors={[colors.gradientFrom, colors.gradientTo]}
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
-      style={{ borderRadius: radius.xl, padding: spacing.xl, gap: spacing.md }}
+      style={{ borderRadius: radius.xl, padding: spacing.xl, gap: spacing.md, overflow: 'hidden' }}
     >
+      <View
+        pointerEvents="none"
+        style={{
+          position: 'absolute', top: -46, right: -34, width: 170, height: 170,
+          borderRadius: 85, backgroundColor: 'rgba(255,255,255,0.08)',
+        }}
+      />
+      <View
+        pointerEvents="none"
+        style={{
+          position: 'absolute', bottom: -58, left: -42, width: 150, height: 150,
+          borderRadius: 75, backgroundColor: 'rgba(255,255,255,0.05)',
+        }}
+      />
       <Text variant="hero" color={colors.onGradient} style={{ fontSize: 34, lineHeight: 38 }}>
         {t('match.greeting', { name: profile.name.split(' ')[0] })}
       </Text>
