@@ -49,7 +49,8 @@
     "likes": "{{count}} suka",
     "year": "Tahun {{year}}",
     "at": "di",
-    "resetting": "Mengatur ulang aplikasi…"
+    "resetting": "Mengatur ulang aplikasi…",
+    "moreBelow": "Pilihan lain di bawah"
   },
   "tabs": {
     "match": "Kecocokan",

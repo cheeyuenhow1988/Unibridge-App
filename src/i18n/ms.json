@@ -51,7 +51,8 @@
     "demo": "Demo",
     "resetting": "Menetapkan semula aplikasi…",
     "minutes": "{{count}} minit",
-    "likes": "{{count}} suka"
+    "likes": "{{count}} suka",
+    "moreBelow": "Lagi pilihan di bawah"
   },
   "tabs": {
     "match": "Padanan",

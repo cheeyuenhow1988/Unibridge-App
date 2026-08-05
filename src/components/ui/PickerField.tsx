@@ -1,5 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FlatList, Modal, Pressable, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { fonts, radius, spacing } from '@/constants/theme';
@@ -26,14 +27,26 @@ interface Props<T extends string | number> {
 
 export function PickerField<T extends string | number>({ label, hint, placeholder, value, options, onChange }: Props<T>) {
   const { colors } = useTheme();
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = options.find((o) => o.value === value);
+
+  // Long lists (15 grading systems, 31 days…) overflow the sheet with no
+  // visual cue — float a down button while more options remain below.
+  const listRef = useRef<FlatList<PickerOption<T>>>(null);
+  const [layoutH, setLayoutH] = useState(0);
+  const [contentH, setContentH] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
+  const moreBelow = contentH - scrollY - layoutH > 24;
   return (
     <View style={{ gap: spacing.xs + 2 }}>
       {label ? <Text variant="label">{label}</Text> : null}
       <Pressable
         accessibilityRole="button"
-        onPress={() => setOpen(true)}
+        onPress={() => {
+          setScrollY(0);
+          setOpen(true);
+        }}
         style={({ pressed }) => ({
           minHeight: 50,
           borderRadius: radius.md,
@@ -70,12 +83,19 @@ export function PickerField<T extends string | number>({ label, hint, placeholde
             maxHeight: '70%',
           }}
         >
-          <View style={{ padding: spacing.lg, gap: spacing.sm }}>
+          {/* minHeight: 0 lets the list shrink to the sheet's 70% cap so it
+              scrolls internally instead of being clipped with no way down. */}
+          <View style={{ padding: spacing.lg, gap: spacing.sm, flexShrink: 1, minHeight: 0 }}>
             {label ? <Text variant="heading">{label}</Text> : null}
             <FlatList
+              ref={listRef}
               data={options}
               keyExtractor={(o) => String(o.value)}
-              style={{ flexGrow: 0 }}
+              style={{ flexGrow: 0, flexShrink: 1, minHeight: 0 }}
+              onLayout={(e) => setLayoutH(e.nativeEvent.layout.height)}
+              onContentSizeChange={(_, h) => setContentH(h)}
+              onScroll={(e) => setScrollY(e.nativeEvent.contentOffset.y)}
+              scrollEventThrottle={16}
               renderItem={({ item }) => {
                 const selected = item.value === value;
                 return (
@@ -119,6 +139,34 @@ export function PickerField<T extends string | number>({ label, hint, placeholde
                 );
               }}
             />
+            {moreBelow ? (
+              <View
+                pointerEvents="box-none"
+                style={{ position: 'absolute', left: 0, right: 0, bottom: spacing.lg, alignItems: 'center' }}
+              >
+                <Pressable
+                  accessibilityRole="button"
+                  accessibilityLabel={t('common.moreBelow')}
+                  onPress={() => listRef.current?.scrollToOffset({ offset: scrollY + layoutH * 0.75, animated: true })}
+                  style={({ pressed }) => ({
+                    width: 36,
+                    height: 36,
+                    borderRadius: 18,
+                    backgroundColor: colors.accent,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    opacity: pressed ? 0.85 : 1,
+                    shadowColor: '#000',
+                    shadowOpacity: 0.25,
+                    shadowRadius: 8,
+                    shadowOffset: { width: 0, height: 3 },
+                    elevation: 4,
+                  })}
+                >
+                  <Ionicons name="chevron-down" size={20} color={colors.onAccent} />
+                </Pressable>
+              </View>
+            ) : null}
           </View>
         </SafeAreaView>
       </Modal>

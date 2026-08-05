@@ -51,7 +51,8 @@
     "likes": "{{count}} likes",
     "year": "Year {{year}}",
     "at": "at",
-    "resetting": "Resetting the app…"
+    "resetting": "Resetting the app…",
+    "moreBelow": "More options below"
   },
   "tabs": {
     "match": "Match",

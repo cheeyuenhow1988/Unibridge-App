@@ -51,7 +51,8 @@
     "demo": "演示",
     "resetting": "正在重置应用…",
     "minutes": "{{count}} 分钟",
-    "likes": "{{count}} 个赞"
+    "likes": "{{count}} 个赞",
+    "moreBelow": "下方还有更多选项"
   },
   "tabs": {
     "match": "匹配",
