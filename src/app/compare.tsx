@@ -14,7 +14,7 @@ import { Screen } from '@/components/ui/Screen';
 import { SkeletonCards } from '@/components/ui/Skeleton';
 import { EmptyState, ErrorState } from '@/components/ui/States';
 import { Text } from '@/components/ui/Text';
-import { FLAGS } from '@/constants/countries';
+import { FLAGS, RENT_PERIOD } from '@/constants/countries';
 import { fonts, light, radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useMatchData } from '@/hooks/useMatchData';
@@ -206,8 +206,11 @@ export default function CompareScreen() {
                         <Text variant="bodyMedium">{formatMoney(costs.livingMonthly, costs.currency)}</Text>
                         <VerifiedCostBadge col={col} />
                         <Text variant="caption" tone="faint">
-                          {t('compare.rent')} {formatMoney(costs.rentMonthly, costs.currency)} · {t('compare.food')}{' '}
-                          {formatMoney(costs.foodMonthly, costs.currency)}
+                          {t('compare.rent')}{' '}
+                          {RENT_PERIOD[col.country] === 'week'
+                            ? `${formatMoney(Math.round((costs.rentMonthly * 12) / 52), costs.currency)}${t('costsheet.perWeek')}`
+                            : `${formatMoney(costs.rentMonthly, costs.currency)}${t('costsheet.perMonth')}`}
+                          {' · '}{t('compare.food')} {formatMoney(costs.foodMonthly, costs.currency)}
                         </Text>
                         <Text variant="caption" tone="faint">
                           {t('compare.transport')} {formatMoney(costs.transportMonthly, costs.currency)}

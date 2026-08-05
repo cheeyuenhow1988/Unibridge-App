@@ -4,6 +4,7 @@ import { Modal, Pressable, ScrollView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Divider, Row } from '@/components/ui/Misc';
 import { Text } from '@/components/ui/Text';
+import { RENT_PERIOD } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
@@ -32,16 +33,27 @@ export function CityCostSheet({ visible, col, home, onClose }: Props) {
       ? formatMoney(n, col.currency)
       : `${formatMoney(n, col.currency)} · ≈${formatMoney(convert(n, col.currency, home), home)}`;
 
+  // Rents are stored monthly, but AU/NZ landlords advertise per week —
+  // show the unit students will actually see on listings, explicitly.
+  const rentPeriod = RENT_PERIOD[col.country];
+  const perUnit = rentPeriod === 'week' ? t('costsheet.perWeek') : t('costsheet.perMonth');
+  const rentDual = (monthly: number) => {
+    const n = rentPeriod === 'week' ? Math.round((monthly * 12) / 52) : monthly;
+    return col.currency === home
+      ? `${formatMoney(n, col.currency)}${perUnit}`
+      : `${formatMoney(n, col.currency)}${perUnit} · ≈${formatMoney(convert(n, col.currency, home), home)}${perUnit}`;
+  };
+
   const rentRow = (label: string, suburb: number, cbd: number) => (
     <View style={{ gap: 2, paddingVertical: spacing.sm }}>
       <Text variant="label">{label}</Text>
       <Row style={{ justifyContent: 'space-between' }}>
         <Text variant="caption" tone="secondary">{t('costsheet.suburb')}</Text>
-        <Text variant="caption">{dual(suburb)}</Text>
+        <Text variant="caption">{rentDual(suburb)}</Text>
       </Row>
       <Row style={{ justifyContent: 'space-between' }}>
         <Text variant="caption" tone="secondary">{t('costsheet.cbd')}</Text>
-        <Text variant="caption">{dual(cbd)}</Text>
+        <Text variant="caption">{rentDual(cbd)}</Text>
       </Row>
     </View>
   );
@@ -75,6 +87,11 @@ export function CityCostSheet({ visible, col, home, onClose }: Props) {
           <Text variant="caption" tone="faint">{t('costsheet.note')}</Text>
 
           <Text variant="heading" style={{ marginTop: spacing.md }}>{t('compare.rent')}</Text>
+          <Text variant="caption" tone="faint">
+            {rentPeriod === 'week'
+              ? t('costsheet.rentWeeklyNote', { country: t(`countries.${col.country}`) })
+              : t('costsheet.rentMonthlyNote')}
+          </Text>
           {rentRow(t('costsheet.room'), col.rentOptions.roomSuburb, col.rentOptions.roomCbd)}
           <Divider />
           {rentRow(t('costsheet.studio'), col.rentOptions.studioSuburb, col.rentOptions.studioCbd)}

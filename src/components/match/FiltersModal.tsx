@@ -15,13 +15,14 @@ import type { CountryCode, CurrencyCode, FieldId } from '@/types/models';
 export type DurationFilter = 'any' | 'short' | 'medium' | 'long';
 
 export interface MatchFilters {
-  country: CountryCode | null;
+  /** Multi-select — empty means any country. */
+  countries: CountryCode[];
   field: FieldId | null;
   duration: DurationFilter;
   budget: number | null;
 }
 
-export const DEFAULT_FILTERS: MatchFilters = { country: null, field: null, duration: 'any', budget: null };
+export const DEFAULT_FILTERS: MatchFilters = { countries: [], field: null, duration: 'any', budget: null };
 
 const FIELDS: FieldId[] = [
   'business', 'engineering', 'it', 'health', 'science', 'law',
@@ -75,21 +76,30 @@ export function FiltersModal({ visible, onClose, filters, onChange, resultCount,
 
           {section(
             t('match.filterCountry'),
-            <Row wrap gap={spacing.sm}>
-              <Chip label={t('match.filterDurationAny')} selected={!filters.country} onPress={() => onChange({ ...filters, country: null })} />
-              {DEST_COUNTRIES.map((c) => {
-                const n = countryCounts[c] ?? 0;
-                return (
-                  <View key={c} style={{ opacity: filters.country === c || n > 0 ? 1 : 0.4 }}>
-                    <Chip
-                      label={`${FLAGS[c]} ${t(`countries.${c}`)} · ${n}`}
-                      selected={filters.country === c}
-                      onPress={() => onChange({ ...filters, country: filters.country === c ? null : c })}
-                    />
-                  </View>
-                );
-              })}
-            </Row>,
+            <View style={{ gap: spacing.sm }}>
+              <Row wrap gap={spacing.sm}>
+                <Chip label={t('match.filterDurationAny')} selected={filters.countries.length === 0} onPress={() => onChange({ ...filters, countries: [] })} />
+                {DEST_COUNTRIES.map((c) => {
+                  const n = countryCounts[c] ?? 0;
+                  const on = filters.countries.includes(c);
+                  return (
+                    <View key={c} style={{ opacity: on || n > 0 ? 1 : 0.4 }}>
+                      <Chip
+                        label={`${FLAGS[c]} ${t(`countries.${c}`)} · ${n}`}
+                        selected={on}
+                        onPress={() =>
+                          onChange({
+                            ...filters,
+                            countries: on ? filters.countries.filter((x) => x !== c) : [...filters.countries, c],
+                          })
+                        }
+                      />
+                    </View>
+                  );
+                })}
+              </Row>
+              <Text variant="caption" tone="faint">{t('match.filterCountryMulti')}</Text>
+            </View>,
           )}
 
           {section(

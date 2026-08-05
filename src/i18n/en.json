@@ -234,7 +234,8 @@
     "zeroComboHint": "No course matches this combination — clear one of the filters to see options.",
     "emptyEligibleTitle": "Nothing eligible yet — here’s why",
     "emptyEligibleNoEnglish": "Your grades qualify, but there’s no English test on your profile — so all {{count}} matches sit in Borderline. Add an IELTS/TOEFL score (even an expected one) and they move here.",
-    "addEnglishCta": "Add English score"
+    "addEnglishCta": "Add English score",
+    "filterCountryMulti": "Tap several countries to combine them."
   },
   "compare": {
     "title": "Compare",
@@ -495,7 +496,12 @@
     "emptyEvents": "No events near you yet.",
     "arrivalTitle": "Arrival services",
     "arrivalTeaser": "Jobs, rooms, wheels & tips — from students already there.",
-    "you": "You"
+    "you": "You",
+    "groupsExplainer": "Intake groups are chats for students starting at the same school in the same intake — ask questions, sort housing and arrive with friends. Joining opens the group chat.",
+    "matesAt": "At {{school}}",
+    "matesNearby": "Nearby in {{city}} — same city, usually within ~10 km",
+    "matesAnchor": "Matched to {{school}} from your application or saved course. Sample students — real admitted coursemates appear at launch.",
+    "matesSample": "Apply to or save a course to see coursemates for your school. Showing a sample for {{school}}."
   },
   "arrival": {
     "title": "Arrival services",
@@ -648,7 +654,11 @@
     "flightsTitle": "Flights home (round trip)",
     "flightLow": "Low season",
     "flightPeak": "Peak season (holidays)",
-    "flightNote": "Round-trip economy estimate between your home country and this city — book 2–3 months ahead for low-season prices."
+    "flightNote": "Round-trip economy estimate between your home country and this city — book 2–3 months ahead for low-season prices.",
+    "perWeek": "/wk",
+    "perMonth": "/mo",
+    "rentWeeklyNote": "Rentals in {{country}} are advertised per week — weekly prices shown (a month is about 4.3 weeks).",
+    "rentMonthlyNote": "Rents shown per calendar month."
   },
   "instTypesPlural": {
     "university": "Universities",

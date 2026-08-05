@@ -19,6 +19,13 @@ export const CURRENCY_SYMBOL: Record<CurrencyCode, string> = {
   MMK: 'K', KRW: '₩', JPY: '¥',
 };
 
+/** How rentals are actually advertised in each destination country — Australia
+ * and New Zealand list per week, everywhere else per calendar month. */
+export const RENT_PERIOD: Record<CountryCode, 'week' | 'month'> = {
+  AU: 'week', NZ: 'week', MY: 'month', TW: 'month', GB: 'month',
+  SG: 'month', RU: 'month', US: 'month', CA: 'month', CN: 'month',
+};
+
 /** National grading system(s) per home country — pinned and preselected at registration. */
 export const RECOMMENDED_QUALS: Record<HomeCountryCode, QualificationId[]> = {
   MY: ['spm', 'stpm', 'uec'], TW: ['gsat'], SG: ['alevels'], ID: ['sma'], VN: ['thpt'],

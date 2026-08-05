@@ -231,7 +231,8 @@
     "zeroComboHint": "この組み合わせに合うコースがありません — フィルターを1つ外してみてください。",
     "emptyEligibleTitle": "まだ出願可がありません — 理由はこちら",
     "emptyEligibleNoEnglish": "成績は基準を満たしていますが、プロフィールに英語試験がないため、{{count}}件すべてがボーダーラインにあります。IELTS/TOEFLのスコア（見込みでも可）を追加すると、ここに移動します。",
-    "addEnglishCta": "英語スコアを追加"
+    "addEnglishCta": "英語スコアを追加",
+    "filterCountryMulti": "複数の国をタップして組み合わせられます。"
   },
   "compare": {
     "title": "比較",
@@ -491,7 +492,12 @@
     "emptyEvents": "近くのイベントはまだありません。",
     "arrivalTitle": "到着サービス",
     "arrivalTeaser": "仕事・部屋・車・現地情報 — すでに現地にいる学生から。",
-    "you": "あなた"
+    "you": "あなた",
+    "groupsExplainer": "入学グループは、同じ学校・同じ入学期の学生のチャットです。質問したり、住まいを探したり、友達と一緒に到着できます。参加するとチャットが開きます。",
+    "matesAt": "{{school}}にて",
+    "matesNearby": "{{city}}の近く — 同じ都市、通常約10km圏内",
+    "matesAnchor": "出願または保存したコースから{{school}}に紐づけました。サンプルの学生です — 正式公開時に実際の同級生が表示されます。",
+    "matesSample": "出願またはコースを保存すると、あなたの学校の同級生が表示されます。{{school}}のサンプルを表示中。"
   },
   "arrival": {
     "title": "到着サービス",
@@ -644,7 +650,11 @@
     "flightsTitle": "帰省の航空券（往復）",
     "flightLow": "閑散期",
     "flightPeak": "繁忙期（休暇シーズン）",
-    "flightNote": "母国とこの都市間の往復エコノミー目安 — 閑散期価格は2〜3か月前の予約で。"
+    "flightNote": "母国とこの都市間の往復エコノミー目安 — 閑散期価格は2〜3か月前の予約で。",
+    "perWeek": "/週",
+    "perMonth": "/月",
+    "rentWeeklyNote": "{{country}}の家賃は週単位で掲載されます — 週額表示(1か月 ≈ 4.3週)。",
+    "rentMonthlyNote": "家賃は月額表示です。"
   },
   "instTypesPlural": {
     "university": "大学",

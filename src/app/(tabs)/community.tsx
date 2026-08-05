@@ -16,11 +16,14 @@ import { Text } from '@/components/ui/Text';
 import { FLAGS } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
+import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
 import { getSupportBundle, listAmbassadors, listCoursemates, listEvents, listInstitutions, listIntakeGroups } from '@/services/api';
 import { hapticTap } from '@/services/haptics';
+import { useApplicationsStore } from '@/store/useApplicationsStore';
 import { useCommunityStore } from '@/store/useCommunityStore';
-import type { Short } from '@/types/models';
+import { useSavedStore } from '@/store/useSavedStore';
+import type { Coursemate, Short } from '@/types/models';
 
 type Segment = 'groups' | 'feed' | 'mates' | 'events';
 
@@ -39,6 +42,9 @@ export default function CommunityScreen() {
   const toggleRsvp = useCommunityStore((s) => s.toggleRsvp);
   const likedPostIds = useCommunityStore((s) => s.likedPostIds);
   const toggleLike = useCommunityStore((s) => s.toggleLike);
+  const applications = useApplicationsStore((s) => s.applications);
+  const savedCourseIds = useSavedStore((s) => s.savedCourseIds);
+  const { matchData } = useMatchData();
 
   const state = useAsync(async () =>
     Promise.all([listIntakeGroups(), listAmbassadors(), listCoursemates(), listEvents(), listInstitutions()]),
@@ -100,6 +106,7 @@ export default function CommunityScreen() {
 
           {segment === 'groups' ? (
             <View style={{ gap: spacing.md }}>
+              <Text variant="caption" tone="secondary">{t('community.groupsExplainer')}</Text>
               {sortedGroups.length === 0 ? (
                 <EmptyState icon="chatbubbles-outline" title={t('community.emptyGroups')} />
               ) : null}
@@ -233,42 +240,75 @@ export default function CommunityScreen() {
             </View>
           ) : null}
 
-          {segment === 'mates' ? (
-            <View style={{ gap: spacing.md }}>
-              <Text variant="caption" tone="secondary">{t('community.matesSubtitle')}</Text>
-              {mates.length === 0 ? <EmptyState icon="people-outline" title={t('community.emptyMates')} /> : null}
-              <Row wrap gap={spacing.md}>
-                {mates.map((m) => {
-                  const connected = connections.includes(m.id);
-                  return (
-                    <View
-                      key={m.id}
-                      style={{
-                        flexBasis: '47%', flexGrow: 1, backgroundColor: colors.surface, borderRadius: radius.lg,
-                        borderWidth: 1, borderColor: colors.border, padding: spacing.lg, alignItems: 'center', gap: spacing.sm,
-                      }}
-                    >
-                      <Image source={{ uri: m.avatar }} style={{ width: 64, height: 64, borderRadius: radius.full, backgroundColor: colors.surfaceAlt }} />
-                      <Text variant="label" center numberOfLines={1}>{m.name}</Text>
-                      <Text variant="caption" tone="faint" center numberOfLines={2}>
-                        {FLAGS[m.homeCountry]} · {m.courseName}
-                      </Text>
-                      <Button
-                        label={connected ? t('community.connected') : t('community.connect')}
-                        size="sm"
-                        variant={connected ? 'secondary' : 'primary'}
-                        icon={connected ? 'checkmark' : 'person-add-outline'}
-                        onPress={() => {
-                          hapticTap();
-                          toggleConnection(m.id);
-                        }}
-                      />
-                    </View>
-                  );
-                })}
-              </Row>
-            </View>
-          ) : null}
+          {segment === 'mates' ? (() => {
+            // Anchor to the school the student is actually heading to: latest
+            // application first, then the most recent saved course, else a
+            // labelled sample school.
+            const courseInst = (courseId: string) =>
+              matchData?.resultByCourseId.get(courseId)?.institution.id;
+            const anchorId =
+              applications.map((a) => courseInst(a.courseId)).find(Boolean) ??
+              savedCourseIds.map(courseInst).find(Boolean) ??
+              'au-monash';
+            const anchorInst = institutions.find((i) => i.id === anchorId);
+            const isSample = applications.length === 0 && savedCourseIds.length === 0;
+            const atSchool = mates.filter((m) => m.institutionId === anchorId);
+            const sameCityIds = new Set(
+              institutions.filter((i) => i.city === anchorInst?.city && i.id !== anchorId).map((i) => i.id),
+            );
+            const nearby = mates.filter((m) => sameCityIds.has(m.institutionId)).slice(0, 6);
+
+            const mateCard = (m: Coursemate) => {
+              const connected = connections.includes(m.id);
+              return (
+                <View
+                  key={m.id}
+                  style={{
+                    flexBasis: '47%', flexGrow: 1, backgroundColor: colors.surface, borderRadius: radius.lg,
+                    borderWidth: 1, borderColor: colors.border, padding: spacing.lg, alignItems: 'center', gap: spacing.sm,
+                  }}
+                >
+                  <Image source={{ uri: m.avatar }} style={{ width: 64, height: 64, borderRadius: radius.full, backgroundColor: colors.surfaceAlt }} />
+                  <Text variant="label" center numberOfLines={1}>{m.name}</Text>
+                  <Text variant="caption" tone="faint" center numberOfLines={2}>
+                    {FLAGS[m.homeCountry]} · {m.courseName}
+                  </Text>
+                  <Text variant="micro" tone="faint" center numberOfLines={1}>{instName(m.institutionId)}</Text>
+                  <Button
+                    label={connected ? t('community.connected') : t('community.connect')}
+                    size="sm"
+                    variant={connected ? 'secondary' : 'primary'}
+                    icon={connected ? 'checkmark' : 'person-add-outline'}
+                    onPress={() => {
+                      hapticTap();
+                      toggleConnection(m.id);
+                    }}
+                  />
+                </View>
+              );
+            };
+
+            return (
+              <View style={{ gap: spacing.md }}>
+                <Text variant="caption" tone="secondary">
+                  {isSample
+                    ? t('community.matesSample', { school: anchorInst?.name ?? '' })
+                    : t('community.matesAnchor', { school: anchorInst?.name ?? '' })}
+                </Text>
+                <Text variant="label">{t('community.matesAt', { school: anchorInst?.short ?? '' })}</Text>
+                {atSchool.length === 0 ? <EmptyState icon="people-outline" title={t('community.emptyMates')} /> : null}
+                <Row wrap gap={spacing.md}>{atSchool.map(mateCard)}</Row>
+                {nearby.length > 0 ? (
+                  <>
+                    <Text variant="label" style={{ marginTop: spacing.sm }}>
+                      {t('community.matesNearby', { city: anchorInst?.city ?? '' })}
+                    </Text>
+                    <Row wrap gap={spacing.md}>{nearby.map(mateCard)}</Row>
+                  </>
+                ) : null}
+              </View>
+            );
+          })() : null}
 
           {segment === 'events' ? (
             <View style={{ gap: spacing.md }}>

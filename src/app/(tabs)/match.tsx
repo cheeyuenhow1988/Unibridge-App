@@ -47,7 +47,7 @@ export default function MatchScreen() {
     if (!matchData) return [];
     return matchData.results.filter((r) => {
       const { course } = r;
-      if (filters.country && course.country !== filters.country) return false;
+      if (filters.countries.length > 0 && !filters.countries.includes(course.country)) return false;
       if (filters.field && course.field !== filters.field) return false;
       if (filters.duration === 'short' && course.durationYears > 2) return false;
       if (filters.duration === 'medium' && (course.durationYears < 3 || course.durationYears > 4)) return false;
@@ -123,7 +123,7 @@ export default function MatchScreen() {
     let min: number | null = null;
     for (const r of matchData.results) {
       const { course } = r;
-      if (filters.country && course.country !== filters.country) continue;
+      if (filters.countries.length > 0 && !filters.countries.includes(course.country)) continue;
       if (filters.field && course.field !== filters.field) continue;
       if (filters.duration === 'short' && course.durationYears > 2) continue;
       if (filters.duration === 'medium' && (course.durationYears < 3 || course.durationYears > 4)) continue;
@@ -137,7 +137,7 @@ export default function MatchScreen() {
   }, [matchData, filters, homeCurrency]);
 
   const activeFilterCount =
-    (filters.country ? 1 : 0) + (filters.field ? 1 : 0) + (filters.duration !== 'any' ? 1 : 0) + (filters.budget ? 1 : 0);
+    (filters.countries.length > 0 ? 1 : 0) + (filters.field ? 1 : 0) + (filters.duration !== 'any' ? 1 : 0) + (filters.budget ? 1 : 0);
 
   if (loading) {
     return (

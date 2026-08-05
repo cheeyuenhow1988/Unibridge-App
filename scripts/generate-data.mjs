@@ -1394,25 +1394,38 @@ intakeGroups.forEach((g, gi) => {
   }
 });
 
-const COURSEMATES_RAW = [
-  ['Farah Hassan', 'MY', 'Bachelor of Business Administration', 21], ['Kai Wen Ng', 'MY', 'Bachelor of Computer Science', 65],
-  ['Budi Santoso', 'ID', 'Bachelor of Business Administration', 68], ['Linh Tran', 'VN', 'Bachelor of Laws (LLB)', 16],
-  ['Cheng Wu', 'CN', 'Bachelor of Computer Science', 61], ['Amirah Yusof', 'MY', 'Bachelor of Nursing', 27],
-  ['Hsin-Yu Chang', 'TW', 'Bachelor of Business Administration', 41], ['Ryan Teo', 'SG', 'Bachelor of Computer Science', 60],
-  ['Sari Dewi', 'ID', 'Bachelor of Nursing', 43], ['Quang Le', 'VN', 'Bachelor of Business Administration', 51],
-  ['Mei Ling Chua', 'MY', 'Bachelor of Laws (LLB)', 38], ['Arif Rahman', 'MY', 'Bachelor of Computer Science', 64],
+// Admitted-student profiles for EVERY school, so the Coursemates tab and the
+// travel-buddy matcher show people at the school the user actually applied to.
+const MATE_NAMES = [
+  ['Farah Hassan', 'MY', 21], ['Kai Wen Ng', 'MY', 65], ['Budi Santoso', 'ID', 68], ['Linh Tran', 'VN', 16],
+  ['Cheng Wu', 'CN', 61], ['Amirah Yusof', 'MY', 27], ['Hsin-Yu Chang', 'TW', 41], ['Ryan Teo', 'SG', 60],
+  ['Sari Dewi', 'ID', 43], ['Quang Le', 'VN', 51], ['Mei Ling Chua', 'MY', 38], ['Arif Rahman', 'MY', 64],
+  ['Thiri Aung', 'MM', 32], ['Ji-woo Park', 'KR', 44], ['Haruka Sato', 'JP', 47], ['Min-jun Kim', 'KR', 12],
+  ['Aye Chan', 'MM', 24], ['Yuki Nakamura', 'JP', 15], ['Putri Wulandari', 'ID', 45], ['Thao Pham', 'VN', 20],
 ];
-const coursemates = COURSEMATES_RAW.map(([name, homeCountry, courseName, img], i) => ({
-  id: `mate-${String(i + 1).padStart(2, '0')}`,
-  name, homeCountry, courseName,
-  institutionId: 'au-monash',
-  intake: '2027-02',
-  avatar: `https://i.pravatar.cc/200?img=${img}`,
-  // Travel-buddy layer: arrival dates cluster in the two weeks before intake;
-  // roughly two thirds have opted in to coordinating travel.
-  arrivalDate: `2027-02-${String(8 + ((i * 5) % 16)).padStart(2, '0')}`,
-  travelOptIn: i % 3 !== 2,
-}));
+const coursemates = [];
+institutions.forEach((inst, ii) => {
+  const instCourses = courses.filter((c) => c.institutionId === inst.id);
+  if (instCourses.length === 0) return;
+  const intake = nextIntakes(inst.country, 4).find((x) => x.startsWith('2027')) ?? nextIntakes(inst.country, 1)[0];
+  const n = 4 + (ii % 3);
+  for (let k = 0; k < n; k++) {
+    const [name, homeCountry, img] = MATE_NAMES[(ii * 7 + k * 3) % MATE_NAMES.length];
+    const course = instCourses[(ii + k * 5) % instCourses.length];
+    coursemates.push({
+      id: `mate-${inst.id}-${k + 1}`,
+      name, homeCountry,
+      courseName: course.name,
+      institutionId: inst.id,
+      intake,
+      avatar: `https://i.pravatar.cc/200?img=${img}`,
+      // Travel-buddy layer: arrivals cluster around intake start; roughly two
+      // thirds have opted in to coordinating travel.
+      arrivalDate: `${intake}-${String(2 + ((ii * 5 + k * 7) % 24)).padStart(2, '0')}`,
+      travelOptIn: (ii + k) % 3 !== 2,
+    });
+  }
+});
 
 const EVENTS = [
   ['Study Abroad Expo Malaysia', 'Kuala Lumpur', 'MY', '2026-10-17', 'KLCC Convention Centre', true, 'expo', 'Meet 60+ universities from 7 countries; on-the-spot eligibility checks by UniBridge.'],

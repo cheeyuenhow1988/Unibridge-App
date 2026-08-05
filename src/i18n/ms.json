@@ -233,7 +233,8 @@
     "zeroComboHint": "Tiada kursus sepadan dengan kombinasi ini — kosongkan satu penapis untuk melihat pilihan.",
     "emptyEligibleTitle": "Belum ada yang layak — ini sebabnya",
     "emptyEligibleNoEnglish": "Gred anda mencukupi, tetapi tiada ujian Bahasa Inggeris pada profil — jadi semua {{count}} padanan berada di Sempadan. Tambah skor IELTS/TOEFL (jangkaan pun boleh) dan ia berpindah ke sini.",
-    "addEnglishCta": "Tambah skor Bahasa Inggeris"
+    "addEnglishCta": "Tambah skor Bahasa Inggeris",
+    "filterCountryMulti": "Ketik beberapa negara untuk menggabungkannya."
   },
   "compare": {
     "title": "Banding",
@@ -493,7 +494,12 @@
     "emptyEvents": "Tiada acara berdekatan anda buat masa ini.",
     "arrivalTitle": "Perkhidmatan ketibaan",
     "arrivalTeaser": "Kerja, bilik, kenderaan & tip — daripada pelajar yang sudah di sana.",
-    "you": "Anda"
+    "you": "Anda",
+    "groupsExplainer": "Kumpulan kemasukan ialah ruang sembang untuk pelajar yang bermula di sekolah yang sama pada kemasukan yang sama — bertanya, cari penginapan dan tiba bersama rakan. Menyertai akan membuka sembang kumpulan.",
+    "matesAt": "Di {{school}}",
+    "matesNearby": "Berdekatan di {{city}} — bandar sama, biasanya dalam ~10 km",
+    "matesAnchor": "Dipadankan dengan {{school}} daripada permohonan atau kursus simpanan anda. Pelajar contoh — rakan sekelas sebenar muncul semasa pelancaran.",
+    "matesSample": "Mohon atau simpan kursus untuk melihat rakan sekelas sekolah anda. Contoh untuk {{school}} ditunjukkan."
   },
   "arrival": {
     "title": "Perkhidmatan ketibaan",
@@ -646,7 +652,11 @@
     "flightsTitle": "Penerbangan pulang (pergi-balik)",
     "flightLow": "Musim biasa",
     "flightPeak": "Musim puncak (cuti)",
-    "flightNote": "Anggaran kelas ekonomi pergi-balik antara negara asal anda dan bandar ini — tempah 2–3 bulan awal untuk harga musim biasa."
+    "flightNote": "Anggaran kelas ekonomi pergi-balik antara negara asal anda dan bandar ini — tempah 2–3 bulan awal untuk harga musim biasa.",
+    "perWeek": "/mgu",
+    "perMonth": "/bln",
+    "rentWeeklyNote": "Sewa di {{country}} diiklankan mengikut minggu — harga mingguan ditunjukkan (sebulan ≈ 4.3 minggu).",
+    "rentMonthlyNote": "Sewa ditunjukkan mengikut bulan kalendar."
   },
   "instTypesPlural": {
     "university": "Universiti",

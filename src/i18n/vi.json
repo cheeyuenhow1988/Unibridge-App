@@ -231,7 +231,8 @@
     "zeroComboHint": "Không ngành nào khớp tổ hợp này — bỏ bớt một bộ lọc để xem lựa chọn.",
     "emptyEligibleTitle": "Chưa có mục đủ điều kiện — lý do đây",
     "emptyEligibleNoEnglish": "Điểm của bạn đạt, nhưng hồ sơ chưa có bài thi tiếng Anh — nên cả {{count}} kết quả nằm ở Cận kề. Thêm điểm IELTS/TOEFL (dự kiến cũng được) là chúng chuyển sang đây.",
-    "addEnglishCta": "Thêm điểm tiếng Anh"
+    "addEnglishCta": "Thêm điểm tiếng Anh",
+    "filterCountryMulti": "Chạm nhiều quốc gia để chọn cùng lúc."
   },
   "compare": {
     "title": "So sánh",
@@ -491,7 +492,12 @@
     "emptyEvents": "Chưa có sự kiện gần bạn.",
     "arrivalTitle": "Dịch vụ khi hạ cánh",
     "arrivalTeaser": "Việc làm, phòng ở, xe & mẹo — từ sinh viên đang ở đó.",
-    "you": "Bạn"
+    "you": "Bạn",
+    "groupsExplainer": "Nhóm khóa nhập học là phòng chat cho sinh viên bắt đầu cùng trường, cùng kỳ — hỏi đáp, tìm nhà và đến nơi cùng bạn bè. Tham gia để mở phòng chat.",
+    "matesAt": "Tại {{school}}",
+    "matesNearby": "Gần đó ở {{city}} — cùng thành phố, thường trong ~10 km",
+    "matesAnchor": "Khớp với {{school}} từ hồ sơ hoặc ngành đã lưu của bạn. Sinh viên mẫu — bạn học thật xuất hiện khi ra mắt.",
+    "matesSample": "Nộp hồ sơ hoặc lưu ngành để thấy bạn học trường bạn. Đang hiển thị mẫu cho {{school}}."
   },
   "arrival": {
     "title": "Dịch vụ khi hạ cánh",
@@ -644,7 +650,11 @@
     "flightsTitle": "Vé máy bay về nhà (khứ hồi)",
     "flightLow": "Mùa thấp điểm",
     "flightPeak": "Mùa cao điểm (lễ tết)",
-    "flightNote": "Ước tính khứ hồi hạng phổ thông giữa nước bạn và thành phố này — đặt trước 2–3 tháng để có giá mùa thấp điểm."
+    "flightNote": "Ước tính khứ hồi hạng phổ thông giữa nước bạn và thành phố này — đặt trước 2–3 tháng để có giá mùa thấp điểm.",
+    "perWeek": "/tuần",
+    "perMonth": "/tháng",
+    "rentWeeklyNote": "Thuê nhà ở {{country}} được rao theo tuần — giá theo tuần (một tháng ≈ 4,3 tuần).",
+    "rentMonthlyNote": "Giá thuê hiển thị theo tháng."
   },
   "instTypesPlural": {
     "university": "Đại học",

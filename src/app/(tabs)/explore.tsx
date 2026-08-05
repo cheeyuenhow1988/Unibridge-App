@@ -38,7 +38,8 @@ export default function ExploreScreen() {
   const profile = useProfileStore((s) => s.profile);
   const [segment, setSegment] = useState<Segment>('institutions');
   const [query, setQuery] = useState('');
-  const [country, setCountry] = useState<CountryCode | null>(null);
+  // Multi-select — empty means every country.
+  const [countries, setCountries] = useState<CountryCode[]>([]);
 
   const inst = useAsync(listInstitutions);
   const sch = useAsync(listScholarships);
@@ -53,7 +54,7 @@ export default function ExploreScreen() {
     const q = query.trim().toLowerCase();
     return (inst.data ?? []).filter(
       (i) =>
-        (!country || i.country === country) &&
+        (countries.length === 0 || countries.includes(i.country)) &&
         (!q ||
           i.name.toLowerCase().includes(q) ||
           i.city.toLowerCase().includes(q) ||
@@ -62,7 +63,7 @@ export default function ExploreScreen() {
             (r) => r.course.institutionId === i.id && r.course.name.toLowerCase().includes(q),
           ) ?? false)),
     );
-  }, [inst.data, query, country, matchData]);
+  }, [inst.data, query, countries, matchData]);
 
   const rows = useMemo(() => {
     const out: ExploreRow[] = [];
@@ -86,7 +87,7 @@ export default function ExploreScreen() {
     const q = query.trim().toLowerCase();
     return (sch.data ?? [])
       .filter((s) => {
-        if (country && s.destinationCountry !== 'any' && s.destinationCountry !== country) return false;
+        if (countries.length > 0 && s.destinationCountry !== 'any' && !countries.includes(s.destinationCountry)) return false;
         if (
           profile &&
           s.nationalities !== 'any' &&
@@ -96,7 +97,7 @@ export default function ExploreScreen() {
         return true;
       })
       .sort((a, b) => a.deadline.localeCompare(b.deadline));
-  }, [sch.data, query, country, profile]);
+  }, [sch.data, query, countries, profile]);
 
   const active = segment === 'institutions' ? inst : sch;
 
@@ -160,8 +161,12 @@ export default function ExploreScreen() {
                       key={c}
                       small
                       label={`${FLAGS[c]} ${t(`countries.${c}`)}`}
-                      selected={country === c}
-                      onPress={() => setCountry(country === c ? null : c)}
+                      selected={countries.includes(c)}
+                      onPress={() =>
+                        setCountries(
+                          countries.includes(c) ? countries.filter((x) => x !== c) : [...countries, c],
+                        )
+                      }
                     />
                   ))}
                 </HCarousel>

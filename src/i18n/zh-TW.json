@@ -233,7 +233,8 @@
     "zeroComboHint": "沒有課程符合這個組合——清除其中一個篩選條件即可看到選項。",
     "emptyEligibleTitle": "還沒有符合條件的——原因在這裡",
     "emptyEligibleNoEnglish": "你的成績達標，但檔案裡還沒有英語成績——所以全部 {{count}} 個配對都在「邊緣」裡。加入雅思/托福成績（預估分也行），它們就會移到這裡。",
-    "addEnglishCta": "加入英語成績"
+    "addEnglishCta": "加入英語成績",
+    "filterCountryMulti": "可點選多個國家組合篩選。"
   },
   "compare": {
     "title": "對比",
@@ -493,7 +494,12 @@
     "emptyEvents": "附近暫時沒有活動。",
     "arrivalTitle": "落地服務",
     "arrivalTeaser": "兼職、租屋、用車與攻略——來自已在當地的學生。",
-    "you": "我"
+    "you": "我",
+    "groupsExplainer": "入學群組是同校同期新生的聊天室——提問、找房、結伴報到。加入即可開啟群組聊天。",
+    "matesAt": "在{{school}}",
+    "matesNearby": "{{city}}附近——同城市,通常約 10 公里內",
+    "matesAnchor": "已依你的申請或收藏配對到{{school}}。示例學生——正式上線後顯示真實同學。",
+    "matesSample": "申請或收藏課程即可看到你學校的同學。目前顯示{{school}}的示例。"
   },
   "arrival": {
     "title": "落地服務",
@@ -646,7 +652,11 @@
     "flightsTitle": "回國機票（往返）",
     "flightLow": "淡季",
     "flightPeak": "旺季（假期）",
-    "flightNote": "您的國家與該城市之間的往返經濟艙估價——提前 2–3 個月預訂可拿到淡季價。"
+    "flightNote": "您的國家與該城市之間的往返經濟艙估價——提前 2–3 個月預訂可拿到淡季價。",
+    "perWeek": "/週",
+    "perMonth": "/月",
+    "rentWeeklyNote": "{{country}}的房租以週報價——此處顯示週租(一個月約 4.3 週)。",
+    "rentMonthlyNote": "房租以日曆月顯示。"
   },
   "instTypesPlural": {
     "university": "大學",
