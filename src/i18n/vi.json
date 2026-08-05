@@ -513,7 +513,9 @@
     "looking_travel": "Bạn đồng hành",
     "looking_friends": "Kết bạn",
     "looking_sports": "Thể thao & gym",
-    "looking_foodie": "Khám phá ẩm thực"
+    "looking_foodie": "Khám phá ẩm thực",
+    "lookingMine": "Tôi đang tìm",
+    "lookingMineSub": "Hiển thị trên thẻ bạn học của bạn — chọn bao nhiêu tùy thích."
   },
   "arrival": {
     "title": "Dịch vụ khi hạ cánh",

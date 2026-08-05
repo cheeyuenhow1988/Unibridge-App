@@ -513,7 +513,9 @@
     "looking_travel": "여행 친구",
     "looking_friends": "친구 사귀기",
     "looking_sports": "운동·헬스",
-    "looking_foodie": "맛집 탐방"
+    "looking_foodie": "맛집 탐방",
+    "lookingMine": "내가 찾는 것",
+    "lookingMineSub": "내 카드에 표시됩니다. 원하는 만큼 선택하세요."
   },
   "arrival": {
     "title": "도착 서비스",

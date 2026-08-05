@@ -513,7 +513,9 @@
     "looking_travel": "Teman perjalanan",
     "looking_friends": "Cari teman",
     "looking_sports": "Olahraga & gym",
-    "looking_foodie": "Wisata kuliner"
+    "looking_foodie": "Wisata kuliner",
+    "lookingMine": "Yang aku cari",
+    "lookingMineSub": "Tampil di kartu teman seangkatanmu — pilih sebanyak yang kamu mau."
   },
   "arrival": {
     "title": "Layanan kedatangan",

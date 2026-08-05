@@ -446,16 +446,6 @@ export default function CommunityScreen() {
                 <Ionicons name="school-outline" size={15} color={colors.accent} />
                 <Text variant="caption" style={{ flex: 1 }}>{mateSheet.courseName} · {instName(mateSheet.institutionId)}</Text>
               </Row>
-              <Row gap={spacing.sm}>
-                <Ionicons name="calendar-outline" size={15} color={colors.accent} />
-                <Text variant="caption">{t('community.intakeLabel', { intake: mateSheet.intake })}</Text>
-              </Row>
-              {mateSheet.arrivalDate ? (
-                <Row gap={spacing.sm}>
-                  <Ionicons name="airplane-outline" size={15} color={colors.accent} />
-                  <Text variant="caption">{t('community.arrives', { date: mateSheet.arrivalDate })}</Text>
-                </Row>
-              ) : null}
             </View>
             {mateSheet.lookingFor?.length ? (
               <View style={{ alignSelf: 'stretch', gap: spacing.sm }}>

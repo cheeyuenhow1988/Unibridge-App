@@ -513,7 +513,9 @@
     "looking_travel": "旅の相棒",
     "looking_friends": "友達づくり",
     "looking_sports": "スポーツ・ジム",
-    "looking_foodie": "グルメ探検"
+    "looking_foodie": "グルメ探検",
+    "lookingMine": "探しているもの",
+    "lookingMineSub": "あなたのカードに表示されます。いくつでも選べます。"
   },
   "arrival": {
     "title": "到着サービス",

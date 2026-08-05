@@ -18,10 +18,13 @@ interface ProfileState {
   mateVisible: boolean;
   /** Show which course I study on my coursemate card. */
   mateShowCourse: boolean;
+  /** What I'm looking for — keys into community.looking_* (multi-select). */
+  mateLookingFor: string[];
   hydrated: boolean;
   setTravelBuddyOptIn: (on: boolean) => void;
   setMateVisible: (on: boolean) => void;
   setMateShowCourse: (on: boolean) => void;
+  toggleMateLookingFor: (key: string) => void;
   setAvatar: (uri: string | null) => void;
   setProfile: (profile: StudentProfile) => void;
   patchProfile: (patch: Partial<StudentProfile>) => void;
@@ -43,10 +46,17 @@ export const useProfileStore = create<ProfileState>()(
       travelBuddyOptIn: false,
       mateVisible: true,
       mateShowCourse: true,
+      mateLookingFor: [],
       hydrated: false,
       setTravelBuddyOptIn: (travelBuddyOptIn) => set({ travelBuddyOptIn }),
       setMateVisible: (mateVisible) => set({ mateVisible }),
       setMateShowCourse: (mateShowCourse) => set({ mateShowCourse }),
+      toggleMateLookingFor: (key) =>
+        set((s) => ({
+          mateLookingFor: s.mateLookingFor.includes(key)
+            ? s.mateLookingFor.filter((k) => k !== key)
+            : [...s.mateLookingFor, key],
+        })),
       setAvatar: (avatarUri) => set({ avatarUri }),
       setProfile: (profile) => set({ profile }),
       patchProfile: (patch) =>
@@ -55,12 +65,12 @@ export const useProfileStore = create<ProfileState>()(
       setThemePref: (themePref) => set({ themePref }),
       setLanguage: (language) => set({ language }),
       setHydrated: () => set({ hydrated: true }),
-      reset: () => set({ profile: null, onboarded: false, travelBuddyOptIn: false, mateVisible: true, mateShowCourse: true }),
+      reset: () => set({ profile: null, onboarded: false, travelBuddyOptIn: false, mateVisible: true, mateShowCourse: true, mateLookingFor: [] }),
     }),
     {
       name: 'ub-profile',
       storage: createJSONStorage(() => AsyncStorage),
-      partialize: ({ profile, onboarded, themePref, language, avatarUri, travelBuddyOptIn, mateVisible, mateShowCourse }) => ({ profile, onboarded, themePref, language, avatarUri, travelBuddyOptIn, mateVisible, mateShowCourse }),
+      partialize: ({ profile, onboarded, themePref, language, avatarUri, travelBuddyOptIn, mateVisible, mateShowCourse, mateLookingFor }) => ({ profile, onboarded, themePref, language, avatarUri, travelBuddyOptIn, mateVisible, mateShowCourse, mateLookingFor }),
       onRehydrateStorage: () => (state) => state?.setHydrated(),
     },
   ),

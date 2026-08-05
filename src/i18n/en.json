@@ -517,7 +517,9 @@
     "looking_travel": "Travel buddy",
     "looking_friends": "Making friends",
     "looking_sports": "Sports & gym",
-    "looking_foodie": "Food adventures"
+    "looking_foodie": "Food adventures",
+    "lookingMine": "What I'm looking for",
+    "lookingMineSub": "Shown on your coursemate card — pick as many as you like."
   },
   "arrival": {
     "title": "Arrival services",

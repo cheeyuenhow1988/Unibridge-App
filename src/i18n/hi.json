@@ -517,7 +517,9 @@
     "looking_travel": "सफ़र साथी",
     "looking_friends": "दोस्त बनाना",
     "looking_sports": "खेल और जिम",
-    "looking_foodie": "खाने की खोज"
+    "looking_foodie": "खाने की खोज",
+    "lookingMine": "मैं क्या ढूँढ रहा/रही हूँ",
+    "lookingMineSub": "आपके कोर्समेट कार्ड पर दिखेगा — जितने चाहें चुनें।"
   },
   "arrival": {
     "title": "आगमन सेवाएँ",

@@ -515,7 +515,9 @@
     "looking_travel": "旅伴",
     "looking_friends": "交朋友",
     "looking_sports": "运动健身",
-    "looking_foodie": "美食探店"
+    "looking_foodie": "美食探店",
+    "lookingMine": "我在寻找",
+    "lookingMineSub": "会显示在你的同学卡片上——想选几个都可以。"
   },
   "arrival": {
     "title": "落地服务",

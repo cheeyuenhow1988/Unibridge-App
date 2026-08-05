@@ -513,7 +513,9 @@
     "looking_travel": "เพื่อนเดินทาง",
     "looking_friends": "หาเพื่อน",
     "looking_sports": "กีฬาและยิม",
-    "looking_foodie": "สายกิน"
+    "looking_foodie": "สายกิน",
+    "lookingMine": "สิ่งที่ฉันกำลังมองหา",
+    "lookingMineSub": "แสดงบนการ์ดเพื่อนร่วมรุ่นของคุณ — เลือกได้มากเท่าที่ต้องการ"
   },
   "arrival": {
     "title": "บริการหลังถึงที่หมาย",
