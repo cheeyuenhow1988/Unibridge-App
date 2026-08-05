@@ -35,6 +35,7 @@ export function MatchHero({ profile, results, matchedCount }: Props) {
   // At full strength the meter hands over to the next-best action instead of
   // dead-ending in praise: vault gaps are what block the first application.
   const docsAction = hasGrades && hasEnglish && missingDocs > 0;
+  const englishAction = !hasEnglish && unlockable > 0;
   const insight = !hasEnglish && unlockable > 0
     ? t('match.strengthUnlock', { score: '6.5', count: unlockable })
     : docsAction
@@ -78,9 +79,15 @@ export function MatchHero({ profile, results, matchedCount }: Props) {
           />
         </View>
         <Pressable
-          accessibilityRole={docsAction ? 'button' : undefined}
-          onPress={docsAction ? () => router.push('/vault') : undefined}
-          disabled={!docsAction}
+          accessibilityRole={docsAction || englishAction ? 'button' : undefined}
+          onPress={
+            docsAction
+              ? () => router.push('/vault')
+              : englishAction
+                ? () => router.push('/onboarding/grades')
+                : undefined
+          }
+          disabled={!docsAction && !englishAction}
           style={({ pressed }) => ({ opacity: pressed ? 0.8 : 1 })}
         >
           <Row gap={spacing.sm}>
@@ -92,7 +99,7 @@ export function MatchHero({ profile, results, matchedCount }: Props) {
             <View style={{ flex: 1 }}>
               <Text variant="caption" color={colors.onGradientSoft}>{insight}</Text>
             </View>
-            {docsAction ? <Ionicons name="chevron-forward" size={14} color={colors.pop} /> : null}
+            {docsAction || englishAction ? <Ionicons name="chevron-forward" size={14} color={colors.pop} /> : null}
           </Row>
         </Pressable>
       </View>

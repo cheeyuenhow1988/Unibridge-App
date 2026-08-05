@@ -23,7 +23,7 @@ import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
 import { getFlightFares } from '@/services/api';
 import { costBreakdown } from '@/services/costs';
-import { convert, formatDual, formatMoney, homeCurrencyFor } from '@/services/currency';
+import { convert, formatApprox, formatDual, formatMoney, homeCurrencyFor } from '@/services/currency';
 import { pathwayRoutesFor } from '@/services/eligibility';
 import { hapticTap } from '@/services/haptics';
 import { useSavedStore } from '@/store/useSavedStore';
@@ -81,12 +81,19 @@ export default function CourseDetail() {
   const fare = flights.data?.fares[course.country]?.[profile.homeCountry];
   const statusColor = { eligible: colors.eligible, borderline: colors.borderline, pathway: colors.pathway }[result.status];
 
+  // Each line shows the billed (course-currency) amount with the student's
+  // home-currency conversion beneath — the card header promises "converted".
   const costRow = (label: string, amount: number, note?: string) => (
     <Row style={{ justifyContent: 'space-between', paddingVertical: spacing.xs }}>
       <Text variant="body" tone="secondary" style={{ flex: 1 }}>
         {label}{note ? ` (${note})` : ''}
       </Text>
-      <Text variant="bodyMedium">{formatMoney(amount, course.currency)}</Text>
+      <View style={{ alignItems: 'flex-end' }}>
+        <Text variant="bodyMedium">{formatMoney(amount, course.currency)}</Text>
+        {course.currency !== home ? (
+          <Text variant="caption" tone="faint">{formatApprox(amount, course.currency, home)}</Text>
+        ) : null}
+      </View>
     </Row>
   );
 
@@ -221,7 +228,14 @@ export default function CourseDetail() {
                   <Text variant="body" tone="secondary">{t('course.rent')}</Text>
                   <Ionicons name="information-circle-outline" size={14} color={colors.accent} />
                 </Row>
-                <Text variant="bodyMedium">{formatMoney(costs.rentMonthly * 12 * course.durationYears, course.currency)}</Text>
+                <View style={{ alignItems: 'flex-end' }}>
+                  <Text variant="bodyMedium">{formatMoney(costs.rentMonthly * 12 * course.durationYears, course.currency)}</Text>
+                  {course.currency !== home ? (
+                    <Text variant="caption" tone="faint">
+                      {formatApprox(costs.rentMonthly * 12 * course.durationYears, course.currency, home)}
+                    </Text>
+                  ) : null}
+                </View>
               </Row>
               <Text variant="caption" tone="accent" style={{ marginTop: -2 }}>
                 {t('course.rentDetail')}

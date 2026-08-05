@@ -214,7 +214,10 @@
     "pathwayVia": "Ada jalur lewat {{name}}",
     "yourScore": "Skormu: {{score}}",
     "zeroBudgetHint": "Tidak ada yang cocok dengan semua filter ini — anggarannya penyebabnya. Opsi termurah yang cocok dengan filter lain biayanya ≈{{amount}}/tahun. Naikkan atau kosongkan anggaran untuk memasukkannya:",
-    "zeroComboHint": "Tidak ada jurusan yang cocok dengan kombinasi ini — hapus salah satu filter untuk melihat opsi."
+    "zeroComboHint": "Tidak ada jurusan yang cocok dengan kombinasi ini — hapus salah satu filter untuk melihat opsi.",
+    "emptyEligibleTitle": "Belum ada yang memenuhi syarat — ini alasannya",
+    "emptyEligibleNoEnglish": "Nilaimu cukup, tapi belum ada tes bahasa Inggris di profil — jadi semua {{count}} kecocokan ada di Ambang. Tambahkan skor IELTS/TOEFL (perkiraan pun boleh) dan semuanya pindah ke sini.",
+    "addEnglishCta": "Tambah skor bahasa Inggris"
   },
   "compare": {
     "title": "Bandingkan",

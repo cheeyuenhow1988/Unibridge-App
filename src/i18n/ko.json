@@ -214,7 +214,10 @@
     "pathwayVia": "{{name}} 경유 루트 있음",
     "yourScore": "내 점수: {{score}}",
     "zeroBudgetHint": "이 필터를 모두 만족하는 게 없어요 — 예산이 걸림돌이에요. 다른 필터에 맞는 최저가는 실비 약 {{amount}}/년. 예산을 올리거나 지우면 포함돼요:",
-    "zeroComboHint": "이 조합에 맞는 과정이 없어요 — 필터 하나를 지우고 확인해 보세요."
+    "zeroComboHint": "이 조합에 맞는 과정이 없어요 — 필터 하나를 지우고 확인해 보세요.",
+    "emptyEligibleTitle": "아직 바로 지원 가능한 게 없어요 — 이유는 이래요",
+    "emptyEligibleNoEnglish": "성적은 충분한데 프로필에 영어 시험이 없어서 {{count}}개 매칭이 모두 경계선에 있어요. IELTS/TOEFL 점수(예상 점수도 OK)를 추가하면 여기로 옮겨져요.",
+    "addEnglishCta": "영어 점수 추가"
   },
   "compare": {
     "title": "비교",

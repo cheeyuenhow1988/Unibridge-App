@@ -216,7 +216,10 @@
     "strengthDocs_other": "{{count}} dokumen tiada dalam peti anda — tambah sebelum memohon",
     "clearCompare": "Kosongkan pilihan",
     "zeroBudgetHint": "Tiada yang muat semua penapis ini — bajet puncanya. Pilihan termurah yang sepadan dengan penapis lain berharga ≈{{amount}}/tahun kos sebenar. Naikkan atau kosongkan bajet untuk memasukkannya:",
-    "zeroComboHint": "Tiada kursus sepadan dengan kombinasi ini — kosongkan satu penapis untuk melihat pilihan."
+    "zeroComboHint": "Tiada kursus sepadan dengan kombinasi ini — kosongkan satu penapis untuk melihat pilihan.",
+    "emptyEligibleTitle": "Belum ada yang layak — ini sebabnya",
+    "emptyEligibleNoEnglish": "Gred anda mencukupi, tetapi tiada ujian Bahasa Inggeris pada profil — jadi semua {{count}} padanan berada di Sempadan. Tambah skor IELTS/TOEFL (jangkaan pun boleh) dan ia berpindah ke sini.",
+    "addEnglishCta": "Tambah skor Bahasa Inggeris"
   },
   "compare": {
     "title": "Banding",

@@ -217,7 +217,10 @@
     "pathwayVia": "Route available via {{name}}",
     "yourScore": "Your score: {{score}}",
     "zeroBudgetHint": "Nothing fits all these filters together — the budget is the blocker. The cheapest option matching your other filters costs ≈{{amount}}/yr true cost. Raise or clear the budget to include it:",
-    "zeroComboHint": "No course matches this combination — clear one of the filters to see options."
+    "zeroComboHint": "No course matches this combination — clear one of the filters to see options.",
+    "emptyEligibleTitle": "Nothing eligible yet — here’s why",
+    "emptyEligibleNoEnglish": "Your grades qualify, but there’s no English test on your profile — so all {{count}} matches sit in Borderline. Add an IELTS/TOEFL score (even an expected one) and they move here.",
+    "addEnglishCta": "Add English score"
   },
   "compare": {
     "title": "Compare",

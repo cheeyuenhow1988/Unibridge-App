@@ -216,7 +216,10 @@
     "strengthDocs_other": "檔案庫缺少 {{count}} 份材料——申請前先補齊",
     "clearCompare": "清除所選",
     "zeroBudgetHint": "這些篩選組合下沒有結果——預算是關鍵。符合其他條件的最便宜選項真實花費約 {{amount}}/年。提高或清除預算即可看到：",
-    "zeroComboHint": "沒有課程符合這個組合——清除其中一個篩選條件即可看到選項。"
+    "zeroComboHint": "沒有課程符合這個組合——清除其中一個篩選條件即可看到選項。",
+    "emptyEligibleTitle": "還沒有符合條件的——原因在這裡",
+    "emptyEligibleNoEnglish": "你的成績達標，但檔案裡還沒有英語成績——所以全部 {{count}} 個配對都在「邊緣」裡。加入雅思/托福成績（預估分也行），它們就會移到這裡。",
+    "addEnglishCta": "加入英語成績"
   },
   "compare": {
     "title": "對比",

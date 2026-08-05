@@ -214,7 +214,10 @@
     "pathwayVia": "{{name}}経由のルートあり",
     "yourScore": "あなたのスコア：{{score}}",
     "zeroBudgetHint": "この条件全てに合うものがありません — 予算がネックです。他の条件に合う最安は実費≈{{amount}}/年。予算を上げるか外すと含められます：",
-    "zeroComboHint": "この組み合わせに合うコースがありません — フィルターを1つ外してみてください。"
+    "zeroComboHint": "この組み合わせに合うコースがありません — フィルターを1つ外してみてください。",
+    "emptyEligibleTitle": "まだ出願可がありません — 理由はこちら",
+    "emptyEligibleNoEnglish": "成績は基準を満たしていますが、プロフィールに英語試験がないため、{{count}}件すべてがボーダーラインにあります。IELTS/TOEFLのスコア（見込みでも可）を追加すると、ここに移動します。",
+    "addEnglishCta": "英語スコアを追加"
   },
   "compare": {
     "title": "比較",

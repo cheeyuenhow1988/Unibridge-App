@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FlatList, Pressable, View } from 'react-native';
 import { DEFAULT_FILTERS, FiltersModal, type MatchFilters } from '@/components/match/FiltersModal';
@@ -65,6 +65,19 @@ export default function MatchScreen() {
     for (const r of filtered) map[r.status].push(r);
     return map;
   }, [filtered]);
+
+  // Land the user on a bucket that has content: a student with no English
+  // test yet sees 0 eligible, and defaulting into an empty tab with
+  // "loosen your filters" advice was misleading. Manual taps always win.
+  const userPickedBucket = useRef(false);
+  useEffect(() => {
+    if (userPickedBucket.current || !matchData) return;
+    if (byBucket[bucket].length === 0) {
+      const first = BUCKETS.find(({ key }) => byBucket[key].length > 0);
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- one-shot redirect off an empty default tab
+      if (first && first.key !== bucket) setBucket(first.key);
+    }
+  }, [matchData, byBucket, bucket]);
 
   const budgetPresets = useMemo(() => {
     if (!matchData) return [];
@@ -160,7 +173,7 @@ export default function MatchScreen() {
         ItemSeparatorComponent={() => <View style={{ height: spacing.md }} />}
         ListHeaderComponent={
           <View style={{ gap: spacing.lg, paddingTop: spacing.xl, paddingBottom: spacing.lg }}>
-            <MatchHero profile={profile} results={matchData.results} matchedCount={filtered.length} />
+            <MatchHero profile={profile} results={filtered} matchedCount={filtered.length} />
 
             <Pressable
               accessibilityRole="button"
@@ -191,6 +204,7 @@ export default function MatchScreen() {
                     accessibilityRole="tab"
                     accessibilityState={{ selected }}
                     onPress={() => {
+                      userPickedBucket.current = true;
                       setBucket(key);
                       scrollTop();
                     }}
@@ -220,9 +234,13 @@ export default function MatchScreen() {
             </Row>
 
             <Row style={{ justifyContent: 'space-between' }}>
-              <Text variant="caption" tone="secondary" style={{ flex: 1 }}>
-                {t(`match.${bucket}Desc`)}
-              </Text>
+              {byBucket[bucket].length > 0 ? (
+                <Text variant="caption" tone="secondary" style={{ flex: 1 }}>
+                  {t(`match.${bucket}Desc`)}
+                </Text>
+              ) : (
+                <View style={{ flex: 1 }} />
+              )}
               <Pressable
                 accessibilityRole="button"
                 onPress={() => setFiltersOpen(true)}
@@ -256,13 +274,24 @@ export default function MatchScreen() {
           />
         )}
         ListEmptyComponent={
-          <EmptyState
-            icon="funnel-outline"
-            title={t('match.emptyBucket')}
-            body={t('match.emptyBucketCta')}
-            ctaLabel={activeFilterCount ? t('match.clearFilters') : undefined}
-            onCta={activeFilterCount ? () => setFilters(DEFAULT_FILTERS) : undefined}
-          />
+          bucket === 'eligible' && profile.english.test === 'none' && byBucket.borderline.length > 0 ? (
+            // The real reason nothing is "eligible": no English test on file.
+            <EmptyState
+              icon="key-outline"
+              title={t('match.emptyEligibleTitle')}
+              body={t('match.emptyEligibleNoEnglish', { count: byBucket.borderline.length })}
+              ctaLabel={t('match.addEnglishCta')}
+              onCta={() => router.push('/onboarding/grades')}
+            />
+          ) : (
+            <EmptyState
+              icon="funnel-outline"
+              title={t('match.emptyBucket')}
+              body={t('match.emptyBucketCta')}
+              ctaLabel={activeFilterCount ? t('match.clearFilters') : undefined}
+              onCta={activeFilterCount ? () => setFilters(DEFAULT_FILTERS) : undefined}
+            />
+          )
         }
         ListFooterComponent={
           <Text variant="caption" tone="faint" center style={{ marginTop: spacing.xl }}>
