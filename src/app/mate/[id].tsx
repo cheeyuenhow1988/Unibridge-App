@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
-import { router, useLocalSearchParams } from 'expo-router';
+import { useLocalSearchParams } from 'expo-router';
+import { goBack } from '@/services/nav';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FlatList, KeyboardAvoidingView, Modal, Platform, Pressable, TextInput, View } from 'react-native';
@@ -74,11 +75,11 @@ export default function MateChat() {
     } else if (act === 'unfriend') {
       unfriend(id);
       toast(t('community.unfriended', { name: mate.name.split(' ')[0] }));
-      router.back();
+      goBack('/chats');
     } else {
       block(id);
       toast(t('community.blocked', { name: mate.name.split(' ')[0] }));
-      router.back();
+      goBack('/chats');
     }
   };
 
@@ -86,7 +87,7 @@ export default function MateChat() {
     <Screen padded={false} edges={['top', 'bottom']}>
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <Row style={{ padding: spacing.lg, gap: spacing.md, borderBottomWidth: 1, borderBottomColor: colors.border }}>
-          <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => router.back()} hitSlop={10}>
+          <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => goBack('/chats')} hitSlop={10}>
             <Ionicons name="chevron-back" size={24} color={colors.ink} />
           </Pressable>
           <Image source={{ uri: mate.avatar }} style={{ width: 38, height: 38, borderRadius: radius.full, backgroundColor: colors.surfaceAlt }} />

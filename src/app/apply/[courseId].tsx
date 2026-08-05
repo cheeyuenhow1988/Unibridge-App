@@ -1,5 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { router, useLocalSearchParams } from 'expo-router';
+import { goBack } from '@/services/nav';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, View } from 'react-native';
@@ -116,7 +117,7 @@ export default function ApplyFlow() {
         <Pressable
           accessibilityRole="button"
           accessibilityLabel={t('common.back')}
-          onPress={() => (step === 'review' ? setStep('checklist') : router.back())}
+          onPress={() => (step === 'review' ? setStep('checklist') : goBack('/match'))}
           hitSlop={10}
         >
           <Ionicons name={step === 'review' ? 'chevron-back' : 'chevron-down'} size={24} color={colors.ink} />
@@ -142,7 +143,7 @@ export default function ApplyFlow() {
               label={t('apply.viewApplication')}
               size="lg"
               onPress={() => {
-                router.back();
+                goBack('/match');
                 if (appId) router.push(`/application/${appId}`);
               }}
             />

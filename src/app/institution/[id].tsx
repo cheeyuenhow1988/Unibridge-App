@@ -2,6 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router, useLocalSearchParams } from 'expo-router';
+import { goBack } from '@/services/nav';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Alert, Linking, Pressable, ScrollView, View, useWindowDimensions } from 'react-native';
@@ -180,7 +181,7 @@ export default function InstitutionDetail() {
           <Pressable
             accessibilityRole="button"
             accessibilityLabel={t('common.back')}
-            onPress={() => router.back()}
+            onPress={() => goBack('/explore')}
             style={{
               position: 'absolute', top: 54, left: spacing.lg, width: 40, height: 40,
               borderRadius: radius.full, backgroundColor: colors.surface, alignItems: 'center', justifyContent: 'center',

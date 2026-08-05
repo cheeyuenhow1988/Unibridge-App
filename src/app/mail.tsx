@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { router } from 'expo-router';
+import { goBack } from '@/services/nav';
 import { useTranslation } from 'react-i18next';
 import { Pressable, View } from 'react-native';
 import { Badge } from '@/components/ui/Badge';
@@ -62,7 +62,7 @@ export default function MailScreen() {
   return (
     <Screen scroll edges={['top', 'bottom']}>
       <Row style={{ paddingVertical: spacing.md, gap: spacing.md }}>
-        <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => router.back()} hitSlop={10}>
+        <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => goBack('/applications')} hitSlop={10}>
           <Ionicons name="chevron-back" size={24} color={colors.ink} />
         </Pressable>
         <View style={{ flex: 1 }}>

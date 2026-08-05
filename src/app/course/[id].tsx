@@ -1,5 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { router, useLocalSearchParams } from 'expo-router';
+import { goBack } from '@/services/nav';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, View } from 'react-native';
@@ -101,7 +102,7 @@ export default function CourseDetail() {
   return (
     <Screen padded={false} edges={['top']}>
       <Row style={{ paddingHorizontal: spacing.lg, paddingVertical: spacing.sm, justifyContent: 'space-between' }}>
-        <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => router.back()} hitSlop={10}>
+        <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => goBack('/match')} hitSlop={10}>
           <Ionicons name="chevron-back" size={24} color={colors.ink} />
         </Pressable>
         <Pressable accessibilityRole="button" accessibilityLabel={t('common.save')} onPress={() => toggleSaved(course.id, saved)} hitSlop={10}>

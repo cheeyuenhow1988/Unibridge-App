@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { router } from 'expo-router';
+import { goBack } from '@/services/nav';
 import * as Sharing from 'expo-sharing';
 import { useMemo, useRef, useState, type PropsWithChildren } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -144,7 +145,7 @@ export default function CompareScreen() {
   return (
     <Screen padded={false} edges={['top', 'bottom']}>
       <Row style={{ justifyContent: 'space-between', paddingHorizontal: spacing.lg, paddingVertical: spacing.md }}>
-        <Pressable accessibilityRole="button" onPress={() => router.back()} hitSlop={10}>
+        <Pressable accessibilityRole="button" onPress={() => goBack('/match')} hitSlop={10}>
           <Ionicons name="chevron-down" size={24} color={colors.ink} />
         </Pressable>
         <Text variant="heading">{t('compare.title')}</Text>

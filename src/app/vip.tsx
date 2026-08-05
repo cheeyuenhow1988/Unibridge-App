@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import { router } from 'expo-router';
+import { goBack } from '@/services/nav';
 import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -28,7 +28,7 @@ export default function VipScreen() {
       <StatusBar style="light" />
       <SafeAreaView edges={['top', 'bottom']} style={{ flex: 1 }}>
         <ScrollView contentContainerStyle={{ padding: spacing.xl, gap: spacing.xl }}>
-          <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => router.back()} hitSlop={10}>
+          <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => goBack('/profile')} hitSlop={10}>
             <Ionicons name="chevron-back" size={24} color="#FFFFFF" />
           </Pressable>
 

@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import { router } from 'expo-router';
+import { goBack } from '@/services/nav';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, View } from 'react-native';
@@ -107,7 +107,7 @@ export default function RewardsScreen() {
     <Screen scroll edges={['top', 'bottom']}>
       <Row style={{ paddingVertical: spacing.md, gap: spacing.md, justifyContent: 'space-between' }}>
         <Row gap={spacing.md}>
-          <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => router.back()} hitSlop={10}>
+          <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => goBack('/profile')} hitSlop={10}>
             <Ionicons name="chevron-back" size={24} color={colors.ink} />
           </Pressable>
           <Text variant="title">{t('rewards.title')}</Text>

@@ -1,5 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
+import { goBack } from '@/services/nav';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Linking, Modal, Pressable, View } from 'react-native';
@@ -100,7 +101,7 @@ export default function StudentLifeHub() {
     <Screen scroll edges={['top', 'bottom']} padded={false}>
       <View style={{ paddingHorizontal: spacing.lg, gap: spacing.lg, paddingBottom: spacing.xxxl }}>
         <Row style={{ paddingTop: spacing.md, gap: spacing.md }}>
-          <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => router.back()} hitSlop={10}>
+          <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => goBack('/community')} hitSlop={10}>
             <Ionicons name="chevron-back" size={24} color={colors.ink} />
           </Pressable>
           <View style={{ flex: 1 }}>

@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { router, useLocalSearchParams } from 'expo-router';
+import { goBack } from '@/services/nav';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Linking, Pressable, View } from 'react-native';
@@ -71,7 +72,7 @@ export default function ApplicationDetail() {
   return (
     <Screen scroll edges={['top', 'bottom']}>
       <Row style={{ justifyContent: 'space-between', paddingVertical: spacing.md }}>
-        <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => router.back()} hitSlop={10}>
+        <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => goBack('/applications')} hitSlop={10}>
           <Ionicons name="chevron-back" size={24} color={colors.ink} />
         </Pressable>
         <Badge tone={application.status === 'accepted' || application.status === 'coe_issued' ? 'eligible' : 'accent'} label={t(`status.${application.status}`)} />

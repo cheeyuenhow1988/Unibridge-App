@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
+import { goBack } from '@/services/nav';
 import { useTranslation } from 'react-i18next';
 import { Pressable, View } from 'react-native';
 import { Badge } from '@/components/ui/Badge';
@@ -53,7 +54,7 @@ export default function SeasonPassScreen() {
     <Screen scroll edges={['top', 'bottom']} padded={false}>
       <View style={{ paddingBottom: spacing.xxxl }}>
         <LinearGradient colors={HERO} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ padding: spacing.xl, paddingBottom: spacing.xxl }}>
-          <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => router.back()} hitSlop={10}>
+          <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => goBack('/profile')} hitSlop={10}>
             <Ionicons name="chevron-back" size={24} color="#FFFFFF" />
           </Pressable>
           <View style={{ gap: spacing.sm, marginTop: spacing.lg }}>

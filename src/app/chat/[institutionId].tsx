@@ -1,5 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
-import { router, useLocalSearchParams } from 'expo-router';
+import { useLocalSearchParams } from 'expo-router';
+import { goBack } from '@/services/nav';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FlatList, KeyboardAvoidingView, Platform, Pressable, TextInput, View } from 'react-native';
@@ -41,7 +42,7 @@ export default function MockChat() {
     <Screen padded={false} edges={['top', 'bottom']}>
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <Row style={{ paddingHorizontal: spacing.lg, paddingVertical: spacing.md, justifyContent: 'space-between' }}>
-          <Pressable accessibilityRole="button" onPress={() => router.back()} hitSlop={10}>
+          <Pressable accessibilityRole="button" onPress={() => goBack('/explore')} hitSlop={10}>
             <Ionicons name="chevron-down" size={24} color={colors.ink} />
           </Pressable>
           <Text variant="heading" numberOfLines={1} style={{ flex: 1, textAlign: 'center' }}>

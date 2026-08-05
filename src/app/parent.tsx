@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { router } from 'expo-router';
+import { goBack } from '@/services/nav';
 import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 import { SAFETY_TEAL } from '@/components/safety/EmergencySheet';
@@ -157,7 +157,7 @@ export default function ParentView() {
           );
         })}
 
-        <Button label={t('parent.exit')} icon="exit-outline" variant="secondary" onPress={() => router.back()} />
+        <Button label={t('parent.exit')} icon="exit-outline" variant="secondary" onPress={() => goBack('/profile')} />
         <Text variant="caption" tone="faint" center>{t('safety.mockNote')}</Text>
       </View>
     </Screen>

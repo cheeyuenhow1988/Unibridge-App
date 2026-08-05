@@ -1,5 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
+import { goBack } from '@/services/nav';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, View } from 'react-native';
@@ -53,7 +54,7 @@ export default function AuthScreen() {
     <Screen scroll edges={['top', 'bottom']}>
       <View style={{ gap: spacing.xl, paddingTop: spacing.xl }}>
         <Row>
-          <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => (mode === 'buttons' ? router.back() : setMode('buttons'))} hitSlop={10}>
+          <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => (mode === 'buttons' ? goBack('/onboarding/welcome') : setMode('buttons'))} hitSlop={10}>
             <Ionicons name="chevron-back" size={24} color={colors.ink} />
           </Pressable>
         </Row>
