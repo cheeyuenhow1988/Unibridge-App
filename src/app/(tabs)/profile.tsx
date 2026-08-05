@@ -4,7 +4,7 @@ import { Image } from 'expo-image';
 import * as ImagePicker from 'expo-image-picker';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { Alert, Modal, Pressable, ScrollView, Switch, View } from 'react-native';
+import { Alert, Linking, Modal, Pressable, ScrollView, Switch, View } from 'react-native';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
@@ -95,7 +95,7 @@ export default function ProfileScreen() {
           signOut();
           useSavedStore.setState({ savedCourseIds: [], savedScholarshipIds: [], compareIds: [] });
           useApplicationsStore.setState({ applications: [], notifications: [] });
-          useCommunityStore.setState({ joinedGroupIds: [], localMessages: {}, connections: [], rsvps: [], likedPostIds: [] });
+          useCommunityStore.setState({ joinedGroupIds: [], localMessages: {}, connections: [], mateLinks: {}, mateMessages: {}, rsvps: [], likedPostIds: [] });
           useRewardsStore.getState().reset();
           useMailStore.getState().reset();
           usePlanStore.getState().reset();
@@ -253,6 +253,38 @@ export default function ProfileScreen() {
               </View>
               <Switch value={mateShowCourse && mateVisible} onValueChange={setMateShowCourse} disabled={!mateVisible} />
             </Row>
+          </Card>
+
+          <Card style={{ gap: spacing.sm }}>
+            <Row gap={spacing.sm}>
+              <Ionicons name="help-buoy-outline" size={20} color={colors.accent} />
+              <Text variant="label">{t('profile.helpTitle')}</Text>
+            </Row>
+            {([
+              ['chatbubbles-outline', t('profile.helpLiveChat'), t('assistant.title'), () => router.push('/assistant')],
+              ['call-outline', t('profile.helpCall'), '+60 3-0000 0000', () => void Linking.openURL('tel:+60300000000')],
+              ['logo-whatsapp', 'WhatsApp', '+60 12-000 0000', () => void Linking.openURL('https://wa.me/60120000000')],
+              ['paper-plane-outline', 'Telegram', '@UniBridgeSupport', () => void Linking.openURL('https://t.me/UniBridgeSupportDemo')],
+              ['call-outline', 'Viber', '+60 12-000 0000', () => void Linking.openURL('viber://chat?number=%2B60120000000')],
+            ] as const).map(([icon, label, sub, onPress]) => (
+              <Pressable
+                key={label}
+                accessibilityRole="button"
+                onPress={onPress}
+                style={({ pressed }) => ({
+                  flexDirection: 'row', alignItems: 'center', gap: spacing.md,
+                  paddingVertical: spacing.sm, opacity: pressed ? 0.7 : 1,
+                })}
+              >
+                <Ionicons name={icon} size={18} color={colors.accent} />
+                <View style={{ flex: 1 }}>
+                  <Text variant="bodyMedium">{label}</Text>
+                  <Text variant="caption" tone="faint">{sub}</Text>
+                </View>
+                <Ionicons name="chevron-forward" size={15} color={colors.inkFaint} />
+              </Pressable>
+            ))}
+            <Text variant="caption" tone="faint">{t('profile.helpNote')}</Text>
           </Card>
 
           <SectionHeader title={t('safety.title')} />

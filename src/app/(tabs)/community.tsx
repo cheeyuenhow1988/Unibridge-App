@@ -1,7 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { router } from 'expo-router';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Alert, Modal, Pressable, ScrollView, Switch, View } from 'react-native';
 import { Badge } from '@/components/ui/Badge';
@@ -24,6 +24,7 @@ import { useApplicationsStore } from '@/store/useApplicationsStore';
 import { useCommunityStore } from '@/store/useCommunityStore';
 import { useProfileStore } from '@/store/useProfileStore';
 import { useSavedStore } from '@/store/useSavedStore';
+import { toast } from '@/store/useToastStore';
 import type { Coursemate, Short } from '@/types/models';
 
 type Segment = 'groups' | 'feed' | 'mates' | 'events';
@@ -42,8 +43,12 @@ export default function CommunityScreen() {
   const supportB = useAsync(() => getSupportBundle(), []);
   const joinedGroupIds = useCommunityStore((s) => s.joinedGroupIds);
   const joinGroup = useCommunityStore((s) => s.joinGroup);
-  const connections = useCommunityStore((s) => s.connections);
-  const toggleConnection = useCommunityStore((s) => s.toggleConnection);
+  const mateLinks = useCommunityStore((s) => s.mateLinks);
+  const requestConnect = useCommunityStore((s) => s.requestConnect);
+  const settleRequests = useCommunityStore((s) => s.settleRequests);
+  const unfriend = useCommunityStore((s) => s.unfriend);
+  const block = useCommunityStore((s) => s.block);
+  const unblock = useCommunityStore((s) => s.unblock);
   const rsvps = useCommunityStore((s) => s.rsvps);
   const toggleRsvp = useCommunityStore((s) => s.toggleRsvp);
   const likedPostIds = useCommunityStore((s) => s.likedPostIds);
@@ -62,6 +67,25 @@ export default function CommunityScreen() {
       .flatMap((a) => a.posts.map((p) => ({ ambassador: a, post: p })))
       .sort((a, b) => b.post.date.localeCompare(a.post.date));
   }, [state.data]);
+
+  // Connection requests auto-accept a few seconds later (prototype) — settle
+  // while the screen is open so the "accepted" moment happens live.
+  useEffect(() => {
+    const matesData = state.data?.[2];
+    const tick = () => {
+      const accepted = settleRequests();
+      if (accepted.length > 0 && matesData) {
+        const names = accepted
+          .map((id) => matesData.find((m) => m.id === id)?.name.split(' ')[0])
+          .filter(Boolean)
+          .join(', ');
+        if (names) toast(t('community.accepted', { name: names }));
+      }
+    };
+    tick();
+    const iv = setInterval(tick, 2500);
+    return () => clearInterval(iv);
+  }, [settleRequests, state.data, t]);
 
   if (state.loading) {
     return (
@@ -269,14 +293,16 @@ export default function CommunityScreen() {
               'au-monash';
             const anchorInst = institutions.find((i) => i.id === anchorId);
             const isSample = applications.length === 0 && savedCourseIds.length === 0;
-            const atSchool = mates.filter((m) => m.institutionId === anchorId);
+            // Blocked people disappear from every list.
+            const notBlocked = (m: Coursemate) => mateLinks[m.id]?.status !== 'blocked';
+            const atSchool = mates.filter((m) => m.institutionId === anchorId && notBlocked(m));
             const sameCityIds = new Set(
               institutions.filter((i) => i.city === anchorInst?.city && i.id !== anchorId).map((i) => i.id),
             );
-            const nearby = mates.filter((m) => sameCityIds.has(m.institutionId)).slice(0, 6);
+            const nearby = mates.filter((m) => sameCityIds.has(m.institutionId) && notBlocked(m)).slice(0, 6);
 
             const mateCard = (m: Coursemate) => {
-              const connected = connections.includes(m.id);
+              const status = mateLinks[m.id]?.status;
               return (
                 <Pressable
                   key={m.id}
@@ -294,16 +320,27 @@ export default function CommunityScreen() {
                     {FLAGS[m.homeCountry]} · {m.courseName}
                   </Text>
                   <Text variant="micro" tone="faint" center numberOfLines={1}>{instName(m.institutionId)}</Text>
-                  <Button
-                    label={connected ? t('community.connected') : t('community.connect')}
-                    size="sm"
-                    variant={connected ? 'secondary' : 'primary'}
-                    icon={connected ? 'checkmark' : 'person-add-outline'}
-                    onPress={() => {
-                      hapticTap();
-                      toggleConnection(m.id);
-                    }}
-                  />
+                  {status === 'connected' ? (
+                    <Button
+                      label={t('community.chatBtn')}
+                      size="sm"
+                      icon="chatbubble-ellipses-outline"
+                      onPress={() => router.push(`/mate/${m.id}`)}
+                    />
+                  ) : status === 'requested' ? (
+                    <Button label={t('community.requestedBtn')} size="sm" variant="secondary" icon="hourglass-outline" disabled />
+                  ) : (
+                    <Button
+                      label={t('community.connect')}
+                      size="sm"
+                      icon="person-add-outline"
+                      onPress={() => {
+                        hapticTap();
+                        requestConnect(m.id);
+                        toast(t('community.requestSent', { name: m.name.split(' ')[0] }));
+                      }}
+                    />
+                  )}
                 </Pressable>
               );
             };
@@ -459,16 +496,82 @@ export default function CommunityScreen() {
                 </Row>
               </View>
             ) : null}
-            <Button
-              label={connections.includes(mateSheet.id) ? t('community.connected') : t('community.connect')}
-              icon={connections.includes(mateSheet.id) ? 'checkmark' : 'person-add-outline'}
-              variant={connections.includes(mateSheet.id) ? 'secondary' : 'primary'}
-              size="lg"
-              onPress={() => {
-                hapticTap();
-                toggleConnection(mateSheet.id);
-              }}
-            />
+            {(() => {
+              const status = mateLinks[mateSheet.id]?.status;
+              if (status === 'connected') {
+                return (
+                  <View style={{ alignSelf: 'stretch', gap: spacing.sm }}>
+                    <Button
+                      label={t('community.chatBtn')}
+                      icon="chatbubble-ellipses-outline"
+                      size="lg"
+                      onPress={() => {
+                        setMateSheet(null);
+                        router.push(`/mate/${mateSheet.id}`);
+                      }}
+                    />
+                    <Row gap={spacing.sm}>
+                      <View style={{ flex: 1 }}>
+                        <Button
+                          label={t('community.unfriend')}
+                          icon="person-remove-outline"
+                          variant="secondary"
+                          size="sm"
+                          onPress={() => {
+                            unfriend(mateSheet.id);
+                            toast(t('community.unfriended', { name: mateSheet.name.split(' ')[0] }));
+                            setMateSheet(null);
+                          }}
+                        />
+                      </View>
+                      <View style={{ flex: 1 }}>
+                        <Button
+                          label={t('community.block')}
+                          icon="hand-left-outline"
+                          variant="secondary"
+                          size="sm"
+                          onPress={() => {
+                            block(mateSheet.id);
+                            toast(t('community.blocked', { name: mateSheet.name.split(' ')[0] }));
+                            setMateSheet(null);
+                          }}
+                        />
+                      </View>
+                    </Row>
+                  </View>
+                );
+              }
+              if (status === 'requested') {
+                return <Button label={t('community.requestedBtn')} icon="hourglass-outline" variant="secondary" size="lg" disabled />;
+              }
+              if (status === 'blocked') {
+                return (
+                  <Button
+                    label={t('community.unblock')}
+                    icon="hand-right-outline"
+                    variant="secondary"
+                    size="lg"
+                    onPress={() => {
+                      unblock(mateSheet.id);
+                      setMateSheet(null);
+                    }}
+                  />
+                );
+              }
+              return (
+                <Button
+                  label={t('community.connect')}
+                  icon="person-add-outline"
+                  size="lg"
+                  onPress={() => {
+                    hapticTap();
+                    requestConnect(mateSheet.id);
+                    toast(t('community.requestSent', { name: mateSheet.name.split(' ')[0] }));
+                    setMateSheet(null);
+                  }}
+                />
+              );
+            })()}
           </View>
         ) : null}
       </Modal>

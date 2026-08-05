@@ -75,7 +75,11 @@
     "CA": "Kanada",
     "MM": "Myanmar",
     "KR": "Korea Selatan",
-    "JP": "Jepang"
+    "JP": "Jepang",
+    "TH": "Thailand",
+    "HK": "Hong Kong",
+    "IN": "India",
+    "PH": "Filipina"
   },
   "fields": {
     "business": "Bisnis",
@@ -515,7 +519,29 @@
     "looking_sports": "Olahraga & gym",
     "looking_foodie": "Wisata kuliner",
     "lookingMine": "Yang aku cari",
-    "lookingMineSub": "Tampil di kartu teman seangkatanmu — pilih sebanyak yang kamu mau."
+    "lookingMineSub": "Tampil di kartu teman seangkatanmu — pilih sebanyak yang kamu mau.",
+    "requestSent": "Permintaan terkirim ke {{name}} — menunggu diterima",
+    "requestedBtn": "Diminta",
+    "accepted": "{{name}} menerima permintaanmu 🎉 Sekarang bisa mengobrol.",
+    "chatBtn": "Obrolan",
+    "unfriend": "Hapus teman",
+    "unfriended": "Terputus dari {{name}}",
+    "block": "Blokir",
+    "blocked": "{{name}} diblokir",
+    "unblock": "Buka blokir",
+    "confirmUnfriendTitle": "Hapus pertemanan {{name}}?",
+    "confirmUnfriendBody": "Koneksi terputus dan riwayat obrolan dihapus.",
+    "confirmBlockTitle": "Blokir {{name}}?",
+    "confirmBlockBody": "{{name}} hilang dari Teman Seangkatan dan tak bisa menghubungimu lagi.",
+    "deleteChat": "Hapus obrolan",
+    "chatDeleted": "Obrolan dihapus",
+    "chatPlaceholder": "Pesan…",
+    "chatIntro": "Kamu dan {{name}} sudah terhubung — sapa dia!",
+    "chatSend": "Kirim",
+    "chatMenu": "Opsi obrolan",
+    "reply1": "Hai! Senang terhubung 😄 Kapan kamu terbang?",
+    "reply2": "Hai! Aku juga cari hunian dekat kampus — ayo bandingkan pilihan!",
+    "reply3": "Halo! Gabung juga ke grup intake, banyak tips di sana."
   },
   "arrival": {
     "title": "Layanan kedatangan",
@@ -557,7 +583,11 @@
     "loadDemo": "Muat profil demo",
     "about": "Prototipe UniBridge — institusi nyata, data indikatif. Selalu cek situs resmi.",
     "homeCurrency": "Mata uang asal",
-    "build": "Versi {{id}}"
+    "build": "Versi {{id}}",
+    "helpTitle": "Bantuan & dukungan",
+    "helpLiveChat": "Live chat",
+    "helpCall": "Telepon UniBridge",
+    "helpNote": "Kontak prototipe indikatif — nomor dan akun resmi terhubung saat peluncuran."
   },
   "auth": {
     "title": "Buat akunmu",

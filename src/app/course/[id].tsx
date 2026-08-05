@@ -30,11 +30,11 @@ import { useSavedStore } from '@/store/useSavedStore';
 import { toast } from '@/store/useToastStore';
 import type { QualificationId } from '@/types/models';
 
-const SYSTEM_ORDER: QualificationId[] = ['spm', 'stpm', 'uec', 'alevels', 'ib', 'hkdse', 'gsat', 'atar', 'gpa', 'sma', 'thpt', 'gaokao', 'matric', 'krgpa', 'jpgpa'];
+const SYSTEM_ORDER: QualificationId[] = ['spm', 'stpm', 'uec', 'alevels', 'ib', 'hkdse', 'gsat', 'atar', 'gpa', 'sma', 'thpt', 'gaokao', 'cbse', 'matric', 'krgpa', 'jpgpa'];
 const SYSTEM_LABEL: Record<QualificationId, string> = {
   spm: 'SPM', stpm: 'STPM', uec: 'UEC', alevels: 'A-Levels', ib: 'IB',
   hkdse: 'HKDSE', gsat: 'GSAT', atar: 'ATAR', gpa: 'GPA',
-  sma: 'SMA (ID)', thpt: 'THPT (VN)', gaokao: 'Gaokao (CN)', matric: 'Matric (MM)', krgpa: 'GPA (KR)', jpgpa: '評定 (JP)',
+  sma: 'SMA (ID)', thpt: 'THPT (VN)', gaokao: 'Gaokao (CN)', cbse: 'CBSE (IN)', matric: 'Matric (MM)', krgpa: 'GPA (KR)', jpgpa: '評定 (JP)',
 };
 
 export default function CourseDetail() {

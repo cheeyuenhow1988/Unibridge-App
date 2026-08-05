@@ -75,7 +75,11 @@
     "CA": "カナダ",
     "MM": "ミャンマー",
     "KR": "韓国",
-    "JP": "日本"
+    "JP": "日本",
+    "TH": "タイ",
+    "HK": "香港",
+    "IN": "インド",
+    "PH": "フィリピン"
   },
   "fields": {
     "business": "ビジネス",
@@ -515,7 +519,29 @@
     "looking_sports": "スポーツ・ジム",
     "looking_foodie": "グルメ探検",
     "lookingMine": "探しているもの",
-    "lookingMineSub": "あなたのカードに表示されます。いくつでも選べます。"
+    "lookingMineSub": "あなたのカードに表示されます。いくつでも選べます。",
+    "requestSent": "{{name}}にリクエストを送信 — 承認待ち",
+    "requestedBtn": "リクエスト済み",
+    "accepted": "{{name}}がリクエストを承認しました 🎉 チャットできます。",
+    "chatBtn": "チャット",
+    "unfriend": "友達解除",
+    "unfriended": "{{name}}との接続を解除しました",
+    "block": "ブロック",
+    "blocked": "{{name}}をブロックしました",
+    "unblock": "ブロック解除",
+    "confirmUnfriendTitle": "{{name}}を友達解除しますか?",
+    "confirmUnfriendBody": "接続が解除され、チャット履歴も削除されます。",
+    "confirmBlockTitle": "{{name}}をブロックしますか?",
+    "confirmBlockBody": "{{name}}は同級生一覧から消え、連絡できなくなります。",
+    "deleteChat": "チャットを削除",
+    "chatDeleted": "チャットを削除しました",
+    "chatPlaceholder": "メッセージ…",
+    "chatIntro": "{{name}}とつながりました — あいさつしましょう!",
+    "chatSend": "送信",
+    "chatMenu": "チャット設定",
+    "reply1": "やあ!つながれて嬉しいです 😄 いつ渡航しますか?",
+    "reply2": "こんにちは!私もキャンパス近くの住まいを探しています — 一緒に比べましょう!",
+    "reply3": "こんにちは!入学グループにも参加してみて。役立つ情報がたくさんありますよ。"
   },
   "arrival": {
     "title": "到着サービス",
@@ -557,7 +583,11 @@
     "loadDemo": "デモプロフィールを読み込む",
     "about": "UniBridgeプロトタイプ — 実在の教育機関、参考データ。必ず公式サイトでご確認を。",
     "homeCurrency": "母国通貨",
-    "build": "ビルド {{id}}"
+    "build": "ビルド {{id}}",
+    "helpTitle": "ヘルプ・サポート",
+    "helpLiveChat": "ライブチャット",
+    "helpCall": "UniBridgeに電話",
+    "helpNote": "プロトタイプの連絡先例 — 正式な番号・アカウントは公開時に接続されます。"
   },
   "auth": {
     "title": "アカウントを作成",

@@ -77,7 +77,11 @@
     "CA": "加拿大",
     "MM": "緬甸",
     "KR": "韓國",
-    "JP": "日本"
+    "JP": "日本",
+    "TH": "泰國",
+    "HK": "香港",
+    "IN": "印度",
+    "PH": "菲律賓"
   },
   "fields": {
     "business": "商科",
@@ -517,7 +521,29 @@
     "looking_sports": "運動健身",
     "looking_foodie": "美食探索",
     "lookingMine": "我在尋找",
-    "lookingMineSub": "會顯示在你的同學卡片上——想選幾個都可以。"
+    "lookingMineSub": "會顯示在你的同學卡片上——想選幾個都可以。",
+    "requestSent": "已向{{name}}送出請求——等待對方接受",
+    "requestedBtn": "已請求",
+    "accepted": "{{name}}接受了你的請求 🎉 現在可以聊天了。",
+    "chatBtn": "聊天",
+    "unfriend": "刪除好友",
+    "unfriended": "已與{{name}}中斷連結",
+    "block": "封鎖",
+    "blocked": "已封鎖{{name}}",
+    "unblock": "解除封鎖",
+    "confirmUnfriendTitle": "刪除好友{{name}}?",
+    "confirmUnfriendBody": "將中斷連結並刪除聊天紀錄。",
+    "confirmBlockTitle": "封鎖{{name}}?",
+    "confirmBlockBody": "{{name}}將從你的同學中消失,無法再聯繫你。",
+    "deleteChat": "刪除聊天",
+    "chatDeleted": "聊天已刪除",
+    "chatPlaceholder": "傳訊息…",
+    "chatIntro": "你和{{name}}已連結——打個招呼吧!",
+    "chatSend": "傳送",
+    "chatMenu": "聊天選項",
+    "reply1": "嗨!很高興認識你 😄 你什麼時候飛?",
+    "reply2": "嗨!我也在找學校附近的住處——一起比較看看吧!",
+    "reply3": "你好!也加入入學群組吧,裡面有很多攻略。"
   },
   "arrival": {
     "title": "落地服務",
@@ -559,7 +585,11 @@
     "rates": "匯率：{{source}}，更新於 {{asOf}}。新增 API 金鑰後可切換到 xe.com 資料來源。",
     "ratesSource_live": "實時",
     "ratesSource_static": "離線快照",
-    "build": "版本 {{id}}"
+    "build": "版本 {{id}}",
+    "helpTitle": "幫助與支援",
+    "helpLiveChat": "線上客服",
+    "helpCall": "致電 UniBridge",
+    "helpNote": "原型示意聯絡方式——正式號碼與帳號將於上線時開通。"
   },
   "chat": {
     "title": "諮詢{{name}}",

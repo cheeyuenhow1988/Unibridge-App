@@ -77,7 +77,11 @@
     "CA": "加拿大",
     "MM": "缅甸",
     "KR": "韩国",
-    "JP": "日本"
+    "JP": "日本",
+    "TH": "泰国",
+    "HK": "香港",
+    "IN": "印度",
+    "PH": "菲律宾"
   },
   "fields": {
     "business": "商科",
@@ -517,7 +521,29 @@
     "looking_sports": "运动健身",
     "looking_foodie": "美食探店",
     "lookingMine": "我在寻找",
-    "lookingMineSub": "会显示在你的同学卡片上——想选几个都可以。"
+    "lookingMineSub": "会显示在你的同学卡片上——想选几个都可以。",
+    "requestSent": "已向{{name}}发送请求——等待对方接受",
+    "requestedBtn": "已请求",
+    "accepted": "{{name}}接受了你的请求 🎉 现在可以聊天了。",
+    "chatBtn": "聊天",
+    "unfriend": "删除好友",
+    "unfriended": "已与{{name}}断开",
+    "block": "拉黑",
+    "blocked": "已拉黑{{name}}",
+    "unblock": "取消拉黑",
+    "confirmUnfriendTitle": "删除好友{{name}}?",
+    "confirmUnfriendBody": "将断开连接并删除聊天记录。",
+    "confirmBlockTitle": "拉黑{{name}}?",
+    "confirmBlockBody": "{{name}}将从你的同学中消失,无法再联系你。",
+    "deleteChat": "删除聊天",
+    "chatDeleted": "聊天已删除",
+    "chatPlaceholder": "发消息…",
+    "chatIntro": "你和{{name}}已连接——打个招呼吧!",
+    "chatSend": "发送",
+    "chatMenu": "聊天选项",
+    "reply1": "嗨!很高兴认识你 😄 你什么时候飞?",
+    "reply2": "嗨!我也在找学校附近的住处——一起比较下吧!",
+    "reply3": "你好!也加入入学群吧,里面有很多攻略。"
   },
   "arrival": {
     "title": "落地服务",
@@ -559,7 +585,11 @@
     "rates": "汇率：{{source}}，更新于 {{asOf}}。添加 API 密钥后可切换到 xe.com 数据源。",
     "ratesSource_live": "实时",
     "ratesSource_static": "离线快照",
-    "build": "版本 {{id}}"
+    "build": "版本 {{id}}",
+    "helpTitle": "帮助与支持",
+    "helpLiveChat": "在线客服",
+    "helpCall": "致电 UniBridge",
+    "helpNote": "原型示意联系方式——正式号码和账号将在上线时开通。"
   },
   "chat": {
     "title": "咨询{{name}}",

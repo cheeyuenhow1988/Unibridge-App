@@ -76,6 +76,7 @@ const FX = {
     USD: 1, AUD: 1.53, MYR: 4.42, TWD: 31.9, GBP: 0.79, SGD: 1.34,
     NZD: 1.68, RUB: 92.5, IDR: 15850, VND: 25300, CNY: 7.18, CAD: 1.36,
     MMK: 4500, KRW: 1360, JPY: 152,
+    THB: 36.2, HKD: 7.79, INR: 84.1, PHP: 58.3,
   },
 };
 
@@ -156,6 +157,10 @@ const QUALIFICATIONS = [
     id: 'gaokao', name: 'Gaokao 高考', region: 'China (mainland)', mode: 'total', direction: 'higher',
     unit: 'points (0-750)', min: 0, max: 750, decimals: 0, borderlineDelta: 20,
   },
+  {
+    id: 'cbse', name: 'CBSE / ISC Class XII', region: 'India (best-5 percentage)', mode: 'total', direction: 'higher',
+    unit: 'percent (0-100)', min: 0, max: 100, decimals: 0, borderlineDelta: 3,
+  },
 ].map((q) => ({ ...q, grades: q.grades?.map(([label, points]) => ({ label, points })) }));
 
 // Thresholds per band (index 0 = pathway programmes, 1–5 = selectivity).
@@ -175,6 +180,7 @@ const REQ_BANDS = {
   krgpa: { t: [2.3, 2.5, 3.0, 3.4, 3.8, 4.2], d: (n) => `GPA ${n.toFixed(1)} / 4.5` },
   jpgpa: { t: [2.8, 3.0, 3.4, 3.8, 4.2, 4.6], d: (n) => `評定 ${n.toFixed(1)} / 5.0` },
   gaokao: { t: [420, 450, 500, 550, 600, 650], d: (n) => `Gaokao ${n} / 750` },
+  cbse: { t: [55, 60, 70, 75, 85, 90], d: (n) => `${n}% (best 5)` },
 };
 
 function requirementsForBand(band) {
@@ -864,12 +870,13 @@ const MED_RECOGNITION = {
   MY: ['AU', 'GB', 'NZ', 'MY', 'US', 'CA'], SG: ['AU', 'GB', 'NZ', 'SG', 'US', 'CA'], TW: ['AU', 'GB', 'TW', 'US'],
   CN: ['GB', 'AU', 'RU', 'CN', 'US'], ID: ['AU', 'GB', 'MY', 'US'], VN: ['AU', 'GB', 'RU', 'US'],
   MM: ['AU', 'GB', 'MY', 'US'], KR: ['US', 'AU', 'GB'], JP: ['US', 'GB', 'AU'],
+  TH: ['AU', 'GB', 'US'], HK: ['GB', 'AU', 'US', 'CA'], IN: ['GB', 'AU', 'US', 'MY', 'RU'], PH: ['US', 'AU', 'GB'],
 };
 const COMMON_LAW = ['GB', 'AU', 'NZ', 'SG', 'MY', 'US', 'CA'];
 
 function recognitionFor(field, isMed, dest) {
   const out = {};
-  for (const home of ['MY', 'TW', 'SG', 'ID', 'VN', 'CN', 'MM', 'KR', 'JP']) {
+  for (const home of ['MY', 'TW', 'SG', 'ID', 'VN', 'CN', 'MM', 'KR', 'JP', 'TH', 'HK', 'IN', 'PH']) {
     let ok = true;
     if (isMed) ok = MED_RECOGNITION[home].includes(dest);
     else if (field === 'law') ok = ['MY', 'SG'].includes(home) && COMMON_LAW.includes(dest);
@@ -1178,6 +1185,10 @@ const EMBASSIES_RAW = {
     MM: ['Embassy of Myanmar', 'Canberra', '22 Arkana Street, Yarralumla ACT', '+61 2 6273 0000', null],
     KR: ['Embassy of the Republic of Korea', 'Canberra', '113 Empire Circuit, Yarralumla ACT', '+61 2 6270 4100', '+61 4 1900 0005'],
     JP: ['Embassy of Japan', 'Canberra', '112 Empire Circuit, Yarralumla ACT', '+61 2 6273 3244', '+61 4 1900 0006'],
+    TH: ['Royal Thai Embassy', 'Canberra', '111 Empire Circuit, Yarralumla ACT', '+61 2 6206 0000', null],
+    HK: ['Hong Kong Economic and Trade Office', 'Sydney', 'Level 10, 25 Bligh Street', '+61 2 9283 0000', null],
+    IN: ['High Commission of India', 'Canberra', '3-5 Moonah Place, Yarralumla ACT', '+61 2 6273 0000', '+61 4 1900 0007'],
+    PH: ['Embassy of the Philippines', 'Canberra', '1 Moonah Place, Yarralumla ACT', '+61 2 6273 2000', null],
   },
   MY: {
     MY: null,
@@ -1189,6 +1200,10 @@ const EMBASSIES_RAW = {
     MM: ['Embassy of Myanmar', 'Kuala Lumpur', '8C Jalan Ampang Hilir', '+60 3 4251 0000', null],
     KR: ['Embassy of the Republic of Korea', 'Kuala Lumpur', '9 & 11 Jalan Nipah, Off Jalan Ampang', '+60 3 4251 2336', '+60 12 000 0005'],
     JP: ['Embassy of Japan', 'Kuala Lumpur', '11 Persiaran Stonor, Off Jalan Tun Razak', '+60 3 2177 2600', '+60 12 000 0006'],
+    TH: ['Royal Thai Embassy', 'Kuala Lumpur', '206 Jalan Ampang', '+60 3 2148 8000', null],
+    HK: ['Embassy of China (HKSAR passport services)', 'Kuala Lumpur', '229 Jalan Ampang', '+60 3 2143 0000', null],
+    IN: ['High Commission of India', 'Kuala Lumpur', '2 Jalan Taman Duta', '+60 3 2093 0000', '+60 12 000 0007'],
+    PH: ['Embassy of the Philippines', 'Kuala Lumpur', '1 Changkat Kia Peng', '+60 3 2148 4233', null],
   },
   TW: {
     MY: ['Malaysian Friendship & Trade Centre', 'Taipei', '8F, San Ho Plastics Building, Hsin Yi District', '+886 2 2716 0000', null],
@@ -1200,6 +1215,10 @@ const EMBASSIES_RAW = {
     MM: ['Embassy of Myanmar, Bangkok (covers Taiwan)', 'Bangkok', '132 Sathorn Nua Road', '+66 2 233 0000', null],
     KR: ['Korean Mission in Taipei', 'Taipei', 'Room 1506, 333 Keelung Road Section 1', '+886 2 2758 8320', null],
     JP: ['Japan–Taiwan Exchange Association', 'Taipei', '28 Qingcheng Street, Songshan District', '+886 2 2713 8000', null],
+    TH: ['Thailand Trade and Economic Office', 'Taipei', '12F, 168 Songjiang Road', '+886 2 2581 0000', null],
+    HK: ['Cross-strait student service line (SEF)', 'Taipei', 'Hotline service — no walk-in office', '+886 2 2712 9000', null],
+    IN: ['India Taipei Association', 'Taipei', 'Suite 2010, 333 Keelung Road Section 1', '+886 2 2757 0000', null],
+    PH: ['Manila Economic and Cultural Office (MECO)', 'Taipei', '11F, 176 Changchun Road', '+886 2 2508 0000', null],
   },
   GB: {
     MY: ['Malaysian High Commission', 'London', '45 Belgrave Square', '+44 20 7235 0000', '+44 77 0000 0001'],
@@ -1211,6 +1230,10 @@ const EMBASSIES_RAW = {
     MM: ['Embassy of Myanmar', 'London', '19A Charles Street, Mayfair', '+44 20 7148 0000', null],
     KR: ['Embassy of the Republic of Korea', 'London', '60 Buckingham Gate', '+44 20 7227 5500', '+44 77 0000 0005'],
     JP: ['Embassy of Japan', 'London', '101–104 Piccadilly', '+44 20 7465 6500', '+44 77 0000 0006'],
+    TH: ['Royal Thai Embassy', 'London', '29-30 Queens Gate SW7', '+44 20 7589 0000', null],
+    HK: ['Hong Kong Economic and Trade Office', 'London', '18 Bedford Square WC1', '+44 20 7499 0000', null],
+    IN: ['High Commission of India', 'London', 'India House, Aldwych WC2', '+44 20 7836 0000', '+44 7700 900007'],
+    PH: ['Embassy of the Philippines', 'London', '6-8 Suffolk Street SW1', '+44 20 7451 1800', null],
   },
   SG: {
     MY: ['Malaysian High Commission', 'Singapore', '301 Jervois Road', '+65 6235 0000', '+65 8000 0001'],
@@ -1222,6 +1245,10 @@ const EMBASSIES_RAW = {
     MM: ['Embassy of Myanmar', 'Singapore', "15 St. Martin's Drive", '+65 6735 0000', null],
     KR: ['Embassy of the Republic of Korea', 'Singapore', '47 Scotts Road, Goldbell Towers', '+65 6256 1188', null],
     JP: ['Embassy of Japan', 'Singapore', '16 Nassim Road', '+65 6235 8855', null],
+    TH: ['Royal Thai Embassy', 'Singapore', '370 Orchard Road', '+65 6737 0000', null],
+    HK: ['Hong Kong Economic and Trade Office', 'Singapore', '34F, 9 Raffles Place', '+65 6338 0000', null],
+    IN: ['High Commission of India', 'Singapore', '31 Grange Road', '+65 6737 6777', null],
+    PH: ['Embassy of the Philippines', 'Singapore', '20 Nassim Road', '+65 6737 3977', null],
   },
   NZ: {
     MY: ['Malaysian High Commission', 'Wellington', '10 Washington Avenue, Brooklyn', '+64 4 385 0000', null],
@@ -1233,6 +1260,10 @@ const EMBASSIES_RAW = {
     MM: ['Embassy of Myanmar, Canberra (accredited to NZ)', 'Canberra', '22 Arkana Street, Yarralumla ACT', '+61 2 6273 0000', null],
     KR: ['Embassy of the Republic of Korea', 'Wellington', 'Level 11, 34–42 Manners Street', '+64 4 473 9073', null],
     JP: ['Embassy of Japan', 'Wellington', 'Level 18, Majestic Centre, 100 Willis Street', '+64 4 473 1540', null],
+    TH: ['Royal Thai Embassy', 'Wellington', '110 Molesworth Street, Thorndon', '+64 4 476 0000', null],
+    HK: ['Embassy of China (HKSAR passport services)', 'Wellington', '2-6 Glenmore Street', '+64 4 472 1382', null],
+    IN: ['High Commission of India', 'Wellington', '180 Molesworth Street', '+64 4 473 6390', null],
+    PH: ['Embassy of the Philippines', 'Wellington', '50 Hobson Street, Thorndon', '+64 4 890 3741', null],
   },
   RU: {
     MY: ['Embassy of Malaysia', 'Moscow', 'Mosfilmovskaya Ulitsa 50', '+7 495 147 0000', null],
@@ -1244,6 +1275,10 @@ const EMBASSIES_RAW = {
     MM: ['Embassy of Myanmar', 'Moscow', 'Ulitsa Gertsena 41', '+7 495 291 0000', null],
     KR: ['Embassy of the Republic of Korea', 'Moscow', 'Plyushchikha Ulitsa 56', '+7 495 783 2727', null],
     JP: ['Embassy of Japan', 'Moscow', 'Grokholsky Pereulok 27', '+7 495 229 2550', null],
+    TH: ['Royal Thai Embassy', 'Moscow', 'Bolshaya Spasskaya 9', '+7 495 608 0000', null],
+    HK: ['Embassy of China (HKSAR passport services)', 'Moscow', 'Druzhby Street 6', '+7 495 143 1540', null],
+    IN: ['Embassy of India', 'Moscow', '6-8 Vorontsovo Polye', '+7 495 783 7535', null],
+    PH: ['Embassy of the Philippines', 'Moscow', 'Karmanitskiy Pereulok 6', '+7 495 241 0000', null],
   },
   US: {
     MY: ['Embassy of Malaysia', 'Washington DC', '3516 International Court NW', '+1 202 572 0000', '+1 202 600 0001'],
@@ -1255,6 +1290,10 @@ const EMBASSIES_RAW = {
     MM: ['Embassy of Myanmar', 'Washington DC', '2300 S Street NW', '+1 202 332 0000', null],
     KR: ['Embassy of the Republic of Korea', 'Washington DC', '2450 Massachusetts Avenue NW', '+1 202 939 5600', '+1 202 600 0005'],
     JP: ['Embassy of Japan', 'Washington DC', '2520 Massachusetts Avenue NW', '+1 202 238 6700', '+1 202 600 0006'],
+    TH: ['Royal Thai Embassy', 'Washington, D.C.', '1024 Wisconsin Avenue NW', '+1 202 944 3600', null],
+    HK: ['Hong Kong Economic and Trade Office', 'Washington, D.C.', '1520 18th Street NW', '+1 202 331 0000', null],
+    IN: ['Embassy of India', 'Washington, D.C.', '2107 Massachusetts Avenue NW', '+1 202 939 7000', '+1 202 555 0107'],
+    PH: ['Embassy of the Philippines', 'Washington, D.C.', '1600 Massachusetts Avenue NW', '+1 202 467 9300', null],
   },
   CA: {
     MY: ['High Commission of Malaysia', 'Ottawa', '60 Boteler Street', '+1 613 241 0000', '+1 613 600 0001'],
@@ -1266,6 +1305,10 @@ const EMBASSIES_RAW = {
     MM: ['Embassy of Myanmar', 'Ottawa', '336 Island Park Drive', '+1 613 232 0000', null],
     KR: ['Embassy of the Republic of Korea', 'Ottawa', '150 Boteler Street', '+1 613 244 5010', null],
     JP: ['Embassy of Japan', 'Ottawa', '255 Sussex Drive', '+1 613 241 8541', null],
+    TH: ['Royal Thai Embassy', 'Ottawa', '180 Island Park Drive', '+1 613 722 4444', null],
+    HK: ['Hong Kong Economic and Trade Office', 'Toronto', '174 St George Street', '+1 416 924 0000', null],
+    IN: ['High Commission of India', 'Ottawa', '10 Springfield Road', '+1 613 744 3751', null],
+    PH: ['Embassy of the Philippines', 'Ottawa', '30 Murray Street', '+1 613 233 1121', null],
   },
   CN: {
     MY: ['Embassy of Malaysia', 'Beijing', '2 Liangmaqiao Bei Jie, Chaoyang District', '+86 10 6532 0000', '+86 138 0000 0001'],
@@ -1277,6 +1320,10 @@ const EMBASSIES_RAW = {
     MM: ['Embassy of Myanmar', 'Beijing', '6 Dongzhimenwai Da Jie, Chaoyang District', '+86 10 6532 0359', null],
     KR: ['Embassy of the Republic of Korea', 'Beijing', '20 Dongfang Dong Lu, Chaoyang District', '+86 10 8531 0700', null],
     JP: ['Embassy of Japan', 'Beijing', '1 Liangmaqiao Dong Jie, Chaoyang District', '+86 10 8531 9800', null],
+    TH: ['Royal Thai Embassy', 'Beijing', '40 Guanghua Road, Chaoyang', '+86 10 8531 8300', null],
+    HK: ['Office of the HKSAR Government in Beijing', 'Beijing', '71 Di anmen West Street, Xicheng', '+86 10 6657 2880', null],
+    IN: ['Embassy of India', 'Beijing', '5 Liangmaqiao North Street, Chaoyang', '+86 10 8531 2500', null],
+    PH: ['Embassy of the Philippines', 'Beijing', '23 Xiushui North Street, Jianguomenwai', '+86 10 6532 1872', null],
   },
 };
 const embassies = Object.fromEntries(
@@ -1402,6 +1449,7 @@ const MATE_NAMES = [
   ['Sari Dewi', 'ID', 43], ['Quang Le', 'VN', 51], ['Mei Ling Chua', 'MY', 38], ['Arif Rahman', 'MY', 64],
   ['Thiri Aung', 'MM', 32], ['Ji-woo Park', 'KR', 44], ['Haruka Sato', 'JP', 47], ['Min-jun Kim', 'KR', 12],
   ['Aye Chan', 'MM', 24], ['Yuki Nakamura', 'JP', 15], ['Putri Wulandari', 'ID', 45], ['Thao Pham', 'VN', 20],
+  ['Arjun Patel', 'IN', 35], ['Nok Chaiya', 'TH', 29], ['Wing Yan Lee', 'HK', 53], ['Maria Santos', 'PH', 31],
 ];
 const coursemates = [];
 institutions.forEach((inst, ii) => {
@@ -1492,16 +1540,16 @@ const predeparture = {
 // Indicative 2026 averages from public fare aggregators; [0, 0] = home city
 // equals study destination (no flight needed).
 const FLIGHTS = {
-  AU: { MY: [350, 700], TW: [500, 900], SG: [400, 750], ID: [400, 800], VN: [450, 850], CN: [500, 950], MM: [700, 1200], KR: [600, 1100], JP: [550, 1000] },
-  MY: { MY: [80, 160], TW: [180, 350], SG: [60, 140], ID: [100, 220], VN: [120, 250], CN: [250, 500], MM: [200, 400], KR: [350, 650], JP: [350, 700] },
-  TW: { MY: [200, 400], TW: [60, 120], SG: [220, 420], ID: [280, 520], VN: [180, 350], CN: [200, 400], MM: [350, 650], KR: [180, 350], JP: [180, 350] },
-  GB: { MY: [650, 1100], TW: [700, 1200], SG: [650, 1150], ID: [700, 1200], VN: [700, 1200], CN: [600, 1100], MM: [750, 1300], KR: [700, 1250], JP: [700, 1250] },
-  SG: { MY: [80, 180], TW: [220, 420], SG: [0, 0], ID: [120, 250], VN: [150, 300], CN: [280, 550], MM: [250, 450], KR: [400, 750], JP: [400, 750] },
-  NZ: { MY: [500, 950], TW: [600, 1100], SG: [550, 1000], ID: [550, 1050], VN: [600, 1100], CN: [600, 1150], MM: [800, 1400], KR: [700, 1250], JP: [650, 1200] },
-  RU: { MY: [550, 950], TW: [600, 1050], SG: [550, 950], ID: [600, 1050], VN: [500, 900], CN: [400, 750], MM: [600, 1000], KR: [500, 900], JP: [550, 950] },
-  US: { MY: [900, 1500], TW: [700, 1300], SG: [850, 1450], ID: [900, 1550], VN: [800, 1400], CN: [700, 1300], MM: [1000, 1700], KR: [750, 1350], JP: [700, 1300] },
-  CA: { MY: [900, 1500], TW: [750, 1300], SG: [900, 1500], ID: [950, 1600], VN: [850, 1450], CN: [750, 1350], MM: [1050, 1750], KR: [800, 1400], JP: [750, 1350] },
-  CN: { MY: [250, 500], TW: [300, 550], SG: [280, 550], ID: [350, 650], VN: [200, 400], CN: [80, 180], MM: [300, 550], KR: [250, 480], JP: [280, 520] },
+  AU: { MY: [350, 700], TW: [500, 900], SG: [400, 750], ID: [400, 800], VN: [450, 850], CN: [500, 950], MM: [700, 1200], KR: [600, 1100], JP: [550, 1000], TH: [400, 750], HK: [450, 800], IN: [500, 900], PH: [350, 650] },
+  MY: { MY: [80, 160], TW: [180, 350], SG: [60, 140], ID: [100, 220], VN: [120, 250], CN: [250, 500], MM: [200, 400], KR: [350, 650], JP: [350, 700], TH: [120, 260], HK: [180, 350], IN: [220, 420], PH: [150, 300] },
+  TW: { MY: [200, 400], TW: [60, 120], SG: [220, 420], ID: [280, 520], VN: [180, 350], CN: [200, 400], MM: [350, 650], KR: [180, 350], JP: [180, 350], TH: [180, 350], HK: [120, 250], IN: [350, 600], PH: [180, 340] },
+  GB: { MY: [650, 1100], TW: [700, 1200], SG: [650, 1150], ID: [700, 1200], VN: [700, 1200], CN: [600, 1100], MM: [750, 1300], KR: [700, 1250], JP: [700, 1250], TH: [550, 950], HK: [600, 1000], IN: [450, 850], PH: [650, 1100] },
+  SG: { MY: [80, 180], TW: [220, 420], SG: [0, 0], ID: [120, 250], VN: [150, 300], CN: [280, 550], MM: [250, 450], KR: [400, 750], JP: [400, 750], TH: [120, 240], HK: [200, 380], IN: [230, 430], PH: [180, 330] },
+  NZ: { MY: [500, 950], TW: [600, 1100], SG: [550, 1000], ID: [550, 1050], VN: [600, 1100], CN: [600, 1150], MM: [800, 1400], KR: [700, 1250], JP: [650, 1200], TH: [600, 1000], HK: [650, 1100], IN: [700, 1200], PH: [500, 900] },
+  RU: { MY: [550, 950], TW: [600, 1050], SG: [550, 950], ID: [600, 1050], VN: [500, 900], CN: [400, 750], MM: [600, 1000], KR: [500, 900], JP: [550, 950], TH: [400, 750], HK: [450, 800], IN: [350, 650], PH: [550, 950] },
+  US: { MY: [900, 1500], TW: [700, 1300], SG: [850, 1450], ID: [900, 1550], VN: [800, 1400], CN: [700, 1300], MM: [1000, 1700], KR: [750, 1350], JP: [700, 1300], TH: [700, 1200], HK: [650, 1150], IN: [700, 1250], PH: [600, 1050] },
+  CA: { MY: [900, 1500], TW: [750, 1300], SG: [900, 1500], ID: [950, 1600], VN: [850, 1450], CN: [750, 1350], MM: [1050, 1750], KR: [800, 1400], JP: [750, 1350], TH: [750, 1250], HK: [700, 1200], IN: [750, 1300], PH: [650, 1100] },
+  CN: { MY: [250, 500], TW: [300, 550], SG: [280, 550], ID: [350, 650], VN: [200, 400], CN: [80, 180], MM: [300, 550], KR: [250, 480], JP: [280, 520], TH: [250, 480], HK: [150, 300], IN: [400, 700], PH: [280, 520] },
 };
 const flights = { currency: 'USD', roundTrip: true, fares: FLIGHTS };
 

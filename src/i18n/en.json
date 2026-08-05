@@ -77,7 +77,11 @@
     "CA": "Canada",
     "MM": "Myanmar",
     "KR": "South Korea",
-    "JP": "Japan"
+    "JP": "Japan",
+    "TH": "Thailand",
+    "HK": "Hong Kong",
+    "IN": "India",
+    "PH": "Philippines"
   },
   "fields": {
     "business": "Business",
@@ -519,7 +523,29 @@
     "looking_sports": "Sports & gym",
     "looking_foodie": "Food adventures",
     "lookingMine": "What I'm looking for",
-    "lookingMineSub": "Shown on your coursemate card — pick as many as you like."
+    "lookingMineSub": "Shown on your coursemate card — pick as many as you like.",
+    "requestSent": "Request sent to {{name}} — waiting for them to accept",
+    "requestedBtn": "Requested",
+    "accepted": "{{name}} accepted your request 🎉 You can chat now.",
+    "chatBtn": "Chat",
+    "unfriend": "Unfriend",
+    "unfriended": "Disconnected from {{name}}",
+    "block": "Block",
+    "blocked": "{{name}} is blocked",
+    "unblock": "Unblock",
+    "confirmUnfriendTitle": "Unfriend {{name}}?",
+    "confirmUnfriendBody": "You will disconnect and your chat history is deleted.",
+    "confirmBlockTitle": "Block {{name}}?",
+    "confirmBlockBody": "{{name}} disappears from your Coursemates and can no longer contact you.",
+    "deleteChat": "Delete chat",
+    "chatDeleted": "Chat deleted",
+    "chatPlaceholder": "Message…",
+    "chatIntro": "You and {{name}} are connected — say hi!",
+    "chatSend": "Send",
+    "chatMenu": "Chat options",
+    "reply1": "Hey! Nice to connect 😄 When are you flying in?",
+    "reply2": "Hi! I am also looking at housing near campus — let us compare options!",
+    "reply3": "Hello! Join the intake group chat too, lots of tips in there."
   },
   "arrival": {
     "title": "Arrival services",
@@ -561,7 +587,11 @@
     "loadDemo": "Load demo profile",
     "about": "UniBridge prototype — real institutions, indicative data. Always verify on official websites.",
     "homeCurrency": "Home currency",
-    "build": "Build {{id}}"
+    "build": "Build {{id}}",
+    "helpTitle": "Help & support",
+    "helpLiveChat": "Live chat",
+    "helpCall": "Call UniBridge",
+    "helpNote": "Indicative prototype contact points — official numbers and accounts connect at launch."
   },
   "auth": {
     "title": "Create your account",

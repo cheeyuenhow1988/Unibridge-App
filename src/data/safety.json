@@ -112,6 +112,31 @@
         "address": "112 Empire Circuit, Yarralumla ACT",
         "phone": "+61 2 6273 3244",
         "afterHours": "+61 4 1900 0006"
+      },
+      "TH": {
+        "name": "Royal Thai Embassy",
+        "city": "Canberra",
+        "address": "111 Empire Circuit, Yarralumla ACT",
+        "phone": "+61 2 6206 0000"
+      },
+      "HK": {
+        "name": "Hong Kong Economic and Trade Office",
+        "city": "Sydney",
+        "address": "Level 10, 25 Bligh Street",
+        "phone": "+61 2 9283 0000"
+      },
+      "IN": {
+        "name": "High Commission of India",
+        "city": "Canberra",
+        "address": "3-5 Moonah Place, Yarralumla ACT",
+        "phone": "+61 2 6273 0000",
+        "afterHours": "+61 4 1900 0007"
+      },
+      "PH": {
+        "name": "Embassy of the Philippines",
+        "city": "Canberra",
+        "address": "1 Moonah Place, Yarralumla ACT",
+        "phone": "+61 2 6273 2000"
       }
     },
     "MY": {
@@ -168,6 +193,31 @@
         "address": "11 Persiaran Stonor, Off Jalan Tun Razak",
         "phone": "+60 3 2177 2600",
         "afterHours": "+60 12 000 0006"
+      },
+      "TH": {
+        "name": "Royal Thai Embassy",
+        "city": "Kuala Lumpur",
+        "address": "206 Jalan Ampang",
+        "phone": "+60 3 2148 8000"
+      },
+      "HK": {
+        "name": "Embassy of China (HKSAR passport services)",
+        "city": "Kuala Lumpur",
+        "address": "229 Jalan Ampang",
+        "phone": "+60 3 2143 0000"
+      },
+      "IN": {
+        "name": "High Commission of India",
+        "city": "Kuala Lumpur",
+        "address": "2 Jalan Taman Duta",
+        "phone": "+60 3 2093 0000",
+        "afterHours": "+60 12 000 0007"
+      },
+      "PH": {
+        "name": "Embassy of the Philippines",
+        "city": "Kuala Lumpur",
+        "address": "1 Changkat Kia Peng",
+        "phone": "+60 3 2148 4233"
       }
     },
     "TW": {
@@ -219,6 +269,30 @@
         "city": "Taipei",
         "address": "28 Qingcheng Street, Songshan District",
         "phone": "+886 2 2713 8000"
+      },
+      "TH": {
+        "name": "Thailand Trade and Economic Office",
+        "city": "Taipei",
+        "address": "12F, 168 Songjiang Road",
+        "phone": "+886 2 2581 0000"
+      },
+      "HK": {
+        "name": "Cross-strait student service line (SEF)",
+        "city": "Taipei",
+        "address": "Hotline service — no walk-in office",
+        "phone": "+886 2 2712 9000"
+      },
+      "IN": {
+        "name": "India Taipei Association",
+        "city": "Taipei",
+        "address": "Suite 2010, 333 Keelung Road Section 1",
+        "phone": "+886 2 2757 0000"
+      },
+      "PH": {
+        "name": "Manila Economic and Cultural Office (MECO)",
+        "city": "Taipei",
+        "address": "11F, 176 Changchun Road",
+        "phone": "+886 2 2508 0000"
       }
     },
     "GB": {
@@ -281,6 +355,31 @@
         "address": "101–104 Piccadilly",
         "phone": "+44 20 7465 6500",
         "afterHours": "+44 77 0000 0006"
+      },
+      "TH": {
+        "name": "Royal Thai Embassy",
+        "city": "London",
+        "address": "29-30 Queens Gate SW7",
+        "phone": "+44 20 7589 0000"
+      },
+      "HK": {
+        "name": "Hong Kong Economic and Trade Office",
+        "city": "London",
+        "address": "18 Bedford Square WC1",
+        "phone": "+44 20 7499 0000"
+      },
+      "IN": {
+        "name": "High Commission of India",
+        "city": "London",
+        "address": "India House, Aldwych WC2",
+        "phone": "+44 20 7836 0000",
+        "afterHours": "+44 7700 900007"
+      },
+      "PH": {
+        "name": "Embassy of the Philippines",
+        "city": "London",
+        "address": "6-8 Suffolk Street SW1",
+        "phone": "+44 20 7451 1800"
       }
     },
     "SG": {
@@ -335,6 +434,30 @@
         "city": "Singapore",
         "address": "16 Nassim Road",
         "phone": "+65 6235 8855"
+      },
+      "TH": {
+        "name": "Royal Thai Embassy",
+        "city": "Singapore",
+        "address": "370 Orchard Road",
+        "phone": "+65 6737 0000"
+      },
+      "HK": {
+        "name": "Hong Kong Economic and Trade Office",
+        "city": "Singapore",
+        "address": "34F, 9 Raffles Place",
+        "phone": "+65 6338 0000"
+      },
+      "IN": {
+        "name": "High Commission of India",
+        "city": "Singapore",
+        "address": "31 Grange Road",
+        "phone": "+65 6737 6777"
+      },
+      "PH": {
+        "name": "Embassy of the Philippines",
+        "city": "Singapore",
+        "address": "20 Nassim Road",
+        "phone": "+65 6737 3977"
       }
     },
     "NZ": {
@@ -391,6 +514,30 @@
         "city": "Wellington",
         "address": "Level 18, Majestic Centre, 100 Willis Street",
         "phone": "+64 4 473 1540"
+      },
+      "TH": {
+        "name": "Royal Thai Embassy",
+        "city": "Wellington",
+        "address": "110 Molesworth Street, Thorndon",
+        "phone": "+64 4 476 0000"
+      },
+      "HK": {
+        "name": "Embassy of China (HKSAR passport services)",
+        "city": "Wellington",
+        "address": "2-6 Glenmore Street",
+        "phone": "+64 4 472 1382"
+      },
+      "IN": {
+        "name": "High Commission of India",
+        "city": "Wellington",
+        "address": "180 Molesworth Street",
+        "phone": "+64 4 473 6390"
+      },
+      "PH": {
+        "name": "Embassy of the Philippines",
+        "city": "Wellington",
+        "address": "50 Hobson Street, Thorndon",
+        "phone": "+64 4 890 3741"
       }
     },
     "RU": {
@@ -447,6 +594,30 @@
         "city": "Moscow",
         "address": "Grokholsky Pereulok 27",
         "phone": "+7 495 229 2550"
+      },
+      "TH": {
+        "name": "Royal Thai Embassy",
+        "city": "Moscow",
+        "address": "Bolshaya Spasskaya 9",
+        "phone": "+7 495 608 0000"
+      },
+      "HK": {
+        "name": "Embassy of China (HKSAR passport services)",
+        "city": "Moscow",
+        "address": "Druzhby Street 6",
+        "phone": "+7 495 143 1540"
+      },
+      "IN": {
+        "name": "Embassy of India",
+        "city": "Moscow",
+        "address": "6-8 Vorontsovo Polye",
+        "phone": "+7 495 783 7535"
+      },
+      "PH": {
+        "name": "Embassy of the Philippines",
+        "city": "Moscow",
+        "address": "Karmanitskiy Pereulok 6",
+        "phone": "+7 495 241 0000"
       }
     },
     "US": {
@@ -509,6 +680,31 @@
         "address": "2520 Massachusetts Avenue NW",
         "phone": "+1 202 238 6700",
         "afterHours": "+1 202 600 0006"
+      },
+      "TH": {
+        "name": "Royal Thai Embassy",
+        "city": "Washington, D.C.",
+        "address": "1024 Wisconsin Avenue NW",
+        "phone": "+1 202 944 3600"
+      },
+      "HK": {
+        "name": "Hong Kong Economic and Trade Office",
+        "city": "Washington, D.C.",
+        "address": "1520 18th Street NW",
+        "phone": "+1 202 331 0000"
+      },
+      "IN": {
+        "name": "Embassy of India",
+        "city": "Washington, D.C.",
+        "address": "2107 Massachusetts Avenue NW",
+        "phone": "+1 202 939 7000",
+        "afterHours": "+1 202 555 0107"
+      },
+      "PH": {
+        "name": "Embassy of the Philippines",
+        "city": "Washington, D.C.",
+        "address": "1600 Massachusetts Avenue NW",
+        "phone": "+1 202 467 9300"
       }
     },
     "CA": {
@@ -566,6 +762,30 @@
         "city": "Ottawa",
         "address": "255 Sussex Drive",
         "phone": "+1 613 241 8541"
+      },
+      "TH": {
+        "name": "Royal Thai Embassy",
+        "city": "Ottawa",
+        "address": "180 Island Park Drive",
+        "phone": "+1 613 722 4444"
+      },
+      "HK": {
+        "name": "Hong Kong Economic and Trade Office",
+        "city": "Toronto",
+        "address": "174 St George Street",
+        "phone": "+1 416 924 0000"
+      },
+      "IN": {
+        "name": "High Commission of India",
+        "city": "Ottawa",
+        "address": "10 Springfield Road",
+        "phone": "+1 613 744 3751"
+      },
+      "PH": {
+        "name": "Embassy of the Philippines",
+        "city": "Ottawa",
+        "address": "30 Murray Street",
+        "phone": "+1 613 233 1121"
       }
     },
     "CN": {
@@ -618,6 +838,30 @@
         "city": "Beijing",
         "address": "1 Liangmaqiao Dong Jie, Chaoyang District",
         "phone": "+86 10 8531 9800"
+      },
+      "TH": {
+        "name": "Royal Thai Embassy",
+        "city": "Beijing",
+        "address": "40 Guanghua Road, Chaoyang",
+        "phone": "+86 10 8531 8300"
+      },
+      "HK": {
+        "name": "Office of the HKSAR Government in Beijing",
+        "city": "Beijing",
+        "address": "71 Di anmen West Street, Xicheng",
+        "phone": "+86 10 6657 2880"
+      },
+      "IN": {
+        "name": "Embassy of India",
+        "city": "Beijing",
+        "address": "5 Liangmaqiao North Street, Chaoyang",
+        "phone": "+86 10 8531 2500"
+      },
+      "PH": {
+        "name": "Embassy of the Philippines",
+        "city": "Beijing",
+        "address": "23 Xiushui North Street, Jianguomenwai",
+        "phone": "+86 10 6532 1872"
       }
     }
   }

@@ -1,22 +1,23 @@
 import type { CountryCode, CurrencyCode, HomeCountryCode, QualificationId } from '@/types/models';
 
 export const DEST_COUNTRIES: CountryCode[] = ['AU', 'MY', 'TW', 'GB', 'SG', 'NZ', 'RU', 'US', 'CA', 'CN'];
-export const HOME_COUNTRIES: HomeCountryCode[] = ['MY', 'TW', 'SG', 'ID', 'VN', 'CN', 'MM', 'KR', 'JP'];
+export const HOME_COUNTRIES: HomeCountryCode[] = ['MY', 'TW', 'SG', 'ID', 'VN', 'CN', 'MM', 'KR', 'JP', 'TH', 'HK', 'IN', 'PH'];
 
 export const FLAGS: Record<CountryCode | HomeCountryCode, string> = {
   AU: '🇦🇺', MY: '🇲🇾', TW: '🇹🇼', GB: '🇬🇧', SG: '🇸🇬', NZ: '🇳🇿', RU: '🇷🇺', US: '🇺🇸', CA: '🇨🇦',
   ID: '🇮🇩', VN: '🇻🇳', CN: '🇨🇳', MM: '🇲🇲', KR: '🇰🇷', JP: '🇯🇵',
+  TH: '🇹🇭', HK: '🇭🇰', IN: '🇮🇳', PH: '🇵🇭',
 };
 
 export const HOME_CURRENCY: Record<HomeCountryCode, CurrencyCode> = {
   MY: 'MYR', TW: 'TWD', SG: 'SGD', ID: 'IDR', VN: 'VND', CN: 'CNY',
-  MM: 'MMK', KR: 'KRW', JP: 'JPY',
+  MM: 'MMK', KR: 'KRW', JP: 'JPY', TH: 'THB', HK: 'HKD', IN: 'INR', PH: 'PHP',
 };
 
 export const CURRENCY_SYMBOL: Record<CurrencyCode, string> = {
   AUD: 'A$', MYR: 'RM', TWD: 'NT$', GBP: '£', SGD: 'S$', NZD: 'NZ$',
   RUB: '₽', IDR: 'Rp', VND: '₫', CNY: '¥', USD: '$', CAD: 'C$',
-  MMK: 'K', KRW: '₩', JPY: '¥',
+  MMK: 'K', KRW: '₩', JPY: '¥', THB: '฿', HKD: 'HK$', INR: '₹', PHP: '₱',
 };
 
 /** How rentals are actually advertised in each destination country — Australia
@@ -30,6 +31,7 @@ export const RENT_PERIOD: Record<CountryCode, 'week' | 'month'> = {
 export const RECOMMENDED_QUALS: Record<HomeCountryCode, QualificationId[]> = {
   MY: ['spm', 'stpm', 'uec'], TW: ['gsat'], SG: ['alevels'], ID: ['sma'], VN: ['thpt'],
   CN: ['gaokao'], MM: ['matric'], KR: ['krgpa'], JP: ['jpgpa'],
+  TH: ['gpa'], HK: ['hkdse'], IN: ['cbse'], PH: ['gpa'],
 };
 
 /** Systems not tied to one country — kept when the home country changes. */

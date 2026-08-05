@@ -77,7 +77,11 @@
     "CA": "Kanada",
     "MM": "Myanmar",
     "KR": "Korea Selatan",
-    "JP": "Jepun"
+    "JP": "Jepun",
+    "TH": "Thailand",
+    "HK": "Hong Kong",
+    "IN": "India",
+    "PH": "Filipina"
   },
   "fields": {
     "business": "Perniagaan",
@@ -517,7 +521,29 @@
     "looking_sports": "Sukan & gim",
     "looking_foodie": "Jelajah makanan",
     "lookingMine": "Apa yang saya cari",
-    "lookingMineSub": "Dipaparkan pada kad rakan sekelas anda — pilih seberapa banyak yang anda mahu."
+    "lookingMineSub": "Dipaparkan pada kad rakan sekelas anda — pilih seberapa banyak yang anda mahu.",
+    "requestSent": "Permintaan dihantar kepada {{name}} — menunggu mereka terima",
+    "requestedBtn": "Dimohon",
+    "accepted": "{{name}} menerima permintaan anda 🎉 Anda boleh berbual sekarang.",
+    "chatBtn": "Sembang",
+    "unfriend": "Nyahkawan",
+    "unfriended": "Terputus daripada {{name}}",
+    "block": "Sekat",
+    "blocked": "{{name}} disekat",
+    "unblock": "Nyahsekat",
+    "confirmUnfriendTitle": "Nyahkawan {{name}}?",
+    "confirmUnfriendBody": "Anda akan terputus dan sejarah sembang dipadamkan.",
+    "confirmBlockTitle": "Sekat {{name}}?",
+    "confirmBlockBody": "{{name}} hilang daripada Rakan Sekelas anda dan tidak boleh menghubungi anda lagi.",
+    "deleteChat": "Padam sembang",
+    "chatDeleted": "Sembang dipadamkan",
+    "chatPlaceholder": "Mesej…",
+    "chatIntro": "Anda dan {{name}} kini berhubung — sapa mereka!",
+    "chatSend": "Hantar",
+    "chatMenu": "Pilihan sembang",
+    "reply1": "Hai! Seronok berkenalan 😄 Bila anda terbang?",
+    "reply2": "Hai! Saya juga cari penginapan dekat kampus — jom banding pilihan!",
+    "reply3": "Helo! Sertai sembang kumpulan kemasukan juga, banyak tip di sana."
   },
   "arrival": {
     "title": "Perkhidmatan ketibaan",
@@ -559,7 +585,11 @@
     "rates": "Kadar tukaran: {{source}}, dikemas kini {{asOf}}. Akan ditukar ke suapan xe.com apabila kunci API ditambah.",
     "ratesSource_live": "langsung",
     "ratesSource_static": "snapshot luar talian",
-    "build": "Binaan {{id}}"
+    "build": "Binaan {{id}}",
+    "helpTitle": "Bantuan & sokongan",
+    "helpLiveChat": "Sembang langsung",
+    "helpCall": "Hubungi UniBridge",
+    "helpNote": "Kenalan prototaip indikatif — nombor dan akaun rasmi disambungkan semasa pelancaran."
   },
   "chat": {
     "title": "Tanya {{name}}",

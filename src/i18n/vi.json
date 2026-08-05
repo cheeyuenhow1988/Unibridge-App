@@ -75,7 +75,11 @@
     "CA": "Canada",
     "MM": "Myanmar",
     "KR": "Hàn Quốc",
-    "JP": "Nhật Bản"
+    "JP": "Nhật Bản",
+    "TH": "Thái Lan",
+    "HK": "Hồng Kông",
+    "IN": "Ấn Độ",
+    "PH": "Philippines"
   },
   "fields": {
     "business": "Kinh doanh",
@@ -515,7 +519,29 @@
     "looking_sports": "Thể thao & gym",
     "looking_foodie": "Khám phá ẩm thực",
     "lookingMine": "Tôi đang tìm",
-    "lookingMineSub": "Hiển thị trên thẻ bạn học của bạn — chọn bao nhiêu tùy thích."
+    "lookingMineSub": "Hiển thị trên thẻ bạn học của bạn — chọn bao nhiêu tùy thích.",
+    "requestSent": "Đã gửi lời mời đến {{name}} — chờ họ chấp nhận",
+    "requestedBtn": "Đã gửi",
+    "accepted": "{{name}} đã chấp nhận lời mời 🎉 Giờ có thể trò chuyện.",
+    "chatBtn": "Trò chuyện",
+    "unfriend": "Hủy kết bạn",
+    "unfriended": "Đã ngắt kết nối với {{name}}",
+    "block": "Chặn",
+    "blocked": "Đã chặn {{name}}",
+    "unblock": "Bỏ chặn",
+    "confirmUnfriendTitle": "Hủy kết bạn với {{name}}?",
+    "confirmUnfriendBody": "Kết nối bị hủy và lịch sử trò chuyện bị xóa.",
+    "confirmBlockTitle": "Chặn {{name}}?",
+    "confirmBlockBody": "{{name}} biến mất khỏi Bạn học và không thể liên hệ với bạn nữa.",
+    "deleteChat": "Xóa cuộc trò chuyện",
+    "chatDeleted": "Đã xóa cuộc trò chuyện",
+    "chatPlaceholder": "Tin nhắn…",
+    "chatIntro": "Bạn và {{name}} đã kết nối — chào hỏi nhé!",
+    "chatSend": "Gửi",
+    "chatMenu": "Tùy chọn trò chuyện",
+    "reply1": "Chào! Rất vui được kết nối 😄 Bạn bay khi nào?",
+    "reply2": "Chào! Mình cũng đang tìm nhà gần trường — cùng so sánh nhé!",
+    "reply3": "Xin chào! Vào cả nhóm khóa nhập học nữa, nhiều mẹo hay lắm."
   },
   "arrival": {
     "title": "Dịch vụ khi hạ cánh",
@@ -557,7 +583,11 @@
     "loadDemo": "Nạp hồ sơ demo",
     "about": "Bản nguyên mẫu UniBridge — trường thật, dữ liệu tham khảo. Luôn kiểm tra trang web chính thức.",
     "homeCurrency": "Tiền nước bạn",
-    "build": "Bản dựng {{id}}"
+    "build": "Bản dựng {{id}}",
+    "helpTitle": "Trợ giúp & hỗ trợ",
+    "helpLiveChat": "Chat trực tiếp",
+    "helpCall": "Gọi UniBridge",
+    "helpNote": "Liên hệ nguyên mẫu mang tính minh họa — số và tài khoản chính thức kết nối khi ra mắt."
   },
   "auth": {
     "title": "Tạo tài khoản",
