@@ -328,7 +328,14 @@
     "anyCountry": "सभी गंतव्य",
     "empty": "आपकी खोज से कोई छात्रवृत्ति मेल नहीं खाती।",
     "nationalitiesLabel": "राष्ट्रीयताएँ",
-    "destinationLabel": "गंतव्य"
+    "destinationLabel": "गंतव्य",
+    "officialPage": "आधिकारिक पेज पर आवेदन करें ↗",
+    "remindTitle": "मुझे याद दिलाएँ:",
+    "remind1w": "1 सप्ताह पहले",
+    "remind2w": "2 सप्ताह पहले",
+    "remind1m": "1 महीना पहले",
+    "reminderSet": "{{date}} के लिए रिमाइंडर सेट (डेमो — लॉन्च पर असली सूचना)",
+    "reminderLine": "⏰ रिमाइंडर {{date}} — अंतिम तिथि से {{days}} दिन पहले"
   },
   "vault": {
     "title": "डॉक्युमेंट वॉल्ट",

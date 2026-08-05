@@ -272,6 +272,8 @@ export interface Scholarship {
   stipendMonthly?: number;
   deadline: string;
   eligibilityNote: string;
+  /** Official page of the provider — where the student actually applies. */
+  link?: string;
 }
 
 export interface Attraction {

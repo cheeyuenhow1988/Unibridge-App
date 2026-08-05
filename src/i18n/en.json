@@ -328,7 +328,14 @@
     "anyCountry": "All destinations",
     "empty": "No scholarships match your search.",
     "nationalitiesLabel": "Nationalities",
-    "destinationLabel": "Destination"
+    "destinationLabel": "Destination",
+    "officialPage": "Apply on the official page ↗",
+    "remindTitle": "Remind me:",
+    "remind1w": "1 week before",
+    "remind2w": "2 weeks before",
+    "remind1m": "1 month before",
+    "reminderSet": "Reminder set for {{date}} (demo — real notification at launch)",
+    "reminderLine": "⏰ Reminder {{date}} — {{days}} days before the deadline"
   },
   "vault": {
     "title": "Document Vault",

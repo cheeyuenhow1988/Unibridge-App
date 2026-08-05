@@ -325,7 +325,14 @@
     "anyCountry": "Mọi điểm đến",
     "empty": "Không có học bổng nào khớp tìm kiếm.",
     "nationalitiesLabel": "Quốc tịch",
-    "destinationLabel": "Điểm đến"
+    "destinationLabel": "Điểm đến",
+    "officialPage": "Nộp trên trang chính thức ↗",
+    "remindTitle": "Nhắc tôi:",
+    "remind1w": "Trước 1 tuần",
+    "remind2w": "Trước 2 tuần",
+    "remind1m": "Trước 1 tháng",
+    "reminderSet": "Đã đặt nhắc nhở vào {{date}} (demo — thông báo thật khi ra mắt)",
+    "reminderLine": "⏰ Nhắc nhở {{date}} — {{days}} ngày trước hạn chót"
   },
   "vault": {
     "title": "Kho hồ sơ",

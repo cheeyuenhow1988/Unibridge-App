@@ -327,7 +327,14 @@
     "anyCountry": "不限目的地",
     "empty": "没有符合搜索条件的奖学金。",
     "nationalitiesLabel": "适用国籍",
-    "destinationLabel": "目的地"
+    "destinationLabel": "目的地",
+    "officialPage": "前往官方页面申请 ↗",
+    "remindTitle": "提醒我：",
+    "remind1w": "截止前1周",
+    "remind2w": "截止前2周",
+    "remind1m": "截止前1个月",
+    "reminderSet": "已设置 {{date}} 提醒（演示——正式版将推送真实通知）",
+    "reminderLine": "⏰ 提醒 {{date}}——截止前 {{days}} 天"
   },
   "vault": {
     "title": "文件库",

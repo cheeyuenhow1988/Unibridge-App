@@ -13,32 +13,35 @@
   },
   {
     "id": "sch-02",
-    "name": "Harbourview International Excellence Award",
-    "provider": "Harbourview University",
+    "name": "Monash International Merit Scholarship",
+    "provider": "Monash University",
     "destinationCountry": "AU",
     "fields": "any",
     "nationalities": "any",
     "coverageType": "partial",
-    "percentTuition": 40,
+    "amount": 10000,
+    "currency": "AUD",
     "deadline": "2026-10-31",
-    "eligibilityNote": "ATAR 90+ equivalent; maintained with a credit average."
+    "eligibilityNote": "Indicative A$10,000/yr for high-achieving international students; apply via the official page.",
+    "link": "https://www.monash.edu"
   },
   {
     "id": "sch-03",
-    "name": "Southern Sky Vice-Chancellor's Scholarship",
-    "provider": "Southern Sky University",
+    "name": "Sydney International Student Award",
+    "provider": "University of Sydney",
     "destinationCountry": "AU",
     "fields": "any",
     "nationalities": "any",
-    "coverageType": "full",
-    "percentTuition": 100,
+    "coverageType": "partial",
+    "percentTuition": 20,
     "deadline": "2026-09-30",
-    "eligibilityNote": "Top 2% of applicant pool; interview required."
+    "eligibilityNote": "Faculty-based awards for incoming internationals; automatic with course application.",
+    "link": "https://www.sydney.edu.au"
   },
   {
     "id": "sch-04",
-    "name": "Destination Australia Regional Grant",
-    "provider": "Australian Government (mock)",
+    "name": "Destination Australia Scholarship",
+    "provider": "Australian Government",
     "destinationCountry": "AU",
     "fields": "any",
     "nationalities": "any",
@@ -46,45 +49,39 @@
     "amount": 15000,
     "currency": "AUD",
     "deadline": "2027-01-15",
-    "eligibilityNote": "For study at regional campuses; one year, renewable."
+    "eligibilityNote": "For study at regional campuses; one year, renewable. Check participating campuses.",
+    "link": "https://www.education.gov.au"
   },
   {
     "id": "sch-05",
-    "name": "Merdeka ASEAN Bursary",
-    "provider": "Merdeka International University",
-    "destinationCountry": "MY",
+    "name": "Melbourne International Undergraduate Scholarship",
+    "provider": "University of Melbourne",
+    "destinationCountry": "AU",
     "fields": "any",
-    "nationalities": [
-      "MY",
-      "ID",
-      "VN",
-      "SG"
-    ],
+    "nationalities": "any",
     "coverageType": "partial",
     "percentTuition": 50,
     "deadline": "2026-12-15",
-    "eligibilityNote": "ASEAN nationals with strong co-curricular records."
+    "eligibilityNote": "Indicative 50% fee remission for top-ranked international applicants; automatic consideration.",
+    "link": "https://www.unimelb.edu.au"
   },
   {
     "id": "sch-06",
-    "name": "Straits Founders Grant",
-    "provider": "Straits University College",
+    "name": "Taylor's World Class Scholarship",
+    "provider": "Taylor's University",
     "destinationCountry": "MY",
-    "fields": [
-      "business",
-      "hospitality"
-    ],
+    "fields": "any",
     "nationalities": "any",
-    "coverageType": "partial",
-    "amount": 8000,
-    "currency": "MYR",
+    "coverageType": "full",
+    "percentTuition": 100,
     "deadline": "2026-11-01",
-    "eligibilityNote": "First-generation university students prioritised."
+    "eligibilityNote": "Flagship award for outstanding results and leadership; separate application and interview.",
+    "link": "https://university.taylors.edu.my"
   },
   {
     "id": "sch-07",
-    "name": "Taiwan Bridge Scholarship",
-    "provider": "Taiwan MOE (mock)",
+    "name": "Taiwan Scholarship (MOE)",
+    "provider": "Taiwan Ministry of Education",
     "destinationCountry": "TW",
     "fields": "any",
     "nationalities": "any",
@@ -92,66 +89,66 @@
     "percentTuition": 100,
     "stipendMonthly": 15000,
     "deadline": "2026-10-15",
-    "eligibilityNote": "Full tuition plus monthly living stipend; Mandarin course included."
+    "eligibilityNote": "Government award: tuition plus NT$15,000/month stipend; apply via your local Taipei mission.",
+    "link": "https://www.studyintaiwan.org"
   },
   {
     "id": "sch-08",
-    "name": "Formosa STEM Talent Award",
-    "provider": "Formosa Institute",
-    "destinationCountry": "TW",
-    "fields": [
-      "it",
-      "engineering"
-    ],
+    "name": "Jeffrey Cheah Entrance Scholarship",
+    "provider": "Sunway University",
+    "destinationCountry": "MY",
+    "fields": "any",
     "nationalities": "any",
     "coverageType": "partial",
     "percentTuition": 60,
     "deadline": "2027-01-31",
-    "eligibilityNote": "Portfolio or competition results in STEM fields."
+    "eligibilityNote": "Merit entrance award administered by the Jeffrey Cheah Foundation.",
+    "link": "https://sunwayuniversity.edu.my"
   },
   {
     "id": "sch-09",
-    "name": "Albion Global Leaders Scholarship",
-    "provider": "Albion University London",
+    "name": "UCL Global Undergraduate Scholarship",
+    "provider": "UCL",
     "destinationCountry": "GB",
     "fields": "any",
     "nationalities": "any",
-    "coverageType": "partial",
-    "amount": 20000,
-    "currency": "GBP",
+    "coverageType": "full",
+    "percentTuition": 100,
     "deadline": "2026-12-01",
-    "eligibilityNote": "Essay and leadership evidence required."
+    "eligibilityNote": "Need-based full fees plus living support for internationals; separate online application.",
+    "link": "https://www.ucl.ac.uk"
   },
   {
     "id": "sch-10",
-    "name": "Northgate International Merit Scholarship",
-    "provider": "Northgate University",
+    "name": "Global Futures Scholarship",
+    "provider": "University of Manchester",
     "destinationCountry": "GB",
     "fields": "any",
     "nationalities": "any",
     "coverageType": "partial",
-    "percentTuition": 30,
+    "amount": 8000,
+    "currency": "GBP",
     "deadline": "2027-02-28",
-    "eligibilityNote": "Automatic for offers above entry requirements."
+    "eligibilityNote": "Indicative £8,000 tuition discount for selected international undergraduates.",
+    "link": "https://www.manchester.ac.uk"
   },
   {
     "id": "sch-11",
-    "name": "Thamesbank Law Access Award",
-    "provider": "Thamesbank College of Law",
+    "name": "LSE Undergraduate Support Scheme",
+    "provider": "London School of Economics",
     "destinationCountry": "GB",
-    "fields": [
-      "law"
-    ],
+    "fields": "any",
     "nationalities": "any",
     "coverageType": "partial",
     "percentTuition": 50,
     "deadline": "2026-11-30",
-    "eligibilityNote": "Widening-access award for future barristers and solicitors."
+    "eligibilityNote": "Means-tested support for overseas undergraduates; apply after receiving an offer.",
+    "link": "https://www.lse.ac.uk"
   },
   {
     "id": "sch-12",
-    "name": "Straits International ASEAN Scholarship",
-    "provider": "Straits International University",
+    "name": "ASEAN Undergraduate Scholarship",
+    "provider": "National University of Singapore",
     "destinationCountry": "SG",
     "fields": "any",
     "nationalities": [
@@ -163,75 +160,78 @@
     "percentTuition": 100,
     "stipendMonthly": 800,
     "deadline": "2026-10-01",
-    "eligibilityNote": "Bond-free full scholarship for ASEAN nationals."
+    "eligibilityNote": "Bond-free full scholarship with annual allowance for ASEAN nationals.",
+    "link": "https://www.nus.edu.sg"
   },
   {
     "id": "sch-13",
-    "name": "Merlion Creative Portfolio Award",
-    "provider": "Merlion College of Design",
+    "name": "SMU Global Impact Scholarship",
+    "provider": "Singapore Management University",
     "destinationCountry": "SG",
-    "fields": [
-      "design"
-    ],
+    "fields": "any",
     "nationalities": "any",
-    "coverageType": "partial",
-    "percentTuition": 40,
+    "coverageType": "full",
+    "percentTuition": 100,
     "deadline": "2027-03-15",
-    "eligibilityNote": "Judged on a 10-page digital portfolio."
+    "eligibilityNote": "Full-term award for changemakers; essays and interview required.",
+    "link": "https://www.smu.edu.sg"
   },
   {
     "id": "sch-14",
-    "name": "Kauri Pacific Gateway Scholarship",
-    "provider": "Kauri University",
+    "name": "University of Otago International Entrance Scholarship",
+    "provider": "University of Otago",
     "destinationCountry": "NZ",
     "fields": "any",
     "nationalities": "any",
     "coverageType": "partial",
-    "amount": 15000,
+    "amount": 10000,
     "currency": "NZD",
     "deadline": "2026-12-20",
-    "eligibilityNote": "First-year support for international students."
+    "eligibilityNote": "Indicative NZ$10,000 first-year credit, awarded on academic merit.",
+    "link": "https://www.otago.ac.nz"
   },
   {
     "id": "sch-15",
-    "name": "Southern Alps Engineering Award",
-    "provider": "Southern Alps University",
+    "name": "International Student Excellence Scholarship",
+    "provider": "University of Auckland",
     "destinationCountry": "NZ",
-    "fields": [
-      "engineering"
-    ],
+    "fields": "any",
     "nationalities": "any",
     "coverageType": "partial",
-    "percentTuition": 50,
+    "amount": 10000,
+    "currency": "NZD",
     "deadline": "2027-01-10",
-    "eligibilityNote": "For rebuild-and-resilience engineering specialisations."
+    "eligibilityNote": "Merit award for new international undergraduates; automatic consideration.",
+    "link": "https://www.auckland.ac.nz"
   },
   {
     "id": "sch-16",
-    "name": "Open Doors Russia Scholarship",
-    "provider": "Open Doors (mock)",
+    "name": "Open Doors Russian Scholarship Project",
+    "provider": "Open Doors (Russian Government)",
     "destinationCountry": "RU",
     "fields": "any",
     "nationalities": "any",
     "coverageType": "full",
     "percentTuition": 100,
     "deadline": "2026-12-10",
-    "eligibilityNote": "Olympiad-style selection; covers full tuition."
+    "eligibilityNote": "Olympiad-style selection; covers full tuition at participating universities.",
+    "link": "https://od.globaluni.ru"
   },
   {
     "id": "sch-17",
-    "name": "Neva Technical Excellence Grant",
-    "provider": "Neva State Technical University",
+    "name": "Russian Government Quota Scholarship",
+    "provider": "Russian Government",
     "destinationCountry": "RU",
     "fields": [
       "engineering",
       "it"
     ],
     "nationalities": "any",
-    "coverageType": "partial",
-    "percentTuition": 75,
+    "coverageType": "full",
+    "percentTuition": 100,
     "deadline": "2027-02-01",
-    "eligibilityNote": "Physics/maths olympiad participants favoured."
+    "eligibilityNote": "State-funded places with dormitory; apply through your country quota.",
+    "link": "https://education-in-russia.com"
   },
   {
     "id": "sch-18",
@@ -312,47 +312,50 @@
   },
   {
     "id": "sch-23",
-    "name": "Kingsford Culinary Excellence Award",
-    "provider": "Kingsford Hospitality College",
+    "name": "William Angliss Scholarships",
+    "provider": "William Angliss Institute",
     "destinationCountry": "AU",
     "fields": [
       "hospitality"
     ],
     "nationalities": "any",
     "coverageType": "partial",
-    "percentTuition": 30,
+    "amount": 5000,
+    "currency": "AUD",
     "deadline": "2026-10-20",
-    "eligibilityNote": "Includes a stage at a hatted Melbourne kitchen."
+    "eligibilityNote": "Industry-sponsored awards across foods, tourism and hospitality programmes.",
+    "link": "https://www.angliss.edu.au"
   },
   {
     "id": "sch-24",
-    "name": "North Star International Merit Award",
-    "provider": "UniBridge US Partners (mock)",
+    "name": "#YouAreWelcomeHere Scholarship",
+    "provider": "#YouAreWelcomeHere (US campuses)",
     "destinationCountry": "US",
     "fields": "any",
     "nationalities": "any",
     "coverageType": "partial",
-    "percentTuition": 30,
+    "percentTuition": 50,
     "deadline": "2026-12-05",
-    "eligibilityNote": "Merit-based; automatic consideration with strong grades and essays."
+    "eligibilityNote": "At least 50% tuition at participating US campuses; essay on intercultural exchange.",
+    "link": "https://www.youarewelcomehereusa.org"
   },
   {
     "id": "sch-25",
-    "name": "Maple Leaf International Grant",
-    "provider": "Maple Education Foundation (mock)",
+    "name": "Lester B. Pearson International Scholarship",
+    "provider": "University of Toronto",
     "destinationCountry": "CA",
     "fields": "any",
     "nationalities": "any",
-    "coverageType": "partial",
-    "amount": 12000,
-    "currency": "CAD",
+    "coverageType": "full",
+    "percentTuition": 100,
     "deadline": "2027-01-25",
-    "eligibilityNote": "One-year award for first-year international students."
+    "eligibilityNote": "Full tuition, books and residence for exceptional school leaders; school nomination needed.",
+    "link": "https://www.utoronto.ca"
   },
   {
     "id": "sch-26",
-    "name": "China Silk Road Scholarship",
-    "provider": "CSC (mock)",
+    "name": "Chinese Government Scholarship (CSC)",
+    "provider": "China Scholarship Council",
     "destinationCountry": "CN",
     "fields": "any",
     "nationalities": "any",
@@ -360,21 +363,39 @@
     "percentTuition": 100,
     "stipendMonthly": 2500,
     "deadline": "2026-11-20",
-    "eligibilityNote": "Full tuition, dormitory and monthly stipend; Mandarin course included."
+    "eligibilityNote": "Full tuition, dormitory and monthly stipend; Mandarin course included.",
+    "link": "https://www.campuschina.org"
   },
   {
     "id": "sch-27",
-    "name": "Global Culinary Talent Bursary",
-    "provider": "World Chefs Alliance (mock)",
-    "destinationCountry": "any",
+    "name": "International Major Entrance Scholarship",
+    "provider": "University of British Columbia",
+    "destinationCountry": "CA",
+    "fields": "any",
+    "nationalities": "any",
+    "coverageType": "partial",
+    "amount": 20000,
+    "currency": "CAD",
+    "deadline": "2027-02-10",
+    "eligibilityNote": "Renewable merit award for outstanding international entrants; automatic consideration.",
+    "link": "https://www.ubc.ca"
+  },
+  {
+    "id": "sch-28",
+    "name": "Illinois Tech Merit Scholarship",
+    "provider": "Illinois Institute of Technology",
+    "destinationCountry": "US",
     "fields": [
-      "hospitality"
+      "it",
+      "engineering",
+      "science"
     ],
     "nationalities": "any",
     "coverageType": "partial",
-    "amount": 6000,
+    "amount": 25000,
     "currency": "USD",
-    "deadline": "2027-02-10",
-    "eligibilityNote": "For culinary, baking and pastry programmes; tasting-day audition."
+    "deadline": "2027-01-05",
+    "eligibilityNote": "Automatic merit consideration with admission; indicative US$25,000/yr.",
+    "link": "https://www.iit.edu"
   }
 ]

@@ -325,7 +325,14 @@
     "anyCountry": "모든 목적지",
     "empty": "검색에 맞는 장학금이 없어요.",
     "nationalitiesLabel": "국적",
-    "destinationLabel": "목적지"
+    "destinationLabel": "목적지",
+    "officialPage": "공식 페이지에서 지원 ↗",
+    "remindTitle": "알림 받기:",
+    "remind1w": "1주 전",
+    "remind2w": "2주 전",
+    "remind1m": "1개월 전",
+    "reminderSet": "{{date}} 알림 설정됨 (데모 — 출시 때 실제 알림)",
+    "reminderLine": "⏰ 알림 {{date}} — 마감 {{days}}일 전"
   },
   "vault": {
     "title": "서류 보관함",

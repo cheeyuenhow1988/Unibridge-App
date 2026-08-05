@@ -327,7 +327,14 @@
     "anyCountry": "Semua destinasi",
     "empty": "Tiada biasiswa sepadan dengan carian anda.",
     "nationalitiesLabel": "Warganegara",
-    "destinationLabel": "Destinasi"
+    "destinationLabel": "Destinasi",
+    "officialPage": "Mohon di laman rasmi ↗",
+    "remindTitle": "Ingatkan saya:",
+    "remind1w": "1 minggu sebelum",
+    "remind2w": "2 minggu sebelum",
+    "remind1m": "1 bulan sebelum",
+    "reminderSet": "Peringatan ditetapkan pada {{date}} (demo — notifikasi sebenar semasa pelancaran)",
+    "reminderLine": "⏰ Peringatan {{date}} — {{days}} hari sebelum tarikh tutup"
   },
   "vault": {
     "title": "Peti Dokumen",

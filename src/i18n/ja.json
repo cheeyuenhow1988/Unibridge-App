@@ -325,7 +325,14 @@
     "anyCountry": "全渡航先",
     "empty": "検索に合う奨学金がありません。",
     "nationalitiesLabel": "国籍",
-    "destinationLabel": "渡航先"
+    "destinationLabel": "渡航先",
+    "officialPage": "公式ページで申請 ↗",
+    "remindTitle": "リマインド:",
+    "remind1w": "1週間前",
+    "remind2w": "2週間前",
+    "remind1m": "1か月前",
+    "reminderSet": "{{date}}にリマインダーを設定（デモ — 正式版で実際に通知）",
+    "reminderLine": "⏰ リマインダー {{date}} — 締切の{{days}}日前"
   },
   "vault": {
     "title": "書類ボールト",

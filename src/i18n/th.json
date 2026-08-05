@@ -325,7 +325,14 @@
     "anyCountry": "ทุกจุดหมาย",
     "empty": "ไม่มีทุนตรงกับการค้นหา",
     "nationalitiesLabel": "สัญชาติ",
-    "destinationLabel": "จุดหมาย"
+    "destinationLabel": "จุดหมาย",
+    "officialPage": "สมัครที่หน้าเว็บทางการ ↗",
+    "remindTitle": "เตือนฉัน:",
+    "remind1w": "ก่อน 1 สัปดาห์",
+    "remind2w": "ก่อน 2 สัปดาห์",
+    "remind1m": "ก่อน 1 เดือน",
+    "reminderSet": "ตั้งเตือนวันที่ {{date}} แล้ว (เดโม — แจ้งเตือนจริงเมื่อเปิดตัว)",
+    "reminderLine": "⏰ เตือน {{date}} — {{days}} วันก่อนปิดรับ"
   },
   "vault": {
     "title": "คลังเอกสาร",

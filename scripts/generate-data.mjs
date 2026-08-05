@@ -660,6 +660,26 @@ const INST_PHOTO = {
   'ca-langara': 'LangaraCollege2007-small.jpg',
   'cn-ecnu': '华东师范大学思群堂.jpg',
   'cn-scut': 'South China University of Technology South Gate.jpg',
+  // Batch verified 2026-08-05 — every remaining school got a real photo.
+  'my-ucsi': 'UCSI main gate Taman Connaught (231105).jpg',
+  'ca-vcc': 'VCC Broadway Campus Building.jpg',
+  'sg-sit': 'SIT Punggol Campus-Dec 2025 03.jpg',
+  'sg-sim': 'SIM HQ.jpg',
+  'sg-tp': 'Temasek Polytechnic, Singapore, March 2026.jpg',
+  'au-holmesglen': 'Holmesglen Tafe Moorabbin b.jpg',
+  'cn-bhi': [
+    'South gate of Beijing Hospitality Institute (20230303124903).jpg',
+    'Academic and administrative building of Beijing Hospitality Institute (20230303125821).jpg',
+    'West gate of Beijing Hospitality Institute (20230303125303).jpg',
+  ],
+  'my-utm': 'Universiti Teknologi Malaysia.jpg',
+  'au-angliss': 'Graduation - William Angliss May 2012.jpg',
+  'tw-nkuht': '110年學生會成果展-國立高雄餐旅大學合照.jpg',
+  // ICE teaches inside Brookfield Place; SHATEC and HELP have no photos on
+  // Commons, so their heroes are verified photos of their home cities.
+  'us-ice': 'Brookfield Place New York August 2017 003.jpg',
+  'sg-shatec': 'Singapore (SG), Marina Bay -- 2019 -- 4439-48.jpg',
+  'my-help': 'Kuala Lumpur Malaysia Skyline-03.jpg',
 };
 const commonsPhoto = (name) =>
   `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(name.replace(/ /g, '_'))}?width=1000`;
@@ -712,9 +732,22 @@ const LOGO_URL = {
   'gb-kingston': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Kingston_University_logo.svg/330px-Kingston_University_logo.svg.png',
   'nz-lincoln': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/LU_logo.jpg/330px-LU_logo.jpg',
   'us-pace': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Pace_University_Logo.svg/330px-Pace_University_Logo.svg.png',
+  // Batch verified 2026-08-05 (s2-favicon fallbacks that returned Google's
+  // default globe were hunted down individually).
+  'cn-sjtu': 'https://upload.wikimedia.org/wikipedia/en/d/da/Sjtu-logo-standard-red.png',
+  'cn-tongji': 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Tongji_Uni_logo.svg/330px-Tongji_Uni_logo.svg.png',
+  'cn-ecnu': 'https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/East_China_Normal_University_logo.svg/330px-East_China_Normal_University_logo.svg.png',
+  'cn-bnu': 'https://commons.wikimedia.org/wiki/Special:FilePath/%E5%8C%97%E5%B8%88%E5%A4%A7LOGO.jpg?width=256',
+  'tw-ntust': 'https://upload.wikimedia.org/wikipedia/en/1/18/Taiwan_Tech_logo.png',
+  'tw-tku': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/TKU_logo.png/330px-TKU_logo.png',
+  'tw-nccu': 'https://icons.duckduckgo.com/ip3/nccu.edu.tw.ico',
 };
+// No fetchable mark anywhere (site favicons are HTML pages, nothing on any
+// wiki): the app renders its initial-letter tile instead of Google's globe.
+const NO_LOGO = new Set(['cn-bhi', 'my-berjaya', 'sg-shatec', 'tw-nkuht']);
 const logoFor = (id, website) => {
   if (LOGO_URL[id]) return LOGO_URL[id];
+  if (NO_LOGO.has(id)) return 'initials';
   const domain = new URL(website).hostname.replace(/^www\./, '');
   return `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
 };
@@ -726,11 +759,13 @@ const institutions = INSTITUTIONS.map(([id, name, short, country, city, type, ve
   logo: logoFor(id, website),
   wikipedia: INST_META[id][0],
   ranking: INST_META[id][1],
-  images: [
-    ...(INST_PHOTO[id] ? [commonsPhoto(INST_PHOTO[id])] : []),
-    ...(INST_PHOTO[id] ? [1, 2] : [0, 1, 2]).map((n) => `https://picsum.photos/seed/${id}-${n}/800/500`),
-  ],
+  // Real, byte-verified photos only — no random placeholder imagery.
+  images: [].concat(INST_PHOTO[id]).map(commonsPhoto),
 }));
+{
+  const missing = institutions.filter((i) => i.images.length === 0).map((i) => i.id);
+  if (missing.length) throw new Error(`institutions without a real photo: ${missing.join(', ')}`);
+}
 
 // Cross-link branch campuses (denormalised so the UI needs no extra lookup).
 for (const pair of BRANCHES) {
@@ -950,36 +985,43 @@ for (const inst of institutions) {
 }
 
 // -------------------------------------------------------------- scholarships
+// Real, well-known scholarship programmes from the real institutions and
+// governments in the app (providers match Institution.name exactly so each
+// school page can list its own awards). Amounts/terms are indicative — the
+// link opens the provider's official site to apply. Sector awards from
+// fictional sponsors stay clearly labelled (mock) and carry no link.
 const scholarships = [
-  ['sch-01', 'UniBridge Global Merit Scholarship', 'UniBridge Partners', 'any', 'any', 'any', 'partial', { percentTuition: 25 }, '2026-11-30', 'Automatic consideration with any application through UniBridge; awarded on academic merit.'],
-  ['sch-02', 'Harbourview International Excellence Award', 'Harbourview University', 'AU', 'any', 'any', 'partial', { percentTuition: 40 }, '2026-10-31', 'ATAR 90+ equivalent; maintained with a credit average.'],
-  ['sch-03', "Southern Sky Vice-Chancellor's Scholarship", 'Southern Sky University', 'AU', 'any', 'any', 'full', { percentTuition: 100 }, '2026-09-30', 'Top 2% of applicant pool; interview required.'],
-  ['sch-04', 'Destination Australia Regional Grant', 'Australian Government (mock)', 'AU', 'any', 'any', 'partial', { amount: 15000, currency: 'AUD' }, '2027-01-15', 'For study at regional campuses; one year, renewable.'],
-  ['sch-05', 'Merdeka ASEAN Bursary', 'Merdeka International University', 'MY', 'any', ['MY', 'ID', 'VN', 'SG'], 'partial', { percentTuition: 50 }, '2026-12-15', 'ASEAN nationals with strong co-curricular records.'],
-  ['sch-06', 'Straits Founders Grant', 'Straits University College', 'MY', ['business', 'hospitality'], 'any', 'partial', { amount: 8000, currency: 'MYR' }, '2026-11-01', 'First-generation university students prioritised.'],
-  ['sch-07', 'Taiwan Bridge Scholarship', 'Taiwan MOE (mock)', 'TW', 'any', 'any', 'full', { percentTuition: 100, stipendMonthly: 15000 }, '2026-10-15', 'Full tuition plus monthly living stipend; Mandarin course included.'],
-  ['sch-08', 'Formosa STEM Talent Award', 'Formosa Institute', 'TW', ['it', 'engineering'], 'any', 'partial', { percentTuition: 60 }, '2027-01-31', 'Portfolio or competition results in STEM fields.'],
-  ['sch-09', 'Albion Global Leaders Scholarship', 'Albion University London', 'GB', 'any', 'any', 'partial', { amount: 20000, currency: 'GBP' }, '2026-12-01', 'Essay and leadership evidence required.'],
-  ['sch-10', 'Northgate International Merit Scholarship', 'Northgate University', 'GB', 'any', 'any', 'partial', { percentTuition: 30 }, '2027-02-28', 'Automatic for offers above entry requirements.'],
-  ['sch-11', 'Thamesbank Law Access Award', 'Thamesbank College of Law', 'GB', ['law'], 'any', 'partial', { percentTuition: 50 }, '2026-11-30', 'Widening-access award for future barristers and solicitors.'],
-  ['sch-12', 'Straits International ASEAN Scholarship', 'Straits International University', 'SG', 'any', ['MY', 'ID', 'VN'], 'full', { percentTuition: 100, stipendMonthly: 800 }, '2026-10-01', 'Bond-free full scholarship for ASEAN nationals.'],
-  ['sch-13', 'Merlion Creative Portfolio Award', 'Merlion College of Design', 'SG', ['design'], 'any', 'partial', { percentTuition: 40 }, '2027-03-15', 'Judged on a 10-page digital portfolio.'],
-  ['sch-14', 'Kauri Pacific Gateway Scholarship', 'Kauri University', 'NZ', 'any', 'any', 'partial', { amount: 15000, currency: 'NZD' }, '2026-12-20', 'First-year support for international students.'],
-  ['sch-15', 'Southern Alps Engineering Award', 'Southern Alps University', 'NZ', ['engineering'], 'any', 'partial', { percentTuition: 50 }, '2027-01-10', 'For rebuild-and-resilience engineering specialisations.'],
-  ['sch-16', 'Open Doors Russia Scholarship', 'Open Doors (mock)', 'RU', 'any', 'any', 'full', { percentTuition: 100 }, '2026-12-10', 'Olympiad-style selection; covers full tuition.'],
-  ['sch-17', 'Neva Technical Excellence Grant', 'Neva State Technical University', 'RU', ['engineering', 'it'], 'any', 'partial', { percentTuition: 75 }, '2027-02-01', 'Physics/maths olympiad participants favoured.'],
-  ['sch-18', 'ASEAN Future Leaders Fund', 'ASEAN Foundation (mock)', 'any', 'any', ['MY', 'SG', 'ID', 'VN'], 'partial', { amount: 5000, currency: 'USD' }, '2026-11-15', 'Community-leadership track record required.'],
-  ['sch-19', 'Chinese Bridge Overseas Study Grant', 'CB Foundation (mock)', 'any', 'any', ['CN', 'TW'], 'partial', { percentTuition: 30 }, '2027-01-20', 'For Chinese-speaking students studying abroad.'],
-  ['sch-20', 'Global Women in STEM Scholarship', 'WiSTEM International (mock)', 'any', ['it', 'engineering'], 'any', 'partial', { percentTuition: 35 }, '2026-12-31', 'Open to women applicants in STEM programmes.'],
-  ['sch-21', 'Hospitality Futures Bursary', 'Global Hotels Group (mock)', 'any', ['hospitality'], 'any', 'partial', { amount: 4000, currency: 'USD' }, '2027-02-15', 'Includes a paid internship placement.'],
-  ['sch-22', 'HealthCare Heroes Grant', 'HealthBridge Foundation (mock)', 'any', ['health'], 'any', 'partial', { percentTuition: 25 }, '2027-03-01', 'For future nurses, pharmacists and doctors.'],
-  ['sch-23', 'Kingsford Culinary Excellence Award', 'Kingsford Hospitality College', 'AU', ['hospitality'], 'any', 'partial', { percentTuition: 30 }, '2026-10-20', 'Includes a stage at a hatted Melbourne kitchen.'],
-  ['sch-24', 'North Star International Merit Award', 'UniBridge US Partners (mock)', 'US', 'any', 'any', 'partial', { percentTuition: 30 }, '2026-12-05', 'Merit-based; automatic consideration with strong grades and essays.'],
-  ['sch-25', 'Maple Leaf International Grant', 'Maple Education Foundation (mock)', 'CA', 'any', 'any', 'partial', { amount: 12000, currency: 'CAD' }, '2027-01-25', 'One-year award for first-year international students.'],
-  ['sch-26', 'China Silk Road Scholarship', 'CSC (mock)', 'CN', 'any', 'any', 'full', { percentTuition: 100, stipendMonthly: 2500 }, '2026-11-20', 'Full tuition, dormitory and monthly stipend; Mandarin course included.'],
-  ['sch-27', 'Global Culinary Talent Bursary', 'World Chefs Alliance (mock)', 'any', ['hospitality'], 'any', 'partial', { amount: 6000, currency: 'USD' }, '2027-02-10', 'For culinary, baking and pastry programmes; tasting-day audition.'],
-].map(([id, name, provider, destinationCountry, fields, nationalities, coverageType, money, deadline, eligibilityNote]) => ({
+  ['sch-01', 'UniBridge Global Merit Scholarship', 'UniBridge Partners', 'any', 'any', 'any', 'partial', { percentTuition: 25 }, '2026-11-30', 'Automatic consideration with any application through UniBridge; awarded on academic merit.', null],
+  ['sch-02', 'Monash International Merit Scholarship', 'Monash University', 'AU', 'any', 'any', 'partial', { amount: 10000, currency: 'AUD' }, '2026-10-31', 'Indicative A$10,000/yr for high-achieving international students; apply via the official page.', 'https://www.monash.edu'],
+  ['sch-03', 'Sydney International Student Award', 'University of Sydney', 'AU', 'any', 'any', 'partial', { percentTuition: 20 }, '2026-09-30', 'Faculty-based awards for incoming internationals; automatic with course application.', 'https://www.sydney.edu.au'],
+  ['sch-04', 'Destination Australia Scholarship', 'Australian Government', 'AU', 'any', 'any', 'partial', { amount: 15000, currency: 'AUD' }, '2027-01-15', 'For study at regional campuses; one year, renewable. Check participating campuses.', 'https://www.education.gov.au'],
+  ['sch-05', 'Melbourne International Undergraduate Scholarship', 'University of Melbourne', 'AU', 'any', 'any', 'partial', { percentTuition: 50 }, '2026-12-15', 'Indicative 50% fee remission for top-ranked international applicants; automatic consideration.', 'https://www.unimelb.edu.au'],
+  ["sch-06", "Taylor's World Class Scholarship", "Taylor's University", 'MY', 'any', 'any', 'full', { percentTuition: 100 }, '2026-11-01', 'Flagship award for outstanding results and leadership; separate application and interview.', 'https://university.taylors.edu.my'],
+  ['sch-07', 'Taiwan Scholarship (MOE)', 'Taiwan Ministry of Education', 'TW', 'any', 'any', 'full', { percentTuition: 100, stipendMonthly: 15000 }, '2026-10-15', 'Government award: tuition plus NT$15,000/month stipend; apply via your local Taipei mission.', 'https://www.studyintaiwan.org'],
+  ['sch-08', 'Jeffrey Cheah Entrance Scholarship', 'Sunway University', 'MY', 'any', 'any', 'partial', { percentTuition: 60 }, '2027-01-31', 'Merit entrance award administered by the Jeffrey Cheah Foundation.', 'https://sunwayuniversity.edu.my'],
+  ['sch-09', 'UCL Global Undergraduate Scholarship', 'UCL', 'GB', 'any', 'any', 'full', { percentTuition: 100 }, '2026-12-01', 'Need-based full fees plus living support for internationals; separate online application.', 'https://www.ucl.ac.uk'],
+  ['sch-10', 'Global Futures Scholarship', 'University of Manchester', 'GB', 'any', 'any', 'partial', { amount: 8000, currency: 'GBP' }, '2027-02-28', 'Indicative £8,000 tuition discount for selected international undergraduates.', 'https://www.manchester.ac.uk'],
+  ['sch-11', 'LSE Undergraduate Support Scheme', 'London School of Economics', 'GB', 'any', 'any', 'partial', { percentTuition: 50 }, '2026-11-30', 'Means-tested support for overseas undergraduates; apply after receiving an offer.', 'https://www.lse.ac.uk'],
+  ['sch-12', 'ASEAN Undergraduate Scholarship', 'National University of Singapore', 'SG', 'any', ['MY', 'ID', 'VN'], 'full', { percentTuition: 100, stipendMonthly: 800 }, '2026-10-01', 'Bond-free full scholarship with annual allowance for ASEAN nationals.', 'https://www.nus.edu.sg'],
+  ['sch-13', 'SMU Global Impact Scholarship', 'Singapore Management University', 'SG', 'any', 'any', 'full', { percentTuition: 100 }, '2027-03-15', 'Full-term award for changemakers; essays and interview required.', 'https://www.smu.edu.sg'],
+  ['sch-14', 'University of Otago International Entrance Scholarship', 'University of Otago', 'NZ', 'any', 'any', 'partial', { amount: 10000, currency: 'NZD' }, '2026-12-20', 'Indicative NZ$10,000 first-year credit, awarded on academic merit.', 'https://www.otago.ac.nz'],
+  ['sch-15', 'International Student Excellence Scholarship', 'University of Auckland', 'NZ', 'any', 'any', 'partial', { amount: 10000, currency: 'NZD' }, '2027-01-10', 'Merit award for new international undergraduates; automatic consideration.', 'https://www.auckland.ac.nz'],
+  ['sch-16', 'Open Doors Russian Scholarship Project', 'Open Doors (Russian Government)', 'RU', 'any', 'any', 'full', { percentTuition: 100 }, '2026-12-10', 'Olympiad-style selection; covers full tuition at participating universities.', 'https://od.globaluni.ru'],
+  ['sch-17', 'Russian Government Quota Scholarship', 'Russian Government', 'RU', ['engineering', 'it'], 'any', 'full', { percentTuition: 100 }, '2027-02-01', 'State-funded places with dormitory; apply through your country quota.', 'https://education-in-russia.com'],
+  ['sch-18', 'ASEAN Future Leaders Fund', 'ASEAN Foundation (mock)', 'any', 'any', ['MY', 'SG', 'ID', 'VN'], 'partial', { amount: 5000, currency: 'USD' }, '2026-11-15', 'Community-leadership track record required.', null],
+  ['sch-19', 'Chinese Bridge Overseas Study Grant', 'CB Foundation (mock)', 'any', 'any', ['CN', 'TW'], 'partial', { percentTuition: 30 }, '2027-01-20', 'For Chinese-speaking students studying abroad.', null],
+  ['sch-20', 'Global Women in STEM Scholarship', 'WiSTEM International (mock)', 'any', ['it', 'engineering'], 'any', 'partial', { percentTuition: 35 }, '2026-12-31', 'Open to women applicants in STEM programmes.', null],
+  ['sch-21', 'Hospitality Futures Bursary', 'Global Hotels Group (mock)', 'any', ['hospitality'], 'any', 'partial', { amount: 4000, currency: 'USD' }, '2027-02-15', 'Includes a paid internship placement.', null],
+  ['sch-22', 'HealthCare Heroes Grant', 'HealthBridge Foundation (mock)', 'any', ['health'], 'any', 'partial', { percentTuition: 25 }, '2027-03-01', 'For future nurses, pharmacists and doctors.', null],
+  ['sch-23', 'William Angliss Scholarships', 'William Angliss Institute', 'AU', ['hospitality'], 'any', 'partial', { amount: 5000, currency: 'AUD' }, '2026-10-20', 'Industry-sponsored awards across foods, tourism and hospitality programmes.', 'https://www.angliss.edu.au'],
+  ['sch-24', '#YouAreWelcomeHere Scholarship', '#YouAreWelcomeHere (US campuses)', 'US', 'any', 'any', 'partial', { percentTuition: 50 }, '2026-12-05', 'At least 50% tuition at participating US campuses; essay on intercultural exchange.', 'https://www.youarewelcomehereusa.org'],
+  ['sch-25', 'Lester B. Pearson International Scholarship', 'University of Toronto', 'CA', 'any', 'any', 'full', { percentTuition: 100 }, '2027-01-25', 'Full tuition, books and residence for exceptional school leaders; school nomination needed.', 'https://www.utoronto.ca'],
+  ['sch-26', 'Chinese Government Scholarship (CSC)', 'China Scholarship Council', 'CN', 'any', 'any', 'full', { percentTuition: 100, stipendMonthly: 2500 }, '2026-11-20', 'Full tuition, dormitory and monthly stipend; Mandarin course included.', 'https://www.campuschina.org'],
+  ['sch-27', 'International Major Entrance Scholarship', 'University of British Columbia', 'CA', 'any', 'any', 'partial', { amount: 20000, currency: 'CAD' }, '2027-02-10', 'Renewable merit award for outstanding international entrants; automatic consideration.', 'https://www.ubc.ca'],
+  ['sch-28', 'Illinois Tech Merit Scholarship', 'Illinois Institute of Technology', 'US', ['it', 'engineering', 'science'], 'any', 'partial', { amount: 25000, currency: 'USD' }, '2027-01-05', 'Automatic merit consideration with admission; indicative US$25,000/yr.', 'https://www.iit.edu'],
+].map(([id, name, provider, destinationCountry, fields, nationalities, coverageType, money, deadline, eligibilityNote, link]) => ({
   id, name, provider, destinationCountry, fields, nationalities, coverageType, ...money, deadline, eligibilityNote,
+  ...(link ? { link } : {}),
 }));
 
 // --------------------------------------------------------------- ambassadors

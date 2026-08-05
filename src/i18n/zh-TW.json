@@ -327,7 +327,14 @@
     "anyCountry": "不限目的地",
     "empty": "沒有符合搜尋條件的獎學金。",
     "nationalitiesLabel": "適用國籍",
-    "destinationLabel": "目的地"
+    "destinationLabel": "目的地",
+    "officialPage": "前往官方頁面申請 ↗",
+    "remindTitle": "提醒我：",
+    "remind1w": "截止前1週",
+    "remind2w": "截止前2週",
+    "remind1m": "截止前1個月",
+    "reminderSet": "已設定 {{date}} 提醒（示範——正式版將推送真實通知）",
+    "reminderLine": "⏰ 提醒 {{date}}——截止前 {{days}} 天"
   },
   "vault": {
     "title": "檔案庫",

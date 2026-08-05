@@ -325,7 +325,14 @@
     "anyCountry": "Semua tujuan",
     "empty": "Tidak ada beasiswa yang cocok dengan pencarianmu.",
     "nationalitiesLabel": "Kewarganegaraan",
-    "destinationLabel": "Tujuan"
+    "destinationLabel": "Tujuan",
+    "officialPage": "Daftar di halaman resmi ↗",
+    "remindTitle": "Ingatkan saya:",
+    "remind1w": "1 minggu sebelum",
+    "remind2w": "2 minggu sebelum",
+    "remind1m": "1 bulan sebelum",
+    "reminderSet": "Pengingat diatur untuk {{date}} (demo — notifikasi asli saat rilis)",
+    "reminderLine": "⏰ Pengingat {{date}} — {{days}} hari sebelum tenggat"
   },
   "vault": {
     "title": "Brankas Dokumen",

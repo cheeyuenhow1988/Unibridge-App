@@ -25,7 +25,9 @@ export function InstLogo({ institution, size = 26, radius = 6 }: Props) {
   const favicon = faviconFor(institution.website);
   const uri = stage === 0 ? institution.logo : favicon;
 
-  if (stage >= 2) {
+  // 'initials' is baked for schools with no fetchable mark anywhere —
+  // skipping the favicon avoids Google's default globe placeholder.
+  if (stage >= 2 || institution.logo === 'initials') {
     return (
       <View
         style={{
