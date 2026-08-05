@@ -290,7 +290,10 @@
     "reviewsCount": "{{count}} ratings (indicative)",
     "reviewsSampleTag": "sample review",
     "reviewsOnGoogle": "See all reviews on Google Maps",
-    "reviewsSampleNote": "Sample reviews for the prototype — the live Google reviews feed connects at launch."
+    "reviewsSampleNote": "Sample reviews for the prototype — the live Google reviews feed connects at launch.",
+    "knowMore": "Know more",
+    "prevPhoto": "Previous photo",
+    "nextPhoto": "Next photo"
   },
   "attraction": {
     "whatToDo": "What to do",

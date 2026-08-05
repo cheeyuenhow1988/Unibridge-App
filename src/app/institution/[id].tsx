@@ -2,7 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router, useLocalSearchParams } from 'expo-router';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Alert, Linking, Pressable, ScrollView, View, useWindowDimensions } from 'react-native';
 import { AmbassadorStrip } from '@/components/explore/AmbassadorStrip';
@@ -49,6 +49,7 @@ export default function InstitutionDetail() {
   );
   const reviews = useAsync(() => getSchoolReviews(id), [id]);
   const [photoIdx, setPhotoIdx] = useState(0);
+  const galleryRef = useRef<ScrollView>(null);
 
   if (state.loading) {
     return (
@@ -89,6 +90,7 @@ export default function InstitutionDetail() {
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: spacing.xxxl }}>
         <View>
           <ScrollView
+            ref={galleryRef}
             horizontal
             pagingEnabled
             showsHorizontalScrollIndicator={false}
@@ -98,6 +100,44 @@ export default function InstitutionDetail() {
               <Image key={img} source={{ uri: img }} style={{ width, height: 240 }} contentFit="cover" transition={250} />
             ))}
           </ScrollView>
+          {/* Swiping doesn't exist on desktop web — arrows are the only way
+              through the gallery there, so drive the index from the press. */}
+          {institution.images.length > 1 && photoIdx > 0 ? (
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={t('institution.prevPhoto')}
+              onPress={() => {
+                const next = Math.max(0, photoIdx - 1);
+                galleryRef.current?.scrollTo({ x: next * width, animated: true });
+                setPhotoIdx(next);
+              }}
+              style={{
+                position: 'absolute', left: spacing.md, top: 120 - 18, width: 36, height: 36,
+                borderRadius: radius.full, backgroundColor: 'rgba(0,0,0,0.45)',
+                alignItems: 'center', justifyContent: 'center',
+              }}
+            >
+              <Ionicons name="chevron-back" size={20} color="#FFFFFF" />
+            </Pressable>
+          ) : null}
+          {institution.images.length > 1 && photoIdx < institution.images.length - 1 ? (
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={t('institution.nextPhoto')}
+              onPress={() => {
+                const next = Math.min(institution.images.length - 1, photoIdx + 1);
+                galleryRef.current?.scrollTo({ x: next * width, animated: true });
+                setPhotoIdx(next);
+              }}
+              style={{
+                position: 'absolute', right: spacing.md, top: 120 - 18, width: 36, height: 36,
+                borderRadius: radius.full, backgroundColor: 'rgba(0,0,0,0.45)',
+                alignItems: 'center', justifyContent: 'center',
+              }}
+            >
+              <Ionicons name="chevron-forward" size={20} color="#FFFFFF" />
+            </Pressable>
+          ) : null}
           <LinearGradient
             colors={['rgba(0,0,0,0.5)', 'transparent']}
             style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 110 }}
@@ -167,6 +207,13 @@ export default function InstitutionDetail() {
               variant="secondary"
               size="sm"
               onPress={() => void Linking.openURL(institution.website)}
+            />
+            <Button
+              label={t('institution.knowMore')}
+              icon="book-outline"
+              variant="secondary"
+              size="sm"
+              onPress={() => void Linking.openURL(institution.wikipedia)}
             />
             <Button
               label={t('course.askQuestion')}
@@ -292,6 +339,19 @@ export default function InstitutionDetail() {
                     </Row>
                   </Row>
                   <Text variant="caption" tone="secondary">{r.text}</Text>
+                  {r.photos?.length ? (
+                    <Row gap={spacing.sm} style={{ marginTop: spacing.xs }}>
+                      {r.photos.map((p) => (
+                        <Image
+                          key={p}
+                          source={{ uri: p }}
+                          style={{ width: 84, height: 62, borderRadius: radius.md }}
+                          contentFit="cover"
+                          transition={200}
+                        />
+                      ))}
+                    </Row>
+                  ) : null}
                   <Text variant="micro" tone="faint">{r.date} · {t('institution.reviewsSampleTag')}</Text>
                 </View>
               ))}

@@ -373,6 +373,8 @@ export interface SchoolReview {
   stars: number;
   text: string;
   date: string;
+  /** Campus thumbnails from the school's verified photo pool (sample data). */
+  photos?: string[];
 }
 
 export interface SchoolReviews {

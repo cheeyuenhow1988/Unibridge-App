@@ -22,6 +22,25 @@ try {
   /* optional file — heroes alone are fine */
 }
 
+// Canonical enwiki article titles, verified against the REST summary API
+// (redirect-resolved, must describe an educational institution). Schools
+// without an article fall back to a Wikipedia search link — never a 404.
+let WIKI_TITLE = {};
+try {
+  WIKI_TITLE = JSON.parse(readFileSync(join(HERE, 'inst-wiki.json'), 'utf8'));
+} catch {
+  /* optional file — search links for everyone */
+}
+
+// Visually-audited gallery openers (Wikidata P18 / article lead / hand-picked,
+// byte-verified): the first photo must show the school recognizably.
+let HERO_PHOTO = {};
+try {
+  HERO_PHOTO = JSON.parse(readFileSync(join(HERE, 'inst-hero.json'), 'utf8'));
+} catch {
+  /* optional file — curated INST_PHOTO order stands */
+}
+
 // Fixed "today" for intake/deadline computation — keeps output deterministic.
 const NOW = { year: 2026, month: 8 };
 
@@ -798,11 +817,15 @@ const institutions = INSTITUTIONS.map(([id, name, short, country, city, type, ve
   verifiedPartner: verified, tagline, founded, students, website,
   languages: MY_MALAY_ALSO.has(id) ? ['English', 'Bahasa Melayu'] : TEACHING_LANGUAGES[country],
   logo: logoFor(id, website),
-  wikipedia: INST_META[id][0],
+  wikipedia: WIKI_TITLE[id]
+    ? `https://en.wikipedia.org/wiki/${WIKI_TITLE[id]}`
+    : `https://en.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(name)}`,
   ranking: INST_META[id][1],
   // Real, byte-verified photos only — no random placeholder imagery.
-  // Curated hero first, then harvested facility/surroundings shots.
-  images: [...new Set([].concat(INST_PHOTO[id]).concat(PHOTO_EXTRA[id] ?? []))].map(commonsPhoto),
+  // Audited hero first, then curated shots, then harvested facility photos.
+  images: [...new Set(
+    [].concat(HERO_PHOTO[id] ?? []).concat(INST_PHOTO[id]).concat(PHOTO_EXTRA[id] ?? []),
+  )].map(commonsPhoto),
 }));
 {
   const missing = institutions.filter((i) => i.images.length === 0).map((i) => i.id);
@@ -1296,11 +1319,22 @@ const reviews = Object.fromEntries(institutions.map((inst, i) => {
   const rating = Math.round((4.0 + rand() * 0.8) * 10) / 10;
   const count = 120 + Math.floor(rand() * 900);
   const pick = (arr, k) => arr[(i * 3 + k) % arr.length];
+  // Like Google reviews with photos — thumbnails come from the school's own
+  // verified Commons pool (never scraped from real reviewers), skipping the
+  // hero so the card shows a different angle than the gallery opener.
+  const reviewPhotos = (k) => {
+    const pool = inst.images.slice(1);
+    if (pool.length === 0) return undefined;
+    const a = pool[(i + k * 2) % pool.length];
+    const b = pool[(i + k * 2 + 3) % pool.length];
+    return a === b ? [a] : [a, b];
+  };
   const mk = (k, stars, text) => {
     const [author, homeCountry] = REVIEW_AUTHORS[(i * 2 + k) % REVIEW_AUTHORS.length];
     return {
       author, homeCountry, stars, text,
       date: `2026-0${(k * 2 + (i % 3)) % 6 + 1}-${String(4 + ((i * 5 + k * 9) % 24)).padStart(2, '0')}`,
+      ...(k < 2 ? { photos: reviewPhotos(k) } : {}),
     };
   };
   return [inst.id, {

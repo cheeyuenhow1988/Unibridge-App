@@ -289,7 +289,10 @@
     "reviewsCount": "{{count}} penilaian (anggaran)",
     "reviewsSampleTag": "ulasan contoh",
     "reviewsOnGoogle": "Lihat semua ulasan di Google Maps",
-    "reviewsSampleNote": "Ulasan contoh untuk prototaip — suapan ulasan Google sebenar disambungkan semasa pelancaran."
+    "reviewsSampleNote": "Ulasan contoh untuk prototaip — suapan ulasan Google sebenar disambungkan semasa pelancaran.",
+    "knowMore": "Ketahui lagi",
+    "prevPhoto": "Foto sebelumnya",
+    "nextPhoto": "Foto seterusnya"
   },
   "attraction": {
     "whatToDo": "Apa yang boleh dibuat",

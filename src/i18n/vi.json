@@ -287,7 +287,10 @@
     "reviewsCount": "{{count}} lượt đánh giá (tham khảo)",
     "reviewsSampleTag": "đánh giá mẫu",
     "reviewsOnGoogle": "Xem mọi đánh giá trên Google Maps",
-    "reviewsSampleNote": "Đánh giá mẫu cho bản thử — nguồn đánh giá Google thật kết nối khi ra mắt."
+    "reviewsSampleNote": "Đánh giá mẫu cho bản thử — nguồn đánh giá Google thật kết nối khi ra mắt.",
+    "knowMore": "Tìm hiểu thêm",
+    "prevPhoto": "Ảnh trước",
+    "nextPhoto": "Ảnh tiếp theo"
   },
   "attraction": {
     "whatToDo": "Chơi gì ở đây",

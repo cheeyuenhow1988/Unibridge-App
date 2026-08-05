@@ -287,7 +287,10 @@
     "reviewsCount": "평점 {{count}}개 (참고용)",
     "reviewsSampleTag": "샘플 리뷰",
     "reviewsOnGoogle": "Google 지도에서 모든 리뷰 보기",
-    "reviewsSampleNote": "프로토타입용 샘플 리뷰 — 실제 Google 리뷰는 출시 때 연결돼요."
+    "reviewsSampleNote": "프로토타입용 샘플 리뷰 — 실제 Google 리뷰는 출시 때 연결돼요.",
+    "knowMore": "더 알아보기",
+    "prevPhoto": "이전 사진",
+    "nextPhoto": "다음 사진"
   },
   "attraction": {
     "whatToDo": "즐길 거리",

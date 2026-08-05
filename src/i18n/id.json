@@ -287,7 +287,10 @@
     "reviewsCount": "{{count}} penilaian (indikatif)",
     "reviewsSampleTag": "ulasan contoh",
     "reviewsOnGoogle": "Lihat semua ulasan di Google Maps",
-    "reviewsSampleNote": "Ulasan contoh untuk prototipe — feed ulasan Google asli terhubung saat rilis."
+    "reviewsSampleNote": "Ulasan contoh untuk prototipe — feed ulasan Google asli terhubung saat rilis.",
+    "knowMore": "Pelajari lebih",
+    "prevPhoto": "Foto sebelumnya",
+    "nextPhoto": "Foto berikutnya"
   },
   "attraction": {
     "whatToDo": "Ngapain di sini",

@@ -287,7 +287,10 @@
     "reviewsCount": "{{count}}件の評価（参考）",
     "reviewsSampleTag": "サンプルレビュー",
     "reviewsOnGoogle": "Googleマップで全レビューを見る",
-    "reviewsSampleNote": "プロトタイプ用のサンプルレビュー — 実際のGoogleレビューはリリース時に接続。"
+    "reviewsSampleNote": "プロトタイプ用のサンプルレビュー — 実際のGoogleレビューはリリース時に接続。",
+    "knowMore": "詳しく見る",
+    "prevPhoto": "前の写真",
+    "nextPhoto": "次の写真"
   },
   "attraction": {
     "whatToDo": "楽しみ方",

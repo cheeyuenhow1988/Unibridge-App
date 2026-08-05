@@ -15,9 +15,10 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=monash.edu&sz=128",
-    "wikipedia": "Monash University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Monash_University",
     "ranking": 37,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Monashcaulfield2.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Monash_Learning_and_Teaching_Building_(43797320625).jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Farrer_Hall%2C_Monash_University.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Teesnow_sir_louis_matheson_library.jpg?width=1000",
@@ -48,7 +49,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=sydney.edu.au&sz=128",
-    "wikipedia": "University of Sydney",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Sydney",
     "ranking": 18,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/University_of_Sydney_Main_Quadrangle.jpg?width=1000",
@@ -74,7 +75,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=uq.edu.au&sz=128",
-    "wikipedia": "University of Queensland",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Queensland",
     "ranking": 40,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/UQ-SteeleBldg800.jpg?width=1000",
@@ -100,7 +101,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=unsw.edu.au&sz=128",
-    "wikipedia": "University of New South Wales",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_New_South_Wales",
     "ranking": 19,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Main_Walkway%2C_Lower_campus_UNSW.jpg?width=1000",
@@ -127,9 +128,10 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=unimelb.edu.au&sz=128",
-    "wikipedia": "University of Melbourne",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Melbourne",
     "ranking": 13,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Trinity_college_university_of_melbourne.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Baillieu_Library.JPG?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Medley_hall.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Little_Hall.jpg?width=1000",
@@ -154,7 +156,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/RMIT_University_Logo.svg/330px-RMIT_University_Logo.svg.png",
-    "wikipedia": "RMIT University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Royal_Melbourne_Institute_of_Technology",
     "ranking": 123,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/RMIT_University_Building_01.jpg?width=1000",
@@ -181,7 +183,7 @@
       "Bahasa Melayu"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=um.edu.my&sz=128",
-    "wikipedia": "University of Malaya",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Malaya",
     "ranking": 60,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Universiti_Malaya_KL_gate.jpg?width=1000",
@@ -208,7 +210,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/6/69/Logo-Taylors-University.png",
-    "wikipedia": "Taylor's University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Taylor's_University",
     "ranking": 251,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Taylors_Lakeside_Campus.jpg?width=1000",
@@ -231,9 +233,10 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=sunwayuniversity.edu.my&sz=128",
-    "wikipedia": "Sunway University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Sunway_University",
     "ranking": 539,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Sunway_Square_02.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Sunway_University_(New_Building)_-_2015.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Sunway_Campus_(221208).jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Sunway_University_Hall.jpg?width=1000",
@@ -258,7 +261,7 @@
       "English"
     ],
     "logo": "https://www.mmu.edu.my/favicon.ico",
-    "wikipedia": "Multimedia University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Multimedia_University",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Multimedia_University.JPG?width=1000",
@@ -285,7 +288,7 @@
       "Bahasa Melayu"
     ],
     "logo": "https://www.usm.my/images/favicon/favicon.png",
-    "wikipedia": "Universiti Sains Malaysia",
+    "wikipedia": "https://en.wikipedia.org/wiki/Universiti_Sains_Malaysia",
     "ranking": 146,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Main_gate_at_the_Universiti_Sains_Malaysia.jpg?width=1000",
@@ -312,9 +315,10 @@
       "Bahasa Melayu"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=utm.my&sz=128",
-    "wikipedia": "Universiti Teknologi Malaysia",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Technology_Malaysia",
     "ranking": 181,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_Malaysia_UTM-Campus-Kuala-Lumpur-02.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Universiti_Teknologi_Malaysia.jpg?width=1000"
     ]
   },
@@ -335,7 +339,7 @@
       "English"
     ],
     "logo": "https://www.ntu.edu.tw/images/favicon/apple-touch-icon.png",
-    "wikipedia": "National Taiwan University",
+    "wikipedia": "https://en.wikipedia.org/wiki/National_Taiwan_University",
     "ranking": 68,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/National_Taiwan_University_Library_20060802.jpg?width=1000",
@@ -362,7 +366,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/NTHU_Round_Seal.svg/330px-NTHU_Round_Seal.svg.png",
-    "wikipedia": "National Tsing Hua University",
+    "wikipedia": "https://en.wikipedia.org/wiki/National_Tsing_Hua_University",
     "ranking": 210,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/NTHU_entrance.JPG?width=1000",
@@ -390,7 +394,7 @@
       "English"
     ],
     "logo": "https://www.fcu.edu.tw/favicon.ico",
-    "wikipedia": "Feng Chia University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Feng_Chia_University",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Feng_Chia_University_in_Central_Taiwan_Science_Park.JPG?width=1000",
@@ -414,7 +418,7 @@
       "English"
     ],
     "logo": "https://www.nsysu.edu.tw/var/file/0/1000/img/84/touch-icon-iphone.png",
-    "wikipedia": "National Sun Yat-sen University",
+    "wikipedia": "https://en.wikipedia.org/wiki/National_Sun_Yat-sen_University",
     "ranking": 427,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/2017_NSYSU_maingate.jpg?width=1000",
@@ -440,7 +444,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Manchester_University_Logo_%282%29.png/330px-Manchester_University_Logo_%282%29.png",
-    "wikipedia": "University of Manchester",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Manchester",
     "ranking": 34,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Whitworth_Hall.jpg?width=1000",
@@ -467,7 +471,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=leeds.ac.uk&sz=128",
-    "wikipedia": "University of Leeds",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Leeds",
     "ranking": 82,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Parkinson_Building%2C_Leeds_University%2C_England-12Sept2010.jpg?width=1000",
@@ -494,7 +498,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=birmingham.ac.uk&sz=128",
-    "wikipedia": "University of Birmingham",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Birmingham",
     "ranking": 80,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Aston_Webb_buildings_in_snow%2C_The_University_of_Birmingham%2C_Dec_2009.jpg?width=1000",
@@ -521,7 +525,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=ucl.ac.uk&sz=128",
-    "wikipedia": "University College London",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_College_London",
     "ranking": 9,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Wilkins_Building_1%2C_UCL%2C_London_-_Diliff.jpg?width=1000",
@@ -546,7 +550,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Kcl-logo.svg/330px-Kcl-logo.svg.png",
-    "wikipedia": "King's College London",
+    "wikipedia": "https://en.wikipedia.org/wiki/King's_College_London",
     "ranking": 40,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/King's_College_London_Bush_House_Building_3.jpg?width=1000",
@@ -570,7 +574,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/University_of_Edinburgh_ceremonial_roundel.svg/330px-University_of_Edinburgh_ceremonial_roundel.svg.png",
-    "wikipedia": "University of Edinburgh",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Edinburgh",
     "ranking": 27,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Old_College_Quad.jpg?width=1000",
@@ -597,7 +601,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=nus.edu.sg&sz=128",
-    "wikipedia": "National University of Singapore",
+    "wikipedia": "https://en.wikipedia.org/wiki/National_University_of_Singapore",
     "ranking": 8,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/NUS%2C_University_Cultural_Centre_3%2C_Nov_06.JPG?width=1000",
@@ -624,7 +628,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=ntu.edu.sg&sz=128",
-    "wikipedia": "Nanyang Technological University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Nanyang_Technological_University",
     "ranking": 15,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/NTU_Administration_Building.JPG?width=1000",
@@ -651,9 +655,10 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=smu.edu.sg&sz=128",
-    "wikipedia": "Singapore Management University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Singapore_Management_University",
     "ranking": 511,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/SMU_Admin_Building.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_Management_University%2C_Jan_06.JPG?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/SMU_Campus_Green.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Smu_school_of_law_centre_for_AI_and_data_governance.jpg?width=1000",
@@ -678,7 +683,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=sim.edu.sg&sz=128",
-    "wikipedia": "Singapore Institute of Management",
+    "wikipedia": "https://en.wikipedia.org/wiki/Singapore_Institute_of_Management",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/SIM_HQ.jpg?width=1000",
@@ -703,9 +708,10 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=auckland.ac.nz&sz=128",
-    "wikipedia": "University of Auckland",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Auckland",
     "ranking": 65,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/University_of_Auckland_Clock_Tower.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Faculty_of_Medical_and_Health_Sciences%2C_University_of_Auckland.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Recreation_Centre_UoA.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Maidment_Theatre%2C_Auckland.jpg?width=1000",
@@ -730,7 +736,7 @@
       "English"
     ],
     "logo": "https://icons.duckduckgo.com/ip3/wgtn.ac.nz.ico",
-    "wikipedia": "Victoria University of Wellington",
+    "wikipedia": "https://en.wikipedia.org/wiki/Victoria_University_of_Wellington",
     "ranking": 244,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/VUW-Kelburn.jpg?width=1000",
@@ -755,7 +761,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=canterbury.ac.nz&sz=128",
-    "wikipedia": "University of Canterbury",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Canterbury",
     "ranking": 261,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/UC_CentralLibrary01_gobeirne.jpg?width=1000",
@@ -782,7 +788,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/University_of_Otago_Logo.jpg/330px-University_of_Otago_Logo.jpg",
-    "wikipedia": "University of Otago",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Otago",
     "ranking": 214,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/University_of_Otago.jpg?width=1000",
@@ -808,7 +814,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=msu.ru&sz=128",
-    "wikipedia": "Moscow State University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Moscow_State_University",
     "ranking": 94,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9C%D0%93%D0%A3%2C_%D0%B2%D0%B8%D0%B4_%D1%81_%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85%D0%B0.jpg?width=1000",
@@ -833,7 +839,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=itmo.ru&sz=128",
-    "wikipedia": "ITMO University",
+    "wikipedia": "https://en.wikipedia.org/wiki/ITMO_University",
     "ranking": 360,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/ITMO_University's_main_building%2C_August_2016.jpg?width=1000",
@@ -859,7 +865,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=kpfu.ru&sz=128",
-    "wikipedia": "Kazan Federal University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Kazan_Federal_University",
     "ranking": 396,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Kazan_State_University_from_the_2_Korpus.jpg?width=1000",
@@ -884,7 +890,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=nsu.ru&sz=128",
-    "wikipedia": "Novosibirsk State University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Novosibirsk_State_University",
     "ranking": 225,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Akademgorodok_NSU_Interweek.jpg?width=1000",
@@ -910,7 +916,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/MIT_2023_red_logo.svg/330px-MIT_2023_red_logo.svg.png",
-    "wikipedia": "Massachusetts Institute of Technology",
+    "wikipedia": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology",
     "ranking": 1,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/MIT_Dome_night1_Edit.jpg?width=1000",
@@ -936,9 +942,10 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=bu.edu&sz=128",
-    "wikipedia": "Boston University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Boston_University",
     "ranking": 108,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Marsh_Chapel.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/BU_College_of_Communication.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/WTB_BU_residence.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Myles_Standish_Hall.jpg?width=1000",
@@ -963,9 +970,10 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Nyu_short_color.svg/330px-Nyu_short_color.svg.png",
-    "wikipedia": "New York University",
+    "wikipedia": "https://en.wikipedia.org/wiki/New_York_University",
     "ranking": 43,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/NYC_-_Washington_Square_Park_-_Arch.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/NYU07.JPG?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Bobst_Library_(48072704803).jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/NYU_Langone_Medical_Center_(41246168170).jpg?width=1000",
@@ -997,7 +1005,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/University_of_California%2C_Los_Angeles_logo.svg/330px-University_of_California%2C_Los_Angeles_logo.svg.png",
-    "wikipedia": "University of California, Los Angeles",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_California,_Los_Angeles",
     "ranking": 42,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Royce_Hall%2C_University_of_California%2C_Los_Angeles_(23-09-2003).jpg?width=1000",
@@ -1022,7 +1030,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=uchicago.edu&sz=128",
-    "wikipedia": "University of Chicago",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Chicago",
     "ranking": 21,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Harper_Library_from_the_Midway_Plaisance.JPG?width=1000",
@@ -1048,7 +1056,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=smc.edu&sz=128",
-    "wikipedia": "Santa Monica College",
+    "wikipedia": "https://en.wikipedia.org/wiki/Santa_Monica_College",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Smctheaterartsbuilding.JPG?width=1000",
@@ -1073,7 +1081,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=ice.edu&sz=128",
-    "wikipedia": "Institute of Culinary Education",
+    "wikipedia": "https://en.wikipedia.org/wiki/Institute_of_Culinary_Education",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Brookfield_Place_New_York_August_2017_003.jpg?width=1000"
@@ -1095,7 +1103,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=utoronto.ca&sz=128",
-    "wikipedia": "University of Toronto",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Toronto",
     "ranking": 25,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/UofTConvocationHall.jpg?width=1000",
@@ -1121,7 +1129,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/British_columbia_ca_univ_logo.svg/330px-British_columbia_ca_univ_logo.svg.png",
-    "wikipedia": "University of British Columbia",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_British_Columbia",
     "ranking": 38,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Irving_K._Barber_Library.jpg?width=1000",
@@ -1148,7 +1156,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Mcgill_univ_ca_logo.png/330px-Mcgill_univ_ca_logo.png",
-    "wikipedia": "McGill University",
+    "wikipedia": "https://en.wikipedia.org/wiki/McGill_University",
     "ranking": 29,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Arts_Building%2C_McGill_University%2C_Aug_31_2022.jpg?width=1000",
@@ -1173,7 +1181,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Logo_York_University.svg/330px-Logo_York_University.svg.png",
-    "wikipedia": "York University",
+    "wikipedia": "https://en.wikipedia.org/wiki/York_University",
     "ranking": 353,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/YorkUComputerScienceAndEngineeringBuilding.jpg?width=1000",
@@ -1200,7 +1208,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/George_Brown_College_logo.svg/330px-George_Brown_College_logo.svg.png",
-    "wikipedia": "George Brown College",
+    "wikipedia": "https://en.wikipedia.org/wiki/George_Brown_Polytechnic",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/GBC_Casa_Loma_02.jpg?width=1000",
@@ -1225,7 +1233,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tsinghua_University_Logo.svg/330px-Tsinghua_University_Logo.svg.png",
-    "wikipedia": "Tsinghua University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Tsinghua_University",
     "ranking": 20,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Thu_gate.JPG?width=1000",
@@ -1253,7 +1261,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=pku.edu.cn&sz=128",
-    "wikipedia": "Peking University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Peking_University",
     "ranking": 14,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/PekingUniversityPic6.jpg?width=1000",
@@ -1281,13 +1289,13 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Fudan_University_Logo.svg/330px-Fudan_University_Logo.svg.png",
-    "wikipedia": "Fudan University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Fudan_University",
     "ranking": 39,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/201704_Gate_of_Fudan_University_Jiangwan_Campus.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Fudan-xianghuitang.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Fudan_Jiangwan_Library.png?width=1000",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Fudan_University_Jiangwan_Campus.jpg?width=1000",
-      "https://commons.wikimedia.org/wiki/Special:FilePath/201704_Gate_of_Fudan_University_Jiangwan_Campus.jpg?width=1000"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Fudan_University_Jiangwan_Campus.jpg?width=1000"
     ]
   },
   {
@@ -1307,9 +1315,10 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/en/f/fb/Sun_Yat-sen_University_Logo.png",
-    "wikipedia": "Sun Yat-sen University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Sun_Yat-sen_University",
     "ranking": 319,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/North_Square_of_SYSU.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Zhongda_ZH3.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Grant_Hall_2012.JPG?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/SYSU_East_Campus.JPG?width=1000",
@@ -1334,7 +1343,7 @@
       "English"
     ],
     "logo": "initials",
-    "wikipedia": "Beijing Hospitality Institute",
+    "wikipedia": "https://en.wikipedia.org/wiki/Special:Search?search=Beijing%20Hospitality%20Institute",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/South_gate_of_Beijing_Hospitality_Institute_(20230303124903).jpg?width=1000",
@@ -1358,9 +1367,10 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=angliss.edu.au&sz=128",
-    "wikipedia": "William Angliss Institute",
+    "wikipedia": "https://en.wikipedia.org/wiki/William_Angliss_Institute",
     "ranking": null,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/William_Angliss_Desserts_-_Flourless_Orange_Cake_w-_Orange_Syrup_%26_a_Chocolate_Tuille_(5844914712).jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Graduation_-_William_Angliss_May_2012.jpg?width=1000"
     ]
   },
@@ -1380,9 +1390,10 @@
       "English"
     ],
     "logo": "initials",
-    "wikipedia": "Berjaya University College",
+    "wikipedia": "https://en.wikipedia.org/wiki/Berjaya_University_College",
     "ranking": null,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Berjaya_Times_Square_(230705-1535).jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Berjaya_Times_Square_(211030).jpg?width=1000"
     ]
   },
@@ -1403,7 +1414,7 @@
       "English"
     ],
     "logo": "https://www.nkuht.edu.tw/var/file/0/1000/msys_1000_2891624_61864.ico",
-    "wikipedia": "National Kaohsiung University of Hospitality and Tourism",
+    "wikipedia": "https://en.wikipedia.org/wiki/National_Kaohsiung_University_of_Hospitality_and_Tourism",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/110%E5%B9%B4%E5%AD%B8%E7%94%9F%E6%9C%83%E6%88%90%E6%9E%9C%E5%B1%95-%E5%9C%8B%E7%AB%8B%E9%AB%98%E9%9B%84%E9%A4%90%E6%97%85%E5%A4%A7%E5%AD%B8%E5%90%88%E7%85%A7.jpg?width=1000",
@@ -1426,7 +1437,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=cordonbleu.edu&sz=128",
-    "wikipedia": "Le Cordon Bleu",
+    "wikipedia": "https://en.wikipedia.org/wiki/Le_Cordon_Bleu",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Paris_06_2012_Cordon_Bleu_3149.jpg?width=1000",
@@ -1459,7 +1470,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=cordonbleu.edu&sz=128",
-    "wikipedia": "Le Cordon Bleu",
+    "wikipedia": "https://en.wikipedia.org/wiki/Le_Cordon_Bleu",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Paris_06_2012_Cordon_Bleu_3149.jpg?width=1000",
@@ -1492,7 +1503,7 @@
       "English"
     ],
     "logo": "initials",
-    "wikipedia": "SHATEC",
+    "wikipedia": "https://en.wikipedia.org/wiki/Shatec_Institutes",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_(SG)%2C_Marina_Bay_--_2019_--_4439-48.jpg?width=1000"
@@ -1514,9 +1525,10 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=monash.edu.my&sz=128",
-    "wikipedia": "Monash University Malaysia Campus",
+    "wikipedia": "https://en.wikipedia.org/wiki/Monash_University_Malaysia",
     "ranking": null,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Cmglee_Sunway_Monash_University.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Cmglee_Sunway_Monash_University.jpg?width=1000"
     ],
     "campuses": [
@@ -1545,7 +1557,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Nyu_short_color.svg/330px-Nyu_short_color.svg.png",
-    "wikipedia": "New York University Shanghai",
+    "wikipedia": "https://en.wikipedia.org/wiki/New_York_University_Shanghai",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/NYUSH_Lujiazui_Building.jpg?width=1000",
@@ -1577,7 +1589,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Imperial_College_London_new_logo.png/330px-Imperial_College_London_new_logo.png",
-    "wikipedia": "Imperial College London",
+    "wikipedia": "https://en.wikipedia.org/wiki/Imperial_College_London",
     "ranking": 2,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Imperial_College_London_down_Exhibition_Road.jpg?width=1000",
@@ -1604,7 +1616,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=uts.edu.au&sz=128",
-    "wikipedia": "University of Technology Sydney",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Technology_Sydney",
     "ranking": 96,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Ultimo_UTS_Tower.JPG?width=1000",
@@ -1629,7 +1641,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=ucsiuniversity.edu.my&sz=128",
-    "wikipedia": "UCSI University",
+    "wikipedia": "https://en.wikipedia.org/wiki/UCSI_University",
     "ranking": 265,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/UCSI_main_gate_Taman_Connaught_(231105).jpg?width=1000",
@@ -1654,7 +1666,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/en/1/18/Taiwan_Tech_logo.png",
-    "wikipedia": "National Taiwan University of Science and Technology",
+    "wikipedia": "https://en.wikipedia.org/wiki/National_Taiwan_University_of_Science_and_Technology",
     "ranking": 397,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/%E5%9C%8B%E7%AB%8B%E5%8F%B0%E7%81%A3%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%B8%E7%A0%94%E6%8F%9A%E5%A4%A7%E6%A8%93.JPG?width=1000",
@@ -1680,7 +1692,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=tp.edu.sg&sz=128",
-    "wikipedia": "Temasek Polytechnic",
+    "wikipedia": "https://en.wikipedia.org/wiki/Temasek_Polytechnic",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Temasek_Polytechnic%2C_Singapore%2C_March_2026.jpg?width=1000"
@@ -1702,7 +1714,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Logo_of_Auckland_University_of_Technology.svg/330px-Logo_of_Auckland_University_of_Technology.svg.png",
-    "wikipedia": "Auckland University of Technology",
+    "wikipedia": "https://en.wikipedia.org/wiki/Auckland_University_of_Technology",
     "ranking": 412,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Auckland_University_of_Technology.jpg?width=1000",
@@ -1730,9 +1742,10 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=hse.ru&sz=128",
-    "wikipedia": "Higher School of Economics",
+    "wikipedia": "https://en.wikipedia.org/wiki/Higher_School_of_Economics",
     "ranking": 399,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/HSE_new_building_(2015-01-22)_01.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_Durasov_Palace_asv2018-08.jpg?width=1000"
     ]
   },
@@ -1752,7 +1765,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=columbia.edu&sz=128",
-    "wikipedia": "Columbia University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Columbia_University",
     "ranking": 34,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Columbia_University_-_Low_Memorial_Library_(48170370506).jpg?width=1000",
@@ -1776,7 +1789,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=northeastern.edu&sz=128",
-    "wikipedia": "Northeastern University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Northeastern_University",
     "ranking": 344,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Northeastern_University.jpg?width=1000"
@@ -1798,7 +1811,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=fitnyc.edu&sz=128",
-    "wikipedia": "Fashion Institute of Technology",
+    "wikipedia": "https://en.wikipedia.org/wiki/Fashion_Institute_of_Technology",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/The_Museum_at_FIT_(48206542922).jpg?width=1000",
@@ -1825,7 +1838,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Illinois_tech_logo.png/330px-Illinois_tech_logo.png",
-    "wikipedia": "Illinois Institute of Technology",
+    "wikipedia": "https://en.wikipedia.org/wiki/Illinois_Institute_of_Technology",
     "ranking": 437,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/IIT_Main_Building.jpg?width=1000"
@@ -1847,7 +1860,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/TMU_logo.svg/330px-TMU_logo.svg.png",
-    "wikipedia": "Toronto Metropolitan University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Toronto_Metropolitan_University",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_Met_Student_Learning_Centre_at_night_2022.jpg?width=1000"
@@ -1869,7 +1882,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/SFU-block-logo.svg/330px-SFU-block-logo.svg.png",
-    "wikipedia": "Simon Fraser University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Simon_Fraser_University",
     "ranking": 318,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Academic_quad_at_sfu.jpg?width=1000"
@@ -1891,7 +1904,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Concordia_univ_montreal_textlogo.png/330px-Concordia_univ_montreal_textlogo.png",
-    "wikipedia": "Concordia University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Concordia_University",
     "ranking": 387,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/JMSB.jpg?width=1000"
@@ -1913,9 +1926,10 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Vancouver_Community_College_logo.png",
-    "wikipedia": "Vancouver Community College",
+    "wikipedia": "https://en.wikipedia.org/wiki/Vancouver_Community_College",
     "ranking": null,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/VCC_Broadway_Campus_Building.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/VCC_Broadway_Campus_Building.jpg?width=1000"
     ]
   },
@@ -1936,7 +1950,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/en/d/da/Sjtu-logo-standard-red.png",
-    "wikipedia": "Shanghai Jiao Tong University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Shanghai_Jiao_Tong_University",
     "ranking": 45,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_Jiao_Tong_University_1.jpg?width=1000",
@@ -1963,7 +1977,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Tongji_Uni_logo.svg/330px-Tongji_Uni_logo.svg.png",
-    "wikipedia": "Tongji University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Tongji_University",
     "ranking": 192,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Tongjidaxue_Tushuguan.JPG?width=1000",
@@ -1990,7 +2004,7 @@
       "English"
     ],
     "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/%E5%8C%97%E5%B8%88%E5%A4%A7LOGO.jpg?width=256",
-    "wikipedia": "Beijing Normal University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Beijing_Normal_University",
     "ranking": 271,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/BNU_Gate.jpg?width=1000",
@@ -2018,7 +2032,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=jnu.edu.cn&sz=128",
-    "wikipedia": "Jinan University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Jinan_University",
     "ranking": 606,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Jnu_gate.jpg?width=1000",
@@ -2043,7 +2057,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Deakin_Worldly_Strip_Logo.jpg",
-    "wikipedia": "Deakin University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Deakin_University",
     "ranking": 197,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Deakin_University_Burwood_Campus.jpg?width=1000",
@@ -2068,7 +2082,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Macquarie_University_International_brandmark_%E2%80%93_Horizontal_configuration.svg/330px-Macquarie_University_International_brandmark_%E2%80%93_Horizontal_configuration.svg.png",
-    "wikipedia": "Macquarie University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Macquarie_University",
     "ranking": 133,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Macquarie_University_New_Library_2011.jpg?width=1000",
@@ -2095,7 +2109,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=griffith.edu.au&sz=128",
-    "wikipedia": "Griffith University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Griffith_University",
     "ranking": 239,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Griffith_University.jpg?width=1000",
@@ -2121,9 +2135,10 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=holmesglen.edu.au&sz=128",
-    "wikipedia": "Holmesglen Institute",
+    "wikipedia": "https://en.wikipedia.org/wiki/Holmesglen_Institute_of_TAFE",
     "ranking": null,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Holmesglen_Tafe_Moorabbin_b.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Holmesglen_Tafe_Moorabbin_b.jpg?width=1000"
     ]
   },
@@ -2143,7 +2158,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=apu.edu.my&sz=128",
-    "wikipedia": "Asia Pacific University of Technology & Innovation",
+    "wikipedia": "https://en.wikipedia.org/wiki/Asia_Pacific_University_of_Technology_&_Innovation",
     "ranking": 621,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/UCTI_Interior.jpg?width=1000"
@@ -2165,9 +2180,10 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=university.help.edu.my&sz=128",
-    "wikipedia": "HELP University",
+    "wikipedia": "https://en.wikipedia.org/wiki/HELP_University",
     "ranking": null,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Persiaran_Cakerawala_2.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_Malaysia_Skyline-03.jpg?width=1000"
     ]
   },
@@ -2187,7 +2203,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=newinti.edu.my&sz=128",
-    "wikipedia": "INTI International University",
+    "wikipedia": "https://en.wikipedia.org/wiki/INTI_International_University",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/INTI_Nilai_Student_Centre.png?width=1000"
@@ -2210,7 +2226,7 @@
       "English"
     ],
     "logo": "https://icons.duckduckgo.com/ip3/nccu.edu.tw.ico",
-    "wikipedia": "National Chengchi University",
+    "wikipedia": "https://en.wikipedia.org/wiki/National_Chengchi_University",
     "ranking": 587,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/NCCU_Shiwei_Hall_20220815.jpg?width=1000",
@@ -2238,7 +2254,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/TKU_logo.png/330px-TKU_logo.png",
-    "wikipedia": "Tamkang University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Tamkang_University",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Lanyang_Campus%2C_Tamkang_University_20060322.jpg?width=1000",
@@ -2261,7 +2277,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/London_school_of_economics_logo_with_name.svg/330px-London_school_of_economics_logo_with_name.svg.png",
-    "wikipedia": "London School of Economics",
+    "wikipedia": "https://en.wikipedia.org/wiki/London_School_of_Economics",
     "ranking": 50,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/LondonSchoolofEconomics_cford.jpg?width=1000"
@@ -2283,7 +2299,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Kingston_University_logo.svg/330px-Kingston_University_logo.svg.png",
-    "wikipedia": "Kingston University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Kingston_University",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Knights_Park_Campus.jpg?width=1000"
@@ -2305,9 +2321,10 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=singaporetech.edu.sg&sz=128",
-    "wikipedia": "Singapore Institute of Technology",
+    "wikipedia": "https://en.wikipedia.org/wiki/Singapore_Institute_of_Technology",
     "ranking": null,
     "images": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/SIT_Punggol_Campus-Dec_2025_03.jpg?width=1000",
       "https://commons.wikimedia.org/wiki/Special:FilePath/SIT_Punggol_Campus-Dec_2025_03.jpg?width=1000"
     ]
   },
@@ -2327,7 +2344,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=np.edu.sg&sz=128",
-    "wikipedia": "Ngee Ann Polytechnic",
+    "wikipedia": "https://en.wikipedia.org/wiki/Ngee_Ann_Polytechnic",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/NPcampus.JPG?width=1000"
@@ -2349,7 +2366,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=massey.ac.nz&sz=128",
-    "wikipedia": "Massey University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Massey_University",
     "ranking": 239,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Masseyalbany2005.JPG?width=1000",
@@ -2372,7 +2389,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/LU_logo.jpg/330px-LU_logo.jpg",
-    "wikipedia": "Lincoln University (New Zealand)",
+    "wikipedia": "https://en.wikipedia.org/wiki/Lincoln_University_(New_Zealand)",
     "ranking": 362,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Ivey_Hall%2C_Lincoln_University%2C_New_Zealand.jpg?width=1000"
@@ -2395,7 +2412,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=english.spbu.ru&sz=128",
-    "wikipedia": "Saint Petersburg State University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Saint_Petersburg_State_University",
     "ranking": 365,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Spb_06-2012_University_Embankment_06.jpg?width=1000"
@@ -2418,7 +2435,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=mipt.ru&sz=128",
-    "wikipedia": "Moscow Institute of Physics and Technology",
+    "wikipedia": "https://en.wikipedia.org/wiki/Moscow_Institute_of_Physics_and_Technology",
     "ranking": 302,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Mipt_phystech.jpg?width=1000",
@@ -2443,7 +2460,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=depaul.edu&sz=128",
-    "wikipedia": "DePaul University",
+    "wikipedia": "https://en.wikipedia.org/wiki/DePaul_University",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/StudentCenterDePaul.jpg?width=1000",
@@ -2467,7 +2484,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Pace_University_Logo.svg/330px-Pace_University_Logo.svg.png",
-    "wikipedia": "Pace University",
+    "wikipedia": "https://en.wikipedia.org/wiki/Pace_University",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/PaceUniversity.JPG?width=1000",
@@ -2492,7 +2509,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=umb.edu&sz=128",
-    "wikipedia": "University of Massachusetts Boston",
+    "wikipedia": "https://en.wikipedia.org/wiki/University_of_Massachusetts_Boston",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/UMass_Boston_campus.jpg?width=1000",
@@ -2519,7 +2536,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=senecapolytechnic.ca&sz=128",
-    "wikipedia": "Seneca Polytechnic",
+    "wikipedia": "https://en.wikipedia.org/wiki/Seneca_Polytechnic",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Seneca_CITE_Building_K_-_front_exterior_view.jpg?width=1000",
@@ -2546,7 +2563,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=langara.ca&sz=128",
-    "wikipedia": "Langara College",
+    "wikipedia": "https://en.wikipedia.org/wiki/Langara_College",
     "ranking": null,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/LangaraCollege2007-small.jpg?width=1000",
@@ -2570,7 +2587,7 @@
       "English"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/East_China_Normal_University_logo.svg/330px-East_China_Normal_University_logo.svg.png",
-    "wikipedia": "East China Normal University",
+    "wikipedia": "https://en.wikipedia.org/wiki/East_China_Normal_University",
     "ranking": 501,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/%E5%8D%8E%E4%B8%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E6%80%9D%E7%BE%A4%E5%A0%82.jpg?width=1000",
@@ -2596,7 +2613,7 @@
       "English"
     ],
     "logo": "https://www.google.com/s2/favicons?domain=scut.edu.cn&sz=128",
-    "wikipedia": "South China University of Technology",
+    "wikipedia": "https://en.wikipedia.org/wiki/South_China_University_of_Technology",
     "ranking": 437,
     "images": [
       "https://commons.wikimedia.org/wiki/Special:FilePath/South_China_University_of_Technology_South_Gate.jpg?width=1000"

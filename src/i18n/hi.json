@@ -290,7 +290,10 @@
     "reviewsCount": "{{count}} रेटिंग (संकेतात्मक)",
     "reviewsSampleTag": "नमूना समीक्षा",
     "reviewsOnGoogle": "Google Maps पर सभी समीक्षाएँ देखें",
-    "reviewsSampleNote": "प्रोटोटाइप के लिए नमूना समीक्षाएँ — असली Google समीक्षा फ़ीड लॉन्च पर जुड़ेगी।"
+    "reviewsSampleNote": "प्रोटोटाइप के लिए नमूना समीक्षाएँ — असली Google समीक्षा फ़ीड लॉन्च पर जुड़ेगी।",
+    "knowMore": "और जानें",
+    "prevPhoto": "पिछली फ़ोटो",
+    "nextPhoto": "अगली फ़ोटो"
   },
   "attraction": {
     "whatToDo": "क्या करें",

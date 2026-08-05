@@ -287,7 +287,10 @@
     "reviewsCount": "{{count}} คะแนน (โดยประมาณ)",
     "reviewsSampleTag": "รีวิวตัวอย่าง",
     "reviewsOnGoogle": "ดูรีวิวทั้งหมดใน Google Maps",
-    "reviewsSampleNote": "รีวิวตัวอย่างสำหรับต้นแบบ — รีวิว Google จริงจะเชื่อมต่อเมื่อเปิดตัว"
+    "reviewsSampleNote": "รีวิวตัวอย่างสำหรับต้นแบบ — รีวิว Google จริงจะเชื่อมต่อเมื่อเปิดตัว",
+    "knowMore": "รู้เพิ่มเติม",
+    "prevPhoto": "รูปก่อนหน้า",
+    "nextPhoto": "รูปถัดไป"
   },
   "attraction": {
     "whatToDo": "ทำอะไรได้บ้าง",

@@ -289,7 +289,10 @@
     "reviewsCount": "{{count}} 則評分（參考）",
     "reviewsSampleTag": "示例評價",
     "reviewsOnGoogle": "在 Google 地圖查看全部評價",
-    "reviewsSampleNote": "原型示例評價——正式版將接入真實的 Google 評價。"
+    "reviewsSampleNote": "原型示例評價——正式版將接入真實的 Google 評價。",
+    "knowMore": "了解更多",
+    "prevPhoto": "上一張照片",
+    "nextPhoto": "下一張照片"
   },
   "attraction": {
     "whatToDo": "玩什麼",
