@@ -264,7 +264,13 @@
     "dataChecked": "ตรวจสอบเมื่อ {{date}} — ยืนยันที่เว็บไซต์ทางการเสมอ",
     "scholarshipsTitle": "ทุนการศึกษา",
     "scholarshipsNone": "ยังไม่มีทุนของสถาบันนี้ — ทุนระดับประเทศอาจยังใช้ได้",
-    "scholarshipsCountry": "ทุนระดับประเทศที่นักศึกษาที่นี่ใช้ได้ด้วย:"
+    "scholarshipsCountry": "ทุนระดับประเทศที่นักศึกษาที่นี่ใช้ได้ด้วย:",
+    "photosCredit": "Wikimedia Commons",
+    "reviewsTitle": "รีวิวจากนักศึกษา",
+    "reviewsCount": "{{count}} คะแนน (โดยประมาณ)",
+    "reviewsSampleTag": "รีวิวตัวอย่าง",
+    "reviewsOnGoogle": "ดูรีวิวทั้งหมดใน Google Maps",
+    "reviewsSampleNote": "รีวิวตัวอย่างสำหรับต้นแบบ — รีวิว Google จริงจะเชื่อมต่อเมื่อเปิดตัว"
   },
   "attraction": {
     "whatToDo": "ทำอะไรได้บ้าง",

@@ -264,7 +264,13 @@
     "dataChecked": "{{date}} 확인 — 항상 공식 웹사이트에서 재확인하세요.",
     "scholarshipsTitle": "장학금",
     "scholarshipsNone": "이 학교 전용 장학금은 아직 없어요 — 국가 단위 장학금은 적용될 수 있어요.",
-    "scholarshipsCountry": "여기 학생도 쓸 수 있는 국가 단위 장학금:"
+    "scholarshipsCountry": "여기 학생도 쓸 수 있는 국가 단위 장학금:",
+    "photosCredit": "위키미디어 공용",
+    "reviewsTitle": "학생 리뷰",
+    "reviewsCount": "평점 {{count}}개 (참고용)",
+    "reviewsSampleTag": "샘플 리뷰",
+    "reviewsOnGoogle": "Google 지도에서 모든 리뷰 보기",
+    "reviewsSampleNote": "프로토타입용 샘플 리뷰 — 실제 Google 리뷰는 출시 때 연결돼요."
   },
   "attraction": {
     "whatToDo": "즐길 거리",

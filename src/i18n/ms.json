@@ -266,7 +266,13 @@
     "dataChecked": "Disemak {{date}} — sentiasa sahkan di laman web rasmi.",
     "scholarshipsTitle": "Biasiswa",
     "scholarshipsNone": "Tiada biasiswa disenaraikan untuk sekolah ini buat masa ini — anugerah seluruh negara mungkin masih layak.",
-    "scholarshipsCountry": "Anugerah seluruh negara yang turut boleh digunakan:"
+    "scholarshipsCountry": "Anugerah seluruh negara yang turut boleh digunakan:",
+    "photosCredit": "Wikimedia Commons",
+    "reviewsTitle": "Ulasan pelajar",
+    "reviewsCount": "{{count}} penilaian (anggaran)",
+    "reviewsSampleTag": "ulasan contoh",
+    "reviewsOnGoogle": "Lihat semua ulasan di Google Maps",
+    "reviewsSampleNote": "Ulasan contoh untuk prototaip — suapan ulasan Google sebenar disambungkan semasa pelancaran."
   },
   "attraction": {
     "whatToDo": "Apa yang boleh dibuat",

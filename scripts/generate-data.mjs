@@ -5,12 +5,22 @@
  * src/data/ is stable across runs. All institutions are fictional; cities and
  * attractions are real for flavour. Run with: npm run generate-data
  */
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', 'src', 'data');
+const HERE = dirname(fileURLToPath(import.meta.url));
+const OUT = join(HERE, '..', 'src', 'data');
 mkdirSync(OUT, { recursive: true });
+
+// Extra facility/surroundings photos harvested from each school's Commons
+// category (scripts/harvest pipeline); merged after the curated hero shot.
+let PHOTO_EXTRA = {};
+try {
+  PHOTO_EXTRA = JSON.parse(readFileSync(join(HERE, 'inst-photo-extra.json'), 'utf8'));
+} catch {
+  /* optional file — heroes alone are fine */
+}
 
 // Fixed "today" for intake/deadline computation — keeps output deterministic.
 const NOW = { year: 2026, month: 8 };
@@ -760,7 +770,8 @@ const institutions = INSTITUTIONS.map(([id, name, short, country, city, type, ve
   wikipedia: INST_META[id][0],
   ranking: INST_META[id][1],
   // Real, byte-verified photos only — no random placeholder imagery.
-  images: [].concat(INST_PHOTO[id]).map(commonsPhoto),
+  // Curated hero first, then harvested facility/surroundings shots.
+  images: [...new Set([].concat(INST_PHOTO[id]).concat(PHOTO_EXTRA[id] ?? []))].map(commonsPhoto),
 }));
 {
   const missing = institutions.filter((i) => i.images.length === 0).map((i) => i.id);
@@ -1196,6 +1207,50 @@ const embassies = Object.fromEntries(
 );
 const safety = { emergencyLines: EMERGENCY_LINES, embassies };
 
+// ------------------------------------------------------------------ reviews
+// Indicative student ratings shown with a clear "sample" label — the live
+// Google reviews feed connects at launch (Places API). Tone stays fair:
+// mostly positive with one mild mixed review, never harsh claims about a
+// real school.
+const REVIEW_AUTHORS = [
+  ['Wei Ling', 'MY'], ['Arif', 'MY'], ['Mei Chen', 'TW'], ['Jun Ho', 'SG'], ['Sinta', 'ID'],
+  ['Thao', 'VN'], ['Yuxi', 'CN'], ['Nadia', 'MY'], ['Kevin', 'SG'], ['Putra', 'ID'],
+];
+const REVIEW_POS = [
+  'Lecturers actually reply to emails and the international office walked me through every visa step.',
+  'Campus is easy to get around and the library has more than enough quiet space even in exam weeks.',
+  'Orientation made it easy to find friends — clubs signed me up in my first week.',
+  'Facilities are modern and well-maintained; labs and study rooms are bookable through the app.',
+  'Great support for international students — airport pickup and a buddy programme in week one.',
+  'Classes are practical and industry-linked; my internship came through a campus career fair.',
+  'Food options around campus are affordable and halal/vegetarian choices are easy to find.',
+];
+const REVIEW_MIXED = [
+  'Good teaching overall, though popular electives fill fast — set an alarm for enrolment day.',
+  'Solid experience, but administration can be slow at peak periods; plan document requests early.',
+  'Loved the campus; housing nearby is tight at intake season so start looking early.',
+];
+const reviews = Object.fromEntries(institutions.map((inst, i) => {
+  const rating = Math.round((4.0 + rand() * 0.8) * 10) / 10;
+  const count = 120 + Math.floor(rand() * 900);
+  const pick = (arr, k) => arr[(i * 3 + k) % arr.length];
+  const mk = (k, stars, text) => {
+    const [author, homeCountry] = REVIEW_AUTHORS[(i * 2 + k) % REVIEW_AUTHORS.length];
+    return {
+      author, homeCountry, stars, text,
+      date: `2026-0${(k * 2 + (i % 3)) % 6 + 1}-${String(4 + ((i * 5 + k * 9) % 24)).padStart(2, '0')}`,
+    };
+  };
+  return [inst.id, {
+    rating, count,
+    reviews: [
+      mk(0, 5, pick(REVIEW_POS, 0)),
+      mk(1, 4, pick(REVIEW_POS, 1)),
+      mk(2, rating >= 4.5 ? 4 : 3, pick(REVIEW_MIXED, 2)),
+    ],
+  }];
+}));
+
 // ----------------------------------------------------------------- community
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const groupInsts = ['au-monash', 'au-unsw', 'my-um', 'my-taylors', 'tw-ntu', 'gb-manchester', 'sg-nus', 'nz-auckland', 'ru-itmo', 'us-nyu', 'ca-utoronto', 'cn-tsinghua'];
@@ -1571,6 +1626,7 @@ const files = {
   'studentLife.json': studentLife,
   'support.json': support,
   'safety.json': safety,
+  'reviews.json': reviews,
 };
 for (const [file, data] of Object.entries(files)) {
   writeFileSync(join(OUT, file), JSON.stringify(data, null, 2) + '\n');

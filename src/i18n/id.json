@@ -264,7 +264,13 @@
     "dataChecked": "Diperiksa {{date}} — selalu konfirmasi di situs resmi.",
     "scholarshipsTitle": "Beasiswa",
     "scholarshipsNone": "Belum ada beasiswa terdaftar untuk sekolah ini — beasiswa tingkat negara mungkin tetap berlaku.",
-    "scholarshipsCountry": "Beasiswa tingkat negara yang juga bisa dipakai:"
+    "scholarshipsCountry": "Beasiswa tingkat negara yang juga bisa dipakai:",
+    "photosCredit": "Wikimedia Commons",
+    "reviewsTitle": "Ulasan pelajar",
+    "reviewsCount": "{{count}} penilaian (indikatif)",
+    "reviewsSampleTag": "ulasan contoh",
+    "reviewsOnGoogle": "Lihat semua ulasan di Google Maps",
+    "reviewsSampleNote": "Ulasan contoh untuk prototipe — feed ulasan Google asli terhubung saat rilis."
   },
   "attraction": {
     "whatToDo": "Ngapain di sini",

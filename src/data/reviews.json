@@ -1,0 +1,2756 @@
+{
+  "au-monash": {
+    "rating": 4.8,
+    "count": 283,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-01-04"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-03-13"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-22"
+      }
+    ]
+  },
+  "au-sydney": {
+    "rating": 4.5,
+    "count": 757,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-02-09"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-04-18"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-27"
+      }
+    ]
+  },
+  "au-uq": {
+    "rating": 4.5,
+    "count": 611,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-03-14"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-05-23"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-08"
+      }
+    ]
+  },
+  "au-unsw": {
+    "rating": 4.5,
+    "count": 926,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-01-19"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-03-04"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-13"
+      }
+    ]
+  },
+  "au-unimelb": {
+    "rating": 4.6,
+    "count": 120,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-02-24"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-04-09"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-18"
+      }
+    ]
+  },
+  "au-rmit": {
+    "rating": 4,
+    "count": 206,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-03-05"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-05-14"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-23"
+      }
+    ]
+  },
+  "my-um": {
+    "rating": 4.7,
+    "count": 120,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-01-10"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-03-19"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-04"
+      }
+    ]
+  },
+  "my-taylors": {
+    "rating": 4,
+    "count": 591,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-02-15"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-04-24"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-09"
+      }
+    ]
+  },
+  "my-sunway": {
+    "rating": 4,
+    "count": 790,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-03-20"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-05-05"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-14"
+      }
+    ]
+  },
+  "my-mmu": {
+    "rating": 4.5,
+    "count": 121,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-01-25"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-03-10"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-19"
+      }
+    ]
+  },
+  "my-usm": {
+    "rating": 4.3,
+    "count": 863,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-02-06"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-04-15"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-24"
+      }
+    ]
+  },
+  "my-utm": {
+    "rating": 4.3,
+    "count": 298,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-03-11"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-05-20"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-05"
+      }
+    ]
+  },
+  "tw-ntu": {
+    "rating": 4.6,
+    "count": 707,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-01-16"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-03-25"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-10"
+      }
+    ]
+  },
+  "tw-nthu": {
+    "rating": 4,
+    "count": 683,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-02-21"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-04-06"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-15"
+      }
+    ]
+  },
+  "tw-fcu": {
+    "rating": 4.5,
+    "count": 885,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-03-26"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-05-11"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-20"
+      }
+    ]
+  },
+  "tw-nsysu": {
+    "rating": 4.5,
+    "count": 493,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-01-07"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-03-16"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-25"
+      }
+    ]
+  },
+  "gb-manchester": {
+    "rating": 4.5,
+    "count": 490,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-02-12"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-04-21"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-06"
+      }
+    ]
+  },
+  "gb-leeds": {
+    "rating": 4.5,
+    "count": 295,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-03-17"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-05-26"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-11"
+      }
+    ]
+  },
+  "gb-birmingham": {
+    "rating": 4.1,
+    "count": 756,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-01-22"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-03-07"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-16"
+      }
+    ]
+  },
+  "gb-ucl": {
+    "rating": 4.6,
+    "count": 373,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-02-27"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-04-12"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-21"
+      }
+    ]
+  },
+  "gb-kcl": {
+    "rating": 4.7,
+    "count": 968,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-03-08"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-05-17"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-26"
+      }
+    ]
+  },
+  "gb-edinburgh": {
+    "rating": 4.3,
+    "count": 656,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-01-13"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-03-22"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-07"
+      }
+    ]
+  },
+  "sg-nus": {
+    "rating": 4.3,
+    "count": 719,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-02-18"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-04-27"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-12"
+      }
+    ]
+  },
+  "sg-ntusg": {
+    "rating": 4.8,
+    "count": 922,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-03-23"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-05-08"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-17"
+      }
+    ]
+  },
+  "sg-smu": {
+    "rating": 4.6,
+    "count": 429,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-01-04"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-03-13"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-22"
+      }
+    ]
+  },
+  "sg-sim": {
+    "rating": 4.7,
+    "count": 577,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-02-09"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-04-18"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-27"
+      }
+    ]
+  },
+  "nz-auckland": {
+    "rating": 4.7,
+    "count": 329,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-03-14"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-05-23"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-08"
+      }
+    ]
+  },
+  "nz-vuw": {
+    "rating": 4.1,
+    "count": 407,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-01-19"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-03-04"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-13"
+      }
+    ]
+  },
+  "nz-canterbury": {
+    "rating": 4.8,
+    "count": 575,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-02-24"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-04-09"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-18"
+      }
+    ]
+  },
+  "nz-otago": {
+    "rating": 4.8,
+    "count": 139,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-03-05"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-05-14"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-23"
+      }
+    ]
+  },
+  "ru-msu": {
+    "rating": 4.5,
+    "count": 663,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-01-10"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-03-19"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-04"
+      }
+    ]
+  },
+  "ru-itmo": {
+    "rating": 4.8,
+    "count": 345,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-02-15"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-04-24"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-09"
+      }
+    ]
+  },
+  "ru-kfu": {
+    "rating": 4.8,
+    "count": 321,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-03-20"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-05-05"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-14"
+      }
+    ]
+  },
+  "ru-nsu": {
+    "rating": 4.8,
+    "count": 395,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-01-25"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-03-10"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-19"
+      }
+    ]
+  },
+  "us-mit": {
+    "rating": 4.4,
+    "count": 470,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-02-06"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-04-15"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-24"
+      }
+    ]
+  },
+  "us-bu": {
+    "rating": 4.2,
+    "count": 378,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-03-11"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-05-20"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-05"
+      }
+    ]
+  },
+  "us-nyu": {
+    "rating": 4.8,
+    "count": 684,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-01-16"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-03-25"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-10"
+      }
+    ]
+  },
+  "us-ucla": {
+    "rating": 4.3,
+    "count": 579,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-02-21"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-04-06"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-15"
+      }
+    ]
+  },
+  "us-uchicago": {
+    "rating": 4.3,
+    "count": 521,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-03-26"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-05-11"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-20"
+      }
+    ]
+  },
+  "us-smc": {
+    "rating": 4.1,
+    "count": 633,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-01-07"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-03-16"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-25"
+      }
+    ]
+  },
+  "us-ice": {
+    "rating": 4.7,
+    "count": 713,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-02-12"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-04-21"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-06"
+      }
+    ]
+  },
+  "ca-utoronto": {
+    "rating": 4.4,
+    "count": 919,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-03-17"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-05-26"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-11"
+      }
+    ]
+  },
+  "ca-ubc": {
+    "rating": 4.5,
+    "count": 888,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-01-22"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-03-07"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-16"
+      }
+    ]
+  },
+  "ca-mcgill": {
+    "rating": 4.4,
+    "count": 687,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-02-27"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-04-12"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-21"
+      }
+    ]
+  },
+  "ca-york": {
+    "rating": 4.4,
+    "count": 649,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-03-08"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-05-17"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-26"
+      }
+    ]
+  },
+  "ca-georgebrown": {
+    "rating": 4.5,
+    "count": 683,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-01-13"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-03-22"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-07"
+      }
+    ]
+  },
+  "cn-tsinghua": {
+    "rating": 4.3,
+    "count": 275,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-02-18"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-04-27"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-12"
+      }
+    ]
+  },
+  "cn-pku": {
+    "rating": 4,
+    "count": 759,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-03-23"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-05-08"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-17"
+      }
+    ]
+  },
+  "cn-fudan": {
+    "rating": 4.3,
+    "count": 413,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-01-04"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-03-13"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-22"
+      }
+    ]
+  },
+  "cn-sysu": {
+    "rating": 4,
+    "count": 232,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-02-09"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-04-18"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-27"
+      }
+    ]
+  },
+  "cn-bhi": {
+    "rating": 4.5,
+    "count": 373,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-03-14"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-05-23"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-08"
+      }
+    ]
+  },
+  "au-angliss": {
+    "rating": 4,
+    "count": 533,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-01-19"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-03-04"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-13"
+      }
+    ]
+  },
+  "my-berjaya": {
+    "rating": 4.6,
+    "count": 242,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-02-24"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-04-09"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-18"
+      }
+    ]
+  },
+  "tw-nkuht": {
+    "rating": 4.6,
+    "count": 313,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-03-05"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-05-14"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-23"
+      }
+    ]
+  },
+  "gb-lcb": {
+    "rating": 4.2,
+    "count": 678,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-01-10"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-03-19"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-04"
+      }
+    ]
+  },
+  "nz-lcb": {
+    "rating": 4.3,
+    "count": 434,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-02-15"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-04-24"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-09"
+      }
+    ]
+  },
+  "sg-shatec": {
+    "rating": 4.5,
+    "count": 541,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-03-20"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-05-05"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-14"
+      }
+    ]
+  },
+  "my-monash": {
+    "rating": 4.7,
+    "count": 195,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-01-25"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-03-10"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-19"
+      }
+    ]
+  },
+  "cn-nyush": {
+    "rating": 4.2,
+    "count": 431,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-02-06"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-04-15"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-24"
+      }
+    ]
+  },
+  "gb-imperial": {
+    "rating": 4.7,
+    "count": 892,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-03-11"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-05-20"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-05"
+      }
+    ]
+  },
+  "au-uts": {
+    "rating": 4.8,
+    "count": 539,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-01-16"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-03-25"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-10"
+      }
+    ]
+  },
+  "my-ucsi": {
+    "rating": 4.1,
+    "count": 715,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-02-21"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-04-06"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-15"
+      }
+    ]
+  },
+  "tw-ntust": {
+    "rating": 4.5,
+    "count": 796,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-03-26"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-05-11"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-20"
+      }
+    ]
+  },
+  "sg-tp": {
+    "rating": 4.8,
+    "count": 484,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-01-07"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-03-16"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-25"
+      }
+    ]
+  },
+  "nz-aut": {
+    "rating": 4.3,
+    "count": 266,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-02-12"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-04-21"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-06"
+      }
+    ]
+  },
+  "ru-hse": {
+    "rating": 4.7,
+    "count": 635,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-03-17"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-05-26"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-11"
+      }
+    ]
+  },
+  "us-columbia": {
+    "rating": 4.1,
+    "count": 151,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-01-22"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-03-07"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-16"
+      }
+    ]
+  },
+  "us-northeastern": {
+    "rating": 4.7,
+    "count": 205,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-02-27"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-04-12"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-21"
+      }
+    ]
+  },
+  "us-fit": {
+    "rating": 4.4,
+    "count": 590,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-03-08"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-05-17"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-26"
+      }
+    ]
+  },
+  "us-iit": {
+    "rating": 4.5,
+    "count": 998,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-01-13"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-03-22"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-07"
+      }
+    ]
+  },
+  "ca-tmu": {
+    "rating": 4.4,
+    "count": 727,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-02-18"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-04-27"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-12"
+      }
+    ]
+  },
+  "ca-sfu": {
+    "rating": 4.4,
+    "count": 930,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-03-23"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-05-08"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-17"
+      }
+    ]
+  },
+  "ca-concordia": {
+    "rating": 4.7,
+    "count": 199,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-01-04"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-03-13"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-22"
+      }
+    ]
+  },
+  "ca-vcc": {
+    "rating": 4.2,
+    "count": 948,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-02-09"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-04-18"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-27"
+      }
+    ]
+  },
+  "cn-sjtu": {
+    "rating": 4.3,
+    "count": 752,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-03-14"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-05-23"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-08"
+      }
+    ]
+  },
+  "cn-tongji": {
+    "rating": 4.4,
+    "count": 516,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-01-19"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-03-04"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-13"
+      }
+    ]
+  },
+  "cn-bnu": {
+    "rating": 4.3,
+    "count": 454,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-02-24"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-04-09"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-18"
+      }
+    ]
+  },
+  "cn-jnu": {
+    "rating": 4.3,
+    "count": 700,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-03-05"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-05-14"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-23"
+      }
+    ]
+  },
+  "au-deakin": {
+    "rating": 4.7,
+    "count": 913,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-01-10"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-03-19"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-04"
+      }
+    ]
+  },
+  "au-macquarie": {
+    "rating": 4.2,
+    "count": 650,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-02-15"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-04-24"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-09"
+      }
+    ]
+  },
+  "au-griffith": {
+    "rating": 4.4,
+    "count": 585,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-03-20"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-05-05"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-14"
+      }
+    ]
+  },
+  "au-holmesglen": {
+    "rating": 4.6,
+    "count": 634,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-01-25"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-03-10"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-19"
+      }
+    ]
+  },
+  "my-apu": {
+    "rating": 4.3,
+    "count": 1017,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-02-06"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-04-15"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-24"
+      }
+    ]
+  },
+  "my-help": {
+    "rating": 4.2,
+    "count": 506,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-03-11"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-05-20"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-05"
+      }
+    ]
+  },
+  "my-inti": {
+    "rating": 4,
+    "count": 259,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-01-16"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-03-25"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-10"
+      }
+    ]
+  },
+  "tw-nccu": {
+    "rating": 4,
+    "count": 229,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-02-21"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-04-06"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-15"
+      }
+    ]
+  },
+  "tw-tku": {
+    "rating": 4.3,
+    "count": 809,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-03-26"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-05-11"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-20"
+      }
+    ]
+  },
+  "gb-lse": {
+    "rating": 4.4,
+    "count": 526,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-01-07"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-03-16"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-25"
+      }
+    ]
+  },
+  "gb-kingston": {
+    "rating": 4.3,
+    "count": 1017,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-02-12"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-04-21"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-06"
+      }
+    ]
+  },
+  "sg-sit": {
+    "rating": 4.6,
+    "count": 514,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-03-17"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-05-26"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-11"
+      }
+    ]
+  },
+  "sg-np": {
+    "rating": 4.3,
+    "count": 794,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-01-22"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-03-07"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-16"
+      }
+    ]
+  },
+  "nz-massey": {
+    "rating": 4.2,
+    "count": 645,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-02-27"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-04-12"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-21"
+      }
+    ]
+  },
+  "nz-lincoln": {
+    "rating": 4.2,
+    "count": 221,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-03-08"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-05-17"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-26"
+      }
+    ]
+  },
+  "ru-spbu": {
+    "rating": 4.7,
+    "count": 460,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-01-13"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-03-22"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-07"
+      }
+    ]
+  },
+  "ru-mipt": {
+    "rating": 4.1,
+    "count": 973,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-02-18"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-04-27"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-12"
+      }
+    ]
+  },
+  "us-depaul": {
+    "rating": 4,
+    "count": 797,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-03-23"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-05-08"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-17"
+      }
+    ]
+  },
+  "us-pace": {
+    "rating": 4.5,
+    "count": 178,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-01-04"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-03-13"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-22"
+      }
+    ]
+  },
+  "us-umb": {
+    "rating": 4.5,
+    "count": 908,
+    "reviews": [
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 5,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-02-09"
+      },
+      {
+        "author": "Thao",
+        "homeCountry": "VN",
+        "stars": 4,
+        "text": "Classes are practical and industry-linked; my internship came through a campus career fair.",
+        "date": "2026-04-18"
+      },
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 4,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-27"
+      }
+    ]
+  },
+  "ca-seneca": {
+    "rating": 4.2,
+    "count": 878,
+    "reviews": [
+      {
+        "author": "Yuxi",
+        "homeCountry": "CN",
+        "stars": 5,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-03-14"
+      },
+      {
+        "author": "Nadia",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Campus is easy to get around and the library has more than enough quiet space even in exam weeks.",
+        "date": "2026-05-23"
+      },
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-08"
+      }
+    ]
+  },
+  "ca-langara": {
+    "rating": 4.2,
+    "count": 994,
+    "reviews": [
+      {
+        "author": "Kevin",
+        "homeCountry": "SG",
+        "stars": 5,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-01-19"
+      },
+      {
+        "author": "Putra",
+        "homeCountry": "ID",
+        "stars": 4,
+        "text": "Great support for international students — airport pickup and a buddy programme in week one.",
+        "date": "2026-03-04"
+      },
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-05-13"
+      }
+    ]
+  },
+  "cn-ecnu": {
+    "rating": 4.4,
+    "count": 495,
+    "reviews": [
+      {
+        "author": "Wei Ling",
+        "homeCountry": "MY",
+        "stars": 5,
+        "text": "Food options around campus are affordable and halal/vegetarian choices are easy to find.",
+        "date": "2026-02-24"
+      },
+      {
+        "author": "Arif",
+        "homeCountry": "MY",
+        "stars": 4,
+        "text": "Lecturers actually reply to emails and the international office walked me through every visa step.",
+        "date": "2026-04-09"
+      },
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-06-18"
+      }
+    ]
+  },
+  "cn-scut": {
+    "rating": 4,
+    "count": 475,
+    "reviews": [
+      {
+        "author": "Mei Chen",
+        "homeCountry": "TW",
+        "stars": 5,
+        "text": "Orientation made it easy to find friends — clubs signed me up in my first week.",
+        "date": "2026-03-05"
+      },
+      {
+        "author": "Jun Ho",
+        "homeCountry": "SG",
+        "stars": 4,
+        "text": "Facilities are modern and well-maintained; labs and study rooms are bookable through the app.",
+        "date": "2026-05-14"
+      },
+      {
+        "author": "Sinta",
+        "homeCountry": "ID",
+        "stars": 3,
+        "text": "Loved the campus; housing nearby is tight at intake season so start looking early.",
+        "date": "2026-01-23"
+      }
+    ]
+  }
+}

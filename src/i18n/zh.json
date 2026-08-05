@@ -266,7 +266,13 @@
     "dataChecked": "核对于 {{date}}——请以官网为准。",
     "scholarshipsTitle": "奖学金",
     "scholarshipsNone": "该校暂无专属奖学金——全国性奖学金可能仍然适用。",
-    "scholarshipsCountry": "在这里就读也可申请的全国性奖学金："
+    "scholarshipsCountry": "在这里就读也可申请的全国性奖学金：",
+    "photosCredit": "维基共享资源",
+    "reviewsTitle": "学生评价",
+    "reviewsCount": "{{count}} 条评分（参考）",
+    "reviewsSampleTag": "示例评价",
+    "reviewsOnGoogle": "在 Google 地图查看全部评价",
+    "reviewsSampleNote": "原型示例评价——正式版将接入真实的 Google 评价。"
   },
   "attraction": {
     "whatToDo": "玩什么",

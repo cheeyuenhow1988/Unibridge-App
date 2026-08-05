@@ -19,10 +19,11 @@ import flightsData from '@/data/flights.json';
 import studentLifeData from '@/data/studentLife.json';
 import supportData from '@/data/support.json';
 import safetyData from '@/data/safety.json';
+import reviewsData from '@/data/reviews.json';
 import type {
   Ambassador, Application, Attraction, CityInfo, CommunityEvent, CostOfLiving, CountryCode, Course,
   Coursemate, DocumentTypeId, FlightFares, GroupMessage, Institution, IntakeGroup, PredepartureItem,
-  QualificationSystem, SafetyBundle, Scholarship, StudentLife, StudentProfile, SupportBundle, WorkRights,
+  QualificationSystem, SafetyBundle, Scholarship, SchoolReviews, StudentLife, StudentProfile, SupportBundle, WorkRights,
 } from '@/types/models';
 
 const institutions = institutionsData as Institution[];
@@ -97,6 +98,10 @@ export async function getSupportBundle(): Promise<SupportBundle> {
 
 export async function getSafety(): Promise<SafetyBundle> {
   return simulate(safetyData as unknown as SafetyBundle, 100);
+}
+
+export async function getSchoolReviews(institutionId: string): Promise<SchoolReviews | undefined> {
+  return simulate((reviewsData as unknown as Record<string, SchoolReviews>)[institutionId], 120);
 }
 
 export async function listScholarships(): Promise<Scholarship[]> {

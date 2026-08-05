@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { router, useLocalSearchParams } from 'expo-router';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Alert, Linking, Pressable, ScrollView, View, useWindowDimensions } from 'react-native';
 import { AmbassadorStrip } from '@/components/explore/AmbassadorStrip';
@@ -19,7 +20,7 @@ import { FLAGS } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
-import { getInstitution, listCoursesByInstitution, listScholarships } from '@/services/api';
+import { getInstitution, getSchoolReviews, listCoursesByInstitution, listScholarships } from '@/services/api';
 import { formatDual, homeCurrencyFor } from '@/services/currency';
 import { useProfileStore } from '@/store/useProfileStore';
 import type { QualificationId } from '@/types/models';
@@ -44,6 +45,8 @@ export default function InstitutionDetail() {
     async () => Promise.all([getInstitution(id), listCoursesByInstitution(id), listScholarships()]),
     [id],
   );
+  const reviews = useAsync(() => getSchoolReviews(id), [id]);
+  const [photoIdx, setPhotoIdx] = useState(0);
 
   if (state.loading) {
     return (
@@ -83,11 +86,28 @@ export default function InstitutionDetail() {
     <Screen padded={false} edges={[]}>
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: spacing.xxxl }}>
         <View>
-          <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false}>
+          <ScrollView
+            horizontal
+            pagingEnabled
+            showsHorizontalScrollIndicator={false}
+            onMomentumScrollEnd={(e) => setPhotoIdx(Math.round(e.nativeEvent.contentOffset.x / width))}
+          >
             {institution.images.map((img) => (
               <Image key={img} source={{ uri: img }} style={{ width, height: 240 }} contentFit="cover" transition={250} />
             ))}
           </ScrollView>
+          {institution.images.length > 1 ? (
+            <View
+              style={{
+                position: 'absolute', bottom: 10, right: spacing.lg, backgroundColor: 'rgba(0,0,0,0.55)',
+                borderRadius: radius.full, paddingHorizontal: 10, paddingVertical: 3,
+              }}
+            >
+              <Text variant="caption" color="#FFFFFF">
+                {Math.min(photoIdx + 1, institution.images.length)}/{institution.images.length} · {t('institution.photosCredit')}
+              </Text>
+            </View>
+          ) : null}
           <Pressable
             accessibilityRole="button"
             accessibilityLabel={t('common.back')}
@@ -229,6 +249,59 @@ export default function InstitutionDetail() {
               </Text>
             </View>
           )}
+
+          <SectionHeader title={t('institution.reviewsTitle')} />
+          {reviews.data ? (
+            <Card style={{ gap: spacing.md }}>
+              <Row gap={spacing.md}>
+                <Text variant="display" tone="accent">{reviews.data.rating.toFixed(1)}</Text>
+                <View style={{ flex: 1, gap: 2 }}>
+                  <Row gap={2}>
+                    {[1, 2, 3, 4, 5].map((n) => (
+                      <Ionicons
+                        key={n}
+                        name={reviews.data!.rating >= n - 0.25 ? 'star' : reviews.data!.rating >= n - 0.75 ? 'star-half' : 'star-outline'}
+                        size={16}
+                        color="#F2A93B"
+                      />
+                    ))}
+                  </Row>
+                  <Text variant="caption" tone="faint">
+                    {t('institution.reviewsCount', { count: reviews.data.count })}
+                  </Text>
+                </View>
+              </Row>
+              {reviews.data.reviews.map((r) => (
+                <View key={r.author + r.date} style={{ gap: 3, borderTopWidth: 1, borderTopColor: colors.border, paddingTop: spacing.md }}>
+                  <Row style={{ justifyContent: 'space-between' }}>
+                    <Row gap={6}>
+                      <Text variant="label">{r.author}</Text>
+                      <Text variant="caption" tone="faint">{FLAGS[r.homeCountry]}</Text>
+                    </Row>
+                    <Row gap={1}>
+                      {[1, 2, 3, 4, 5].map((n) => (
+                        <Ionicons key={n} name={n <= r.stars ? 'star' : 'star-outline'} size={12} color="#F2A93B" />
+                      ))}
+                    </Row>
+                  </Row>
+                  <Text variant="caption" tone="secondary">{r.text}</Text>
+                  <Text variant="micro" tone="faint">{r.date} · {t('institution.reviewsSampleTag')}</Text>
+                </View>
+              ))}
+              <Button
+                label={t('institution.reviewsOnGoogle')}
+                icon="logo-google"
+                variant="secondary"
+                size="sm"
+                onPress={() =>
+                  void Linking.openURL(
+                    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${institution.name} ${institution.city}`)}`,
+                  )
+                }
+              />
+              <Text variant="caption" tone="faint">{t('institution.reviewsSampleNote')}</Text>
+            </Card>
+          ) : null}
 
           {institution.campuses?.length ? (
             <>

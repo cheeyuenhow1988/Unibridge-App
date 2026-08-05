@@ -264,7 +264,13 @@
     "dataChecked": "{{date}}確認 — 必ず公式サイトでご確認ください。",
     "scholarshipsTitle": "奨学金",
     "scholarshipsNone": "この学校の奨学金は現在未掲載 — 国全体の奨学金は対象になる場合があります。",
-    "scholarshipsCountry": "ここの学生も使える国全体の奨学金："
+    "scholarshipsCountry": "ここの学生も使える国全体の奨学金：",
+    "photosCredit": "ウィキメディア・コモンズ",
+    "reviewsTitle": "学生レビュー",
+    "reviewsCount": "{{count}}件の評価（参考）",
+    "reviewsSampleTag": "サンプルレビュー",
+    "reviewsOnGoogle": "Googleマップで全レビューを見る",
+    "reviewsSampleNote": "プロトタイプ用のサンプルレビュー — 実際のGoogleレビューはリリース時に接続。"
   },
   "attraction": {
     "whatToDo": "楽しみ方",

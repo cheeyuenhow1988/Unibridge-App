@@ -266,7 +266,13 @@
     "dataChecked": "核對於 {{date}}——請以官網為準。",
     "scholarshipsTitle": "獎學金",
     "scholarshipsNone": "該校暫無專屬獎學金——全國性獎學金可能仍然適用。",
-    "scholarshipsCountry": "在這裡就讀也可申請的全國性獎學金："
+    "scholarshipsCountry": "在這裡就讀也可申請的全國性獎學金：",
+    "photosCredit": "維基共享資源",
+    "reviewsTitle": "學生評價",
+    "reviewsCount": "{{count}} 則評分（參考）",
+    "reviewsSampleTag": "示例評價",
+    "reviewsOnGoogle": "在 Google 地圖查看全部評價",
+    "reviewsSampleNote": "原型示例評價——正式版將接入真實的 Google 評價。"
   },
   "attraction": {
     "whatToDo": "玩什麼",

@@ -264,7 +264,13 @@
     "dataChecked": "Kiểm tra {{date}} — luôn xác nhận trên trang web chính thức.",
     "scholarshipsTitle": "Học bổng",
     "scholarshipsNone": "Chưa có học bổng nào cho trường này — học bổng toàn quốc có thể vẫn áp dụng.",
-    "scholarshipsCountry": "Học bổng toàn quốc sinh viên ở đây cũng dùng được:"
+    "scholarshipsCountry": "Học bổng toàn quốc sinh viên ở đây cũng dùng được:",
+    "photosCredit": "Wikimedia Commons",
+    "reviewsTitle": "Đánh giá của sinh viên",
+    "reviewsCount": "{{count}} lượt đánh giá (tham khảo)",
+    "reviewsSampleTag": "đánh giá mẫu",
+    "reviewsOnGoogle": "Xem mọi đánh giá trên Google Maps",
+    "reviewsSampleNote": "Đánh giá mẫu cho bản thử — nguồn đánh giá Google thật kết nối khi ra mắt."
   },
   "attraction": {
     "whatToDo": "Chơi gì ở đây",

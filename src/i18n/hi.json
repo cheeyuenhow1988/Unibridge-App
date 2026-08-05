@@ -267,7 +267,13 @@
     "dataChecked": "{{date}} को जाँचा गया — हमेशा आधिकारिक वेबसाइट पर पक्का करें।",
     "scholarshipsTitle": "छात्रवृत्तियाँ",
     "scholarshipsNone": "इस संस्थान की कोई छात्रवृत्ति अभी सूचीबद्ध नहीं — देशव्यापी छात्रवृत्तियाँ फिर भी लागू हो सकती हैं।",
-    "scholarshipsCountry": "देशव्यापी छात्रवृत्तियाँ जो यहाँ के छात्र भी ले सकते हैं:"
+    "scholarshipsCountry": "देशव्यापी छात्रवृत्तियाँ जो यहाँ के छात्र भी ले सकते हैं:",
+    "photosCredit": "Wikimedia Commons",
+    "reviewsTitle": "छात्र समीक्षाएँ",
+    "reviewsCount": "{{count}} रेटिंग (संकेतात्मक)",
+    "reviewsSampleTag": "नमूना समीक्षा",
+    "reviewsOnGoogle": "Google Maps पर सभी समीक्षाएँ देखें",
+    "reviewsSampleNote": "प्रोटोटाइप के लिए नमूना समीक्षाएँ — असली Google समीक्षा फ़ीड लॉन्च पर जुड़ेगी।"
   },
   "attraction": {
     "whatToDo": "क्या करें",

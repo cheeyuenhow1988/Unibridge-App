@@ -364,6 +364,23 @@ export interface PredepartureItem {
   category: 'visa' | 'money' | 'insurance' | 'housing' | 'sim' | 'banking' | 'other';
 }
 
+// ----------------------------------------------------------------- reviews
+
+export interface SchoolReview {
+  author: string;
+  homeCountry: HomeCountryCode;
+  stars: number;
+  text: string;
+  date: string;
+}
+
+export interface SchoolReviews {
+  /** Indicative average rating (sample data; live Google feed at launch). */
+  rating: number;
+  count: number;
+  reviews: SchoolReview[];
+}
+
 // ------------------------------------------------------------------ safety
 
 export interface EmergencyLines {

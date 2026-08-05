@@ -267,7 +267,13 @@
     "dataChecked": "Checked {{date}} — always confirm on the official website.",
     "scholarshipsTitle": "Scholarships",
     "scholarshipsNone": "No scholarships listed for this school right now — country-wide awards may still apply.",
-    "scholarshipsCountry": "Country-wide awards students here can also use:"
+    "scholarshipsCountry": "Country-wide awards students here can also use:",
+    "photosCredit": "Wikimedia Commons",
+    "reviewsTitle": "Student reviews",
+    "reviewsCount": "{{count}} ratings (indicative)",
+    "reviewsSampleTag": "sample review",
+    "reviewsOnGoogle": "See all reviews on Google Maps",
+    "reviewsSampleNote": "Sample reviews for the prototype — the live Google reviews feed connects at launch."
   },
   "attraction": {
     "whatToDo": "What to do",
