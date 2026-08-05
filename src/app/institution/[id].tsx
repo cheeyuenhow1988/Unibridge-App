@@ -33,7 +33,7 @@ const DATA_CHECKED = '2026-08';
 const QUAL_LABEL: Record<QualificationId, string> = {
   spm: 'SPM', stpm: 'STPM', uec: 'UEC', alevels: 'A-Levels', ib: 'IB',
   hkdse: 'HKDSE', gsat: 'GSAT', atar: 'ATAR', gpa: 'GPA',
-  sma: 'SMA', thpt: 'THPT', gaokao: 'Gaokao', cbse: 'CBSE', matric: 'Matric', krgpa: 'GPA (KR)', jpgpa: '評定 (JP)',
+  sma: 'SMA', thpt: 'THPT', gaokao: 'Gaokao', cbse: 'CBSE', shs: 'GWA', matric: 'Matric', krgpa: 'GPA (KR)', jpgpa: '評定 (JP)',
 };
 
 export default function InstitutionDetail() {

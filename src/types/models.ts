@@ -15,7 +15,7 @@ export type CourseLevel = 'foundation' | 'diploma' | 'bachelor';
 
 export type QualificationId =
   | 'spm' | 'stpm' | 'uec' | 'alevels' | 'ib' | 'hkdse' | 'gsat' | 'atar' | 'gpa'
-  | 'sma' | 'thpt' | 'matric' | 'krgpa' | 'jpgpa' | 'gaokao' | 'cbse';
+  | 'sma' | 'thpt' | 'matric' | 'krgpa' | 'jpgpa' | 'gaokao' | 'cbse' | 'shs';
 
 export type InstitutionType = 'university' | 'college' | 'institute';
 

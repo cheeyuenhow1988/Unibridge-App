@@ -440,5 +440,17 @@
     "max": 100,
     "decimals": 0,
     "borderlineDelta": 3
+  },
+  {
+    "id": "shs",
+    "name": "SHS GWA (Grade 12)",
+    "region": "Philippines (75-100)",
+    "mode": "total",
+    "direction": "higher",
+    "unit": "GWA (75-100)",
+    "min": 65,
+    "max": 100,
+    "decimals": 0,
+    "borderlineDelta": 3
   }
 ]

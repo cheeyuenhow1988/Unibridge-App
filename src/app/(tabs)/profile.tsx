@@ -190,16 +190,6 @@ export default function ProfileScreen() {
             </Row>
           </Card>
 
-          <Card onPress={() => router.push('/(tabs)/assistant')} style={{ gap: 4 }}>
-            <Row style={{ justifyContent: 'space-between' }}>
-              <Row gap={spacing.sm}>
-                <Ionicons name="sparkles" size={20} color={colors.accent} />
-                <Text variant="label">{t('assistant.title')}</Text>
-              </Row>
-              <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />
-            </Row>
-          </Card>
-
           <Card onPress={() => router.push('/rewards')} style={{ gap: 4 }}>
             <Row style={{ justifyContent: 'space-between' }}>
               <Row gap={spacing.sm}>

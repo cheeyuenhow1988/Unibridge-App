@@ -31,7 +31,7 @@ export const RENT_PERIOD: Record<CountryCode, 'week' | 'month'> = {
 export const RECOMMENDED_QUALS: Record<HomeCountryCode, QualificationId[]> = {
   MY: ['spm', 'stpm', 'uec'], TW: ['gsat'], SG: ['alevels'], ID: ['sma'], VN: ['thpt'],
   CN: ['gaokao'], MM: ['matric'], KR: ['krgpa'], JP: ['jpgpa'],
-  TH: ['gpa'], HK: ['hkdse'], IN: ['cbse'], PH: ['gpa'],
+  TH: ['gpa'], HK: ['hkdse'], IN: ['cbse'], PH: ['shs'],
 };
 
 /** Systems not tied to one country — kept when the home country changes. */

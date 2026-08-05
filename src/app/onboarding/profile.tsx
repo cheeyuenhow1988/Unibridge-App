@@ -11,6 +11,7 @@ import { FLAGS, HOME_COUNTRIES, INTERNATIONAL_QUALS, RECOMMENDED_QUALS } from '@
 import { spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { getQualificationSystems } from '@/services/api';
+import { useAuthStore } from '@/store/useAuthStore';
 import { useProfileStore } from '@/store/useProfileStore';
 import type { HomeCountryCode, QualificationId } from '@/types/models';
 
@@ -30,11 +31,13 @@ export default function ProfileSetup() {
   const { t } = useTranslation();
   const existing = useProfileStore((s) => s.profile);
   const setProfile = useProfileStore((s) => s.setProfile);
+  const account = useAuthStore((s) => s.account);
   const systems = useAsync(getQualificationSystems);
 
   const { control, handleSubmit, getValues, setValue } = useForm<FormValues>({
     defaultValues: {
-      name: existing?.name ?? '',
+      // Carry the sign-up name over — nobody should type it twice.
+      name: existing?.name ?? account?.name ?? '',
       homeCountry: existing?.homeCountry ?? 'MY',
       nationality: existing?.nationality ?? 'MY',
       qualification: existing?.qualification ?? 'spm',

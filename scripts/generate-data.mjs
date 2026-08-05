@@ -161,6 +161,10 @@ const QUALIFICATIONS = [
     id: 'cbse', name: 'CBSE / ISC Class XII', region: 'India (best-5 percentage)', mode: 'total', direction: 'higher',
     unit: 'percent (0-100)', min: 0, max: 100, decimals: 0, borderlineDelta: 3,
   },
+  {
+    id: 'shs', name: 'SHS GWA (Grade 12)', region: 'Philippines (75-100)', mode: 'total', direction: 'higher',
+    unit: 'GWA (75-100)', min: 65, max: 100, decimals: 0, borderlineDelta: 3,
+  },
 ].map((q) => ({ ...q, grades: q.grades?.map(([label, points]) => ({ label, points })) }));
 
 // Thresholds per band (index 0 = pathway programmes, 1–5 = selectivity).
@@ -181,6 +185,7 @@ const REQ_BANDS = {
   jpgpa: { t: [2.8, 3.0, 3.4, 3.8, 4.2, 4.6], d: (n) => `評定 ${n.toFixed(1)} / 5.0` },
   gaokao: { t: [420, 450, 500, 550, 600, 650], d: (n) => `Gaokao ${n} / 750` },
   cbse: { t: [55, 60, 70, 75, 85, 90], d: (n) => `${n}% (best 5)` },
+  shs: { t: [80, 82, 85, 88, 92, 95], d: (n) => `GWA ${n} / 100` },
 };
 
 function requirementsForBand(band) {
