@@ -356,5 +356,65 @@
     "max": 4,
     "decimals": 2,
     "borderlineDelta": 0.25
+  },
+  {
+    "id": "sma",
+    "name": "SMA / Ijazah",
+    "region": "Indonesia",
+    "mode": "total",
+    "direction": "higher",
+    "unit": "average (0-100)",
+    "min": 0,
+    "max": 100,
+    "decimals": 0,
+    "borderlineDelta": 3
+  },
+  {
+    "id": "thpt",
+    "name": "THPT GPA",
+    "region": "Vietnam",
+    "mode": "total",
+    "direction": "higher",
+    "unit": "GPA (0-10)",
+    "min": 0,
+    "max": 10,
+    "decimals": 1,
+    "borderlineDelta": 0.3
+  },
+  {
+    "id": "matric",
+    "name": "Matriculation",
+    "region": "Myanmar",
+    "mode": "total",
+    "direction": "higher",
+    "unit": "marks (0-600)",
+    "min": 0,
+    "max": 600,
+    "decimals": 0,
+    "borderlineDelta": 20
+  },
+  {
+    "id": "krgpa",
+    "name": "High School GPA (내신)",
+    "region": "South Korea (4.5 scale)",
+    "mode": "total",
+    "direction": "higher",
+    "unit": "GPA (0-4.5)",
+    "min": 0,
+    "max": 4.5,
+    "decimals": 1,
+    "borderlineDelta": 0.2
+  },
+  {
+    "id": "jpgpa",
+    "name": "Hyōtei Heikin 評定平均",
+    "region": "Japan (5.0 scale)",
+    "mode": "total",
+    "direction": "higher",
+    "unit": "average (0-5.0)",
+    "min": 0,
+    "max": 5,
+    "decimals": 1,
+    "borderlineDelta": 0.2
   }
 ]

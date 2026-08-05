@@ -71,7 +71,10 @@
     "VN": "Việt Nam",
     "CN": "Trung Quốc",
     "US": "Hoa Kỳ",
-    "CA": "Canada"
+    "CA": "Canada",
+    "MM": "Myanmar",
+    "KR": "Hàn Quốc",
+    "JP": "Nhật Bản"
   },
   "fields": {
     "business": "Kinh doanh",

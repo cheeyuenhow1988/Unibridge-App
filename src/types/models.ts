@@ -1,8 +1,8 @@
 export type CountryCode = 'AU' | 'MY' | 'TW' | 'GB' | 'SG' | 'NZ' | 'RU' | 'US' | 'CA' | 'CN';
-export type HomeCountryCode = 'MY' | 'TW' | 'SG' | 'ID' | 'VN' | 'CN';
+export type HomeCountryCode = 'MY' | 'TW' | 'SG' | 'ID' | 'VN' | 'CN' | 'MM' | 'KR' | 'JP';
 export type CurrencyCode =
   | 'AUD' | 'MYR' | 'TWD' | 'GBP' | 'SGD' | 'NZD' | 'RUB'
-  | 'IDR' | 'VND' | 'CNY' | 'USD' | 'CAD';
+  | 'IDR' | 'VND' | 'CNY' | 'USD' | 'CAD' | 'MMK' | 'KRW' | 'JPY';
 
 export type FieldId =
   | 'business' | 'engineering' | 'it' | 'health' | 'hospitality' | 'design' | 'law'
@@ -11,7 +11,8 @@ export type FieldId =
 export type CourseLevel = 'foundation' | 'diploma' | 'bachelor';
 
 export type QualificationId =
-  | 'spm' | 'stpm' | 'uec' | 'alevels' | 'ib' | 'hkdse' | 'gsat' | 'atar' | 'gpa';
+  | 'spm' | 'stpm' | 'uec' | 'alevels' | 'ib' | 'hkdse' | 'gsat' | 'atar' | 'gpa'
+  | 'sma' | 'thpt' | 'matric' | 'krgpa' | 'jpgpa';
 
 export type InstitutionType = 'university' | 'college' | 'institute';
 

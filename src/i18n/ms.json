@@ -73,7 +73,10 @@
     "VN": "Vietnam",
     "CN": "China",
     "US": "Amerika Syarikat",
-    "CA": "Kanada"
+    "CA": "Kanada",
+    "MM": "Myanmar",
+    "KR": "Korea Selatan",
+    "JP": "Jepun"
   },
   "fields": {
     "business": "Perniagaan",

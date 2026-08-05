@@ -92,6 +92,26 @@
         "address": "15 Coronation Drive, Yarralumla ACT",
         "phone": "+61 2 6228 0000",
         "afterHours": "+61 4 1900 0004"
+      },
+      "MM": {
+        "name": "Embassy of Myanmar",
+        "city": "Canberra",
+        "address": "22 Arkana Street, Yarralumla ACT",
+        "phone": "+61 2 6273 0000"
+      },
+      "KR": {
+        "name": "Embassy of the Republic of Korea",
+        "city": "Canberra",
+        "address": "113 Empire Circuit, Yarralumla ACT",
+        "phone": "+61 2 6270 4100",
+        "afterHours": "+61 4 1900 0005"
+      },
+      "JP": {
+        "name": "Embassy of Japan",
+        "city": "Canberra",
+        "address": "112 Empire Circuit, Yarralumla ACT",
+        "phone": "+61 2 6273 3244",
+        "afterHours": "+61 4 1900 0006"
       }
     },
     "MY": {
@@ -128,6 +148,26 @@
         "address": "229 Jalan Ampang",
         "phone": "+60 3 2143 0000",
         "afterHours": "+60 12 000 0004"
+      },
+      "MM": {
+        "name": "Embassy of Myanmar",
+        "city": "Kuala Lumpur",
+        "address": "8C Jalan Ampang Hilir",
+        "phone": "+60 3 4251 0000"
+      },
+      "KR": {
+        "name": "Embassy of the Republic of Korea",
+        "city": "Kuala Lumpur",
+        "address": "9 & 11 Jalan Nipah, Off Jalan Ampang",
+        "phone": "+60 3 4251 2336",
+        "afterHours": "+60 12 000 0005"
+      },
+      "JP": {
+        "name": "Embassy of Japan",
+        "city": "Kuala Lumpur",
+        "address": "11 Persiaran Stonor, Off Jalan Tun Razak",
+        "phone": "+60 3 2177 2600",
+        "afterHours": "+60 12 000 0006"
       }
     },
     "TW": {
@@ -161,6 +201,24 @@
         "city": "Taipei",
         "address": "Hotline service — no walk-in office",
         "phone": "+886 2 2712 0000"
+      },
+      "MM": {
+        "name": "Embassy of Myanmar, Bangkok (covers Taiwan)",
+        "city": "Bangkok",
+        "address": "132 Sathorn Nua Road",
+        "phone": "+66 2 233 0000"
+      },
+      "KR": {
+        "name": "Korean Mission in Taipei",
+        "city": "Taipei",
+        "address": "Room 1506, 333 Keelung Road Section 1",
+        "phone": "+886 2 2758 8320"
+      },
+      "JP": {
+        "name": "Japan–Taiwan Exchange Association",
+        "city": "Taipei",
+        "address": "28 Qingcheng Street, Songshan District",
+        "phone": "+886 2 2713 8000"
       }
     },
     "GB": {
@@ -203,6 +261,26 @@
         "address": "49-51 Portland Place",
         "phone": "+44 20 7299 0000",
         "afterHours": "+44 77 0000 0004"
+      },
+      "MM": {
+        "name": "Embassy of Myanmar",
+        "city": "London",
+        "address": "19A Charles Street, Mayfair",
+        "phone": "+44 20 7148 0000"
+      },
+      "KR": {
+        "name": "Embassy of the Republic of Korea",
+        "city": "London",
+        "address": "60 Buckingham Gate",
+        "phone": "+44 20 7227 5500",
+        "afterHours": "+44 77 0000 0005"
+      },
+      "JP": {
+        "name": "Embassy of Japan",
+        "city": "London",
+        "address": "101–104 Piccadilly",
+        "phone": "+44 20 7465 6500",
+        "afterHours": "+44 77 0000 0006"
       }
     },
     "SG": {
@@ -239,6 +317,24 @@
         "address": "150 Tanglin Road",
         "phone": "+65 6418 0000",
         "afterHours": "+65 8000 0003"
+      },
+      "MM": {
+        "name": "Embassy of Myanmar",
+        "city": "Singapore",
+        "address": "15 St. Martin's Drive",
+        "phone": "+65 6735 0000"
+      },
+      "KR": {
+        "name": "Embassy of the Republic of Korea",
+        "city": "Singapore",
+        "address": "47 Scotts Road, Goldbell Towers",
+        "phone": "+65 6256 1188"
+      },
+      "JP": {
+        "name": "Embassy of Japan",
+        "city": "Singapore",
+        "address": "16 Nassim Road",
+        "phone": "+65 6235 8855"
       }
     },
     "NZ": {
@@ -277,6 +373,24 @@
         "city": "Wellington",
         "address": "2-6 Glenmore Street, Kelburn",
         "phone": "+64 4 472 0000"
+      },
+      "MM": {
+        "name": "Embassy of Myanmar, Canberra (accredited to NZ)",
+        "city": "Canberra",
+        "address": "22 Arkana Street, Yarralumla ACT",
+        "phone": "+61 2 6273 0000"
+      },
+      "KR": {
+        "name": "Embassy of the Republic of Korea",
+        "city": "Wellington",
+        "address": "Level 11, 34–42 Manners Street",
+        "phone": "+64 4 473 9073"
+      },
+      "JP": {
+        "name": "Embassy of Japan",
+        "city": "Wellington",
+        "address": "Level 18, Majestic Centre, 100 Willis Street",
+        "phone": "+64 4 473 1540"
       }
     },
     "RU": {
@@ -315,6 +429,24 @@
         "city": "Moscow",
         "address": "Ulitsa Druzhby 6",
         "phone": "+7 499 143 0000"
+      },
+      "MM": {
+        "name": "Embassy of Myanmar",
+        "city": "Moscow",
+        "address": "Ulitsa Gertsena 41",
+        "phone": "+7 495 291 0000"
+      },
+      "KR": {
+        "name": "Embassy of the Republic of Korea",
+        "city": "Moscow",
+        "address": "Plyushchikha Ulitsa 56",
+        "phone": "+7 495 783 2727"
+      },
+      "JP": {
+        "name": "Embassy of Japan",
+        "city": "Moscow",
+        "address": "Grokholsky Pereulok 27",
+        "phone": "+7 495 229 2550"
       }
     },
     "US": {
@@ -357,6 +489,26 @@
         "address": "3505 International Place NW",
         "phone": "+1 202 495 0000",
         "afterHours": "+1 202 600 0004"
+      },
+      "MM": {
+        "name": "Embassy of Myanmar",
+        "city": "Washington DC",
+        "address": "2300 S Street NW",
+        "phone": "+1 202 332 0000"
+      },
+      "KR": {
+        "name": "Embassy of the Republic of Korea",
+        "city": "Washington DC",
+        "address": "2450 Massachusetts Avenue NW",
+        "phone": "+1 202 939 5600",
+        "afterHours": "+1 202 600 0005"
+      },
+      "JP": {
+        "name": "Embassy of Japan",
+        "city": "Washington DC",
+        "address": "2520 Massachusetts Avenue NW",
+        "phone": "+1 202 238 6700",
+        "afterHours": "+1 202 600 0006"
       }
     },
     "CA": {
@@ -396,6 +548,24 @@
         "city": "Ottawa",
         "address": "515 St. Patrick Street",
         "phone": "+1 613 789 0000"
+      },
+      "MM": {
+        "name": "Embassy of Myanmar",
+        "city": "Ottawa",
+        "address": "336 Island Park Drive",
+        "phone": "+1 613 232 0000"
+      },
+      "KR": {
+        "name": "Embassy of the Republic of Korea",
+        "city": "Ottawa",
+        "address": "150 Boteler Street",
+        "phone": "+1 613 244 5010"
+      },
+      "JP": {
+        "name": "Embassy of Japan",
+        "city": "Ottawa",
+        "address": "255 Sussex Drive",
+        "phone": "+1 613 241 8541"
       }
     },
     "CN": {
@@ -430,7 +600,25 @@
         "address": "32 Guanghua Road, Jianguomenwai",
         "phone": "+86 10 6532 1100"
       },
-      "CN": null
+      "CN": null,
+      "MM": {
+        "name": "Embassy of Myanmar",
+        "city": "Beijing",
+        "address": "6 Dongzhimenwai Da Jie, Chaoyang District",
+        "phone": "+86 10 6532 0359"
+      },
+      "KR": {
+        "name": "Embassy of the Republic of Korea",
+        "city": "Beijing",
+        "address": "20 Dongfang Dong Lu, Chaoyang District",
+        "phone": "+86 10 8531 0700"
+      },
+      "JP": {
+        "name": "Embassy of Japan",
+        "city": "Beijing",
+        "address": "1 Liangmaqiao Dong Jie, Chaoyang District",
+        "phone": "+86 10 8531 9800"
+      }
     }
   }
 }
