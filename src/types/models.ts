@@ -337,6 +337,10 @@ export interface Coursemate {
   arrivalDate?: string;
   /** Opted in to coordinating travel with coursemates. */
   travelOptIn?: boolean;
+  /** Mini-profile shown before connecting. */
+  age?: number;
+  /** What they hope to find here — keys into community.looking_* strings. */
+  lookingFor?: string[];
 }
 
 export interface CommunityEvent {

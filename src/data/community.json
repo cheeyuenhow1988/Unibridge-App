@@ -865,7 +865,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-02-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-au-monash-2",
@@ -876,7 +881,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-02-09",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-au-monash-3",
@@ -887,7 +897,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-02-16",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-au-monash-4",
@@ -898,7 +912,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-02-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-au-sydney-1",
@@ -909,7 +928,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-02-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-au-sydney-2",
@@ -920,7 +944,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-02-14",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-au-sydney-3",
@@ -931,7 +960,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-02-21",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-au-sydney-4",
@@ -942,7 +975,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-02-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-au-sydney-5",
@@ -953,7 +991,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-02-11",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-au-uq-1",
@@ -964,7 +1007,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-02-12",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-au-uq-2",
@@ -975,7 +1023,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-02-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-au-uq-3",
@@ -986,7 +1039,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-02-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-au-uq-4",
@@ -997,7 +1054,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-02-09",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-au-uq-5",
@@ -1008,7 +1070,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-02-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-au-uq-6",
@@ -1019,7 +1086,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-02-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-au-unsw-1",
@@ -1030,7 +1101,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-02-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-au-unsw-2",
@@ -1041,7 +1117,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-02-24",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-au-unsw-3",
@@ -1052,7 +1133,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-02-07",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-au-unsw-4",
@@ -1063,7 +1148,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-02-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-au-unimelb-1",
@@ -1074,7 +1164,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-02-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-au-unimelb-2",
@@ -1085,7 +1180,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-02-05",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-au-unimelb-3",
@@ -1096,7 +1196,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-02-12",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-au-unimelb-4",
@@ -1107,7 +1211,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-02-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-au-unimelb-5",
@@ -1118,7 +1227,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-02-02",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-au-rmit-1",
@@ -1129,7 +1243,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-02-03",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-au-rmit-2",
@@ -1140,7 +1259,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-02-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-au-rmit-3",
@@ -1151,7 +1275,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-02-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-au-rmit-4",
@@ -1162,7 +1290,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-02-24",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-au-rmit-5",
@@ -1173,7 +1306,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-02-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-au-rmit-6",
@@ -1184,7 +1322,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-02-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-my-um-1",
@@ -1195,7 +1337,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-my-um-2",
@@ -1206,7 +1353,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-01-15",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-my-um-3",
@@ -1217,7 +1369,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-01-22",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-my-um-4",
@@ -1228,7 +1384,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-01-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-my-taylors-1",
@@ -1239,7 +1400,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-01-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-my-taylors-2",
@@ -1250,7 +1416,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-my-taylors-3",
@@ -1261,7 +1432,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-01-03",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-my-taylors-4",
@@ -1272,7 +1447,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-01-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-my-taylors-5",
@@ -1283,7 +1463,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-17",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-my-sunway-1",
@@ -1294,7 +1479,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-18",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-my-sunway-2",
@@ -1305,7 +1495,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-my-sunway-3",
@@ -1316,7 +1511,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-my-sunway-4",
@@ -1327,7 +1526,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-01-15",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-my-sunway-5",
@@ -1338,7 +1542,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-01-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-my-sunway-6",
@@ -1349,7 +1558,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-01-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-my-mmu-1",
@@ -1360,7 +1573,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-01-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-my-mmu-2",
@@ -1371,7 +1589,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-01-06",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-my-mmu-3",
@@ -1382,7 +1605,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-01-13",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-my-mmu-4",
@@ -1393,7 +1620,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-my-usm-1",
@@ -1404,7 +1636,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-01-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-my-usm-2",
@@ -1415,7 +1652,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-01-11",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-my-usm-3",
@@ -1426,7 +1668,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-18",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-my-usm-4",
@@ -1437,7 +1683,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-my-usm-5",
@@ -1448,7 +1699,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-my-utm-1",
@@ -1459,7 +1715,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-01-09",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-my-utm-2",
@@ -1470,7 +1731,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-01-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-my-utm-3",
@@ -1481,7 +1747,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-01-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-my-utm-4",
@@ -1492,7 +1762,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-01-06",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-my-utm-5",
@@ -1503,7 +1778,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-01-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-my-utm-6",
@@ -1514,7 +1794,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-tw-ntu-1",
@@ -1525,7 +1809,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-02-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-tw-ntu-2",
@@ -1536,7 +1825,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-02-21",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-tw-ntu-3",
@@ -1547,7 +1841,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-02-04",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-tw-ntu-4",
@@ -1558,7 +1856,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-02-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-tw-nthu-1",
@@ -1569,7 +1872,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-02-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-tw-nthu-2",
@@ -1580,7 +1888,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-02-02",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-tw-nthu-3",
@@ -1591,7 +1904,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-02-09",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-tw-nthu-4",
@@ -1602,7 +1919,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-02-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-tw-nthu-5",
@@ -1613,7 +1935,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-02-23",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-tw-fcu-1",
@@ -1624,7 +1951,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-02-24",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-tw-fcu-2",
@@ -1635,7 +1967,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-02-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-tw-fcu-3",
@@ -1646,7 +1983,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-02-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-tw-fcu-4",
@@ -1657,7 +1998,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-02-21",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-tw-fcu-5",
@@ -1668,7 +2014,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-02-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-tw-fcu-6",
@@ -1679,7 +2030,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-02-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-tw-nsysu-1",
@@ -1690,7 +2045,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-02-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-tw-nsysu-2",
@@ -1701,7 +2061,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-02-12",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-tw-nsysu-3",
@@ -1712,7 +2077,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-02-19",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-tw-nsysu-4",
@@ -1723,7 +2092,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-02-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-gb-manchester-1",
@@ -1734,7 +2108,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-gb-manchester-2",
@@ -1745,7 +2124,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-01-17",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-gb-manchester-3",
@@ -1756,7 +2140,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-01-24",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-gb-manchester-4",
@@ -1767,7 +2155,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-gb-manchester-5",
@@ -1778,7 +2171,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-01-14",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-gb-leeds-1",
@@ -1789,7 +2187,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-15",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-gb-leeds-2",
@@ -1800,7 +2203,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-gb-leeds-3",
@@ -1811,7 +2219,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-01-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-gb-leeds-4",
@@ -1822,7 +2234,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-01-12",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-gb-leeds-5",
@@ -1833,7 +2250,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-01-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-gb-leeds-6",
@@ -1844,7 +2266,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-01-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-gb-birmingham-1",
@@ -1855,7 +2281,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-gb-birmingham-2",
@@ -1866,7 +2297,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-01-03",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-gb-birmingham-3",
@@ -1877,7 +2313,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-10",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-gb-birmingham-4",
@@ -1888,7 +2328,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-01-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-gb-ucl-1",
@@ -1899,7 +2344,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-01-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-gb-ucl-2",
@@ -1910,7 +2360,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-gb-ucl-3",
@@ -1921,7 +2376,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-15",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-gb-ucl-4",
@@ -1932,7 +2391,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-gb-ucl-5",
@@ -1943,7 +2407,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-01-05",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-gb-kcl-1",
@@ -1954,7 +2423,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-01-06",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-gb-kcl-2",
@@ -1965,7 +2439,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-01-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-gb-kcl-3",
@@ -1976,7 +2455,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-gb-kcl-4",
@@ -1987,7 +2470,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-01-03",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-gb-kcl-5",
@@ -1998,7 +2486,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-gb-kcl-6",
@@ -2009,7 +2502,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-01-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-gb-edinburgh-1",
@@ -2020,7 +2517,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-01-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-gb-edinburgh-2",
@@ -2031,7 +2533,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-01-18",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-gb-edinburgh-3",
@@ -2042,7 +2549,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-01-25",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-gb-edinburgh-4",
@@ -2053,7 +2564,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-sg-nus-1",
@@ -2064,7 +2580,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-01-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-sg-nus-2",
@@ -2075,7 +2596,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-01-23",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-sg-nus-3",
@@ -2086,7 +2612,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-01-06",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-sg-nus-4",
@@ -2097,7 +2627,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-01-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-sg-nus-5",
@@ -2108,7 +2643,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-sg-ntusg-1",
@@ -2119,7 +2659,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-21",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-sg-ntusg-2",
@@ -2130,7 +2675,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-01-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-sg-ntusg-3",
@@ -2141,7 +2691,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-01-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-sg-ntusg-4",
@@ -2152,7 +2706,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-01-18",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-sg-ntusg-5",
@@ -2163,7 +2722,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-01-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-sg-ntusg-6",
@@ -2174,7 +2738,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-sg-smu-1",
@@ -2185,7 +2753,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-01-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-sg-smu-2",
@@ -2196,7 +2769,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-01-09",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-sg-smu-3",
@@ -2207,7 +2785,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-01-16",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-sg-smu-4",
@@ -2218,7 +2800,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-01-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-sg-sim-1",
@@ -2229,7 +2816,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-01-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-sg-sim-2",
@@ -2240,7 +2832,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-01-14",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-sg-sim-3",
@@ -2251,7 +2848,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-21",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-sg-sim-4",
@@ -2262,7 +2863,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-01-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-sg-sim-5",
@@ -2273,7 +2879,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-01-11",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-nz-auckland-1",
@@ -2284,7 +2895,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-02-12",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-nz-auckland-2",
@@ -2295,7 +2911,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-02-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-nz-auckland-3",
@@ -2306,7 +2927,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-02-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-nz-auckland-4",
@@ -2317,7 +2942,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-02-09",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-nz-auckland-5",
@@ -2328,7 +2958,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-02-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-nz-auckland-6",
@@ -2339,7 +2974,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-02-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-nz-vuw-1",
@@ -2350,7 +2989,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-02-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-nz-vuw-2",
@@ -2361,7 +3005,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-02-24",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-nz-vuw-3",
@@ -2372,7 +3021,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-02-07",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-nz-vuw-4",
@@ -2383,7 +3036,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-02-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-nz-canterbury-1",
@@ -2394,7 +3052,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-02-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-nz-canterbury-2",
@@ -2405,7 +3068,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-02-05",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-nz-canterbury-3",
@@ -2416,7 +3084,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-02-12",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-nz-canterbury-4",
@@ -2427,7 +3099,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-02-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-nz-canterbury-5",
@@ -2438,7 +3115,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-02-02",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-nz-otago-1",
@@ -2449,7 +3131,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-02-03",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-nz-otago-2",
@@ -2460,7 +3147,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-02-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-nz-otago-3",
@@ -2471,7 +3163,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-02-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-nz-otago-4",
@@ -2482,7 +3178,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-02-24",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-nz-otago-5",
@@ -2493,7 +3194,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-02-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-nz-otago-6",
@@ -2504,7 +3210,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-02-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-ru-msu-1",
@@ -2515,7 +3225,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-02-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-ru-msu-2",
@@ -2526,7 +3241,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-02-15",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-ru-msu-3",
@@ -2537,7 +3257,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-02-22",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-ru-msu-4",
@@ -2548,7 +3272,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-02-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-ru-itmo-1",
@@ -2559,7 +3288,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-02-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-ru-itmo-2",
@@ -2570,7 +3304,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-02-20",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-ru-itmo-3",
@@ -2581,7 +3320,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-02-03",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-ru-itmo-4",
@@ -2592,7 +3335,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-02-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-ru-itmo-5",
@@ -2603,7 +3351,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-02-17",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-ru-kfu-1",
@@ -2614,7 +3367,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-02-18",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-ru-kfu-2",
@@ -2625,7 +3383,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-02-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-ru-kfu-3",
@@ -2636,7 +3399,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-02-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-ru-kfu-4",
@@ -2647,7 +3414,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-02-15",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-ru-kfu-5",
@@ -2658,7 +3430,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-02-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-ru-kfu-6",
@@ -2669,7 +3446,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-02-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-ru-nsu-1",
@@ -2680,7 +3461,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-02-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-ru-nsu-2",
@@ -2691,7 +3477,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-02-06",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-ru-nsu-3",
@@ -2702,7 +3493,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-02-13",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-ru-nsu-4",
@@ -2713,7 +3508,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-02-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-us-mit-1",
@@ -2724,7 +3524,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-01-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-us-mit-2",
@@ -2735,7 +3540,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-11",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-us-mit-3",
@@ -2746,7 +3556,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-01-18",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-us-mit-4",
@@ -2757,7 +3571,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-01-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-us-mit-5",
@@ -2768,7 +3587,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-us-bu-1",
@@ -2779,7 +3603,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-01-09",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-us-bu-2",
@@ -2790,7 +3619,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-01-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-us-bu-3",
@@ -2801,7 +3635,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-01-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-us-bu-4",
@@ -2812,7 +3650,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-01-06",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-us-bu-5",
@@ -2823,7 +3666,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-01-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-us-bu-6",
@@ -2834,7 +3682,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-us-nyu-1",
@@ -2845,7 +3697,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-us-nyu-2",
@@ -2856,7 +3713,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-01-21",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-us-nyu-3",
@@ -2867,7 +3729,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-01-04",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-us-nyu-4",
@@ -2878,7 +3744,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-us-ucla-1",
@@ -2889,7 +3760,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-us-ucla-2",
@@ -2900,7 +3776,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-02",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-us-ucla-3",
@@ -2911,7 +3792,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-01-09",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-us-ucla-4",
@@ -2922,7 +3807,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-01-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-us-ucla-5",
@@ -2933,7 +3823,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-01-23",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-us-uchicago-1",
@@ -2944,7 +3839,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-01-24",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-us-uchicago-2",
@@ -2955,7 +3855,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-01-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-us-uchicago-3",
@@ -2966,7 +3871,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-us-uchicago-4",
@@ -2977,7 +3886,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-01-21",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-us-uchicago-5",
@@ -2988,7 +3902,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-01-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-us-uchicago-6",
@@ -2999,7 +3918,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-us-smc-1",
@@ -3010,7 +3933,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-01-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-us-smc-2",
@@ -3021,7 +3949,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-12",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-us-smc-3",
@@ -3032,7 +3965,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-19",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-us-smc-4",
@@ -3043,7 +3980,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-us-ice-1",
@@ -3054,7 +3996,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-01-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-us-ice-2",
@@ -3065,7 +4012,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-01-17",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-us-ice-3",
@@ -3076,7 +4028,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-01-24",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-us-ice-4",
@@ -3087,7 +4043,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-01-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-us-ice-5",
@@ -3098,7 +4059,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-14",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-ca-utoronto-1",
@@ -3109,7 +4075,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-01-15",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-ca-utoronto-2",
@@ -3120,7 +4091,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-01-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-ca-utoronto-3",
@@ -3131,7 +4107,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-01-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-ca-utoronto-4",
@@ -3142,7 +4122,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-12",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-ca-utoronto-5",
@@ -3153,7 +4138,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-ca-utoronto-6",
@@ -3164,7 +4154,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-ca-ubc-1",
@@ -3175,7 +4169,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-ca-ubc-2",
@@ -3186,7 +4185,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-01-03",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-ca-ubc-3",
@@ -3197,7 +4201,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-01-10",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-ca-ubc-4",
@@ -3208,7 +4216,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-01-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-ca-mcgill-1",
@@ -3219,7 +4232,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-ca-mcgill-2",
@@ -3230,7 +4248,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-ca-mcgill-3",
@@ -3241,7 +4264,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-01-15",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-ca-mcgill-4",
@@ -3252,7 +4279,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-01-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-ca-mcgill-5",
@@ -3263,7 +4295,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-01-05",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-ca-york-1",
@@ -3274,7 +4311,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-01-06",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-ca-york-2",
@@ -3285,7 +4327,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-01-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-ca-york-3",
@@ -3296,7 +4343,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-ca-york-4",
@@ -3307,7 +4358,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-01-03",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-ca-york-5",
@@ -3318,7 +4374,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-01-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-ca-york-6",
@@ -3329,7 +4390,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-01-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-ca-georgebrown-1",
@@ -3340,7 +4405,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-01-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-ca-georgebrown-2",
@@ -3351,7 +4421,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-01-18",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-ca-georgebrown-3",
@@ -3362,7 +4437,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-25",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-ca-georgebrown-4",
@@ -3373,7 +4452,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-cn-tsinghua-1",
@@ -3384,7 +4468,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-03-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-cn-tsinghua-2",
@@ -3395,7 +4484,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-03-23",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-cn-tsinghua-3",
@@ -3406,7 +4500,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-03-06",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-cn-tsinghua-4",
@@ -3417,7 +4515,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-03-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-cn-tsinghua-5",
@@ -3428,7 +4531,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-03-20",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-cn-pku-1",
@@ -3439,7 +4547,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-03-21",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-cn-pku-2",
@@ -3450,7 +4563,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-03-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-cn-pku-3",
@@ -3461,7 +4579,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-03-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-cn-pku-4",
@@ -3472,7 +4594,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-03-18",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-cn-pku-5",
@@ -3483,7 +4610,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-03-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-cn-pku-6",
@@ -3494,7 +4626,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-03-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-cn-fudan-1",
@@ -3505,7 +4641,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-03-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-cn-fudan-2",
@@ -3516,7 +4657,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-03-09",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-cn-fudan-3",
@@ -3527,7 +4673,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-03-16",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-cn-fudan-4",
@@ -3538,7 +4688,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-03-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-cn-sysu-1",
@@ -3549,7 +4704,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-03-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-cn-sysu-2",
@@ -3560,7 +4720,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-03-14",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-cn-sysu-3",
@@ -3571,7 +4736,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-03-21",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-cn-sysu-4",
@@ -3582,7 +4751,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-03-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-cn-sysu-5",
@@ -3593,7 +4767,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-03-11",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-cn-bhi-1",
@@ -3604,7 +4783,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-03-12",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-cn-bhi-2",
@@ -3615,7 +4799,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-03-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-cn-bhi-3",
@@ -3626,7 +4815,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-03-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-cn-bhi-4",
@@ -3637,7 +4830,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-03-09",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-cn-bhi-5",
@@ -3648,7 +4846,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-03-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-cn-bhi-6",
@@ -3659,7 +4862,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-03-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-au-angliss-1",
@@ -3670,7 +4877,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-02-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-au-angliss-2",
@@ -3681,7 +4893,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-02-24",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-au-angliss-3",
@@ -3692,7 +4909,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-02-07",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-au-angliss-4",
@@ -3703,7 +4924,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-02-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-my-berjaya-1",
@@ -3714,7 +4940,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-01-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-my-berjaya-2",
@@ -3725,7 +4956,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-01-05",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-my-berjaya-3",
@@ -3736,7 +4972,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-01-12",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-my-berjaya-4",
@@ -3747,7 +4987,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-01-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-my-berjaya-5",
@@ -3758,7 +5003,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-02",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-tw-nkuht-1",
@@ -3769,7 +5019,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-02-03",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-tw-nkuht-2",
@@ -3780,7 +5035,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-02-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-tw-nkuht-3",
@@ -3791,7 +5051,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-02-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-tw-nkuht-4",
@@ -3802,7 +5066,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-02-24",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-tw-nkuht-5",
@@ -3813,7 +5082,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-02-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-tw-nkuht-6",
@@ -3824,7 +5098,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-02-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-gb-lcb-1",
@@ -3835,7 +5113,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-gb-lcb-2",
@@ -3846,7 +5129,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-15",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-gb-lcb-3",
@@ -3857,7 +5145,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-01-22",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-gb-lcb-4",
@@ -3868,7 +5160,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-01-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-nz-lcb-1",
@@ -3879,7 +5176,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-02-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-nz-lcb-2",
@@ -3890,7 +5192,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-02-20",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-nz-lcb-3",
@@ -3901,7 +5208,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-02-03",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-nz-lcb-4",
@@ -3912,7 +5223,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-02-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-nz-lcb-5",
@@ -3923,7 +5239,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-02-17",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-sg-shatec-1",
@@ -3934,7 +5255,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-18",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-sg-shatec-2",
@@ -3945,7 +5271,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-01-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-sg-shatec-3",
@@ -3956,7 +5287,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-sg-shatec-4",
@@ -3967,7 +5302,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-15",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-sg-shatec-5",
@@ -3978,7 +5318,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-01-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-sg-shatec-6",
@@ -3989,7 +5334,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-01-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-my-monash-1",
@@ -4000,7 +5349,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-my-monash-2",
@@ -4011,7 +5365,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-06",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-my-monash-3",
@@ -4022,7 +5381,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-01-13",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-my-monash-4",
@@ -4033,7 +5396,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-cn-nyush-1",
@@ -4044,7 +5412,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-03-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-cn-nyush-2",
@@ -4055,7 +5428,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-03-11",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-cn-nyush-3",
@@ -4066,7 +5444,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-03-18",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-cn-nyush-4",
@@ -4077,7 +5459,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-03-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-cn-nyush-5",
@@ -4088,7 +5475,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-03-08",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-gb-imperial-1",
@@ -4099,7 +5491,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-01-09",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-gb-imperial-2",
@@ -4110,7 +5507,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-gb-imperial-3",
@@ -4121,7 +5523,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-gb-imperial-4",
@@ -4132,7 +5538,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-06",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-gb-imperial-5",
@@ -4143,7 +5554,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-01-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-gb-imperial-6",
@@ -4154,7 +5570,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-au-uts-1",
@@ -4165,7 +5585,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-02-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-au-uts-2",
@@ -4176,7 +5601,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-02-21",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-au-uts-3",
@@ -4187,7 +5617,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-02-04",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-au-uts-4",
@@ -4198,7 +5632,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-02-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-my-ucsi-1",
@@ -4209,7 +5648,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-01-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-my-ucsi-2",
@@ -4220,7 +5664,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-01-02",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-my-ucsi-3",
@@ -4231,7 +5680,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-01-09",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-my-ucsi-4",
@@ -4242,7 +5695,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-my-ucsi-5",
@@ -4253,7 +5711,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-23",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-tw-ntust-1",
@@ -4264,7 +5727,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-02-24",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-tw-ntust-2",
@@ -4275,7 +5743,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-02-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-tw-ntust-3",
@@ -4286,7 +5759,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-02-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-tw-ntust-4",
@@ -4297,7 +5774,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-02-21",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-tw-ntust-5",
@@ -4308,7 +5790,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-02-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-tw-ntust-6",
@@ -4319,7 +5806,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-02-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-sg-tp-1",
@@ -4330,7 +5821,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-sg-tp-2",
@@ -4341,7 +5837,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-01-12",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-sg-tp-3",
@@ -4352,7 +5853,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-01-19",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-sg-tp-4",
@@ -4363,7 +5868,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-01-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-nz-aut-1",
@@ -4374,7 +5884,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-02-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-nz-aut-2",
@@ -4385,7 +5900,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-02-17",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-nz-aut-3",
@@ -4396,7 +5916,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-02-24",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-nz-aut-4",
@@ -4407,7 +5931,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-02-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-nz-aut-5",
@@ -4418,7 +5947,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-02-14",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-ru-hse-1",
@@ -4429,7 +5963,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-02-15",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-ru-hse-2",
@@ -4440,7 +5979,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-02-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-ru-hse-3",
@@ -4451,7 +5995,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-02-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-ru-hse-4",
@@ -4462,7 +6010,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-02-12",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-ru-hse-5",
@@ -4473,7 +6026,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-02-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-ru-hse-6",
@@ -4484,7 +6042,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-02-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-us-columbia-1",
@@ -4495,7 +6057,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-us-columbia-2",
@@ -4506,7 +6073,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-01-03",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-us-columbia-3",
@@ -4517,7 +6089,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-01-10",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-us-columbia-4",
@@ -4528,7 +6104,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-01-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-us-northeastern-1",
@@ -4539,7 +6120,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-01-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-us-northeastern-2",
@@ -4550,7 +6136,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-us-northeastern-3",
@@ -4561,7 +6152,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-01-15",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-us-northeastern-4",
@@ -4572,7 +6167,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-01-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-us-northeastern-5",
@@ -4583,7 +6183,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-05",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-us-fit-1",
@@ -4594,7 +6199,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-06",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-us-fit-2",
@@ -4605,7 +6215,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-us-fit-3",
@@ -4616,7 +6231,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-us-fit-4",
@@ -4627,7 +6246,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-01-03",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-us-fit-5",
@@ -4638,7 +6262,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-01-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-us-fit-6",
@@ -4649,7 +6278,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-01-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-us-iit-1",
@@ -4660,7 +6293,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-01-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-us-iit-2",
@@ -4671,7 +6309,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-01-18",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-us-iit-3",
@@ -4682,7 +6325,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-01-25",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-us-iit-4",
@@ -4693,7 +6340,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-ca-tmu-1",
@@ -4704,7 +6356,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-01-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-ca-tmu-2",
@@ -4715,7 +6372,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-01-23",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-ca-tmu-3",
@@ -4726,7 +6388,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-06",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-ca-tmu-4",
@@ -4737,7 +6403,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-ca-tmu-5",
@@ -4748,7 +6419,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-ca-sfu-1",
@@ -4759,7 +6435,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-01-21",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-ca-sfu-2",
@@ -4770,7 +6451,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-01-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-ca-sfu-3",
@@ -4781,7 +6467,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-01-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-ca-sfu-4",
@@ -4792,7 +6482,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-01-18",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-ca-sfu-5",
@@ -4803,7 +6498,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-01-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-ca-sfu-6",
@@ -4814,7 +6514,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-ca-concordia-1",
@@ -4825,7 +6529,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-01-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-ca-concordia-2",
@@ -4836,7 +6545,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-01-09",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-ca-concordia-3",
@@ -4847,7 +6561,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-01-16",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-ca-concordia-4",
@@ -4858,7 +6576,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-01-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-ca-vcc-1",
@@ -4869,7 +6592,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-01-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-ca-vcc-2",
@@ -4880,7 +6608,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-01-14",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-ca-vcc-3",
@@ -4891,7 +6624,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-01-21",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-ca-vcc-4",
@@ -4902,7 +6639,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-01-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-ca-vcc-5",
@@ -4913,7 +6655,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-01-11",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-cn-sjtu-1",
@@ -4924,7 +6671,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-03-12",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-cn-sjtu-2",
@@ -4935,7 +6687,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-03-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-cn-sjtu-3",
@@ -4946,7 +6703,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-03-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-cn-sjtu-4",
@@ -4957,7 +6718,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-03-09",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-cn-sjtu-5",
@@ -4968,7 +6734,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-03-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-cn-sjtu-6",
@@ -4979,7 +6750,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-03-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-cn-tongji-1",
@@ -4990,7 +6765,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-03-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-cn-tongji-2",
@@ -5001,7 +6781,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-03-24",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-cn-tongji-3",
@@ -5012,7 +6797,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-03-07",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-cn-tongji-4",
@@ -5023,7 +6812,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-03-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-cn-bnu-1",
@@ -5034,7 +6828,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-03-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-cn-bnu-2",
@@ -5045,7 +6844,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-03-05",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-cn-bnu-3",
@@ -5056,7 +6860,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-03-12",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-cn-bnu-4",
@@ -5067,7 +6875,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-03-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-cn-bnu-5",
@@ -5078,7 +6891,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-03-02",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-cn-jnu-1",
@@ -5089,7 +6907,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-03-03",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-cn-jnu-2",
@@ -5100,7 +6923,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-03-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-cn-jnu-3",
@@ -5111,7 +6939,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-03-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-cn-jnu-4",
@@ -5122,7 +6954,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-03-24",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-cn-jnu-5",
@@ -5133,7 +6970,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-03-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-cn-jnu-6",
@@ -5144,7 +6986,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-03-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-au-deakin-1",
@@ -5155,7 +7001,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-02-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-au-deakin-2",
@@ -5166,7 +7017,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-02-15",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-au-deakin-3",
@@ -5177,7 +7033,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-02-22",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-au-deakin-4",
@@ -5188,7 +7048,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-02-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-au-macquarie-1",
@@ -5199,7 +7064,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-02-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-au-macquarie-2",
@@ -5210,7 +7080,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-02-20",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-au-macquarie-3",
@@ -5221,7 +7096,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-02-03",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-au-macquarie-4",
@@ -5232,7 +7111,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-02-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-au-macquarie-5",
@@ -5243,7 +7127,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-02-17",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-au-griffith-1",
@@ -5254,7 +7143,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-02-18",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-au-griffith-2",
@@ -5265,7 +7159,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-02-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-au-griffith-3",
@@ -5276,7 +7175,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-02-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-au-griffith-4",
@@ -5287,7 +7190,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-02-15",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-au-griffith-5",
@@ -5298,7 +7206,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-02-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-au-griffith-6",
@@ -5309,7 +7222,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-02-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-au-holmesglen-1",
@@ -5320,7 +7237,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-02-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-au-holmesglen-2",
@@ -5331,7 +7253,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-02-06",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-au-holmesglen-3",
@@ -5342,7 +7269,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-02-13",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-au-holmesglen-4",
@@ -5353,7 +7284,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-02-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-my-apu-1",
@@ -5364,7 +7300,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-01-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-my-apu-2",
@@ -5375,7 +7316,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-01-11",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-my-apu-3",
@@ -5386,7 +7332,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-01-18",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-my-apu-4",
@@ -5397,7 +7347,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-01-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-my-apu-5",
@@ -5408,7 +7363,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-my-help-1",
@@ -5419,7 +7379,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-09",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-my-help-2",
@@ -5430,7 +7395,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-01-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-my-help-3",
@@ -5441,7 +7411,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-01-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-my-help-4",
@@ -5452,7 +7426,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-01-06",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-my-help-5",
@@ -5463,7 +7442,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-01-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-my-help-6",
@@ -5474,7 +7458,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-my-inti-1",
@@ -5485,7 +7473,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-01-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-my-inti-2",
@@ -5496,7 +7489,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-01-21",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-my-inti-3",
@@ -5507,7 +7505,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-01-04",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-my-inti-4",
@@ -5518,7 +7520,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-01-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-tw-nccu-1",
@@ -5529,7 +7536,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-02-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-tw-nccu-2",
@@ -5540,7 +7552,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-02-02",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-tw-nccu-3",
@@ -5551,7 +7568,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-02-09",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-tw-nccu-4",
@@ -5562,7 +7583,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-02-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-tw-nccu-5",
@@ -5573,7 +7599,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-02-23",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-tw-tku-1",
@@ -5584,7 +7615,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-02-24",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-tw-tku-2",
@@ -5595,7 +7631,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-02-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-tw-tku-3",
@@ -5606,7 +7647,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-02-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-tw-tku-4",
@@ -5617,7 +7662,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-02-21",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-tw-tku-5",
@@ -5628,7 +7678,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-02-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-tw-tku-6",
@@ -5639,7 +7694,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-02-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-gb-lse-1",
@@ -5650,7 +7709,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-01-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-gb-lse-2",
@@ -5661,7 +7725,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-12",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-gb-lse-3",
@@ -5672,7 +7741,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-01-19",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-gb-lse-4",
@@ -5683,7 +7756,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-01-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-gb-kingston-1",
@@ -5694,7 +7772,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-gb-kingston-2",
@@ -5705,7 +7788,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-17",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-gb-kingston-3",
@@ -5716,7 +7804,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-24",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-gb-kingston-4",
@@ -5727,7 +7819,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-01-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-gb-kingston-5",
@@ -5738,7 +7835,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-01-14",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-sg-sit-1",
@@ -5749,7 +7851,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-01-15",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-sg-sit-2",
@@ -5760,7 +7867,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-01-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-sg-sit-3",
@@ -5771,7 +7883,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-01-05",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-sg-sit-4",
@@ -5782,7 +7898,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-12",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-sg-sit-5",
@@ -5793,7 +7914,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-01-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-sg-sit-6",
@@ -5804,7 +7930,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-01-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-sg-np-1",
@@ -5815,7 +7945,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-01-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-sg-np-2",
@@ -5826,7 +7961,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-01-03",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-sg-np-3",
@@ -5837,7 +7977,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-10",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-sg-np-4",
@@ -5848,7 +7992,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-nz-massey-1",
@@ -5859,7 +8008,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-02-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-nz-massey-2",
@@ -5870,7 +8024,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-02-08",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-nz-massey-3",
@@ -5881,7 +8040,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-02-15",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-nz-massey-4",
@@ -5892,7 +8055,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-02-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-nz-massey-5",
@@ -5903,7 +8071,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-02-05",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-nz-lincoln-1",
@@ -5914,7 +8087,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-02-06",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-nz-lincoln-2",
@@ -5925,7 +8103,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-02-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-nz-lincoln-3",
@@ -5936,7 +8119,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-02-20",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-nz-lincoln-4",
@@ -5947,7 +8134,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-02-03",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-nz-lincoln-5",
@@ -5958,7 +8150,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-02-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-nz-lincoln-6",
@@ -5969,7 +8166,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-02-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-ru-spbu-1",
@@ -5980,7 +8181,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-02-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-ru-spbu-2",
@@ -5991,7 +8197,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-02-18",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-ru-spbu-3",
@@ -6002,7 +8213,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-02-25",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-ru-spbu-4",
@@ -6013,7 +8228,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-02-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-ru-mipt-1",
@@ -6024,7 +8244,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-02-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-ru-mipt-2",
@@ -6035,7 +8260,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-02-23",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-ru-mipt-3",
@@ -6046,7 +8276,11 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=61",
       "arrivalDate": "2027-02-06",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-ru-mipt-4",
@@ -6057,7 +8291,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-02-13",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-ru-mipt-5",
@@ -6068,7 +8307,12 @@
       "intake": "2027-02",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-02-20",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-us-depaul-1",
@@ -6079,7 +8323,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-01-21",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-us-depaul-2",
@@ -6090,7 +8339,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-01-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-us-depaul-3",
@@ -6101,7 +8355,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-01-11",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-us-depaul-4",
@@ -6112,7 +8370,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=47",
       "arrivalDate": "2027-01-18",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 21,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-us-depaul-5",
@@ -6123,7 +8386,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=15",
       "arrivalDate": "2027-01-25",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-us-depaul-6",
@@ -6134,7 +8402,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-01-08",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-us-pace-1",
@@ -6145,7 +8417,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-us-pace-2",
@@ -6156,7 +8433,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-01-09",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "study",
+        "foodie"
+      ]
     },
     {
       "id": "mate-us-pace-3",
@@ -6167,7 +8449,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-01-16",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 19,
+      "lookingFor": [
+        "travel"
+      ]
     },
     {
       "id": "mate-us-pace-4",
@@ -6178,7 +8464,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-us-umb-1",
@@ -6189,7 +8480,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-us-umb-2",
@@ -6200,7 +8496,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-14",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-us-umb-3",
@@ -6211,7 +8512,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=27",
       "arrivalDate": "2027-01-21",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 22,
+      "lookingFor": [
+        "friends"
+      ]
     },
     {
       "id": "mate-us-umb-4",
@@ -6222,7 +8527,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=43",
       "arrivalDate": "2027-01-04",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-us-umb-5",
@@ -6233,7 +8543,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=64",
       "arrivalDate": "2027-01-11",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-ca-seneca-1",
@@ -6244,7 +8559,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-01-12",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-ca-seneca-2",
@@ -6255,7 +8575,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-01-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-ca-seneca-3",
@@ -6266,7 +8591,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-01-02",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports"
+      ]
     },
     {
       "id": "mate-ca-seneca-4",
@@ -6277,7 +8606,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=12",
       "arrivalDate": "2027-01-09",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 22,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-ca-seneca-5",
@@ -6288,7 +8622,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=45",
       "arrivalDate": "2027-01-16",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 19,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-ca-seneca-6",
@@ -6299,7 +8638,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=65",
       "arrivalDate": "2027-01-23",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 24,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-ca-langara-1",
@@ -6310,7 +8653,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-01-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "friends",
+        "foodie"
+      ]
     },
     {
       "id": "mate-ca-langara-2",
@@ -6321,7 +8669,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-01-24",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "sports",
+        "travel"
+      ]
     },
     {
       "id": "mate-ca-langara-3",
@@ -6332,7 +8685,11 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-01-07",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 20,
+      "lookingFor": [
+        "foodie"
+      ]
     },
     {
       "id": "mate-ca-langara-4",
@@ -6343,7 +8700,12 @@
       "intake": "2027-01",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-01-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "housing",
+        "travel"
+      ]
     },
     {
       "id": "mate-cn-ecnu-1",
@@ -6354,7 +8716,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=21",
       "arrivalDate": "2027-03-22",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "sports",
+        "housing"
+      ]
     },
     {
       "id": "mate-cn-ecnu-2",
@@ -6365,7 +8732,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=16",
       "arrivalDate": "2027-03-05",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 18,
+      "lookingFor": [
+        "foodie",
+        "friends"
+      ]
     },
     {
       "id": "mate-cn-ecnu-3",
@@ -6376,7 +8748,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=41",
       "arrivalDate": "2027-03-12",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 23,
+      "lookingFor": [
+        "housing"
+      ]
     },
     {
       "id": "mate-cn-ecnu-4",
@@ -6387,7 +8763,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=51",
       "arrivalDate": "2027-03-19",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "study",
+        "friends"
+      ]
     },
     {
       "id": "mate-cn-ecnu-5",
@@ -6398,7 +8779,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=32",
       "arrivalDate": "2027-03-02",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 17,
+      "lookingFor": [
+        "travel",
+        "housing"
+      ]
     },
     {
       "id": "mate-cn-scut-1",
@@ -6409,7 +8795,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=60",
       "arrivalDate": "2027-03-03",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 24,
+      "lookingFor": [
+        "foodie",
+        "study"
+      ]
     },
     {
       "id": "mate-cn-scut-2",
@@ -6420,7 +8811,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=38",
       "arrivalDate": "2027-03-10",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 21,
+      "lookingFor": [
+        "housing",
+        "sports"
+      ]
     },
     {
       "id": "mate-cn-scut-3",
@@ -6431,7 +8827,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=44",
       "arrivalDate": "2027-03-17",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 18,
+      "lookingFor": [
+        "study"
+      ]
     },
     {
       "id": "mate-cn-scut-4",
@@ -6442,7 +8842,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=24",
       "arrivalDate": "2027-03-24",
-      "travelOptIn": false
+      "travelOptIn": false,
+      "age": 23,
+      "lookingFor": [
+        "travel",
+        "sports"
+      ]
     },
     {
       "id": "mate-cn-scut-5",
@@ -6453,7 +8858,12 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=20",
       "arrivalDate": "2027-03-07",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 20,
+      "lookingFor": [
+        "friends",
+        "study"
+      ]
     },
     {
       "id": "mate-cn-scut-6",
@@ -6464,7 +8874,11 @@
       "intake": "2027-03",
       "avatar": "https://i.pravatar.cc/200?img=68",
       "arrivalDate": "2027-03-14",
-      "travelOptIn": true
+      "travelOptIn": true,
+      "age": 17,
+      "lookingFor": [
+        "sports"
+      ]
     }
   ],
   "events": [

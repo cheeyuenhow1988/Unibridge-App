@@ -1409,6 +1409,7 @@ institutions.forEach((inst, ii) => {
   if (instCourses.length === 0) return;
   const intake = nextIntakes(inst.country, 4).find((x) => x.startsWith('2027')) ?? nextIntakes(inst.country, 1)[0];
   const n = 4 + (ii % 3);
+  const LOOKING = ['housing', 'study', 'travel', 'friends', 'sports', 'foodie'];
   for (let k = 0; k < n; k++) {
     const [name, homeCountry, img] = MATE_NAMES[(ii * 7 + k * 3) % MATE_NAMES.length];
     const course = instCourses[(ii + k * 5) % instCourses.length];
@@ -1423,6 +1424,9 @@ institutions.forEach((inst, ii) => {
       // thirds have opted in to coordinating travel.
       arrivalDate: `${intake}-${String(2 + ((ii * 5 + k * 7) % 24)).padStart(2, '0')}`,
       travelOptIn: (ii + k) % 3 !== 2,
+      // Mini-profile shown before connecting.
+      age: 17 + ((ii * 3 + k * 5) % 8),
+      lookingFor: [LOOKING[(ii + k) % 6], LOOKING[(ii + k * 3 + 2) % 6]].filter((v, i, a) => a.indexOf(v) === i),
     });
   }
 });

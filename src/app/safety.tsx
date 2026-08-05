@@ -17,6 +17,7 @@ import { useTheme } from '@/hooks/useTheme';
 import { getSafety } from '@/services/api';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
 import { useProfileStore } from '@/store/useProfileStore';
+import { useSavedStore } from '@/store/useSavedStore';
 import { toast } from '@/store/useToastStore';
 import type { CountryCode, EmergencyContact, HomeCountryCode } from '@/types/models';
 
@@ -29,6 +30,7 @@ export default function SafetyScreen() {
   const profile = useProfileStore((s) => s.profile);
   const patchProfile = useProfileStore((s) => s.patchProfile);
   const applications = useApplicationsStore((s) => s.applications);
+  const savedCourseIds = useSavedStore((s) => s.savedCourseIds);
   const { matchData } = useMatchData();
   const safety = useAsync(() => getSafety(), []);
 
@@ -47,12 +49,29 @@ export default function SafetyScreen() {
   });
 
   // Destinations across the student's applications (deduped, in order).
+  // Nothing here is gated: without applications we fall back to saved
+  // courses, then top matches — embassies must be visible to everyone.
   const nationality = (profile?.nationality ?? 'MY') as HomeCountryCode;
   const destinations: { country: CountryCode; city: string }[] = [];
-  for (const a of applications) {
-    const r = matchData?.resultByCourseId.get(a.courseId);
+  const pushCourse = (courseId: string) => {
+    const r = matchData?.resultByCourseId.get(courseId);
     if (r && !destinations.some((d) => d.country === r.course.country)) {
       destinations.push({ country: r.course.country as CountryCode, city: r.course.campusCity });
+    }
+  };
+  for (const a of applications) pushCourse(a.courseId);
+  let destSource: 'apps' | 'saved' | 'matches' = 'apps';
+  if (destinations.length === 0) {
+    for (const id of savedCourseIds) pushCourse(id);
+    destSource = 'saved';
+  }
+  if (destinations.length === 0) {
+    destSource = 'matches';
+    for (const r of matchData?.results ?? []) {
+      if (!destinations.some((d) => d.country === r.course.country)) {
+        destinations.push({ country: r.course.country as CountryCode, city: r.course.campusCity });
+      }
+      if (destinations.length >= 2) break;
     }
   }
 
@@ -113,6 +132,11 @@ export default function SafetyScreen() {
           <Button label={t('safety.contactSave')} icon="save-outline" onPress={save} />
         </Card>
 
+        {destinations.length > 0 && destSource !== 'apps' ? (
+          <Text variant="caption" tone="faint">
+            {destSource === 'saved' ? t('safety.destFromSaved') : t('safety.destFromMatches')}
+          </Text>
+        ) : null}
         {destinations.map((d) => {
           const lines = safety.data?.emergencyLines[d.country];
           const embassy = safety.data?.embassies[d.country]?.[nationality];
@@ -174,6 +198,30 @@ export default function SafetyScreen() {
             <Text variant="caption" tone="secondary">{t('safety.noDestination')}</Text>
           </Card>
         ) : null}
+
+        <SectionHeader title={t('buddy.title')} />
+        <Card style={{ gap: spacing.sm }}>
+          <Text variant="caption" tone="secondary">
+            {applications.length > 0 ? t('safety.buddyGo') : t('safety.buddyLocked')}
+          </Text>
+          {applications.length > 0 ? (
+            <Button
+              label={t('buddy.title')}
+              icon="airplane-outline"
+              variant="secondary"
+              size="sm"
+              onPress={() => router.push(`/predeparture/${applications[0].id}`)}
+            />
+          ) : (
+            <Button
+              label={t('community.title')}
+              icon="people-outline"
+              variant="secondary"
+              size="sm"
+              onPress={() => router.push('/community')}
+            />
+          )}
+        </Card>
 
         <Text variant="caption" tone="faint" center>{t('safety.verifyNote')}</Text>
       </View>

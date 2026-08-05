@@ -497,7 +497,23 @@
     "matesAt": "{{school}}에서",
     "matesNearby": "{{city}} 인근 — 같은 도시, 보통 ~10km 이내",
     "matesAnchor": "지원서 또는 저장한 과정을 기준으로 {{school}}에 연결했습니다. 샘플 학생 — 정식 출시 시 실제 동기가 표시됩니다.",
-    "matesSample": "지원하거나 과정을 저장하면 내 학교의 동기를 볼 수 있어요. {{school}} 샘플을 표시 중입니다."
+    "matesSample": "지원하거나 과정을 저장하면 내 학교의 동기를 볼 수 있어요. {{school}} 샘플을 표시 중입니다.",
+    "myVisibility": "내 공개 설정",
+    "visibleToggle": "동기에게 표시",
+    "visibleSub": "같은 학교 학생이 내 카드를 보고 연결할 수 있어요.",
+    "invisibleBanner": "숨김 상태 — 자유롭게 둘러보세요. 아무도 나를 보거나 연락할 수 없어요.",
+    "showCourseToggle": "전공 표시",
+    "showCourseSub": "표시 상태일 때 카드에 전공이 보여요.",
+    "aboutAge": "{{age}}세 · {{country}}",
+    "arrives": "{{date}} 도착",
+    "intakeLabel": "{{intake}} 입학",
+    "lookingTitle": "찾고 있어요",
+    "looking_housing": "룸메이트",
+    "looking_study": "스터디 그룹",
+    "looking_travel": "여행 친구",
+    "looking_friends": "친구 사귀기",
+    "looking_sports": "운동·헬스",
+    "looking_foodie": "맛집 탐방"
   },
   "arrival": {
     "title": "도착 서비스",
@@ -621,7 +637,11 @@
     "wizardRelaxed": "참고: 그 예산에 맞는 게 없어서 가까운 옵션을 보여드리려 완화했어요.",
     "pref_any": "어디든",
     "chipOpen": "{{name}} 열기 ↗",
-    "cityFlight": "✈️ 귀국 왕복 항공권: 비수기 약 {{low}} · 성수기/명절 {{peak}}."
+    "cityFlight": "✈️ 귀국 왕복 항공권: 비수기 약 {{low}} · 성수기/명절 {{peak}}.",
+    "emergencyIntro": "유학 목적지의 긴급 전화번호:",
+    "emergencyLine": "{{flag}} {{country}} — 경찰 {{police}} · 구급 {{ambulance}} · 소방 {{fire}}",
+    "emergencyHubNote": "안전 허브에서 대사관과 비상 연락처까지 한 번에 확인하세요.",
+    "chipSafetyHub": "안전 허브 열기"
   },
   "notFound": {
     "title": "페이지를 찾을 수 없어요",
@@ -883,7 +903,12 @@
     "verifyNote": "프로토타입 디렉터리 — 여행 전 번호를 확인하세요.",
     "mockNote": "프로토타입 — 실제 전화나 메시지는 발송되지 않아요.",
     "cardSubSet": "긴급 연락처: {{name}}",
-    "cardSubUnset": "긴급 연락처를 추가하세요"
+    "cardSubUnset": "긴급 연락처를 추가하세요",
+    "destFromSaved": "저장한 과정 기준입니다. 지원하면 지원서에 맞춰 표시됩니다.",
+    "destFromMatches": "상위 매칭 기준입니다. 지원하면 목적지가 확정됩니다.",
+    "buddyGo": "출국 준비 화면에서 비슷한 날짜에 비행하는 동기를 확인하세요.",
+    "buddyLocked": "여행 친구는 비슷한 날짜에 비행하는 합격 동기와 연결해 줍니다. 첫 지원 후 열립니다. 그동안 커뮤니티에서 동기를 만나 보세요.",
+    "commSub": "SOS, 대사관, 현지 긴급 번호 — 언제나 무료."
   },
   "parent": {
     "title": "보호자 뷰",

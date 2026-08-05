@@ -3,7 +3,7 @@ import type { MatchData } from '@/hooks/useMatchData';
 import { convert, formatMoney } from '@/services/currency';
 import { trueAnnualIn } from '@/services/costs';
 import type {
-  CityInfo, CountryCode, CurrencyCode, FieldId, FlightFares, Institution, MatchResult, StudentProfile,
+  CityInfo, CountryCode, CurrencyCode, FieldId, FlightFares, Institution, MatchResult, SafetyBundle, StudentProfile,
 } from '@/types/models';
 
 export interface QuickReply {
@@ -37,6 +37,7 @@ export interface AssistantCtx {
   cityInfo: CityInfo[];
   flights: FlightFares;
   home: CurrencyCode;
+  safety: SafetyBundle;
 }
 
 const WEATHER_RE = /(weather|climate|rain|snow|cold|hot|temperature|cuaca|sejuk|panas|thời tiết|khí hậu|mưa|lạnh|nóng|天气|气候|下雨|冷|热|天氣|氣候|熱)/i;
@@ -46,6 +47,15 @@ const STUDY_RE = /(what.*(study|course|major)|study what|choose.*(study|course)|
 const WHERE_RE = /(where.*study|which country|country.*(study|choose)|negara mana|kuliah di mana|học ở đâu|nước nào|去哪.*(读|留学|讀|留學)|哪个国家|哪個國家)/i;
 const BUDGET_RE = /(budget|afford|enough|cukup|bajet|mampu|anggaran|ngân sách|đủ tiền|预算|够|负担|預算|夠|負擔)/i;
 const GREET_RE = /^(hi|hello|hey|hai|helo|halo|chào|xin chào|你好|哈喽|嗨)\b/i;
+const EMERGENCY_RE = /(police|ambulance|emergency|fire brigade|hotline|polis\b|ambulans|kecemasan|darurat|cảnh sát|cấp cứu|khẩn cấp|警察|救护车|急救|紧急|报警|救護車|緊急|報警|경찰|구급차|응급|긴급|救急車|消防|ตำรวจ|รถพยาบาล|ฉุกเฉิน|पुलिस|एम्बुलेंस|आपातकाल)/i;
+
+const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+/** Whole-word match — "police" must never hit the school short-named "ICE". */
+const wordHit = (q: string, name: string) =>
+  new RegExp(`(^|[^a-z0-9])${escapeRe(name.toLowerCase())}($|[^a-z0-9])`).test(q);
+/** Short acronyms (ICE, UM, MIT) only count typed as capitals, standalone. */
+const acronymHit = (raw: string, short: string) =>
+  new RegExp(`(^|[^A-Za-z0-9])${escapeRe(short)}($|[^A-Za-z0-9])`).test(raw);
 
 function annualCost(r: MatchResult, ctx: AssistantCtx): number {
   const col = ctx.matchData.colByCity.get(r.course.campusCity);
@@ -362,10 +372,39 @@ export function respond(query: string, ctx: AssistantCtx, intent?: string): Assi
     }
   }
 
+  // Emergency numbers first — "police / ambulance" must never fuzzy-match a
+  // school name; answer from the verified per-country emergency lines.
+  if (EMERGENCY_RE.test(q)) {
+    const cityHit = ctx.cityInfo.find((c) => wordHit(q, c.city));
+    const countries = cityHit
+      ? [cityHit.country]
+      : [...new Set(rank(ctx.matchData.results, ctx).slice(0, 6).map((r) => r.course.country))].slice(0, 2);
+    const lines = countries
+      .map((c) => {
+        const e = ctx.safety.emergencyLines[c];
+        return e
+          ? t('assistant.emergencyLine', {
+              flag: FLAGS[c], country: t(`countries.${c}`),
+              police: e.police, ambulance: e.ambulance, fire: e.fire,
+            })
+          : null;
+      })
+      .filter(Boolean)
+      .join('\n');
+    return {
+      text: `${t('assistant.emergencyIntro')}\n\n${lines}\n\n${t('assistant.emergencyHubNote')}`,
+      chips: [
+        { label: t('assistant.chipSafetyHub'), send: t('assistant.chipSafetyHub'), intent: 'safety-hub', route: '/safety' },
+      ],
+    };
+  }
+
   // Free-text pipeline: institutions first (longest names win), then cities.
+  // Full names match on word boundaries; short acronyms (ICE, UM, MIT) only
+  // when typed as standalone capitals — "police" must not hit ICE.
   const inst = [...ctx.institutions]
     .sort((a, b) => b.name.length - a.name.length)
-    .find((i) => q.includes(i.name.toLowerCase()) || q.includes(i.short.toLowerCase()));
+    .find((i) => wordHit(q, i.name) || (i.short.length <= 4 ? acronymHit(query, i.short) : wordHit(q, i.short)));
   if (inst) {
     const instResults = ctx.matchData.results.filter((r) => r.course.institutionId === inst.id);
     const costs = instResults.map((r) => annualCost(r, ctx)).filter((c) => c !== Number.MAX_SAFE_INTEGER);
@@ -394,7 +433,7 @@ export function respond(query: string, ctx: AssistantCtx, intent?: string): Assi
     };
   }
 
-  const city = ctx.cityInfo.find((c) => q.includes(c.city.toLowerCase()));
+  const city = ctx.cityInfo.find((c) => wordHit(q, c.city));
   if (city) {
     const sub = WEATHER_RE.test(q) ? 'weather' : SAFETY_RE.test(q) ? 'safety' : COST_RE.test(q) ? 'cost' : 'all';
     return cityAnswer(city, sub, ctx);

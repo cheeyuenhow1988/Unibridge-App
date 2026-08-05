@@ -3,7 +3,7 @@ import { Image } from 'expo-image';
 import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Alert, Pressable, ScrollView, View } from 'react-native';
+import { Alert, Modal, Pressable, ScrollView, Switch, View } from 'react-native';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
@@ -22,6 +22,7 @@ import { getSupportBundle, listAmbassadors, listCoursemates, listEvents, listIns
 import { hapticTap } from '@/services/haptics';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
 import { useCommunityStore } from '@/store/useCommunityStore';
+import { useProfileStore } from '@/store/useProfileStore';
 import { useSavedStore } from '@/store/useSavedStore';
 import type { Coursemate, Short } from '@/types/models';
 
@@ -32,6 +33,11 @@ export default function CommunityScreen() {
   const { colors } = useTheme();
   const [segment, setSegment] = useState<Segment>('groups');
   const [playing, setPlaying] = useState<Short | null>(null);
+  const [mateSheet, setMateSheet] = useState<Coursemate | null>(null);
+  const mateVisible = useProfileStore((s) => s.mateVisible);
+  const setMateVisible = useProfileStore((s) => s.setMateVisible);
+  const mateShowCourse = useProfileStore((s) => s.mateShowCourse);
+  const setMateShowCourse = useProfileStore((s) => s.setMateShowCourse);
   const [shortFilter, setShortFilter] = useState<'all' | 'campus' | 'reality'>('all');
   const supportB = useAsync(() => getSupportBundle(), []);
   const joinedGroupIds = useCommunityStore((s) => s.joinedGroupIds);
@@ -96,6 +102,17 @@ export default function CommunityScreen() {
               <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />
             </Row>
             <Text variant="caption" tone="secondary">{t('community.arrivalTeaser')}</Text>
+          </Card>
+
+          <Card onPress={() => router.push('/safety')} style={{ gap: 2 }}>
+            <Row style={{ justifyContent: 'space-between' }}>
+              <Row gap={spacing.sm}>
+                <Ionicons name="shield-checkmark" size={18} color="#0E7490" />
+                <Text variant="label">{t('safety.title')}</Text>
+              </Row>
+              <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />
+            </Row>
+            <Text variant="caption" tone="secondary">{t('safety.commSub')}</Text>
           </Card>
 
           <Row gap={spacing.sm} wrap>
@@ -261,12 +278,15 @@ export default function CommunityScreen() {
             const mateCard = (m: Coursemate) => {
               const connected = connections.includes(m.id);
               return (
-                <View
+                <Pressable
                   key={m.id}
-                  style={{
+                  accessibilityRole="button"
+                  onPress={() => setMateSheet(m)}
+                  style={({ pressed }) => ({
                     flexBasis: '47%', flexGrow: 1, backgroundColor: colors.surface, borderRadius: radius.lg,
                     borderWidth: 1, borderColor: colors.border, padding: spacing.lg, alignItems: 'center', gap: spacing.sm,
-                  }}
+                    opacity: pressed ? 0.85 : 1,
+                  })}
                 >
                   <Image source={{ uri: m.avatar }} style={{ width: 64, height: 64, borderRadius: radius.full, backgroundColor: colors.surfaceAlt }} />
                   <Text variant="label" center numberOfLines={1}>{m.name}</Text>
@@ -284,12 +304,35 @@ export default function CommunityScreen() {
                       toggleConnection(m.id);
                     }}
                   />
-                </View>
+                </Pressable>
               );
             };
 
             return (
               <View style={{ gap: spacing.md }}>
+                <Card style={{ gap: spacing.sm }}>
+                  <Text variant="label">{t('community.myVisibility')}</Text>
+                  <Row style={{ justifyContent: 'space-between' }}>
+                    <View style={{ flex: 1, paddingRight: spacing.md }}>
+                      <Text variant="bodyMedium">{t('community.visibleToggle')}</Text>
+                      <Text variant="caption" tone="faint">{t('community.visibleSub')}</Text>
+                    </View>
+                    <Switch value={mateVisible} onValueChange={setMateVisible} />
+                  </Row>
+                  <Row style={{ justifyContent: 'space-between', opacity: mateVisible ? 1 : 0.45 }}>
+                    <View style={{ flex: 1, paddingRight: spacing.md }}>
+                      <Text variant="bodyMedium">{t('community.showCourseToggle')}</Text>
+                      <Text variant="caption" tone="faint">{t('community.showCourseSub')}</Text>
+                    </View>
+                    <Switch value={mateShowCourse && mateVisible} onValueChange={setMateShowCourse} disabled={!mateVisible} />
+                  </Row>
+                  {!mateVisible ? (
+                    <Row gap={spacing.sm} style={{ backgroundColor: colors.surfaceAlt, borderRadius: radius.md, padding: spacing.md }}>
+                      <Ionicons name="eye-off-outline" size={16} color={colors.inkSecondary} />
+                      <Text variant="caption" tone="secondary" style={{ flex: 1 }}>{t('community.invisibleBanner')}</Text>
+                    </Row>
+                  ) : null}
+                </Card>
                 <Text variant="caption" tone="secondary">
                   {isSample
                     ? t('community.matesSample', { school: anchorInst?.name ?? '' })
@@ -381,6 +424,64 @@ export default function CommunityScreen() {
           </View>
         </Pressable>
       ) : null}
+
+      <Modal visible={!!mateSheet} animationType="slide" transparent onRequestClose={() => setMateSheet(null)}>
+        <Pressable style={{ flex: 1, backgroundColor: colors.overlay }} onPress={() => setMateSheet(null)} />
+        {mateSheet ? (
+          <View
+            style={{
+              backgroundColor: colors.bg, borderTopLeftRadius: radius.xl, borderTopRightRadius: radius.xl,
+              padding: spacing.xl, paddingBottom: spacing.xxxl, gap: spacing.md, alignItems: 'center',
+            }}
+          >
+            <Image source={{ uri: mateSheet.avatar }} style={{ width: 96, height: 96, borderRadius: radius.full, backgroundColor: colors.surfaceAlt }} />
+            <Text variant="title" center>{mateSheet.name}</Text>
+            <Text variant="caption" tone="secondary" center>
+              {FLAGS[mateSheet.homeCountry]} {mateSheet.age
+                ? t('community.aboutAge', { age: mateSheet.age, country: t(`countries.${mateSheet.homeCountry}`) })
+                : t(`countries.${mateSheet.homeCountry}`)}
+            </Text>
+            <View style={{ alignSelf: 'stretch', gap: spacing.xs, backgroundColor: colors.surfaceAlt, borderRadius: radius.lg, padding: spacing.lg }}>
+              <Row gap={spacing.sm}>
+                <Ionicons name="school-outline" size={15} color={colors.accent} />
+                <Text variant="caption" style={{ flex: 1 }}>{mateSheet.courseName} · {instName(mateSheet.institutionId)}</Text>
+              </Row>
+              <Row gap={spacing.sm}>
+                <Ionicons name="calendar-outline" size={15} color={colors.accent} />
+                <Text variant="caption">{t('community.intakeLabel', { intake: mateSheet.intake })}</Text>
+              </Row>
+              {mateSheet.arrivalDate ? (
+                <Row gap={spacing.sm}>
+                  <Ionicons name="airplane-outline" size={15} color={colors.accent} />
+                  <Text variant="caption">{t('community.arrives', { date: mateSheet.arrivalDate })}</Text>
+                </Row>
+              ) : null}
+            </View>
+            {mateSheet.lookingFor?.length ? (
+              <View style={{ alignSelf: 'stretch', gap: spacing.sm }}>
+                <Text variant="micro" tone="faint" style={{ letterSpacing: 1.5 }}>{t('community.lookingTitle').toUpperCase()}</Text>
+                <Row wrap gap={spacing.sm}>
+                  {mateSheet.lookingFor.map((k) => (
+                    <View key={k} style={{ backgroundColor: colors.accentSoft, borderRadius: radius.full, paddingHorizontal: spacing.md, paddingVertical: 5 }}>
+                      <Text variant="caption" color={colors.accent}>{t(`community.looking_${k}`)}</Text>
+                    </View>
+                  ))}
+                </Row>
+              </View>
+            ) : null}
+            <Button
+              label={connections.includes(mateSheet.id) ? t('community.connected') : t('community.connect')}
+              icon={connections.includes(mateSheet.id) ? 'checkmark' : 'person-add-outline'}
+              variant={connections.includes(mateSheet.id) ? 'secondary' : 'primary'}
+              size="lg"
+              onPress={() => {
+                hapticTap();
+                toggleConnection(mateSheet.id);
+              }}
+            />
+          </View>
+        ) : null}
+      </Modal>
     </Screen>
   );
 }

@@ -497,7 +497,23 @@
     "matesAt": "{{school}}にて",
     "matesNearby": "{{city}}の近く — 同じ都市、通常約10km圏内",
     "matesAnchor": "出願または保存したコースから{{school}}に紐づけました。サンプルの学生です — 正式公開時に実際の同級生が表示されます。",
-    "matesSample": "出願またはコースを保存すると、あなたの学校の同級生が表示されます。{{school}}のサンプルを表示中。"
+    "matesSample": "出願またはコースを保存すると、あなたの学校の同級生が表示されます。{{school}}のサンプルを表示中。",
+    "myVisibility": "公開設定",
+    "visibleToggle": "同級生に表示",
+    "visibleSub": "同じ学校の学生があなたのカードを見てつながれます。",
+    "invisibleBanner": "非表示中 — 自由に閲覧できます。誰もあなたを見たり連絡したりできません。",
+    "showCourseToggle": "専攻を表示",
+    "showCourseSub": "表示中はカードに専攻が載ります。",
+    "aboutAge": "{{age}}歳 · {{country}}",
+    "arrives": "{{date}} 到着",
+    "intakeLabel": "{{intake}} 入学",
+    "lookingTitle": "探しているもの",
+    "looking_housing": "ルームメイト",
+    "looking_study": "勉強仲間",
+    "looking_travel": "旅の相棒",
+    "looking_friends": "友達づくり",
+    "looking_sports": "スポーツ・ジム",
+    "looking_foodie": "グルメ探検"
   },
   "arrival": {
     "title": "到着サービス",
@@ -621,7 +637,11 @@
     "wizardRelaxed": "注：その予算に収まるものがなかったため、近い選択肢を表示するよう緩めました。",
     "pref_any": "どこでも",
     "chipOpen": "{{name}}を開く ↗",
-    "cityFlight": "✈️ 帰省の往復航空券：閑散期およそ{{low}} · 繁忙期{{peak}}。"
+    "cityFlight": "✈️ 帰省の往復航空券：閑散期およそ{{low}} · 繁忙期{{peak}}。",
+    "emergencyIntro": "留学先の緊急通報番号:",
+    "emergencyLine": "{{flag}} {{country}} — 警察 {{police}}・救急 {{ambulance}}・消防 {{fire}}",
+    "emergencyHubNote": "安全ハブならワンタップで確認できます。大使館や緊急連絡先も一緒に。",
+    "chipSafetyHub": "安全ハブを開く"
   },
   "notFound": {
     "title": "ページが見つかりません",
@@ -883,7 +903,12 @@
     "verifyNote": "プロトタイプの名簿 — 渡航前に番号をご確認ください。",
     "mockNote": "プロトタイプ — 実際の通話や送信はありません。",
     "cardSubSet": "緊急連絡先：{{name}}",
-    "cardSubUnset": "緊急連絡先を追加"
+    "cardSubUnset": "緊急連絡先を追加",
+    "destFromSaved": "保存したコースに基づく表示です。出願するとあなたの出願に連動します。",
+    "destFromMatches": "上位マッチに基づく表示です。出願すると行き先が確定します。",
+    "buddyGo": "出発前ページで、近い日程で渡航する同級生を確認できます。",
+    "buddyLocked": "トラベルバディは近い日程で渡航する合格者同士をつなぎます。最初の出願で解放されます。それまではコミュニティで同級生と知り合えます。",
+    "commSub": "SOS・大使館・現地の緊急番号 — いつでも無料。"
   },
   "parent": {
     "title": "保護者ビュー",

@@ -14,7 +14,7 @@ import { fonts, radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
-import { getFlightFares, listCityInfo, listInstitutions } from '@/services/api';
+import { getFlightFares, getSafety, listCityInfo, listInstitutions } from '@/services/api';
 import { respond, respondWizard, type AssistantCtx, type QuickReply, type WizardState } from '@/services/assistant';
 import { homeCurrencyFor } from '@/services/currency';
 
@@ -29,7 +29,7 @@ export default function AssistantScreen() {
   const { t } = useTranslation();
   const { colors } = useTheme();
   const { matchData, profile, loading, error, retry } = useMatchData();
-  const extras = useAsync(async () => Promise.all([listInstitutions(), listCityInfo(), getFlightFares()]), []);
+  const extras = useAsync(async () => Promise.all([listInstitutions(), listCityInfo(), getFlightFares(), getSafety()]), []);
   const [messages, setMessages] = useState<Msg[] | null>(null);
   const [draft, setDraft] = useState('');
   const [thinking, setThinking] = useState(false);
@@ -52,6 +52,7 @@ export default function AssistantScreen() {
       institutions: extras.data[0],
       cityInfo: extras.data[1],
       flights: extras.data[2],
+      safety: extras.data[3],
       home: homeCurrencyFor(profile),
     };
   }, [matchData, profile, extras.data, t]);

@@ -497,7 +497,23 @@
     "matesAt": "Tại {{school}}",
     "matesNearby": "Gần đó ở {{city}} — cùng thành phố, thường trong ~10 km",
     "matesAnchor": "Khớp với {{school}} từ hồ sơ hoặc ngành đã lưu của bạn. Sinh viên mẫu — bạn học thật xuất hiện khi ra mắt.",
-    "matesSample": "Nộp hồ sơ hoặc lưu ngành để thấy bạn học trường bạn. Đang hiển thị mẫu cho {{school}}."
+    "matesSample": "Nộp hồ sơ hoặc lưu ngành để thấy bạn học trường bạn. Đang hiển thị mẫu cho {{school}}.",
+    "myVisibility": "Hiển thị của tôi",
+    "visibleToggle": "Hiện với bạn học",
+    "visibleSub": "Sinh viên trường bạn có thể thấy thẻ của bạn và kết nối.",
+    "invisibleBanner": "Bạn đang ẩn — thoải mái xem, không ai thấy hay liên hệ được với bạn.",
+    "showCourseToggle": "Hiện ngành tôi học",
+    "showCourseSub": "Ngành học hiện trên thẻ khi bạn hiển thị.",
+    "aboutAge": "{{age}} · {{country}}",
+    "arrives": "Đến ngày {{date}}",
+    "intakeLabel": "Kỳ nhập học {{intake}}",
+    "lookingTitle": "Đang tìm",
+    "looking_housing": "Bạn cùng nhà",
+    "looking_study": "Nhóm học",
+    "looking_travel": "Bạn đồng hành",
+    "looking_friends": "Kết bạn",
+    "looking_sports": "Thể thao & gym",
+    "looking_foodie": "Khám phá ẩm thực"
   },
   "arrival": {
     "title": "Dịch vụ khi hạ cánh",
@@ -621,7 +637,11 @@
     "wizardRelaxed": "Lưu ý: không có gì vừa ngân sách đó nên mình đã nới ra để hiện các lựa chọn gần nhất.",
     "pref_any": "Đâu cũng được",
     "chipOpen": "Mở {{name}} ↗",
-    "cityFlight": "✈️ Vé về nhà, khứ hồi: khoảng {{low}} mùa thấp điểm · {{peak}} mùa cao điểm/lễ."
+    "cityFlight": "✈️ Vé về nhà, khứ hồi: khoảng {{low}} mùa thấp điểm · {{peak}} mùa cao điểm/lễ.",
+    "emergencyIntro": "Số khẩn cấp cho điểm đến du học của bạn:",
+    "emergencyLine": "{{flag}} {{country}} — Cảnh sát {{police}} · Cấp cứu {{ambulance}} · Cứu hỏa {{fire}}",
+    "emergencyHubNote": "Trung tâm an toàn giữ mọi thứ chỉ một chạm, cùng đại sứ quán và liên hệ khẩn cấp của bạn.",
+    "chipSafetyHub": "Mở Trung tâm an toàn"
   },
   "notFound": {
     "title": "Không tìm thấy trang",
@@ -883,7 +903,12 @@
     "verifyNote": "Danh bạ mẫu — hãy xác minh số trước khi bay.",
     "mockNote": "Bản mẫu — không có cuộc gọi hay tin nhắn thật nào được gửi.",
     "cardSubSet": "Liên hệ khẩn cấp: {{name}}",
-    "cardSubUnset": "Thêm liên hệ khẩn cấp của bạn"
+    "cardSubUnset": "Thêm liên hệ khẩn cấp của bạn",
+    "destFromSaved": "Dựa trên ngành đã lưu — sẽ theo hồ sơ của bạn khi bạn nộp.",
+    "destFromMatches": "Dựa trên kết quả phù hợp nhất — nộp hồ sơ để chốt điểm đến.",
+    "buddyGo": "Xem bạn học bay gần ngày của bạn trong mục Trước khởi hành.",
+    "buddyLocked": "Bạn đồng hành ghép bạn với bạn học bay ngày tương tự. Mở khóa sau hồ sơ đầu tiên — trong lúc đó, gặp bạn học tại Cộng đồng.",
+    "commSub": "SOS, đại sứ quán & số khẩn cấp địa phương — luôn miễn phí."
   },
   "parent": {
     "title": "Chế độ phụ huynh",

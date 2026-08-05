@@ -499,7 +499,23 @@
     "matesAt": "在{{school}}",
     "matesNearby": "{{city}}附近——同城市,通常約 10 公里內",
     "matesAnchor": "已依你的申請或收藏配對到{{school}}。示例學生——正式上線後顯示真實同學。",
-    "matesSample": "申請或收藏課程即可看到你學校的同學。目前顯示{{school}}的示例。"
+    "matesSample": "申請或收藏課程即可看到你學校的同學。目前顯示{{school}}的示例。",
+    "myVisibility": "我的可見性",
+    "visibleToggle": "對同學可見",
+    "visibleSub": "同校學生可以看到你的卡片並發起聯繫。",
+    "invisibleBanner": "你已隱身——可自由瀏覽,沒有人能看到或聯繫你。",
+    "showCourseToggle": "顯示我的科系",
+    "showCourseSub": "可見時,你的科系會顯示在卡片上。",
+    "aboutAge": "{{age}} 歲 · {{country}}",
+    "arrives": "{{date}} 抵達",
+    "intakeLabel": "{{intake}} 入學",
+    "lookingTitle": "希望找到",
+    "looking_housing": "室友",
+    "looking_study": "讀書會",
+    "looking_travel": "旅伴",
+    "looking_friends": "交朋友",
+    "looking_sports": "運動健身",
+    "looking_foodie": "美食探索"
   },
   "arrival": {
     "title": "落地服務",
@@ -633,7 +649,11 @@
     "wizardRelaxed": "注：沒有完全符合該預算的選項，我放寬了預算來顯示最接近的選擇。",
     "pref_any": "哪裡都行",
     "chipOpen": "開啟{{name}} ↗",
-    "cityFlight": "✈️ 回國往返機票：淡季約 {{low}} · 旺季/假期約 {{peak}}。"
+    "cityFlight": "✈️ 回國往返機票：淡季約 {{low}} · 旺季/假期約 {{peak}}。",
+    "emergencyIntro": "你留學目的地的緊急電話:",
+    "emergencyLine": "{{flag}} {{country}}——警察 {{police}} · 救護車 {{ambulance}} · 火警 {{fire}}",
+    "emergencyHubNote": "安全中心一鍵直達,還有你的大使館和緊急聯絡人。",
+    "chipSafetyHub": "開啟安全中心"
   },
   "costsheet": {
     "title": "{{city}}生活費用",
@@ -885,7 +905,12 @@
     "verifyNote": "原型目錄——出發前請核實號碼。",
     "mockNote": "原型——不會撥打真實電話或傳送真實訊息。",
     "cardSubSet": "緊急聯絡人：{{name}}",
-    "cardSubUnset": "新增你的緊急聯絡人"
+    "cardSubUnset": "新增你的緊急聯絡人",
+    "destFromSaved": "基於你收藏的課程——送出申請後將跟隨你的申請。",
+    "destFromMatches": "基於你的最佳配對——送出申請即可鎖定目的地。",
+    "buddyGo": "在行前準備中查看與你日期相近的同學。",
+    "buddyLocked": "旅伴功能會配對與你日期相近的已錄取同學。送出第一份申請後解鎖——現在可先到社群認識未來同學。",
+    "commSub": "SOS、大使館與當地緊急電話——永久免費。"
   },
   "parent": {
     "title": "家長檢視",

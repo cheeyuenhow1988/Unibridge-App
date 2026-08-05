@@ -499,7 +499,23 @@
     "matesAt": "Di {{school}}",
     "matesNearby": "Berdekatan di {{city}} — bandar sama, biasanya dalam ~10 km",
     "matesAnchor": "Dipadankan dengan {{school}} daripada permohonan atau kursus simpanan anda. Pelajar contoh — rakan sekelas sebenar muncul semasa pelancaran.",
-    "matesSample": "Mohon atau simpan kursus untuk melihat rakan sekelas sekolah anda. Contoh untuk {{school}} ditunjukkan."
+    "matesSample": "Mohon atau simpan kursus untuk melihat rakan sekelas sekolah anda. Contoh untuk {{school}} ditunjukkan.",
+    "myVisibility": "Keterlihatan saya",
+    "visibleToggle": "Kelihatan kepada rakan sekelas",
+    "visibleSub": "Pelajar sekolah anda boleh melihat kad anda dan berhubung.",
+    "invisibleBanner": "Anda halimunan — layari dengan bebas, tiada siapa boleh melihat atau menghubungi anda.",
+    "showCourseToggle": "Tunjukkan apa yang saya belajar",
+    "showCourseSub": "Kursus anda dipaparkan pada kad anda apabila kelihatan.",
+    "aboutAge": "{{age}} · {{country}}",
+    "arrives": "Tiba {{date}}",
+    "intakeLabel": "Kemasukan {{intake}}",
+    "lookingTitle": "Mencari",
+    "looking_housing": "Rakan serumah",
+    "looking_study": "Kumpulan belajar",
+    "looking_travel": "Rakan perjalanan",
+    "looking_friends": "Mencari kawan",
+    "looking_sports": "Sukan & gim",
+    "looking_foodie": "Jelajah makanan"
   },
   "arrival": {
     "title": "Perkhidmatan ketibaan",
@@ -633,7 +649,11 @@
     "wizardRelaxed": "Nota: tiada yang muat bajet itu, jadi saya longgarkan untuk tunjuk pilihan terdekat.",
     "pref_any": "Mana-mana sahaja",
     "chipOpen": "Buka {{name}} ↗",
-    "cityFlight": "✈️ Tiket penerbangan pulang (pergi-balik): sekitar {{low}} musim biasa · {{peak}} musim puncak/cuti."
+    "cityFlight": "✈️ Tiket penerbangan pulang (pergi-balik): sekitar {{low}} musim biasa · {{peak}} musim puncak/cuti.",
+    "emergencyIntro": "Nombor kecemasan untuk destinasi pengajian anda:",
+    "emergencyLine": "{{flag}} {{country}} — Polis {{police}} · Ambulans {{ambulance}} · Bomba {{fire}}",
+    "emergencyHubNote": "Hab Keselamatan menyimpan semuanya satu ketikan sahaja, dengan kedutaan dan kenalan kecemasan anda.",
+    "chipSafetyHub": "Buka Hab Keselamatan"
   },
   "costsheet": {
     "title": "Kos sara hidup {{city}}",
@@ -885,7 +905,12 @@
     "verifyNote": "Direktori prototaip — sahkan nombor sebelum berlepas.",
     "mockNote": "Prototaip — tiada panggilan atau mesej sebenar dihantar.",
     "cardSubSet": "Kenalan kecemasan: {{name}}",
-    "cardSubUnset": "Tambah kenalan kecemasan anda"
+    "cardSubUnset": "Tambah kenalan kecemasan anda",
+    "destFromSaved": "Berdasarkan kursus simpanan anda — mengikut permohonan anda selepas memohon.",
+    "destFromMatches": "Berdasarkan padanan teratas anda — mohon untuk menetapkan destinasi sebenar.",
+    "buddyGo": "Lihat rakan sekelas yang terbang sekitar tarikh anda di Pra-berlepas.",
+    "buddyLocked": "Rakan perjalanan memadankan anda dengan rakan sekelas yang terbang pada tarikh hampir sama. Terbuka selepas permohonan pertama — sementara itu, kenali rakan sekelas di Komuniti.",
+    "commSub": "SOS, kedutaan & nombor kecemasan tempatan — sentiasa percuma."
   },
   "parent": {
     "title": "Paparan ibu bapa",

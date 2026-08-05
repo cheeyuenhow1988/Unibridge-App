@@ -501,7 +501,23 @@
     "matesAt": "At {{school}}",
     "matesNearby": "Nearby in {{city}} — same city, usually within ~10 km",
     "matesAnchor": "Matched to {{school}} from your application or saved course. Sample students — real admitted coursemates appear at launch.",
-    "matesSample": "Apply to or save a course to see coursemates for your school. Showing a sample for {{school}}."
+    "matesSample": "Apply to or save a course to see coursemates for your school. Showing a sample for {{school}}.",
+    "myVisibility": "My visibility",
+    "visibleToggle": "Visible to coursemates",
+    "visibleSub": "Others at your school can see your card and connect.",
+    "invisibleBanner": "You're invisible — browse freely, nobody can see or contact you.",
+    "showCourseToggle": "Show what I study",
+    "showCourseSub": "Your course appears on your card when visible.",
+    "aboutAge": "{{age}} · {{country}}",
+    "arrives": "Arrives {{date}}",
+    "intakeLabel": "Intake {{intake}}",
+    "lookingTitle": "Looking for",
+    "looking_housing": "Housing buddy",
+    "looking_study": "Study group",
+    "looking_travel": "Travel buddy",
+    "looking_friends": "Making friends",
+    "looking_sports": "Sports & gym",
+    "looking_foodie": "Food adventures"
   },
   "arrival": {
     "title": "Arrival services",
@@ -625,7 +641,11 @@
     "wizardRelaxed": "Note: nothing fit that budget, so I loosened it to show your closest options.",
     "pref_any": "Anywhere",
     "chipOpen": "Open {{name}} ↗",
-    "cityFlight": "✈️ Flights home, round trip: about {{low}} in low season · {{peak}} in peak/holiday season."
+    "cityFlight": "✈️ Flights home, round trip: about {{low}} in low season · {{peak}} in peak/holiday season.",
+    "emergencyIntro": "Emergency numbers for your study destination:",
+    "emergencyLine": "{{flag}} {{country}} — Police {{police}} · Ambulance {{ambulance}} · Fire {{fire}}",
+    "emergencyHubNote": "The Safety hub keeps these one tap away, with your embassy and emergency contact.",
+    "chipSafetyHub": "Open Safety hub"
   },
   "notFound": {
     "title": "Page not found",
@@ -887,7 +907,12 @@
     "verifyNote": "Prototype directory — verify numbers before you travel.",
     "mockNote": "Prototype — no real calls or messages are sent.",
     "cardSubSet": "Emergency contact: {{name}}",
-    "cardSubUnset": "Add your emergency contact"
+    "cardSubUnset": "Add your emergency contact",
+    "destFromSaved": "Based on your saved courses — this follows your applications once you apply.",
+    "destFromMatches": "Based on your top matches — apply to pin your exact destination.",
+    "buddyGo": "See admitted coursemates flying around your dates in Pre-departure.",
+    "buddyLocked": "Travel buddies match you with admitted coursemates flying on similar dates. They unlock with your first application — meanwhile, meet future coursemates in Community.",
+    "commSub": "SOS, embassies & local emergency numbers — always free."
   },
   "parent": {
     "title": "Parent view",

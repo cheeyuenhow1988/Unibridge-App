@@ -499,7 +499,23 @@
     "matesAt": "在{{school}}",
     "matesNearby": "{{city}}附近——同城,通常约 10 公里内",
     "matesAnchor": "已根据你的申请或收藏匹配到{{school}}。示例学生——正式上线后显示真实同学。",
-    "matesSample": "申请或收藏课程即可看到你学校的同学。当前显示{{school}}的示例。"
+    "matesSample": "申请或收藏课程即可看到你学校的同学。当前显示{{school}}的示例。",
+    "myVisibility": "我的可见性",
+    "visibleToggle": "对同学可见",
+    "visibleSub": "同校学生可以看到你的卡片并发起联系。",
+    "invisibleBanner": "你已隐身——可自由浏览,没人能看到或联系你。",
+    "showCourseToggle": "展示我的专业",
+    "showCourseSub": "可见时,你的专业会显示在卡片上。",
+    "aboutAge": "{{age}} 岁 · {{country}}",
+    "arrives": "{{date}} 抵达",
+    "intakeLabel": "{{intake}} 入学",
+    "lookingTitle": "希望找到",
+    "looking_housing": "室友",
+    "looking_study": "学习小组",
+    "looking_travel": "旅伴",
+    "looking_friends": "交朋友",
+    "looking_sports": "运动健身",
+    "looking_foodie": "美食探店"
   },
   "arrival": {
     "title": "落地服务",
@@ -633,7 +649,11 @@
     "wizardRelaxed": "注：没有完全符合该预算的选项，我放宽了预算来显示最接近的选择。",
     "pref_any": "哪里都行",
     "chipOpen": "打开{{name}} ↗",
-    "cityFlight": "✈️ 回国往返机票：淡季约 {{low}} · 旺季/假期约 {{peak}}。"
+    "cityFlight": "✈️ 回国往返机票：淡季约 {{low}} · 旺季/假期约 {{peak}}。",
+    "emergencyIntro": "你留学目的地的紧急电话:",
+    "emergencyLine": "{{flag}} {{country}}——警察 {{police}} · 救护车 {{ambulance}} · 火警 {{fire}}",
+    "emergencyHubNote": "安全中心一键直达,还有你的大使馆和紧急联系人。",
+    "chipSafetyHub": "打开安全中心"
   },
   "costsheet": {
     "title": "{{city}}生活费用",
@@ -885,7 +905,12 @@
     "verifyNote": "原型目录——出行前请核实号码。",
     "mockNote": "原型——不会拨打真实电话或发送真实消息。",
     "cardSubSet": "紧急联系人：{{name}}",
-    "cardSubUnset": "添加你的紧急联系人"
+    "cardSubUnset": "添加你的紧急联系人",
+    "destFromSaved": "基于你收藏的课程——提交申请后将跟随你的申请。",
+    "destFromMatches": "基于你的最佳匹配——提交申请后即可锁定目的地。",
+    "buddyGo": "在行前准备中查看与你日期相近的同学。",
+    "buddyLocked": "旅伴功能会匹配与你日期相近的已录取同学。提交首份申请后解锁——现在可先到社区认识未来同学。",
+    "commSub": "SOS、大使馆和当地紧急电话——永久免费。"
   },
   "parent": {
     "title": "家长视图",

@@ -497,7 +497,23 @@
     "matesAt": "Di {{school}}",
     "matesNearby": "Terdekat di {{city}} — kota sama, biasanya dalam ~10 km",
     "matesAnchor": "Dicocokkan dengan {{school}} dari aplikasi atau jurusan tersimpanmu. Mahasiswa contoh — teman seangkatan asli muncul saat peluncuran.",
-    "matesSample": "Daftar atau simpan jurusan untuk melihat teman seangkatan kampusmu. Contoh untuk {{school}}."
+    "matesSample": "Daftar atau simpan jurusan untuk melihat teman seangkatan kampusmu. Contoh untuk {{school}}.",
+    "myVisibility": "Visibilitas saya",
+    "visibleToggle": "Terlihat oleh teman seangkatan",
+    "visibleSub": "Mahasiswa kampusmu bisa melihat kartumu dan terhubung.",
+    "invisibleBanner": "Kamu tak terlihat — jelajahi bebas, tak ada yang bisa melihat atau menghubungimu.",
+    "showCourseToggle": "Tampilkan jurusanku",
+    "showCourseSub": "Jurusanmu muncul di kartumu saat terlihat.",
+    "aboutAge": "{{age}} · {{country}}",
+    "arrives": "Tiba {{date}}",
+    "intakeLabel": "Intake {{intake}}",
+    "lookingTitle": "Mencari",
+    "looking_housing": "Teman sekamar",
+    "looking_study": "Kelompok belajar",
+    "looking_travel": "Teman perjalanan",
+    "looking_friends": "Cari teman",
+    "looking_sports": "Olahraga & gym",
+    "looking_foodie": "Wisata kuliner"
   },
   "arrival": {
     "title": "Layanan kedatangan",
@@ -621,7 +637,11 @@
     "wizardRelaxed": "Catatan: tidak ada yang masuk anggaran itu, jadi kulonggarkan untuk menampilkan opsi terdekatmu.",
     "pref_any": "Di mana saja",
     "chipOpen": "Buka {{name}} ↗",
-    "cityFlight": "✈️ Tiket pulang, pulang-pergi: sekitar {{low}} musim sepi · {{peak}} musim ramai/libur."
+    "cityFlight": "✈️ Tiket pulang, pulang-pergi: sekitar {{low}} musim sepi · {{peak}} musim ramai/libur.",
+    "emergencyIntro": "Nomor darurat untuk tujuan studimu:",
+    "emergencyLine": "{{flag}} {{country}} — Polisi {{police}} · Ambulans {{ambulance}} · Damkar {{fire}}",
+    "emergencyHubNote": "Pusat Keamanan menyimpan semuanya sekali ketuk, dengan kedutaan dan kontak daruratmu.",
+    "chipSafetyHub": "Buka Pusat Keamanan"
   },
   "notFound": {
     "title": "Halaman tidak ditemukan",
@@ -883,7 +903,12 @@
     "verifyNote": "Direktori prototipe — pastikan nomornya sebelum berangkat.",
     "mockNote": "Prototipe — tidak ada panggilan atau pesan sungguhan.",
     "cardSubSet": "Kontak darurat: {{name}}",
-    "cardSubUnset": "Tambahkan kontak daruratmu"
+    "cardSubUnset": "Tambahkan kontak daruratmu",
+    "destFromSaved": "Berdasarkan jurusan tersimpanmu — mengikuti aplikasimu setelah mendaftar.",
+    "destFromMatches": "Berdasarkan kecocokan teratasmu — daftar untuk memastikan tujuanmu.",
+    "buddyGo": "Lihat teman seangkatan yang terbang di sekitar tanggalmu di Pra-keberangkatan.",
+    "buddyLocked": "Teman perjalanan mencocokkanmu dengan teman seangkatan yang terbang di tanggal serupa. Terbuka setelah aplikasi pertamamu — sementara itu, kenalan di Komunitas.",
+    "commSub": "SOS, kedutaan & nomor darurat setempat — selalu gratis."
   },
   "parent": {
     "title": "Tampilan orang tua",
