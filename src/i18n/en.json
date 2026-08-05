@@ -57,10 +57,10 @@
   "tabs": {
     "match": "Match",
     "explore": "Explore",
-    "applications": "Applications",
-    "community": "Community",
+    "applications": "Apply",
+    "community": "Social",
     "profile": "Profile",
-    "assistant": "AI Assistant",
+    "assistant": "AI",
     "chats": "Chats"
   },
   "countries": {

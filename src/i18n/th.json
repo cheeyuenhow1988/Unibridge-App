@@ -55,10 +55,10 @@
   "tabs": {
     "match": "จับคู่",
     "explore": "สำรวจ",
-    "applications": "ใบสมัคร",
-    "community": "คอมมูนิตี้",
+    "applications": "สมัคร",
+    "community": "ชุมชน",
     "profile": "โปรไฟล์",
-    "assistant": "ผู้ช่วย AI",
+    "assistant": "AI",
     "chats": "แชท"
   },
   "countries": {

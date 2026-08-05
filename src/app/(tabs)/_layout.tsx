@@ -33,7 +33,10 @@ export default function TabsLayout() {
         tabBarActiveTintColor: colors.accent,
         tabBarInactiveTintColor: colors.inkFaint,
         tabBarStyle: { backgroundColor: colors.surface, borderTopColor: colors.border },
-        tabBarLabelStyle: { fontFamily: fonts.semibold, fontSize: 11 },
+        // Seven tabs: tighter type + no item padding so no label truncates.
+        tabBarLabelStyle: { fontFamily: fonts.semibold, fontSize: 9.5, letterSpacing: -0.1, width: '100%', textAlign: 'center' },
+        tabBarItemStyle: { paddingHorizontal: 0, minWidth: 0 },
+        tabBarAllowFontScaling: false,
         tabBarIcon: ({ color, size, focused }) => {
           const [outline, filled] = ICONS[route.name] ?? ICONS.match;
           return <Ionicons name={focused ? filled : outline} size={size} color={color} />;
