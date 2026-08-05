@@ -751,7 +751,14 @@
     "finance_transfer": "海外送金",
     "finance_tuitionPay": "学費の支払い",
     "finance_bank": "海外銀行口座",
-    "financeNote": "リリース時に認可パートナー経由 — レートはUniBridge内で比較。"
+    "financeNote": "リリース時に認可パートナー経由 — レートはUniBridge内で比較。",
+    "cityFromApp": "{{city}}のみ表示中 — 出願先の都市です。",
+    "jobDetails": "詳細",
+    "jobHours": "通常 週{{hours}}時間",
+    "contactTitle": "連絡・応募",
+    "sendResume": "応募 — {{role}}({{city}})",
+    "resumeBody": "{{name}}様\n\nUniBridgeで{{role}}の求人を拝見しました。入学予定の学生です。応募いたします — 履歴書を添付します。\n\nよろしくお願いいたします。",
+    "contactNote": "プロトタイプの連絡先例 — 雇用主とは対面で会い、応募にお金を払わないでください。"
   },
   "team": {
     "title": "あなたのチーム",

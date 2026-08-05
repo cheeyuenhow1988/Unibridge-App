@@ -751,7 +751,14 @@
     "finance_transfer": "Transfer uang internasional",
     "finance_tuitionPay": "Pembayaran uang kuliah",
     "finance_bank": "Rekening bank luar negeri",
-    "financeNote": "Lewat mitra berlisensi saat peluncuran — bandingkan kurs di dalam UniBridge."
+    "financeNote": "Lewat mitra berlisensi saat peluncuran — bandingkan kurs di dalam UniBridge.",
+    "cityFromApp": "Hanya menampilkan {{city}} — kota studimu, dari aplikasimu.",
+    "jobDetails": "Detail",
+    "jobHours": "Biasanya {{hours}} jam/minggu",
+    "contactTitle": "Kontak & lamar",
+    "sendResume": "Lamaran — {{role}} ({{city}})",
+    "resumeBody": "Halo {{name}},\n\nSaya melihat lowongan {{role}} di UniBridge. Saya mahasiswa baru dan ingin melamar — resume terlampir.\n\nTerima kasih!",
+    "contactNote": "Kontak prototipe indikatif — temui pemberi kerja langsung dan jangan pernah membayar untuk melamar."
   },
   "team": {
     "title": "Tim kamu",

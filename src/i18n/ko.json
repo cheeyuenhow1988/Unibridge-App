@@ -751,7 +751,14 @@
     "finance_transfer": "해외 송금",
     "finance_tuitionPay": "등록금 납부",
     "finance_bank": "해외 은행 계좌",
-    "financeNote": "출시 때 인가 파트너 통해 — 환율은 UniBridge 안에서 비교."
+    "financeNote": "출시 때 인가 파트너 통해 — 환율은 UniBridge 안에서 비교.",
+    "cityFromApp": "{{city}}만 표시 중 — 지원서 기준 유학 도시입니다.",
+    "jobDetails": "상세",
+    "jobHours": "보통 주 {{hours}}시간",
+    "contactTitle": "연락 및 지원",
+    "sendResume": "지원 — {{role}} ({{city}})",
+    "resumeBody": "{{name}}님 안녕하세요,\n\nUniBridge에서 {{role}} 공고를 봤습니다. 곧 입학하는 학생이며 지원하고 싶습니다 — 이력서를 첨부합니다.\n\n감사합니다!",
+    "contactNote": "프로토타입 예시 연락처 — 고용주는 직접 만나고, 지원에 절대 돈을 내지 마세요."
   },
   "team": {
     "title": "내 팀",

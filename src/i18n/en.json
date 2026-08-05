@@ -755,7 +755,15 @@
     "finance_transfer": "International money transfer",
     "finance_tuitionPay": "Tuition-fee payment",
     "finance_bank": "Overseas bank account",
-    "financeNote": "Via licensed partners at launch — compare rates inside UniBridge."
+    "financeNote": "Via licensed partners at launch — compare rates inside UniBridge.",
+    "cityFromApp": "Showing {{city}} only — your enrolled city, from your application.",
+    "jobDetails": "Details",
+    "jobHours": "Typical {{hours}} hrs/week",
+    "contactTitle": "Contact & apply",
+    "sendResume": "Send resume by email",
+    "resumeSubject": "Application — {{role}} ({{city}})",
+    "resumeBody": "Hi {{name}},\n\nI saw the {{role}} listing on UniBridge. I am an incoming student and would like to apply — my resume is attached.\n\nThank you!",
+    "contactNote": "Indicative prototype contact — meet employers in person and never pay to apply."
   },
   "team": {
     "title": "Your team",

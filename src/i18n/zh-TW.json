@@ -753,7 +753,14 @@
     "finance_transfer": "國際匯款",
     "finance_tuitionPay": "學費繳納",
     "finance_bank": "海外銀行帳戶",
-    "financeNote": "正式上線後經持牌合作方提供——在UniBridge內比價。"
+    "financeNote": "正式上線後經持牌合作方提供——在UniBridge內比價。",
+    "cityFromApp": "僅顯示{{city}}——你的就讀城市(來自你的申請)。",
+    "jobDetails": "詳情",
+    "jobHours": "通常每週 {{hours}} 小時",
+    "contactTitle": "聯絡與應徵",
+    "sendResume": "應徵 — {{role}}({{city}})",
+    "resumeBody": "{{name}}你好,\n\n我在 UniBridge 看到{{role}}的職缺。我是即將入學的學生,想應徵此職位,履歷如附件。\n\n謝謝!",
+    "contactNote": "原型示意聯絡方式——請當面見雇主,切勿付費求職。"
   },
   "team": {
     "title": "你的團隊",

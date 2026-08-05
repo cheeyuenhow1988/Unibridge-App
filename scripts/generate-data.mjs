@@ -1594,8 +1594,11 @@ for (const [city, [country]] of Object.entries(CITY_COL)) {
   const [wMin, wMax] = WAGES[country];
   const spots = (CITY_ATTRACTIONS[city] ?? []).filter(([, type]) => type === 'food' || type === 'shopping');
   const sharedBy = ambCityIndex[city] ?? null;
+  const citySlug = city.replace(/\W/g, '').toLowerCase();
+  const cc = { AU: '61', MY: '60', TW: '886', GB: '44', SG: '65', NZ: '64', RU: '7', US: '1', CA: '1', CN: '86' }[country];
+  const MANAGERS = ['Sam Carter', 'Priya Nair', 'Daniel Wong', 'Grace Lim', 'Marco Rossi', 'Hana Ito'];
   jobsByCity[city] = JOB_ROLES.map(([role, onCampus], i) => ({
-    id: `job-${city.replace(/\W/g, '').toLowerCase()}-${i + 1}`,
+    id: `job-${citySlug}-${i + 1}`,
     city,
     role,
     spot: onCampus ? null : (spots[i % Math.max(spots.length, 1)]?.[0] ?? null),
@@ -1603,6 +1606,13 @@ for (const [city, [country]] of Object.entries(CITY_COL)) {
     payHourMax: Math.round(wMax * (0.85 + (i % 3) * 0.075) * 100) / 100,
     onCampus,
     sharedBy,
+    // Hiring contact — indicative prototype details (.example / 0000 block).
+    contact: {
+      name: MANAGERS[(i * 2 + city.length) % MANAGERS.length],
+      email: `${role.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '')}.${citySlug}@hire.example`,
+      whatsapp: `+${cc} ${400 + i} 0000 ${String(100 + ((city.length * 7 + i * 13) % 900))}`,
+    },
+    hoursNote: onCampus ? '8-12' : '12-20',
   }));
   const rent = RENT_DETAIL[city];
   housingByCity[city] = [

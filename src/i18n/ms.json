@@ -753,7 +753,14 @@
     "finance_transfer": "Pindahan wang antarabangsa",
     "finance_tuitionPay": "Bayaran yuran pengajian",
     "finance_bank": "Akaun bank luar negara",
-    "financeNote": "Melalui rakan kongsi berlesen semasa pelancaran — banding kadar dalam UniBridge."
+    "financeNote": "Melalui rakan kongsi berlesen semasa pelancaran — banding kadar dalam UniBridge.",
+    "cityFromApp": "Menunjukkan {{city}} sahaja — bandar pengajian anda, daripada permohonan anda.",
+    "jobDetails": "Butiran",
+    "jobHours": "Biasanya {{hours}} jam/minggu",
+    "contactTitle": "Hubungi & mohon",
+    "sendResume": "Permohonan — {{role}} ({{city}})",
+    "resumeBody": "Hai {{name}},\n\nSaya melihat iklan {{role}} di UniBridge. Saya pelajar baharu dan ingin memohon — resume dilampirkan.\n\nTerima kasih!",
+    "contactNote": "Kenalan prototaip indikatif — jumpa majikan secara bersemuka dan jangan sekali-kali bayar untuk memohon."
   },
   "team": {
     "title": "Pasukan anda",

@@ -751,7 +751,14 @@
     "finance_transfer": "Chuyển tiền quốc tế",
     "finance_tuitionPay": "Thanh toán học phí",
     "finance_bank": "Tài khoản ngân hàng nước ngoài",
-    "financeNote": "Qua đối tác được cấp phép khi ra mắt — so sánh tỷ giá ngay trong UniBridge."
+    "financeNote": "Qua đối tác được cấp phép khi ra mắt — so sánh tỷ giá ngay trong UniBridge.",
+    "cityFromApp": "Chỉ hiển thị {{city}} — thành phố bạn nhập học, theo hồ sơ của bạn.",
+    "jobDetails": "Chi tiết",
+    "jobHours": "Thường {{hours}} giờ/tuần",
+    "contactTitle": "Liên hệ & ứng tuyển",
+    "sendResume": "Ứng tuyển — {{role}} ({{city}})",
+    "resumeBody": "Chào {{name}},\n\nTôi thấy tin {{role}} trên UniBridge. Tôi là sinh viên sắp nhập học và muốn ứng tuyển — CV đính kèm.\n\nCảm ơn!",
+    "contactNote": "Liên hệ nguyên mẫu minh họa — gặp nhà tuyển dụng trực tiếp và không bao giờ trả tiền để ứng tuyển."
   },
   "team": {
     "title": "Đội của bạn",

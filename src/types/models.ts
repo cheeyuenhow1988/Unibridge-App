@@ -193,6 +193,10 @@ export interface JobListing {
   payHourMax: number;
   onCampus: boolean;
   sharedBy: LifeSharedBy | null;
+  /** Hiring contact — indicative prototype details, never a real employer. */
+  contact?: { name: string; email: string; whatsapp: string };
+  /** Typical hours per week, e.g. "12-20". */
+  hoursNote?: string;
 }
 
 export interface HousingListing {

@@ -2,9 +2,10 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, View } from 'react-native';
+import { Linking, Modal, Pressable, View } from 'react-native';
 import { LockChip, UpgradeSheet } from '@/components/plan/UpgradeSheet';
 import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { Chip } from '@/components/ui/Chip';
 import { HCarousel } from '@/components/ui/HCarousel';
@@ -19,9 +20,12 @@ import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
 import { getStudentLife, getWorkRights, listInstitutions } from '@/services/api';
 import { formatApprox, formatMoney, homeCurrencyFor } from '@/services/currency';
+import { useMatchData } from '@/hooks/useMatchData';
+import { useApplicationsStore } from '@/store/useApplicationsStore';
 import { usePlan } from '@/store/usePlanStore';
 import { useProfileStore } from '@/store/useProfileStore';
-import type { CountryCode, CurrencyCode, LifeSharedBy } from '@/types/models';
+import { useSavedStore } from '@/store/useSavedStore';
+import type { CountryCode, CurrencyCode, JobListing, LifeSharedBy } from '@/types/models';
 
 /** Free tier sees the first listing of each kind; the rest need Season Pass. */
 const FREE_LIFE_LIMIT = 1;
@@ -34,12 +38,26 @@ export default function StudentLifeHub() {
   const profile = useProfileStore((s) => s.profile);
   const home = profile ? homeCurrencyFor(profile) : 'USD';
   const state = useAsync(async () => Promise.all([getStudentLife(), listInstitutions()]), []);
-  const [city, setCity] = useState('Melbourne');
+  const [cityPick, setCityPick] = useState('Melbourne');
+  const [jobSheet, setJobSheet] = useState<JobListing | null>(null);
+  const applications = useApplicationsStore((s) => s.applications);
+  const savedCourseIds = useSavedStore((s) => s.savedCourseIds);
+  const { matchData } = useMatchData();
 
   const cities = useMemo(() => {
     const withInst = new Set((state.data?.[1] ?? []).map((i) => i.city));
     return Object.keys(state.data?.[0]?.jobsByCity ?? {}).filter((c) => withInst.has(c));
   }, [state.data]);
+
+  // Enrolled somewhere? Lock the hub to that city — jobs and rooms anywhere
+  // else are noise once you know where you are going.
+  const anchorCity = useMemo(() => {
+    const cityOf = (courseId: string) => matchData?.resultByCourseId.get(courseId)?.course.campusCity;
+    const c = applications.map((a) => cityOf(a.courseId)).find(Boolean) ??
+      savedCourseIds.map(cityOf).find(Boolean);
+    return c && (state.data?.[0]?.jobsByCity[c] ?? []).length > 0 ? c : null;
+  }, [applications, savedCourseIds, matchData, state.data]);
+  const city = anchorCity ?? cityPick;
 
   const life = state.data?.[0];
   const country = (state.data?.[1] ?? []).find((i) => i.city === city)?.country as CountryCode | undefined;
@@ -91,11 +109,20 @@ export default function StudentLifeHub() {
           </View>
         </Row>
 
-        <HCarousel step={240}>
-          {cities.map((c) => (
-            <Chip key={c} small label={c} selected={city === c} onPress={() => setCity(c)} />
-          ))}
-        </HCarousel>
+        {anchorCity ? (
+          <Row gap={spacing.sm}>
+            <Ionicons name="location" size={15} color={colors.accent} />
+            <Text variant="caption" tone="secondary" style={{ flex: 1 }}>
+              {t('life.cityFromApp', { city: anchorCity })}
+            </Text>
+          </Row>
+        ) : (
+          <HCarousel step={240}>
+            {cities.map((c) => (
+              <Chip key={c} small label={c} selected={city === c} onPress={() => setCityPick(c)} />
+            ))}
+          </HCarousel>
+        )}
 
         <Card tone="alt" style={{ gap: spacing.xs }}>
           <Row gap={spacing.sm}>
@@ -136,7 +163,7 @@ export default function StudentLifeHub() {
               );
             }
             return (
-              <Card key={j.id} style={{ gap: 4 }}>
+              <Card key={j.id} onPress={() => setJobSheet(j)} style={{ gap: 4 }}>
                 <Row style={{ justifyContent: 'space-between' }}>
                   <Text variant="sub" style={{ flex: 1 }}>{j.role}</Text>
                   {j.onCampus ? <Badge tone="verified" icon="school" label={t('life.onCampus')} /> : null}
@@ -147,7 +174,10 @@ export default function StudentLifeHub() {
                 <Text variant="bodyMedium" tone="accent">
                   {formatMoney(j.payHourMin, localCurrency)}–{formatMoney(j.payHourMax, localCurrency)} {t('life.perHour')}
                 </Text>
-                {sharedBy(j.sharedBy)}
+                <Row style={{ justifyContent: 'space-between' }}>
+                  {sharedBy(j.sharedBy) ?? <View />}
+                  <Text variant="caption" tone="accent">{t('life.jobDetails')} ›</Text>
+                </Row>
               </Card>
             );
           })}
@@ -242,6 +272,90 @@ export default function StudentLifeHub() {
         </Text>
       </View>
       <UpgradeSheet visible={upgradeOpen} context="life" onClose={() => setUpgradeOpen(false)} />
+
+      <Modal visible={!!jobSheet} animationType="slide" transparent onRequestClose={() => setJobSheet(null)}>
+        <Pressable style={{ flex: 1, backgroundColor: colors.overlay }} onPress={() => setJobSheet(null)} />
+        {jobSheet ? (
+          <View
+            style={{
+              backgroundColor: colors.bg, borderTopLeftRadius: radius.xl, borderTopRightRadius: radius.xl,
+              padding: spacing.xl, paddingBottom: spacing.xxxl, gap: spacing.md,
+            }}
+          >
+            <Row style={{ justifyContent: 'space-between' }}>
+              <Text variant="title" style={{ flex: 1 }}>{jobSheet.role}</Text>
+              {jobSheet.onCampus ? <Badge tone="verified" icon="school" label={t('life.onCampus')} /> : null}
+            </Row>
+            <View style={{ gap: spacing.xs, backgroundColor: colors.surfaceAlt, borderRadius: radius.lg, padding: spacing.lg }}>
+              <Row gap={spacing.sm}>
+                <Ionicons name="location-outline" size={15} color={colors.accent} />
+                <Text variant="caption">{jobSheet.spot ? t('life.near', { spot: jobSheet.spot }) : city} · {city}</Text>
+              </Row>
+              <Row gap={spacing.sm}>
+                <Ionicons name="cash-outline" size={15} color={colors.accent} />
+                <Text variant="caption">
+                  {formatMoney(jobSheet.payHourMin, localCurrency)}–{formatMoney(jobSheet.payHourMax, localCurrency)} {t('life.perHour')}
+                </Text>
+              </Row>
+              {jobSheet.hoursNote ? (
+                <Row gap={spacing.sm}>
+                  <Ionicons name="time-outline" size={15} color={colors.accent} />
+                  <Text variant="caption">{t('life.jobHours', { hours: jobSheet.hoursNote })}</Text>
+                </Row>
+              ) : null}
+              {jobSheet.sharedBy ? (
+                <Row gap={spacing.sm}>
+                  <Ionicons name="school-outline" size={15} color={colors.accent} />
+                  <Text variant="caption">{t('life.sharedBy', { name: jobSheet.sharedBy.name, inst: jobSheet.sharedBy.inst })}</Text>
+                </Row>
+              ) : null}
+            </View>
+
+            {jobSheet.contact ? (
+              <View style={{ gap: spacing.sm }}>
+                <Text variant="label">{t('life.contactTitle')}</Text>
+                <Row gap={spacing.sm}>
+                  <Ionicons name="person-outline" size={15} color={colors.inkSecondary} />
+                  <Text variant="caption" tone="secondary">{jobSheet.contact.name}</Text>
+                </Row>
+                <Pressable
+                  accessibilityRole="button"
+                  onPress={() => void Linking.openURL(`mailto:${jobSheet.contact!.email}`)}
+                >
+                  <Row gap={spacing.sm}>
+                    <Ionicons name="mail-outline" size={15} color={colors.accent} />
+                    <Text variant="caption" tone="accent">{jobSheet.contact.email}</Text>
+                  </Row>
+                </Pressable>
+                <Pressable
+                  accessibilityRole="button"
+                  onPress={() =>
+                    void Linking.openURL(`https://wa.me/${jobSheet.contact!.whatsapp.replace(/\D/g, '')}`)
+                  }
+                >
+                  <Row gap={spacing.sm}>
+                    <Ionicons name="logo-whatsapp" size={15} color={colors.accent} />
+                    <Text variant="caption" tone="accent">{jobSheet.contact.whatsapp}</Text>
+                  </Row>
+                </Pressable>
+                <Button
+                  label={t('life.sendResume')}
+                  icon="document-attach-outline"
+                  size="lg"
+                  onPress={() =>
+                    void Linking.openURL(
+                      `mailto:${jobSheet.contact!.email}?subject=${encodeURIComponent(
+                        t('life.resumeSubject', { role: jobSheet.role, city }),
+                      )}&body=${encodeURIComponent(t('life.resumeBody', { name: jobSheet.contact!.name, role: jobSheet.role }))}`,
+                    )
+                  }
+                />
+                <Text variant="caption" tone="faint">{t('life.contactNote')}</Text>
+              </View>
+            ) : null}
+          </View>
+        ) : null}
+      </Modal>
     </Screen>
   );
 }

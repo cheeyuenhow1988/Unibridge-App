@@ -753,7 +753,14 @@
     "finance_transfer": "国际汇款",
     "finance_tuitionPay": "学费缴纳",
     "finance_bank": "海外银行账户",
-    "financeNote": "正式上线后经持牌合作方提供——在UniBridge内比价。"
+    "financeNote": "正式上线后经持牌合作方提供——在UniBridge内比价。",
+    "cityFromApp": "仅显示{{city}}——你的就读城市(来自你的申请)。",
+    "jobDetails": "详情",
+    "jobHours": "通常每周 {{hours}} 小时",
+    "contactTitle": "联系与申请",
+    "sendResume": "求职申请 — {{role}}({{city}})",
+    "resumeBody": "{{name}}你好,\n\n我在 UniBridge 看到{{role}}的招聘信息。我是即将入学的学生,希望申请该职位,简历见附件。\n\n谢谢!",
+    "contactNote": "原型示意联系方式——请当面见雇主,切勿付费求职。"
   },
   "team": {
     "title": "你的团队",

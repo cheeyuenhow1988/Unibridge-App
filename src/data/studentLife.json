@@ -25,7 +25,13 @@
           "id": "amb-02",
           "name": "Wei Jun Tan",
           "inst": "UNSW"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "caf-barista.sydney@hire.example",
+          "whatsapp": "+61 400 0000 142"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-sydney-2",
@@ -39,7 +45,13 @@
           "id": "amb-02",
           "name": "Wei Jun Tan",
           "inst": "UNSW"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "retail-assistant.sydney@hire.example",
+          "whatsapp": "+61 401 0000 155"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-sydney-3",
@@ -53,7 +65,13 @@
           "id": "amb-02",
           "name": "Wei Jun Tan",
           "inst": "UNSW"
-        }
+        },
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "campus-library-assistant.sydney@hire.example",
+          "whatsapp": "+61 402 0000 168"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-sydney-4",
@@ -67,7 +85,13 @@
           "id": "amb-02",
           "name": "Wei Jun Tan",
           "inst": "UNSW"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "private-tutor-your-best-subject.sydney@hire.example",
+          "whatsapp": "+61 403 0000 181"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-sydney-5",
@@ -81,7 +105,13 @@
           "id": "amb-02",
           "name": "Wei Jun Tan",
           "inst": "UNSW"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "restaurant-server.sydney@hire.example",
+          "whatsapp": "+61 404 0000 194"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Melbourne": [
@@ -97,7 +127,13 @@
           "id": "amb-01",
           "name": "Aina Zulkifli",
           "inst": "Monash"
-        }
+        },
+        "contact": {
+          "name": "Grace Lim",
+          "email": "caf-barista.melbourne@hire.example",
+          "whatsapp": "+61 400 0000 163"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-melbourne-2",
@@ -111,7 +147,13 @@
           "id": "amb-01",
           "name": "Aina Zulkifli",
           "inst": "Monash"
-        }
+        },
+        "contact": {
+          "name": "Hana Ito",
+          "email": "retail-assistant.melbourne@hire.example",
+          "whatsapp": "+61 401 0000 176"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-melbourne-3",
@@ -125,7 +167,13 @@
           "id": "amb-01",
           "name": "Aina Zulkifli",
           "inst": "Monash"
-        }
+        },
+        "contact": {
+          "name": "Priya Nair",
+          "email": "campus-library-assistant.melbourne@hire.example",
+          "whatsapp": "+61 402 0000 189"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-melbourne-4",
@@ -139,7 +187,13 @@
           "id": "amb-01",
           "name": "Aina Zulkifli",
           "inst": "Monash"
-        }
+        },
+        "contact": {
+          "name": "Grace Lim",
+          "email": "private-tutor-your-best-subject.melbourne@hire.example",
+          "whatsapp": "+61 403 0000 202"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-melbourne-5",
@@ -153,7 +207,13 @@
           "id": "amb-01",
           "name": "Aina Zulkifli",
           "inst": "Monash"
-        }
+        },
+        "contact": {
+          "name": "Hana Ito",
+          "email": "restaurant-server.melbourne@hire.example",
+          "whatsapp": "+61 404 0000 215"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Brisbane": [
@@ -165,7 +225,13 @@
         "payHourMin": 24,
         "payHourMax": 27.2,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "caf-barista.brisbane@hire.example",
+          "whatsapp": "+61 400 0000 156"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-brisbane-2",
@@ -175,7 +241,13 @@
         "payHourMin": 25.2,
         "payHourMax": 29.6,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "retail-assistant.brisbane@hire.example",
+          "whatsapp": "+61 401 0000 169"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-brisbane-3",
@@ -185,7 +257,13 @@
         "payHourMin": 26.4,
         "payHourMax": 32,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Sam Carter",
+          "email": "campus-library-assistant.brisbane@hire.example",
+          "whatsapp": "+61 402 0000 182"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-brisbane-4",
@@ -195,7 +273,13 @@
         "payHourMin": 24,
         "payHourMax": 27.2,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "private-tutor-your-best-subject.brisbane@hire.example",
+          "whatsapp": "+61 403 0000 195"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-brisbane-5",
@@ -205,7 +289,13 @@
         "payHourMin": 25.2,
         "payHourMax": 29.6,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "restaurant-server.brisbane@hire.example",
+          "whatsapp": "+61 404 0000 208"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Perth": [
@@ -217,7 +307,13 @@
         "payHourMin": 24,
         "payHourMax": 27.2,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "caf-barista.perth@hire.example",
+          "whatsapp": "+61 400 0000 135"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-perth-2",
@@ -227,7 +323,13 @@
         "payHourMin": 25.2,
         "payHourMax": 29.6,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "retail-assistant.perth@hire.example",
+          "whatsapp": "+61 401 0000 148"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-perth-3",
@@ -237,7 +339,13 @@
         "payHourMin": 26.4,
         "payHourMax": 32,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "campus-library-assistant.perth@hire.example",
+          "whatsapp": "+61 402 0000 161"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-perth-4",
@@ -247,7 +355,13 @@
         "payHourMin": 24,
         "payHourMax": 27.2,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "private-tutor-your-best-subject.perth@hire.example",
+          "whatsapp": "+61 403 0000 174"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-perth-5",
@@ -257,7 +371,13 @@
         "payHourMin": 25.2,
         "payHourMax": 29.6,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "restaurant-server.perth@hire.example",
+          "whatsapp": "+61 404 0000 187"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Kuala Lumpur": [
@@ -273,7 +393,13 @@
           "id": "amb-05",
           "name": "Putri Wijaya",
           "inst": "UM"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "caf-barista.kualalumpur@hire.example",
+          "whatsapp": "+60 400 0000 184"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-kualalumpur-2",
@@ -287,7 +413,13 @@
           "id": "amb-05",
           "name": "Putri Wijaya",
           "inst": "UM"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "retail-assistant.kualalumpur@hire.example",
+          "whatsapp": "+60 401 0000 197"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-kualalumpur-3",
@@ -301,7 +433,13 @@
           "id": "amb-05",
           "name": "Putri Wijaya",
           "inst": "UM"
-        }
+        },
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "campus-library-assistant.kualalumpur@hire.example",
+          "whatsapp": "+60 402 0000 210"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-kualalumpur-4",
@@ -315,7 +453,13 @@
           "id": "amb-05",
           "name": "Putri Wijaya",
           "inst": "UM"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "private-tutor-your-best-subject.kualalumpur@hire.example",
+          "whatsapp": "+60 403 0000 223"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-kualalumpur-5",
@@ -329,7 +473,13 @@
           "id": "amb-05",
           "name": "Putri Wijaya",
           "inst": "UM"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "restaurant-server.kualalumpur@hire.example",
+          "whatsapp": "+60 404 0000 236"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Penang": [
@@ -341,7 +491,13 @@
         "payHourMin": 9,
         "payHourMax": 12.75,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Sam Carter",
+          "email": "caf-barista.penang@hire.example",
+          "whatsapp": "+60 400 0000 142"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-penang-2",
@@ -351,7 +507,13 @@
         "payHourMin": 9.45,
         "payHourMax": 13.87,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "retail-assistant.penang@hire.example",
+          "whatsapp": "+60 401 0000 155"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-penang-3",
@@ -361,7 +523,13 @@
         "payHourMin": 9.9,
         "payHourMax": 15,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "campus-library-assistant.penang@hire.example",
+          "whatsapp": "+60 402 0000 168"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-penang-4",
@@ -371,7 +539,13 @@
         "payHourMin": 9,
         "payHourMax": 12.75,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Sam Carter",
+          "email": "private-tutor-your-best-subject.penang@hire.example",
+          "whatsapp": "+60 403 0000 181"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-penang-5",
@@ -381,7 +555,13 @@
         "payHourMin": 9.45,
         "payHourMax": 13.87,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "restaurant-server.penang@hire.example",
+          "whatsapp": "+60 404 0000 194"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Cyberjaya": [
@@ -397,7 +577,13 @@
           "id": "amb-15",
           "name": "Xin Yi Loh",
           "inst": "MMU"
-        }
+        },
+        "contact": {
+          "name": "Grace Lim",
+          "email": "caf-barista.cyberjaya@hire.example",
+          "whatsapp": "+60 400 0000 163"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-cyberjaya-2",
@@ -411,7 +597,13 @@
           "id": "amb-15",
           "name": "Xin Yi Loh",
           "inst": "MMU"
-        }
+        },
+        "contact": {
+          "name": "Hana Ito",
+          "email": "retail-assistant.cyberjaya@hire.example",
+          "whatsapp": "+60 401 0000 176"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-cyberjaya-3",
@@ -425,7 +617,13 @@
           "id": "amb-15",
           "name": "Xin Yi Loh",
           "inst": "MMU"
-        }
+        },
+        "contact": {
+          "name": "Priya Nair",
+          "email": "campus-library-assistant.cyberjaya@hire.example",
+          "whatsapp": "+60 402 0000 189"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-cyberjaya-4",
@@ -439,7 +637,13 @@
           "id": "amb-15",
           "name": "Xin Yi Loh",
           "inst": "MMU"
-        }
+        },
+        "contact": {
+          "name": "Grace Lim",
+          "email": "private-tutor-your-best-subject.cyberjaya@hire.example",
+          "whatsapp": "+60 403 0000 202"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-cyberjaya-5",
@@ -453,7 +657,13 @@
           "id": "amb-15",
           "name": "Xin Yi Loh",
           "inst": "MMU"
-        }
+        },
+        "contact": {
+          "name": "Hana Ito",
+          "email": "restaurant-server.cyberjaya@hire.example",
+          "whatsapp": "+60 404 0000 215"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Johor Bahru": [
@@ -465,7 +675,13 @@
         "payHourMin": 9,
         "payHourMax": 12.75,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "caf-barista.johorbahru@hire.example",
+          "whatsapp": "+60 400 0000 177"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-johorbahru-2",
@@ -475,7 +691,13 @@
         "payHourMin": 9.45,
         "payHourMax": 13.87,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "retail-assistant.johorbahru@hire.example",
+          "whatsapp": "+60 401 0000 190"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-johorbahru-3",
@@ -485,7 +707,13 @@
         "payHourMin": 9.9,
         "payHourMax": 15,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "campus-library-assistant.johorbahru@hire.example",
+          "whatsapp": "+60 402 0000 203"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-johorbahru-4",
@@ -495,7 +723,13 @@
         "payHourMin": 9,
         "payHourMax": 12.75,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "private-tutor-your-best-subject.johorbahru@hire.example",
+          "whatsapp": "+60 403 0000 216"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-johorbahru-5",
@@ -505,7 +739,13 @@
         "payHourMin": 9.45,
         "payHourMax": 13.87,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "restaurant-server.johorbahru@hire.example",
+          "whatsapp": "+60 404 0000 229"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Taipei": [
@@ -521,7 +761,13 @@
           "id": "amb-09",
           "name": "Chia-Hao Chen",
           "inst": "NTU"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "caf-barista.taipei@hire.example",
+          "whatsapp": "+886 400 0000 142"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-taipei-2",
@@ -535,7 +781,13 @@
           "id": "amb-09",
           "name": "Chia-Hao Chen",
           "inst": "NTU"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "retail-assistant.taipei@hire.example",
+          "whatsapp": "+886 401 0000 155"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-taipei-3",
@@ -549,7 +801,13 @@
           "id": "amb-09",
           "name": "Chia-Hao Chen",
           "inst": "NTU"
-        }
+        },
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "campus-library-assistant.taipei@hire.example",
+          "whatsapp": "+886 402 0000 168"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-taipei-4",
@@ -563,7 +821,13 @@
           "id": "amb-09",
           "name": "Chia-Hao Chen",
           "inst": "NTU"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "private-tutor-your-best-subject.taipei@hire.example",
+          "whatsapp": "+886 403 0000 181"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-taipei-5",
@@ -577,7 +841,13 @@
           "id": "amb-09",
           "name": "Chia-Hao Chen",
           "inst": "NTU"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "restaurant-server.taipei@hire.example",
+          "whatsapp": "+886 404 0000 194"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Hsinchu": [
@@ -589,7 +859,13 @@
         "payHourMin": 190,
         "payHourMax": 212.5,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "caf-barista.hsinchu@hire.example",
+          "whatsapp": "+886 400 0000 149"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-hsinchu-2",
@@ -599,7 +875,13 @@
         "payHourMin": 199.5,
         "payHourMax": 231.25,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "retail-assistant.hsinchu@hire.example",
+          "whatsapp": "+886 401 0000 162"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-hsinchu-3",
@@ -609,7 +891,13 @@
         "payHourMin": 209,
         "payHourMax": 250,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "campus-library-assistant.hsinchu@hire.example",
+          "whatsapp": "+886 402 0000 175"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-hsinchu-4",
@@ -619,7 +907,13 @@
         "payHourMin": 190,
         "payHourMax": 212.5,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "private-tutor-your-best-subject.hsinchu@hire.example",
+          "whatsapp": "+886 403 0000 188"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-hsinchu-5",
@@ -629,7 +923,13 @@
         "payHourMin": 199.5,
         "payHourMax": 231.25,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "restaurant-server.hsinchu@hire.example",
+          "whatsapp": "+886 404 0000 201"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Taichung": [
@@ -641,7 +941,13 @@
         "payHourMin": 190,
         "payHourMax": 212.5,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "caf-barista.taichung@hire.example",
+          "whatsapp": "+886 400 0000 156"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-taichung-2",
@@ -651,7 +957,13 @@
         "payHourMin": 199.5,
         "payHourMax": 231.25,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "retail-assistant.taichung@hire.example",
+          "whatsapp": "+886 401 0000 169"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-taichung-3",
@@ -661,7 +973,13 @@
         "payHourMin": 209,
         "payHourMax": 250,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Sam Carter",
+          "email": "campus-library-assistant.taichung@hire.example",
+          "whatsapp": "+886 402 0000 182"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-taichung-4",
@@ -671,7 +989,13 @@
         "payHourMin": 190,
         "payHourMax": 212.5,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "private-tutor-your-best-subject.taichung@hire.example",
+          "whatsapp": "+886 403 0000 195"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-taichung-5",
@@ -681,7 +1005,13 @@
         "payHourMin": 199.5,
         "payHourMax": 231.25,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "restaurant-server.taichung@hire.example",
+          "whatsapp": "+886 404 0000 208"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Kaohsiung": [
@@ -693,7 +1023,13 @@
         "payHourMin": 190,
         "payHourMax": 212.5,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "caf-barista.kaohsiung@hire.example",
+          "whatsapp": "+886 400 0000 163"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-kaohsiung-2",
@@ -703,7 +1039,13 @@
         "payHourMin": 199.5,
         "payHourMax": 231.25,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "retail-assistant.kaohsiung@hire.example",
+          "whatsapp": "+886 401 0000 176"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-kaohsiung-3",
@@ -713,7 +1055,13 @@
         "payHourMin": 209,
         "payHourMax": 250,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "campus-library-assistant.kaohsiung@hire.example",
+          "whatsapp": "+886 402 0000 189"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-kaohsiung-4",
@@ -723,7 +1071,13 @@
         "payHourMin": 190,
         "payHourMax": 212.5,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "private-tutor-your-best-subject.kaohsiung@hire.example",
+          "whatsapp": "+886 403 0000 202"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-kaohsiung-5",
@@ -733,7 +1087,13 @@
         "payHourMin": 199.5,
         "payHourMax": 231.25,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "restaurant-server.kaohsiung@hire.example",
+          "whatsapp": "+886 404 0000 215"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "London": [
@@ -749,7 +1109,13 @@
           "id": "amb-04",
           "name": "Marcus Lim",
           "inst": "KCL"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "caf-barista.london@hire.example",
+          "whatsapp": "+44 400 0000 142"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-london-2",
@@ -763,7 +1129,13 @@
           "id": "amb-04",
           "name": "Marcus Lim",
           "inst": "KCL"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "retail-assistant.london@hire.example",
+          "whatsapp": "+44 401 0000 155"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-london-3",
@@ -777,7 +1149,13 @@
           "id": "amb-04",
           "name": "Marcus Lim",
           "inst": "KCL"
-        }
+        },
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "campus-library-assistant.london@hire.example",
+          "whatsapp": "+44 402 0000 168"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-london-4",
@@ -791,7 +1169,13 @@
           "id": "amb-04",
           "name": "Marcus Lim",
           "inst": "KCL"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "private-tutor-your-best-subject.london@hire.example",
+          "whatsapp": "+44 403 0000 181"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-london-5",
@@ -805,7 +1189,13 @@
           "id": "amb-04",
           "name": "Marcus Lim",
           "inst": "KCL"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "restaurant-server.london@hire.example",
+          "whatsapp": "+44 404 0000 194"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Manchester": [
@@ -821,7 +1211,13 @@
           "id": "amb-07",
           "name": "Zihan Wang",
           "inst": "Manchester"
-        }
+        },
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "caf-barista.manchester@hire.example",
+          "whatsapp": "+44 400 0000 170"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-manchester-2",
@@ -835,7 +1231,13 @@
           "id": "amb-07",
           "name": "Zihan Wang",
           "inst": "Manchester"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "retail-assistant.manchester@hire.example",
+          "whatsapp": "+44 401 0000 183"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-manchester-3",
@@ -849,7 +1251,13 @@
           "id": "amb-07",
           "name": "Zihan Wang",
           "inst": "Manchester"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "campus-library-assistant.manchester@hire.example",
+          "whatsapp": "+44 402 0000 196"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-manchester-4",
@@ -863,7 +1271,13 @@
           "id": "amb-07",
           "name": "Zihan Wang",
           "inst": "Manchester"
-        }
+        },
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "private-tutor-your-best-subject.manchester@hire.example",
+          "whatsapp": "+44 403 0000 209"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-manchester-5",
@@ -877,7 +1291,13 @@
           "id": "amb-07",
           "name": "Zihan Wang",
           "inst": "Manchester"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "restaurant-server.manchester@hire.example",
+          "whatsapp": "+44 404 0000 222"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Edinburgh": [
@@ -893,7 +1313,13 @@
           "id": "amb-14",
           "name": "Hui Min Teo",
           "inst": "Edinburgh"
-        }
+        },
+        "contact": {
+          "name": "Grace Lim",
+          "email": "caf-barista.edinburgh@hire.example",
+          "whatsapp": "+44 400 0000 163"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-edinburgh-2",
@@ -907,7 +1333,13 @@
           "id": "amb-14",
           "name": "Hui Min Teo",
           "inst": "Edinburgh"
-        }
+        },
+        "contact": {
+          "name": "Hana Ito",
+          "email": "retail-assistant.edinburgh@hire.example",
+          "whatsapp": "+44 401 0000 176"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-edinburgh-3",
@@ -921,7 +1353,13 @@
           "id": "amb-14",
           "name": "Hui Min Teo",
           "inst": "Edinburgh"
-        }
+        },
+        "contact": {
+          "name": "Priya Nair",
+          "email": "campus-library-assistant.edinburgh@hire.example",
+          "whatsapp": "+44 402 0000 189"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-edinburgh-4",
@@ -935,7 +1373,13 @@
           "id": "amb-14",
           "name": "Hui Min Teo",
           "inst": "Edinburgh"
-        }
+        },
+        "contact": {
+          "name": "Grace Lim",
+          "email": "private-tutor-your-best-subject.edinburgh@hire.example",
+          "whatsapp": "+44 403 0000 202"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-edinburgh-5",
@@ -949,7 +1393,13 @@
           "id": "amb-14",
           "name": "Hui Min Teo",
           "inst": "Edinburgh"
-        }
+        },
+        "contact": {
+          "name": "Hana Ito",
+          "email": "restaurant-server.edinburgh@hire.example",
+          "whatsapp": "+44 404 0000 215"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Birmingham": [
@@ -961,7 +1411,13 @@
         "payHourMin": 11.5,
         "payHourMax": 12.75,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "caf-barista.birmingham@hire.example",
+          "whatsapp": "+44 400 0000 170"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-birmingham-2",
@@ -971,7 +1427,13 @@
         "payHourMin": 12.08,
         "payHourMax": 13.87,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Sam Carter",
+          "email": "retail-assistant.birmingham@hire.example",
+          "whatsapp": "+44 401 0000 183"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-birmingham-3",
@@ -981,7 +1443,13 @@
         "payHourMin": 12.65,
         "payHourMax": 15,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "campus-library-assistant.birmingham@hire.example",
+          "whatsapp": "+44 402 0000 196"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-birmingham-4",
@@ -991,7 +1459,13 @@
         "payHourMin": 11.5,
         "payHourMax": 12.75,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "private-tutor-your-best-subject.birmingham@hire.example",
+          "whatsapp": "+44 403 0000 209"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-birmingham-5",
@@ -1001,7 +1475,13 @@
         "payHourMin": 12.08,
         "payHourMax": 13.87,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Sam Carter",
+          "email": "restaurant-server.birmingham@hire.example",
+          "whatsapp": "+44 404 0000 222"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Leeds": [
@@ -1013,7 +1493,13 @@
         "payHourMin": 11.5,
         "payHourMax": 12.75,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "caf-barista.leeds@hire.example",
+          "whatsapp": "+44 400 0000 135"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-leeds-2",
@@ -1023,7 +1509,13 @@
         "payHourMin": 12.08,
         "payHourMax": 13.87,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "retail-assistant.leeds@hire.example",
+          "whatsapp": "+44 401 0000 148"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-leeds-3",
@@ -1033,7 +1525,13 @@
         "payHourMin": 12.65,
         "payHourMax": 15,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "campus-library-assistant.leeds@hire.example",
+          "whatsapp": "+44 402 0000 161"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-leeds-4",
@@ -1043,7 +1541,13 @@
         "payHourMin": 11.5,
         "payHourMax": 12.75,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "private-tutor-your-best-subject.leeds@hire.example",
+          "whatsapp": "+44 403 0000 174"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-leeds-5",
@@ -1053,7 +1557,13 @@
         "payHourMin": 12.08,
         "payHourMax": 13.87,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "restaurant-server.leeds@hire.example",
+          "whatsapp": "+44 404 0000 187"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Singapore": [
@@ -1069,7 +1579,13 @@
           "id": "amb-10",
           "name": "Siti Rahmah",
           "inst": "NUS"
-        }
+        },
+        "contact": {
+          "name": "Grace Lim",
+          "email": "caf-barista.singapore@hire.example",
+          "whatsapp": "+65 400 0000 163"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-singapore-2",
@@ -1083,7 +1599,13 @@
           "id": "amb-10",
           "name": "Siti Rahmah",
           "inst": "NUS"
-        }
+        },
+        "contact": {
+          "name": "Hana Ito",
+          "email": "retail-assistant.singapore@hire.example",
+          "whatsapp": "+65 401 0000 176"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-singapore-3",
@@ -1097,7 +1619,13 @@
           "id": "amb-10",
           "name": "Siti Rahmah",
           "inst": "NUS"
-        }
+        },
+        "contact": {
+          "name": "Priya Nair",
+          "email": "campus-library-assistant.singapore@hire.example",
+          "whatsapp": "+65 402 0000 189"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-singapore-4",
@@ -1111,7 +1639,13 @@
           "id": "amb-10",
           "name": "Siti Rahmah",
           "inst": "NUS"
-        }
+        },
+        "contact": {
+          "name": "Grace Lim",
+          "email": "private-tutor-your-best-subject.singapore@hire.example",
+          "whatsapp": "+65 403 0000 202"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-singapore-5",
@@ -1125,7 +1659,13 @@
           "id": "amb-10",
           "name": "Siti Rahmah",
           "inst": "NUS"
-        }
+        },
+        "contact": {
+          "name": "Hana Ito",
+          "email": "restaurant-server.singapore@hire.example",
+          "whatsapp": "+65 404 0000 215"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Auckland": [
@@ -1141,7 +1681,13 @@
           "id": "amb-13",
           "name": "Jia Le Ong",
           "inst": "Auckland"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "caf-barista.auckland@hire.example",
+          "whatsapp": "+64 400 0000 156"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-auckland-2",
@@ -1155,7 +1701,13 @@
           "id": "amb-13",
           "name": "Jia Le Ong",
           "inst": "Auckland"
-        }
+        },
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "retail-assistant.auckland@hire.example",
+          "whatsapp": "+64 401 0000 169"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-auckland-3",
@@ -1169,7 +1721,13 @@
           "id": "amb-13",
           "name": "Jia Le Ong",
           "inst": "Auckland"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "campus-library-assistant.auckland@hire.example",
+          "whatsapp": "+64 402 0000 182"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-auckland-4",
@@ -1183,7 +1741,13 @@
           "id": "amb-13",
           "name": "Jia Le Ong",
           "inst": "Auckland"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "private-tutor-your-best-subject.auckland@hire.example",
+          "whatsapp": "+64 403 0000 195"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-auckland-5",
@@ -1197,7 +1761,13 @@
           "id": "amb-13",
           "name": "Jia Le Ong",
           "inst": "Auckland"
-        }
+        },
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "restaurant-server.auckland@hire.example",
+          "whatsapp": "+64 404 0000 208"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Wellington": [
@@ -1209,7 +1779,13 @@
         "payHourMin": 23.5,
         "payHourMax": 23.8,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "caf-barista.wellington@hire.example",
+          "whatsapp": "+64 400 0000 170"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-wellington-2",
@@ -1219,7 +1795,13 @@
         "payHourMin": 24.68,
         "payHourMax": 25.9,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Sam Carter",
+          "email": "retail-assistant.wellington@hire.example",
+          "whatsapp": "+64 401 0000 183"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-wellington-3",
@@ -1229,7 +1811,13 @@
         "payHourMin": 25.85,
         "payHourMax": 28,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "campus-library-assistant.wellington@hire.example",
+          "whatsapp": "+64 402 0000 196"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-wellington-4",
@@ -1239,7 +1827,13 @@
         "payHourMin": 23.5,
         "payHourMax": 23.8,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "private-tutor-your-best-subject.wellington@hire.example",
+          "whatsapp": "+64 403 0000 209"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-wellington-5",
@@ -1249,7 +1843,13 @@
         "payHourMin": 24.68,
         "payHourMax": 25.9,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Sam Carter",
+          "email": "restaurant-server.wellington@hire.example",
+          "whatsapp": "+64 404 0000 222"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Christchurch": [
@@ -1261,7 +1861,13 @@
         "payHourMin": 23.5,
         "payHourMax": 23.8,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Sam Carter",
+          "email": "caf-barista.christchurch@hire.example",
+          "whatsapp": "+64 400 0000 184"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-christchurch-2",
@@ -1271,7 +1877,13 @@
         "payHourMin": 24.68,
         "payHourMax": 25.9,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "retail-assistant.christchurch@hire.example",
+          "whatsapp": "+64 401 0000 197"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-christchurch-3",
@@ -1281,7 +1893,13 @@
         "payHourMin": 25.85,
         "payHourMax": 28,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "campus-library-assistant.christchurch@hire.example",
+          "whatsapp": "+64 402 0000 210"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-christchurch-4",
@@ -1291,7 +1909,13 @@
         "payHourMin": 23.5,
         "payHourMax": 23.8,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Sam Carter",
+          "email": "private-tutor-your-best-subject.christchurch@hire.example",
+          "whatsapp": "+64 403 0000 223"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-christchurch-5",
@@ -1301,7 +1925,13 @@
         "payHourMin": 24.68,
         "payHourMax": 25.9,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "restaurant-server.christchurch@hire.example",
+          "whatsapp": "+64 404 0000 236"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Dunedin": [
@@ -1313,7 +1943,13 @@
         "payHourMin": 23.5,
         "payHourMax": 23.8,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "caf-barista.dunedin@hire.example",
+          "whatsapp": "+64 400 0000 149"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-dunedin-2",
@@ -1323,7 +1959,13 @@
         "payHourMin": 24.68,
         "payHourMax": 25.9,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "retail-assistant.dunedin@hire.example",
+          "whatsapp": "+64 401 0000 162"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-dunedin-3",
@@ -1333,7 +1975,13 @@
         "payHourMin": 25.85,
         "payHourMax": 28,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "campus-library-assistant.dunedin@hire.example",
+          "whatsapp": "+64 402 0000 175"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-dunedin-4",
@@ -1343,7 +1991,13 @@
         "payHourMin": 23.5,
         "payHourMax": 23.8,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "private-tutor-your-best-subject.dunedin@hire.example",
+          "whatsapp": "+64 403 0000 188"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-dunedin-5",
@@ -1353,7 +2007,13 @@
         "payHourMin": 24.68,
         "payHourMax": 25.9,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "restaurant-server.dunedin@hire.example",
+          "whatsapp": "+64 404 0000 201"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Moscow": [
@@ -1369,7 +2029,13 @@
           "id": "amb-06",
           "name": "Minh Anh Nguyen",
           "inst": "MSU"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "caf-barista.moscow@hire.example",
+          "whatsapp": "+7 400 0000 142"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-moscow-2",
@@ -1383,7 +2049,13 @@
           "id": "amb-06",
           "name": "Minh Anh Nguyen",
           "inst": "MSU"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "retail-assistant.moscow@hire.example",
+          "whatsapp": "+7 401 0000 155"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-moscow-3",
@@ -1397,7 +2069,13 @@
           "id": "amb-06",
           "name": "Minh Anh Nguyen",
           "inst": "MSU"
-        }
+        },
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "campus-library-assistant.moscow@hire.example",
+          "whatsapp": "+7 402 0000 168"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-moscow-4",
@@ -1411,7 +2089,13 @@
           "id": "amb-06",
           "name": "Minh Anh Nguyen",
           "inst": "MSU"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "private-tutor-your-best-subject.moscow@hire.example",
+          "whatsapp": "+7 403 0000 181"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-moscow-5",
@@ -1425,7 +2109,13 @@
           "id": "amb-06",
           "name": "Minh Anh Nguyen",
           "inst": "MSU"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "restaurant-server.moscow@hire.example",
+          "whatsapp": "+7 404 0000 194"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Saint Petersburg": [
@@ -1441,7 +2131,13 @@
           "id": "amb-16",
           "name": "Anastasia Kim",
           "inst": "ITMO"
-        }
+        },
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "caf-barista.saintpetersburg@hire.example",
+          "whatsapp": "+7 400 0000 212"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-saintpetersburg-2",
@@ -1455,7 +2151,13 @@
           "id": "amb-16",
           "name": "Anastasia Kim",
           "inst": "ITMO"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "retail-assistant.saintpetersburg@hire.example",
+          "whatsapp": "+7 401 0000 225"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-saintpetersburg-3",
@@ -1469,7 +2171,13 @@
           "id": "amb-16",
           "name": "Anastasia Kim",
           "inst": "ITMO"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "campus-library-assistant.saintpetersburg@hire.example",
+          "whatsapp": "+7 402 0000 238"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-saintpetersburg-4",
@@ -1483,7 +2191,13 @@
           "id": "amb-16",
           "name": "Anastasia Kim",
           "inst": "ITMO"
-        }
+        },
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "private-tutor-your-best-subject.saintpetersburg@hire.example",
+          "whatsapp": "+7 403 0000 251"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-saintpetersburg-5",
@@ -1497,7 +2211,13 @@
           "id": "amb-16",
           "name": "Anastasia Kim",
           "inst": "ITMO"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "restaurant-server.saintpetersburg@hire.example",
+          "whatsapp": "+7 404 0000 264"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Kazan": [
@@ -1509,7 +2229,13 @@
         "payHourMin": 350,
         "payHourMax": 510,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "caf-barista.kazan@hire.example",
+          "whatsapp": "+7 400 0000 135"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-kazan-2",
@@ -1519,7 +2245,13 @@
         "payHourMin": 367.5,
         "payHourMax": 555,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "retail-assistant.kazan@hire.example",
+          "whatsapp": "+7 401 0000 148"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-kazan-3",
@@ -1529,7 +2261,13 @@
         "payHourMin": 385,
         "payHourMax": 600,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "campus-library-assistant.kazan@hire.example",
+          "whatsapp": "+7 402 0000 161"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-kazan-4",
@@ -1539,7 +2277,13 @@
         "payHourMin": 350,
         "payHourMax": 510,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "private-tutor-your-best-subject.kazan@hire.example",
+          "whatsapp": "+7 403 0000 174"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-kazan-5",
@@ -1549,7 +2293,13 @@
         "payHourMin": 367.5,
         "payHourMax": 555,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "restaurant-server.kazan@hire.example",
+          "whatsapp": "+7 404 0000 187"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Novosibirsk": [
@@ -1561,7 +2311,13 @@
         "payHourMin": 350,
         "payHourMax": 510,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "caf-barista.novosibirsk@hire.example",
+          "whatsapp": "+7 400 0000 177"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-novosibirsk-2",
@@ -1571,7 +2327,13 @@
         "payHourMin": 367.5,
         "payHourMax": 555,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "retail-assistant.novosibirsk@hire.example",
+          "whatsapp": "+7 401 0000 190"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-novosibirsk-3",
@@ -1581,7 +2343,13 @@
         "payHourMin": 385,
         "payHourMax": 600,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "campus-library-assistant.novosibirsk@hire.example",
+          "whatsapp": "+7 402 0000 203"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-novosibirsk-4",
@@ -1591,7 +2359,13 @@
         "payHourMin": 350,
         "payHourMax": 510,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "private-tutor-your-best-subject.novosibirsk@hire.example",
+          "whatsapp": "+7 403 0000 216"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-novosibirsk-5",
@@ -1601,7 +2375,13 @@
         "payHourMin": 367.5,
         "payHourMax": 555,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "restaurant-server.novosibirsk@hire.example",
+          "whatsapp": "+7 404 0000 229"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Boston": [
@@ -1613,7 +2393,13 @@
         "payHourMin": 15,
         "payHourMax": 18.7,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Sam Carter",
+          "email": "caf-barista.boston@hire.example",
+          "whatsapp": "+1 400 0000 142"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-boston-2",
@@ -1623,7 +2409,13 @@
         "payHourMin": 15.75,
         "payHourMax": 20.35,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "retail-assistant.boston@hire.example",
+          "whatsapp": "+1 401 0000 155"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-boston-3",
@@ -1633,7 +2425,13 @@
         "payHourMin": 16.5,
         "payHourMax": 22,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "campus-library-assistant.boston@hire.example",
+          "whatsapp": "+1 402 0000 168"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-boston-4",
@@ -1643,7 +2441,13 @@
         "payHourMin": 15,
         "payHourMax": 18.7,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Sam Carter",
+          "email": "private-tutor-your-best-subject.boston@hire.example",
+          "whatsapp": "+1 403 0000 181"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-boston-5",
@@ -1653,7 +2457,13 @@
         "payHourMin": 15.75,
         "payHourMax": 20.35,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "restaurant-server.boston@hire.example",
+          "whatsapp": "+1 404 0000 194"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "New York": [
@@ -1669,7 +2479,13 @@
           "id": "amb-17",
           "name": "Grace Huang",
           "inst": "NYU"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "caf-barista.newyork@hire.example",
+          "whatsapp": "+1 400 0000 156"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-newyork-2",
@@ -1683,7 +2499,13 @@
           "id": "amb-17",
           "name": "Grace Huang",
           "inst": "NYU"
-        }
+        },
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "retail-assistant.newyork@hire.example",
+          "whatsapp": "+1 401 0000 169"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-newyork-3",
@@ -1697,7 +2519,13 @@
           "id": "amb-17",
           "name": "Grace Huang",
           "inst": "NYU"
-        }
+        },
+        "contact": {
+          "name": "Sam Carter",
+          "email": "campus-library-assistant.newyork@hire.example",
+          "whatsapp": "+1 402 0000 182"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-newyork-4",
@@ -1711,7 +2539,13 @@
           "id": "amb-17",
           "name": "Grace Huang",
           "inst": "NYU"
-        }
+        },
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "private-tutor-your-best-subject.newyork@hire.example",
+          "whatsapp": "+1 403 0000 195"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-newyork-5",
@@ -1725,7 +2559,13 @@
           "id": "amb-17",
           "name": "Grace Huang",
           "inst": "NYU"
-        }
+        },
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "restaurant-server.newyork@hire.example",
+          "whatsapp": "+1 404 0000 208"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Los Angeles": [
@@ -1737,7 +2577,13 @@
         "payHourMin": 15,
         "payHourMax": 18.7,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "caf-barista.losangeles@hire.example",
+          "whatsapp": "+1 400 0000 177"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-losangeles-2",
@@ -1747,7 +2593,13 @@
         "payHourMin": 15.75,
         "payHourMax": 20.35,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "retail-assistant.losangeles@hire.example",
+          "whatsapp": "+1 401 0000 190"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-losangeles-3",
@@ -1757,7 +2609,13 @@
         "payHourMin": 16.5,
         "payHourMax": 22,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "campus-library-assistant.losangeles@hire.example",
+          "whatsapp": "+1 402 0000 203"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-losangeles-4",
@@ -1767,7 +2625,13 @@
         "payHourMin": 15,
         "payHourMax": 18.7,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "private-tutor-your-best-subject.losangeles@hire.example",
+          "whatsapp": "+1 403 0000 216"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-losangeles-5",
@@ -1777,7 +2641,13 @@
         "payHourMin": 15.75,
         "payHourMax": 20.35,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "restaurant-server.losangeles@hire.example",
+          "whatsapp": "+1 404 0000 229"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Chicago": [
@@ -1789,7 +2659,13 @@
         "payHourMin": 15,
         "payHourMax": 18.7,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "caf-barista.chicago@hire.example",
+          "whatsapp": "+1 400 0000 149"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-chicago-2",
@@ -1799,7 +2675,13 @@
         "payHourMin": 15.75,
         "payHourMax": 20.35,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "retail-assistant.chicago@hire.example",
+          "whatsapp": "+1 401 0000 162"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-chicago-3",
@@ -1809,7 +2691,13 @@
         "payHourMin": 16.5,
         "payHourMax": 22,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "campus-library-assistant.chicago@hire.example",
+          "whatsapp": "+1 402 0000 175"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-chicago-4",
@@ -1819,7 +2707,13 @@
         "payHourMin": 15,
         "payHourMax": 18.7,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "private-tutor-your-best-subject.chicago@hire.example",
+          "whatsapp": "+1 403 0000 188"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-chicago-5",
@@ -1829,7 +2723,13 @@
         "payHourMin": 15.75,
         "payHourMax": 20.35,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "restaurant-server.chicago@hire.example",
+          "whatsapp": "+1 404 0000 201"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Toronto": [
@@ -1845,7 +2745,13 @@
           "id": "amb-18",
           "name": "Daniel Wong",
           "inst": "UofT"
-        }
+        },
+        "contact": {
+          "name": "Priya Nair",
+          "email": "caf-barista.toronto@hire.example",
+          "whatsapp": "+1 400 0000 149"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-toronto-2",
@@ -1859,7 +2765,13 @@
           "id": "amb-18",
           "name": "Daniel Wong",
           "inst": "UofT"
-        }
+        },
+        "contact": {
+          "name": "Grace Lim",
+          "email": "retail-assistant.toronto@hire.example",
+          "whatsapp": "+1 401 0000 162"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-toronto-3",
@@ -1873,7 +2785,13 @@
           "id": "amb-18",
           "name": "Daniel Wong",
           "inst": "UofT"
-        }
+        },
+        "contact": {
+          "name": "Hana Ito",
+          "email": "campus-library-assistant.toronto@hire.example",
+          "whatsapp": "+1 402 0000 175"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-toronto-4",
@@ -1887,7 +2805,13 @@
           "id": "amb-18",
           "name": "Daniel Wong",
           "inst": "UofT"
-        }
+        },
+        "contact": {
+          "name": "Priya Nair",
+          "email": "private-tutor-your-best-subject.toronto@hire.example",
+          "whatsapp": "+1 403 0000 188"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-toronto-5",
@@ -1901,7 +2825,13 @@
           "id": "amb-18",
           "name": "Daniel Wong",
           "inst": "UofT"
-        }
+        },
+        "contact": {
+          "name": "Grace Lim",
+          "email": "restaurant-server.toronto@hire.example",
+          "whatsapp": "+1 404 0000 201"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Vancouver": [
@@ -1913,7 +2843,13 @@
         "payHourMin": 16.5,
         "payHourMax": 18.7,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "caf-barista.vancouver@hire.example",
+          "whatsapp": "+1 400 0000 163"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-vancouver-2",
@@ -1923,7 +2859,13 @@
         "payHourMin": 17.33,
         "payHourMax": 20.35,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "retail-assistant.vancouver@hire.example",
+          "whatsapp": "+1 401 0000 176"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-vancouver-3",
@@ -1933,7 +2875,13 @@
         "payHourMin": 18.15,
         "payHourMax": 22,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "campus-library-assistant.vancouver@hire.example",
+          "whatsapp": "+1 402 0000 189"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-vancouver-4",
@@ -1943,7 +2891,13 @@
         "payHourMin": 16.5,
         "payHourMax": 18.7,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "private-tutor-your-best-subject.vancouver@hire.example",
+          "whatsapp": "+1 403 0000 202"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-vancouver-5",
@@ -1953,7 +2907,13 @@
         "payHourMin": 17.33,
         "payHourMax": 20.35,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "restaurant-server.vancouver@hire.example",
+          "whatsapp": "+1 404 0000 215"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Montreal": [
@@ -1965,7 +2925,13 @@
         "payHourMin": 16.5,
         "payHourMax": 18.7,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "caf-barista.montreal@hire.example",
+          "whatsapp": "+1 400 0000 156"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-montreal-2",
@@ -1975,7 +2941,13 @@
         "payHourMin": 17.33,
         "payHourMax": 20.35,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "retail-assistant.montreal@hire.example",
+          "whatsapp": "+1 401 0000 169"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-montreal-3",
@@ -1985,7 +2957,13 @@
         "payHourMin": 18.15,
         "payHourMax": 22,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Sam Carter",
+          "email": "campus-library-assistant.montreal@hire.example",
+          "whatsapp": "+1 402 0000 182"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-montreal-4",
@@ -1995,7 +2973,13 @@
         "payHourMin": 16.5,
         "payHourMax": 18.7,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "private-tutor-your-best-subject.montreal@hire.example",
+          "whatsapp": "+1 403 0000 195"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-montreal-5",
@@ -2005,7 +2989,13 @@
         "payHourMin": 17.33,
         "payHourMax": 20.35,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "restaurant-server.montreal@hire.example",
+          "whatsapp": "+1 404 0000 208"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Beijing": [
@@ -2021,7 +3011,13 @@
           "id": "amb-19",
           "name": "Xiao Chen",
           "inst": "Tsinghua"
-        }
+        },
+        "contact": {
+          "name": "Priya Nair",
+          "email": "caf-barista.beijing@hire.example",
+          "whatsapp": "+86 400 0000 149"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-beijing-2",
@@ -2035,7 +3031,13 @@
           "id": "amb-19",
           "name": "Xiao Chen",
           "inst": "Tsinghua"
-        }
+        },
+        "contact": {
+          "name": "Grace Lim",
+          "email": "retail-assistant.beijing@hire.example",
+          "whatsapp": "+86 401 0000 162"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-beijing-3",
@@ -2049,7 +3051,13 @@
           "id": "amb-19",
           "name": "Xiao Chen",
           "inst": "Tsinghua"
-        }
+        },
+        "contact": {
+          "name": "Hana Ito",
+          "email": "campus-library-assistant.beijing@hire.example",
+          "whatsapp": "+86 402 0000 175"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-beijing-4",
@@ -2063,7 +3071,13 @@
           "id": "amb-19",
           "name": "Xiao Chen",
           "inst": "Tsinghua"
-        }
+        },
+        "contact": {
+          "name": "Priya Nair",
+          "email": "private-tutor-your-best-subject.beijing@hire.example",
+          "whatsapp": "+86 403 0000 188"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-beijing-5",
@@ -2077,7 +3091,13 @@
           "id": "amb-19",
           "name": "Xiao Chen",
           "inst": "Tsinghua"
-        }
+        },
+        "contact": {
+          "name": "Grace Lim",
+          "email": "restaurant-server.beijing@hire.example",
+          "whatsapp": "+86 404 0000 201"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Shanghai": [
@@ -2089,7 +3109,13 @@
         "payHourMin": 25,
         "payHourMax": 51,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "caf-barista.shanghai@hire.example",
+          "whatsapp": "+86 400 0000 156"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-shanghai-2",
@@ -2099,7 +3125,13 @@
         "payHourMin": 26.25,
         "payHourMax": 55.5,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "retail-assistant.shanghai@hire.example",
+          "whatsapp": "+86 401 0000 169"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-shanghai-3",
@@ -2109,7 +3141,13 @@
         "payHourMin": 27.5,
         "payHourMax": 60,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Sam Carter",
+          "email": "campus-library-assistant.shanghai@hire.example",
+          "whatsapp": "+86 402 0000 182"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-shanghai-4",
@@ -2119,7 +3157,13 @@
         "payHourMin": 25,
         "payHourMax": 51,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Daniel Wong",
+          "email": "private-tutor-your-best-subject.shanghai@hire.example",
+          "whatsapp": "+86 403 0000 195"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-shanghai-5",
@@ -2129,7 +3173,13 @@
         "payHourMin": 26.25,
         "payHourMax": 55.5,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Marco Rossi",
+          "email": "restaurant-server.shanghai@hire.example",
+          "whatsapp": "+86 404 0000 208"
+        },
+        "hoursNote": "12-20"
       }
     ],
     "Guangzhou": [
@@ -2141,7 +3191,13 @@
         "payHourMin": 25,
         "payHourMax": 51,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "caf-barista.guangzhou@hire.example",
+          "whatsapp": "+86 400 0000 163"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-guangzhou-2",
@@ -2151,7 +3207,13 @@
         "payHourMin": 26.25,
         "payHourMax": 55.5,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "retail-assistant.guangzhou@hire.example",
+          "whatsapp": "+86 401 0000 176"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-guangzhou-3",
@@ -2161,7 +3223,13 @@
         "payHourMin": 27.5,
         "payHourMax": 60,
         "onCampus": true,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Priya Nair",
+          "email": "campus-library-assistant.guangzhou@hire.example",
+          "whatsapp": "+86 402 0000 189"
+        },
+        "hoursNote": "8-12"
       },
       {
         "id": "job-guangzhou-4",
@@ -2171,7 +3239,13 @@
         "payHourMin": 25,
         "payHourMax": 51,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Grace Lim",
+          "email": "private-tutor-your-best-subject.guangzhou@hire.example",
+          "whatsapp": "+86 403 0000 202"
+        },
+        "hoursNote": "12-20"
       },
       {
         "id": "job-guangzhou-5",
@@ -2181,7 +3255,13 @@
         "payHourMin": 26.25,
         "payHourMax": 55.5,
         "onCampus": false,
-        "sharedBy": null
+        "sharedBy": null,
+        "contact": {
+          "name": "Hana Ito",
+          "email": "restaurant-server.guangzhou@hire.example",
+          "whatsapp": "+86 404 0000 215"
+        },
+        "hoursNote": "12-20"
       }
     ]
   },
