@@ -58,7 +58,8 @@
     "applications": "Hồ sơ",
     "community": "Cộng đồng",
     "profile": "Cá nhân",
-    "assistant": "Trợ lý"
+    "assistant": "Trợ lý AI",
+    "chats": "Trò chuyện"
   },
   "countries": {
     "AU": "Úc",
@@ -541,7 +542,15 @@
     "chatMenu": "Tùy chọn trò chuyện",
     "reply1": "Chào! Rất vui được kết nối 😄 Bạn bay khi nào?",
     "reply2": "Chào! Mình cũng đang tìm nhà gần trường — cùng so sánh nhé!",
-    "reply3": "Xin chào! Vào cả nhóm khóa nhập học nữa, nhiều mẹo hay lắm."
+    "reply3": "Xin chào! Vào cả nhóm khóa nhập học nữa, nhiều mẹo hay lắm.",
+    "requestsTitle": "Lời mời kết bạn",
+    "requestsEmpty": "Không có lời mời — Kết nối với bạn học trong Cộng đồng.",
+    "chatsTitle": "Trò chuyện",
+    "chatsEmpty": "Trò chuyện mở khi lời mời kết bạn được chấp nhận.",
+    "accept": "Chấp nhận",
+    "decline": "Từ chối",
+    "incomingNote": "{{name}} đã gửi lời mời kết bạn",
+    "waitingApproval": "Chờ chấp nhận"
   },
   "arrival": {
     "title": "Dịch vụ khi hạ cánh",
@@ -584,7 +593,7 @@
     "about": "Bản nguyên mẫu UniBridge — trường thật, dữ liệu tham khảo. Luôn kiểm tra trang web chính thức.",
     "homeCurrency": "Tiền nước bạn",
     "build": "Bản dựng {{id}}",
-    "helpTitle": "Trợ giúp & hỗ trợ",
+    "helpTitle": "UniBridge — Liên hệ",
     "helpLiveChat": "Chat trực tiếp",
     "helpCall": "Gọi UniBridge",
     "helpNote": "Liên hệ nguyên mẫu mang tính minh họa — số và tài khoản chính thức kết nối khi ra mắt."
@@ -617,7 +626,7 @@
     "signInCta": "Đăng nhập / tạo tài khoản"
   },
   "assistant": {
-    "title": "Trợ lý UniBridge",
+    "title": "Trợ lý AI UniBridge",
     "tagline": "Ngành · thành phố · chi phí · an toàn · thời tiết",
     "greeting": "Chào {{name}} 👋 Mình là trợ lý du học của bạn. Hỏi mình về bất kỳ trường hay thành phố nào — thời tiết, an toàn, sinh hoạt phí — hoặc để mình giúp bạn chọn học gì, học ở đâu. Mình trả lời từ kết quả so khớp thật của bạn.",
     "greetingShort": "Chào {{name}}! Bạn muốn biết gì nào?",

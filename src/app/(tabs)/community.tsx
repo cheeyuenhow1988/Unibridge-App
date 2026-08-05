@@ -51,6 +51,7 @@ export default function CommunityScreen() {
   const unfriend = useCommunityStore((s) => s.unfriend);
   const block = useCommunityStore((s) => s.block);
   const unblock = useCommunityStore((s) => s.unblock);
+  const acceptRequest = useCommunityStore((s) => s.acceptRequest);
   const rsvps = useCommunityStore((s) => s.rsvps);
   const toggleRsvp = useCommunityStore((s) => s.toggleRsvp);
   const likedPostIds = useCommunityStore((s) => s.likedPostIds);
@@ -330,7 +331,18 @@ export default function CommunityScreen() {
                       onPress={() => router.push(`/mate/${m.id}`)}
                     />
                   ) : status === 'requested' ? (
-                    <Button label={t('community.requestedBtn')} size="sm" variant="secondary" icon="hourglass-outline" disabled />
+                    <Button label={t('community.waitingApproval')} size="sm" variant="secondary" icon="hourglass-outline" disabled />
+                  ) : status === 'incoming' ? (
+                    <Button
+                      label={t('community.accept')}
+                      size="sm"
+                      icon="checkmark"
+                      onPress={() => {
+                        hapticTap();
+                        acceptRequest(m.id);
+                        toast(t('community.accepted', { name: m.name.split(' ')[0] }));
+                      }}
+                    />
                   ) : (
                     <Button
                       label={t('community.connect')}
@@ -559,7 +571,22 @@ export default function CommunityScreen() {
                 );
               }
               if (status === 'requested') {
-                return <Button label={t('community.requestedBtn')} icon="hourglass-outline" variant="secondary" size="lg" disabled />;
+                return <Button label={t('community.waitingApproval')} icon="hourglass-outline" variant="secondary" size="lg" disabled />;
+              }
+              if (status === 'incoming') {
+                return (
+                  <Button
+                    label={t('community.accept')}
+                    icon="checkmark"
+                    size="lg"
+                    onPress={() => {
+                      hapticTap();
+                      acceptRequest(mateSheet.id);
+                      toast(t('community.accepted', { name: mateSheet.name.split(' ')[0] }));
+                      setMateSheet(null);
+                    }}
+                  />
+                );
               }
               if (status === 'blocked') {
                 return (

@@ -58,7 +58,8 @@
     "applications": "Aplikasi",
     "community": "Komunitas",
     "profile": "Profil",
-    "assistant": "Asisten"
+    "assistant": "Asisten AI",
+    "chats": "Obrolan"
   },
   "countries": {
     "AU": "Australia",
@@ -541,7 +542,15 @@
     "chatMenu": "Opsi obrolan",
     "reply1": "Hai! Senang terhubung 😄 Kapan kamu terbang?",
     "reply2": "Hai! Aku juga cari hunian dekat kampus — ayo bandingkan pilihan!",
-    "reply3": "Halo! Gabung juga ke grup intake, banyak tips di sana."
+    "reply3": "Halo! Gabung juga ke grup intake, banyak tips di sana.",
+    "requestsTitle": "Permintaan pertemanan",
+    "requestsEmpty": "Tidak ada permintaan — Terhubung dengan teman seangkatan di Komunitas.",
+    "chatsTitle": "Obrolan",
+    "chatsEmpty": "Obrolan terbuka setelah permintaan pertemanan diterima.",
+    "accept": "Terima",
+    "decline": "Tolak",
+    "incomingNote": "{{name}} mengirim permintaan pertemanan",
+    "waitingApproval": "Menunggu persetujuan"
   },
   "arrival": {
     "title": "Layanan kedatangan",
@@ -584,7 +593,7 @@
     "about": "Prototipe UniBridge — institusi nyata, data indikatif. Selalu cek situs resmi.",
     "homeCurrency": "Mata uang asal",
     "build": "Versi {{id}}",
-    "helpTitle": "Bantuan & dukungan",
+    "helpTitle": "UniBridge — Hubungi kami",
     "helpLiveChat": "Live chat",
     "helpCall": "Telepon UniBridge",
     "helpNote": "Kontak prototipe indikatif — nomor dan akun resmi terhubung saat peluncuran."
@@ -617,7 +626,7 @@
     "signInCta": "Masuk / buat akun"
   },
   "assistant": {
-    "title": "Asisten UniBridge",
+    "title": "Asisten AI UniBridge",
     "tagline": "Jurusan · kota · biaya · keamanan · cuaca",
     "greeting": "Hai {{name}} 👋 Aku asisten studi luar negerimu. Tanya soal kampus atau kota mana pun — cuaca, keamanan, biaya hidup — atau biar kubantu memutuskan mau kuliah apa dan di mana. Jawabanku dari hasil kecocokan aslimu.",
     "greetingShort": "Hai {{name}}! Mau tahu apa?",

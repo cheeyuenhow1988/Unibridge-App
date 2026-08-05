@@ -6,6 +6,7 @@ import { SosButton } from '@/components/safety/SosButton';
 import { fonts } from '@/constants/theme';
 import { useTheme } from '@/hooks/useTheme';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
+import { useCommunityStore } from '@/store/useCommunityStore';
 
 const ICONS: Record<string, [keyof typeof Ionicons.glyphMap, keyof typeof Ionicons.glyphMap]> = {
   match: ['school-outline', 'school'],
@@ -13,6 +14,7 @@ const ICONS: Record<string, [keyof typeof Ionicons.glyphMap, keyof typeof Ionico
   applications: ['documents-outline', 'documents'],
   assistant: ['sparkles-outline', 'sparkles'],
   community: ['people-outline', 'people'],
+  chats: ['chatbubbles-outline', 'chatbubbles'],
   profile: ['person-circle-outline', 'person-circle'],
 };
 
@@ -20,6 +22,9 @@ export default function TabsLayout() {
   const { t } = useTranslation();
   const { colors } = useTheme();
   const unread = useApplicationsStore((s) => s.notifications.filter((n) => !n.read).length);
+  const requestCount = useCommunityStore(
+    (s) => Object.values(s.mateLinks).filter((l) => l.status === 'incoming').length,
+  );
   return (
     <View style={{ flex: 1 }}>
       <Tabs
@@ -47,6 +52,14 @@ export default function TabsLayout() {
       />
       <Tabs.Screen name="assistant" options={{ title: t('tabs.assistant') }} />
       <Tabs.Screen name="community" options={{ title: t('tabs.community') }} />
+      <Tabs.Screen
+        name="chats"
+        options={{
+          title: t('tabs.chats'),
+          tabBarBadge: requestCount > 0 ? requestCount : undefined,
+          tabBarBadgeStyle: { backgroundColor: colors.danger, color: colors.onAccent, fontFamily: fonts.bold, fontSize: 10 },
+        }}
+      />
       <Tabs.Screen name="profile" options={{ title: t('tabs.profile') }} />
       </Tabs>
       <SosButton />

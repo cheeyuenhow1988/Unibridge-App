@@ -89,7 +89,7 @@ export default function ProfileScreen() {
           signOut();
           useSavedStore.setState({ savedCourseIds: [], savedScholarshipIds: [], compareIds: [] });
           useApplicationsStore.setState({ applications: [], notifications: [] });
-          useCommunityStore.setState({ joinedGroupIds: [], localMessages: {}, connections: [], mateLinks: {}, mateMessages: {}, rsvps: [], likedPostIds: [] });
+          useCommunityStore.setState({ joinedGroupIds: [], localMessages: {}, connections: [], mateLinks: {}, mateMessages: {}, incomingSeeded: false, rsvps: [], likedPostIds: [] });
           useRewardsStore.getState().reset();
           useMailStore.getState().reset();
           usePlanStore.getState().reset();
@@ -221,9 +221,14 @@ export default function ProfileScreen() {
             {([
               ['chatbubbles-outline', t('profile.helpLiveChat'), t('assistant.title'), () => router.push('/assistant')],
               ['call-outline', t('profile.helpCall'), '+60 3-0000 0000', () => void Linking.openURL('tel:+60300000000')],
+              ['mail-outline', 'Email', 'hello@unibridge.example', () => void Linking.openURL('mailto:hello@unibridge.example')],
               ['logo-whatsapp', 'WhatsApp', '+60 12-000 0000', () => void Linking.openURL('https://wa.me/60120000000')],
               ['paper-plane-outline', 'Telegram', '@UniBridgeSupport', () => void Linking.openURL('https://t.me/UniBridgeSupportDemo')],
               ['call-outline', 'Viber', '+60 12-000 0000', () => void Linking.openURL('viber://chat?number=%2B60120000000')],
+              ['logo-facebook', 'Facebook', 'UniBridge', () => void Linking.openURL('https://www.facebook.com/UniBridgeAppDemo')],
+              ['logo-tiktok', 'TikTok', '@unibridge', () => void Linking.openURL('https://www.tiktok.com/@unibridgedemo')],
+              ['logo-instagram', 'Instagram', '@unibridge', () => void Linking.openURL('https://www.instagram.com/unibridgedemo')],
+              ['logo-twitter', 'Twitter / X', '@unibridge', () => void Linking.openURL('https://x.com/unibridgedemo')],
             ] as const).map(([icon, label, sub, onPress]) => (
               <Pressable
                 key={label}

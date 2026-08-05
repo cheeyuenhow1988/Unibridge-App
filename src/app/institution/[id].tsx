@@ -96,47 +96,69 @@ export default function InstitutionDetail() {
             showsHorizontalScrollIndicator={false}
             onMomentumScrollEnd={(e) => setPhotoIdx(Math.round(e.nativeEvent.contentOffset.x / width))}
           >
-            {institution.images.map((img) => (
-              <Image key={img} source={{ uri: img }} style={{ width, height: 240 }} contentFit="cover" transition={250} />
+            {institution.images.map((img, idx) => (
+              <View key={img} style={{ width, height: 280, overflow: 'hidden', backgroundColor: '#0B1220' }}>
+                {idx === 0 ? (
+                  // The audited hero is a proper wide shot — full-bleed cover.
+                  <Image source={{ uri: img }} style={{ width, height: 280 }} contentFit="cover" transition={250} />
+                ) : (
+                  // Facility/detail shots vary wildly in shape; show them whole
+                  // on a blurred backdrop instead of an ugly zoomed crop.
+                  <>
+                    <Image
+                      source={{ uri: img }}
+                      style={{ position: 'absolute', top: -24, left: -24, width: width + 48, height: 328 }}
+                      contentFit="cover"
+                      blurRadius={24}
+                      transition={0}
+                    />
+                    <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(7,13,34,0.35)' }} />
+                    <Image source={{ uri: img }} style={{ width, height: 280 }} contentFit="contain" transition={250} />
+                  </>
+                )}
+              </View>
             ))}
           </ScrollView>
           {/* Swiping doesn't exist on desktop web — arrows are the only way
               through the gallery there, so drive the index from the press. */}
-          {institution.images.length > 1 && photoIdx > 0 ? (
-            <Pressable
-              accessibilityRole="button"
-              accessibilityLabel={t('institution.prevPhoto')}
-              onPress={() => {
-                const next = Math.max(0, photoIdx - 1);
-                galleryRef.current?.scrollTo({ x: next * width, animated: true });
-                setPhotoIdx(next);
-              }}
-              style={{
-                position: 'absolute', left: spacing.md, top: 120 - 18, width: 36, height: 36,
-                borderRadius: radius.full, backgroundColor: 'rgba(0,0,0,0.45)',
-                alignItems: 'center', justifyContent: 'center',
-              }}
-            >
-              <Ionicons name="chevron-back" size={20} color="#FFFFFF" />
-            </Pressable>
-          ) : null}
-          {institution.images.length > 1 && photoIdx < institution.images.length - 1 ? (
-            <Pressable
-              accessibilityRole="button"
-              accessibilityLabel={t('institution.nextPhoto')}
-              onPress={() => {
-                const next = Math.min(institution.images.length - 1, photoIdx + 1);
-                galleryRef.current?.scrollTo({ x: next * width, animated: true });
-                setPhotoIdx(next);
-              }}
-              style={{
-                position: 'absolute', right: spacing.md, top: 120 - 18, width: 36, height: 36,
-                borderRadius: radius.full, backgroundColor: 'rgba(0,0,0,0.45)',
-                alignItems: 'center', justifyContent: 'center',
-              }}
-            >
-              <Ionicons name="chevron-forward" size={20} color="#FFFFFF" />
-            </Pressable>
+          {institution.images.length > 1 ? (
+            // One tidy control cluster at the bottom-left, clear of the back
+            // button — arrows dim at each end instead of jumping around.
+            <Row gap={spacing.sm} style={{ position: 'absolute', bottom: 10, left: spacing.lg }}>
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={t('institution.prevPhoto')}
+                disabled={photoIdx === 0}
+                onPress={() => {
+                  const next = Math.max(0, photoIdx - 1);
+                  galleryRef.current?.scrollTo({ x: next * width, animated: true });
+                  setPhotoIdx(next);
+                }}
+                style={{
+                  width: 34, height: 34, borderRadius: radius.full, backgroundColor: 'rgba(0,0,0,0.55)',
+                  alignItems: 'center', justifyContent: 'center', opacity: photoIdx === 0 ? 0.35 : 1,
+                }}
+              >
+                <Ionicons name="chevron-back" size={18} color="#FFFFFF" />
+              </Pressable>
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={t('institution.nextPhoto')}
+                disabled={photoIdx >= institution.images.length - 1}
+                onPress={() => {
+                  const next = Math.min(institution.images.length - 1, photoIdx + 1);
+                  galleryRef.current?.scrollTo({ x: next * width, animated: true });
+                  setPhotoIdx(next);
+                }}
+                style={{
+                  width: 34, height: 34, borderRadius: radius.full, backgroundColor: 'rgba(0,0,0,0.55)',
+                  alignItems: 'center', justifyContent: 'center',
+                  opacity: photoIdx >= institution.images.length - 1 ? 0.35 : 1,
+                }}
+              >
+                <Ionicons name="chevron-forward" size={18} color="#FFFFFF" />
+              </Pressable>
+            </Row>
           ) : null}
           <LinearGradient
             colors={['rgba(0,0,0,0.5)', 'transparent']}

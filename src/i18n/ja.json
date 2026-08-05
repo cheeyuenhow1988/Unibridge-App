@@ -58,7 +58,8 @@
     "applications": "出願",
     "community": "コミュニティ",
     "profile": "プロフィール",
-    "assistant": "アシスタント"
+    "assistant": "AIアシスタント",
+    "chats": "チャット"
   },
   "countries": {
     "AU": "オーストラリア",
@@ -541,7 +542,15 @@
     "chatMenu": "チャット設定",
     "reply1": "やあ!つながれて嬉しいです 😄 いつ渡航しますか?",
     "reply2": "こんにちは!私もキャンパス近くの住まいを探しています — 一緒に比べましょう!",
-    "reply3": "こんにちは!入学グループにも参加してみて。役立つ情報がたくさんありますよ。"
+    "reply3": "こんにちは!入学グループにも参加してみて。役立つ情報がたくさんありますよ。",
+    "requestsTitle": "友達リクエスト",
+    "requestsEmpty": "リクエストはありません — コミュニティで同級生とつながりましょう。",
+    "chatsTitle": "チャット",
+    "chatsEmpty": "リクエストが承認されるとチャットできます。",
+    "accept": "承認",
+    "decline": "断る",
+    "incomingNote": "{{name}}から友達リクエストが届きました",
+    "waitingApproval": "承認待ち"
   },
   "arrival": {
     "title": "到着サービス",
@@ -584,7 +593,7 @@
     "about": "UniBridgeプロトタイプ — 実在の教育機関、参考データ。必ず公式サイトでご確認を。",
     "homeCurrency": "母国通貨",
     "build": "ビルド {{id}}",
-    "helpTitle": "ヘルプ・サポート",
+    "helpTitle": "UniBridge — お問い合わせ",
     "helpLiveChat": "ライブチャット",
     "helpCall": "UniBridgeに電話",
     "helpNote": "プロトタイプの連絡先例 — 正式な番号・アカウントは公開時に接続されます。"
@@ -617,7 +626,7 @@
     "signInCta": "サインイン / アカウント作成"
   },
   "assistant": {
-    "title": "UniBridgeアシスタント",
+    "title": "UniBridge AIアシスタント",
     "tagline": "コース · 都市 · 費用 · 治安 · 天気",
     "greeting": "こんにちは {{name}} 👋 留学アシスタントです。大学や都市について何でも聞いてください — 天気、治安、生活費 — 何をどこで学ぶか決めるお手伝いもします。あなたの実際のマッチ結果から答えます。",
     "greetingShort": "こんにちは {{name}}さん！何を知りたいですか？",

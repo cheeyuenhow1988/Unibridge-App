@@ -58,7 +58,8 @@
     "applications": "지원",
     "community": "커뮤니티",
     "profile": "프로필",
-    "assistant": "도우미"
+    "assistant": "AI 어시스턴트",
+    "chats": "채팅"
   },
   "countries": {
     "AU": "호주",
@@ -541,7 +542,15 @@
     "chatMenu": "채팅 옵션",
     "reply1": "안녕하세요! 반가워요 😄 언제 출국하세요?",
     "reply2": "안녕하세요! 저도 캠퍼스 근처 집을 찾고 있어요 — 같이 비교해요!",
-    "reply3": "안녕하세요! 입학 그룹 채팅에도 들어와요. 꿀팁이 많아요."
+    "reply3": "안녕하세요! 입학 그룹 채팅에도 들어와요. 꿀팁이 많아요.",
+    "requestsTitle": "친구 요청",
+    "requestsEmpty": "대기 중인 요청이 없어요 — 커뮤니티에서 동기와 연결해 보세요.",
+    "chatsTitle": "채팅",
+    "chatsEmpty": "친구 요청이 수락되면 채팅이 열려요.",
+    "accept": "수락",
+    "decline": "거절",
+    "incomingNote": "{{name}}이(가) 친구 요청을 보냈어요",
+    "waitingApproval": "승인 대기 중"
   },
   "arrival": {
     "title": "도착 서비스",
@@ -584,7 +593,7 @@
     "about": "UniBridge 프로토타입 — 실제 교육기관, 참고용 데이터. 항상 공식 웹사이트에서 확인하세요.",
     "homeCurrency": "본국 통화",
     "build": "빌드 {{id}}",
-    "helpTitle": "도움말 및 지원",
+    "helpTitle": "UniBridge — 문의하기",
     "helpLiveChat": "실시간 채팅",
     "helpCall": "UniBridge에 전화",
     "helpNote": "프로토타입 예시 연락처 — 공식 번호와 계정은 출시 시 연결됩니다."
@@ -617,7 +626,7 @@
     "signInCta": "로그인 / 계정 만들기"
   },
   "assistant": {
-    "title": "UniBridge 도우미",
+    "title": "UniBridge AI 어시스턴트",
     "tagline": "과정 · 도시 · 비용 · 치안 · 날씨",
     "greeting": "안녕하세요 {{name}} 👋 유학 도우미예요. 어느 대학이나 도시든 물어보세요 — 날씨, 치안, 생활비 — 무엇을 어디서 공부할지 정하는 것도 도와드려요. 실제 매칭 결과로 답해요.",
     "greetingShort": "안녕하세요 {{name}}님! 뭐가 궁금하세요?",

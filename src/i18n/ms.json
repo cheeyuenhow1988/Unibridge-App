@@ -60,7 +60,8 @@
     "applications": "Permohonan",
     "community": "Komuniti",
     "profile": "Profil",
-    "assistant": "Pembantu"
+    "assistant": "Pembantu AI",
+    "chats": "Sembang"
   },
   "countries": {
     "AU": "Australia",
@@ -543,7 +544,15 @@
     "chatMenu": "Pilihan sembang",
     "reply1": "Hai! Seronok berkenalan 😄 Bila anda terbang?",
     "reply2": "Hai! Saya juga cari penginapan dekat kampus — jom banding pilihan!",
-    "reply3": "Helo! Sertai sembang kumpulan kemasukan juga, banyak tip di sana."
+    "reply3": "Helo! Sertai sembang kumpulan kemasukan juga, banyak tip di sana.",
+    "requestsTitle": "Permintaan rakan",
+    "requestsEmpty": "Tiada permintaan — Sambung dengan rakan sekelas di Komuniti.",
+    "chatsTitle": "Sembang",
+    "chatsEmpty": "Sembang terbuka selepas permintaan rakan diterima.",
+    "accept": "Terima",
+    "decline": "Tolak",
+    "incomingNote": "{{name}} menghantar permintaan rakan",
+    "waitingApproval": "Menunggu kelulusan"
   },
   "arrival": {
     "title": "Perkhidmatan ketibaan",
@@ -586,7 +595,7 @@
     "ratesSource_live": "langsung",
     "ratesSource_static": "snapshot luar talian",
     "build": "Binaan {{id}}",
-    "helpTitle": "Bantuan & sokongan",
+    "helpTitle": "UniBridge — Hubungi kami",
     "helpLiveChat": "Sembang langsung",
     "helpCall": "Hubungi UniBridge",
     "helpNote": "Kenalan prototaip indikatif — nombor dan akaun rasmi disambungkan semasa pelancaran."
@@ -629,7 +638,7 @@
     "signInCta": "Log masuk / cipta akaun"
   },
   "assistant": {
-    "title": "Pembantu UniBridge",
+    "title": "Pembantu AI UniBridge",
     "tagline": "Kursus · bandar · kos · keselamatan · cuaca",
     "greeting": "Hai {{name}} 👋 Saya pembantu belajar-luar-negara anda. Tanya saya tentang mana-mana universiti atau bandar — cuaca, keselamatan, kos sara hidup — atau biar saya bantu anda pilih apa dan di mana untuk belajar. Jawapan saya berdasarkan padanan sebenar anda.",
     "greetingShort": "Hai {{name}}! Apa yang anda ingin tahu?",

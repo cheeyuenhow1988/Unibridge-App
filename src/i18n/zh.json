@@ -60,7 +60,8 @@
     "applications": "申请",
     "community": "社区",
     "profile": "我的",
-    "assistant": "助手"
+    "assistant": "AI助手",
+    "chats": "聊天"
   },
   "countries": {
     "AU": "澳大利亚",
@@ -543,7 +544,15 @@
     "chatMenu": "聊天选项",
     "reply1": "嗨!很高兴认识你 😄 你什么时候飞?",
     "reply2": "嗨!我也在找学校附近的住处——一起比较下吧!",
-    "reply3": "你好!也加入入学群吧,里面有很多攻略。"
+    "reply3": "你好!也加入入学群吧,里面有很多攻略。",
+    "requestsTitle": "好友请求",
+    "requestsEmpty": "暂无请求——去社区与同学建立联系吧。",
+    "chatsTitle": "聊天",
+    "chatsEmpty": "好友请求被接受后即可聊天。",
+    "accept": "接受",
+    "decline": "拒绝",
+    "incomingNote": "{{name}}向你发送了好友请求",
+    "waitingApproval": "等待通过"
   },
   "arrival": {
     "title": "落地服务",
@@ -586,7 +595,7 @@
     "ratesSource_live": "实时",
     "ratesSource_static": "离线快照",
     "build": "版本 {{id}}",
-    "helpTitle": "帮助与支持",
+    "helpTitle": "UniBridge — 联系我们",
     "helpLiveChat": "在线客服",
     "helpCall": "致电 UniBridge",
     "helpNote": "原型示意联系方式——正式号码和账号将在上线时开通。"
@@ -629,7 +638,7 @@
     "signInCta": "登录 / 创建账号"
   },
   "assistant": {
-    "title": "UniBridge 助手",
+    "title": "UniBridge AI 助手",
     "tagline": "课程 · 城市 · 费用 · 安全 · 天气",
     "greeting": "嗨 {{name}} 👋 我是你的留学助手。问我任何大学或城市的问题——天气、安全、生活费——或者让我帮你决定读什么、去哪里读。我的回答基于你的真实匹配结果。",
     "greetingShort": "嗨 {{name}}！想了解什么？",

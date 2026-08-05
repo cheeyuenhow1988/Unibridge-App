@@ -60,7 +60,8 @@
     "applications": "Applications",
     "community": "Community",
     "profile": "Profile",
-    "assistant": "Assistant"
+    "assistant": "AI Assistant",
+    "chats": "Chats"
   },
   "countries": {
     "AU": "Australia",
@@ -545,7 +546,15 @@
     "chatMenu": "Chat options",
     "reply1": "Hey! Nice to connect 😄 When are you flying in?",
     "reply2": "Hi! I am also looking at housing near campus — let us compare options!",
-    "reply3": "Hello! Join the intake group chat too, lots of tips in there."
+    "reply3": "Hello! Join the intake group chat too, lots of tips in there.",
+    "requestsTitle": "Friend requests",
+    "requestsEmpty": "No pending requests — Connect with coursemates in Community.",
+    "chatsTitle": "Chats",
+    "chatsEmpty": "Chats unlock once a friend request is accepted.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "incomingNote": "{{name}} sent you a friend request",
+    "waitingApproval": "Waiting for approval"
   },
   "arrival": {
     "title": "Arrival services",
@@ -588,7 +597,7 @@
     "about": "UniBridge prototype — real institutions, indicative data. Always verify on official websites.",
     "homeCurrency": "Home currency",
     "build": "Build {{id}}",
-    "helpTitle": "Help & support",
+    "helpTitle": "UniBridge — Contact us",
     "helpLiveChat": "Live chat",
     "helpCall": "Call UniBridge",
     "helpNote": "Indicative prototype contact points — official numbers and accounts connect at launch."
@@ -621,7 +630,7 @@
     "signInCta": "Sign in / create account"
   },
   "assistant": {
-    "title": "UniBridge Assistant",
+    "title": "UniBridge AI Assistant",
     "tagline": "Courses · cities · costs · safety · weather",
     "greeting": "Hi {{name}} 👋 I'm your study-abroad assistant. Ask me about any university or city — weather, safety, living costs — or let me help you decide what and where to study. I answer from your real match results.",
     "greetingShort": "Hi {{name}}! What would you like to know?",
