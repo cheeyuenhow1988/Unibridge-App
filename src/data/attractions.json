@@ -13,7 +13,11 @@
     ],
     "rating": 4.5,
     "reviewCount": 1553,
-    "reviewSnippet": "Friendly staff and quick service even at peak hour."
+    "reviewSnippet": "Friendly staff and quick service even at peak hour.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_(AU)%2C_Queen_Victoria_Market_--_2019_--_1535.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_(AU)%2C_Queen_Victoria_Market_--_2019_--_1542.jpg?width=1000"
+    ]
   },
   {
     "id": "au-monash-a2",
@@ -68,7 +72,11 @@
     ],
     "rating": 4.3,
     "reviewCount": 1797,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_Carlton_Central_Apartment_Hotel.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lygon_Street_in_Melbourne_Australia.jpg?width=1000"
+    ]
   },
   {
     "id": "au-sydney-a1",
@@ -165,7 +173,10 @@
     ],
     "rating": 4.6,
     "reviewCount": 1066,
-    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Eat_street_northshore.jpg?width=1000"
+    ]
   },
   {
     "id": "au-uq-a3",
@@ -288,7 +299,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1690,
-    "reviewSnippet": "A student favourite — go early on weekends."
+    "reviewSnippet": "A student favourite — go early on weekends.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_(AU)%2C_Queen_Victoria_Market_--_2019_--_1535.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_(AU)%2C_Queen_Victoria_Market_--_2019_--_1542.jpg?width=1000"
+    ]
   },
   {
     "id": "au-unimelb-a2",
@@ -343,7 +358,11 @@
     ],
     "rating": 4.6,
     "reviewCount": 1934,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_Carlton_Central_Apartment_Hotel.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lygon_Street_in_Melbourne_Australia.jpg?width=1000"
+    ]
   },
   {
     "id": "au-rmit-a1",
@@ -359,7 +378,11 @@
     ],
     "rating": 4.5,
     "reviewCount": 1279,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_(AU)%2C_Queen_Victoria_Market_--_2019_--_1535.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_(AU)%2C_Queen_Victoria_Market_--_2019_--_1542.jpg?width=1000"
+    ]
   },
   {
     "id": "au-rmit-a2",
@@ -414,7 +437,11 @@
     ],
     "rating": 4.3,
     "reviewCount": 1523,
-    "reviewSnippet": "Solid late-night option close to campus."
+    "reviewSnippet": "Solid late-night option close to campus.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_Carlton_Central_Apartment_Hotel.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lygon_Street_in_Melbourne_Australia.jpg?width=1000"
+    ]
   },
   {
     "id": "my-um-a1",
@@ -443,7 +470,11 @@
     ],
     "rating": 4.6,
     "reviewCount": 1066,
-    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Jalan_Alor_in_Kuala_Lumpur_during_Corona_virus_lockdown.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_-_Jalan_Alor.jpg?width=1000"
+    ]
   },
   {
     "id": "my-um-a3",
@@ -511,7 +542,11 @@
     ],
     "rating": 4.3,
     "reviewCount": 1751,
-    "reviewSnippet": "Solid late-night option close to campus."
+    "reviewSnippet": "Solid late-night option close to campus.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Jalan_Alor_in_Kuala_Lumpur_during_Corona_virus_lockdown.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_-_Jalan_Alor.jpg?width=1000"
+    ]
   },
   {
     "id": "my-taylors-a3",
@@ -579,7 +614,11 @@
     ],
     "rating": 4.6,
     "reviewCount": 1614,
-    "reviewSnippet": "A student favourite — go early on weekends."
+    "reviewSnippet": "A student favourite — go early on weekends.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Jalan_Alor_in_Kuala_Lumpur_during_Corona_virus_lockdown.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_-_Jalan_Alor.jpg?width=1000"
+    ]
   },
   {
     "id": "my-sunway-a3",
@@ -647,7 +686,10 @@
     ],
     "rating": 4.3,
     "reviewCount": 1203,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Tamarind_Square_(221225)_04.jpg?width=1000"
+    ]
   },
   {
     "id": "my-mmu-a3",
@@ -715,7 +757,10 @@
     ],
     "rating": 4.3,
     "reviewCount": 1203,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Gurneydrive1.jpg?width=1000"
+    ]
   },
   {
     "id": "my-usm-a3",
@@ -783,7 +828,10 @@
     ],
     "rating": 4.3,
     "reviewCount": 1203,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Wikimania_2023_-_Johor_Bahru_Photo_Walk_-_Salahuddin_Bakery.jpg?width=1000"
+    ]
   },
   {
     "id": "my-utm-a3",
@@ -838,7 +886,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1142,
-    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Shilin_Night_Market_02.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei%2C_November_26%2C_2024_-_76.jpg?width=1000"
+    ]
   },
   {
     "id": "tw-ntu-a2",
@@ -919,7 +971,10 @@
     ],
     "rating": 4.6,
     "reviewCount": 1340,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/%E5%8C%97%E5%9F%94%E6%85%88%E5%A4%A9%E5%AE%AE_alpinetrout1984.jpg?width=1000"
+    ]
   },
   {
     "id": "tw-nthu-a3",
@@ -974,7 +1029,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1142,
-    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Taichung%2C_Taiwan.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Taichung_City_Hall%2C_Taiwan.jpg?width=1000"
+    ]
   },
   {
     "id": "tw-fcu-a2",
@@ -1042,7 +1101,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1416,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kaohsiung_Liuhe_Night_Street_Market_1.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Liouhe_Night_Market_Kaohsiung_May_2026.jpg?width=1000"
+    ]
   },
   {
     "id": "tw-nsysu-a2",
@@ -1136,7 +1199,11 @@
     ],
     "rating": 4.7,
     "reviewCount": 2223,
-    "reviewSnippet": "Friendly staff and quick service even at peak hour."
+    "reviewSnippet": "Friendly staff and quick service even at peak hour.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/The_Curry_Mile_in_Manchester_during_Eid_al-Adha_2023_01.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/The_Curry_Mile_in_Manchester_during_Eid_al-Adha_2023_02.jpg?width=1000"
+    ]
   },
   {
     "id": "gb-manchester-a4",
@@ -1191,7 +1258,11 @@
     ],
     "rating": 4.3,
     "reviewCount": 1477,
-    "reviewSnippet": "Friendly staff and quick service even at peak hour."
+    "reviewSnippet": "Friendly staff and quick service even at peak hour.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Leeds_City_Markets_-_geograph.org.uk_-_5745799.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Leeds_Market_Flickr_2017.jpg?width=1000"
+    ]
   },
   {
     "id": "gb-leeds-a3",
@@ -1259,7 +1330,10 @@
     ],
     "rating": 4.6,
     "reviewCount": 2162,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/SK_Buildings%2C_Bradford_Street%2C_Birmingham%2C_UK.jpg?width=1000"
+    ]
   },
   {
     "id": "gb-birmingham-a3",
@@ -1314,7 +1388,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1142,
-    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/London_Bermondsey.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/London_-_Borough_Market_-_geograph.org.uk_-_2976733.jpg?width=1000"
+    ]
   },
   {
     "id": "gb-ucl-a2",
@@ -1382,7 +1460,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1142,
-    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/London_Bermondsey.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/London_-_Borough_Market_-_geograph.org.uk_-_2976733.jpg?width=1000"
+    ]
   },
   {
     "id": "gb-kcl-a2",
@@ -1528,7 +1610,10 @@
     ],
     "rating": 4.3,
     "reviewCount": 1203,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Mr._Bean_stall%2C_Maxwell_Food_Centre%2C_Singapore_-_20080830.jpg?width=1000"
+    ]
   },
   {
     "id": "sg-nus-a3",
@@ -1609,7 +1694,10 @@
     ],
     "rating": 4.3,
     "reviewCount": 1477,
-    "reviewSnippet": "Friendly staff and quick service even at peak hour."
+    "reviewSnippet": "Friendly staff and quick service even at peak hour.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Mr._Bean_stall%2C_Maxwell_Food_Centre%2C_Singapore_-_20080830.jpg?width=1000"
+    ]
   },
   {
     "id": "sg-ntusg-a3",
@@ -1690,7 +1778,10 @@
     ],
     "rating": 4.3,
     "reviewCount": 1203,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Mr._Bean_stall%2C_Maxwell_Food_Centre%2C_Singapore_-_20080830.jpg?width=1000"
+    ]
   },
   {
     "id": "sg-smu-a3",
@@ -1771,7 +1862,10 @@
     ],
     "rating": 4.3,
     "reviewCount": 1203,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Mr._Bean_stall%2C_Maxwell_Food_Centre%2C_Singapore_-_20080830.jpg?width=1000"
+    ]
   },
   {
     "id": "sg-sim-a3",
@@ -1865,7 +1959,10 @@
     ],
     "rating": 4.7,
     "reviewCount": 1949,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Ponsonby_House_In_Auckland_New_Zealand_II.jpg?width=1000"
+    ]
   },
   {
     "id": "nz-auckland-a4",
@@ -1920,7 +2017,11 @@
     ],
     "rating": 4.3,
     "reviewCount": 1203,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Facade_-_Wellington_-_New_Zealand_-_DSC00229.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Barber's_Buildings_-_Wellington_-_New_Zealand_-_DSC00223.jpg?width=1000"
+    ]
   },
   {
     "id": "nz-vuw-a3",
@@ -1988,7 +2089,11 @@
     ],
     "rating": 4.6,
     "reviewCount": 2162,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Riverside_Market_Mural_Christchurch_NZ_(51093195066).jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Riverside_Market%2C_Christchurch_City%2C_New_Zealand.jpg?width=1000"
+    ]
   },
   {
     "id": "nz-canterbury-a3",
@@ -2150,7 +2255,11 @@
     ],
     "rating": 4.5,
     "reviewCount": 1325,
-    "reviewSnippet": "Friendly staff and quick service even at peak hour."
+    "reviewSnippet": "Friendly staff and quick service even at peak hour.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Arbat_District%2C_Moscow%2C_Russia_-_panoramio_(35).jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow%2C_roadworks_in_New_Arbat_Street_(30570228114).jpg?width=1000"
+    ]
   },
   {
     "id": "ru-msu-a5",
@@ -2218,7 +2327,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1462,
-    "reviewSnippet": "A student favourite — go early on weekends."
+    "reviewSnippet": "A student favourite — go early on weekends.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Petersburg%2C_Russia_-_48530895826.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Petersburg%2C_Russia_(26717018698).jpg?width=1000"
+    ]
   },
   {
     "id": "ru-itmo-a5",
@@ -2260,7 +2373,11 @@
     ],
     "rating": 4.3,
     "reviewCount": 1203,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Night_in_Kazan_(January_2019)_-_24.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kazan_Bauman_street_2024-07-14_1620.jpg?width=1000"
+    ]
   },
   {
     "id": "ru-kfu-a3",
@@ -2542,7 +2659,10 @@
     ],
     "rating": 4.4,
     "reviewCount": 1264,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/At_New_York_City_2023_045_-_10th_Avenue_and_14th_Street%2C_Manhattan.jpg?width=1000"
+    ]
   },
   {
     "id": "us-nyu-a4",
@@ -2814,7 +2934,10 @@
     ],
     "rating": 4.4,
     "reviewCount": 1264,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/At_New_York_City_2023_045_-_10th_Avenue_and_14th_Street%2C_Manhattan.jpg?width=1000"
+    ]
   },
   {
     "id": "us-ice-a4",
@@ -2869,7 +2992,11 @@
     ],
     "rating": 4.6,
     "reviewCount": 1888,
-    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto%2C_Canad%C3%A1_(5971604975).jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/St._Lawrence_Market_-_Downtown_Toronto.jpg?width=1000"
+    ]
   },
   {
     "id": "ca-utoronto-a3",
@@ -2937,7 +3064,10 @@
     ],
     "rating": 4.3,
     "reviewCount": 1203,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Granville_Island_Vancouver_04.JPG?width=1000"
+    ]
   },
   {
     "id": "ca-ubc-a3",
@@ -3018,7 +3148,11 @@
     ],
     "rating": 4.7,
     "reviewCount": 1675,
-    "reviewSnippet": "Solid late-night option close to campus."
+    "reviewSnippet": "Solid late-night option close to campus.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Montr%C3%A9al_Petite_Italie_Canada_15.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/March%C3%A9_Jean_Talon_-_petite_Italie_-_Montreal_-_Quebec_-_panoramio.jpg?width=1000"
+    ]
   },
   {
     "id": "ca-mcgill-a4",
@@ -3073,7 +3207,11 @@
     ],
     "rating": 4.6,
     "reviewCount": 1340,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto%2C_Canad%C3%A1_(5971604975).jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/St._Lawrence_Market_-_Downtown_Toronto.jpg?width=1000"
+    ]
   },
   {
     "id": "ca-york-a3",
@@ -3141,7 +3279,11 @@
     ],
     "rating": 4.3,
     "reviewCount": 2299,
-    "reviewSnippet": "Friendly staff and quick service even at peak hour."
+    "reviewSnippet": "Friendly staff and quick service even at peak hour.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto%2C_Canad%C3%A1_(5971604975).jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/St._Lawrence_Market_-_Downtown_Toronto.jpg?width=1000"
+    ]
   },
   {
     "id": "ca-georgebrown-a3",
@@ -3222,7 +3364,11 @@
     ],
     "rating": 4.7,
     "reviewCount": 1949,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_(November_2016)_-_318.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_apm%2C_Wangfujing%2C_2008-07-14.jpg?width=1000"
+    ]
   },
   {
     "id": "cn-tsinghua-a4",
@@ -3290,7 +3436,11 @@
     ],
     "rating": 4.4,
     "reviewCount": 1264,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_(November_2016)_-_318.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_apm%2C_Wangfujing%2C_2008-07-14.jpg?width=1000"
+    ]
   },
   {
     "id": "cn-pku-a4",
@@ -3371,7 +3521,10 @@
     ],
     "rating": 4.5,
     "reviewCount": 1599,
-    "reviewSnippet": "Solid late-night option close to campus."
+    "reviewSnippet": "Solid late-night option close to campus.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Food_stands_around_Hsinchu_City_God_Temple_20040906.jpg?width=1000"
+    ]
   },
   {
     "id": "cn-fudan-a5",
@@ -3439,7 +3592,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1462,
-    "reviewSnippet": "A student favourite — go early on weekends."
+    "reviewSnippet": "A student favourite — go early on weekends.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/TaoTaoJu.JPG?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/TaoTaoJu_daytime.jpg?width=1000"
+    ]
   },
   {
     "id": "cn-sysu-a5",
@@ -3494,7 +3651,11 @@
     ],
     "rating": 4.4,
     "reviewCount": 1264,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_(November_2016)_-_318.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_apm%2C_Wangfujing%2C_2008-07-14.jpg?width=1000"
+    ]
   },
   {
     "id": "cn-bhi-a4",
@@ -3536,7 +3697,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1690,
-    "reviewSnippet": "A student favourite — go early on weekends."
+    "reviewSnippet": "A student favourite — go early on weekends.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_(AU)%2C_Queen_Victoria_Market_--_2019_--_1535.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_(AU)%2C_Queen_Victoria_Market_--_2019_--_1542.jpg?width=1000"
+    ]
   },
   {
     "id": "au-angliss-a2",
@@ -3591,7 +3756,11 @@
     ],
     "rating": 4.6,
     "reviewCount": 1934,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_Carlton_Central_Apartment_Hotel.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lygon_Street_in_Melbourne_Australia.jpg?width=1000"
+    ]
   },
   {
     "id": "my-berjaya-a1",
@@ -3620,7 +3789,11 @@
     ],
     "rating": 4.3,
     "reviewCount": 1751,
-    "reviewSnippet": "Solid late-night option close to campus."
+    "reviewSnippet": "Solid late-night option close to campus.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Jalan_Alor_in_Kuala_Lumpur_during_Corona_virus_lockdown.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_-_Jalan_Alor.jpg?width=1000"
+    ]
   },
   {
     "id": "my-berjaya-a3",
@@ -3675,7 +3848,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1416,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kaohsiung_Liuhe_Night_Street_Market_1.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Liouhe_Night_Market_Kaohsiung_May_2026.jpg?width=1000"
+    ]
   },
   {
     "id": "tw-nkuht-a2",
@@ -3743,7 +3920,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1142,
-    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/London_Bermondsey.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/London_-_Borough_Market_-_geograph.org.uk_-_2976733.jpg?width=1000"
+    ]
   },
   {
     "id": "gb-lcb-a2",
@@ -3824,7 +4005,11 @@
     ],
     "rating": 4.3,
     "reviewCount": 1203,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Facade_-_Wellington_-_New_Zealand_-_DSC00229.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Barber's_Buildings_-_Wellington_-_New_Zealand_-_DSC00223.jpg?width=1000"
+    ]
   },
   {
     "id": "nz-lcb-a3",
@@ -3892,7 +4077,10 @@
     ],
     "rating": 4.6,
     "reviewCount": 1614,
-    "reviewSnippet": "A student favourite — go early on weekends."
+    "reviewSnippet": "A student favourite — go early on weekends.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Mr._Bean_stall%2C_Maxwell_Food_Centre%2C_Singapore_-_20080830.jpg?width=1000"
+    ]
   },
   {
     "id": "sg-shatec-a3",
@@ -3973,7 +4161,11 @@
     ],
     "rating": 4.6,
     "reviewCount": 1614,
-    "reviewSnippet": "A student favourite — go early on weekends."
+    "reviewSnippet": "A student favourite — go early on weekends.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Jalan_Alor_in_Kuala_Lumpur_during_Corona_virus_lockdown.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_-_Jalan_Alor.jpg?width=1000"
+    ]
   },
   {
     "id": "my-monash-a3",
@@ -4067,7 +4259,10 @@
     ],
     "rating": 4.5,
     "reviewCount": 1599,
-    "reviewSnippet": "Solid late-night option close to campus."
+    "reviewSnippet": "Solid late-night option close to campus.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Food_stands_around_Hsinchu_City_God_Temple_20040906.jpg?width=1000"
+    ]
   },
   {
     "id": "cn-nyush-a5",
@@ -4096,7 +4291,11 @@
     ],
     "rating": 4.5,
     "reviewCount": 1827,
-    "reviewSnippet": "Solid late-night option close to campus."
+    "reviewSnippet": "Solid late-night option close to campus.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/London_Bermondsey.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/London_-_Borough_Market_-_geograph.org.uk_-_2976733.jpg?width=1000"
+    ]
   },
   {
     "id": "gb-imperial-a2",
@@ -4245,7 +4444,11 @@
     ],
     "rating": 4.6,
     "reviewCount": 1340,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Jalan_Alor_in_Kuala_Lumpur_during_Corona_virus_lockdown.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_-_Jalan_Alor.jpg?width=1000"
+    ]
   },
   {
     "id": "my-ucsi-a3",
@@ -4300,7 +4503,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1416,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Shilin_Night_Market_02.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei%2C_November_26%2C_2024_-_76.jpg?width=1000"
+    ]
   },
   {
     "id": "tw-ntust-a2",
@@ -4381,7 +4588,10 @@
     ],
     "rating": 4.6,
     "reviewCount": 1066,
-    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Mr._Bean_stall%2C_Maxwell_Food_Centre%2C_Singapore_-_20080830.jpg?width=1000"
+    ]
   },
   {
     "id": "sg-tp-a3",
@@ -4475,7 +4685,10 @@
     ],
     "rating": 4.4,
     "reviewCount": 1264,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Ponsonby_House_In_Auckland_New_Zealand_II.jpg?width=1000"
+    ]
   },
   {
     "id": "nz-aut-a4",
@@ -4556,7 +4769,11 @@
     ],
     "rating": 4.5,
     "reviewCount": 1325,
-    "reviewSnippet": "Friendly staff and quick service even at peak hour."
+    "reviewSnippet": "Friendly staff and quick service even at peak hour.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Arbat_District%2C_Moscow%2C_Russia_-_panoramio_(35).jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow%2C_roadworks_in_New_Arbat_Street_(30570228114).jpg?width=1000"
+    ]
   },
   {
     "id": "ru-hse-a5",
@@ -4611,7 +4828,10 @@
     ],
     "rating": 4.7,
     "reviewCount": 1949,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/At_New_York_City_2023_045_-_10th_Avenue_and_14th_Street%2C_Manhattan.jpg?width=1000"
+    ]
   },
   {
     "id": "us-columbia-a4",
@@ -4747,7 +4967,10 @@
     ],
     "rating": 4.4,
     "reviewCount": 1264,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/At_New_York_City_2023_045_-_10th_Avenue_and_14th_Street%2C_Manhattan.jpg?width=1000"
+    ]
   },
   {
     "id": "us-fit-a4",
@@ -4870,7 +5093,11 @@
     ],
     "rating": 4.3,
     "reviewCount": 1203,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto%2C_Canad%C3%A1_(5971604975).jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/St._Lawrence_Market_-_Downtown_Toronto.jpg?width=1000"
+    ]
   },
   {
     "id": "ca-tmu-a3",
@@ -4938,7 +5165,10 @@
     ],
     "rating": 4.3,
     "reviewCount": 1203,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Granville_Island_Vancouver_04.JPG?width=1000"
+    ]
   },
   {
     "id": "ca-sfu-a3",
@@ -5019,7 +5249,11 @@
     ],
     "rating": 4.4,
     "reviewCount": 2086,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Montr%C3%A9al_Petite_Italie_Canada_15.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/March%C3%A9_Jean_Talon_-_petite_Italie_-_Montreal_-_Quebec_-_panoramio.jpg?width=1000"
+    ]
   },
   {
     "id": "ca-concordia-a4",
@@ -5074,7 +5308,10 @@
     ],
     "rating": 4.3,
     "reviewCount": 1203,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Granville_Island_Vancouver_04.JPG?width=1000"
+    ]
   },
   {
     "id": "ca-vcc-a3",
@@ -5168,7 +5405,10 @@
     ],
     "rating": 4.2,
     "reviewCount": 1462,
-    "reviewSnippet": "A student favourite — go early on weekends."
+    "reviewSnippet": "A student favourite — go early on weekends.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Food_stands_around_Hsinchu_City_God_Temple_20040906.jpg?width=1000"
+    ]
   },
   {
     "id": "cn-sjtu-a5",
@@ -5236,7 +5476,10 @@
     ],
     "rating": 4.2,
     "reviewCount": 1736,
-    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Food_stands_around_Hsinchu_City_God_Temple_20040906.jpg?width=1000"
+    ]
   },
   {
     "id": "cn-tongji-a5",
@@ -5291,7 +5534,11 @@
     ],
     "rating": 4.4,
     "reviewCount": 1264,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_(November_2016)_-_318.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_apm%2C_Wangfujing%2C_2008-07-14.jpg?width=1000"
+    ]
   },
   {
     "id": "cn-bnu-a4",
@@ -5372,7 +5619,11 @@
     ],
     "rating": 4.5,
     "reviewCount": 1325,
-    "reviewSnippet": "Friendly staff and quick service even at peak hour."
+    "reviewSnippet": "Friendly staff and quick service even at peak hour.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/TaoTaoJu.JPG?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/TaoTaoJu_daytime.jpg?width=1000"
+    ]
   },
   {
     "id": "cn-jnu-a5",
@@ -5401,7 +5652,11 @@
     ],
     "rating": 4.5,
     "reviewCount": 1553,
-    "reviewSnippet": "Friendly staff and quick service even at peak hour."
+    "reviewSnippet": "Friendly staff and quick service even at peak hour.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_(AU)%2C_Queen_Victoria_Market_--_2019_--_1535.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_(AU)%2C_Queen_Victoria_Market_--_2019_--_1542.jpg?width=1000"
+    ]
   },
   {
     "id": "au-deakin-a2",
@@ -5456,7 +5711,11 @@
     ],
     "rating": 4.3,
     "reviewCount": 1797,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_Carlton_Central_Apartment_Hotel.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lygon_Street_in_Melbourne_Australia.jpg?width=1000"
+    ]
   },
   {
     "id": "au-macquarie-a1",
@@ -5553,7 +5812,10 @@
     ],
     "rating": 4.6,
     "reviewCount": 1888,
-    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Eat_street_northshore.jpg?width=1000"
+    ]
   },
   {
     "id": "au-griffith-a3",
@@ -5608,7 +5870,11 @@
     ],
     "rating": 4.5,
     "reviewCount": 2101,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_(AU)%2C_Queen_Victoria_Market_--_2019_--_1535.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_(AU)%2C_Queen_Victoria_Market_--_2019_--_1542.jpg?width=1000"
+    ]
   },
   {
     "id": "au-holmesglen-a2",
@@ -5663,7 +5929,11 @@
     ],
     "rating": 4.3,
     "reviewCount": 2345,
-    "reviewSnippet": "Solid late-night option close to campus."
+    "reviewSnippet": "Solid late-night option close to campus.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_Carlton_Central_Apartment_Hotel.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lygon_Street_in_Melbourne_Australia.jpg?width=1000"
+    ]
   },
   {
     "id": "my-apu-a1",
@@ -5692,7 +5962,11 @@
     ],
     "rating": 4.3,
     "reviewCount": 1203,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Jalan_Alor_in_Kuala_Lumpur_during_Corona_virus_lockdown.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_-_Jalan_Alor.jpg?width=1000"
+    ]
   },
   {
     "id": "my-apu-a3",
@@ -5760,7 +6034,11 @@
     ],
     "rating": 4.6,
     "reviewCount": 1340,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Jalan_Alor_in_Kuala_Lumpur_during_Corona_virus_lockdown.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_-_Jalan_Alor.jpg?width=1000"
+    ]
   },
   {
     "id": "my-help-a3",
@@ -5828,7 +6106,11 @@
     ],
     "rating": 4.6,
     "reviewCount": 1340,
-    "reviewSnippet": "Perfect study-break spot between classes."
+    "reviewSnippet": "Perfect study-break spot between classes.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Jalan_Alor_in_Kuala_Lumpur_during_Corona_virus_lockdown.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_-_Jalan_Alor.jpg?width=1000"
+    ]
   },
   {
     "id": "my-inti-a3",
@@ -5883,7 +6165,11 @@
     ],
     "rating": 4.5,
     "reviewCount": 1279,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Shilin_Night_Market_02.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei%2C_November_26%2C_2024_-_76.jpg?width=1000"
+    ]
   },
   {
     "id": "tw-nccu-a2",
@@ -5951,7 +6237,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1142,
-    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Shilin_Night_Market_02.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei%2C_November_26%2C_2024_-_76.jpg?width=1000"
+    ]
   },
   {
     "id": "tw-tku-a2",
@@ -6019,7 +6309,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1142,
-    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/London_Bermondsey.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/London_-_Borough_Market_-_geograph.org.uk_-_2976733.jpg?width=1000"
+    ]
   },
   {
     "id": "gb-lse-a2",
@@ -6087,7 +6381,11 @@
     ],
     "rating": 4.5,
     "reviewCount": 1827,
-    "reviewSnippet": "Solid late-night option close to campus."
+    "reviewSnippet": "Solid late-night option close to campus.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/London_Bermondsey.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/London_-_Borough_Market_-_geograph.org.uk_-_2976733.jpg?width=1000"
+    ]
   },
   {
     "id": "gb-kingston-a2",
@@ -6168,7 +6466,10 @@
     ],
     "rating": 4.3,
     "reviewCount": 1203,
-    "reviewSnippet": "Cheap, generous portions — packed at lunch."
+    "reviewSnippet": "Cheap, generous portions — packed at lunch.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Mr._Bean_stall%2C_Maxwell_Food_Centre%2C_Singapore_-_20080830.jpg?width=1000"
+    ]
   },
   {
     "id": "sg-sit-a3",
@@ -6249,7 +6550,10 @@
     ],
     "rating": 4.6,
     "reviewCount": 1066,
-    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats."
+    "reviewSnippet": "Great coffee and plenty of laptop-friendly seats.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Mr._Bean_stall%2C_Maxwell_Food_Centre%2C_Singapore_-_20080830.jpg?width=1000"
+    ]
   },
   {
     "id": "sg-np-a3",
@@ -6330,7 +6634,11 @@
     ],
     "rating": 4.6,
     "reviewCount": 1614,
-    "reviewSnippet": "A student favourite — go early on weekends."
+    "reviewSnippet": "A student favourite — go early on weekends.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Facade_-_Wellington_-_New_Zealand_-_DSC00229.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Barber's_Buildings_-_Wellington_-_New_Zealand_-_DSC00223.jpg?width=1000"
+    ]
   },
   {
     "id": "nz-massey-a3",
@@ -6398,7 +6706,11 @@
     ],
     "rating": 4.3,
     "reviewCount": 1751,
-    "reviewSnippet": "Solid late-night option close to campus."
+    "reviewSnippet": "Solid late-night option close to campus.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Riverside_Market_Mural_Christchurch_NZ_(51093195066).jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Riverside_Market%2C_Christchurch_City%2C_New_Zealand.jpg?width=1000"
+    ]
   },
   {
     "id": "nz-lincoln-a3",
@@ -6492,7 +6804,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1462,
-    "reviewSnippet": "A student favourite — go early on weekends."
+    "reviewSnippet": "A student favourite — go early on weekends.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Petersburg%2C_Russia_-_48530895826.jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Petersburg%2C_Russia_(26717018698).jpg?width=1000"
+    ]
   },
   {
     "id": "ru-spbu-a5",
@@ -6560,7 +6876,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1462,
-    "reviewSnippet": "A student favourite — go early on weekends."
+    "reviewSnippet": "A student favourite — go early on weekends.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Arbat_District%2C_Moscow%2C_Russia_-_panoramio_(35).jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow%2C_roadworks_in_New_Arbat_Street_(30570228114).jpg?width=1000"
+    ]
   },
   {
     "id": "ru-mipt-a5",
@@ -6683,7 +7003,10 @@
     ],
     "rating": 4.7,
     "reviewCount": 1401,
-    "reviewSnippet": "Friendly staff and quick service even at peak hour."
+    "reviewSnippet": "Friendly staff and quick service even at peak hour.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/At_New_York_City_2023_045_-_10th_Avenue_and_14th_Street%2C_Manhattan.jpg?width=1000"
+    ]
   },
   {
     "id": "us-pace-a4",
@@ -6806,7 +7129,11 @@
     ],
     "rating": 4.6,
     "reviewCount": 1614,
-    "reviewSnippet": "A student favourite — go early on weekends."
+    "reviewSnippet": "A student favourite — go early on weekends.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto%2C_Canad%C3%A1_(5971604975).jpg?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/St._Lawrence_Market_-_Downtown_Toronto.jpg?width=1000"
+    ]
   },
   {
     "id": "ca-seneca-a3",
@@ -6874,7 +7201,10 @@
     ],
     "rating": 4.3,
     "reviewCount": 1751,
-    "reviewSnippet": "Solid late-night option close to campus."
+    "reviewSnippet": "Solid late-night option close to campus.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Granville_Island_Vancouver_04.JPG?width=1000"
+    ]
   },
   {
     "id": "ca-langara-a3",
@@ -6968,7 +7298,10 @@
     ],
     "rating": 4.2,
     "reviewCount": 1462,
-    "reviewSnippet": "A student favourite — go early on weekends."
+    "reviewSnippet": "A student favourite — go early on weekends.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Food_stands_around_Hsinchu_City_God_Temple_20040906.jpg?width=1000"
+    ]
   },
   {
     "id": "cn-ecnu-a5",
@@ -7036,7 +7369,11 @@
     ],
     "rating": 4.2,
     "reviewCount": 1462,
-    "reviewSnippet": "A student favourite — go early on weekends."
+    "reviewSnippet": "A student favourite — go early on weekends.",
+    "photos": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/TaoTaoJu.JPG?width=1000",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/TaoTaoJu_daytime.jpg?width=1000"
+    ]
   },
   {
     "id": "cn-scut-a5",

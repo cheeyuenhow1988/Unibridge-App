@@ -1046,6 +1046,15 @@ const TYPE_TIPS = {
   sports: ["Match-day atmosphere is worth it even if you don't follow the sport", 'Student tickets are usually the cheapest way in'],
 };
 
+// Verified Commons photos per food place (harvested + byte-verified +
+// visually pruned) — like Google review photos, never placeholders.
+let FOOD_PHOTOS = {};
+try {
+  FOOD_PHOTOS = JSON.parse(readFileSync(join(HERE, 'food-photos.json'), 'utf8'));
+} catch {
+  /* optional file — cards render without photos */
+}
+
 // Sample review lines for food spots — clearly labelled indicative in the UI,
 // with a live Google-reviews link beside them.
 const FOOD_REVIEWS = [
@@ -1075,6 +1084,7 @@ for (const inst of institutions) {
             rating: Math.round((4.2 + ((inst.id.length * 3 + i) % 6) / 10) * 10) / 10,
             reviewCount: 320 + ((inst.id.length * 137 + i * 61) % 3700),
             reviewSnippet: FOOD_REVIEWS[(inst.id.length + i) % FOOD_REVIEWS.length],
+            ...(FOOD_PHOTOS[name]?.length ? { photos: FOOD_PHOTOS[name].map(commonsPhoto) } : {}),
           }
         : {}),
     });

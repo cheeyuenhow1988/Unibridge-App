@@ -297,6 +297,8 @@ export interface Attraction {
   rating?: number;
   reviewCount?: number;
   reviewSnippet?: string;
+  /** Verified Commons photos of the place (like Google review photos). */
+  photos?: string[];
 }
 
 export interface AmbassadorPost {

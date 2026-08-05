@@ -474,6 +474,19 @@ export default function InstitutionDetail() {
                         “{f.reviewSnippet}” · {t('institution.reviewsSampleTag')}
                       </Text>
                     ) : null}
+                    {f.photos?.length ? (
+                      <Row gap={spacing.sm} style={{ marginTop: 2 }}>
+                        {f.photos.slice(0, 2).map((p) => (
+                          <Image
+                            key={p}
+                            source={{ uri: p }}
+                            style={{ width: 110, height: 78, borderRadius: radius.md, backgroundColor: colors.surfaceAlt }}
+                            contentFit="cover"
+                            transition={200}
+                          />
+                        ))}
+                      </Row>
+                    ) : null}
                     <Pressable
                       accessibilityRole="button"
                       onPress={() =>
