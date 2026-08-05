@@ -8,6 +8,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
 import { Platform, View } from 'react-native';
+import { GlobalTabBar } from '@/components/ui/GlobalTabBar';
 import { ToastHost } from '@/components/ui/Toast';
 import { useTheme } from '@/hooks/useTheme';
 import { initLiveRates } from '@/services/currency';
@@ -56,6 +57,7 @@ export default function RootLayout() {
         <Stack.Screen name="apply/[courseId]" options={{ presentation: 'modal' }} />
         <Stack.Screen name="chat/[institutionId]" options={{ presentation: 'modal' }} />
       </Stack>
+      <GlobalTabBar />
       <ToastHost />
     </View>
   );
