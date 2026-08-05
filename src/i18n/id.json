@@ -169,7 +169,9 @@
     "noTest": "Belum tes",
     "scoreLabel": "Skor",
     "seeMatches": "Lihat kecocokanku",
-    "emergencySub": "Seseorang di rumah yang bisa kami hubungi. Opsional sekarang — wajib sebelum aplikasi pertama."
+    "emergencySub": "Seseorang di rumah yang bisa kami hubungi. Opsional sekarang — wajib sebelum aplikasi pertama.",
+    "recommended": "Direkomendasikan",
+    "qualHint": "Disesuaikan dengan negara asalmu — pilih sistem lain jika kamu belajar dengan IB, A-Levels, atau di luar negeri."
   },
   "match": {
     "title": "Kecocokanmu",
@@ -364,7 +366,8 @@
     "uploadedOn": "Diunggah {{date}}",
     "expiresOn": "Kedaluwarsa {{date}}",
     "expirySaved": "Tanggal kedaluwarsa disimpan",
-    "removeConfirm": "Hapus dokumen ini?"
+    "removeConfirm": "Hapus dokumen ini?",
+    "transcriptSystem": "Unggah transkrip / ijazah {{system}} kamu"
   },
   "apply": {
     "title": "Daftar",

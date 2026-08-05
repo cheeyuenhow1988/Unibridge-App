@@ -171,7 +171,9 @@
     "noTest": "還沒考",
     "scoreLabel": "分數",
     "seeMatches": "檢視我的匹配",
-    "emergencySub": "家裡一位我們能聯絡到的人。現在選填——送出第一份申請前必填。"
+    "emergencySub": "家裡一位我們能聯絡到的人。現在選填——送出第一份申請前必填。",
+    "recommended": "推薦",
+    "qualHint": "已依你的國家配對——若你就讀 IB、A-Levels 或海外課程,請選擇其他制度。"
   },
   "match": {
     "title": "你的匹配",
@@ -366,7 +368,8 @@
     "uploadedOn": "上傳於 {{date}}",
     "expiresOn": "{{date}} 到期",
     "removeConfirm": "移除這份檔案？",
-    "expirySaved": "有效期已儲存"
+    "expirySaved": "有效期已儲存",
+    "transcriptSystem": "上傳你的{{system}}成績單"
   },
   "apply": {
     "title": "申請",

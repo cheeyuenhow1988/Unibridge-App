@@ -133,6 +133,10 @@ const QUALIFICATIONS = [
     id: 'jpgpa', name: 'Hyōtei Heikin 評定平均', region: 'Japan (5.0 scale)', mode: 'total', direction: 'higher',
     unit: 'average (0-5.0)', min: 0, max: 5, decimals: 1, borderlineDelta: 0.2,
   },
+  {
+    id: 'gaokao', name: 'Gaokao 高考', region: 'China (mainland)', mode: 'total', direction: 'higher',
+    unit: 'points (0-750)', min: 0, max: 750, decimals: 0, borderlineDelta: 20,
+  },
 ].map((q) => ({ ...q, grades: q.grades?.map(([label, points]) => ({ label, points })) }));
 
 // Thresholds per band (index 0 = pathway programmes, 1–5 = selectivity).
@@ -151,6 +155,7 @@ const REQ_BANDS = {
   matric: { t: [280, 300, 360, 420, 480, 520], d: (n) => `${n} / 600 marks` },
   krgpa: { t: [2.3, 2.5, 3.0, 3.4, 3.8, 4.2], d: (n) => `GPA ${n.toFixed(1)} / 4.5` },
   jpgpa: { t: [2.8, 3.0, 3.4, 3.8, 4.2, 4.6], d: (n) => `評定 ${n.toFixed(1)} / 5.0` },
+  gaokao: { t: [420, 450, 500, 550, 600, 650], d: (n) => `Gaokao ${n} / 750` },
 };
 
 function requirementsForBand(band) {

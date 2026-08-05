@@ -1,5 +1,5 @@
 import { router } from 'expo-router';
-import { Controller, useForm } from 'react-hook-form';
+import { Controller, useForm, useWatch } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 import { Button } from '@/components/ui/Button';
@@ -7,7 +7,7 @@ import { PickerField } from '@/components/ui/PickerField';
 import { Screen } from '@/components/ui/Screen';
 import { Text } from '@/components/ui/Text';
 import { TextField } from '@/components/ui/TextField';
-import { FLAGS, HOME_COUNTRIES } from '@/constants/countries';
+import { FLAGS, HOME_COUNTRIES, INTERNATIONAL_QUALS, RECOMMENDED_QUALS } from '@/constants/countries';
 import { spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { getQualificationSystems } from '@/services/api';
@@ -32,7 +32,7 @@ export default function ProfileSetup() {
   const setProfile = useProfileStore((s) => s.setProfile);
   const systems = useAsync(getQualificationSystems);
 
-  const { control, handleSubmit } = useForm<FormValues>({
+  const { control, handleSubmit, getValues, setValue } = useForm<FormValues>({
     defaultValues: {
       name: existing?.name ?? '',
       homeCountry: existing?.homeCountry ?? 'MY',
@@ -51,6 +51,31 @@ export default function ProfileSetup() {
     label: t(`countries.${c}`),
     emoji: FLAGS[c],
   }));
+
+  // The picker recommends the system used in the student's home country, but
+  // every other system stays selectable (IB, A-Levels, another country's exams).
+  const homeCountry = useWatch({ control, name: 'homeCountry' });
+  const recommended = RECOMMENDED_QUALS[homeCountry] ?? [];
+  const allSystems = systems.data ?? [];
+  const qualOptions = [
+    ...recommended
+      .map((id) => allSystems.find((s) => s.id === id))
+      .filter((s) => s !== undefined)
+      .map((s) => ({ value: s.id, label: s.name, sublabel: s.region, tag: t('onboarding.recommended') })),
+    ...allSystems
+      .filter((s) => !recommended.includes(s.id))
+      .map((s) => ({ value: s.id, label: s.name, sublabel: s.region })),
+  ];
+
+  const onHomeCountryChange = (c: HomeCountryCode) => {
+    const rec = RECOMMENDED_QUALS[c] ?? [];
+    const current = getValues('qualification');
+    // Follow the new country's national system — unless the student deliberately
+    // chose an international qualification (IB, A-Levels, generic GPA).
+    if (rec.length > 0 && !rec.includes(current) && !INTERNATIONAL_QUALS.includes(current)) {
+      setValue('qualification', rec[0]);
+    }
+  };
 
   const onNext = handleSubmit(({ ecName, ecRelationship, ecPhone, ecEmail, ...values }) => {
     setProfile({
@@ -99,7 +124,10 @@ export default function ProfileSetup() {
               hint={t('onboarding.homeCountryHint')}
               value={field.value}
               options={countryOptions}
-              onChange={field.onChange}
+              onChange={(c) => {
+                field.onChange(c);
+                onHomeCountryChange(c);
+              }}
             />
           )}
         />
@@ -124,8 +152,9 @@ export default function ProfileSetup() {
           render={({ field }) => (
             <PickerField
               label={t('onboarding.qualificationLabel')}
+              hint={t('onboarding.qualHint')}
               value={field.value}
-              options={(systems.data ?? []).map((s) => ({ value: s.id, label: s.name, sublabel: s.region }))}
+              options={qualOptions}
               onChange={field.onChange}
             />
           )}

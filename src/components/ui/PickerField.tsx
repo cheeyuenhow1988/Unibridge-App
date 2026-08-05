@@ -11,6 +11,8 @@ export interface PickerOption<T extends string | number> {
   label: string;
   sublabel?: string;
   emoji?: string;
+  /** Small accent pill next to the label, e.g. "Recommended". */
+  tag?: string;
 }
 
 interface Props<T extends string | number> {
@@ -95,7 +97,21 @@ export function PickerField<T extends string | number>({ label, hint, placeholde
                   >
                     {item.emoji ? <Text style={{ fontSize: 22 }}>{item.emoji}</Text> : null}
                     <View style={{ flex: 1 }}>
-                      <Text variant="bodyMedium">{item.label}</Text>
+                      <View style={{ flexDirection: 'row', alignItems: 'center', gap: spacing.sm }}>
+                        <Text variant="bodyMedium">{item.label}</Text>
+                        {item.tag ? (
+                          <View
+                            style={{
+                              paddingHorizontal: spacing.sm,
+                              paddingVertical: 2,
+                              borderRadius: radius.full,
+                              backgroundColor: colors.accentSoft,
+                            }}
+                          >
+                            <Text variant="micro" color={colors.accent}>{item.tag}</Text>
+                          </View>
+                        ) : null}
+                      </View>
                       {item.sublabel ? <Text variant="caption" tone="faint">{item.sublabel}</Text> : null}
                     </View>
                     {selected ? <Ionicons name="checkmark-circle" size={20} color={colors.accent} /> : null}

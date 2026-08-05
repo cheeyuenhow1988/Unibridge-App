@@ -1,4 +1,4 @@
-import type { CountryCode, CurrencyCode, HomeCountryCode } from '@/types/models';
+import type { CountryCode, CurrencyCode, HomeCountryCode, QualificationId } from '@/types/models';
 
 export const DEST_COUNTRIES: CountryCode[] = ['AU', 'MY', 'TW', 'GB', 'SG', 'NZ', 'RU', 'US', 'CA', 'CN'];
 export const HOME_COUNTRIES: HomeCountryCode[] = ['MY', 'TW', 'SG', 'ID', 'VN', 'CN', 'MM', 'KR', 'JP'];
@@ -18,3 +18,12 @@ export const CURRENCY_SYMBOL: Record<CurrencyCode, string> = {
   RUB: '₽', IDR: 'Rp', VND: '₫', CNY: '¥', USD: '$', CAD: 'C$',
   MMK: 'K', KRW: '₩', JPY: '¥',
 };
+
+/** National grading system(s) per home country — pinned and preselected at registration. */
+export const RECOMMENDED_QUALS: Record<HomeCountryCode, QualificationId[]> = {
+  MY: ['spm', 'stpm', 'uec'], TW: ['gsat'], SG: ['alevels'], ID: ['sma'], VN: ['thpt'],
+  CN: ['gaokao'], MM: ['matric'], KR: ['krgpa'], JP: ['jpgpa'],
+};
+
+/** Systems not tied to one country — kept when the home country changes. */
+export const INTERNATIONAL_QUALS: QualificationId[] = ['alevels', 'ib', 'gpa'];

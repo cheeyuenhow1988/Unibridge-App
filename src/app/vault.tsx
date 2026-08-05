@@ -17,7 +17,7 @@ import { Text } from '@/components/ui/Text';
 import { radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
-import { getDocumentTypes } from '@/services/api';
+import { getDocumentTypes, getQualificationSystems } from '@/services/api';
 import { useProfileStore } from '@/store/useProfileStore';
 import { toast } from '@/store/useToastStore';
 import { useVaultStore } from '@/store/useVaultStore';
@@ -83,6 +83,7 @@ export default function VaultScreen() {
   const { t } = useTranslation();
   const { colors } = useTheme();
   const types = useAsync(getDocumentTypes);
+  const systems = useAsync(getQualificationSystems);
   const documents = useVaultStore((s) => s.documents);
   const addDocument = useVaultStore((s) => s.addDocument);
   const removeDocument = useVaultStore((s) => s.removeDocument);
@@ -128,6 +129,8 @@ export default function VaultScreen() {
   };
 
   const warnings = documents.filter((d) => d.expiryDate && new Date(d.expiryDate) < intakeDate);
+  // Names the exact certificate to upload, e.g. "THPT GPA" for a Vietnamese student.
+  const systemName = systems.data?.find((s) => s.id === profile?.qualification)?.name;
 
   if (types.loading) {
     return (
@@ -187,6 +190,11 @@ export default function VaultScreen() {
                   </View>
                   <View style={{ flex: 1 }}>
                     <Text variant="label">{t(`docs.${type}`)}</Text>
+                    {type === 'transcript' && !doc && systemName ? (
+                      <Text variant="caption" tone="faint">
+                        {t('vault.transcriptSystem', { system: systemName })}
+                      </Text>
+                    ) : null}
                     {doc ? (
                       <Text variant="caption" tone="faint" numberOfLines={1}>
                         {doc.name} · {t('vault.uploadedOn', { date: doc.uploadedAt.slice(0, 10) })}

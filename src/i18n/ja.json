@@ -169,7 +169,9 @@
     "noTest": "まだ未受験",
     "scoreLabel": "スコア",
     "seeMatches": "マッチを見る",
-    "emergencySub": "連絡できる母国の方。今は任意 — 初回出願前には必須です。"
+    "emergencySub": "連絡できる母国の方。今は任意 — 初回出願前には必須です。",
+    "recommended": "おすすめ",
+    "qualHint": "お住まいの国に合わせて表示しています。IB・Aレベル・海外校で学んだ場合は別の制度を選んでください。"
   },
   "match": {
     "title": "あなたのマッチ",
@@ -364,7 +366,8 @@
     "uploadedOn": "{{date}}にアップロード",
     "expiresOn": "{{date}}に期限",
     "expirySaved": "有効期限を保存しました",
-    "removeConfirm": "この書類を削除しますか？"
+    "removeConfirm": "この書類を削除しますか？",
+    "transcriptSystem": "{{system}}の成績証明書をアップロードしてください"
   },
   "apply": {
     "title": "出願",

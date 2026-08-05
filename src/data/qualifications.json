@@ -416,5 +416,17 @@
     "max": 5,
     "decimals": 1,
     "borderlineDelta": 0.2
+  },
+  {
+    "id": "gaokao",
+    "name": "Gaokao 高考",
+    "region": "China (mainland)",
+    "mode": "total",
+    "direction": "higher",
+    "unit": "points (0-750)",
+    "min": 0,
+    "max": 750,
+    "decimals": 0,
+    "borderlineDelta": 20
   }
 ]

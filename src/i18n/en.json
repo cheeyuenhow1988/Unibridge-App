@@ -171,7 +171,9 @@
     "noTest": "Not taken yet",
     "scoreLabel": "Score",
     "seeMatches": "See my matches",
-    "emergencySub": "Someone back home we can reach. Optional now — required before your first application."
+    "emergencySub": "Someone back home we can reach. Optional now — required before your first application.",
+    "recommended": "Recommended",
+    "qualHint": "Matched to your home country — pick a different system if you studied under IB, A-Levels or abroad."
   },
   "match": {
     "title": "Your matches",
@@ -367,7 +369,8 @@
     "uploadedOn": "Uploaded {{date}}",
     "expiresOn": "Expires {{date}}",
     "expirySaved": "Expiry date saved",
-    "removeConfirm": "Remove this document?"
+    "removeConfirm": "Remove this document?",
+    "transcriptSystem": "Upload your {{system}} transcript / result slip"
   },
   "apply": {
     "title": "Apply",

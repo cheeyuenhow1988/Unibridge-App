@@ -169,7 +169,9 @@
     "noTest": "Chưa thi",
     "scoreLabel": "Điểm",
     "seeMatches": "Xem kết quả của tôi",
-    "emergencySub": "Một người ở nhà chúng tôi có thể liên lạc. Tùy chọn bây giờ — bắt buộc trước hồ sơ đầu tiên."
+    "emergencySub": "Một người ở nhà chúng tôi có thể liên lạc. Tùy chọn bây giờ — bắt buộc trước hồ sơ đầu tiên.",
+    "recommended": "Đề xuất",
+    "qualHint": "Được chọn theo quốc gia của bạn — hãy chọn hệ khác nếu bạn học IB, A-Levels hoặc ở nước ngoài."
   },
   "match": {
     "title": "Kết quả của bạn",
@@ -364,7 +366,8 @@
     "uploadedOn": "Tải lên {{date}}",
     "expiresOn": "Hết hạn {{date}}",
     "expirySaved": "Đã lưu ngày hết hạn",
-    "removeConfirm": "Xóa giấy tờ này?"
+    "removeConfirm": "Xóa giấy tờ này?",
+    "transcriptSystem": "Tải lên học bạ / bảng điểm {{system}} của bạn"
   },
   "apply": {
     "title": "Nộp hồ sơ",

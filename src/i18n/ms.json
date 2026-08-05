@@ -171,7 +171,9 @@
     "noTest": "Belum ambil",
     "scoreLabel": "Skor",
     "seeMatches": "Lihat padanan saya",
-    "emergencySub": "Seseorang di rumah yang boleh kami hubungi. Pilihan sekarang — wajib sebelum permohonan pertama."
+    "emergencySub": "Seseorang di rumah yang boleh kami hubungi. Pilihan sekarang — wajib sebelum permohonan pertama.",
+    "recommended": "Disyorkan",
+    "qualHint": "Dipadankan dengan negara asal anda — pilih sistem lain jika anda belajar dengan IB, A-Levels atau di luar negara."
   },
   "match": {
     "title": "Padanan anda",
@@ -366,7 +368,8 @@
     "uploadedOn": "Dimuat naik {{date}}",
     "expiresOn": "Luput {{date}}",
     "removeConfirm": "Buang dokumen ini?",
-    "expirySaved": "Tarikh luput disimpan"
+    "expirySaved": "Tarikh luput disimpan",
+    "transcriptSystem": "Muat naik transkrip / slip keputusan {{system}} anda"
   },
   "apply": {
     "title": "Mohon",
