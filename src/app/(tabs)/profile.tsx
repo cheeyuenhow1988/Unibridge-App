@@ -12,6 +12,7 @@ import { Chip } from '@/components/ui/Chip';
 import { PickerField } from '@/components/ui/PickerField';
 import { Row, SectionHeader } from '@/components/ui/Misc';
 import { Screen } from '@/components/ui/Screen';
+import { SURVEY_COINS, SurveySheet } from '@/components/ui/SurveySheet';
 import { Text } from '@/components/ui/Text';
 import { CURRENCY_SYMBOL, FLAGS } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
@@ -24,6 +25,7 @@ import type { CurrencyCode } from '@/types/models';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
 import { useAuthStore } from '@/store/useAuthStore';
 import { useCommunityStore } from '@/store/useCommunityStore';
+import { useFeedbackStore } from '@/store/useFeedbackStore';
 import { useMailStore } from '@/store/useMailStore';
 import { usePlanStore } from '@/store/usePlanStore';
 import { useProfileStore } from '@/store/useProfileStore';
@@ -53,6 +55,8 @@ export default function ProfileScreen() {
   const applications = useApplicationsStore((s) => s.applications);
   const vaultDocs = useVaultStore((s) => s.documents);
   const [parentShareOpen, setParentShareOpen] = useState(false);
+  const [surveyOpen, setSurveyOpen] = useState(false);
+  const generalSurveyDone = useFeedbackStore((s) => Boolean(s.answers['general']));
   const earnedCount =
     (profile ? 1 : 0) +
     (profile && (profile.grades.subjects?.length || profile.grades.total !== undefined) ? 1 : 0) +
@@ -93,6 +97,7 @@ export default function ProfileScreen() {
           useRewardsStore.getState().reset();
           useMailStore.getState().reset();
           usePlanStore.getState().reset();
+          useFeedbackStore.getState().reset();
           router.replace('/onboarding/welcome');
         },
       },
@@ -238,6 +243,28 @@ export default function ProfileScreen() {
               </Pressable>
             ))}
             <Text variant="caption" tone="faint">{t('profile.helpNote')}</Text>
+          </Card>
+
+          <Card
+            onPress={generalSurveyDone ? undefined : () => setSurveyOpen(true)}
+            style={{ gap: 4 }}
+          >
+            <Row style={{ justifyContent: 'space-between' }}>
+              <Row gap={spacing.sm} style={{ flex: 1 }}>
+                <Ionicons
+                  name={generalSurveyDone ? 'checkmark-circle' : 'chatbox-ellipses-outline'}
+                  size={20}
+                  color={colors.accent}
+                />
+                <View style={{ flex: 1 }}>
+                  <Text variant="label">{t('survey.profileTitle')}</Text>
+                  <Text variant="caption" tone="faint">
+                    {generalSurveyDone ? t('survey.profileDone') : t('survey.profileSub', { coins: SURVEY_COINS })}
+                  </Text>
+                </View>
+              </Row>
+              {generalSurveyDone ? null : <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />}
+            </Row>
           </Card>
 
           <SectionHeader title={t('safety.title')} />
@@ -447,6 +474,12 @@ export default function ProfileScreen() {
           </Pressable>
         </Pressable>
       </Modal>
+      <SurveySheet
+        visible={surveyOpen}
+        surveyId="general"
+        question={t('survey.generalQuestion')}
+        onClose={() => setSurveyOpen(false)}
+      />
     </Screen>
   );
 }

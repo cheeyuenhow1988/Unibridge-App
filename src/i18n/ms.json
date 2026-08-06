@@ -880,7 +880,8 @@
     "badgesTap": "Ketik lencana untuk maklumat lanjut",
     "streakHero": "Daftar masuk setiap hari, kekalkan api",
     "rule_pass_bonus": "Bonus Pas Musim",
-    "item_pass-discount": "Diskaun US$10 Pas Musim"
+    "item_pass-discount": "Diskaun US$10 Pas Musim",
+    "rule_survey": "Jawab tinjauan maklum balas"
   },
   "shorts": {
     "title": "Shorts",
@@ -1029,5 +1030,28 @@
     "flag": "Nampak tak kena",
     "confirmed": "Terima kasih — pengesahan anda direkodkan (olokan)",
     "flagged": "Terima kasih — kami akan semak semula (olokan)"
+  },
+  "survey": {
+    "title": "Maklum balas pantas",
+    "matchQuestion": "Adakah padanan ini terasa tepat untuk anda?",
+    "generalQuestion": "Bagaimana UniBridge berfungsi untuk anda setakat ini?",
+    "rateCta": "Nilai sekarang · dapat 🪙 {{coins}}",
+    "later": "Nanti",
+    "starLabel": "{{n}} bintang",
+    "improveLabel": "Apa yang perlu kami perbaiki? (pilihan)",
+    "tag_matches": "Ketepatan padanan",
+    "tag_schoolInfo": "Maklumat sekolah",
+    "tag_prices": "Kos & harga",
+    "tag_design": "Reka bentuk",
+    "tag_speed": "Kelajuan",
+    "tag_other": "Lain-lain",
+    "notePlaceholder": "Apa-apa lagi? (pilihan)",
+    "submit": "Hantar · dapat 🪙 {{coins}}",
+    "skip": "Langkau",
+    "coinsToast": "+🪙 {{coins}} — terima kasih atas maklum balas!",
+    "demoNote": "Tinjauan demo — jawapan kekal dalam peranti ini sahaja.",
+    "profileTitle": "Bantu perbaiki UniBridge",
+    "profileSub": "3 soalan ringkas · dapat 🪙 {{coins}}",
+    "profileDone": "Terima kasih — maklum balas anda diterima!"
   }
 }

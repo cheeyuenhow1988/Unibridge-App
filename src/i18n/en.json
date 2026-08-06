@@ -883,7 +883,8 @@
     "badgesTap": "Tap a badge to know more",
     "streakHero": "Check in daily, keep the flame alive",
     "rule_pass_bonus": "Season Pass bonus",
-    "item_pass-discount": "US$10 off the Season Pass"
+    "item_pass-discount": "US$10 off the Season Pass",
+    "rule_survey": "Answer a feedback survey"
   },
   "shorts": {
     "title": "Shorts",
@@ -1032,5 +1033,28 @@
     "flag": "This looks off",
     "confirmed": "Thanks — your confirmation is recorded (mock)",
     "flagged": "Thanks — we'll re-check these figures (mock)"
+  },
+  "survey": {
+    "title": "Quick feedback",
+    "matchQuestion": "Did these matches feel right for you?",
+    "generalQuestion": "How is UniBridge working for you so far?",
+    "rateCta": "Rate now · earn 🪙 {{coins}}",
+    "later": "Later",
+    "starLabel": "{{n}} stars",
+    "improveLabel": "What should we improve? (optional)",
+    "tag_matches": "Match accuracy",
+    "tag_schoolInfo": "School info",
+    "tag_prices": "Costs & prices",
+    "tag_design": "Design",
+    "tag_speed": "Speed",
+    "tag_other": "Something else",
+    "notePlaceholder": "Anything else? (optional)",
+    "submit": "Submit · earn 🪙 {{coins}}",
+    "skip": "Skip",
+    "coinsToast": "+🪙 {{coins}} — thank you for the feedback!",
+    "demoNote": "Demo survey — answers stay on this device in the prototype.",
+    "profileTitle": "Help improve UniBridge",
+    "profileSub": "3 quick questions · earn 🪙 {{coins}}",
+    "profileDone": "Thanks — your feedback is in!"
   }
 }

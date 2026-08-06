@@ -12,12 +12,14 @@ import { Row } from '@/components/ui/Misc';
 import { Screen } from '@/components/ui/Screen';
 import { Skeleton, SkeletonCards } from '@/components/ui/Skeleton';
 import { EmptyState, ErrorState } from '@/components/ui/States';
+import { SURVEY_COINS, SurveySheet } from '@/components/ui/SurveySheet';
 import { Text } from '@/components/ui/Text';
 import { fonts, radius, spacing } from '@/constants/theme';
 import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
 import { homeCurrencyFor } from '@/services/currency';
 import { trueAnnualIn } from '@/services/costs';
+import { useFeedbackStore } from '@/store/useFeedbackStore';
 import { useSavedStore } from '@/store/useSavedStore';
 import type { MatchResult, MatchStatus } from '@/types/models';
 
@@ -37,6 +39,10 @@ export default function MatchScreen() {
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [filters, setFilters] = useState<MatchFilters>(DEFAULT_FILTERS);
   const [upgradeOpen, setUpgradeOpen] = useState(false);
+  const [surveyOpen, setSurveyOpen] = useState(false);
+  const surveyDone = useFeedbackStore((s) => Boolean(s.answers['match']));
+  const surveyDismissed = useFeedbackStore((s) => s.dismissed.includes('match'));
+  const dismissSurvey = useFeedbackStore((s) => s.dismiss);
   const listRef = useRef<FlatList>(null);
   const scrollTop = () => listRef.current?.scrollToOffset({ offset: 0, animated: false });
 
@@ -263,6 +269,35 @@ export default function MatchScreen() {
                 </Text>
               </Pressable>
             </Row>
+
+            {!surveyDone && !surveyDismissed && filtered.length > 0 ? (
+              // Trigger-based micro survey right after the meaningful moment
+              // (seeing match results) — the mechanic from ANALYTICS.md.
+              <View
+                style={{
+                  backgroundColor: colors.surface, borderRadius: radius.lg, borderWidth: 1,
+                  borderColor: colors.border, padding: spacing.lg, gap: spacing.sm,
+                }}
+              >
+                <Row gap={spacing.sm}>
+                  <Ionicons name="star-outline" size={16} color={colors.borderline} />
+                  <Text variant="label" style={{ flex: 1 }}>{t('survey.matchQuestion')}</Text>
+                </Row>
+                <Row gap={spacing.sm}>
+                  <Button
+                    label={t('survey.rateCta', { coins: SURVEY_COINS })}
+                    size="sm"
+                    onPress={() => setSurveyOpen(true)}
+                  />
+                  <Button
+                    label={t('survey.later')}
+                    size="sm"
+                    variant="ghost"
+                    onPress={() => dismissSurvey('match')}
+                  />
+                </Row>
+              </View>
+            ) : null}
           </View>
         }
         renderItem={({ item }) => (
@@ -364,6 +399,12 @@ export default function MatchScreen() {
         cheapestNoBudget={cheapestNoBudget}
       />
       <UpgradeSheet visible={upgradeOpen} context="compare" onClose={() => setUpgradeOpen(false)} />
+      <SurveySheet
+        visible={surveyOpen}
+        surveyId="match"
+        question={t('survey.matchQuestion')}
+        onClose={() => setSurveyOpen(false)}
+      />
     </Screen>
   );
 }

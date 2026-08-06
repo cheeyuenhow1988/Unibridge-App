@@ -281,6 +281,10 @@
     {
       "id": "daily",
       "coins": 5
+    },
+    {
+      "id": "survey",
+      "coins": 30
     }
   ],
   "redemptions": [

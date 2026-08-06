@@ -878,7 +878,8 @@
     "badgesTap": "แตะแบดจ์เพื่อดูเพิ่ม",
     "streakHero": "เช็กอินทุกวัน รักษาไฟให้ลุก",
     "rule_pass_bonus": "โบนัส Season Pass",
-    "item_pass-discount": "ส่วนลด Season Pass US$10"
+    "item_pass-discount": "ส่วนลด Season Pass US$10",
+    "rule_survey": "ตอบแบบสอบถามฟีดแบ็ก"
   },
   "shorts": {
     "title": "Shorts",
@@ -1027,5 +1028,28 @@
     "flag": "ดูแปลก ๆ",
     "confirmed": "ขอบคุณ — บันทึกการยืนยันแล้ว (จำลอง)",
     "flagged": "ขอบคุณ — เราจะตรวจตัวเลขอีกครั้ง (จำลอง)"
+  },
+  "survey": {
+    "title": "ฟีดแบ็กด่วน",
+    "matchQuestion": "ผลจับคู่เหล่านี้ตรงใจคุณไหม?",
+    "generalQuestion": "จนถึงตอนนี้ UniBridge ใช้งานเป็นอย่างไรบ้าง?",
+    "rateCta": "ให้คะแนนเลย · รับ 🪙 {{coins}}",
+    "later": "ไว้ทีหลัง",
+    "starLabel": "{{n}} ดาว",
+    "improveLabel": "เราควรปรับปรุงอะไร? (ไม่บังคับ)",
+    "tag_matches": "ความแม่นยำการจับคู่",
+    "tag_schoolInfo": "ข้อมูลสถาบัน",
+    "tag_prices": "ค่าใช้จ่ายและราคา",
+    "tag_design": "ดีไซน์",
+    "tag_speed": "ความเร็ว",
+    "tag_other": "อื่น ๆ",
+    "notePlaceholder": "มีอะไรเพิ่มเติมไหม? (ไม่บังคับ)",
+    "submit": "ส่ง · รับ 🪙 {{coins}}",
+    "skip": "ข้าม",
+    "coinsToast": "+🪙 {{coins}} — ขอบคุณสำหรับฟีดแบ็ก!",
+    "demoNote": "แบบสอบถามเดโม — คำตอบเก็บไว้ในเครื่องนี้เท่านั้น",
+    "profileTitle": "ช่วยพัฒนา UniBridge",
+    "profileSub": "3 คำถามสั้น ๆ · รับ 🪙 {{coins}}",
+    "profileDone": "ขอบคุณ — เราได้รับฟีดแบ็กของคุณแล้ว!"
   }
 }

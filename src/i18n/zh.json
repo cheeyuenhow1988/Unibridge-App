@@ -880,7 +880,8 @@
     "badgesTap": "点按徽章了解更多",
     "streakHero": "每天打卡，火焰不灭",
     "rule_pass_bonus": "季票奖励",
-    "item_pass-discount": "季票立减US$10"
+    "item_pass-discount": "季票立减US$10",
+    "rule_survey": "完成一次反馈问卷"
   },
   "shorts": {
     "title": "短视频",
@@ -1029,5 +1030,28 @@
     "flag": "感觉不对",
     "confirmed": "谢谢——你的确认已记录（模拟）",
     "flagged": "谢谢——我们会复核这些数字（模拟）"
+  },
+  "survey": {
+    "title": "快速反馈",
+    "matchQuestion": "这些匹配结果符合你的期望吗？",
+    "generalQuestion": "到目前为止 UniBridge 用起来怎么样？",
+    "rateCta": "立即评分 · 得 🪙 {{coins}}",
+    "later": "稍后",
+    "starLabel": "{{n}} 星",
+    "improveLabel": "我们该改进什么？（可选）",
+    "tag_matches": "匹配准确度",
+    "tag_schoolInfo": "学校信息",
+    "tag_prices": "费用与价格",
+    "tag_design": "设计",
+    "tag_speed": "速度",
+    "tag_other": "其他",
+    "notePlaceholder": "还有什么想说的？（可选）",
+    "submit": "提交 · 得 🪙 {{coins}}",
+    "skip": "跳过",
+    "coinsToast": "+🪙 {{coins}} — 感谢你的反馈！",
+    "demoNote": "演示问卷 — 答案仅保存在本设备上。",
+    "profileTitle": "帮助改进 UniBridge",
+    "profileSub": "3 个小问题 · 得 🪙 {{coins}}",
+    "profileDone": "谢谢 — 已收到你的反馈！"
   }
 }

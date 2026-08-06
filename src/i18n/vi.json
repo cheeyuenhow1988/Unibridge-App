@@ -878,7 +878,8 @@
     "badgesTap": "Chạm huy hiệu để xem thêm",
     "streakHero": "Điểm danh mỗi ngày, giữ lửa cháy",
     "rule_pass_bonus": "Thưởng Season Pass",
-    "item_pass-discount": "Giảm US$10 cho Season Pass"
+    "item_pass-discount": "Giảm US$10 cho Season Pass",
+    "rule_survey": "Trả lời khảo sát phản hồi"
   },
   "shorts": {
     "title": "Shorts",
@@ -1027,5 +1028,28 @@
     "flag": "Có vẻ sai",
     "confirmed": "Cảm ơn — xác nhận của bạn đã được ghi (mô phỏng)",
     "flagged": "Cảm ơn — chúng tôi sẽ kiểm tra lại (mô phỏng)"
+  },
+  "survey": {
+    "title": "Phản hồi nhanh",
+    "matchQuestion": "Các kết quả ghép này có đúng ý bạn không?",
+    "generalQuestion": "UniBridge hoạt động thế nào với bạn cho đến nay?",
+    "rateCta": "Đánh giá ngay · nhận 🪙 {{coins}}",
+    "later": "Để sau",
+    "starLabel": "{{n}} sao",
+    "improveLabel": "Chúng tôi nên cải thiện gì? (tùy chọn)",
+    "tag_matches": "Độ chính xác ghép",
+    "tag_schoolInfo": "Thông tin trường",
+    "tag_prices": "Chi phí & giá",
+    "tag_design": "Thiết kế",
+    "tag_speed": "Tốc độ",
+    "tag_other": "Khác",
+    "notePlaceholder": "Còn gì nữa không? (tùy chọn)",
+    "submit": "Gửi · nhận 🪙 {{coins}}",
+    "skip": "Bỏ qua",
+    "coinsToast": "+🪙 {{coins}} — cảm ơn phản hồi của bạn!",
+    "demoNote": "Khảo sát demo — câu trả lời chỉ lưu trên thiết bị này.",
+    "profileTitle": "Giúp cải thiện UniBridge",
+    "profileSub": "3 câu hỏi nhanh · nhận 🪙 {{coins}}",
+    "profileDone": "Cảm ơn — phản hồi của bạn đã được ghi nhận!"
   }
 }

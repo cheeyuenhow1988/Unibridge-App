@@ -878,7 +878,8 @@
     "badgesTap": "バッジをタップして詳細",
     "streakHero": "毎日チェックインして炎を絶やさない",
     "rule_pass_bonus": "Season Passボーナス",
-    "item_pass-discount": "Season Pass US$10オフ"
+    "item_pass-discount": "Season Pass US$10オフ",
+    "rule_survey": "フィードバックアンケートに回答"
   },
   "shorts": {
     "title": "ショート",
@@ -1027,5 +1028,28 @@
     "flag": "何かおかしい",
     "confirmed": "ありがとうございます — 確認を記録しました（モック）",
     "flagged": "ありがとうございます — 数字を再確認します（モック）"
+  },
+  "survey": {
+    "title": "クイックフィードバック",
+    "matchQuestion": "このマッチ結果はしっくりきましたか？",
+    "generalQuestion": "ここまでのUniBridgeの使い心地はどうですか？",
+    "rateCta": "今すぐ評価 · 🪙 {{coins}}獲得",
+    "later": "あとで",
+    "starLabel": "星{{n}}つ",
+    "improveLabel": "改善してほしい点は？（任意）",
+    "tag_matches": "マッチ精度",
+    "tag_schoolInfo": "学校情報",
+    "tag_prices": "費用・価格",
+    "tag_design": "デザイン",
+    "tag_speed": "速度",
+    "tag_other": "その他",
+    "notePlaceholder": "他にあれば（任意）",
+    "submit": "送信 · 🪙 {{coins}}獲得",
+    "skip": "スキップ",
+    "coinsToast": "+🪙 {{coins}} — フィードバックありがとうございます！",
+    "demoNote": "デモアンケート — 回答はこの端末内にのみ保存されます。",
+    "profileTitle": "UniBridgeの改善に協力",
+    "profileSub": "3つの簡単な質問 · 🪙 {{coins}}獲得",
+    "profileDone": "ありがとうございます — フィードバックを受け取りました！"
   }
 }

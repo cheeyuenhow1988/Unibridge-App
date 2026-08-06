@@ -878,7 +878,8 @@
     "badgesTap": "Ketuk lencana untuk tahu lebih",
     "streakHero": "Check-in tiap hari, jaga apinya",
     "rule_pass_bonus": "Bonus Season Pass",
-    "item_pass-discount": "Diskon US$10 Season Pass"
+    "item_pass-discount": "Diskon US$10 Season Pass",
+    "rule_survey": "Jawab survei umpan balik"
   },
   "shorts": {
     "title": "Shorts",
@@ -1027,5 +1028,28 @@
     "flag": "Terlihat keliru",
     "confirmed": "Terima kasih — konfirmasimu tercatat (tiruan)",
     "flagged": "Terima kasih — kami akan cek ulang (tiruan)"
+  },
+  "survey": {
+    "title": "Umpan balik cepat",
+    "matchQuestion": "Apakah hasil pencocokan ini terasa pas untuk Anda?",
+    "generalQuestion": "Bagaimana UniBridge bekerja untuk Anda sejauh ini?",
+    "rateCta": "Nilai sekarang · dapat 🪙 {{coins}}",
+    "later": "Nanti",
+    "starLabel": "{{n}} bintang",
+    "improveLabel": "Apa yang perlu kami perbaiki? (opsional)",
+    "tag_matches": "Akurasi pencocokan",
+    "tag_schoolInfo": "Info kampus",
+    "tag_prices": "Biaya & harga",
+    "tag_design": "Desain",
+    "tag_speed": "Kecepatan",
+    "tag_other": "Lainnya",
+    "notePlaceholder": "Ada lagi? (opsional)",
+    "submit": "Kirim · dapat 🪙 {{coins}}",
+    "skip": "Lewati",
+    "coinsToast": "+🪙 {{coins}} — terima kasih atas masukannya!",
+    "demoNote": "Survei demo — jawaban hanya tersimpan di perangkat ini.",
+    "profileTitle": "Bantu tingkatkan UniBridge",
+    "profileSub": "3 pertanyaan singkat · dapat 🪙 {{coins}}",
+    "profileDone": "Terima kasih — masukan Anda sudah kami terima!"
   }
 }

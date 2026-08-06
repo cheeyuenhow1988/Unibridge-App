@@ -880,7 +880,8 @@
     "badgesTap": "點按徽章了解更多",
     "streakHero": "每天簽到，火焰不滅",
     "rule_pass_bonus": "季票獎勵",
-    "item_pass-discount": "季票立減US$10"
+    "item_pass-discount": "季票立減US$10",
+    "rule_survey": "完成一次回饋問卷"
   },
   "shorts": {
     "title": "短影音",
@@ -1029,5 +1030,28 @@
     "flag": "感覺不對",
     "confirmed": "謝謝——你的確認已記錄（模擬）",
     "flagged": "謝謝——我們會複核這些數字（模擬）"
+  },
+  "survey": {
+    "title": "快速回饋",
+    "matchQuestion": "這些配對結果符合你的期望嗎？",
+    "generalQuestion": "到目前為止 UniBridge 用起來如何？",
+    "rateCta": "立即評分 · 得 🪙 {{coins}}",
+    "later": "稍後",
+    "starLabel": "{{n}} 星",
+    "improveLabel": "我們該改進什麼？（可選）",
+    "tag_matches": "配對準確度",
+    "tag_schoolInfo": "學校資訊",
+    "tag_prices": "費用與價格",
+    "tag_design": "設計",
+    "tag_speed": "速度",
+    "tag_other": "其他",
+    "notePlaceholder": "還有什麼想說的？（可選）",
+    "submit": "送出 · 得 🪙 {{coins}}",
+    "skip": "略過",
+    "coinsToast": "+🪙 {{coins}} — 感謝你的回饋！",
+    "demoNote": "示範問卷 — 答案僅保存在本裝置上。",
+    "profileTitle": "幫助改進 UniBridge",
+    "profileSub": "3 個小問題 · 得 🪙 {{coins}}",
+    "profileDone": "謝謝 — 已收到你的回饋！"
   }
 }

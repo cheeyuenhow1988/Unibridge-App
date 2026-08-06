@@ -882,7 +882,8 @@
     "badgesTap": "और जानने के लिए बैज पर टैप करें",
     "streakHero": "रोज़ चेक-इन करें, लौ जलाए रखें",
     "rule_pass_bonus": "Season Pass बोनस",
-    "item_pass-discount": "Season Pass पर US$10 छूट"
+    "item_pass-discount": "Season Pass पर US$10 छूट",
+    "rule_survey": "फीडबैक सर्वे का जवाब दें"
   },
   "shorts": {
     "title": "Shorts",
@@ -1031,5 +1032,28 @@
     "flag": "कुछ गड़बड़ लगती है",
     "confirmed": "धन्यवाद — आपकी पुष्टि दर्ज (मॉक)",
     "flagged": "धन्यवाद — हम आँकड़े दोबारा जाँचेंगे (मॉक)"
+  },
+  "survey": {
+    "title": "त्वरित प्रतिक्रिया",
+    "matchQuestion": "क्या ये मैच आपके लिए सही लगे?",
+    "generalQuestion": "अब तक UniBridge आपके लिए कैसा काम कर रहा है?",
+    "rateCta": "अभी रेट करें · पाएं 🪙 {{coins}}",
+    "later": "बाद में",
+    "starLabel": "{{n}} स्टार",
+    "improveLabel": "हमें क्या सुधारना चाहिए? (वैकल्पिक)",
+    "tag_matches": "मैच सटीकता",
+    "tag_schoolInfo": "स्कूल जानकारी",
+    "tag_prices": "लागत और कीमतें",
+    "tag_design": "डिज़ाइन",
+    "tag_speed": "स्पीड",
+    "tag_other": "कुछ और",
+    "notePlaceholder": "और कुछ? (वैकल्पिक)",
+    "submit": "भेजें · पाएं 🪙 {{coins}}",
+    "skip": "छोड़ें",
+    "coinsToast": "+🪙 {{coins}} — प्रतिक्रिया के लिए धन्यवाद!",
+    "demoNote": "डेमो सर्वे — जवाब केवल इसी डिवाइस पर रहते हैं।",
+    "profileTitle": "UniBridge को बेहतर बनाने में मदद करें",
+    "profileSub": "3 छोटे सवाल · पाएं 🪙 {{coins}}",
+    "profileDone": "धन्यवाद — आपकी प्रतिक्रिया मिल गई!"
   }
 }
