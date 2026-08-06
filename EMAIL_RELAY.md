@@ -120,7 +120,46 @@ messages         (id, thread_id, direction: out|in, subject, body, headers,
 quarantine       (alias, from_addr, reason, raw_ref, created_at)
 ```
 
-## 7. Rollout order
+## 7. Pre-launch checklist — what UniBridge must have in hand
+
+Everything the relay needs that the prototype does not have today.
+
+**Accounts & services to set up (≈ RM 700–900 first year)**
+
+| What | Why | Cost (approx) |
+| --- | --- | --- |
+| Own domain (e.g. `unibridge.com`) + DNS control (Cloudflare) | The relay subdomain `relay.unibridge.com` and its MX/SPF/DKIM/DMARC records | ~RM 60/yr, DNS free |
+| Supabase project | Real accounts, database (threads, messages, school directory), file storage, webhook functions | Free tier → RM 120/mo when it grows |
+| Transactional email provider (Postmark or AWS SES) with inbound parsing enabled | Sending to schools + receiving their replies; new senders go through a short approval review | ~RM 70/mo (Postmark 10k mails) |
+| Expo push notifications | "The school replied" must reach the student's phone | Free |
+| Apple Developer + Google Play accounts | Ship the real app (see STORE.md) | US$99/yr + US$25 once |
+| Error/deliverability monitoring (Sentry free tier + provider dashboards) | Bounces and complaint rates are the health of the whole system | Free to start |
+
+**Things to build (development work)**
+
+1. Real sign-in (the prototype's Google/email buttons are mock) — Supabase Auth.
+2. Move data off-device: profiles, applications and mail threads into the
+   database (the app's screens stay as they are; the API layer in
+   `src/services/api.ts` was built to be swapped to Supabase).
+3. The two webhook workers from sections 3–4 (outbound send, inbound receive)
+   plus the quarantine and allowlist logic.
+4. School-directory admin tool (even a spreadsheet-backed one at first) with
+   the audit fields from section 1.
+
+**Human work (no code)**
+
+- Collect and verify admissions emails for the launch school list (section 1
+  tiers) — the single most valuable manual task before launch.
+- Warm up the sending domain: start with low volume to pilot schools.
+
+**Paperwork**
+
+- A company entity to own the domain and the accounts above.
+- Privacy policy + terms covering the relay (PDPA Malaysia; many users are
+  17–19), stating that school correspondence passes through UniBridge servers
+  and personal emails are never shared with schools.
+
+## 8. Rollout order
 
 1. Build directory tooling + collect tier-3 addresses for the launch schools
    (with audit trail), start tier-2 outreach in parallel.
