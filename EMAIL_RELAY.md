@@ -46,10 +46,17 @@ Rules:
 
 ## 2. Relay aliases
 
+- **Created automatically at first contact, not at registration.** Signing up
+  creates nothing email-related. The moment a student first messages a given
+  school, the system mints the alias for that pair. A student who talks to
+  three schools has three aliases; a student who never contacts any school
+  has none.
 - One alias **per conversation thread** (student × school), not per student:
   simplest spam allowlisting, and a school forwarding a thread internally
   can't accidentally reach the same student about something else.
-- Format: `t-<10-char opaque id>@relay.unibridge.com`. No student name or id
+- Format: `t-<opaque random id>@relay.unibridge.com` — at least 10 characters
+  in production so addresses can't be guessed by enumeration (examples in
+  this document are shortened for readability). No student name or id is ever
   encoded in it.
 - The From header the school sees: `"Aisyah via UniBridge" <t-8f3kq2@relay.unibridge.com>`
   — first name only, unless the student opts into full name.
@@ -88,7 +95,10 @@ staff review queue instead of being dropped.
 
 1. MX for `relay.unibridge.com` points at the provider's inbound parser.
 2. Webhook hits the backend with the parsed message.
-3. Backend looks up the alias → thread. Unknown alias → drop.
+3. Backend looks up the alias → thread. Unknown alias: if the sender's domain
+   matches any school in the directory, route to the `hello@` staff review
+   queue (school mail is never silently deleted — see the decision record);
+   anything else (dictionary-attack spam on the catch-all) is dropped.
 4. **Sender allowlist**: accept only if the From/Return-Path domain matches
    the school's registered domains (e.g. `monash.edu`, `e.monash.edu`).
    Anything else → quarantine, never delivered to the student.
@@ -139,7 +149,9 @@ quarantine       (alias, from_addr, reason, raw_ref, created_at)
 
 Everything the relay needs that the prototype does not have today.
 
-**Accounts & services to set up (≈ RM 700–900 first year)**
+**Accounts & services to set up** (≈ RM 650–700 to start with email on free
+tier during the pilot; ≈ RM 1,500–2,000 for the first full year once paid
+email volume kicks in)
 
 | What | Why | Cost (approx) |
 | --- | --- | --- |
@@ -184,3 +196,24 @@ Everything the relay needs that the prototype does not have today.
    note.
 4. School dashboard (claim profile, see enquiries, canned answers) — this is
    also the honest path to every "Verified partner" badge in the app.
+
+## 9. De-mocking checklist — demo behavior that MUST NOT ship to real users
+
+The prototype simulates things on purpose. Each item below must be replaced
+or removed before real students use the app; none of it may survive into
+production by accident.
+
+| # | Prototype behavior (where) | At launch |
+| --- | --- | --- |
+| 1 | Contact screen fakes a school reply after ~1 second (`chat.mockReply`); coursemate chats send canned replies | Remove entirely — replace with real relay delivery states. A student must never see a school answer that no school wrote |
+| 2 | University Mail shows the same 6 sample mails to every account (generated demo data) | Inbox shows only the student's real threads; new accounts see an empty state |
+| 3 | Mail reader's reply box is demo-only ("nothing is sent…" note) | Wire to the outbound relay (section 3) and delete the demo note |
+| 4 | Every school shows a "Verified partner" badge as visual placeholder | Badge only for tier-1 school-claimed profiles (section 1). Everything else shows no badge |
+| 5 | Job/support contacts are fictional by design: `*.example` emails, `0000` phone blocks, `UniBridgeSupportDemo`-style handles | Replace with the company's real channels; jobs/rentals need real verified posters or must stay clearly community-sourced |
+| 6 | School reviews, food ratings and snippets are labeled sample data | Keep the labels until real data replaces them — never present sample numbers as real reviews |
+| 7 | Season Pass RM49.90 / VIP purchases are one-tap mocks | Real app-store billing (IAP) before any money is taken |
+| 8 | Sign-in buttons are mock; demo seed data (`app-demo-*` applications) exists | Real auth (Supabase); strip demo seeds from production builds |
+
+Rule of thumb: anything the prototype labels "demo", "sample", "prototype" or
+"indicative" is a placeholder for a real system — the label is the contract.
+Ship the real system, or keep the label; never drop the label alone.
