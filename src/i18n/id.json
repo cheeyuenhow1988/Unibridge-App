@@ -305,7 +305,9 @@
     "nextPhoto": "Foto berikutnya",
     "foodTitle": "Kafe & kuliner terdekat",
     "foodMins": "{{count}} mnt dari kampus",
-    "foodSampleNote": "Rating contoh untuk prototipe — ketuk untuk ulasan Google langsung."
+    "foodSampleNote": "Rating contoh untuk prototipe — ketuk untuk ulasan Google langsung.",
+    "contactSchool": "Hubungi kampus ini",
+    "photoUnavailable": "Foto gagal dimuat — periksa koneksi Anda"
   },
   "attraction": {
     "whatToDo": "Ngapain di sini",
@@ -334,7 +336,6 @@
     "perSemesterShort": "{{amount}} / semester",
     "perYearShort": "{{amount}} / tahun",
     "fullCourse": "{{amount}} seluruh program",
-    "askQuestion": "Ajukan pertanyaan",
     "intakeDates": "Periode masuk",
     "campusCity": "Kampus",
     "yourMatch": "Kecocokanmu",
@@ -701,7 +702,10 @@
   "chat": {
     "title": "Tanya {{name}}",
     "mockReply": "Terima kasih atas pertanyaannya! Tim penerimaan biasanya membalas dalam 1 hari kerja. (Ini chat prototipe.)",
-    "placeholder": "Tulis pertanyaanmu…"
+    "placeholder": "Tulis pertanyaanmu…",
+    "contactNote": "Pertanyaan di sini akan sampai ke tim penerimaan {{school}} saat UniBridge diluncurkan — di prototipe ini balasan hanya simulasi. Untuk kontak langsung hari ini, gunakan situs resmi kampus. UniBridge tidak pernah mengarang alamat email kampus.",
+    "officialSite": "Situs resmi",
+    "askAi": "Tanya UniBridge AI"
   },
   "costsheet": {
     "title": "Biaya hidup {{city}}",
@@ -789,7 +793,19 @@
     "kind_interview": "Wawancara",
     "kind_event": "Acara",
     "kind_newsletter": "Berita",
-    "note": "Kotak masuk prototipe — sinkronisasi email universitas asli terhubung saat peluncuran."
+    "note": "Kotak masuk prototipe — sinkronisasi email universitas asli terhubung saat peluncuran.",
+    "fromOffice": "Kantor Penerimaan Internasional",
+    "openApplication": "Buka aplikasi saya",
+    "uploadDocs": "Unggah di brankas dokumen",
+    "bookSlot": "Minta slot wawancara",
+    "slotRequested": "Permintaan slot dikirim ke {{school}} — hanya demo",
+    "viewSchool": "Lihat halaman kampus",
+    "replyTitle": "Balas ke {{school}}",
+    "replyPlaceholder": "Ketik balasan Anda…",
+    "replySend": "Kirim balasan",
+    "replySent": "Balasan terkirim ke {{school}} — hanya demo",
+    "repliedChip": "Anda sudah membalas (demo)",
+    "replyNote": "Balasan demo — tidak ada yang dikirim ke universitas sungguhan dari prototipe ini."
   },
   "vip": {
     "title": "UniBridge VIP",

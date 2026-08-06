@@ -305,7 +305,9 @@
     "nextPhoto": "次の写真",
     "foodTitle": "近くのカフェ・グルメ",
     "foodMins": "キャンパスから{{count}}分",
-    "foodSampleNote": "プロトタイプのサンプル評価です。タップするとGoogleの実際のレビューが見られます。"
+    "foodSampleNote": "プロトタイプのサンプル評価です。タップするとGoogleの実際のレビューが見られます。",
+    "contactSchool": "この学校に問い合わせ",
+    "photoUnavailable": "写真を読み込めませんでした — 通信環境をご確認ください"
   },
   "attraction": {
     "whatToDo": "楽しみ方",
@@ -334,7 +336,6 @@
     "perSemesterShort": "{{amount}} / 学期",
     "perYearShort": "{{amount}} / 年",
     "fullCourse": "全課程 {{amount}}",
-    "askQuestion": "質問する",
     "intakeDates": "入学時期",
     "campusCity": "キャンパス",
     "yourMatch": "あなたのマッチ",
@@ -701,7 +702,10 @@
   "chat": {
     "title": "{{name}}に質問",
     "mockReply": "ご質問ありがとうございます！入学担当は通常1営業日以内に返信します。（プロトタイプのチャットです。）",
-    "placeholder": "質問を入力…"
+    "placeholder": "質問を入力…",
+    "contactNote": "UniBridge正式リリース後、ここでの質問は{{school}}のアドミッションズチームに直接届きます — このプロトタイプでは返信はシミュレーションです。今すぐ直接連絡する場合は学校の公式サイトをご利用ください。UniBridgeが学校のメールアドレスを創作することはありません。",
+    "officialSite": "公式サイト",
+    "askAi": "UniBridge AIに聞く"
   },
   "costsheet": {
     "title": "{{city}}の生活費",
@@ -789,7 +793,19 @@
     "kind_interview": "面接",
     "kind_event": "イベント",
     "kind_newsletter": "ニュース",
-    "note": "プロトタイプの受信箱 — 実際の大学メール連携はリリース時に。"
+    "note": "プロトタイプの受信箱 — 実際の大学メール連携はリリース時に。",
+    "fromOffice": "国際アドミッションズ・オフィス",
+    "openApplication": "自分の出願を開く",
+    "uploadDocs": "書類ボールトにアップロード",
+    "bookSlot": "面接枠をリクエスト",
+    "slotRequested": "{{school}}に枠リクエストを送信しました — デモのみ",
+    "viewSchool": "学校ページを見る",
+    "replyTitle": "{{school}}に返信",
+    "replyPlaceholder": "返信を入力…",
+    "replySend": "返信を送信",
+    "replySent": "{{school}}に返信を送信しました — デモのみ",
+    "repliedChip": "返信済み（デモ）",
+    "replyNote": "デモ返信 — このプロトタイプから実際の大学には何も送信されません。"
   },
   "vip": {
     "title": "UniBridge VIP",

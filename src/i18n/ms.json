@@ -307,7 +307,9 @@
     "nextPhoto": "Foto seterusnya",
     "foodTitle": "Kafe & makanan berdekatan",
     "foodMins": "{{count}} min dari kampus",
-    "foodSampleNote": "Penarafan contoh untuk prototaip — ketik untuk ulasan Google langsung."
+    "foodSampleNote": "Penarafan contoh untuk prototaip — ketik untuk ulasan Google langsung.",
+    "contactSchool": "Hubungi sekolah ini",
+    "photoUnavailable": "Foto gagal dimuatkan — semak sambungan anda"
   },
   "attraction": {
     "whatToDo": "Apa yang boleh dibuat",
@@ -336,7 +338,6 @@
     "perSemesterShort": "{{amount}} / semester",
     "perYearShort": "{{amount}} / tahun",
     "fullCourse": "{{amount}} kursus penuh",
-    "askQuestion": "Tanya soalan",
     "intakeDates": "Tarikh kemasukan",
     "campusCity": "Kampus",
     "yourMatch": "Padanan anda",
@@ -612,7 +613,10 @@
   "chat": {
     "title": "Tanya {{name}}",
     "mockReply": "Terima kasih atas soalan anda! Pasukan kemasukan biasanya membalas dalam 1 hari bekerja. (Ini sembang prototaip.)",
-    "placeholder": "Taip soalan anda…"
+    "placeholder": "Taip soalan anda…",
+    "contactNote": "Soalan di sini akan sampai ke pasukan kemasukan {{school}} apabila UniBridge dilancarkan — dalam prototaip ini balasan adalah simulasi. Untuk hubungan terus hari ini, gunakan laman web rasmi sekolah. UniBridge tidak sesekali mereka-cipta alamat e-mel sekolah.",
+    "officialSite": "Laman web rasmi",
+    "askAi": "Tanya UniBridge AI"
   },
   "notFound": {
     "title": "Halaman tidak dijumpai",
@@ -791,7 +795,19 @@
     "kind_interview": "Temu duga",
     "kind_event": "Acara",
     "kind_newsletter": "Berita",
-    "note": "Peti masuk prototaip — penyegerakan e-mel universiti sebenar disambungkan semasa pelancaran."
+    "note": "Peti masuk prototaip — penyegerakan e-mel universiti sebenar disambungkan semasa pelancaran.",
+    "fromOffice": "Pejabat Kemasukan Antarabangsa",
+    "openApplication": "Buka permohonan saya",
+    "uploadDocs": "Muat naik di peti dokumen",
+    "bookSlot": "Mohon slot temu duga",
+    "slotRequested": "Permintaan slot dihantar ke {{school}} — demo sahaja",
+    "viewSchool": "Lihat halaman sekolah",
+    "replyTitle": "Balas kepada {{school}}",
+    "replyPlaceholder": "Taip balasan anda…",
+    "replySend": "Hantar balasan",
+    "replySent": "Balasan dihantar ke {{school}} — demo sahaja",
+    "repliedChip": "Anda telah membalas (demo)",
+    "replyNote": "Balasan demo — tiada apa-apa dihantar ke universiti sebenar dari prototaip ini."
   },
   "vip": {
     "title": "UniBridge VIP",

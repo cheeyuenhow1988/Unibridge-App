@@ -308,7 +308,9 @@
     "nextPhoto": "Next photo",
     "foodTitle": "Cafés & food nearby",
     "foodMins": "{{count}} min from campus",
-    "foodSampleNote": "Sample ratings for the prototype — tap a spot for live Google reviews."
+    "foodSampleNote": "Sample ratings for the prototype — tap a spot for live Google reviews.",
+    "contactSchool": "Contact this school",
+    "photoUnavailable": "Photo couldn't load — check your connection"
   },
   "attraction": {
     "whatToDo": "What to do",
@@ -337,7 +339,6 @@
     "perSemesterShort": "{{amount}} / semester",
     "perYearShort": "{{amount}} / year",
     "fullCourse": "{{amount}} full course",
-    "askQuestion": "Ask a question",
     "intakeDates": "Intake dates",
     "campusCity": "Campus",
     "yourMatch": "Your match",
@@ -705,7 +706,10 @@
   "chat": {
     "title": "Ask {{name}}",
     "mockReply": "Thanks for your question! Our admissions team typically replies within 1 business day. (This is a prototype chat.)",
-    "placeholder": "Type your question…"
+    "placeholder": "Type your question…",
+    "contactNote": "Questions here reach {{school}}'s admissions team when UniBridge launches — in this prototype replies are simulated. For direct contact today, use the school's official website. UniBridge never invents school email addresses.",
+    "officialSite": "Official website",
+    "askAi": "Ask UniBridge AI"
   },
   "costsheet": {
     "title": "{{city}} living costs",
@@ -794,7 +798,19 @@
     "kind_interview": "Interview",
     "kind_event": "Event",
     "kind_newsletter": "News",
-    "note": "Prototype inbox — real university email sync connects at launch."
+    "note": "Prototype inbox — real university email sync connects at launch.",
+    "fromOffice": "International Admissions Office",
+    "openApplication": "Open my application",
+    "uploadDocs": "Upload in Document vault",
+    "bookSlot": "Request an interview slot",
+    "slotRequested": "Slot request sent to {{school}} — demo only",
+    "viewSchool": "View school page",
+    "replyTitle": "Reply to {{school}}",
+    "replyPlaceholder": "Type your reply…",
+    "replySend": "Send reply",
+    "replySent": "Reply sent to {{school}} — demo only",
+    "repliedChip": "You replied (demo)",
+    "replyNote": "Demo reply — nothing is sent to any real university from this prototype."
   },
   "vip": {
     "title": "UniBridge VIP",

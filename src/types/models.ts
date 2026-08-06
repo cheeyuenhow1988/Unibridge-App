@@ -141,6 +141,8 @@ export interface UniversityMail {
   kind: MailKind;
   subject: string;
   snippet: string;
+  /** Full message text shown in the mail reader (paragraphs split by \n\n). */
+  body: string;
   date: string;
   read: boolean;
 }

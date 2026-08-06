@@ -5,7 +5,7 @@ import { router, useLocalSearchParams } from 'expo-router';
 import { goBack } from '@/services/nav';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Alert, Linking, Pressable, ScrollView, View, useWindowDimensions } from 'react-native';
+import { Linking, Pressable, ScrollView, View, useWindowDimensions } from 'react-native';
 import { AmbassadorStrip } from '@/components/explore/AmbassadorStrip';
 import { AttractionsCarousel } from '@/components/explore/AttractionsCarousel';
 import { InstLogo } from '@/components/explore/InstLogo';
@@ -25,6 +25,7 @@ import { useTheme } from '@/hooks/useTheme';
 import { getInstitution, getSchoolReviews, listCoursesByInstitution, listFoodNearby, listScholarships } from '@/services/api';
 import { formatDual, homeCurrencyFor } from '@/services/currency';
 import { useProfileStore } from '@/store/useProfileStore';
+import { toast } from '@/store/useToastStore';
 import type { QualificationId } from '@/types/models';
 
 /** Vintage of the generated dataset, shown on the freshness note. */
@@ -51,6 +52,9 @@ export default function InstitutionDetail() {
   const reviews = useAsync(() => getSchoolReviews(id), [id]);
   const eats = useAsync(() => listFoodNearby(id), [id]);
   const [photoIdx, setPhotoIdx] = useState(0);
+  // Photos whose download failed — swapped for a neutral tile instead of a
+  // black void (Commons can be slow or blocked on some networks).
+  const [badImgs, setBadImgs] = useState<string[]>([]);
   const galleryRef = useRef<ScrollView>(null);
 
   if (state.loading) {
@@ -98,28 +102,36 @@ export default function InstitutionDetail() {
             showsHorizontalScrollIndicator={false}
             onMomentumScrollEnd={(e) => setPhotoIdx(Math.round(e.nativeEvent.contentOffset.x / width))}
           >
-            {institution.images.map((img, idx) => (
-              <View key={img} style={{ width, height: 280, overflow: 'hidden', backgroundColor: '#0B1220' }}>
-                {idx === 0 ? (
-                  // The audited hero is a proper wide shot — full-bleed cover.
-                  <Image source={{ uri: img }} style={{ width, height: 280 }} contentFit="cover" transition={250} />
-                ) : (
-                  // Facility/detail shots vary wildly in shape; show them whole
-                  // on a blurred backdrop instead of an ugly zoomed crop.
-                  <>
-                    <Image
-                      source={{ uri: img }}
-                      style={{ position: 'absolute', top: -24, left: -24, width: width + 48, height: 328 }}
-                      contentFit="cover"
-                      blurRadius={24}
-                      transition={0}
-                    />
-                    <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(7,13,34,0.35)' }} />
-                    <Image source={{ uri: img }} style={{ width, height: 280 }} contentFit="contain" transition={250} />
-                  </>
-                )}
-              </View>
-            ))}
+            {institution.images.map((img, idx) => {
+              const markBad = () => setBadImgs((b) => (b.includes(img) ? b : [...b, img]));
+              return (
+                <View key={img} style={{ width, height: 280, overflow: 'hidden', backgroundColor: colors.surfaceAlt }}>
+                  {badImgs.includes(img) ? (
+                    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: spacing.sm }}>
+                      <Ionicons name="image-outline" size={36} color={colors.inkFaint} />
+                      <Text variant="caption" tone="faint">{t('institution.photoUnavailable')}</Text>
+                    </View>
+                  ) : idx === 0 ? (
+                    // The audited hero is a proper wide shot — full-bleed cover.
+                    <Image source={{ uri: img }} style={{ width, height: 280 }} contentFit="cover" transition={250} onError={markBad} />
+                  ) : (
+                    // Facility/detail shots vary wildly in shape; show them whole
+                    // on a blurred backdrop instead of an ugly zoomed crop.
+                    <>
+                      <Image
+                        source={{ uri: img }}
+                        style={{ position: 'absolute', top: -24, left: -24, width: width + 48, height: 328 }}
+                        contentFit="cover"
+                        blurRadius={24}
+                        transition={0}
+                      />
+                      <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(7,13,34,0.35)' }} />
+                      <Image source={{ uri: img }} style={{ width, height: 280 }} contentFit="contain" transition={250} onError={markBad} />
+                    </>
+                  )}
+                </View>
+              );
+            })}
           </ScrollView>
           {/* Swiping doesn't exist on desktop web — arrows are the only way
               through the gallery there, so drive the index from the press. */}
@@ -240,7 +252,7 @@ export default function InstitutionDetail() {
               onPress={() => void Linking.openURL(institution.wikipedia)}
             />
             <Button
-              label={t('course.askQuestion')}
+              label={t('institution.contactSchool')}
               icon="chatbubble-ellipses-outline"
               size="sm"
               onPress={() => router.push(`/chat/${institution.id}`)}
@@ -256,12 +268,7 @@ export default function InstitutionDetail() {
                 key={label}
                 accessibilityRole="button"
                 accessibilityLabel={`${label} — ${t('common.comingSoon')}`}
-                onPress={() =>
-                  Alert.alert(`${label} — ${t('common.comingSoon')}`, t('institution.socialNote'), [
-                    { text: t('common.close'), style: 'cancel' },
-                    { text: t('course.askQuestion'), onPress: () => router.push(`/chat/${institution.id}`) },
-                  ])
-                }
+                onPress={() => toast(`${label} — ${t('common.comingSoon')}. ${t('institution.socialNote')}`)}
                 style={({ pressed }) => ({
                   flexDirection: 'row', alignItems: 'center', gap: 6,
                   borderRadius: radius.full, borderWidth: 1, borderColor: colors.border, borderStyle: 'dashed',

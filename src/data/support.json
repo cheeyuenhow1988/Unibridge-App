@@ -42,7 +42,8 @@
       "subject": "Your offer letter — Bachelor of Business Administration",
       "snippet": "Congratulations! Attached is your Letter of Offer for the February 2027 intake. Reply to accept within 28 days.",
       "date": "2026-07-28",
-      "read": false
+      "read": false,
+      "body": "Congratulations! We are delighted to offer you a place in the Bachelor of Business Administration for the February 2027 intake. Your Letter of Offer is attached to this message.\n\nTo secure your place, accept within 28 days and follow the acceptance steps in your application. If any detail on the letter looks wrong — name spelling, course or intake — reply here and we will reissue it."
     },
     {
       "id": "mail-2",
@@ -52,7 +53,8 @@
       "subject": "Certified English translation needed",
       "snippet": "Please upload a certified translation of your UEC transcript to complete your file.",
       "date": "2026-07-30",
-      "read": false
+      "read": false,
+      "body": "To complete your file we still need a certified English translation of your UEC transcript. Certified means the translation carries the stamp of a licensed translator or of your school.\n\nUpload it to your document vault and our team will verify it within 3 working days. Your application stays on hold until then, so the sooner the better."
     },
     {
       "id": "mail-3",
@@ -62,7 +64,8 @@
       "subject": "Conditional offer — condition details inside",
       "snippet": "Your offer is conditional on IELTS 6.5 (no band below 6.0). Book your test and send results by 30 Nov.",
       "date": "2026-07-15",
-      "read": false
+      "read": false,
+      "body": "Good news — your application was successful, with one condition: IELTS 6.5 overall with no band below 6.0.\n\nBook your test early, seats fill quickly between September and November. Send us your results by 30 Nov and we will upgrade you to an unconditional offer, which you need before applying for your CAS and visa."
     },
     {
       "id": "mail-4",
@@ -72,7 +75,8 @@
       "subject": "Interview invitation — Business (Finance)",
       "snippet": "You are invited to a 20-minute online interview. Choose a slot from the booking link within 7 days.",
       "date": "2026-07-21",
-      "read": false
+      "read": false,
+      "body": "You are invited to a 20-minute online interview for Business (Finance). It covers your motivation and a short case discussion — no preparation materials are needed beyond knowing your own application.\n\nChoose a slot within 7 days. If none of the offered times work for your timezone, reply here and we will open more."
     },
     {
       "id": "mail-5",
@@ -82,7 +86,8 @@
       "subject": "Offer-holder webinar: housing & enrolment",
       "snippet": "Join our offer-holder session on 15 Aug for enrolment steps, housing ballot dates and unit selection.",
       "date": "2026-08-01",
-      "read": true
+      "read": true,
+      "body": "Join our offer-holder webinar on 15 August to walk through enrolment steps, the housing ballot dates and how unit selection works in your first semester.\n\nA recording will be shared with everyone who registers, so sign up even if the live time is awkward for your timezone."
     },
     {
       "id": "mail-6",
@@ -92,7 +97,8 @@
       "subject": "International scholars newsletter — August",
       "snippet": "Scholarship deadlines, pre-CAS checks and a campus tour recording for offer holders.",
       "date": "2026-08-02",
-      "read": true
+      "read": true,
+      "body": "In this month’s issue: scholarship deadlines closing in September, what to prepare for your pre-CAS checks, and a recorded campus tour for offer holders who have not visited yet.\n\nTip: the accommodation guarantee for international offer holders closes earlier than the housing portal suggests — dates inside."
     }
   ],
   "shorts": [

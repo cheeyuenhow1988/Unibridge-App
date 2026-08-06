@@ -1678,14 +1678,20 @@ const supportTeam = [
 ];
 
 const mails = [
-  ['mail-1', 'au-monash', 'app-demo-1', 'offer', 'Your offer letter — Bachelor of Business Administration', 'Congratulations! Attached is your Letter of Offer for the February 2027 intake. Reply to accept within 28 days.', '2026-07-28', false],
-  ['mail-2', 'au-monash', 'app-demo-1', 'document_request', 'Certified English translation needed', 'Please upload a certified translation of your UEC transcript to complete your file.', '2026-07-30', false],
-  ['mail-3', 'gb-manchester', 'app-demo-2', 'conditional', 'Conditional offer — condition details inside', 'Your offer is conditional on IELTS 6.5 (no band below 6.0). Book your test and send results by 30 Nov.', '2026-07-15', false],
-  ['mail-4', 'sg-nus', 'app-demo-3', 'interview', 'Interview invitation — Business (Finance)', 'You are invited to a 20-minute online interview. Choose a slot from the booking link within 7 days.', '2026-07-21', false],
-  ['mail-5', 'au-monash', 'app-demo-1', 'event', 'Offer-holder webinar: housing & enrolment', 'Join our offer-holder session on 15 Aug for enrolment steps, housing ballot dates and unit selection.', '2026-08-01', true],
-  ['mail-6', 'gb-manchester', 'app-demo-2', 'newsletter', 'International scholars newsletter — August', 'Scholarship deadlines, pre-CAS checks and a campus tour recording for offer holders.', '2026-08-02', true],
-].map(([id, institutionId, applicationId, kind, subject, snippet, date, read]) => ({
-  id, institutionId, applicationId, kind, subject, snippet, date, read,
+  ['mail-1', 'au-monash', 'app-demo-1', 'offer', 'Your offer letter — Bachelor of Business Administration', 'Congratulations! Attached is your Letter of Offer for the February 2027 intake. Reply to accept within 28 days.', '2026-07-28', false,
+    'Congratulations! We are delighted to offer you a place in the Bachelor of Business Administration for the February 2027 intake. Your Letter of Offer is attached to this message.\n\nTo secure your place, accept within 28 days and follow the acceptance steps in your application. If any detail on the letter looks wrong — name spelling, course or intake — reply here and we will reissue it.'],
+  ['mail-2', 'au-monash', 'app-demo-1', 'document_request', 'Certified English translation needed', 'Please upload a certified translation of your UEC transcript to complete your file.', '2026-07-30', false,
+    'To complete your file we still need a certified English translation of your UEC transcript. Certified means the translation carries the stamp of a licensed translator or of your school.\n\nUpload it to your document vault and our team will verify it within 3 working days. Your application stays on hold until then, so the sooner the better.'],
+  ['mail-3', 'gb-manchester', 'app-demo-2', 'conditional', 'Conditional offer — condition details inside', 'Your offer is conditional on IELTS 6.5 (no band below 6.0). Book your test and send results by 30 Nov.', '2026-07-15', false,
+    'Good news — your application was successful, with one condition: IELTS 6.5 overall with no band below 6.0.\n\nBook your test early, seats fill quickly between September and November. Send us your results by 30 Nov and we will upgrade you to an unconditional offer, which you need before applying for your CAS and visa.'],
+  ['mail-4', 'sg-nus', 'app-demo-3', 'interview', 'Interview invitation — Business (Finance)', 'You are invited to a 20-minute online interview. Choose a slot from the booking link within 7 days.', '2026-07-21', false,
+    'You are invited to a 20-minute online interview for Business (Finance). It covers your motivation and a short case discussion — no preparation materials are needed beyond knowing your own application.\n\nChoose a slot within 7 days. If none of the offered times work for your timezone, reply here and we will open more.'],
+  ['mail-5', 'au-monash', 'app-demo-1', 'event', 'Offer-holder webinar: housing & enrolment', 'Join our offer-holder session on 15 Aug for enrolment steps, housing ballot dates and unit selection.', '2026-08-01', true,
+    'Join our offer-holder webinar on 15 August to walk through enrolment steps, the housing ballot dates and how unit selection works in your first semester.\n\nA recording will be shared with everyone who registers, so sign up even if the live time is awkward for your timezone.'],
+  ['mail-6', 'gb-manchester', 'app-demo-2', 'newsletter', 'International scholars newsletter — August', 'Scholarship deadlines, pre-CAS checks and a campus tour recording for offer holders.', '2026-08-02', true,
+    'In this month’s issue: scholarship deadlines closing in September, what to prepare for your pre-CAS checks, and a recorded campus tour for offer holders who have not visited yet.\n\nTip: the accommodation guarantee for international offer holders closes earlier than the housing portal suggests — dates inside.'],
+].map(([id, institutionId, applicationId, kind, subject, snippet, date, read, body]) => ({
+  id, institutionId, applicationId, kind, subject, snippet, date, read, body,
 }));
 
 // Reality Check entries (last flag) are unscripted "what nobody tells you"

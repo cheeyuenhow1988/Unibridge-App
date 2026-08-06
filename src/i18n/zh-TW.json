@@ -307,7 +307,9 @@
     "nextPhoto": "下一張照片",
     "foodTitle": "附近咖啡與美食",
     "foodMins": "距校園 {{count}} 分鐘",
-    "foodSampleNote": "原型示例評分——點按查看即時 Google 評價。"
+    "foodSampleNote": "原型示例評分——點按查看即時 Google 評價。",
+    "contactSchool": "聯絡這所學校",
+    "photoUnavailable": "照片載入失敗 — 請檢查網路"
   },
   "attraction": {
     "whatToDo": "玩什麼",
@@ -336,7 +338,6 @@
     "perSemesterShort": "{{amount}} / 學期",
     "perYearShort": "{{amount}} / 年",
     "fullCourse": "全程 {{amount}}",
-    "askQuestion": "諮詢",
     "intakeDates": "入學時間",
     "campusCity": "校區",
     "yourMatch": "你的匹配",
@@ -612,7 +613,10 @@
   "chat": {
     "title": "諮詢{{name}}",
     "mockReply": "感謝你的提問！招生團隊通常會在 1 個工作日內回覆。（這是原型聊天。）",
-    "placeholder": "輸入你的問題…"
+    "placeholder": "輸入你的問題…",
+    "contactNote": "UniBridge 正式上線後，這裡的問題會直達{{school}}招生團隊 — 本原型中的回覆為模擬。如需今天直接聯絡，請使用學校官網。UniBridge 絕不虛構學校電子郵件地址。",
+    "officialSite": "官方網站",
+    "askAi": "問 UniBridge AI"
   },
   "notFound": {
     "title": "頁面不存在",
@@ -791,7 +795,19 @@
     "kind_interview": "面試",
     "kind_event": "活動",
     "kind_newsletter": "資訊",
-    "note": "原型收件匣——正式上線後同步真實大學郵件。"
+    "note": "原型收件匣——正式上線後同步真實大學郵件。",
+    "fromOffice": "國際招生辦公室",
+    "openApplication": "開啟我的申請",
+    "uploadDocs": "到文件保險庫上傳",
+    "bookSlot": "申請面試時段",
+    "slotRequested": "已向{{school}}送出時段申請 — 僅為示範",
+    "viewSchool": "查看學校頁面",
+    "replyTitle": "回覆{{school}}",
+    "replyPlaceholder": "輸入回覆…",
+    "replySend": "送出回覆",
+    "replySent": "已向{{school}}送出回覆 — 僅為示範",
+    "repliedChip": "你已回覆（示範）",
+    "replyNote": "示範回覆 — 本原型不會向任何真實大學送出任何內容。"
   },
   "vip": {
     "title": "UniBridge VIP",

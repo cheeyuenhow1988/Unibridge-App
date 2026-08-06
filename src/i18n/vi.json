@@ -305,7 +305,9 @@
     "nextPhoto": "Ảnh tiếp theo",
     "foodTitle": "Quán cà phê & ăn uống gần trường",
     "foodMins": "{{count}} phút từ trường",
-    "foodSampleNote": "Điểm mẫu cho nguyên mẫu — chạm để xem đánh giá Google trực tiếp."
+    "foodSampleNote": "Điểm mẫu cho nguyên mẫu — chạm để xem đánh giá Google trực tiếp.",
+    "contactSchool": "Liên hệ trường này",
+    "photoUnavailable": "Không tải được ảnh — kiểm tra kết nối của bạn"
   },
   "attraction": {
     "whatToDo": "Chơi gì ở đây",
@@ -334,7 +336,6 @@
     "perSemesterShort": "{{amount}} / học kỳ",
     "perYearShort": "{{amount}} / năm",
     "fullCourse": "{{amount}} toàn khóa",
-    "askQuestion": "Đặt câu hỏi",
     "intakeDates": "Kỳ nhập học",
     "campusCity": "Cơ sở",
     "yourMatch": "Mức phù hợp của bạn",
@@ -701,7 +702,10 @@
   "chat": {
     "title": "Hỏi {{name}}",
     "mockReply": "Cảm ơn câu hỏi của bạn! Phòng tuyển sinh thường trả lời trong 1 ngày làm việc. (Đây là chat nguyên mẫu.)",
-    "placeholder": "Nhập câu hỏi…"
+    "placeholder": "Nhập câu hỏi…",
+    "contactNote": "Câu hỏi tại đây sẽ đến đội tuyển sinh của {{school}} khi UniBridge ra mắt — trong bản thử nghiệm này, phản hồi chỉ là mô phỏng. Để liên hệ trực tiếp ngay hôm nay, hãy dùng trang web chính thức của trường. UniBridge không bao giờ tự bịa địa chỉ email của trường.",
+    "officialSite": "Trang web chính thức",
+    "askAi": "Hỏi UniBridge AI"
   },
   "costsheet": {
     "title": "Sinh hoạt phí {{city}}",
@@ -789,7 +793,19 @@
     "kind_interview": "Phỏng vấn",
     "kind_event": "Sự kiện",
     "kind_newsletter": "Bản tin",
-    "note": "Hộp thư nguyên mẫu — đồng bộ email trường thật sẽ kết nối khi ra mắt."
+    "note": "Hộp thư nguyên mẫu — đồng bộ email trường thật sẽ kết nối khi ra mắt.",
+    "fromOffice": "Văn phòng Tuyển sinh Quốc tế",
+    "openApplication": "Mở hồ sơ của tôi",
+    "uploadDocs": "Tải lên kho tài liệu",
+    "bookSlot": "Yêu cầu lịch phỏng vấn",
+    "slotRequested": "Đã gửi yêu cầu lịch tới {{school}} — chỉ là bản demo",
+    "viewSchool": "Xem trang trường",
+    "replyTitle": "Trả lời {{school}}",
+    "replyPlaceholder": "Nhập câu trả lời…",
+    "replySend": "Gửi trả lời",
+    "replySent": "Đã gửi trả lời tới {{school}} — chỉ là bản demo",
+    "repliedChip": "Bạn đã trả lời (demo)",
+    "replyNote": "Trả lời demo — không có gì được gửi tới trường đại học thật từ bản thử nghiệm này."
   },
   "vip": {
     "title": "UniBridge VIP",

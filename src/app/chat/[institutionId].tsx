@@ -1,9 +1,10 @@
 import { Ionicons } from '@expo/vector-icons';
-import { useLocalSearchParams } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
 import { goBack } from '@/services/nav';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FlatList, KeyboardAvoidingView, Platform, Pressable, TextInput, View } from 'react-native';
+import { FlatList, KeyboardAvoidingView, Linking, Platform, Pressable, TextInput, View } from 'react-native';
+import { Button } from '@/components/ui/Button';
 import { Row } from '@/components/ui/Misc';
 import { Screen } from '@/components/ui/Screen';
 import { Text } from '@/components/ui/Text';
@@ -50,6 +51,35 @@ export default function MockChat() {
           </Text>
           <View style={{ width: 24 }} />
         </Row>
+
+        {/* Honest contact routes — the prototype never invents school email
+            addresses, so direct contact goes via the verified official site. */}
+        <View
+          style={{
+            marginHorizontal: spacing.lg, marginBottom: spacing.sm, padding: spacing.lg,
+            backgroundColor: colors.surfaceAlt, borderRadius: radius.lg, gap: spacing.sm,
+          }}
+        >
+          <Text variant="caption" tone="secondary">
+            {t('chat.contactNote', { school: institution?.short ?? '…' })}
+          </Text>
+          <Row gap={spacing.sm} wrap>
+            <Button
+              label={t('chat.officialSite')}
+              icon="globe-outline"
+              variant="secondary"
+              size="sm"
+              onPress={() => institution && void Linking.openURL(institution.website)}
+            />
+            <Button
+              label={t('chat.askAi')}
+              icon="sparkles-outline"
+              variant="secondary"
+              size="sm"
+              onPress={() => router.push('/assistant')}
+            />
+          </Row>
+        </View>
 
         <FlatList
           ref={listRef}

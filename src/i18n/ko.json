@@ -305,7 +305,9 @@
     "nextPhoto": "다음 사진",
     "foodTitle": "근처 카페 & 맛집",
     "foodMins": "캠퍼스에서 {{count}}분",
-    "foodSampleNote": "프로토타입 샘플 평점입니다. 탭하면 실제 Google 리뷰를 볼 수 있어요."
+    "foodSampleNote": "프로토타입 샘플 평점입니다. 탭하면 실제 Google 리뷰를 볼 수 있어요.",
+    "contactSchool": "이 학교에 문의",
+    "photoUnavailable": "사진을 불러오지 못했습니다 — 연결을 확인하세요"
   },
   "attraction": {
     "whatToDo": "즐길 거리",
@@ -334,7 +336,6 @@
     "perSemesterShort": "{{amount}} / 학기",
     "perYearShort": "{{amount}} / 년",
     "fullCourse": "전 과정 {{amount}}",
-    "askQuestion": "질문하기",
     "intakeDates": "입학 시기",
     "campusCity": "캠퍼스",
     "yourMatch": "내 매칭",
@@ -701,7 +702,10 @@
   "chat": {
     "title": "{{name}}에 문의",
     "mockReply": "질문 감사해요! 입학팀은 보통 영업일 1일 내에 답해요. (프로토타입 채팅이에요.)",
-    "placeholder": "질문을 입력하세요…"
+    "placeholder": "질문을 입력하세요…",
+    "contactNote": "UniBridge 정식 출시 후 이곳의 질문은 {{school}} 입학팀에 바로 전달됩니다 — 이 프로토타입에서는 답장이 시뮬레이션입니다. 지금 바로 연락하려면 학교 공식 웹사이트를 이용하세요. UniBridge는 학교 이메일 주소를 임의로 만들지 않습니다.",
+    "officialSite": "공식 웹사이트",
+    "askAi": "UniBridge AI에게 질문"
   },
   "costsheet": {
     "title": "{{city}} 생활비",
@@ -789,7 +793,19 @@
     "kind_interview": "면접",
     "kind_event": "이벤트",
     "kind_newsletter": "소식",
-    "note": "프로토타입 수신함 — 실제 대학 메일 연동은 출시 때."
+    "note": "프로토타입 수신함 — 실제 대학 메일 연동은 출시 때.",
+    "fromOffice": "국제 입학처",
+    "openApplication": "내 지원서 열기",
+    "uploadDocs": "서류 보관함에 업로드",
+    "bookSlot": "면접 시간 요청",
+    "slotRequested": "{{school}}에 시간 요청을 보냈습니다 — 데모 전용",
+    "viewSchool": "학교 페이지 보기",
+    "replyTitle": "{{school}}에 답장",
+    "replyPlaceholder": "답장을 입력하세요…",
+    "replySend": "답장 보내기",
+    "replySent": "{{school}}에 답장을 보냈습니다 — 데모 전용",
+    "repliedChip": "답장 완료 (데모)",
+    "replyNote": "데모 답장 — 이 프로토타입에서 실제 대학으로는 아무것도 전송되지 않습니다."
   },
   "vip": {
     "title": "UniBridge VIP",

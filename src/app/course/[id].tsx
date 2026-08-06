@@ -338,7 +338,7 @@ export default function CourseDetail() {
           <Ionicons name={saved ? 'heart' : 'heart-outline'} size={20} color={saved ? colors.danger : colors.ink} />
         </Pressable>
         <Button
-          label={t('course.askQuestion')}
+          label={t('institution.contactSchool')}
           variant="secondary"
           onPress={() => router.push(`/chat/${institution.id}`)}
           style={{ flex: 1 }}
