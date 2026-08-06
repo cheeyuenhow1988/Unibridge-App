@@ -57,6 +57,21 @@ Rules:
   verified student applicant. Reply normally — your reply reaches the student
   in their UniBridge inbox."
 
+### Decision record: why not one shared address for all students?
+
+Considered: a single `students@unibridge.com` used for every student, with a
+tracking system mapping who wrote to which school. Rejected because inbound
+routing becomes guesswork — straight replies can be matched via threading
+headers, but fresh composes, internal forwards and university CRMs
+(Slate/Salesforce-type systems) drop those headers, leaving only subject/name
+matching. The worst-case failure — one student's offer or rejection delivered
+to another student — is a privacy breach and unacceptable. Per-thread aliases
+cost the same (a catch-all domain makes unlimited addresses free; an alias is
+a database row, not a mailbox) and make mis-routing structurally impossible:
+the address itself is the tracking number. The shared-address idea survives
+as `hello@unibridge.com`: any inbound mail matching no thread lands in a
+staff review queue instead of being dropped.
+
 ## 3. Outbound flow (student → school)
 
 1. Student writes in the app (the existing reply box).
