@@ -19,7 +19,9 @@ interface RewardsState {
   streak: number;
   earn: (labelId: string, delta: number) => void;
   redeem: (itemId: string, price: number) => boolean;
-  checkIn: () => boolean;
+  /** Daily check-in: 🪙1/day, +🪙5 bonus each time the streak completes a
+   * 30-day month. Returns what was earned, or false if already checked in. */
+  checkIn: () => false | 'daily' | 'monthly';
   reset: () => void;
 }
 
@@ -60,16 +62,20 @@ export const useRewardsStore = create<RewardsState>()(
         if (s.lastCheckIn === today) return false;
         const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
         const streak = s.lastCheckIn === yesterday ? s.streak + 1 : 1;
+        const monthly = streak % 30 === 0;
+        const events: CoinEvent[] = [
+          { id: `evt-${s.history.length + 1}-daily`, labelId: 'rule_daily', delta: 1, date: today },
+        ];
+        if (monthly) {
+          events.unshift({ id: `evt-${s.history.length + 2}-monthly`, labelId: 'rule_monthly', delta: 5, date: today });
+        }
         set({
           lastCheckIn: today,
           streak,
-          coins: s.coins + 5,
-          history: [
-            { id: `evt-${s.history.length + 1}-daily`, labelId: 'rule_daily', delta: 5, date: today },
-            ...s.history,
-          ],
+          coins: s.coins + 1 + (monthly ? 5 : 0),
+          history: [...events, ...s.history],
         });
-        return true;
+        return monthly ? 'monthly' : 'daily';
       },
       reset: () => set({ coins: 0, history: [], redeemedIds: [], lastCheckIn: null, streak: 0 }),
     }),

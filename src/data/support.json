@@ -280,6 +280,10 @@
     },
     {
       "id": "daily",
+      "coins": 1
+    },
+    {
+      "id": "monthly",
       "coins": 5
     },
     {

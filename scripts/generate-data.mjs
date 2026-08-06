@@ -1726,7 +1726,7 @@ const shorts = [
 const coinRules = [
   { id: 'profile', coins: 20 }, { id: 'grades', coins: 30 }, { id: 'english', coins: 25 },
   { id: 'document', coins: 10 }, { id: 'application', coins: 60 }, { id: 'referral', coins: 80 },
-  { id: 'daily', coins: 5 }, { id: 'survey', coins: 30 },
+  { id: 'daily', coins: 1 }, { id: 'monthly', coins: 5 }, { id: 'survey', coins: 30 },
 ];
 const redemptions = [
   { id: 'pass-discount', coins: 400 }, { id: 'fee-waiver', coins: 300 },

@@ -269,6 +269,11 @@ export default function RewardsScreen() {
           <Card style={{ alignItems: 'center', gap: spacing.md }}>
             <Text variant="display">🔥 {streak}</Text>
             <Text variant="caption" tone="secondary">{t('rewards.streakDays', { count: streak })}</Text>
+            {streak > 0 ? (
+              <Text variant="caption" tone="accent">
+                {t('rewards.streakToBonus', { days: streak % 30 === 0 ? 30 : 30 - (streak % 30) })}
+              </Text>
+            ) : null}
             <Row gap={spacing.sm}>
               {week.map((d) => {
                 const checked = checkedDates.has(d.iso);
@@ -294,7 +299,9 @@ export default function RewardsScreen() {
               label={checkedToday ? t('rewards.checkedIn') : t('rewards.checkIn')}
               selected={!checkedToday}
               onPress={() => {
-                if (checkIn()) toast(t('rewards.checkInOk'));
+                const earned = checkIn();
+                if (earned === 'monthly') toast(t('rewards.checkInMonthly'));
+                else if (earned === 'daily') toast(t('rewards.checkInOk'));
                 else toast(t('rewards.checkedIn'));
               }}
             />
