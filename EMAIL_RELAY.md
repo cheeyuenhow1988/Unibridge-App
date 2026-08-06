@@ -209,7 +209,7 @@ production by accident.
 | 2 | University Mail shows the same 6 sample mails to every account (generated demo data) | Inbox shows only the student's real threads; new accounts see an empty state |
 | 3 | Mail reader's reply box is demo-only ("nothing is sent…" note) | Wire to the outbound relay (section 3) and delete the demo note |
 | 4 | Every school shows a "Verified partner" badge as visual placeholder | Badge only for tier-1 school-claimed profiles (section 1). Everything else shows no badge |
-| 5 | Job/support contacts are fictional by design: `*.example` emails, `0000` phone blocks, `UniBridgeSupportDemo`-style handles | Replace with the company's real channels; jobs/rentals need real verified posters or must stay clearly community-sourced |
+| 5 | Job/support contacts are fictional by design: `*.example` emails, `0000` phone blocks, `UniBridgeSupportDemo`-style handles | Replace with the company's real channels; jobs/rentals/cars inventory comes via per-country marketplace partners (see PARTNERS.md) or stays clearly labeled |
 | 6 | School reviews, food ratings and snippets are labeled sample data | Keep the labels until real data replaces them — never present sample numbers as real reviews |
 | 7 | Season Pass RM49.90 / VIP purchases are one-tap mocks | Real app-store billing (IAP) before any money is taken |
 | 8 | Sign-in buttons are mock; demo seed data (`app-demo-*` applications) exists | Real auth (Supabase); strip demo seeds from production builds |
