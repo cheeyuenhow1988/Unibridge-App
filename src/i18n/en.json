@@ -829,7 +829,8 @@
     "entrySub": "Fast-track, priority help & arrival services",
     "includesPass": "Includes everything in Season Pass",
     "purchased": "VIP activated — you have everything.",
-    "owned": "VIP active"
+    "owned": "VIP active",
+    "benefit_events": "Invitations to UniBridge parties and member-only events in your city"
   },
   "rewards": {
     "title": "Rewards",
@@ -887,7 +888,13 @@
     "rule_survey": "Answer a feedback survey",
     "rule_monthly": "Full-month check-in bonus",
     "checkInMonthly": "Full month! +🪙 1 + bonus 🪙 5 🎉",
-    "streakToBonus": "{{days}} more days to your +🪙 5 month bonus"
+    "streakToBonus": "{{days}} more days to your +🪙 5 month bonus",
+    "lockedHero": "A Season Pass perk",
+    "lockedTitle": "Rewards unlocks with Season Pass",
+    "lockedBody": "Coins, badges, the daily streak and redemptions are part of Season Pass. Every coin you have already earned stays saved for you.",
+    "lockedCoins": "🪙 {{coins}} banked and waiting",
+    "lockedCta": "Unlock with Season Pass · from {{price}}",
+    "lockedSub": "Season Pass perk · 🪙 {{coins}} saved for you"
   },
   "shorts": {
     "title": "Shorts",
@@ -902,7 +909,7 @@
   "pass": {
     "title": "Season Pass",
     "headline": "Apply to more schools. Get more support.",
-    "sub": "One-time purchase for your whole application cycle — no subscription, ever.",
+    "sub": "Pick one month for the final sprint, or pay once and keep it for life.",
     "colFree": "Free",
     "colPass": "Pass",
     "colVip": "VIP",
@@ -940,7 +947,7 @@
     "row_sim": "SIM card ready on landing",
     "row_bank": "Bank account pre-setup",
     "row_pickup": "Airport pickup",
-    "row_community": "Community, Shorts & Rewards",
+    "row_community": "Community & Shorts",
     "row_safety": "SOS, safety & parent view",
     "ctx_apply": "You're trying to apply to a 2nd school — unlock unlimited applications with Season Pass.",
     "ctx_compare": "You can compare 2 on Free — unlock up to 4 side by side with Season Pass.",
@@ -949,7 +956,16 @@
     "ctx_timeline": "See every sub-status, not just the big three, with Season Pass.",
     "ctx_predep": "Get the checklist tailored to your exact destination with Season Pass.",
     "ctx_life": "See every part-time job and room shared by students with Season Pass.",
-    "ctx_generic": "This feature is part of Season Pass."
+    "ctx_generic": "This feature is part of Season Pass.",
+    "chooseTerm": "Choose 1 month, or pay once for lifetime access",
+    "term_monthly": "1 month access",
+    "term_lifetime": "Pay once — yours for life",
+    "bestValue": "BEST VALUE",
+    "termActive_monthly": "Monthly pass · 30 days of access",
+    "termActive_lifetime": "Lifetime pass — yours forever",
+    "sheetCta": "Choose your plan · from {{price}}",
+    "row_rewards": "Rewards: coins, vouchers & event tickets",
+    "row_events": "UniBridge parties & member events"
   },
   "safety": {
     "title": "Safety & emergency",

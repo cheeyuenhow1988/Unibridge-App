@@ -1,11 +1,13 @@
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
+import { router } from 'expo-router';
 import { goBack } from '@/services/nav';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, View } from 'react-native';
 import { HexBadge } from '@/components/rewards/HexBadge';
 import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { Chip } from '@/components/ui/Chip';
 import { Row, SectionHeader } from '@/components/ui/Misc';
@@ -17,6 +19,7 @@ import { useTheme } from '@/hooks/useTheme';
 import { getSupportBundle } from '@/services/api';
 import { toast } from '@/store/useToastStore';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
+import { SEASON_PASS_MONTHLY_USD, usePlan } from '@/store/usePlanStore';
 import { useProfileStore } from '@/store/useProfileStore';
 import { useRewardsStore } from '@/store/useRewardsStore';
 import { useVaultStore } from '@/store/useVaultStore';
@@ -94,6 +97,7 @@ export default function RewardsScreen() {
   if (applications.some((a) => ['accepted', 'coe_issued'].includes(a.status))) earned.add('grad');
 
   const [detail, setDetail] = useState<string | null>(null);
+  const plan = usePlan();
   const today = new Date();
   const todayISO = today.toISOString().slice(0, 10);
   const checkedToday = lastCheckIn === todayISO;
@@ -102,6 +106,41 @@ export default function RewardsScreen() {
     const d = new Date(today.getTime() - (6 - i) * 86400000);
     return { iso: d.toISOString().slice(0, 10), label: 'SMTWTFS'[d.getDay()] };
   });
+
+  // Rewards is a Season Pass perk. Free accounts still BANK every coin they
+  // earn (surveys etc.) — they just can't open the hub until they upgrade.
+  if (plan === 'free') {
+    return (
+      <Screen scroll edges={['top', 'bottom']}>
+        <Row style={{ paddingVertical: spacing.md, gap: spacing.md }}>
+          <Pressable accessibilityRole="button" accessibilityLabel={t('common.back')} onPress={() => goBack('/profile')} hitSlop={10}>
+            <Ionicons name="chevron-back" size={24} color={colors.ink} />
+          </Pressable>
+          <Text variant="title">{t('rewards.title')}</Text>
+        </Row>
+        <View style={{ gap: spacing.lg }}>
+          <HeroBanner title={t('rewards.title')} subtitle={t('rewards.lockedHero')} icon="lock-closed" />
+          <Card style={{ gap: spacing.md, alignItems: 'center', padding: spacing.xl }}>
+            <Ionicons name="lock-closed" size={32} color={colors.accent} />
+            <Text variant="title" center>{t('rewards.lockedTitle')}</Text>
+            <Text variant="body" tone="secondary" center>{t('rewards.lockedBody')}</Text>
+            {coins > 0 ? (
+              <Row gap={6}>
+                <Ionicons name="wallet-outline" size={15} color={colors.borderline} />
+                <Text variant="label" style={{ color: colors.borderline }}>{t('rewards.lockedCoins', { coins })}</Text>
+              </Row>
+            ) : null}
+            <Button
+              label={t('rewards.lockedCta', { price: `US$${SEASON_PASS_MONTHLY_USD}` })}
+              size="lg"
+              icon="key-outline"
+              onPress={() => router.push('/pass')}
+            />
+          </Card>
+        </View>
+      </Screen>
+    );
+  }
 
   return (
     <Screen scroll edges={['top', 'bottom']}>

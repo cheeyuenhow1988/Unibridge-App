@@ -828,7 +828,8 @@
     "entrySub": "फ़ास्ट-ट्रैक, प्राथमिकता मदद और आगमन सेवाएँ",
     "includesPass": "Season Pass का सब कुछ शामिल",
     "purchased": "VIP सक्रिय — अब आपके पास सब कुछ है।",
-    "owned": "VIP सक्रिय"
+    "owned": "VIP सक्रिय",
+    "benefit_events": "आपके शहर में UniBridge की पार्टियों और मेंबर-ओनली इवेंट के न्योते"
   },
   "rewards": {
     "title": "रिवॉर्ड",
@@ -886,7 +887,13 @@
     "rule_survey": "फीडबैक सर्वे का जवाब दें",
     "rule_monthly": "पूरे महीने का चेक-इन बोनस",
     "checkInMonthly": "पूरा महीना! +🪙 1 + बोनस 🪙 5 🎉",
-    "streakToBonus": "+🪙 5 मासिक बोनस के लिए {{days}} दिन और"
+    "streakToBonus": "+🪙 5 मासिक बोनस के लिए {{days}} दिन और",
+    "lockedHero": "Season Pass की सुविधा",
+    "lockedTitle": "Rewards Season Pass से खुलता है",
+    "lockedBody": "कॉइन, बैज, डेली स्ट्रीक और रिडेम्पशन Season Pass का हिस्सा हैं। आपने जो भी कॉइन कमाए हैं, वे सुरक्षित रहते हैं।",
+    "lockedCoins": "🪙 {{coins}} जमा होकर इंतज़ार में",
+    "lockedCta": "Season Pass से खोलें · {{price}} से",
+    "lockedSub": "Season Pass सुविधा · आपके लिए 🪙 {{coins}} सुरक्षित"
   },
   "shorts": {
     "title": "Shorts",
@@ -901,7 +908,7 @@
   "pass": {
     "title": "Season Pass",
     "headline": "ज़्यादा स्कूलों में आवेदन। ज़्यादा सपोर्ट।",
-    "sub": "पूरे आवेदन चक्र के लिए एक बार की ख़रीद — कभी कोई सब्सक्रिप्शन नहीं।",
+    "sub": "आख़िरी दौड़ के लिए एक महीना चुनें, या एक बार भुगतान करें और जीवन भर रखें।",
     "colFree": "फ़्री",
     "colPass": "Pass",
     "colVip": "VIP",
@@ -939,7 +946,7 @@
     "row_sim": "उतरते ही तैयार सिम",
     "row_bank": "बैंक खाता पहले से तैयार",
     "row_pickup": "एयरपोर्ट पिकअप",
-    "row_community": "कम्युनिटी, Shorts और रिवॉर्ड",
+    "row_community": "कम्युनिटी और Shorts",
     "row_safety": "SOS, सुरक्षा और पैरेंट व्यू",
     "ctx_apply": "आप दूसरे स्कूल में आवेदन कर रहे हैं — Season Pass से असीमित आवेदन अनलॉक करें।",
     "ctx_compare": "फ़्री में 2 की तुलना — Season Pass से 4 तक अनलॉक करें।",
@@ -948,7 +955,16 @@
     "ctx_timeline": "सिर्फ़ तीन बड़े नहीं, हर उप-स्थिति देखें — Season Pass से।",
     "ctx_predep": "अपने गंतव्य की चेकलिस्ट Season Pass से पाएँ।",
     "ctx_life": "छात्रों की साझा हर नौकरी और कमरा Season Pass से देखें।",
-    "ctx_generic": "यह फ़ीचर Season Pass का हिस्सा है।"
+    "ctx_generic": "यह फ़ीचर Season Pass का हिस्सा है।",
+    "chooseTerm": "1 महीना चुनें, या लाइफटाइम एक्सेस के लिए एक बार भुगतान करें",
+    "term_monthly": "1 महीने का एक्सेस",
+    "term_lifetime": "एक बार भुगतान — जीवन भर आपका",
+    "bestValue": "सबसे किफ़ायती",
+    "termActive_monthly": "मासिक पास · 30 दिन का एक्सेस",
+    "termActive_lifetime": "लाइफटाइम पास — हमेशा आपका",
+    "sheetCta": "अपना प्लान चुनें · {{price}} से",
+    "row_rewards": "Rewards: कॉइन, वाउचर और इवेंट टिकट",
+    "row_events": "UniBridge पार्टियां और मेंबर इवेंट"
   },
   "safety": {
     "title": "सुरक्षा और आपातकाल",

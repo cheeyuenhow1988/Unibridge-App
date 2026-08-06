@@ -824,7 +824,8 @@
     "entrySub": "패스트트랙, 우선 지원, 도착 서비스",
     "includesPass": "Season Pass의 모든 것 포함",
     "purchased": "VIP 활성화 — 모든 걸 갖췄어요.",
-    "owned": "VIP 이용 중"
+    "owned": "VIP 이용 중",
+    "benefit_events": "내 도시에서 열리는 UniBridge 파티와 멤버 전용 이벤트 초대"
   },
   "rewards": {
     "title": "리워드",
@@ -882,7 +883,13 @@
     "rule_survey": "피드백 설문 답변",
     "rule_monthly": "한 달 체크인 보너스",
     "checkInMonthly": "한 달 달성! +🪙 1 + 보너스 🪙 5 🎉",
-    "streakToBonus": "월간 보너스 +🪙 5까지 {{days}}일 남음"
+    "streakToBonus": "월간 보너스 +🪙 5까지 {{days}}일 남음",
+    "lockedHero": "Season Pass 혜택",
+    "lockedTitle": "Rewards는 Season Pass로 열립니다",
+    "lockedBody": "코인, 배지, 일일 스트릭, 교환은 Season Pass 혜택입니다. 이미 모은 코인은 모두 안전하게 보관됩니다.",
+    "lockedCoins": "🪙 {{coins}} 적립되어 대기 중",
+    "lockedCta": "Season Pass로 잠금 해제 · {{price}}부터",
+    "lockedSub": "Season Pass 혜택 · 🪙 {{coins}} 보관 중"
   },
   "shorts": {
     "title": "쇼츠",
@@ -897,7 +904,7 @@
   "pass": {
     "title": "Season Pass",
     "headline": "더 많은 학교에 지원하고, 더 많은 지원을 받으세요.",
-    "sub": "지원 시즌 전체를 위한 1회 구매 — 구독은 절대 없어요.",
+    "sub": "마지막 스퍼트엔 한 달, 또는 한 번 결제로 평생 소장하세요.",
     "colFree": "무료",
     "colPass": "Pass",
     "colVip": "VIP",
@@ -935,7 +942,7 @@
     "row_sim": "착륙 즉시 쓰는 유심",
     "row_bank": "은행 계좌 사전 준비",
     "row_pickup": "공항 픽업",
-    "row_community": "커뮤니티·쇼츠·리워드",
+    "row_community": "커뮤니티 & Shorts",
     "row_safety": "SOS·안전·보호자 뷰",
     "ctx_apply": "두 번째 학교에 지원하려고 해요 — Season Pass로 무제한 지원을 여세요.",
     "ctx_compare": "무료는 2개까지 비교 — Season Pass로 최대 4개까지.",
@@ -944,7 +951,16 @@
     "ctx_timeline": "큰 3단계만이 아닌 모든 세부 상태를 Season Pass로.",
     "ctx_predep": "내 목적지 맞춤 체크리스트를 Season Pass로.",
     "ctx_life": "학생들이 공유한 모든 일자리와 방을 Season Pass로.",
-    "ctx_generic": "이 기능은 Season Pass에 포함돼요."
+    "ctx_generic": "이 기능은 Season Pass에 포함돼요.",
+    "chooseTerm": "1개월 또는 한 번 결제로 평생 이용을 선택하세요",
+    "term_monthly": "1개월 이용",
+    "term_lifetime": "한 번 결제 — 평생 소장",
+    "bestValue": "최고 가성비",
+    "termActive_monthly": "월간 패스 · 30일 이용",
+    "termActive_lifetime": "평생 패스 — 영원히 내 것",
+    "sheetCta": "플랜 선택 · {{price}}부터",
+    "row_rewards": "Rewards: 코인·바우처·이벤트 티켓",
+    "row_events": "UniBridge 파티 & 멤버 이벤트"
   },
   "safety": {
     "title": "안전·긴급",

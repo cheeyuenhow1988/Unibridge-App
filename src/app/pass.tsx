@@ -12,8 +12,12 @@ import { Screen } from '@/components/ui/Screen';
 import { Text } from '@/components/ui/Text';
 import { spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/useTheme';
-import { SEASON_PASS_PRICE_USD, VIP_BUNDLE_PRICE_USD, usePlan, usePlanStore } from '@/store/usePlanStore';
+import {
+  SEASON_PASS_LIFETIME_USD, SEASON_PASS_MONTHLY_USD, VIP_BUNDLE_PRICE_USD,
+  type PassTerm, usePlan, usePlanStore,
+} from '@/store/usePlanStore';
 import { toast } from '@/store/useToastStore';
+import { useState } from 'react';
 
 // Light, optimistic — cobalt → emerald, deliberately distinct from the
 // dark-gold VIP arrival bundle so the two offers never blur together.
@@ -21,8 +25,8 @@ const HERO: [string, string] = ['#2447DB', '#0B7A47'];
 const GOLD = '#B8923B';
 const COL = 52;
 
-const APPLY_ROWS = ['match', 'compare', 'apps', 'timeline', 'review', 'team', 'mail', 'predep', 'life', 'community', 'safety'] as const;
-const ARRIVAL_ROWS = ['fastTrack', 'scholar', 'helpline', 'sim', 'bank', 'pickup'] as const;
+const APPLY_ROWS = ['match', 'compare', 'apps', 'timeline', 'review', 'team', 'mail', 'predep', 'life', 'rewards', 'community', 'safety'] as const;
+const ARRIVAL_ROWS = ['fastTrack', 'scholar', 'helpline', 'sim', 'bank', 'pickup', 'events'] as const;
 const FREE_ROWS = new Set(['match', 'community', 'safety']);
 
 export default function SeasonPassScreen() {
@@ -30,6 +34,8 @@ export default function SeasonPassScreen() {
   const { colors } = useTheme();
   const plan = usePlan();
   const purchase = usePlanStore((s) => s.purchase);
+  const passTerm = usePlanStore((s) => s.passTerm);
+  const [term, setTerm] = useState<PassTerm>('lifetime');
 
   const mark = (on: boolean, color: string) => (
     <View style={{ width: COL, alignItems: 'center' }}>
@@ -77,7 +83,7 @@ export default function SeasonPassScreen() {
               </View>
               <View style={{ width: COL, alignItems: 'center' }}>
                 <Text variant="caption" tone="accent">{t('pass.colPass')}</Text>
-                <Text variant="caption" tone="accent">US${SEASON_PASS_PRICE_USD}</Text>
+                <Text variant="caption" tone="accent">US${SEASON_PASS_MONTHLY_USD}+</Text>
               </View>
               <View style={{ width: COL, alignItems: 'center' }}>
                 <Text variant="caption" color={GOLD}>{t('pass.colVip')}</Text>
@@ -93,21 +99,52 @@ export default function SeasonPassScreen() {
           </Card>
 
           <View style={{ alignItems: 'center', gap: 2 }}>
-            <Text variant="display" tone="accent">US${SEASON_PASS_PRICE_USD}</Text>
-            <Text variant="caption" tone="faint">{t('pass.oneTime')}</Text>
+            <Text variant="display" tone="accent">US${SEASON_PASS_MONTHLY_USD}–{SEASON_PASS_LIFETIME_USD}</Text>
+            <Text variant="caption" tone="faint">{t('pass.chooseTerm')}</Text>
           </View>
 
           {plan !== 'free' ? (
-            <Badge tone="eligible" icon="checkmark-circle" label={plan === 'vip' ? t('vip.owned') : t('pass.owned')} />
+            <View style={{ alignItems: 'center', gap: spacing.sm }}>
+              <Badge tone="eligible" icon="checkmark-circle" label={plan === 'vip' ? t('vip.owned') : t('pass.owned')} />
+              {plan === 'season_pass' && passTerm ? (
+                <Text variant="caption" tone="secondary">{t(`pass.termActive_${passTerm}`)}</Text>
+              ) : null}
+            </View>
           ) : (
-            <Button
-              label={t('pass.cta')}
-              size="lg"
-              onPress={() => {
-                purchase();
-                toast(t('pass.purchased'));
-              }}
-            />
+            <>
+              <Row gap={spacing.md}>
+                {(['monthly', 'lifetime'] as const).map((k) => {
+                  const on = term === k;
+                  const price = k === 'monthly' ? SEASON_PASS_MONTHLY_USD : SEASON_PASS_LIFETIME_USD;
+                  return (
+                    <Pressable
+                      key={k}
+                      accessibilityRole="button"
+                      accessibilityState={{ selected: on }}
+                      onPress={() => setTerm(k)}
+                      style={{
+                        flex: 1, borderRadius: 14, borderWidth: 2,
+                        borderColor: on ? colors.accent : colors.border,
+                        backgroundColor: on ? colors.accentSoft : colors.surface,
+                        padding: spacing.lg, gap: 2, alignItems: 'center',
+                      }}
+                    >
+                      {k === 'lifetime' ? <Badge tone="eligible" label={t('pass.bestValue')} /> : null}
+                      <Text variant="title" tone={on ? 'accent' : 'primary'}>US${price}</Text>
+                      <Text variant="caption" tone="secondary" center>{t(`pass.term_${k}`)}</Text>
+                    </Pressable>
+                  );
+                })}
+              </Row>
+              <Button
+                label={t('pass.cta')}
+                size="lg"
+                onPress={() => {
+                  purchase(term);
+                  toast(t('pass.purchased'));
+                }}
+              />
+            </>
           )}
           <Text variant="caption" tone="faint" center>{t('pass.mockNote')}</Text>
 

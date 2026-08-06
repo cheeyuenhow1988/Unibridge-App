@@ -824,7 +824,8 @@
     "entrySub": "優先処理・優先サポート・到着サービス",
     "includesPass": "Season Passの全機能を含む",
     "purchased": "VIP有効化 — 全てが揃いました。",
-    "owned": "VIP有効"
+    "owned": "VIP有効",
+    "benefit_events": "あなたの街でのUniBridgeパーティーやメンバー限定イベントへの招待"
   },
   "rewards": {
     "title": "リワード",
@@ -882,7 +883,13 @@
     "rule_survey": "フィードバックアンケートに回答",
     "rule_monthly": "1か月チェックインボーナス",
     "checkInMonthly": "1か月達成！+🪙 1 + ボーナス🪙 5 🎉",
-    "streakToBonus": "月間ボーナス+🪙 5まであと{{days}}日"
+    "streakToBonus": "月間ボーナス+🪙 5まであと{{days}}日",
+    "lockedHero": "Season Pass特典",
+    "lockedTitle": "RewardsはSeason Passで解放",
+    "lockedBody": "コイン、バッジ、毎日のストリーク、交換はSeason Passの特典です。すでに獲得したコインはすべて保存されています。",
+    "lockedCoins": "🪙 {{coins}}が貯まって待っています",
+    "lockedCta": "Season Passで解放 · {{price}}から",
+    "lockedSub": "Season Pass特典 · 🪙 {{coins}}を保管中"
   },
   "shorts": {
     "title": "ショート",
@@ -897,7 +904,7 @@
   "pass": {
     "title": "Season Pass",
     "headline": "もっと多くの学校へ。もっと手厚いサポートを。",
-    "sub": "出願シーズンまるごと一回払い — サブスクは一切なし。",
+    "sub": "ラストスパートに1か月、または一度の支払いで一生使えます。",
     "colFree": "無料",
     "colPass": "Pass",
     "colVip": "VIP",
@@ -935,7 +942,7 @@
     "row_sim": "着陸時にSIM準備済み",
     "row_bank": "銀行口座の事前手配",
     "row_pickup": "空港送迎",
-    "row_community": "コミュニティ・ショート・リワード",
+    "row_community": "コミュニティ & Shorts",
     "row_safety": "SOS・安全・保護者ビュー",
     "ctx_apply": "2校目に出願しようとしています — Season Passで無制限出願を解放。",
     "ctx_compare": "無料は2件まで比較 — Season Passで最大4件に。",
@@ -944,7 +951,16 @@
     "ctx_timeline": "大きな3ステップだけでなく全サブステータスをSeason Passで。",
     "ctx_predep": "あなたの渡航先専用チェックリストをSeason Passで。",
     "ctx_life": "学生シェアの全ての仕事と部屋をSeason Passで。",
-    "ctx_generic": "この機能はSeason Passに含まれます。"
+    "ctx_generic": "この機能はSeason Passに含まれます。",
+    "chooseTerm": "1か月か、一度の支払いで生涯アクセスかを選択",
+    "term_monthly": "1か月アクセス",
+    "term_lifetime": "一度の支払い — 生涯あなたのもの",
+    "bestValue": "ベストバリュー",
+    "termActive_monthly": "月間パス · 30日間アクセス",
+    "termActive_lifetime": "生涯パス — ずっとあなたのもの",
+    "sheetCta": "プランを選ぶ · {{price}}から",
+    "row_rewards": "Rewards：コイン・クーポン・イベントチケット",
+    "row_events": "UniBridgeパーティー & メンバーイベント"
   },
   "safety": {
     "title": "安全・緊急",

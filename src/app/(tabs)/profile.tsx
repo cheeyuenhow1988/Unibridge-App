@@ -195,13 +195,17 @@ export default function ProfileScreen() {
             </Row>
           </Card>
 
-          <Card onPress={() => router.push('/rewards')} style={{ gap: 4 }}>
+          <Card onPress={() => router.push(plan === 'free' ? '/pass' : '/rewards')} style={{ gap: 4 }}>
             <Row style={{ justifyContent: 'space-between' }}>
-              <Row gap={spacing.sm}>
-                <Ionicons name="trophy-outline" size={20} color={colors.accent} />
-                <View>
+              <Row gap={spacing.sm} style={{ flex: 1 }}>
+                <Ionicons name={plan === 'free' ? 'lock-closed' : 'trophy-outline'} size={20} color={colors.accent} />
+                <View style={{ flex: 1 }}>
                   <Text variant="label">{t('rewards.title')}</Text>
-                  <Text variant="caption" tone="faint">🪙 {coins} · {t('rewards.badgesShort', { count: earnedCount })}</Text>
+                  <Text variant="caption" tone="faint">
+                    {plan === 'free'
+                      ? t('rewards.lockedSub', { coins })
+                      : `🪙 ${coins} · ${t('rewards.badgesShort', { count: earnedCount })}`}
+                  </Text>
                 </View>
               </Row>
               <Ionicons name="chevron-forward" size={16} color={colors.inkFaint} />

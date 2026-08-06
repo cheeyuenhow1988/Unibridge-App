@@ -826,7 +826,8 @@
     "entrySub": "Laluan pantas, bantuan keutamaan & khidmat ketibaan",
     "includesPass": "Termasuk semua dalam Pas Musim",
     "purchased": "VIP diaktifkan — semuanya milik anda.",
-    "owned": "VIP aktif"
+    "owned": "VIP aktif",
+    "benefit_events": "Jemputan ke parti UniBridge dan acara khas ahli di bandar anda"
   },
   "rewards": {
     "title": "Ganjaran",
@@ -884,7 +885,13 @@
     "rule_survey": "Jawab tinjauan maklum balas",
     "rule_monthly": "Bonus daftar masuk sebulan penuh",
     "checkInMonthly": "Genap sebulan! +🪙 1 + bonus 🪙 5 🎉",
-    "streakToBonus": "{{days}} hari lagi untuk bonus bulanan +🪙 5"
+    "streakToBonus": "{{days}} hari lagi untuk bonus bulanan +🪙 5",
+    "lockedHero": "Keistimewaan Season Pass",
+    "lockedTitle": "Rewards dibuka dengan Season Pass",
+    "lockedBody": "Syiling, lencana, streak harian dan tebusan adalah sebahagian daripada Season Pass. Setiap syiling yang anda kumpul kekal tersimpan untuk anda.",
+    "lockedCoins": "🪙 {{coins}} tersimpan menunggu",
+    "lockedCta": "Buka dengan Season Pass · dari {{price}}",
+    "lockedSub": "Keistimewaan Season Pass · 🪙 {{coins}} disimpan untuk anda"
   },
   "shorts": {
     "title": "Shorts",
@@ -899,7 +906,7 @@
   "pass": {
     "title": "Pas Musim",
     "headline": "Mohon lebih banyak sekolah. Dapat lebih sokongan.",
-    "sub": "Belian sekali untuk seluruh kitaran permohonan anda — tiada langganan.",
+    "sub": "Pilih sebulan untuk pecutan akhir, atau bayar sekali dan milik anda seumur hidup.",
     "colFree": "Percuma",
     "colPass": "Pas",
     "colVip": "VIP",
@@ -937,7 +944,7 @@
     "row_sim": "SIM sedia semasa mendarat",
     "row_bank": "Akaun bank disediakan awal",
     "row_pickup": "Jemputan lapangan terbang",
-    "row_community": "Komuniti, Shorts & Ganjaran",
+    "row_community": "Komuniti & Shorts",
     "row_safety": "SOS, keselamatan & paparan ibu bapa",
     "ctx_apply": "Anda cuba memohon sekolah ke-2 — buka permohonan tanpa had dengan Pas Musim.",
     "ctx_compare": "Percuma boleh banding 2 — buka hingga 4 dengan Pas Musim.",
@@ -946,7 +953,16 @@
     "ctx_timeline": "Lihat setiap sub-status dengan Pas Musim.",
     "ctx_predep": "Dapatkan senarai khusus destinasi anda dengan Pas Musim.",
     "ctx_life": "Lihat semua kerja sambilan dan bilik yang dikongsi pelajar dengan Pas Musim.",
-    "ctx_generic": "Ciri ini sebahagian daripada Pas Musim."
+    "ctx_generic": "Ciri ini sebahagian daripada Pas Musim.",
+    "chooseTerm": "Pilih 1 bulan, atau bayar sekali untuk akses seumur hidup",
+    "term_monthly": "Akses 1 bulan",
+    "term_lifetime": "Bayar sekali — milik anda seumur hidup",
+    "bestValue": "PALING BERBALOI",
+    "termActive_monthly": "Pas bulanan · akses 30 hari",
+    "termActive_lifetime": "Pas seumur hidup — milik anda selamanya",
+    "sheetCta": "Pilih pelan anda · dari {{price}}",
+    "row_rewards": "Rewards: syiling, baucar & tiket acara",
+    "row_events": "Parti & acara ahli UniBridge"
   },
   "safety": {
     "title": "Keselamatan & kecemasan",

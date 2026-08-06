@@ -824,7 +824,8 @@
     "entrySub": "Jalur cepat, bantuan prioritas & layanan kedatangan",
     "includesPass": "Termasuk semua di Season Pass",
     "purchased": "VIP aktif — semuanya terbuka.",
-    "owned": "VIP aktif"
+    "owned": "VIP aktif",
+    "benefit_events": "Undangan ke pesta UniBridge dan acara khusus member di kotamu"
   },
   "rewards": {
     "title": "Hadiah",
@@ -882,7 +883,13 @@
     "rule_survey": "Jawab survei umpan balik",
     "rule_monthly": "Bonus check-in sebulan penuh",
     "checkInMonthly": "Genap sebulan! +🪙 1 + bonus 🪙 5 🎉",
-    "streakToBonus": "{{days}} hari lagi menuju bonus bulanan +🪙 5"
+    "streakToBonus": "{{days}} hari lagi menuju bonus bulanan +🪙 5",
+    "lockedHero": "Keunggulan Season Pass",
+    "lockedTitle": "Rewards terbuka dengan Season Pass",
+    "lockedBody": "Koin, lencana, streak harian, dan penukaran adalah bagian dari Season Pass. Semua koin yang sudah Anda kumpulkan tetap tersimpan.",
+    "lockedCoins": "🪙 {{coins}} tersimpan menunggu",
+    "lockedCta": "Buka dengan Season Pass · mulai {{price}}",
+    "lockedSub": "Fitur Season Pass · 🪙 {{coins}} tersimpan untuk Anda"
   },
   "shorts": {
     "title": "Shorts",
@@ -897,7 +904,7 @@
   "pass": {
     "title": "Season Pass",
     "headline": "Daftar ke lebih banyak kampus. Dapat lebih banyak dukungan.",
-    "sub": "Pembelian sekali untuk seluruh siklus aplikasimu — tanpa langganan.",
+    "sub": "Pilih sebulan untuk sprint akhir, atau bayar sekali dan jadi milik Anda seumur hidup.",
     "colFree": "Gratis",
     "colPass": "Pass",
     "colVip": "VIP",
@@ -935,7 +942,7 @@
     "row_sim": "SIM siap saat mendarat",
     "row_bank": "Rekening bank disiapkan",
     "row_pickup": "Penjemputan bandara",
-    "row_community": "Komunitas, Shorts & Hadiah",
+    "row_community": "Komunitas & Shorts",
     "row_safety": "SOS, keselamatan & tampilan orang tua",
     "ctx_apply": "Kamu mencoba mendaftar ke kampus ke-2 — buka aplikasi tanpa batas dengan Season Pass.",
     "ctx_compare": "Gratis bisa membandingkan 2 — buka hingga 4 dengan Season Pass.",
@@ -944,7 +951,16 @@
     "ctx_timeline": "Lihat setiap sub-status dengan Season Pass.",
     "ctx_predep": "Dapatkan daftar khusus destinasimu dengan Season Pass.",
     "ctx_life": "Lihat semua kerja paruh waktu dan kamar yang dibagikan pelajar dengan Season Pass.",
-    "ctx_generic": "Fitur ini bagian dari Season Pass."
+    "ctx_generic": "Fitur ini bagian dari Season Pass.",
+    "chooseTerm": "Pilih 1 bulan, atau bayar sekali untuk akses seumur hidup",
+    "term_monthly": "Akses 1 bulan",
+    "term_lifetime": "Bayar sekali — milik Anda selamanya",
+    "bestValue": "PALING HEMAT",
+    "termActive_monthly": "Paket bulanan · akses 30 hari",
+    "termActive_lifetime": "Paket seumur hidup — milik Anda selamanya",
+    "sheetCta": "Pilih paket · mulai {{price}}",
+    "row_rewards": "Rewards: koin, voucher & tiket acara",
+    "row_events": "Pesta & acara member UniBridge"
   },
   "safety": {
     "title": "Keselamatan & darurat",

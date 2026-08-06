@@ -824,7 +824,8 @@
     "entrySub": "Ưu tiên xét duyệt, hỗ trợ nhanh & dịch vụ khi đến",
     "includesPass": "Bao gồm mọi thứ trong Season Pass",
     "purchased": "VIP đã kích hoạt — bạn có tất cả.",
-    "owned": "VIP đang hoạt động"
+    "owned": "VIP đang hoạt động",
+    "benefit_events": "Lời mời dự tiệc UniBridge và sự kiện riêng cho thành viên tại thành phố của bạn"
   },
   "rewards": {
     "title": "Phần thưởng",
@@ -882,7 +883,13 @@
     "rule_survey": "Trả lời khảo sát phản hồi",
     "rule_monthly": "Thưởng điểm danh tròn tháng",
     "checkInMonthly": "Tròn một tháng! +🪙 1 + thưởng 🪙 5 🎉",
-    "streakToBonus": "Còn {{days}} ngày nữa tới thưởng tháng +🪙 5"
+    "streakToBonus": "Còn {{days}} ngày nữa tới thưởng tháng +🪙 5",
+    "lockedHero": "Đặc quyền Season Pass",
+    "lockedTitle": "Rewards mở khóa cùng Season Pass",
+    "lockedBody": "Xu, huy hiệu, chuỗi điểm danh và đổi thưởng thuộc về Season Pass. Mọi xu bạn đã kiếm vẫn được giữ nguyên cho bạn.",
+    "lockedCoins": "🪙 {{coins}} đang chờ bạn",
+    "lockedCta": "Mở khóa với Season Pass · từ {{price}}",
+    "lockedSub": "Đặc quyền Season Pass · 🪙 {{coins}} đã giữ cho bạn"
   },
   "shorts": {
     "title": "Shorts",
@@ -897,7 +904,7 @@
   "pass": {
     "title": "Season Pass",
     "headline": "Nộp nhiều trường hơn. Được hỗ trợ nhiều hơn.",
-    "sub": "Mua một lần cho cả mùa nộp hồ sơ — không bao giờ có thuê bao.",
+    "sub": "Chọn một tháng cho chặng nước rút, hoặc trả một lần và giữ trọn đời.",
     "colFree": "Miễn phí",
     "colPass": "Pass",
     "colVip": "VIP",
@@ -935,7 +942,7 @@
     "row_sim": "SIM sẵn sàng khi hạ cánh",
     "row_bank": "Mở sẵn tài khoản ngân hàng",
     "row_pickup": "Đón sân bay",
-    "row_community": "Cộng đồng, Shorts & Phần thưởng",
+    "row_community": "Cộng đồng & Shorts",
     "row_safety": "SOS, an toàn & chế độ phụ huynh",
     "ctx_apply": "Bạn đang nộp trường thứ 2 — mở nộp không giới hạn với Season Pass.",
     "ctx_compare": "Miễn phí so sánh 2 — mở tối đa 4 với Season Pass.",
@@ -944,7 +951,16 @@
     "ctx_timeline": "Xem mọi trạng thái chi tiết với Season Pass.",
     "ctx_predep": "Nhận danh sách đúng điểm đến của bạn với Season Pass.",
     "ctx_life": "Xem mọi việc làm thêm và phòng trọ do sinh viên chia sẻ với Season Pass.",
-    "ctx_generic": "Tính năng này thuộc Season Pass."
+    "ctx_generic": "Tính năng này thuộc Season Pass.",
+    "chooseTerm": "Chọn 1 tháng, hoặc trả một lần để dùng trọn đời",
+    "term_monthly": "Truy cập 1 tháng",
+    "term_lifetime": "Trả một lần — của bạn trọn đời",
+    "bestValue": "ĐÁNG GIÁ NHẤT",
+    "termActive_monthly": "Gói tháng · 30 ngày truy cập",
+    "termActive_lifetime": "Gói trọn đời — mãi mãi của bạn",
+    "sheetCta": "Chọn gói · từ {{price}}",
+    "row_rewards": "Rewards: xu, voucher & vé sự kiện",
+    "row_events": "Tiệc & sự kiện thành viên UniBridge"
   },
   "safety": {
     "title": "An toàn & khẩn cấp",

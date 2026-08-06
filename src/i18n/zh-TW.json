@@ -826,7 +826,8 @@
     "entrySub": "快速通道、優先協助與落地服務",
     "includesPass": "包含季票全部功能",
     "purchased": "VIP 已啟用——一切就緒。",
-    "owned": "VIP 已啟用"
+    "owned": "VIP 已啟用",
+    "benefit_events": "受邀參加 UniBridge 在你城市舉辦的派對和會員專屬活動"
   },
   "rewards": {
     "title": "獎勵",
@@ -884,7 +885,13 @@
     "rule_survey": "完成一次回饋問卷",
     "rule_monthly": "整月簽到獎勵",
     "checkInMonthly": "簽滿一個月！+🪙 1 + 獎勵 🪙 5 🎉",
-    "streakToBonus": "再簽 {{days}} 天可得 +🪙 5 月度獎勵"
+    "streakToBonus": "再簽 {{days}} 天可得 +🪙 5 月度獎勵",
+    "lockedHero": "Season Pass 專屬權益",
+    "lockedTitle": "Rewards 需 Season Pass 解鎖",
+    "lockedBody": "金幣、徽章、每日簽到與兌換皆為 Season Pass 權益。你已賺得的每一枚金幣都會保留。",
+    "lockedCoins": "🪙 {{coins}} 已存入待用",
+    "lockedCta": "解鎖 Season Pass · {{price}} 起",
+    "lockedSub": "Season Pass 權益 · 已為你保存 🪙 {{coins}}"
   },
   "shorts": {
     "title": "短影音",
@@ -899,7 +906,7 @@
   "pass": {
     "title": "季票",
     "headline": "申請更多學校，獲得更多支援。",
-    "sub": "一次購買，涵蓋整個申請季——永不訂閱。",
+    "sub": "衝刺期選一個月，或一次付費終身使用。",
     "colFree": "免費",
     "colPass": "季票",
     "colVip": "VIP",
@@ -937,7 +944,7 @@
     "row_sim": "落地即用 SIM 卡",
     "row_bank": "銀行帳戶預先開設",
     "row_pickup": "機場接機",
-    "row_community": "社群、短影音與獎勵",
+    "row_community": "社群與 Shorts",
     "row_safety": "SOS、安全與家長檢視",
     "ctx_apply": "你正在申請第2所學校——用季票解鎖不限量申請。",
     "ctx_compare": "免費版可比較2所——季票解鎖至多4所。",
@@ -946,7 +953,16 @@
     "ctx_timeline": "用季票查看每個細分狀態。",
     "ctx_predep": "用季票取得專屬目的地清單。",
     "ctx_life": "季票解鎖學長姐分享的全部兼職與租屋資訊。",
-    "ctx_generic": "此功能屬於季票權益。"
+    "ctx_generic": "此功能屬於季票權益。",
+    "chooseTerm": "選擇 1 個月，或一次付費終身使用",
+    "term_monthly": "1 個月使用權",
+    "term_lifetime": "一次付費 — 終身擁有",
+    "bestValue": "最划算",
+    "termActive_monthly": "月度通行證 · 30 天使用權",
+    "termActive_lifetime": "終身通行證 — 永久擁有",
+    "sheetCta": "選擇方案 · {{price}} 起",
+    "row_rewards": "Rewards：金幣、優惠券與活動門票",
+    "row_events": "UniBridge 派對與會員活動"
   },
   "safety": {
     "title": "安全與緊急支援",

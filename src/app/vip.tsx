@@ -16,7 +16,7 @@ const CARD_DARK = '#141924';
 const TEXT_SOFT = 'rgba(255,255,255,0.72)';
 
 const BENEFITS = [
-  'fastTrack', 'priority', 'scholarships', 'helpline', 'sim', 'bank', 'pickup',
+  'fastTrack', 'priority', 'scholarships', 'helpline', 'sim', 'bank', 'pickup', 'events',
 ] as const;
 
 export default function VipScreen() {

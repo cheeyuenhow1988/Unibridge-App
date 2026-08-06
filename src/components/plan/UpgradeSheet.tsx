@@ -8,8 +8,7 @@ import { Row } from '@/components/ui/Misc';
 import { Text } from '@/components/ui/Text';
 import { radius, spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/useTheme';
-import { SEASON_PASS_PRICE_USD, usePlanStore } from '@/store/usePlanStore';
-import { toast } from '@/store/useToastStore';
+import { SEASON_PASS_LIFETIME_USD, SEASON_PASS_MONTHLY_USD } from '@/store/usePlanStore';
 
 export type UpgradeContext = 'apply' | 'compare' | 'team' | 'mail' | 'timeline' | 'predep' | 'life' | 'generic';
 
@@ -23,6 +22,7 @@ const COMPARISON: { id: string; free: boolean }[] = [
   { id: 'mail', free: false },
   { id: 'predep', free: false },
   { id: 'life', free: false },
+  { id: 'rewards', free: false },
   { id: 'community', free: true },
   { id: 'safety', free: true },
 ];
@@ -37,7 +37,6 @@ interface Props {
 export function UpgradeSheet({ visible, context, onClose }: Props) {
   const { t } = useTranslation();
   const { colors } = useTheme();
-  const purchase = usePlanStore((s) => s.purchase);
 
   return (
     <Modal visible={visible} animationType="slide" transparent onRequestClose={onClose}>
@@ -87,17 +86,16 @@ export function UpgradeSheet({ visible, context, onClose }: Props) {
           </View>
 
           <View style={{ alignItems: 'center', gap: 2 }}>
-            <Text variant="display" tone="accent">US${SEASON_PASS_PRICE_USD}</Text>
-            <Text variant="caption" tone="faint">{t('pass.oneTime')}</Text>
+            <Text variant="display" tone="accent">US${SEASON_PASS_MONTHLY_USD}–{SEASON_PASS_LIFETIME_USD}</Text>
+            <Text variant="caption" tone="faint">{t('pass.chooseTerm')}</Text>
           </View>
 
           <Button
-            label={t('pass.cta')}
+            label={t('pass.sheetCta', { price: `US$${SEASON_PASS_MONTHLY_USD}` })}
             size="lg"
             onPress={() => {
-              purchase();
-              toast(t('pass.purchased'));
               onClose();
+              router.push('/pass');
             }}
           />
           <Pressable accessibilityRole="button" onPress={() => { onClose(); router.push('/pass'); }}>
