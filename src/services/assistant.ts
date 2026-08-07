@@ -41,9 +41,11 @@ export interface AssistantCtx {
   safety: SafetyBundle;
 }
 
-const WEATHER_RE = /(weather|climate|rain|snow|cold|hot|temperature|cuaca|sejuk|panas|thời tiết|khí hậu|mưa|lạnh|nóng|天气|气候|下雨|冷|热|天氣|氣候|熱)/i;
-const SAFETY_RE = /(safe|safety|crime|danger|selamat|jenayah|bahaya|aman|an toàn|trị an|安全|治安|危险|危險)/i;
-const COST_RE = /(cost|rent|living|expensive|cheap|price|kos|sewa|murah|mahal|biaya|chi phí|tiền thuê|rẻ|đắt|生活费|房租|贵|便宜|生活費|貴)/i;
+// Short tokens are word-bounded: "parent" must not hit "rent", "hotel" must
+// not hit "hot", "management" must not hit "aman".
+const WEATHER_RE = /(weather|climate|\brain\b|\bsnow\b|\bcold\b|\bhot\b|temperature|cuaca|\bsejuk\b|\bpanas\b|thời tiết|khí hậu|mưa|lạnh|nóng|天气|气候|下雨|冷|热|天氣|氣候|熱)/i;
+const SAFETY_RE = /(\bsafe(ty)?\b|\bcrime\b|danger|selamat|jenayah|bahaya|\baman\b|an toàn|trị an|安全|治安|危险|危險)/i;
+const COST_RE = /(\bcost\b|\brent(al)?\b|living cost|cost of living|expensive|\bcheap\b|\bprice\b|\bkos\b|\bsewa\b|murah|mahal|biaya|chi phí|tiền thuê|rẻ|đắt|生活费|房租|贵|便宜|生活費|貴)/i;
 const STUDY_RE = /(what.*(study|course|major)|study what|choose.*(study|course)|belajar apa|tak tahu.*belajar|kuliah apa|nên học gì|học gì|读什么|学什么|不知道读|讀什麼|學什麼|不知道讀)/i;
 const WHERE_RE = /(where.*study|which country|country.*(study|choose)|negara mana|kuliah di mana|học ở đâu|nước nào|去哪.*(读|留学|讀|留學)|哪个国家|哪個國家)/i;
 const BUDGET_RE = /(budget|afford|enough|cukup|bajet|mampu|anggaran|ngân sách|đủ tiền|预算|够|负担|預算|夠|負擔)/i;
@@ -60,7 +62,11 @@ const P_MONEY_RE = /((can'?t|cannot) afford.{0,24}(famil|parent))|(parent|famil)
 const P_HOMESICK_RE = /(homesick|home sick|lonely|alone here|miss (my )?(home|family|mom|mum|dad|parents|friends)|rindu (rumah|keluarga)|kangen (rumah|keluarga)|nhớ nhà|想家|孤独|孤獨|外로|ホームシック)/i;
 const P_NERVOUS_RE = /(nervous|scared|afraid|anxious|worried|takut|cemas|gugup|lo lắng|sợ|紧张|害怕|緊張|불안|긴장|怖い|不安)/i;
 const P_FRIENDS_RE = /(make friends|new friends|\bshy\b|introvert|no one to talk|cari kawan|kết bạn|交朋友|친구 사귀|友達作り)/i;
+const P_IDENTITY_RE = /(\bgay\b|\blesbian\b|\bbisexual\b|\bqueer\b|\btrans(gender)?\b|\blgbt\w*\b|same.sex|sexual orientation|coming out|同性恋|同性戀|đồng tính|성소수자|セクシュアリティ)/i;
 const P_FOOD_RE = /(halal|vegetarian|vegan|makanan halal|đồ ăn chay|清真|素食)/i;
+
+// "whatever I can afford" answers to the budget question.
+const NO_LIMIT_RE = /(no (budget )?limit|unlimited|any (amount|budget)|tak ?(ada|de)? ?had|tiada had|bebas|không giới hạn|thoải mái|没有?(限制|上限)|不限|沒有?(限制|上限)|上限な(し|い)|제한 ?없|ไม่จำกัด|कोई सीमा नहीं|^skip$|later)/i;
 const EMERGENCY_RE = /(police|ambulance|emergency|fire brigade|hotline|polis\b|ambulans|kecemasan|darurat|cảnh sát|cấp cứu|khẩn cấp|警察|救护车|急救|紧急|报警|救護車|緊急|報警|경찰|구급차|응급|긴급|救急車|消防|ตำรวจ|รถพยาบาล|ฉุกเฉิน|पुलिस|एम्बुलेंस|आपातकाल)/i;
 
 const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -106,7 +112,7 @@ function menuChips(ctx: AssistantCtx): QuickReply[] {
   ];
 }
 
-type PersonalKind = 'homesick' | 'nervous' | 'low' | 'money' | 'friends' | 'food';
+type PersonalKind = 'homesick' | 'nervous' | 'low' | 'money' | 'friends' | 'food' | 'identity';
 
 /** Warm, practical answers to personal worries — each with in-app next steps. */
 function personalAnswer(kind: PersonalKind, ctx: AssistantCtx): AssistantReply {
@@ -116,6 +122,11 @@ function personalAnswer(kind: PersonalKind, ctx: AssistantCtx): AssistantReply {
   const safetyHub: QuickReply = { label: t('assistant.chipSafetyHub'), send: t('assistant.chipSafetyHub'), intent: 'safety-hub', route: '/safety' };
   const life: QuickReply = { label: t('assistant.chipLife'), send: t('assistant.chipLife'), intent: 'go-life', route: '/arrival' };
   const budget: QuickReply = { label: t('assistant.chipBudget'), send: t('assistant.chipBudget'), intent: 'budget' };
+  const matchAccepting: QuickReply = {
+    label: t('assistant.chipMatchAccepting'),
+    send: t('assistant.chipMatchAccepting'),
+    intent: 'study-accepting',
+  };
   const chips: Record<PersonalKind, QuickReply[]> = {
     homesick: [groups, mates],
     nervous: [groups, safetyHub],
@@ -123,6 +134,7 @@ function personalAnswer(kind: PersonalKind, ctx: AssistantCtx): AssistantReply {
     money: [budget, life],
     friends: [groups, mates],
     food: [groups],
+    identity: [matchAccepting, groups],
   };
   return { text: t(`assistant.personal_${kind}`), chips: chips[kind] };
 }
@@ -155,6 +167,9 @@ const WHERE_COUNTRIES: Record<string, CountryCode[]> = {
   cool: ['GB', 'NZ', 'RU', 'CA'],
   english: ['AU', 'GB', 'NZ', 'SG', 'US', 'CA'],
   cheap: ['MY', 'TW', 'RU', 'CN'],
+  // Strong legal protections + open campus communities; TW is the most
+  // accepting destination in Asia (first with marriage equality).
+  accepting: ['CA', 'NZ', 'AU', 'GB', 'TW'],
 };
 
 // Free-text field detection for the interview (en + basic ms/zh keywords).
@@ -202,24 +217,53 @@ export function respondWizard(query: string, intent: string | undefined, state: 
         wizard: { stage: 'field' },
       };
     }
-    const amounts = [30000, 60000, 100000].map((usd) => Math.round(convert(usd, 'USD', ctx.home) / 100) * 100);
     return {
       text: t('assistant.wizardAskBudget', { field: label }),
-      chips: [
-        ...amounts.map((a) => ({ label: formatMoney(a, ctx.home), send: formatMoney(a, ctx.home), intent: `wamt:${a}` })),
-        { label: t('assistant.wizardSkip'), send: t('assistant.wizardSkip'), intent: 'wamt:none' },
-      ],
-      wizard: { stage: 'budget', fields, fieldLabel: label },
+      chips: wizardBudgetChips(ctx),
+      // Spread keeps a pre-answered preference (identity-led starts).
+      wizard: { ...state, stage: 'budget', fields, fieldLabel: label },
     };
   }
 
   if (state.stage === 'budget') {
+    // Typed amounts are first-class: "50000", "50k", "RM 48,000" all count.
+    // Unparseable text re-asks instead of silently meaning "no limit".
     let budget: number | null = null;
-    if (intent === 'wamt:none') budget = null;
-    else if (intent?.startsWith('wamt:')) budget = Number(intent.slice(5));
-    else budget = parseAmount(query);
+    let understood = false;
+    if (intent === 'wamt:none') understood = true;
+    else if (intent?.startsWith('wamt:')) {
+      budget = Number(intent.slice(5));
+      understood = true;
+    } else {
+      const parsed = parseAmount(query);
+      if (parsed) {
+        budget = parsed;
+        understood = true;
+      } else if (NO_LIMIT_RE.test(query.trim())) {
+        understood = true;
+      }
+    }
+    if (!understood) {
+      return {
+        text: t('assistant.wizardBudgetUnknown'),
+        chips: wizardBudgetChips(ctx),
+        wizard: state,
+      };
+    }
+    const got = budget
+      ? t('assistant.wizardBudgetGot', { amount: formatMoney(budget, ctx.home) })
+      : t('assistant.wizardBudgetNone');
+    // A question already answered is never asked again — an identity-led
+    // start pre-sets the country preference, so jump straight to the goal.
+    if (state.pref) {
+      return {
+        text: `${got} ${t('assistant.wizardAskGoal')}`,
+        chips: goalChips(ctx),
+        wizard: { ...state, stage: 'goal', budget },
+      };
+    }
     return {
-      text: t('assistant.wizardAskPref'),
+      text: `${got} ${t('assistant.wizardAskPref')}`,
       chips: [
         ...Object.keys(WHERE_COUNTRIES).map((k) => ({
           label: t(`assistant.where_${k}`),
@@ -243,11 +287,7 @@ export function respondWizard(query: string, intent: string | undefined, state: 
     }
     return {
       text: t('assistant.wizardAskGoal'),
-      chips: (['work', 'home', 'unsure'] as const).map((k) => ({
-        label: t(`assistant.goal_${k}`),
-        send: t(`assistant.goal_${k}`),
-        intent: `wgoal:${k}`,
-      })),
+      chips: goalChips(ctx),
       wizard: { ...state, stage: 'goal', pref: prefKey },
     };
   }
@@ -273,8 +313,14 @@ export function respondWizard(query: string, intent: string | undefined, state: 
   let relaxedNote = '';
   let withBudget = state.budget ? pool.filter((r) => annualCost(r, ctx) <= state.budget!) : pool;
   if (withBudget.length === 0 && state.budget) {
-    withBudget = pool;
-    relaxedNote = `\n\n${t('assistant.wizardRelaxed')}`;
+    // Nothing inside the typed budget — do our best anyway: show the
+    // cheapest real options and say honestly how to close the gap.
+    // (Bachelor rows only — recommend() would drop pathway-level rows.)
+    const bachelors = pool.filter((r) => r.course.level === 'bachelor');
+    withBudget = (bachelors.length ? bachelors : pool)
+      .sort((a, b) => annualCost(a, ctx) - annualCost(b, ctx))
+      .slice(0, 3);
+    relaxedNote = `\n\n${t('assistant.wizardClosest', { budget: formatMoney(state.budget, ctx.home) })}`;
   }
   const goalNote =
     goal === 'work' ? `\n\n${t('assistant.goalNoteWork')}` : goal === 'home' ? `\n\n${t('assistant.goalNoteHome')}` : '';
@@ -293,6 +339,23 @@ function interestChips(ctx: AssistantCtx): QuickReply[] {
     send: ctx.t(`assistant.interest_${k}`),
     intent: `interest:${k}`,
   }));
+}
+
+function goalChips(ctx: AssistantCtx): QuickReply[] {
+  return (['work', 'home', 'unsure'] as const).map((k) => ({
+    label: ctx.t(`assistant.goal_${k}`),
+    send: ctx.t(`assistant.goal_${k}`),
+    intent: `wgoal:${k}`,
+  }));
+}
+
+/** Rounded to clean thousands — RM133,000 reads better than RM132,600. */
+function wizardBudgetChips(ctx: AssistantCtx): QuickReply[] {
+  const amounts = [30000, 60000, 100000].map((usd) => Math.round(convert(usd, 'USD', ctx.home) / 1000) * 1000);
+  return [
+    ...amounts.map((a) => ({ label: formatMoney(a, ctx.home), send: formatMoney(a, ctx.home), intent: `wamt:${a}` })),
+    { label: ctx.t('assistant.wizardSkip'), send: ctx.t('assistant.wizardSkip'), intent: 'wamt:none' },
+  ];
 }
 
 /** "Open <uni> ↗" chips — tap to jump to the course page (official website lives there too). */
@@ -383,9 +446,10 @@ function budgetAnswer(amount: number, ctx: AssistantCtx): AssistantReply {
 }
 
 function parseAmount(q: string): number | null {
-  const m = q.replace(/,/g, '').match(/(\d{3,9})(\s*k)?/i);
+  // Accepts "50000", "50,000", "48k", "1.5k" — anything that lands ≥ 1000.
+  const m = q.replace(/,/g, '').match(/(\d{1,9}(?:\.\d+)?)\s*(k\b)?/i);
   if (!m) return null;
-  const n = Number(m[1]) * (m[2] ? 1000 : 1);
+  const n = Math.round(Number(m[1]) * (m[2] ? 1000 : 1));
   return n >= 1000 ? n : null;
 }
 
@@ -423,8 +487,17 @@ export function respond(query: string, ctx: AssistantCtx, intent?: string): Assi
       };
     }
     if (intent.startsWith('p:')) return personalAnswer(intent.slice(2) as PersonalKind, ctx);
+    if (intent === 'study-accepting') {
+      // Interview with the country preference pre-answered — the place
+      // question is skipped because they already told us what matters.
+      return {
+        text: t('assistant.studyAsk'),
+        chips: interestChips(ctx),
+        wizard: { stage: 'field', pref: 'accepting' },
+      };
+    }
     if (intent === 'budget') {
-      const amounts = [30000, 60000, 100000].map((usd) => Math.round(convert(usd, 'USD', ctx.home) / 100) * 100);
+      const amounts = [30000, 60000, 100000].map((usd) => Math.round(convert(usd, 'USD', ctx.home) / 1000) * 1000);
       return {
         text: t('assistant.budgetAsk'),
         chips: amounts.map((a) => ({
@@ -534,6 +607,7 @@ export function respond(query: string, ctx: AssistantCtx, intent?: string): Assi
 
   // Personal worries — after place matching ("is Taipei safe" stays city
   // info) but before study/budget so feelings never get a price list back.
+  if (P_IDENTITY_RE.test(q)) return personalAnswer('identity', ctx);
   if (P_LOW_RE.test(q)) return personalAnswer('low', ctx);
   if (P_MONEY_RE.test(q)) return personalAnswer('money', ctx);
   if (P_HOMESICK_RE.test(q)) return personalAnswer('homesick', ctx);
@@ -544,8 +618,12 @@ export function respond(query: string, ctx: AssistantCtx, intent?: string): Assi
   if (STUDY_RE.test(q)) return respond(query, ctx, 'study');
   if (WHERE_RE.test(q)) return respond(query, ctx, 'where');
 
+  // A bare typed number ("3000", "RM 4,500", "48k") counts as a budget even
+  // below the old threshold — but a bare year like "2027" does not.
   const amount = parseAmount(q);
-  if (amount && (BUDGET_RE.test(q) || amount >= 5000)) return budgetAnswer(amount, ctx);
+  const bareNumber = /^\s*(rm|myr|usd|us\$|\$|sgd|idr|vnd|฿|₹|₱)?\s*[\d.,]+\s*(k|thousand|ribu)?\s*$/i.test(query.trim());
+  const looksLikeYear = amount !== null && amount >= 2024 && amount <= 2035;
+  if (amount && (BUDGET_RE.test(q) || amount >= 5000 || (bareNumber && !looksLikeYear))) return budgetAnswer(amount, ctx);
   if (BUDGET_RE.test(q)) return respond(query, ctx, 'budget');
 
   if (WEATHER_RE.test(q) || SAFETY_RE.test(q) || COST_RE.test(q)) {

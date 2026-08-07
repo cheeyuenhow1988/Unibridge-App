@@ -716,7 +716,14 @@
     "chipLife": "Kehidupan mahasiswa & kerja",
     "chipHomesick": "Aku rindu rumah",
     "chipNervous": "Aku gugup mau pindah",
-    "chipMoney": "Uang lagi seret"
+    "chipMoney": "Uang lagi seret",
+    "wizardBudgetUnknown": "Aku belum menangkap angkanya — ketik seperti 50000 atau 50k (per tahun), atau pilih salah satu:",
+    "wizardBudgetGot": "Oke — sekitar {{amount}} per tahun.",
+    "wizardBudgetNone": "Tanpa batas — siap.",
+    "wizardClosest": "Tidak ada yang masuk dalam {{budget}}, jadi kupilih opsi nyata termurah untuk jawabanmu — beasiswa dan kerja paruh waktu legal bisa membantu menutup selisihnya.",
+    "personal_identity": "Terima kasih sudah mempercayaiku — jati dirimu bukan masalah, dan apa yang kamu bagikan di sini tetap di antara kita 💙 Beberapa destinasi memang dikenal ramah: Kanada, Selandia Baru, Australia, dan Inggris punya hukum anti-diskriminasi yang kuat serta komunitas mahasiswa LGBTQ+ yang aktif di kampus, dan Taiwan termasuk tempat paling terbuka di Asia. Profil UniBridge-mu tidak membagikan apa pun yang tidak kamu pilih untuk dibagikan. Mau kucocokkan jurusan untukmu di negara-negara itu?",
+    "chipMatchAccepting": "Cocokkan aku di negara ramah",
+    "where_accepting": "Ramah LGBTQ+"
   },
   "notFound": {
     "title": "Halaman tidak ditemukan",

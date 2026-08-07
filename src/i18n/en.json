@@ -720,7 +720,14 @@
     "chipLife": "Student life & jobs",
     "chipHomesick": "I feel homesick",
     "chipNervous": "I'm nervous about moving",
-    "chipMoney": "Money is tight"
+    "chipMoney": "Money is tight",
+    "wizardBudgetUnknown": "I didn't catch a number — type it like 50000 or 50k (per year), or tap an option:",
+    "wizardBudgetGot": "Noted — about {{amount}} a year.",
+    "wizardBudgetNone": "No limit — got it.",
+    "wizardClosest": "Nothing fits inside {{budget}} exactly, so I picked the cheapest real options for your answers — scholarships and legal part-time hours can help close the gap.",
+    "personal_identity": "Thank you for trusting me with that — who you are is not a problem, and what you share here stays between us 💙 Some destinations are known for being genuinely welcoming: Canada, New Zealand, Australia and the UK have strong anti-discrimination laws and active LGBTQ+ student communities on campus, and Taiwan is among the most accepting places in Asia. Your UniBridge profile shares nothing you don't choose to share. Want me to match courses for you inside those countries?",
+    "chipMatchAccepting": "Match me in welcoming countries",
+    "where_accepting": "LGBTQ+-welcoming"
   },
   "notFound": {
     "title": "Page not found",

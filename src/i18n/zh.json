@@ -731,7 +731,14 @@
     "chipLife": "学生生活与打工",
     "chipHomesick": "我想家了",
     "chipNervous": "要搬去国外我很紧张",
-    "chipMoney": "手头有点紧"
+    "chipMoney": "手头有点紧",
+    "wizardBudgetUnknown": "我没读到数字 — 请输入例如 50000 或 50k（每年），或点一个选项：",
+    "wizardBudgetGot": "记下了 — 每年约 {{amount}}。",
+    "wizardBudgetNone": "不设上限 — 明白。",
+    "wizardClosest": "没有完全落在 {{budget}} 以内的选择，所以我挑了符合你回答的最便宜的真实选项 — 奖学金和合法兼职时数可以帮你补上差距。",
+    "personal_identity": "谢谢你信任我说出来 — 你是谁不是问题，你在这里说的话只留在我们之间 💙 有些留学目的地以真正的包容著称：加拿大、新西兰、澳大利亚和英国有健全的反歧视法律和活跃的校园 LGBTQ+ 学生社群，台湾是亚洲最开放的地方之一。你的 UniBridge 资料不会分享任何你不选择分享的内容。要我在这些国家里为你匹配课程吗？",
+    "chipMatchAccepting": "在友善的国家帮我匹配",
+    "where_accepting": "对 LGBTQ+ 友善"
   },
   "costsheet": {
     "title": "{{city}}生活费用",

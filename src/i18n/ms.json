@@ -731,7 +731,14 @@
     "chipLife": "Kehidupan pelajar & kerja",
     "chipHomesick": "Saya rindu rumah",
     "chipNervous": "Saya gugup nak berpindah",
-    "chipMoney": "Duit agak sempit"
+    "chipMoney": "Duit agak sempit",
+    "wizardBudgetUnknown": "Saya tak dapat tangkap angkanya — taip seperti 50000 atau 50k (setahun), atau ketik satu pilihan:",
+    "wizardBudgetGot": "Baik — sekitar {{amount}} setahun.",
+    "wizardBudgetNone": "Tiada had — noted.",
+    "wizardClosest": "Tiada yang muat dalam {{budget}}, jadi saya pilih pilihan sebenar paling murah untuk jawapan anda — biasiswa dan kerja sambilan yang sah boleh bantu menutup jurangnya.",
+    "personal_identity": "Terima kasih kerana mempercayai saya — diri anda bukan satu masalah, dan apa yang anda kongsi di sini kekal antara kita 💙 Ada destinasi yang memang dikenali mesra: Kanada, New Zealand, Australia dan UK ada undang-undang anti-diskriminasi yang kuat serta komuniti pelajar LGBTQ+ yang aktif di kampus, dan Taiwan antara tempat paling terbuka di Asia. Profil UniBridge anda tidak berkongsi apa-apa yang anda tidak pilih untuk kongsi. Mahu saya padankan kursus untuk anda dalam negara-negara itu?",
+    "chipMatchAccepting": "Padankan saya di negara mesra",
+    "where_accepting": "Mesra LGBTQ+"
   },
   "costsheet": {
     "title": "Kos sara hidup {{city}}",

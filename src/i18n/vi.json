@@ -716,7 +716,14 @@
     "chipLife": "Đời sống sinh viên & việc làm",
     "chipHomesick": "Mình nhớ nhà",
     "chipNervous": "Mình hồi hộp chuyện chuyển đi",
-    "chipMoney": "Tiền hơi eo hẹp"
+    "chipMoney": "Tiền hơi eo hẹp",
+    "wizardBudgetUnknown": "Mình chưa bắt được con số — gõ kiểu 50000 hoặc 50k (mỗi năm), hoặc chạm một lựa chọn:",
+    "wizardBudgetGot": "Đã ghi — khoảng {{amount}} mỗi năm.",
+    "wizardBudgetNone": "Không giới hạn — đã rõ.",
+    "wizardClosest": "Không có lựa chọn nào nằm trong {{budget}}, nên mình chọn các phương án thật rẻ nhất theo câu trả lời của bạn — học bổng và giờ làm thêm hợp pháp có thể giúp bù khoảng chênh.",
+    "personal_identity": "Cảm ơn bạn đã tin tưởng chia sẻ — con người bạn không phải là vấn đề, và điều bạn nói ở đây chỉ ở giữa chúng ta 💙 Một số điểm đến nổi tiếng thân thiện: Canada, New Zealand, Úc và Anh có luật chống phân biệt đối xử mạnh cùng cộng đồng sinh viên LGBTQ+ năng động trong trường, và Đài Loan thuộc nhóm cởi mở nhất châu Á. Hồ sơ UniBridge của bạn không chia sẻ bất cứ điều gì bạn không chọn chia sẻ. Muốn mình ghép ngành học cho bạn trong các nước đó không?",
+    "chipMatchAccepting": "Ghép mình ở nước thân thiện",
+    "where_accepting": "Thân thiện LGBTQ+"
   },
   "notFound": {
     "title": "Không tìm thấy trang",

@@ -731,7 +731,14 @@
     "chipLife": "學生生活與打工",
     "chipHomesick": "我想家了",
     "chipNervous": "要搬去國外我很緊張",
-    "chipMoney": "手頭有點緊"
+    "chipMoney": "手頭有點緊",
+    "wizardBudgetUnknown": "我沒讀到數字 — 請輸入例如 50000 或 50k（每年），或點一個選項：",
+    "wizardBudgetGot": "記下了 — 每年約 {{amount}}。",
+    "wizardBudgetNone": "不設上限 — 明白。",
+    "wizardClosest": "沒有完全落在 {{budget}} 以內的選擇，所以我挑了符合你回答的最便宜的真實選項 — 獎學金和合法兼職時數可以幫你補上差距。",
+    "personal_identity": "謝謝你信任我說出來 — 你是誰不是問題，你在這裡說的話只留在我們之間 💙 有些留學目的地以真正的包容著稱：加拿大、紐西蘭、澳洲和英國有健全的反歧視法律和活躍的校園 LGBTQ+ 學生社群，台灣是亞洲最開放的地方之一。你的 UniBridge 資料不會分享任何你不選擇分享的內容。要我在這些國家裡為你配對課程嗎？",
+    "chipMatchAccepting": "在友善的國家幫我配對",
+    "where_accepting": "對 LGBTQ+ 友善"
   },
   "costsheet": {
     "title": "{{city}}生活費用",
