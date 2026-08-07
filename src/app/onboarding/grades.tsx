@@ -93,6 +93,16 @@ export default function GradeEntry() {
     <Screen scroll edges={['top', 'bottom']}>
       <View style={{ gap: spacing.xl, paddingTop: spacing.xl }}>
         <View style={{ gap: spacing.sm }}>
+          {/* Back to About-you — picking the wrong system must be fixable. */}
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={t('common.back')}
+            onPress={() => (router.canGoBack() ? router.back() : router.replace('/onboarding/profile'))}
+            hitSlop={10}
+            style={{ alignSelf: 'flex-start' }}
+          >
+            <Ionicons name="chevron-back" size={24} color={colors.ink} />
+          </Pressable>
           <Text variant="title">{t('onboarding.gradesTitle')}</Text>
           <Text variant="body" tone="secondary">
             {system.mode === 'subjects'
