@@ -14,12 +14,13 @@ export interface QuickReply {
   route?: string;
 }
 
-/** Multi-step interview state: field → budget → climate → recommendation. */
+/** Multi-step interview: field → budget → climate → goal → recommendation. */
 export interface WizardState {
-  stage: 'field' | 'budget' | 'pref';
+  stage: 'field' | 'budget' | 'pref' | 'goal';
   fields?: FieldId[];
   fieldLabel?: string;
   budget?: number | null;
+  pref?: string;
 }
 
 export interface AssistantReply {
@@ -47,6 +48,19 @@ const STUDY_RE = /(what.*(study|course|major)|study what|choose.*(study|course)|
 const WHERE_RE = /(where.*study|which country|country.*(study|choose)|negara mana|kuliah di mana|học ở đâu|nước nào|去哪.*(读|留学|讀|留學)|哪个国家|哪個國家)/i;
 const BUDGET_RE = /(budget|afford|enough|cukup|bajet|mampu|anggaran|ngân sách|đủ tiền|预算|够|负担|預算|夠|負擔)/i;
 const GREET_RE = /^(hi|hello|hey|hai|helo|halo|chào|xin chào|你好|哈喽|嗨)\b/i;
+
+// ---- Refusals: friendly but firm, always with the legal alternative. ----
+const CHEAT_RE = /((fake|forg\w*|buy|beli|mua|买|買)\W{0,3}\w{0,24}\W{0,3}(ielts|toefl|visa|document|dokumen|certificate|sijil|degree|ijazah|transcript|result))|((write|do)\s.{0,16}(essay|statement|assignment).{0,12}for me)|((pay|hire).{0,20}(write|essay|assignment))|plagiar|bribe|rasuah|hối lộ|贿|賄|作弊|代写|代寫|\bcheat(ing)?\b/i;
+const ILLEGAL_WORK_RE = /((work|kerja|làm|打工|工作).{0,30}(illegal|haram|cash in hand|under the table|without (a )?(permit|visa)|more (hours|than (i'?m |am )?allowed)|beyond .{0,10}limit))|overstay|((illegal|haram)\W{0,3}(work|job|kerja))|黑工|逾期居留|불법.{0,6}(일|취업)/i;
+const ILLEGAL_OTHER_RE = /(\bdrugs?\b|weed|marijuana|ganja|cocaine|meth\b|dadah|ma túy|毒品|大麻|fake id)/i;
+
+// ---- Personal feelings: supportive, case by case, practical next steps. ----
+const P_LOW_RE = /(depress|suicid|self.?harm|hopeless|cry(ing)?|can'?t sleep|burn(ed|t)? ?out|murung|nak nangis|buồn quá|tuyệt vọng|难受|想哭|撑不住|難受|우울|힘들어|つらい|泣き)/i;
+const P_MONEY_RE = /((can'?t|cannot) afford.{0,24}(famil|parent))|(parent|famil)\w*.{0,24}(no money|can'?t afford|tak mampu|tidak mampu|不够钱|沒錢|没钱)|((worried|stress\w*|risau).{0,16}(money|fees|cost|duit|tiền|钱|錢))|no money for (uni|college|study)/i;
+const P_HOMESICK_RE = /(homesick|home sick|lonely|alone here|miss (my )?(home|family|mom|mum|dad|parents|friends)|rindu (rumah|keluarga)|kangen (rumah|keluarga)|nhớ nhà|想家|孤独|孤獨|外로|ホームシック)/i;
+const P_NERVOUS_RE = /(nervous|scared|afraid|anxious|worried|takut|cemas|gugup|lo lắng|sợ|紧张|害怕|緊張|불안|긴장|怖い|不安)/i;
+const P_FRIENDS_RE = /(make friends|new friends|\bshy\b|introvert|no one to talk|cari kawan|kết bạn|交朋友|친구 사귀|友達作り)/i;
+const P_FOOD_RE = /(halal|vegetarian|vegan|makanan halal|đồ ăn chay|清真|素食)/i;
 const EMERGENCY_RE = /(police|ambulance|emergency|fire brigade|hotline|polis\b|ambulans|kecemasan|darurat|cảnh sát|cấp cứu|khẩn cấp|警察|救护车|急救|紧急|报警|救護車|緊急|報警|경찰|구급차|응급|긴급|救急車|消防|ตำรวจ|รถพยาบาล|ฉุกเฉิน|पुलिस|एम्बुलेंस|आपातकाल)/i;
 
 const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -88,7 +102,43 @@ function menuChips(ctx: AssistantCtx): QuickReply[] {
     { label: t('assistant.chipBudget'), send: t('assistant.chipBudget'), intent: 'budget' },
     { label: t('assistant.chipWeather'), send: t('assistant.chipWeather'), intent: 'city:Melbourne:weather' },
     { label: t('assistant.chipSafety'), send: t('assistant.chipSafety'), intent: 'city:Taipei:safety' },
+    { label: t('assistant.chipTalk'), send: t('assistant.chipTalk'), intent: 'talk' },
   ];
+}
+
+type PersonalKind = 'homesick' | 'nervous' | 'low' | 'money' | 'friends' | 'food';
+
+/** Warm, practical answers to personal worries — each with in-app next steps. */
+function personalAnswer(kind: PersonalKind, ctx: AssistantCtx): AssistantReply {
+  const { t } = ctx;
+  const groups: QuickReply = { label: t('assistant.chipGroups'), send: t('assistant.chipGroups'), intent: 'go-community', route: '/community' };
+  const mates: QuickReply = { label: t('assistant.chipMates'), send: t('assistant.chipMates'), intent: 'go-mates', route: '/community' };
+  const safetyHub: QuickReply = { label: t('assistant.chipSafetyHub'), send: t('assistant.chipSafetyHub'), intent: 'safety-hub', route: '/safety' };
+  const life: QuickReply = { label: t('assistant.chipLife'), send: t('assistant.chipLife'), intent: 'go-life', route: '/arrival' };
+  const budget: QuickReply = { label: t('assistant.chipBudget'), send: t('assistant.chipBudget'), intent: 'budget' };
+  const chips: Record<PersonalKind, QuickReply[]> = {
+    homesick: [groups, mates],
+    nervous: [groups, safetyHub],
+    low: [safetyHub, groups],
+    money: [budget, life],
+    friends: [groups, mates],
+    food: [groups],
+  };
+  return { text: t(`assistant.personal_${kind}`), chips: chips[kind] };
+}
+
+function refuse(kind: 'docs' | 'work' | 'other', ctx: AssistantCtx): AssistantReply {
+  const { t } = ctx;
+  const chips: QuickReply[] =
+    kind === 'docs'
+      ? [{ label: t('assistant.chipStudy'), send: t('assistant.chipStudy'), intent: 'study' }]
+      : kind === 'work'
+        ? [
+            { label: t('assistant.chipLife'), send: t('assistant.chipLife'), intent: 'go-life', route: '/arrival' },
+            { label: t('assistant.chipBudget'), send: t('assistant.chipBudget'), intent: 'budget' },
+          ]
+        : [{ label: t('assistant.chipSafetyHub'), send: t('assistant.chipSafetyHub'), intent: 'safety-hub', route: '/safety' }];
+  return { text: t(`assistant.refuse_${kind}`), chips };
 }
 
 const INTEREST_FIELDS: Record<string, FieldId[]> = {
@@ -182,32 +232,59 @@ export function respondWizard(query: string, intent: string | undefined, state: 
     };
   }
 
-  // Final stage: combine all three answers into one recommendation.
-  let prefKey = intent?.startsWith('wpref:') ? intent.slice(6) : 'any';
-  if (!intent) {
-    const q = query.toLowerCase();
-    if (/(warm|hot|panas|热|暖)/.test(q)) prefKey = 'warm';
-    else if (/(cool|cold|snow|sejuk|冷|凉)/.test(q)) prefKey = 'cool';
-    else if (/(english|inggeris|英语)/.test(q)) prefKey = 'english';
-    else if (/(cheap|murah|便宜|affordable)/.test(q)) prefKey = 'cheap';
+  if (state.stage === 'pref') {
+    let prefKey = intent?.startsWith('wpref:') ? intent.slice(6) : 'any';
+    if (!intent) {
+      const ql = query.toLowerCase();
+      if (/(warm|hot|panas|热|暖)/.test(ql)) prefKey = 'warm';
+      else if (/(cool|cold|snow|sejuk|冷|凉)/.test(ql)) prefKey = 'cool';
+      else if (/(english|inggeris|英语)/.test(ql)) prefKey = 'english';
+      else if (/(cheap|murah|便宜|affordable)/.test(ql)) prefKey = 'cheap';
+    }
+    return {
+      text: t('assistant.wizardAskGoal'),
+      chips: (['work', 'home', 'unsure'] as const).map((k) => ({
+        label: t(`assistant.goal_${k}`),
+        send: t(`assistant.goal_${k}`),
+        intent: `wgoal:${k}`,
+      })),
+      wizard: { ...state, stage: 'goal', pref: prefKey },
+    };
   }
+
+  // Final stage: all four answers → one recommendation.
+  let goal = intent?.startsWith('wgoal:') ? intent.slice(6) : 'unsure';
+  if (!intent) {
+    const ql = query.toLowerCase();
+    if (/(work|job|stay|pr\b|migrate|kerja|làm việc|ở lại|工作|留下|취업|就職)/.test(ql)) goal = 'work';
+    else if (/(home|back|return|balik|pulang|về nước|回国|回國|귀국|帰国)/.test(ql)) goal = 'home';
+  }
+  const prefKey = state.pref ?? 'any';
   const countries = prefKey === 'any' ? null : WHERE_COUNTRIES[prefKey] ?? null;
 
   let pool = ctx.matchData.results.filter((r) => state.fields?.includes(r.course.field));
   if (countries) pool = pool.filter((r) => countries.includes(r.course.country));
+  // "I want to work there after" + no country preference → favor destinations
+  // with real post-study work visa routes.
+  if (goal === 'work' && !countries) {
+    const psw = pool.filter((r) => (['AU', 'CA', 'GB', 'NZ'] as CountryCode[]).includes(r.course.country));
+    if (psw.length >= 3) pool = psw;
+  }
   let relaxedNote = '';
   let withBudget = state.budget ? pool.filter((r) => annualCost(r, ctx) <= state.budget!) : pool;
   if (withBudget.length === 0 && state.budget) {
     withBudget = pool;
     relaxedNote = `\n\n${t('assistant.wizardRelaxed')}`;
   }
+  const goalNote =
+    goal === 'work' ? `\n\n${t('assistant.goalNoteWork')}` : goal === 'home' ? `\n\n${t('assistant.goalNoteHome')}` : '';
   const summary = t('assistant.wizardSummary', {
     field: state.fieldLabel ?? '',
     budget: state.budget ? formatMoney(state.budget, ctx.home) : t('assistant.wizardSkip'),
     pref: prefKey === 'any' ? t('assistant.pref_any') : t(`assistant.where_${prefKey}`),
   });
   const result = recommend(withBudget, ctx, 'assistant.recommendStudy', { system: ctx.profile.qualification.toUpperCase() });
-  return { text: `${summary}\n\n${result.text}${relaxedNote}`, chips: result.chips, wizard: null };
+  return { text: `${summary}\n\n${result.text}${goalNote}${relaxedNote}`, chips: result.chips, wizard: null };
 }
 
 function interestChips(ctx: AssistantCtx): QuickReply[] {
@@ -327,15 +404,25 @@ export function respond(query: string, ctx: AssistantCtx, intent?: string): Assi
       };
     }
     if (intent === 'where') {
+      // "Where" now interviews too — a country pick without knowing the
+      // field, budget and career goal is a guess, not advice.
       return {
-        text: t('assistant.whereAsk'),
-        chips: Object.keys(WHERE_COUNTRIES).map((k) => ({
-          label: t(`assistant.where_${k}`),
-          send: t(`assistant.where_${k}`),
-          intent: `where:${k}`,
-        })),
+        text: t('assistant.wizardWhereIntro'),
+        chips: interestChips(ctx),
+        wizard: { stage: 'field' },
       };
     }
+    if (intent === 'talk') {
+      return {
+        text: t('assistant.personalOpen'),
+        chips: [
+          { label: t('assistant.chipHomesick'), send: t('assistant.chipHomesick'), intent: 'p:homesick' },
+          { label: t('assistant.chipNervous'), send: t('assistant.chipNervous'), intent: 'p:nervous' },
+          { label: t('assistant.chipMoney'), send: t('assistant.chipMoney'), intent: 'p:money' },
+        ],
+      };
+    }
+    if (intent.startsWith('p:')) return personalAnswer(intent.slice(2) as PersonalKind, ctx);
     if (intent === 'budget') {
       const amounts = [30000, 60000, 100000].map((usd) => Math.round(convert(usd, 'USD', ctx.home) / 100) * 100);
       return {
@@ -399,6 +486,12 @@ export function respond(query: string, ctx: AssistantCtx, intent?: string): Assi
     };
   }
 
+  // Anything illegal gets a firm, kind refusal with the legal route — before
+  // place matching, so "work illegally in Melbourne" never becomes city info.
+  if (CHEAT_RE.test(q)) return refuse('docs', ctx);
+  if (ILLEGAL_WORK_RE.test(q)) return refuse('work', ctx);
+  if (ILLEGAL_OTHER_RE.test(q)) return refuse('other', ctx);
+
   // Free-text pipeline: institutions first (longest names win), then cities.
   // Full names match on word boundaries; short acronyms (ICE, UM, MIT) only
   // when typed as standalone capitals — "police" must not hit ICE.
@@ -438,6 +531,15 @@ export function respond(query: string, ctx: AssistantCtx, intent?: string): Assi
     const sub = WEATHER_RE.test(q) ? 'weather' : SAFETY_RE.test(q) ? 'safety' : COST_RE.test(q) ? 'cost' : 'all';
     return cityAnswer(city, sub, ctx);
   }
+
+  // Personal worries — after place matching ("is Taipei safe" stays city
+  // info) but before study/budget so feelings never get a price list back.
+  if (P_LOW_RE.test(q)) return personalAnswer('low', ctx);
+  if (P_MONEY_RE.test(q)) return personalAnswer('money', ctx);
+  if (P_HOMESICK_RE.test(q)) return personalAnswer('homesick', ctx);
+  if (P_FRIENDS_RE.test(q)) return personalAnswer('friends', ctx);
+  if (P_FOOD_RE.test(q)) return personalAnswer('food', ctx);
+  if (P_NERVOUS_RE.test(q)) return personalAnswer('nervous', ctx);
 
   if (STUDY_RE.test(q)) return respond(query, ctx, 'study');
   if (WHERE_RE.test(q)) return respond(query, ctx, 'where');

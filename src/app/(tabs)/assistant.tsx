@@ -86,7 +86,8 @@ export default function AssistantScreen() {
       const wiz = wizardRef.current;
       const wizardTurn =
         wiz &&
-        (intent === undefined || intent.startsWith('interest:') || intent.startsWith('wamt:') || intent.startsWith('wpref:'));
+        (intent === undefined || intent.startsWith('interest:') || intent.startsWith('wamt:') ||
+          intent.startsWith('wpref:') || intent.startsWith('wgoal:'));
       const reply = wizardTurn
         ? respondWizard(text, intent, wiz!, ctx)
         : respond(text, ctx, intent);
