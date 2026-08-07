@@ -4,8 +4,9 @@ import { router } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FlatList, Pressable, StyleSheet, View, useWindowDimensions } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, View, useWindowDimensions } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { BrandLogo } from '@/components/ui/BrandLogo';
 import { Button } from '@/components/ui/Button';
 import { Text } from '@/components/ui/Text';
 import { FLAGS } from '@/constants/countries';
@@ -33,7 +34,7 @@ export default function Welcome() {
   const { width } = useWindowDimensions();
   const [page, setPage] = useState(0);
   const [demoLoading, setDemoLoading] = useState(false);
-  const listRef = useRef<FlatList>(null);
+  const pagerRef = useRef<ScrollView>(null);
 
   const startDemo = async () => {
     setDemoLoading(true);
@@ -56,23 +57,27 @@ export default function Welcome() {
       />
       <StatusBar style="light" />
       <SafeAreaView edges={['top', 'bottom']} style={{ flex: 1 }}>
-        <View style={{ alignItems: 'center', paddingTop: spacing.xl, gap: spacing.xs }}>
-          <Text variant="heading" color={colors.onGradient}>{t('common.appName')}</Text>
+        <View style={{ alignItems: 'center', paddingTop: spacing.xl, gap: spacing.sm }}>
+          <BrandLogo height={30} tone="light" showTagline />
           <Text variant="caption" color={colors.onGradientSoft}>
-            {Object.values(FLAGS).slice(0, 7).join('  ')}
+            {(['AU', 'CA', 'CN', 'GB', 'MY', 'NZ', 'RU', 'SG', 'TW', 'US'] as const)
+              .map((c) => FLAGS[c])
+              .join('  ')}
           </Text>
         </View>
 
-        <FlatList
-          ref={listRef}
-          data={SLIDES}
-          keyExtractor={(s) => s.key}
+        {/* ScrollView + scrollTo, not FlatList scrollToIndex — the latter is
+            a no-op on web, which froze every slide on slogan 01. */}
+        <ScrollView
+          ref={pagerRef}
           horizontal
           pagingEnabled
           showsHorizontalScrollIndicator={false}
+          style={{ flex: 1 }}
           onMomentumScrollEnd={(e) => setPage(Math.round(e.nativeEvent.contentOffset.x / width))}
-          renderItem={({ item, index }) => (
-            <View style={{ width, justifyContent: 'center', padding: spacing.xxl, gap: spacing.xl }}>
+        >
+          {SLIDES.map((item, index) => (
+            <View key={item.key} style={{ width, height: '100%', justifyContent: 'center', padding: spacing.xxl, gap: spacing.xl }}>
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: spacing.sm }}>
                 <View style={{ width: 8, height: 8, borderRadius: radius.full, backgroundColor: colors.pop }} />
                 <Text variant="micro" color={colors.pop} style={{ letterSpacing: 2.5 }}>
@@ -87,8 +92,8 @@ export default function Welcome() {
                 {t(item.body)}
               </Text>
             </View>
-          )}
-        />
+          ))}
+        </ScrollView>
 
         <View style={{ padding: spacing.xl, gap: spacing.lg }}>
           <View style={{ flexDirection: 'row', justifyContent: 'center', gap: spacing.sm }}>
@@ -108,7 +113,7 @@ export default function Welcome() {
             variant="pop"
             onPress={() => {
               if (page < SLIDES.length - 1) {
-                listRef.current?.scrollToIndex({ index: page + 1, animated: true });
+                pagerRef.current?.scrollTo({ x: (page + 1) * width, animated: true });
                 setPage(page + 1);
               } else {
                 router.push('/onboarding/auth');
