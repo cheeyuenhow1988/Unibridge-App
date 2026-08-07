@@ -101,6 +101,7 @@ export function ResultCard({ result, homeCurrency, homeCountryLabel, compareMode
               <Pressable
                 accessibilityRole="checkbox"
                 accessibilityState={{ checked: comparing }}
+                aria-checked={comparing}
                 hitSlop={10}
                 onPress={() => {
                   // Free tier compares 2 side by side; the sheet explains the cap.
