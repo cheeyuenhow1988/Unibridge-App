@@ -738,7 +738,10 @@
     "wizardClosest": "Tiada yang muat dalam {{budget}}, jadi saya pilih pilihan sebenar paling murah untuk jawapan anda — biasiswa dan kerja sambilan yang sah boleh bantu menutup jurangnya.",
     "personal_identity": "Terima kasih kerana mempercayai saya — diri anda bukan satu masalah, dan apa yang anda kongsi di sini kekal antara kita 💙 Ada destinasi yang memang dikenali mesra: Kanada, New Zealand, Australia dan UK ada undang-undang anti-diskriminasi yang kuat serta komuniti pelajar LGBTQ+ yang aktif di kampus, dan Taiwan antara tempat paling terbuka di Asia. Profil UniBridge anda tidak berkongsi apa-apa yang anda tidak pilih untuk kongsi. Mahu saya padankan kursus untuk anda dalam negara-negara itu?",
     "chipMatchAccepting": "Padankan saya di negara mesra",
-    "where_accepting": "Mesra LGBTQ+"
+    "where_accepting": "Mesra LGBTQ+",
+    "personal_privacy": "Saya janji — apa yang anda cakap di sini tidak akan sampai kepada ibu bapa anda 💙 Sembang, padanan dan sebab-sebab anda milik anda seorang. Parent View pun, kalau anda hidupkan, hanya menunjukkan kemajuan permohonan yang ANDA pilih untuk kongsi — bukan perbualan anda. Dalam prototaip ini semuanya kekal dalam peranti anda sendiri. Kisah anda milik anda untuk diceritakan, bila dan jika anda bersedia. Nak kita terus lihat pilihan anda?",
+    "personal_continue": "Saya masih di sini, dan saya dengar 💙 Tak perlu tergesa-gesa, tiada penghakiman — ceritalah lagi bila-bila anda mahu, atau kita lihat pilihan anda bila anda sedia.",
+    "personal_generic": "Bunyinya penting — boleh cerita sikit lagi? Saya di sini untuk anda sebagai insan, bukan sekadar gred anda 💙 Kalau membantu, ini perkara yang pelajar selalu kongsikan dengan saya:"
   },
   "costsheet": {
     "title": "Kos sara hidup {{city}}",

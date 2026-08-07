@@ -28,6 +28,9 @@ export interface AssistantReply {
   chips?: QuickReply[];
   /** Set → screen stores interview state; null → interview finished. */
   wizard?: WizardState | null;
+  /** True when this reply was emotional support — the next unmatched
+   * message then gets a comfort continuation, never the menu dump. */
+  personal?: boolean;
 }
 
 export interface AssistantCtx {
@@ -39,6 +42,8 @@ export interface AssistantCtx {
   flights: FlightFares;
   home: CurrencyCode;
   safety: SafetyBundle;
+  /** Screen-tracked: was the previous assistant reply emotional support? */
+  lastPersonal?: boolean;
 }
 
 // Short tokens are word-bounded: "parent" must not hit "rent", "hotel" must
@@ -63,6 +68,10 @@ const P_HOMESICK_RE = /(homesick|home sick|lonely|alone here|miss (my )?(home|fa
 const P_NERVOUS_RE = /(nervous|scared|afraid|anxious|worried|takut|cemas|gugup|lo lắng|sợ|紧张|害怕|緊張|불안|긴장|怖い|不安)/i;
 const P_FRIENDS_RE = /(make friends|new friends|\bshy\b|introvert|no one to talk|cari kawan|kết bạn|交朋友|친구 사귀|友達作り)/i;
 const P_IDENTITY_RE = /(\bgay\b|\blesbian\b|\bbisexual\b|\bqueer\b|\btrans(gender)?\b|\blgbt\w*\b|same.sex|sexual orientation|coming out|同性恋|同性戀|đồng tính|성소수자|セクシュアリティ)/i;
+// "please don't tell my parents / keep this secret" — a privacy promise, not a menu.
+const P_PRIVACY_RE = /((don'?t|do ?not|cannot|can'?t|jangan|tak (nak|mahu)|不要|別|别).{0,30}(parent|family|mom|mum|dad|keluarga|mak|ibu|bapa|gia đình|bố mẹ|父母|家人|家里|부모|家族).{0,24}(know|tahu|biết|知道|알))|((parent|family|父母|家人).{0,24}(know|find out|tahu|知道))|keep (this|it) (a )?secret|between (us|you and me)|\brahsia\b|bí mật|保密|비밀로|内緒/i;
+// First-person sharing we didn't recognize — meet it with warmth, not a menu.
+const FIRSTPERSON_RE = /(^|\s)(i|i'?m|my|me|saya|aku|mình|我|저는?|나는?|私)\b/i;
 const P_FOOD_RE = /(halal|vegetarian|vegan|makanan halal|đồ ăn chay|清真|素食)/i;
 
 // "whatever I can afford" answers to the budget question.
@@ -112,7 +121,7 @@ function menuChips(ctx: AssistantCtx): QuickReply[] {
   ];
 }
 
-type PersonalKind = 'homesick' | 'nervous' | 'low' | 'money' | 'friends' | 'food' | 'identity';
+type PersonalKind = 'homesick' | 'nervous' | 'low' | 'money' | 'friends' | 'food' | 'identity' | 'privacy' | 'continue' | 'generic';
 
 /** Warm, practical answers to personal worries — each with in-app next steps. */
 function personalAnswer(kind: PersonalKind, ctx: AssistantCtx): AssistantReply {
@@ -127,6 +136,12 @@ function personalAnswer(kind: PersonalKind, ctx: AssistantCtx): AssistantReply {
     send: t('assistant.chipMatchAccepting'),
     intent: 'study-accepting',
   };
+  const talkKinds: QuickReply[] = [
+    { label: t('assistant.chipHomesick'), send: t('assistant.chipHomesick'), intent: 'p:homesick' },
+    { label: t('assistant.chipNervous'), send: t('assistant.chipNervous'), intent: 'p:nervous' },
+    { label: t('assistant.chipMoney'), send: t('assistant.chipMoney'), intent: 'p:money' },
+  ];
+  const study: QuickReply = { label: t('assistant.chipStudy'), send: t('assistant.chipStudy'), intent: 'study' };
   const chips: Record<PersonalKind, QuickReply[]> = {
     homesick: [groups, mates],
     nervous: [groups, safetyHub],
@@ -135,8 +150,11 @@ function personalAnswer(kind: PersonalKind, ctx: AssistantCtx): AssistantReply {
     friends: [groups, mates],
     food: [groups],
     identity: [matchAccepting, groups],
+    privacy: [matchAccepting, groups],
+    continue: [study, groups],
+    generic: talkKinds,
   };
-  return { text: t(`assistant.personal_${kind}`), chips: chips[kind] };
+  return { text: t(`assistant.personal_${kind}`), chips: chips[kind], personal: true };
 }
 
 function refuse(kind: 'docs' | 'work' | 'other', ctx: AssistantCtx): AssistantReply {
@@ -150,7 +168,7 @@ function refuse(kind: 'docs' | 'work' | 'other', ctx: AssistantCtx): AssistantRe
             { label: t('assistant.chipBudget'), send: t('assistant.chipBudget'), intent: 'budget' },
           ]
         : [{ label: t('assistant.chipSafetyHub'), send: t('assistant.chipSafetyHub'), intent: 'safety-hub', route: '/safety' }];
-  return { text: t(`assistant.refuse_${kind}`), chips };
+  return { text: t(`assistant.refuse_${kind}`), chips, personal: true };
 }
 
 const INTEREST_FIELDS: Record<string, FieldId[]> = {
@@ -607,6 +625,7 @@ export function respond(query: string, ctx: AssistantCtx, intent?: string): Assi
 
   // Personal worries — after place matching ("is Taipei safe" stays city
   // info) but before study/budget so feelings never get a price list back.
+  if (P_PRIVACY_RE.test(q)) return personalAnswer('privacy', ctx);
   if (P_IDENTITY_RE.test(q)) return personalAnswer('identity', ctx);
   if (P_LOW_RE.test(q)) return personalAnswer('low', ctx);
   if (P_MONEY_RE.test(q)) return personalAnswer('money', ctx);
@@ -638,6 +657,12 @@ export function respond(query: string, ctx: AssistantCtx, intent?: string): Assi
   if (GREET_RE.test(q)) {
     return { text: t('assistant.greetingShort', { name: ctx.profile.name.split(' ')[0] }), chips: menuChips(ctx) };
   }
+  // Comfort before menus: right after a personal exchange, an unmatched
+  // reply ("okay?", "promise ah") continues the conversation warmly; and a
+  // first-person message we didn't recognize is met as a person, not with
+  // a feature list.
+  if (FIRSTPERSON_RE.test(query) && query.trim().length > 12) return personalAnswer('generic', ctx);
+  if (ctx.lastPersonal) return personalAnswer('continue', ctx);
   return { text: t('assistant.fallback'), chips: menuChips(ctx) };
 }
 

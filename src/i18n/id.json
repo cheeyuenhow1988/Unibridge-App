@@ -723,7 +723,10 @@
     "wizardClosest": "Tidak ada yang masuk dalam {{budget}}, jadi kupilih opsi nyata termurah untuk jawabanmu — beasiswa dan kerja paruh waktu legal bisa membantu menutup selisihnya.",
     "personal_identity": "Terima kasih sudah mempercayaiku — jati dirimu bukan masalah, dan apa yang kamu bagikan di sini tetap di antara kita 💙 Beberapa destinasi memang dikenal ramah: Kanada, Selandia Baru, Australia, dan Inggris punya hukum anti-diskriminasi yang kuat serta komunitas mahasiswa LGBTQ+ yang aktif di kampus, dan Taiwan termasuk tempat paling terbuka di Asia. Profil UniBridge-mu tidak membagikan apa pun yang tidak kamu pilih untuk dibagikan. Mau kucocokkan jurusan untukmu di negara-negara itu?",
     "chipMatchAccepting": "Cocokkan aku di negara ramah",
-    "where_accepting": "Ramah LGBTQ+"
+    "where_accepting": "Ramah LGBTQ+",
+    "personal_privacy": "Aku janji — apa pun yang kamu katakan di sini tidak akan sampai ke orang tuamu 💙 Chat, hasil pencocokan, dan alasanmu sepenuhnya milikmu. Parent View pun, kalau suatu saat kamu nyalakan, hanya menampilkan progres aplikasi yang KAMU pilih untuk dibagikan — tidak pernah percakapanmu. Di prototipe ini semuanya tersimpan di perangkatmu sendiri. Ceritamu milikmu, untuk diceritakan kapan dan jika kamu siap. Mau kita lanjut lihat pilihanmu?",
+    "personal_continue": "Aku masih di sini, dan aku mendengarmu 💙 Tidak perlu buru-buru, tanpa menghakimi — cerita lagi kapan pun kamu mau, atau kita lihat pilihanmu saat kamu siap.",
+    "personal_generic": "Kedengarannya penting — mau cerita sedikit lagi? Aku di sini untukmu sebagai pribadi, bukan cuma nilaimu 💙 Kalau membantu, ini hal-hal yang sering dibicarakan pelajar denganku:"
   },
   "notFound": {
     "title": "Halaman tidak ditemukan",

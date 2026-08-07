@@ -727,7 +727,10 @@
     "wizardClosest": "Nothing fits inside {{budget}} exactly, so I picked the cheapest real options for your answers — scholarships and legal part-time hours can help close the gap.",
     "personal_identity": "Thank you for trusting me with that — who you are is not a problem, and what you share here stays between us 💙 Some destinations are known for being genuinely welcoming: Canada, New Zealand, Australia and the UK have strong anti-discrimination laws and active LGBTQ+ student communities on campus, and Taiwan is among the most accepting places in Asia. Your UniBridge profile shares nothing you don't choose to share. Want me to match courses for you inside those countries?",
     "chipMatchAccepting": "Match me in welcoming countries",
-    "where_accepting": "LGBTQ+-welcoming"
+    "where_accepting": "LGBTQ+-welcoming",
+    "personal_privacy": "I promise — nothing you say here goes to your parents 💙 Your chats, your matches and your reasons are yours alone. Even Parent View, if you ever switch it on, shows only the application progress YOU choose to share — never your conversations. In this prototype everything stays on your own device. Your story is yours to tell, when and if you're ready. Shall we keep looking at your options?",
+    "personal_continue": "I'm still here, and I heard you 💙 No rush and no judgment — tell me more whenever you want, or we can look at your options when you're ready.",
+    "personal_generic": "That sounds like it matters — tell me a bit more? I'm here for you as a person, not just your grades 💙 If it helps, these are things students often talk to me about:"
   },
   "notFound": {
     "title": "Page not found",

@@ -723,7 +723,10 @@
     "wizardClosest": "Không có lựa chọn nào nằm trong {{budget}}, nên mình chọn các phương án thật rẻ nhất theo câu trả lời của bạn — học bổng và giờ làm thêm hợp pháp có thể giúp bù khoảng chênh.",
     "personal_identity": "Cảm ơn bạn đã tin tưởng chia sẻ — con người bạn không phải là vấn đề, và điều bạn nói ở đây chỉ ở giữa chúng ta 💙 Một số điểm đến nổi tiếng thân thiện: Canada, New Zealand, Úc và Anh có luật chống phân biệt đối xử mạnh cùng cộng đồng sinh viên LGBTQ+ năng động trong trường, và Đài Loan thuộc nhóm cởi mở nhất châu Á. Hồ sơ UniBridge của bạn không chia sẻ bất cứ điều gì bạn không chọn chia sẻ. Muốn mình ghép ngành học cho bạn trong các nước đó không?",
     "chipMatchAccepting": "Ghép mình ở nước thân thiện",
-    "where_accepting": "Thân thiện LGBTQ+"
+    "where_accepting": "Thân thiện LGBTQ+",
+    "personal_privacy": "Mình hứa — những gì bạn nói ở đây sẽ không đến tai bố mẹ bạn 💙 Cuộc trò chuyện, kết quả ghép và lý do của bạn là của riêng bạn. Ngay cả Parent View, nếu bạn bật, cũng chỉ hiển thị tiến độ hồ sơ mà BẠN chọn chia sẻ — không bao giờ là cuộc trò chuyện của bạn. Trong bản thử nghiệm này, mọi thứ nằm ngay trên thiết bị của bạn. Câu chuyện của bạn là của bạn, kể khi nào và nếu bạn sẵn sàng. Mình tiếp tục xem các lựa chọn nhé?",
+    "personal_continue": "Mình vẫn ở đây, và mình đã nghe bạn 💙 Không vội, không phán xét — kể thêm bất cứ khi nào bạn muốn, hoặc chúng ta xem các lựa chọn khi bạn sẵn sàng.",
+    "personal_generic": "Nghe có vẻ quan trọng đấy — kể mình nghe thêm chút nhé? Mình ở đây vì con người bạn, không chỉ vì điểm số 💙 Nếu cần gợi ý, đây là những điều các bạn học sinh hay tâm sự với mình:"
   },
   "notFound": {
     "title": "Không tìm thấy trang",

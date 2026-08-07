@@ -23,6 +23,7 @@ import { ALL_CURRENCIES, formatDual, getRatesMeta, homeCurrencyFor } from '@/ser
 import { loadDemoProfile } from '@/store/seedDemo';
 import type { CurrencyCode } from '@/types/models';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
+import { useAssistantLogStore } from '@/store/useAssistantLogStore';
 import { useAuthStore } from '@/store/useAuthStore';
 import { useCommunityStore } from '@/store/useCommunityStore';
 import { useFeedbackStore } from '@/store/useFeedbackStore';
@@ -98,6 +99,7 @@ export default function ProfileScreen() {
           useMailStore.getState().reset();
           usePlanStore.getState().reset();
           useFeedbackStore.getState().reset();
+          useAssistantLogStore.getState().reset();
           router.replace('/onboarding/welcome');
         },
       },

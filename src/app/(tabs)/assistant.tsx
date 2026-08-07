@@ -17,12 +17,24 @@ import { useTheme } from '@/hooks/useTheme';
 import { getFlightFares, getSafety, listCityInfo, listInstitutions } from '@/services/api';
 import { respond, respondWizard, type AssistantCtx, type QuickReply, type WizardState } from '@/services/assistant';
 import { homeCurrencyFor } from '@/services/currency';
+import { useAssistantLogStore } from '@/store/useAssistantLogStore';
 
 interface Msg {
   id: string;
   mine: boolean;
   text: string;
   chips?: QuickReply[];
+  /** ISO timestamp shown under the bubble; restored messages keep theirs. */
+  at?: string;
+}
+
+/** "14:05" for today's messages, "6 Aug · 14:05" for older days. */
+function stamp(iso: string): string {
+  const d = new Date(iso);
+  const hm = `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+  const today = new Date();
+  const sameDay = d.toDateString() === today.toDateString();
+  return sameDay ? hm : `${d.getDate()}/${d.getMonth() + 1} · ${hm}`;
 }
 
 export default function AssistantScreen() {
@@ -42,6 +54,9 @@ export default function AssistantScreen() {
   useEffect(() => {
     wizardRef.current = wizard;
   }, [wizard]);
+  // Whether the previous reply was emotional support — an unmatched
+  // follow-up then gets comfort, never the feature menu.
+  const lastPersonalRef = useRef(false);
 
   const ctx: AssistantCtx | null = useMemo(() => {
     if (!matchData || !profile || !extras.data) return null;
@@ -57,11 +72,19 @@ export default function AssistantScreen() {
     };
   }, [matchData, profile, extras.data, t]);
 
-  // Seed the greeting once everything is ready.
+  // Seed once ready: restore the student's saved conversation (each entry
+  // keeps its date & time), then greet fresh on top.
   /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     if (!ctx || messages) return;
+    const saved = useAssistantLogStore.getState().log.map((m) => ({
+      id: `log-${m.id}`,
+      mine: m.mine,
+      text: m.text,
+      at: m.at,
+    }));
     setMessages([
+      ...saved,
       {
         id: 'a-0',
         mine: false,
@@ -76,7 +99,8 @@ export default function AssistantScreen() {
   const send = (text: string, intent?: string) => {
     if (!ctx || !text.trim()) return;
     idRef.current += 1;
-    const user: Msg = { id: `u-${idRef.current}`, mine: true, text: text.trim() };
+    const user: Msg = { id: `u-${idRef.current}`, mine: true, text: text.trim(), at: new Date().toISOString() };
+    useAssistantLogStore.getState().append([{ id: user.id, mine: true, text: user.text }]);
     setMessages([...(seeded ?? []), user]);
     setDraft('');
     setThinking(true);
@@ -90,13 +114,15 @@ export default function AssistantScreen() {
           intent.startsWith('wpref:') || intent.startsWith('wgoal:'));
       const reply = wizardTurn
         ? respondWizard(text, intent, wiz!, ctx)
-        : respond(text, ctx, intent);
+        : respond(text, { ...ctx, lastPersonal: lastPersonalRef.current }, intent);
+      lastPersonalRef.current = Boolean(reply.personal);
       if (!wizardTurn && wiz && reply.wizard === undefined) setWizard(null);
       if (reply.wizard !== undefined) setWizard(reply.wizard);
       idRef.current += 1;
+      useAssistantLogStore.getState().append([{ id: `a-${idRef.current}`, mine: false, text: reply.text }]);
       setMessages((prev) => [
         ...(prev ?? []),
-        { id: `a-${idRef.current}`, mine: false, text: reply.text, chips: reply.chips },
+        { id: `a-${idRef.current}`, mine: false, text: reply.text, chips: reply.chips, at: new Date().toISOString() },
       ]);
       setThinking(false);
       setTimeout(() => listRef.current?.scrollToEnd({ animated: true }), 60);
@@ -164,6 +190,15 @@ export default function AssistantScreen() {
                 }}
               >
                 <Text variant="body" color={item.mine ? colors.onAccent : colors.ink}>{item.text}</Text>
+                {item.at ? (
+                  <Text
+                    variant="micro"
+                    color={item.mine ? 'rgba(255,255,255,0.7)' : colors.inkFaint}
+                    style={{ alignSelf: 'flex-end', marginTop: 3 }}
+                  >
+                    {stamp(item.at)}
+                  </Text>
+                ) : null}
               </View>
               {!item.mine && item.chips?.length ? (
                 <Row wrap gap={spacing.sm} style={{ paddingRight: spacing.xl }}>
