@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
+import { syncPlanEntitlement } from '@/services/api';
 import { useRewardsStore } from '@/store/useRewardsStore';
 
 export type Plan = 'free' | 'season_pass' | 'vip';
@@ -32,19 +33,29 @@ export const usePlanStore = create<PlanState>()(
     (set, get) => ({
       plan: 'free',
       passTerm: null,
-      setPlan: (plan) => set({ plan }),
+      // Every plan change also asks the sync-entitlement edge function to
+      // record it server-side — a no-op until Supabase is configured.
+      setPlan: (plan) => {
+        set({ plan });
+        void syncPlanEntitlement(plan, get().passTerm);
+      },
       purchase: (term) => {
         if (get().plan !== 'free') return;
         set({ plan: 'season_pass', passTerm: term });
         useRewardsStore.getState().earn('rule_pass_bonus', PASS_BONUS_COINS);
+        void syncPlanEntitlement('season_pass', term);
       },
       purchaseVip: () => {
         const from = get().plan;
         if (from === 'vip') return;
         set({ plan: 'vip' });
         if (from === 'free') useRewardsStore.getState().earn('rule_pass_bonus', PASS_BONUS_COINS);
+        void syncPlanEntitlement('vip', get().passTerm);
       },
-      reset: () => set({ plan: 'free', passTerm: null }),
+      reset: () => {
+        set({ plan: 'free', passTerm: null });
+        void syncPlanEntitlement('free', null);
+      },
     }),
     { name: 'ub-plan', storage: createJSONStorage(() => AsyncStorage) },
   ),

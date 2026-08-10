@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
+import { recordCoinEarn, recordRedemption } from '@/services/api';
 
 export interface CoinEvent {
   id: string;
@@ -35,14 +36,18 @@ export const useRewardsStore = create<RewardsState>()(
       redeemedIds: [],
       lastCheckIn: null,
       streak: 0,
-      earn: (labelId, delta) =>
+      // Local state stays authoritative for the prototype; each event is
+      // also mirrored into the backend's append-only ledger when configured.
+      earn: (labelId, delta) => {
         set((s) => ({
           coins: s.coins + delta,
           history: [
             { id: `evt-${s.history.length + 1}-${labelId}`, labelId, delta, date: todayISO() },
             ...s.history,
           ],
-        })),
+        }));
+        void recordCoinEarn(labelId, delta);
+      },
       redeem: (itemId, price) => {
         const s = get();
         if (s.coins < price || s.redeemedIds.includes(itemId)) return false;
@@ -54,6 +59,7 @@ export const useRewardsStore = create<RewardsState>()(
             ...s.history,
           ],
         });
+        void recordRedemption(itemId, price);
         return true;
       },
       checkIn: () => {
@@ -75,6 +81,8 @@ export const useRewardsStore = create<RewardsState>()(
           coins: s.coins + 1 + (monthly ? 5 : 0),
           history: [...events, ...s.history],
         });
+        void recordCoinEarn('rule_daily', 1);
+        if (monthly) void recordCoinEarn('rule_monthly', 5);
         return monthly ? 'monthly' : 'daily';
       },
       reset: () => set({ coins: 0, history: [], redeemedIds: [], lastCheckIn: null, streak: 0 }),

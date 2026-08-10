@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
+import { joinIntakeGroup } from '@/services/api';
 import type { GroupMessage } from '@/types/models';
 
 export type MateLinkStatus = 'requested' | 'incoming' | 'connected' | 'blocked';
@@ -67,8 +68,10 @@ export const useCommunityStore = create<CommunityState>()(
       mateMessages: {},
       rsvps: [],
       likedPostIds: [],
-      joinGroup: (id) =>
-        set((s) => ({ joinedGroupIds: s.joinedGroupIds.includes(id) ? s.joinedGroupIds : [...s.joinedGroupIds, id] })),
+      joinGroup: (id) => {
+        set((s) => ({ joinedGroupIds: s.joinedGroupIds.includes(id) ? s.joinedGroupIds : [...s.joinedGroupIds, id] }));
+        void joinIntakeGroup(id); // membership row on the backend (no-op unconfigured)
+      },
       leaveGroup: (id) => set((s) => ({ joinedGroupIds: s.joinedGroupIds.filter((x) => x !== id) })),
       sendMessage: (groupId, text, author) =>
         set((s) => ({

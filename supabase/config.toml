@@ -26,3 +26,9 @@ enable_confirmations = false
 [storage]
 enabled = true
 file_size_limit = "10MiB"
+
+# sync-entitlement authenticates INSIDE the function (user JWT or the
+# webhook secret) so store-server notifications without a Supabase JWT can
+# reach it. Gateway-level JWT verification must therefore be off.
+[functions.sync-entitlement]
+verify_jwt = false
