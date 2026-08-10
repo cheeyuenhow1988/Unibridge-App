@@ -1,0 +1,28 @@
+# Supabase CLI project config (written by hand — the CLI binary is not
+# vendored into this repo; run `npx supabase@latest link --project-ref <ref>`
+# locally to attach your project, then `npx supabase db push`).
+project_id = "unibridge"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "storage"]
+extra_search_path = ["public"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 15
+
+[auth]
+enabled = true
+site_url = "https://cheeyuenhow1988.github.io/Unibridge-App"
+enable_signup = true
+
+[auth.email]
+enable_signup = true
+enable_confirmations = false
+
+[storage]
+enabled = true
+file_size_limit = "10MiB"
