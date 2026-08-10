@@ -48,6 +48,22 @@ is a rejection. The standard budget setup:
 - **Stripe** only if we also sell on the web version.
 - Apple's small-business program: 15% commission, not 30%, under US$1M/yr.
 
+## IAP product mapping (our actual catalog)
+
+| Product | Store product type | Notes |
+| --- | --- | --- |
+| Season Pass — 1 month (US$19.99) | **Non-renewing** 30-day purchase (recommended) | Matches the "pay for the final sprint" promise; no auto-renew means no surprise charges for teen users and no cancellation flows to build. Can switch to auto-renew later if data says so. |
+| Season Pass — lifetime (US$69.99) | **Non-consumable** (one-time, forever) | Apple requires a working "Restore purchases" button for this — add it to the pass screen at launch. |
+| VIP (US$199) | **Non-consumable** at launch | Its arrival services (pickup, SIM, bank) might qualify for external payment under the real-world-services rule, but VIP also unlocks in-app features, and mixed bundles invite rejection. Sell as IAP first; restructure only if commission ever justifies the legal review. |
+
+What UniBridge keeps per sale at the 15% small-business rate: monthly
+≈ US$17.00, lifetime ≈ US$59.50, VIP ≈ US$169. Web sales through Stripe
+keep ≈ 96%.
+
+Launch additions this implies (append to the de-mocking list): "Restore
+purchases" button, store-required terms/privacy links on the pass and VIP
+screens, and RevenueCat entitlement checks replacing the local plan store.
+
 ## Cheapest launch path (single Expo codebase, as today)
 
 | Phase | Monthly | One-time |
