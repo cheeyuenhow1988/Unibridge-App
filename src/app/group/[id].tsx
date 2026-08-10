@@ -2,7 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { useLocalSearchParams } from 'expo-router';
 import { goBack } from '@/services/nav';
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FlatList, KeyboardAvoidingView, Platform, Pressable, TextInput, View } from 'react-native';
 import { Row } from '@/components/ui/Misc';
@@ -13,7 +13,10 @@ import { Text } from '@/components/ui/Text';
 import { fonts, radius, spacing } from '@/constants/theme';
 import { useAsync } from '@/hooks/useAsync';
 import { useTheme } from '@/hooks/useTheme';
-import { getIntakeGroup, listGroupMessages } from '@/services/api';
+import {
+  getIntakeGroup, isBackendConfigured, listGroupMessages,
+  sendGroupMessage as deliverGroupMessage, subscribeGroupMessages,
+} from '@/services/api';
 import { useCommunityStore } from '@/store/useCommunityStore';
 import { useProfileStore } from '@/store/useProfileStore';
 import type { GroupMessage } from '@/types/models';
@@ -30,13 +33,34 @@ export default function GroupChat() {
   const localMessages = useCommunityStore((s) => s.localMessages[id] ?? NO_MESSAGES);
   const sendMessage = useCommunityStore((s) => s.sendMessage);
   const [draft, setDraft] = useState('');
+  // Backend mode: this session's optimistic sends + other members' realtime
+  // arrivals, bucketed per group (history rows come from listGroupMessages).
+  // JSON mode keeps using the persisted local store instead.
+  const [live, setLive] = useState<Record<string, GroupMessage[]>>({});
   const listRef = useRef<FlatList>(null);
 
   const state = useAsync(async () => Promise.all([getIntakeGroup(id), listGroupMessages(id)]), [id]);
 
+  const appendLive = (message: GroupMessage) =>
+    setLive((prev) => {
+      const bucket = prev[message.groupId] ?? [];
+      if (bucket.some((m) => m.id === message.id)) return prev;
+      return { ...prev, [message.groupId]: [...bucket, message] };
+    });
+
+  useEffect(() => {
+    if (!isBackendConfigured) return;
+    const unsubscribe = subscribeGroupMessages(id, (message) => {
+      appendLive(message);
+      setTimeout(() => listRef.current?.scrollToEnd({ animated: true }), 50);
+    });
+    return unsubscribe;
+  }, [id]);
+
+  const liveHere = live[id] ?? NO_MESSAGES;
   const messages = useMemo(
-    () => [...(state.data?.[1] ?? []), ...localMessages],
-    [state.data, localMessages],
+    () => [...(state.data?.[1] ?? []), ...(isBackendConfigured ? liveHere : localMessages)],
+    [state.data, localMessages, liveHere],
   );
 
   if (state.loading) {
@@ -59,7 +83,14 @@ export default function GroupChat() {
     const text = draft.trim();
     if (!text) return;
     setDraft('');
-    sendMessage(id, text, profile?.name ?? t('community.you'));
+    const author = profile?.name ?? t('community.you');
+    if (isBackendConfigured) {
+      // Optimistic bubble now; the row lands in Postgres for everyone else.
+      appendLive({ id: `local-${Date.now()}`, groupId: id, author, avatar: '', text, time: new Date().toISOString() });
+      void deliverGroupMessage(id, text, author);
+    } else {
+      sendMessage(id, text, author);
+    }
     setTimeout(() => listRef.current?.scrollToEnd({ animated: true }), 50);
   };
 
