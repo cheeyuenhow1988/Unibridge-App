@@ -3,6 +3,8 @@
 -- Supabase dashboard until an admin tool exists (solo-founder constraint).
 -- Text primary keys keep the prototype's existing ids ('au-monash',
 -- 'au-monash-c1') so every QA-tested route and deep link stays valid.
+-- Columns mirror the REAL mock dataset field-for-field — the seed migrates
+-- with zero data loss.
 
 create table public.institutions (
   id text primary key,
@@ -22,8 +24,8 @@ create table public.institutions (
   wikipedia text,
   logo text,
   qs_rank int,
-  language text,
-  food_mins int,
+  languages jsonb not null default '[]'::jsonb,
+  campuses jsonb not null default '[]'::jsonb,
   photos jsonb not null default '[]'::jsonb
 );
 alter table public.institutions enable row level security;
@@ -40,7 +42,12 @@ create table public.courses (
   duration_years numeric,
   semesters_per_year int,
   annual_tuition_local numeric,
+  tuition_per_semester numeric,
   tuition_currency text,
+  application_fee numeric,
+  one_off_fees jsonb not null default '[]'::jsonb,
+  required_documents jsonb not null default '[]'::jsonb,
+  local_requirement_note text,
   english_requirement jsonb not null default '{}'::jsonb,
   intake_dates jsonb not null default '[]'::jsonb,
   selectivity numeric
@@ -62,43 +69,47 @@ alter table public.entry_requirements enable row level security;
 create policy "entry_requirements: public read" on public.entry_requirements for select using (true);
 create index entry_requirements_course_idx on public.entry_requirements (course_id);
 
--- Recognition data exists per institution × home country in the prototype
--- dataset, so the matrix references institutions (documented deviation from
--- the course-level draft — no per-course recognition data exists to seed).
 create table public.recognition_matrix (
   id bigint generated always as identity primary key,
-  institution_id text not null references public.institutions (id) on delete cascade,
+  course_id text not null references public.courses (id) on delete cascade,
   home_country text not null,
   is_recognized boolean not null,
   notes text,
-  unique (institution_id, home_country)
+  unique (course_id, home_country)
 );
 alter table public.recognition_matrix enable row level security;
 create policy "recognition: public read" on public.recognition_matrix for select using (true);
+create index recognition_course_idx on public.recognition_matrix (course_id);
 
 create table public.cost_of_living (
   id bigint generated always as identity primary key,
   city text not null,
   country text not null,
   rent_monthly numeric not null,
+  rent_options jsonb not null default '[]'::jsonb,
   food_monthly numeric not null,
   transport_monthly numeric not null,
-  insurance_monthly numeric,
+  utilities_monthly numeric,
+  eating_out_meal numeric,
+  insurance_yearly numeric,
   visa_fee_oneoff numeric,
   currency text not null,
+  last_verified text,
+  verified_by text,
   unique (city, country)
 );
 alter table public.cost_of_living enable row level security;
 create policy "col: public read" on public.cost_of_living for select using (true);
 
 create table public.nearby_attractions (
-  id bigint generated always as identity primary key,
+  id text primary key,
   institution_id text not null references public.institutions (id) on delete cascade,
   name text not null,
   type text not null,
-  distance_label text,
+  distance_minutes int,
   description text,
   image_url text,
+  tips text,
   rating numeric,
   review_count int,
   review_snippet text,
@@ -111,12 +122,13 @@ create index attractions_institution_idx on public.nearby_attractions (instituti
 create table public.scholarships (
   id text primary key,
   name text not null,
-  institution_id text references public.institutions (id) on delete set null,
   provider text,
   destination_country text,
+  coverage_type text,
+  percent_tuition numeric,
+  eligibility_note text,
   eligible_nationalities jsonb not null default '[]'::jsonb,
-  field text,
-  amount_or_coverage text,
+  fields jsonb not null default '[]'::jsonb,
   deadline text
 );
 alter table public.scholarships enable row level security;

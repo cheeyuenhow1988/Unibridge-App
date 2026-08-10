@@ -18,6 +18,7 @@ create policy "ambassadors: public read" on public.ambassadors for select using 
 create table public.intake_groups (
   id text primary key,
   institution_id text not null references public.institutions (id) on delete cascade,
+  name text,
   intake_label text not null,
   member_count int not null default 0
 );
@@ -61,6 +62,10 @@ create table public.messages (
   recipient_id uuid references public.profiles (id) on delete cascade,
   sender_id uuid not null,
   sender_type text not null default 'student' check (sender_type in ('student', 'staff', 'ambassador')),
+  -- Denormalized display fields so chat renders without a profiles join
+  -- (and so seeded demo chatter keeps its author names).
+  sender_name text,
+  sender_avatar text,
   body text not null,
   created_at timestamptz not null default now(),
   check (group_id is not null or thread_id is not null)
@@ -88,6 +93,8 @@ create table public.ambassador_posts (
   institution_id text references public.institutions (id) on delete set null,
   caption text not null,
   media_urls jsonb not null default '[]'::jsonb,
+  likes int not null default 0,
+  posted_date text,
   is_reality_check boolean not null default false,
   created_at timestamptz not null default now()
 );
@@ -97,6 +104,7 @@ create policy "posts: public read" on public.ambassador_posts for select using (
 create table public.shorts (
   id text primary key,
   ambassador_id text references public.ambassadors (id) on delete set null,
+  institution_id text references public.institutions (id) on delete set null,
   title text not null,
   video_url text,
   thumbnail_url text,
