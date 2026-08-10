@@ -53,12 +53,12 @@ for (const c of courses) {
     (id, institution_id, name, field, level, campus_city, country, duration_years,
      semesters_per_year, annual_tuition_local, tuition_per_semester, tuition_currency,
      application_fee, one_off_fees, required_documents, local_requirement_note,
-     english_requirement, intake_dates, selectivity) values
+     english_requirement, intake_dates, selectivity, pathway_for) values
     (${q(c.id)}, ${q(c.institutionId)}, ${q(c.name)}, ${q(c.field)}, ${q(c.level)},
      ${q(c.campusCity)}, ${q(c.country)}, ${q(c.durationYears)}, ${q(c.semestersPerYear)},
      ${q(c.tuitionPerYear)}, ${q(c.tuitionPerSemester)}, ${q(c.currency)}, ${q(c.applicationFee)},
      ${j(c.oneOffFees)}, ${j(c.requiredDocuments)}, ${q(c.localRequirementNote)},
-     ${j(c.english)}, ${j(c.intakes)}, ${q(c.selectivity)});`);
+     ${j(c.english)}, ${j(c.intakes)}, ${q(c.selectivity)}, ${j(c.pathwayFor)});`);
   for (const [sys, r] of Object.entries(c.requirements ?? {})) {
     out.push(`insert into public.entry_requirements (course_id, qualification_system, requirement_text, min_value)
       values (${q(c.id)}, ${q(sys)}, ${q(r.display ?? '')}, ${q(r.min)});`);
@@ -73,9 +73,10 @@ for (const c of courses) {
 for (const s of scholarships) {
   out.push(`insert into public.scholarships
     (id, name, provider, destination_country, coverage_type, percent_tuition,
-     eligibility_note, eligible_nationalities, fields, deadline) values
+     eligibility_note, eligible_nationalities, fields, amount, currency, stipend_monthly, link, deadline) values
     (${q(s.id)}, ${q(s.name)}, ${q(s.provider)}, ${q(s.destinationCountry)}, ${q(s.coverageType)},
-     ${q(s.percentTuition)}, ${q(s.eligibilityNote)}, ${j(s.nationalities)}, ${j(s.fields)}, ${q(s.deadline)});`);
+     ${q(s.percentTuition)}, ${q(s.eligibilityNote)}, ${j(s.nationalities)}, ${j(s.fields)},
+     ${q(s.amount)}, ${q(s.currency)}, ${q(s.stipendMonthly)}, ${q(s.link)}, ${q(s.deadline)});`);
 }
 
 // ---- cost of living -------------------------------------------------------
@@ -86,7 +87,7 @@ for (const c of col) {
      last_verified, verified_by) values
     (${q(c.city)}, ${q(c.country)}, ${q(c.rentMonthly)}, ${j(c.rentOptions)}, ${q(c.foodMonthly)},
      ${q(c.transportMonthly)}, ${q(c.utilitiesMonthly)}, ${q(c.eatingOutMeal)}, ${q(c.insuranceYearly)},
-     ${q(c.visaFeeOneOff)}, ${q(c.currency)}, ${q(c.lastVerified)}, ${q(c.verifiedBy)});`);
+     ${q(c.visaFeeOneOff)}, ${q(c.currency)}, ${q(c.lastVerified)}, ${j(c.verifiedBy)});`);
 }
 
 // ---- attractions ----------------------------------------------------------
@@ -95,14 +96,14 @@ for (const a of attractions) {
     (id, institution_id, name, type, distance_minutes, description, image_url, tips,
      rating, review_count, review_snippet, photos) values
     (${q(a.id)}, ${q(a.institutionId)}, ${q(a.name)}, ${q(a.type)}, ${q(a.distanceMinutes)},
-     ${q(a.description)}, ${q(a.image)}, ${q(a.tips)}, ${q(a.rating)}, ${q(a.reviewCount)},
+     ${q(a.description)}, ${q(a.image)}, ${j(a.tips)}, ${q(a.rating)}, ${q(a.reviewCount)},
      ${q(a.reviewSnippet)}, ${j(a.photos)});`);
 }
 
 // ---- ambassadors + posts --------------------------------------------------
 for (const a of ambassadors) {
-  out.push(`insert into public.ambassadors (id, name, institution_id, home_country, course, avatar_url, bio)
-    values (${q(a.id)}, ${q(a.name)}, ${q(a.institutionId)}, ${q(a.homeCountry)}, ${q(a.courseName)}, ${q(a.avatar)}, ${q(a.bio)});`);
+  out.push(`insert into public.ambassadors (id, name, institution_id, home_country, course, year, avatar_url, bio)
+    values (${q(a.id)}, ${q(a.name)}, ${q(a.institutionId)}, ${q(a.homeCountry)}, ${q(a.courseName)}, ${q(a.year)}, ${q(a.avatar)}, ${q(a.bio)});`);
   for (const p of a.posts ?? []) {
     out.push(`insert into public.ambassador_posts
       (id, ambassador_id, institution_id, caption, media_urls, likes, posted_date) values

@@ -89,6 +89,23 @@ if (fs.existsSync(SEED)) {
   ok('seed: all institutions preserved', counts.institutions === src.length, `${counts.institutions}/${src.length}`);
   ok('seed: all courses preserved', counts.courses === srcCourses.length, `${counts.courses}/${srcCourses.length}`);
   ok('seed: entry requirements exploded per system', counts.entry_requirements >= srcCourses.length, `${counts.entry_requirements}`);
+
+  // Content roundtrips — counts alone cannot catch a field that survived as
+  // the wrong shape (e.g. an array flattened into text).
+  const srcAttr = JSON.parse(fs.readFileSync(new URL('../src/data/attractions.json', import.meta.url), 'utf8'));
+  const tipAttr = srcAttr.find((a) => Array.isArray(a.tips) && a.tips.length > 1);
+  const gotTips = await db.query(`select tips from public.nearby_attractions where id = '${tipAttr.id}'`);
+  ok('seed: attraction tips stay a JSON array', JSON.stringify(gotTips.rows[0]?.tips) === JSON.stringify(tipAttr.tips));
+  const srcCol = JSON.parse(fs.readFileSync(new URL('../src/data/costOfLiving.json', import.meta.url), 'utf8'));
+  const verCol = srcCol.find((c) => (c.verifiedBy ?? []).length > 0);
+  const gotVer = await db.query(`select verified_by, rent_options from public.cost_of_living where city = '${verCol.city}' and country = '${verCol.country}'`);
+  ok('seed: col verifiedBy stays a JSON array', JSON.stringify(gotVer.rows[0]?.verified_by) === JSON.stringify(verCol.verifiedBy));
+  ok('seed: col rentOptions object intact', gotVer.rows[0]?.rent_options?.roomSuburb === verCol.rentOptions.roomSuburb);
+  const reqCourse = srcCourses.find((c) => c.requirements && Object.keys(c.requirements).length > 0);
+  const [reqSys, reqVal] = Object.entries(reqCourse.requirements)[0];
+  const gotReq = await db.query(`select requirement_text, min_value from public.entry_requirements
+    where course_id = '${reqCourse.id}' and qualification_system = '${reqSys}'`);
+  ok('seed: entry requirement text+min roundtrip', gotReq.rows[0]?.requirement_text === reqVal.display && Number(gotReq.rows[0]?.min_value) === reqVal.min);
 }
 
 // ---- Signup trigger ------------------------------------------------------

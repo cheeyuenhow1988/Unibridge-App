@@ -50,7 +50,8 @@ create table public.courses (
   local_requirement_note text,
   english_requirement jsonb not null default '{}'::jsonb,
   intake_dates jsonb not null default '[]'::jsonb,
-  selectivity numeric
+  selectivity numeric,
+  pathway_for jsonb not null default '[]'::jsonb
 );
 alter table public.courses enable row level security;
 create policy "courses: public read" on public.courses for select using (true);
@@ -95,7 +96,8 @@ create table public.cost_of_living (
   visa_fee_oneoff numeric,
   currency text not null,
   last_verified text,
-  verified_by text,
+  -- Ambassador ids who confirmed the figures (empty = "Estimated" label).
+  verified_by jsonb not null default '[]'::jsonb,
   unique (city, country)
 );
 alter table public.cost_of_living enable row level security;
@@ -109,7 +111,7 @@ create table public.nearby_attractions (
   distance_minutes int,
   description text,
   image_url text,
-  tips text,
+  tips jsonb not null default '[]'::jsonb,
   rating numeric,
   review_count int,
   review_snippet text,
@@ -129,6 +131,10 @@ create table public.scholarships (
   eligibility_note text,
   eligible_nationalities jsonb not null default '[]'::jsonb,
   fields jsonb not null default '[]'::jsonb,
+  amount numeric,
+  currency text,
+  stipend_monthly numeric,
+  link text,
   deadline text
 );
 alter table public.scholarships enable row level security;

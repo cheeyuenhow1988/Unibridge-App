@@ -9,6 +9,7 @@ create table public.ambassadors (
   institution_id text references public.institutions (id) on delete set null,
   home_country text,
   course text,
+  year int,
   avatar_url text,
   bio text
 );
