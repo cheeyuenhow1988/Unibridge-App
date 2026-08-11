@@ -3,7 +3,11 @@
 # whatever the Supabase/Vercel GitHub connections provisioned.
 # Safe to delete once deployment is set up.
 name: probe-connections
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/unibridge-app-prototype-11m67q]
+    paths: ['.github/workflows/probe-connections.yml']
 permissions: {}
 jobs:
   probe:
