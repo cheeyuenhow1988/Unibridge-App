@@ -10,7 +10,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const MIG_DIR = new URL('../supabase/migrations/', import.meta.url).pathname;
-const SEED = new URL('../supabase/seed.sql', import.meta.url).pathname;
 
 const results = [];
 const ok = (name, pass, extra = '') => {
@@ -68,15 +67,8 @@ await db.exec(`
   grant select, insert, update, delete on storage.objects to authenticated;
 `);
 
-// ---- Seed ----------------------------------------------------------------
-if (fs.existsSync(SEED)) {
-  try {
-    await db.exec(fs.readFileSync(SEED, 'utf8'));
-    ok('seed.sql applies', true);
-  } catch (e) {
-    ok('seed.sql applies', false, String(e.message).slice(0, 200));
-    process.exit(1);
-  }
+// ---- Seed (applied above as migration 0008) ------------------------------
+{
   const counts = {};
   for (const t of ['institutions', 'courses', 'entry_requirements', 'recognition_matrix',
     'cost_of_living', 'nearby_attractions', 'scholarships', 'ambassadors', 'ambassador_posts',
@@ -120,7 +112,7 @@ ok('trigger: profiles auto-created on signup', profs.rows.length === 2 && profs.
 // ---- RLS matrix with two users -------------------------------------------
 // Seed private rows for A as superuser (like the service role would).
 await db.exec(`
-  -- Self-sufficient catalog fixture (does not rely on seed.sql being present)
+  -- Self-sufficient catalog fixture (does not rely on the 0008 seed data)
   insert into public.institutions (id, name, country, city) values ('test-uni', 'Test University', 'AU', 'Testville')
     on conflict (id) do nothing;
   insert into public.courses (id, institution_id, name, field, level) values ('test-uni-c1', 'test-uni', 'Testing BSc', 'it', 'bachelor')

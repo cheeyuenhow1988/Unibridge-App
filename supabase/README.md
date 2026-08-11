@@ -12,7 +12,8 @@ src/services/api.ts         ← screens call this; signatures never change
   ├─ bundled JSON            (default, and the fallback on any error)
   └─ src/services/backendApi.ts → Supabase (when env vars are set)
 supabase/migrations/        ← schema + RLS, one domain per file
-supabase/seed.sql           ← generated from the mock JSON (gen-seed.mjs)
+  └─ 0008_seed_catalog.sql   ← catalog DATA, generated from the mock JSON
+                               (gen-seed.mjs) — applies with the schema
 supabase/functions/         ← sync-entitlement edge function
 scripts/test-migrations.mjs ← 35-check harness: real embedded Postgres
 ```
@@ -25,30 +26,67 @@ the same migration — there is no window where a table exists unprotected.
 The harness proves the policies empirically with two simulated users
 (see "Verifying" below).
 
-## Zero-to-live runbook (~20 minutes, free tier)
+## Deploy via GitHub (recommended — no tools to install)
+
+The repo ships a ready deploy pipeline; it only needs three values from the
+Supabase dashboard, added once as GitHub secrets:
+
+1. On github.com open the repo → **Settings → Secrets and variables →
+   Actions → New repository secret**, and add these three:
+   - `SUPABASE_ACCESS_TOKEN` — create one at
+     [supabase.com/dashboard/account/tokens](https://supabase.com/dashboard/account/tokens)
+     ("Generate new token", any name).
+   - `SUPABASE_PROJECT_REF` — in your project: **Project Settings →
+     General → Reference ID** (short id like `abcdefghijkl`).
+   - `SUPABASE_DB_PASSWORD` — the database password you chose when
+     creating the project (resettable under **Project Settings →
+     Database** if forgotten).
+2. Open the repo's **Actions** tab → **supabase-deploy** → **Run
+   workflow** (branch `claude/unibridge-app-prototype-11m67q`). It applies
+   all migrations (schema + RLS + the full catalog data) and deploys the
+   `sync-entitlement` function. After this, it re-deploys itself on every
+   push that changes `supabase/`.
+3. **Vercel**: the repo's `vercel.json` already makes Vercel build the app
+   correctly. In the Vercel dashboard open the project (or **Add New →
+   Project** and import this repo), then under **Settings → Git** set the
+   Production Branch to `claude/unibridge-app-prototype-11m67q`. To turn
+   the deployed app's backend mode on, either install the **Supabase
+   integration** from Vercel's marketplace (it injects the URL and key
+   automatically — the build maps them) or add two env vars under
+   **Settings → Environment Variables**: `EXPO_PUBLIC_SUPABASE_URL` and
+   `EXPO_PUBLIC_SUPABASE_ANON_KEY` (values from Supabase **Project
+   Settings → API**). Without them Vercel still deploys the bundled-data
+   demo, same as GitHub Pages.
+
+The `probe-connections` workflow is a harmless diagnostic that prints which
+secrets exist (never values) — handy for checking step 1 worked; safe to
+delete anytime.
+
+## Zero-to-live runbook (manual CLI alternative, ~20 minutes, free tier)
 
 1. **Create the project** at [database.new](https://database.new) (free
    tier). Pick a region close to Malaysia (Singapore). Save the database
    password somewhere safe.
 
-2. **Link and push the schema** (from the repo root; the CLI runs via npx —
-   nothing to install):
+2. **Link and push schema + data** (from the repo root; the CLI runs via
+   npx — nothing to install):
 
    ```sh
    npx supabase@latest login
    npx supabase@latest link --project-ref <your-project-ref>
-   npx supabase@latest db push          # applies migrations 0001…0007
+   npx supabase@latest db push          # applies migrations 0001…0008
    ```
 
-3. **Load the seed data.** Regenerate first if the mock JSON changed:
+   Migration `0008_seed_catalog.sql` IS the seed data (102 institutions,
+   868 courses, everything) — schema and content land in one push, and the
+   Supabase **GitHub connection** applies them the same way on push to its
+   configured production branch. It touches catalog tables only, never
+   student data.
 
-   ```sh
-   node scripts/gen-seed.mjs            # writes supabase/seed.sql
-   ```
-
-   Then paste `supabase/seed.sql` into the dashboard's **SQL Editor** and
-   run it (or `psql "$DB_URL" -f supabase/seed.sql`). It is idempotent —
-   it truncates and reinserts the catalog tables only, never student data.
+3. **Regenerating data later:** after `0008` has been applied to a live
+   project it is frozen in the migration history — run
+   `node scripts/gen-seed.mjs`, then move the output to the next free
+   number (e.g. `0009_seed_catalog_v2.sql`) before pushing.
 
 4. **Deploy the entitlement function** and set its webhook secret:
 
@@ -85,7 +123,7 @@ The harness proves the policies empirically with two simulated users
 node scripts/test-migrations.mjs
 ```
 
-Runs every migration + the generated seed against a real embedded Postgres
+Runs every migration (including the generated data) against a real embedded Postgres
 (pglite) with Supabase's `auth.uid()` semantics shimmed, then enforces the
 RLS matrix with two simulated users: profile/grades/documents/applications/
 entitlements/coin isolation, group-message membership gating, message
