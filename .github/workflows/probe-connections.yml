@@ -1,0 +1,37 @@
+# Temporary diagnostic: reports WHICH deployment secrets/vars exist in this
+# repository (true/false only — never a value) so deployment can be wired to
+# whatever the Supabase/Vercel GitHub connections provisioned.
+# Safe to delete once deployment is set up.
+name: probe-connections
+on: workflow_dispatch
+permissions: {}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report which secrets and variables are configured
+        run: |
+          echo "secrets.SUPABASE_ACCESS_TOKEN=${{ secrets.SUPABASE_ACCESS_TOKEN != '' }}"
+          echo "secrets.SUPABASE_TOKEN=${{ secrets.SUPABASE_TOKEN != '' }}"
+          echo "secrets.SUPABASE_PROJECT_REF=${{ secrets.SUPABASE_PROJECT_REF != '' }}"
+          echo "secrets.SUPABASE_PROJECT_ID=${{ secrets.SUPABASE_PROJECT_ID != '' }}"
+          echo "secrets.SUPABASE_DB_PASSWORD=${{ secrets.SUPABASE_DB_PASSWORD != '' }}"
+          echo "secrets.SUPABASE_DB_URL=${{ secrets.SUPABASE_DB_URL != '' }}"
+          echo "secrets.DATABASE_URL=${{ secrets.DATABASE_URL != '' }}"
+          echo "secrets.POSTGRES_URL=${{ secrets.POSTGRES_URL != '' }}"
+          echo "secrets.POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD != '' }}"
+          echo "secrets.SUPABASE_URL=${{ secrets.SUPABASE_URL != '' }}"
+          echo "secrets.SUPABASE_ANON_KEY=${{ secrets.SUPABASE_ANON_KEY != '' }}"
+          echo "secrets.SUPABASE_SERVICE_ROLE_KEY=${{ secrets.SUPABASE_SERVICE_ROLE_KEY != '' }}"
+          echo "secrets.EXPO_PUBLIC_SUPABASE_URL=${{ secrets.EXPO_PUBLIC_SUPABASE_URL != '' }}"
+          echo "secrets.EXPO_PUBLIC_SUPABASE_ANON_KEY=${{ secrets.EXPO_PUBLIC_SUPABASE_ANON_KEY != '' }}"
+          echo "secrets.NEXT_PUBLIC_SUPABASE_URL=${{ secrets.NEXT_PUBLIC_SUPABASE_URL != '' }}"
+          echo "secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY=${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY != '' }}"
+          echo "secrets.VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN != '' }}"
+          echo "secrets.VERCEL_ORG_ID=${{ secrets.VERCEL_ORG_ID != '' }}"
+          echo "secrets.VERCEL_PROJECT_ID=${{ secrets.VERCEL_PROJECT_ID != '' }}"
+          echo "vars.SUPABASE_PROJECT_REF=${{ vars.SUPABASE_PROJECT_REF != '' }}"
+          echo "vars.SUPABASE_URL=${{ vars.SUPABASE_URL != '' }}"
+          echo "vars.SUPABASE_ANON_KEY=${{ vars.SUPABASE_ANON_KEY != '' }}"
+          echo "vars.EXPO_PUBLIC_SUPABASE_URL=${{ vars.EXPO_PUBLIC_SUPABASE_URL != '' }}"
+          echo "vars.EXPO_PUBLIC_SUPABASE_ANON_KEY=${{ vars.EXPO_PUBLIC_SUPABASE_ANON_KEY != '' }}"
