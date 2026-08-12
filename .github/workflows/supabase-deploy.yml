@@ -1,6 +1,8 @@
 # Deploys and VERIFIES the complete UniBridge backend on the connected
 # Supabase project — schema, security rules, all catalog data, the
-# sync-entitlement edge function, and a live two-student security test.
+# sync-entitlement edge function, and a live two-student security test —
+# then builds the web app in live-backend mode and publishes it to
+# GitHub Pages under /live (the root demo stays untouched).
 #
 # Needs exactly ONE repository secret (Settings → Secrets and variables →
 # Actions → New repository secret):
@@ -22,9 +24,10 @@ concurrency: supabase-deploy
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
-      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    outputs:
+      deployed: ${{ steps.run.outputs.deployed }}
+      supabase_url: ${{ steps.run.outputs.supabase_url }}
+      supabase_anon_key: ${{ steps.run.outputs.supabase_anon_key }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -33,4 +36,46 @@ jobs:
       - name: Install supabase-js (for the live realtime check)
         run: npm install --no-save --no-audit --no-fund @supabase/supabase-js
       - name: Deploy + verify backend
+        id: run
+        env:
+          # Scoped to this step only — no other step sees the token.
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
         run: node scripts/deploy-backend.mjs
+
+  # Once the backend is live, build the app against it and publish under
+  # /live on GitHub Pages. Uses only PUBLIC values from the deploy job
+  # (project URL + publishable key — they ship inside the app bundle).
+  publish-live-app:
+    needs: deploy
+    if: needs.deploy.outputs.deployed == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build web app in live-backend mode
+        env:
+          EXPO_PUBLIC_SUPABASE_URL: ${{ needs.deploy.outputs.supabase_url }}
+          EXPO_PUBLIC_SUPABASE_ANON_KEY: ${{ needs.deploy.outputs.supabase_anon_key }}
+        run: |
+          node -e "const fs=require('fs');const j=JSON.parse(fs.readFileSync('app.json','utf8'));(j.expo.experiments??={}).baseUrl='/Unibridge-App/live';fs.writeFileSync('app.json',JSON.stringify(j,null,2));"
+          npx expo export --platform web
+      - name: Publish under /live on GitHub Pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages
+          git worktree add /tmp/ghp origin/gh-pages
+          rm -rf /tmp/ghp/live
+          mkdir -p /tmp/ghp/live
+          cp -r dist/* /tmp/ghp/live/
+          cd /tmp/ghp
+          git add -A
+          git commit -m "deploy live-backend app under /live" || echo "live app unchanged"
+          git push origin HEAD:gh-pages

@@ -46,8 +46,13 @@ needs exactly **one** value:
    at the web app, then **verifies the live database** — seed counts,
    signup trigger, the full two-student RLS matrix through the real API
    gateway, storage folder isolation, entitlement rules, and a live
-   realtime message round-trip (throwaway test users, deleted after).
-   It re-runs itself on every push that changes `supabase/`.
+   realtime message round-trip (throwaway test users, swept afterwards —
+   including leftovers of any crashed earlier run).
+   When verification passes it **builds the app in live-backend mode and
+   publishes it to GitHub Pages under
+   [`/Unibridge-App/live/`](https://cheeyuenhow1988.github.io/Unibridge-App/live/)**
+   — the root demo stays untouched. It re-runs itself on every push that
+   changes `supabase/`.
    If the account has several Supabase projects, add optional secret
    `SUPABASE_PROJECT_REF` (Project Settings → General → Reference ID).
 3. **Vercel**: the repo's `vercel.json` already makes Vercel build the app

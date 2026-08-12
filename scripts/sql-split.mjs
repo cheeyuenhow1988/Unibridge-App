@@ -7,7 +7,7 @@ export function splitStatements(sql) {
   const stmts = [];
   let current = [];
   for (const line of sql.split('\n')) {
-    if (/^(insert|truncate|begin|commit)\b/i.test(line)) {
+    if (/^(insert|truncate|delete|begin|commit)\b/i.test(line)) {
       if (current.length) stmts.push(current.join('\n'));
       current = [line];
     } else if (current.length) {

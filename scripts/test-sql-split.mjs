@@ -14,8 +14,8 @@ const ok = (name, pass, extra = '') => {
 };
 
 ok('splits into many statements', stmts.length > 20000, String(stmts.length));
-const malformed = stmts.filter((s) => !/^(insert|truncate)\b/i.test(s) || !/;\s*$/.test(s));
-ok('every statement starts insert/truncate and ends with ;', malformed.length === 0,
+const malformed = stmts.filter((s) => !/^(insert|truncate|delete)\b/i.test(s) || !/;\s*$/.test(s));
+ok('every statement starts insert/truncate/delete and ends with ;', malformed.length === 0,
   malformed.length ? JSON.stringify(malformed[0].slice(0, 120)) : '');
 
 // Reassembly must equal the original minus comments and begin/commit lines —

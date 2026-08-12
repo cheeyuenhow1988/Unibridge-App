@@ -98,6 +98,34 @@ await db.exec(`
   const gotReq = await db.query(`select requirement_text, min_value from public.entry_requirements
     where course_id = '${reqCourse.id}' and qualification_system = '${reqSys}'`);
   ok('seed: entry requirement text+min roundtrip', gotReq.rows[0]?.requirement_text === reqVal.display && Number(gotReq.rows[0]?.min_value) === reqVal.min);
+
+  // Re-apply safety: 0008 must be harmless on a LIVE database. Give a "real"
+  // student an application, a group membership and a chat message that all
+  // reference seeded rows, apply 0008 again, and prove nothing student-owned
+  // was deleted or cascaded away.
+  const C = '33333333-3333-4333-8333-333333333333';
+  await db.exec(`insert into auth.users (id, email, raw_user_meta_data)
+    values ('${C}', 'c@test.example', '{"name":"Live Student"}'::jsonb);`);
+  const seededCourse = (await db.query('select id from public.courses limit 1')).rows[0].id;
+  const seededGroup = (await db.query('select id from public.intake_groups limit 1')).rows[0].id;
+  await db.exec(`
+    insert into public.applications (student_id, course_id, status) values ('${C}', '${seededCourse}', 'submitted');
+    insert into public.intake_group_members (group_id, student_id) values ('${seededGroup}', '${C}');
+    insert into public.messages (group_id, sender_id, sender_name, body) values ('${seededGroup}', '${C}', 'Live Student', 'my real message');
+  `);
+  const msgsBefore = Number((await db.query('select count(*) c from public.messages')).rows[0].c);
+  await db.exec(fs.readFileSync(path.join(MIG_DIR, fs.readdirSync(MIG_DIR).find((f) => f.startsWith('0008'))), 'utf8'));
+  const appAlive = await db.query(`select 1 from public.applications where student_id = '${C}'`);
+  const memAlive = await db.query(`select 1 from public.intake_group_members where student_id = '${C}'`);
+  const msgAlive = await db.query(`select 1 from public.messages where sender_id = '${C}'`);
+  const msgsAfter = Number((await db.query('select count(*) c from public.messages')).rows[0].c);
+  const instAfter = Number((await db.query('select count(*) c from public.institutions')).rows[0].c);
+  ok('re-apply: student application survives 0008', appAlive.rows.length === 1);
+  ok('re-apply: group membership survives 0008', memAlive.rows.length === 1);
+  ok('re-apply: real chat message survives 0008', msgAlive.rows.length === 1);
+  ok('re-apply: seeded chatter replaced, not duplicated', msgsAfter === msgsBefore, `${msgsAfter}/${msgsBefore}`);
+  ok('re-apply: catalog counts stable', instAfter === src.length, `${instAfter}/${src.length}`);
+  await db.exec(`delete from auth.users where id = '${C}'; delete from public.messages where sender_id = '${C}';`);
 }
 
 // ---- Signup trigger ------------------------------------------------------
