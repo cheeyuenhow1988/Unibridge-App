@@ -185,6 +185,11 @@ this commit — rerun after every schema change.
 
 ## Prototype caveats (deliberate, revisit at launch)
 
+- **Rotate the setup access token before real students onboard.** The
+  original token was shared in a private chat during setup (owner's
+  accepted risk for the prototype). Before launch: generate a fresh token,
+  update the `SUPABASE_ACCESS_TOKEN` GitHub secret, delete the old one.
+
 - **Local state is authoritative.** Stores mirror earns/redemptions/plan
   changes to the backend fire-and-forget; the UI never blocks on it.
   Production flips authority server-side (balance = `sum(delta)` from the
