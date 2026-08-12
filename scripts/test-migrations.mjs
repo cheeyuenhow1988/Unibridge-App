@@ -232,6 +232,13 @@ const bStillBlocked = await as(B, `select * from public.profiles where id = '${A
 ok('admin: student isolation unchanged by admin layer', bStillBlocked.rows?.length === 0);
 const bCatalogWrite = await as(B, "update public.institutions set tagline = 'hax' where id = 'test-uni' returning id");
 ok('admin: non-admin still cannot edit catalog', Boolean(bCatalogWrite.error) || bCatalogWrite.rows?.length === 0);
+const admMedia = await as(D, "insert into storage.objects (bucket_id, name, owner) values ('institution-media', 'test-uni/photo.jpg', auth.uid()) returning id");
+ok('media: admin uploads campus photos', admMedia.rows?.length === 1, admMedia.error ?? '');
+const bMedia = await as(B, "insert into storage.objects (bucket_id, name, owner) values ('institution-media', 'test-uni/hack.jpg', auth.uid()) returning id");
+ok('media: non-admin cannot upload to the media bucket', Boolean(bMedia.error));
+await db.exec(`insert into storage.objects (bucket_id, name, owner) values ('institution-media', 'test-uni/seeded.jpg', '${D}')`);
+const bMediaRead = await as(B, "select count(*) c from storage.objects where bucket_id = 'institution-media'");
+ok('media: everyone can view campus photos', Number(bMediaRead.rows?.[0]?.c) >= 1);
 
 const fails = results.filter((r) => r.startsWith('FAIL'));
 console.log(`\n${results.length - fails.length}/${results.length} passed`);

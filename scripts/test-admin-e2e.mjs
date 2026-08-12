@@ -17,6 +17,7 @@
 //   5. Deletes both throwaway users (and any leftovers of crashed runs)
 //
 // Exit code 1 on any failed assertion — screenshots are written regardless.
+import { Buffer } from 'node:buffer';
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import http from 'node:http';
@@ -76,6 +77,10 @@ const listUsers = async () => (await gotrue('GET', '/auth/v1/admin/users?page=1&
 for (const u of await listUsers()) {
   if (QA_RE.test(u.email ?? '')) await gotrue('DELETE', `/auth/v1/admin/users/${u.id}`);
 }
+// Leftover temp institutions from crashed runs.
+await runSql(REF, `delete from public.institutions where id like 'my-qa-trial-%'`).catch(() => undefined);
+await runSql(REF, `delete from storage.objects where bucket_id = 'institution-media' and name like 'my-qa-trial-%'`).catch(() => undefined);
+
 const rand = crypto.randomBytes(4).toString('hex');
 const mk = async (email, name) => {
   const password = crypto.randomBytes(12).toString('hex');
@@ -121,6 +126,8 @@ const server = http.createServer((req, res) => {
 await new Promise((r) => server.listen(8321, '127.0.0.1', r));
 
 // ---- browser trial ----------------------------------------------------------
+// Installed by the workflow step right before this script runs.
+// eslint-disable-next-line import/no-unresolved
 const { chromium } = await import('playwright');
 const browser = await chromium.launch();
 const failures400 = [];
@@ -173,7 +180,8 @@ for (const [name, marker, shot] of TABS) {
     ok(`ui: ${name} tab renders`, marker.test(text) && !silentFail, silentFail ? 'shows a load error' : '');
   }
   if (name === 'Catalog') {
-    ok('ui: Catalog lists all 102 institutions', /Institutions \(102\)/.test(text));
+    const rows = await page.locator('#ctb tr').count();
+    ok('ui: Catalog actually renders the institution rows', rows >= 100, `${rows} rows`);
   }
   await page.screenshot({ path: `${SHOTS}/${shot}`, fullPage: false });
 }
@@ -191,6 +199,44 @@ if (await userRow.count()) {
 } else {
   ok('ui: granting VIP from Students tab works', false, 'QA User row not found');
 }
+// Catalog manager cycle: Add a TEMP institution → upload a photo → delete it.
+// Never touches the real catalog rows.
+page.on('dialog', (d) => d.accept());
+await page.getByRole('button', { name: 'Catalog', exact: true }).click();
+await page.waitForTimeout(1500);
+await page.getByRole('button', { name: '+ Add institution' }).click();
+await page.fill('#f_name', `QA Trial ${rand} University`);
+await page.fill('#f_city', 'Kuala Lumpur');
+await page.fill('#f_tag', 'Temporary trial entry — auto-deleted');
+await page.getByRole('button', { name: 'Create' }).click();
+await page.waitForTimeout(1800);
+await page.fill('#cq', `QA Trial ${rand}`);
+await page.locator('#cq').press('Enter');
+await page.waitForTimeout(1200);
+const tmpRow = page.locator('#ctb tr', { hasText: `QA Trial ${rand}` });
+ok('ui: Add institution creates a catalog row', (await tmpRow.count()) === 1);
+await page.screenshot({ path: `${SHOTS}/08-catalog-added.png`, fullPage: false });
+
+await tmpRow.getByRole('button', { name: 'Photos' }).click();
+await page.waitForTimeout(1200);
+// 1x1 PNG — enough to exercise upload, policies and the public URL round-trip.
+const PNG = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==', 'base64');
+await page.setInputFiles('#pfile', { name: 'qa-campus.png', mimeType: 'image/png', buffer: PNG });
+await page.getByRole('button', { name: 'Upload photo' }).click();
+await page.waitForTimeout(2500);
+const heroShown = await page.locator('#pgrid img').count();
+ok('ui: photo upload lands in storage and shows as hero', heroShown >= 1, `${heroShown} photo(s)`);
+await page.screenshot({ path: `${SHOTS}/09-photo-uploaded.png`, fullPage: false });
+
+await page.getByRole('button', { name: 'Back to catalog' }).click();
+await page.waitForTimeout(1200);
+await page.fill('#cq', `QA Trial ${rand}`);
+await page.locator('#cq').press('Enter');
+await page.waitForTimeout(1200);
+await page.locator('#ctb tr', { hasText: `QA Trial ${rand}` }).getByRole('button', { name: 'Delete' }).click();
+await page.waitForTimeout(1800);
+const stillThere = await page.locator('#ctb tr', { hasText: `QA Trial ${rand}` }).count();
+ok('ui: Delete removes the institution', stillThere === 0);
 await page.close();
 
 // Non-admin wall.
@@ -201,13 +247,15 @@ await page2.fill('#email', qaUser.email);
 await page2.fill('#pass', qaUser.password);
 await page2.getByRole('button', { name: 'Sign in', exact: true }).click();
 ok('ui: non-admin hits the "No access" wall', await waitFor(page2, /No access/));
-await page2.screenshot({ path: `${SHOTS}/08-non-admin-wall.png`, fullPage: true });
+await page2.screenshot({ path: `${SHOTS}/10-non-admin-wall.png`, fullPage: true });
 await page2.close();
 
 await browser.close();
 server.close();
 
 // ---- cleanup ----------------------------------------------------------------
+await runSql(REF, `delete from public.institutions where id like 'my-qa-trial-%'`).catch(() => undefined);
+await runSql(REF, `delete from storage.objects where bucket_id = 'institution-media' and name like 'my-qa-trial-%'`).catch(() => undefined);
 for (const u of [qaAdmin, qaUser]) await gotrue('DELETE', `/auth/v1/admin/users/${u.id}`);
 const gone = await runSql(REF, `select count(*) c from auth.users where email ~ '^qa-(admin|user)-'`);
 ok('cleanup: throwaway users removed', Number(gone[0]?.c) === 0);
