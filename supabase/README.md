@@ -28,24 +28,28 @@ The harness proves the policies empirically with two simulated users
 
 ## Deploy via GitHub (recommended — no tools to install)
 
-The repo ships a ready deploy pipeline; it only needs three values from the
-Supabase dashboard, added once as GitHub secrets:
+The repo ships a self-verifying deploy pipeline
+(`scripts/deploy-backend.mjs`, run by the `supabase-deploy` workflow). It
+needs exactly **one** value:
 
 1. On github.com open the repo → **Settings → Secrets and variables →
-   Actions → New repository secret**, and add these three:
-   - `SUPABASE_ACCESS_TOKEN` — create one at
+   Actions → New repository secret**:
+   - Name: `SUPABASE_ACCESS_TOKEN`
+   - Value: a personal access token (`sbp_…`) from
      [supabase.com/dashboard/account/tokens](https://supabase.com/dashboard/account/tokens)
      ("Generate new token", any name).
-   - `SUPABASE_PROJECT_REF` — in your project: **Project Settings →
-     General → Reference ID** (short id like `abcdefghijkl`).
-   - `SUPABASE_DB_PASSWORD` — the database password you chose when
-     creating the project (resettable under **Project Settings →
-     Database** if forgotten).
 2. Open the repo's **Actions** tab → **supabase-deploy** → **Run
-   workflow** (branch `claude/unibridge-app-prototype-11m67q`). It applies
-   all migrations (schema + RLS + the full catalog data) and deploys the
-   `sync-entitlement` function. After this, it re-deploys itself on every
-   push that changes `supabase/`.
+   workflow** (branch `claude/unibridge-app-prototype-11m67q`). Over the
+   Supabase Management API (HTTPS only — no database password needed) it:
+   applies all migrations with CLI-compatible version tracking, deploys
+   the `sync-entitlement` function, sets the webhook secret, points auth
+   at the web app, then **verifies the live database** — seed counts,
+   signup trigger, the full two-student RLS matrix through the real API
+   gateway, storage folder isolation, entitlement rules, and a live
+   realtime message round-trip (throwaway test users, deleted after).
+   It re-runs itself on every push that changes `supabase/`.
+   If the account has several Supabase projects, add optional secret
+   `SUPABASE_PROJECT_REF` (Project Settings → General → Reference ID).
 3. **Vercel**: the repo's `vercel.json` already makes Vercel build the app
    correctly. In the Vercel dashboard open the project (or **Add New →
    Project** and import this repo), then under **Settings → Git** set the
