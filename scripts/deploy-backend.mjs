@@ -252,7 +252,10 @@ console.log('== Public client config (safe to publish — it ships inside the we
 console.log(`EXPO_PUBLIC_SUPABASE_URL=${URL_BASE}`);
 console.log(`EXPO_PUBLIC_SUPABASE_ANON_KEY=${anonKey}`);
 console.log('');
-ghOutput({ deployed: 'true', supabase_url: URL_BASE, supabase_anon_key: anonKey });
+// Handed to the app-build job as an artifact file: GitHub refuses key-shaped
+// job outputs ("may contain secret"), even for the public publishable key.
+fs.writeFileSync('live-config.env', `EXPO_PUBLIC_SUPABASE_URL=${URL_BASE}\nEXPO_PUBLIC_SUPABASE_ANON_KEY=${anonKey}\n`);
+ghOutput({ deployed: 'true', supabase_url: URL_BASE });
 
 // ------------------------------------------------------------- auth config
 
@@ -306,6 +309,34 @@ async function sweepTestData(label) {
     }
   } catch (e) {
     if (label === 'final') ok('cleanup: all test students removed', false, String(e.message).slice(0, 160));
+  }
+}
+
+// ------------------------------------------------- back-office admin invite
+
+// Optional: workflow_dispatch input admin_email → create/invite the account
+// and grant back-office access (admin_users row). The invite email goes to
+// that address only; nothing sensitive is printed.
+const adminEmail = (process.env.ADMIN_EMAIL ?? '').trim();
+if (adminEmail) {
+  const list = await admin('GET', '/auth/v1/admin/users?page=1&per_page=200');
+  let adminUser = (list.data?.users ?? []).find((u) => (u.email ?? '').toLowerCase() === adminEmail.toLowerCase());
+  if (!adminUser) {
+    const inv = await admin('POST', `/auth/v1/invite?redirect_to=${encodeURIComponent(`${PAGES_URL}/admin/`)}`,
+      { email: adminEmail, data: { name: 'UniBridge Admin' } });
+    if (inv.status < 300 && inv.data?.id) {
+      adminUser = inv.data;
+      ok('admin: invitation email sent', true, adminEmail);
+    } else {
+      ok('admin: invitation email sent', false, `HTTP ${inv.status} ${JSON.stringify(inv.data).slice(0, 160)}`);
+    }
+  } else {
+    ok('admin: account already exists', true, adminEmail);
+  }
+  if (adminUser?.id) {
+    await runSql(REF, `insert into public.admin_users (user_id, role) values ('${adminUser.id}', 'owner')
+      on conflict (user_id) do nothing`, 'admin grant');
+    ok('admin: back-office access granted', true, adminEmail);
   }
 }
 
@@ -416,38 +447,51 @@ try {
   ok('storage: A reads own file back', r.status === 200 && String(r.data).includes('owned by A'), `HTTP ${r.status}`);
 
   // Realtime: B subscribes to the group channel (awaiting the SUBSCRIBED
-  // ack — no fixed-sleep race), A inserts, B must hear it. Bodies of other
-  // people's rows are never printed.
+  // ack — no fixed-sleep race), A inserts, B must hear it. The realtime
+  // socket explicitly carries B's JWT (RLS filters events by it), and the
+  // whole check retries once: a brand-new project's first-ever realtime
+  // subscription can miss events while its change poller cold-starts.
+  // Bodies of other people's rows are never printed.
   try {
     const { createClient } = await import('@supabase/supabase-js');
     const clientB = createClient(URL_BASE, anonKey, { auth: { persistSession: false } });
-    const { error: signInErr } = await clientB.auth.signInWithPassword({ email: userB.email, password: userB.password });
+    const { data: signInData, error: signInErr } = await clientB.auth.signInWithPassword({ email: userB.email, password: userB.password });
     if (signInErr) throw new Error(`realtime sign-in failed: ${signInErr.message}`);
-    const probe = `realtime-${rand}`;
-    let resolveGot;
-    const got = new Promise((resolve) => { resolveGot = resolve; });
-    const timer = setTimeout(() => resolveGot('timeout'), 20000);
-    const channel = clientB.channel(`grp-${GRP}`);
-    channel.on('postgres_changes',
-      { event: 'INSERT', schema: 'public', table: 'messages', filter: `group_id=eq.${GRP}` },
-      (payload) => {
-        if (payload.new?.body === probe) { clearTimeout(timer); resolveGot('received'); }
+    await clientB.realtime.setAuth(signInData.session.access_token);
+    let outcome = 'not attempted';
+    for (let attempt = 1; attempt <= 2 && outcome !== 'received'; attempt++) {
+      const probe = `realtime-${rand}-${attempt}`;
+      let resolveGot;
+      const got = new Promise((resolve) => { resolveGot = resolve; });
+      const channel = clientB.channel(`grp-${GRP}-${attempt}`);
+      channel.on('postgres_changes',
+        { event: 'INSERT', schema: 'public', table: 'messages', filter: `group_id=eq.${GRP}` },
+        (payload) => {
+          if (payload.new?.body === probe) resolveGot('received');
+        });
+      const subscribed = await new Promise((resolve) => {
+        const st = setTimeout(() => resolve(false), 15000);
+        channel.subscribe((status) => {
+          if (status === 'SUBSCRIBED') { clearTimeout(st); resolve(true); }
+          if (status === 'CHANNEL_ERROR' || status === 'TIMED_OUT' || status === 'CLOSED') { clearTimeout(st); resolve(false); }
+        });
       });
-    const subscribed = await new Promise((resolve) => {
-      const st = setTimeout(() => resolve(false), 15000);
-      channel.subscribe((status) => {
-        if (status === 'SUBSCRIBED') { clearTimeout(st); resolve(true); }
-        if (status === 'CHANNEL_ERROR' || status === 'TIMED_OUT' || status === 'CLOSED') { clearTimeout(st); resolve(false); }
-      });
-    });
-    if (!subscribed) {
-      clearTimeout(timer);
-      ok("realtime: B receives A's message live", false, 'subscription never reached SUBSCRIBED');
-    } else {
-      await gw('POST', '/rest/v1/messages', jwtA, { group_id: GRP, sender_id: A, sender_name: 'RLS Test A', body: probe });
-      const outcome = await got;
-      ok("realtime: B receives A's message live", outcome === 'received', outcome);
+      if (!subscribed) {
+        outcome = 'subscription never reached SUBSCRIBED';
+      } else {
+        await sleep(2000); // let the change stream settle before the probe
+        await gw('POST', '/rest/v1/messages', jwtA, { group_id: GRP, sender_id: A, sender_name: 'RLS Test A', body: probe });
+        const timer = setTimeout(() => resolveGot('timeout'), 25000);
+        outcome = await got;
+        clearTimeout(timer);
+      }
+      await clientB.removeChannel(channel);
+      if (outcome !== 'received' && attempt === 1) {
+        console.log(`  realtime attempt 1: ${outcome} — retrying once (cold start is common on a fresh project)…`);
+        await sleep(8000);
+      }
     }
+    ok("realtime: B receives A's message live", outcome === 'received', outcome);
     await clientB.auth.signOut();
     clientB.realtime.disconnect();
   } catch (e) {

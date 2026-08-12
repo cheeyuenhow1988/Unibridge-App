@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UniBridge Back Office</title>
+<style>
+  :root { --blue:#2D5BFF; --green:#21C063; --ink:#101828; --faint:#667085; --line:#E4E7EC; --bg:#F8FAFC; --danger:#D92D20; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:14px/1.5 -apple-system,'Segoe UI',Roboto,sans-serif; color:var(--ink); background:var(--bg); }
+  header { display:flex; align-items:center; gap:12px; padding:14px 20px; background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:5; }
+  header .logo { font-weight:800; font-size:17px; }
+  header .logo b { color:var(--blue); } header .logo i { color:var(--green); font-style:normal; }
+  header .tag { color:var(--faint); font-size:12px; }
+  header .spacer { flex:1; }
+  main { max-width:1080px; margin:0 auto; padding:20px; }
+  nav { display:flex; gap:6px; margin-bottom:16px; flex-wrap:wrap; }
+  nav button { border:1px solid var(--line); background:#fff; border-radius:20px; padding:7px 16px; cursor:pointer; font-weight:600; color:var(--faint); }
+  nav button.on { background:var(--blue); border-color:var(--blue); color:#fff; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px; margin-bottom:16px; }
+  h2 { font-size:15px; margin:0 0 10px; } .sub { color:var(--faint); font-size:12px; margin:-6px 0 12px; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th { text-align:left; color:var(--faint); font-weight:600; padding:6px 8px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  td { padding:7px 8px; border-bottom:1px solid var(--line); vertical-align:middle; }
+  tr:last-child td { border-bottom:none; }
+  .pill { display:inline-block; padding:2px 9px; border-radius:12px; font-size:11px; font-weight:700; background:#EFF4FF; color:var(--blue); }
+  .pill.green { background:#ECFDF3; color:#067647; } .pill.gray { background:#F2F4F7; color:var(--faint); }
+  button.act { border:1px solid var(--line); background:#fff; border-radius:8px; padding:5px 10px; cursor:pointer; font-weight:600; }
+  button.act:hover { border-color:var(--blue); color:var(--blue); }
+  button.primary { background:var(--blue); border-color:var(--blue); color:#fff; }
+  button.danger:hover { border-color:var(--danger); color:var(--danger); }
+  select,input { border:1px solid var(--line); border-radius:8px; padding:6px 9px; font:inherit; background:#fff; }
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
+  .stat { background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px; }
+  .stat .n { font-size:24px; font-weight:800; color:var(--blue); } .stat .l { color:var(--faint); font-size:12px; }
+  #auth { max-width:360px; margin:8vh auto; }
+  #auth input { width:100%; margin-bottom:10px; padding:10px; }
+  #auth button { width:100%; padding:10px; margin-bottom:8px; border-radius:8px; }
+  .note { font-size:12px; color:var(--faint); }
+  .err { color:var(--danger); font-size:13px; margin:8px 0; min-height:18px; }
+  .okmsg { color:#067647; font-size:13px; margin:8px 0; }
+  .scroll { overflow-x:auto; }
+  .muted { color:var(--faint); }
+  footer { text-align:center; color:var(--faint); font-size:11px; padding:20px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><b>Uni</b><i>Bridge</i></div>
+  <div class="tag">Back Office</div>
+  <div class="spacer"></div>
+  <span id="who" class="note"></span>
+  <button id="signout" class="act" style="display:none">Sign out</button>
+</header>
+<main id="main"></main>
+<footer>UniBridge Back Office — admin access only. All actions run under your account's audited permissions.</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="./config.js"></script>
+<script>
+const $ = (s) => document.querySelector(s);
+const el = (html) => { const d = document.createElement('div'); d.innerHTML = html.trim(); return d.firstChild; };
+const esc = (v) => String(v ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const main = $('#main');
+
+if (!window.UB_CONFIG || !window.UB_CONFIG.url) {
+  main.innerHTML = '<div class="card"><h2>Not configured</h2><p class="note">config.js is generated when the supabase-deploy pipeline publishes this page. Run the deployment first.</p></div>';
+  throw new Error('no config');
+}
+const db = window.supabase.createClient(window.UB_CONFIG.url, window.UB_CONFIG.anonKey);
+const STATUSES = ['submitted','under_review','conditional_offer','offer','accepted','coe_issued'];
+
+// ------------------------------------------------------------------- auth
+async function boot() {
+  const { data: { session } } = await db.auth.getSession();
+  if (!session) return renderAuth();
+  // Invite / recovery links land here with a session but no password set yet.
+  const hashType = new URLSearchParams(location.hash.slice(1)).get('type');
+  if (hashType === 'invite' || hashType === 'recovery') return renderSetPassword();
+  const { data: adminRow } = await db.from('admin_users').select('role').maybeSingle();
+  if (!adminRow) {
+    main.innerHTML = '<div class="card"><h2>No access</h2><p class="note">This account is signed in but has no back-office permission. Ask the owner to grant it.</p></div>';
+    $('#signout').style.display = '';
+    return;
+  }
+  $('#who').textContent = session.user.email;
+  $('#signout').style.display = '';
+  renderShell();
+}
+
+function renderAuth() {
+  main.innerHTML = '';
+  main.appendChild(el(`<div id="auth" class="card">
+    <h2>Admin sign-in</h2>
+    <div class="err" id="aerr"></div>
+    <input id="email" type="email" placeholder="Email" autocomplete="username">
+    <input id="pass" type="password" placeholder="Password" autocomplete="current-password">
+    <button class="primary act" id="login">Sign in</button>
+    <button class="act" id="magic">Email me a sign-in link</button>
+    <p class="note">First time here? Open the invitation email we sent you — it signs you in to set a password.</p>
+  </div>`));
+  $('#login').onclick = async () => {
+    const { error } = await db.auth.signInWithPassword({ email: $('#email').value.trim(), password: $('#pass').value });
+    if (error) { $('#aerr').textContent = error.message; return; }
+    location.hash = ''; boot();
+  };
+  $('#magic').onclick = async () => {
+    const email = $('#email').value.trim();
+    if (!email) { $('#aerr').textContent = 'Type your email first.'; return; }
+    const { error } = await db.auth.signInWithOtp({ email, options: { emailRedirectTo: location.origin + location.pathname } });
+    $('#aerr').textContent = error ? error.message : 'Link sent — check your inbox.';
+  };
+}
+
+function renderSetPassword() {
+  main.innerHTML = '';
+  main.appendChild(el(`<div id="auth" class="card">
+    <h2>Welcome — set your password</h2>
+    <div class="err" id="perr"></div>
+    <input id="np1" type="password" placeholder="New password (min 8 characters)" autocomplete="new-password">
+    <input id="np2" type="password" placeholder="Repeat password" autocomplete="new-password">
+    <button class="primary act" id="setp">Save password & enter</button>
+  </div>`));
+  $('#setp').onclick = async () => {
+    const p1 = $('#np1').value, p2 = $('#np2').value;
+    if (p1.length < 8) { $('#perr').textContent = 'Use at least 8 characters.'; return; }
+    if (p1 !== p2) { $('#perr').textContent = 'Passwords do not match.'; return; }
+    const { error } = await db.auth.updateUser({ password: p1 });
+    if (error) { $('#perr').textContent = error.message; return; }
+    history.replaceState(null, '', location.pathname);
+    boot();
+  };
+}
+
+$('#signout').onclick = async () => { await db.auth.signOut(); location.reload(); };
+
+// ------------------------------------------------------------------ shell
+const TABS = ['Overview','Students','Applications','Rewards','Chats','Catalog'];
+let tab = 'Overview';
+function renderShell() {
+  main.innerHTML = '';
+  const nav = el('<nav></nav>');
+  for (const t of TABS) {
+    const b = el(`<button class="${t === tab ? 'on' : ''}">${t}</button>`);
+    b.onclick = () => { tab = t; renderShell(); };
+    nav.appendChild(b);
+  }
+  main.appendChild(nav);
+  const body = el('<div id="body"><div class="card muted">Loading…</div></div>');
+  main.appendChild(body);
+  ({ Overview: vOverview, Students: vStudents, Applications: vApplications,
+     Rewards: vRewards, Chats: vChats, Catalog: vCatalog })[tab](body);
+}
+
+// --------------------------------------------------------------- overview
+async function vOverview(body) {
+  const [students, apps, coins, red] = await Promise.all([
+    db.from('profiles').select('id', { count: 'exact', head: true }),
+    db.from('applications').select('status'),
+    db.from('coin_ledger').select('delta'),
+    db.from('redemptions').select('fulfilled'),
+  ]);
+  const byStatus = {};
+  for (const a of apps.data ?? []) byStatus[a.status] = (byStatus[a.status] ?? 0) + 1;
+  const balance = (coins.data ?? []).reduce((s, r) => s + r.delta, 0);
+  const pending = (red.data ?? []).filter((r) => !r.fulfilled).length;
+  body.innerHTML = '';
+  body.appendChild(el(`<div class="stats">
+    <div class="stat"><div class="n">${students.count ?? 0}</div><div class="l">Registered students</div></div>
+    <div class="stat"><div class="n">${(apps.data ?? []).length}</div><div class="l">Applications</div></div>
+    <div class="stat"><div class="n">${balance}</div><div class="l">Coins outstanding</div></div>
+    <div class="stat"><div class="n">${pending}</div><div class="l">Redemptions to fulfil</div></div>
+  </div>`));
+  body.appendChild(el(`<div class="card"><h2>Applications by stage</h2>
+    ${STATUSES.map((s) => `<span class="pill" style="margin:0 6px 6px 0">${s.replace('_',' ')} · ${byStatus[s] ?? 0}</span>`).join('')}
+  </div>`));
+}
+
+// --------------------------------------------------------------- students
+async function vStudents(body) {
+  const [profiles, ents, coins] = await Promise.all([
+    db.from('profiles').select('id,name,home_country,nationality,qualification,intake_year').order('created_at', { ascending: false }).limit(200),
+    db.from('entitlements').select('student_id,plan,pass_term'),
+    db.from('coin_ledger').select('student_id,delta'),
+  ]);
+  const ent = Object.fromEntries((ents.data ?? []).map((e) => [e.student_id, e]));
+  const bal = {};
+  for (const c of coins.data ?? []) bal[c.student_id] = (bal[c.student_id] ?? 0) + c.delta;
+  body.innerHTML = '';
+  const card = el(`<div class="card"><h2>Students</h2>
+    <p class="sub">${(profiles.data ?? []).length} shown (newest first). Plan changes take effect in the student's app immediately.</p>
+    <div class="scroll"><table><thead><tr><th>Name</th><th>From</th><th>Qualification</th><th>Intake</th><th>Plan</th><th>Coins</th><th>Grant plan</th></tr></thead>
+    <tbody id="stb"></tbody></table></div></div>`);
+  body.appendChild(card);
+  const tb = card.querySelector('#stb');
+  for (const p of profiles.data ?? []) {
+    const e = ent[p.id];
+    const tr = el(`<tr><td><b>${esc(p.name)}</b></td><td>${esc(p.home_country ?? p.nationality ?? '')}</td>
+      <td>${esc((p.qualification ?? '').toUpperCase())}</td><td>${esc(p.intake_year ?? '')}</td>
+      <td>${e ? `<span class="pill ${e.plan === 'free' ? 'gray' : 'green'}">${esc(e.plan)}${e.pass_term ? ' · ' + esc(e.pass_term) : ''}</span>` : '<span class="pill gray">free</span>'}</td>
+      <td>${bal[p.id] ?? 0}</td>
+      <td><select><option value="">choose…</option><option value="free">free</option>
+        <option value="season_pass:monthly">season pass · monthly</option>
+        <option value="season_pass:lifetime">season pass · lifetime</option>
+        <option value="vip">vip</option></select></td></tr>`);
+    tr.querySelector('select').onchange = async (ev) => {
+      const v = ev.target.value; if (!v) return;
+      const [plan, term] = v.split(':');
+      const { error } = await db.from('entitlements').upsert(
+        { student_id: p.id, plan, pass_term: term ?? null, source: 'manual' }, { onConflict: 'student_id' });
+      if (error) alert(error.message); else vStudents(body);
+    };
+    tb.appendChild(tr);
+  }
+}
+
+// ------------------------------------------------------------ applications
+async function vApplications(body) {
+  const [apps, profiles] = await Promise.all([
+    db.from('applications').select('id,student_id,course_id,status,intake,fee_waived,submitted_at').order('submitted_at', { ascending: false }).limit(200),
+    db.from('profiles').select('id,name'),
+  ]);
+  const names = Object.fromEntries((profiles.data ?? []).map((p) => [p.id, p.name]));
+  body.innerHTML = '';
+  const card = el(`<div class="card"><h2>Applications</h2>
+    <p class="sub">Changing the stage updates the student's tracker in the app.</p>
+    <div class="scroll"><table><thead><tr><th>Student</th><th>Course</th><th>Intake</th><th>Submitted</th><th>Fee</th><th>Stage</th></tr></thead>
+    <tbody id="atb"></tbody></table></div></div>`);
+  body.appendChild(card);
+  const tb = card.querySelector('#atb');
+  if (!(apps.data ?? []).length) tb.appendChild(el('<tr><td colspan="6" class="muted">No applications yet.</td></tr>'));
+  for (const a of apps.data ?? []) {
+    const tr = el(`<tr><td><b>${esc(names[a.student_id] ?? '—')}</b></td><td>${esc(a.course_id)}</td>
+      <td>${esc(a.intake ?? '')}</td><td>${esc((a.submitted_at ?? '').slice(0, 10))}</td>
+      <td>${a.fee_waived ? '<span class="pill green">waived</span>' : ''}</td>
+      <td><select>${STATUSES.map((s) => `<option ${s === a.status ? 'selected' : ''}>${s}</option>`).join('')}</select></td></tr>`);
+    tr.querySelector('select').onchange = async (ev) => {
+      const status = ev.target.value;
+      const { error } = await db.from('applications').update({
+        status, decision_at: new Date().toISOString(),
+      }).eq('id', a.id);
+      if (error) { alert(error.message); ev.target.value = a.status; }
+    };
+    tb.appendChild(tr);
+  }
+}
+
+// ---------------------------------------------------------------- rewards
+async function vRewards(body) {
+  const [reds, profiles] = await Promise.all([
+    db.from('redemptions').select('id,student_id,reward_item,coin_cost,redeemed_at,fulfilled').order('redeemed_at', { ascending: false }).limit(200),
+    db.from('profiles').select('id,name'),
+  ]);
+  const names = Object.fromEntries((profiles.data ?? []).map((p) => [p.id, p.name]));
+  body.innerHTML = '';
+  const card = el(`<div class="card"><h2>Reward redemptions</h2>
+    <p class="sub">Mark a voucher or event ticket fulfilled once you have delivered it to the student.</p>
+    <div class="scroll"><table><thead><tr><th>Student</th><th>Item</th><th>Coins</th><th>Date</th><th>Status</th><th></th></tr></thead>
+    <tbody id="rtb"></tbody></table></div></div>`);
+  body.appendChild(card);
+  const tb = card.querySelector('#rtb');
+  if (!(reds.data ?? []).length) tb.appendChild(el('<tr><td colspan="6" class="muted">No redemptions yet.</td></tr>'));
+  for (const r of reds.data ?? []) {
+    const tr = el(`<tr><td><b>${esc(names[r.student_id] ?? '—')}</b></td><td>${esc(r.reward_item)}</td>
+      <td>${r.coin_cost}</td><td>${esc((r.redeemed_at ?? '').slice(0, 10))}</td>
+      <td>${r.fulfilled ? '<span class="pill green">fulfilled</span>' : '<span class="pill">pending</span>'}</td>
+      <td>${r.fulfilled ? '' : '<button class="act">Mark fulfilled</button>'}</td></tr>`);
+    const btn = tr.querySelector('button');
+    if (btn) btn.onclick = async () => {
+      const { error } = await db.from('redemptions').update({ fulfilled: true, fulfilled_at: new Date().toISOString() }).eq('id', r.id);
+      if (error) alert(error.message); else vRewards(body);
+    };
+    tb.appendChild(tr);
+  }
+}
+
+// ------------------------------------------------------------------ chats
+async function vChats(body) {
+  const msgs = await db.from('messages').select('id,group_id,sender_name,body,created_at').order('created_at', { ascending: false }).limit(100);
+  body.innerHTML = '';
+  const card = el(`<div class="card"><h2>Latest group messages</h2>
+    <p class="sub">Moderation view — delete removes the message for everyone.</p>
+    <div class="scroll"><table><thead><tr><th>When</th><th>Group</th><th>Sender</th><th>Message</th><th></th></tr></thead>
+    <tbody id="mtb"></tbody></table></div></div>`);
+  body.appendChild(card);
+  const tb = card.querySelector('#mtb');
+  for (const m of msgs.data ?? []) {
+    const tr = el(`<tr><td class="muted">${esc((m.created_at ?? '').replace('T', ' ').slice(0, 16))}</td>
+      <td>${esc(m.group_id ?? '')}</td><td><b>${esc(m.sender_name ?? '')}</b></td>
+      <td>${esc((m.body ?? '').slice(0, 120))}</td>
+      <td><button class="act danger">Delete</button></td></tr>`);
+    tr.querySelector('button').onclick = async () => {
+      if (!confirm('Delete this message for everyone?')) return;
+      const { error } = await db.from('messages').delete().eq('id', m.id);
+      if (error) alert(error.message); else tr.remove();
+    };
+    tb.appendChild(tr);
+  }
+}
+
+// ---------------------------------------------------------------- catalog
+async function vCatalog(body) {
+  const insts = await db.from('institutions').select('id,name,country,city,is_verified_partner,tagline').order('name').limit(300);
+  body.innerHTML = '';
+  const card = el(`<div class="card"><h2>Institutions (${(insts.data ?? []).length})</h2>
+    <p class="sub">Quick edits here; full data management lives in Supabase Studio's table editor. Never mark a partner verified without a signed agreement.</p>
+    <div class="scroll"><table><thead><tr><th>Name</th><th>Where</th><th>Verified partner</th><th>Tagline</th></tr></thead>
+    <tbody id="ctb"></tbody></table></div></div>`);
+  body.appendChild(card);
+  const tb = card.querySelector('#ctb');
+  for (const i of insts.data ?? []) {
+    const tr = el(`<tr><td><b>${esc(i.name)}</b></td><td>${esc(i.city)}, ${esc(i.country)}</td>
+      <td><input type="checkbox" ${i.is_verified_partner ? 'checked' : ''}></td>
+      <td><input value="${esc(i.tagline ?? '')}" style="width:100%"></td></tr>`);
+    tr.querySelector('input[type=checkbox]').onchange = async (ev) => {
+      const { error } = await db.from('institutions').update({ is_verified_partner: ev.target.checked }).eq('id', i.id);
+      if (error) { alert(error.message); ev.target.checked = !ev.target.checked; }
+    };
+    const tagInput = tr.querySelector('input:not([type=checkbox])');
+    tagInput.onchange = async () => {
+      const { error } = await db.from('institutions').update({ tagline: tagInput.value }).eq('id', i.id);
+      if (error) alert(error.message);
+    };
+    tb.appendChild(tr);
+  }
+}
+
+boot();
+db.auth.onAuthStateChange((event) => { if (event === 'SIGNED_IN' && !location.hash.includes('type=')) boot(); });
+</script>
+</body>
+</html>

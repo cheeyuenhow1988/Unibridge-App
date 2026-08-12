@@ -16,9 +16,13 @@
 name: supabase-deploy
 on:
   workflow_dispatch:
+    inputs:
+      admin_email:
+        description: 'Email to invite as back-office admin (optional)'
+        required: false
   push:
     branches: [claude/unibridge-app-prototype-11m67q]
-    paths: ['supabase/**', 'scripts/deploy-backend.mjs', 'scripts/sql-split.mjs', '.github/workflows/supabase-deploy.yml']
+    paths: ['supabase/**', 'admin/**', 'scripts/deploy-backend.mjs', 'scripts/sql-split.mjs', '.github/workflows/supabase-deploy.yml']
 permissions: {}
 concurrency: supabase-deploy
 jobs:
@@ -27,7 +31,6 @@ jobs:
     outputs:
       deployed: ${{ steps.run.outputs.deployed }}
       supabase_url: ${{ steps.run.outputs.supabase_url }}
-      supabase_anon_key: ${{ steps.run.outputs.supabase_anon_key }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -41,7 +44,16 @@ jobs:
           # Scoped to this step only — no other step sees the token.
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
           SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+          ADMIN_EMAIL: ${{ inputs.admin_email }}
         run: node scripts/deploy-backend.mjs
+      # The publishable key is public by design, but GitHub blocks key-shaped
+      # job outputs — hand it to the build job as an artifact file instead.
+      - uses: actions/upload-artifact@v4
+        if: steps.run.outputs.deployed == 'true'
+        with:
+          name: live-config
+          path: live-config.env
+          retention-days: 1
 
   # Once the backend is live, build the app against it and publish under
   # /live on GitHub Pages. Uses only PUBLIC values from the deploy job
@@ -59,23 +71,30 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - uses: actions/download-artifact@v4
+        with:
+          name: live-config
       - name: Build web app in live-backend mode
-        env:
-          EXPO_PUBLIC_SUPABASE_URL: ${{ needs.deploy.outputs.supabase_url }}
-          EXPO_PUBLIC_SUPABASE_ANON_KEY: ${{ needs.deploy.outputs.supabase_anon_key }}
         run: |
           node -e "const fs=require('fs');const j=JSON.parse(fs.readFileSync('app.json','utf8'));(j.expo.experiments??={}).baseUrl='/Unibridge-App/live';fs.writeFileSync('app.json',JSON.stringify(j,null,2));"
+          set -a && source live-config.env && set +a
           npx expo export --platform web
-      - name: Publish under /live on GitHub Pages
+      - name: Publish app under /live and back office under /admin
         run: |
+          node -e "
+            const fs = require('fs');
+            const env = Object.fromEntries(fs.readFileSync('live-config.env','utf8').trim().split('\n').map((l) => l.split(/=(.*)/s).slice(0, 2)));
+            fs.writeFileSync('admin/config.js', 'window.UB_CONFIG = ' + JSON.stringify({ url: env.EXPO_PUBLIC_SUPABASE_URL, anonKey: env.EXPO_PUBLIC_SUPABASE_ANON_KEY }) + ';');
+          "
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin gh-pages
           git worktree add /tmp/ghp origin/gh-pages
-          rm -rf /tmp/ghp/live
-          mkdir -p /tmp/ghp/live
+          rm -rf /tmp/ghp/live /tmp/ghp/admin
+          mkdir -p /tmp/ghp/live /tmp/ghp/admin
           cp -r dist/* /tmp/ghp/live/
+          cp -r admin/* /tmp/ghp/admin/
           cd /tmp/ghp
           git add -A
-          git commit -m "deploy live-backend app under /live" || echo "live app unchanged"
+          git commit -m "deploy live-backend app under /live + back office under /admin" || echo "unchanged"
           git push origin HEAD:gh-pages

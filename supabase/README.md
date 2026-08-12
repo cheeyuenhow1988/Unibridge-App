@@ -71,6 +71,25 @@ The `probe-connections` workflow is a harmless diagnostic that prints which
 secrets exist (never values) — handy for checking step 1 worked; safe to
 delete anytime.
 
+## Back office (/admin)
+
+A single-page admin console is published at
+[`/Unibridge-App/admin/`](https://cheeyuenhow1988.github.io/Unibridge-App/admin/)
+by the same pipeline. It signs in through Supabase auth with the ordinary
+public key — **admin power comes from the database, not the page**:
+migration `0010_admin.sql` adds an `admin_users` table and additive RLS
+policies (`is_admin()`), so an account listed there can read every student,
+move application stages, grant plans, credit coins, fulfil reward
+redemptions, moderate chat, and edit the catalog — while accounts not
+listed there see exactly what they always did. The harness proves both
+sides (50/50).
+
+To invite an admin: run the **supabase-deploy** workflow with the
+`admin_email` input (Actions tab → supabase-deploy → Run workflow). The
+pipeline creates the account, emails an invitation that lands on /admin to
+set a password, and grants back-office access. Repeat with another email
+to add staff later; remove a row from `admin_users` to revoke.
+
 ## Zero-to-live runbook (manual CLI alternative, ~20 minutes, free tier)
 
 1. **Create the project** at [database.new](https://database.new) (free

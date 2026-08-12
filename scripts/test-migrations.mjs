@@ -210,6 +210,29 @@ ok('fn: redeem_reward blocks overdraft', Boolean(over.error) && /insufficient/i.
 const negative = await as(B, "insert into public.coin_ledger (student_id, delta, reason) values (auth.uid(), -500, 'hack') returning id");
 ok('RLS: client cannot insert negative coins directly', Boolean(negative.error));
 
+// ---- Back office (admin) layer --------------------------------------------
+const D = '44444444-4444-4444-8444-444444444444';
+await db.exec(`insert into auth.users (id, email, raw_user_meta_data)
+  values ('${D}', 'admin@test.example', '{"name":"Back Office"}'::jsonb);
+  insert into public.admin_users (user_id, role) values ('${D}', 'owner');`);
+const admAll = await as(D, 'select count(*) c from public.profiles');
+ok('admin: reads every student profile', Number(admAll.rows?.[0]?.c) >= 3, `${admAll.rows?.[0]?.c}`);
+const admApps = await as(D, `update public.applications set status = 'under_review' where student_id = '${A}' returning status`);
+ok('admin: moves application status', admApps.rows?.length === 1 && admApps.rows[0].status === 'under_review');
+const admGrant = await as(D, `insert into public.entitlements (student_id, plan, pass_term, source)
+  values ('${B}', 'vip', null, 'manual') on conflict (student_id) do update set plan = 'vip' returning plan`);
+ok('admin: grants an entitlement', admGrant.rows?.[0]?.plan === 'vip');
+const admCoins = await as(D, 'select count(*) c from public.coin_ledger');
+ok('admin: sees the full coin ledger', Number(admCoins.rows?.[0]?.c) >= 2, `${admCoins.rows?.[0]?.c}`);
+const admMsg = await as(D, "select count(*) c from public.messages where group_id = 'test-grp'");
+ok('admin: reads group messages for moderation', Number(admMsg.rows?.[0]?.c) >= 1);
+const bNotAdmin = await as(B, `select * from public.admin_users`);
+ok('admin: non-admin sees no admin roster rows', bNotAdmin.rows?.length === 0);
+const bStillBlocked = await as(B, `select * from public.profiles where id = '${A}'`);
+ok('admin: student isolation unchanged by admin layer', bStillBlocked.rows?.length === 0);
+const bCatalogWrite = await as(B, "update public.institutions set tagline = 'hax' where id = 'test-uni' returning id");
+ok('admin: non-admin still cannot edit catalog', Boolean(bCatalogWrite.error) || bCatalogWrite.rows?.length === 0);
+
 const fails = results.filter((r) => r.startsWith('FAIL'));
 console.log(`\n${results.length - fails.length}/${results.length} passed`);
 process.exit(fails.length ? 1 : 0);
