@@ -188,7 +188,7 @@ async function vOverview(body) {
 // --------------------------------------------------------------- students
 async function vStudents(body) {
   const [profiles, ents, coins] = await Promise.all([
-    db.from('profiles').select('id,name,home_country,nationality,qualification,intake_year').order('created_at', { ascending: false }).limit(200),
+    db.from('profiles').select('id,name,home_country,nationality,qualification_system,intake_year').order('created_at', { ascending: false }).limit(200),
     db.from('entitlements').select('student_id,plan,pass_term'),
     db.from('coin_ledger').select('student_id,delta'),
   ]);
@@ -206,7 +206,7 @@ async function vStudents(body) {
   for (const p of profiles.data ?? []) {
     const e = ent[p.id];
     const tr = el(`<tr><td><b>${esc(p.name)}</b></td><td>${esc(p.home_country ?? p.nationality ?? '')}</td>
-      <td>${esc((p.qualification ?? '').toUpperCase())}</td><td>${esc(p.intake_year ?? '')}</td>
+      <td>${esc((p.qualification_system ?? '').toUpperCase())}</td><td>${esc(p.intake_year ?? '')}</td>
       <td>${e ? `<span class="pill ${e.plan === 'free' ? 'gray' : 'green'}">${esc(e.plan)}${e.pass_term ? ' · ' + esc(e.pass_term) : ''}</span>` : '<span class="pill gray">free</span>'}</td>
       <td>${bal[p.id] ?? 0}</td>
       <td><select><option value="">choose…</option><option value="free">free</option>
