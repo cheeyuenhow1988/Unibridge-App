@@ -50,6 +50,7 @@
   <div class="tag">Back Office</div>
   <div class="spacer"></div>
   <span id="who" class="note"></span>
+  <button id="setpass" class="act" style="display:none">Set password</button>
   <button id="signout" class="act" style="display:none">Sign out</button>
 </header>
 <main id="main"></main>
@@ -85,6 +86,8 @@ async function boot() {
   }
   $('#who').textContent = session.user.email;
   $('#signout').style.display = '';
+  $('#setpass').style.display = '';
+  $('#setpass').onclick = () => renderSetPassword();
   renderShell();
 }
 
