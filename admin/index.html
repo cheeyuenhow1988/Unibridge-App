@@ -60,7 +60,9 @@
 <script src="./config.js"></script>
 <script>
 const $ = (s) => document.querySelector(s);
-const el = (html) => { const d = document.createElement('div'); d.innerHTML = html.trim(); return d.firstChild; };
+// <template> parses ANY fragment correctly — a plain div silently drops
+// <tr>/<td> (they're only valid inside a table), which blanked every list.
+const el = (html) => { const t = document.createElement('template'); t.innerHTML = html.trim(); return t.content.firstChild; };
 const esc = (v) => String(v ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const main = $('#main');
 
@@ -70,6 +72,10 @@ if (!window.UB_CONFIG || !window.UB_CONFIG.url) {
 }
 const db = window.supabase.createClient(window.UB_CONFIG.url, window.UB_CONFIG.anonKey);
 const STATUSES = ['submitted','under_review','conditional_offer','offer','accepted','coe_issued'];
+/** Never render a failed query as an empty list — say what went wrong. */
+const stateRow = (tb, cols, error, emptyText) =>
+  tb.appendChild(el(`<tr><td colspan="${cols}" class="${error ? 'err' : 'muted'}">${
+    error ? 'Could not load: ' + esc(error.message) : emptyText}</td></tr>`));
 
 // ------------------------------------------------------------------- auth
 async function boot() {
@@ -182,7 +188,7 @@ async function vOverview(body) {
 // --------------------------------------------------------------- students
 async function vStudents(body) {
   const [profiles, ents, coins] = await Promise.all([
-    db.from('profiles').select('id,name,home_country,nationality,qualification,intake_year').order('created_at', { ascending: false }).limit(200),
+    db.from('profiles').select('id,name,home_country,nationality,qualification_system,intake_year').order('created_at', { ascending: false }).limit(200),
     db.from('entitlements').select('student_id,plan,pass_term'),
     db.from('coin_ledger').select('student_id,delta'),
   ]);
@@ -196,10 +202,11 @@ async function vStudents(body) {
     <tbody id="stb"></tbody></table></div></div>`);
   body.appendChild(card);
   const tb = card.querySelector('#stb');
+  if (profiles.error || !(profiles.data ?? []).length) stateRow(tb, 7, profiles.error, 'No students yet.');
   for (const p of profiles.data ?? []) {
     const e = ent[p.id];
     const tr = el(`<tr><td><b>${esc(p.name)}</b></td><td>${esc(p.home_country ?? p.nationality ?? '')}</td>
-      <td>${esc((p.qualification ?? '').toUpperCase())}</td><td>${esc(p.intake_year ?? '')}</td>
+      <td>${esc((p.qualification_system ?? '').toUpperCase())}</td><td>${esc(p.intake_year ?? '')}</td>
       <td>${e ? `<span class="pill ${e.plan === 'free' ? 'gray' : 'green'}">${esc(e.plan)}${e.pass_term ? ' · ' + esc(e.pass_term) : ''}</span>` : '<span class="pill gray">free</span>'}</td>
       <td>${bal[p.id] ?? 0}</td>
       <td><select><option value="">choose…</option><option value="free">free</option>
@@ -231,7 +238,7 @@ async function vApplications(body) {
     <tbody id="atb"></tbody></table></div></div>`);
   body.appendChild(card);
   const tb = card.querySelector('#atb');
-  if (!(apps.data ?? []).length) tb.appendChild(el('<tr><td colspan="6" class="muted">No applications yet.</td></tr>'));
+  if (apps.error || !(apps.data ?? []).length) stateRow(tb, 6, apps.error, 'No applications yet.');
   for (const a of apps.data ?? []) {
     const tr = el(`<tr><td><b>${esc(names[a.student_id] ?? '—')}</b></td><td>${esc(a.course_id)}</td>
       <td>${esc(a.intake ?? '')}</td><td>${esc((a.submitted_at ?? '').slice(0, 10))}</td>
@@ -262,7 +269,7 @@ async function vRewards(body) {
     <tbody id="rtb"></tbody></table></div></div>`);
   body.appendChild(card);
   const tb = card.querySelector('#rtb');
-  if (!(reds.data ?? []).length) tb.appendChild(el('<tr><td colspan="6" class="muted">No redemptions yet.</td></tr>'));
+  if (reds.error || !(reds.data ?? []).length) stateRow(tb, 6, reds.error, 'No redemptions yet.');
   for (const r of reds.data ?? []) {
     const tr = el(`<tr><td><b>${esc(names[r.student_id] ?? '—')}</b></td><td>${esc(r.reward_item)}</td>
       <td>${r.coin_cost}</td><td>${esc((r.redeemed_at ?? '').slice(0, 10))}</td>
@@ -287,6 +294,7 @@ async function vChats(body) {
     <tbody id="mtb"></tbody></table></div></div>`);
   body.appendChild(card);
   const tb = card.querySelector('#mtb');
+  if (msgs.error || !(msgs.data ?? []).length) stateRow(tb, 5, msgs.error, 'No messages yet.');
   for (const m of msgs.data ?? []) {
     const tr = el(`<tr><td class="muted">${esc((m.created_at ?? '').replace('T', ' ').slice(0, 16))}</td>
       <td>${esc(m.group_id ?? '')}</td><td><b>${esc(m.sender_name ?? '')}</b></td>
@@ -302,30 +310,158 @@ async function vChats(body) {
 }
 
 // ---------------------------------------------------------------- catalog
-async function vCatalog(body) {
-  const insts = await db.from('institutions').select('id,name,country,city,is_verified_partner,tagline').order('name').limit(300);
+const COUNTRIES = ['AU','MY','TW','GB','SG','NZ','RU','US','CA','CN'];
+const TYPES = ['university','college','institute'];
+const flag = (cc) => /^[A-Z]{2}$/.test(cc ?? '') ? String.fromCodePoint(...[...cc].map((c) => 127397 + c.charCodeAt(0))) : '';
+const slugId = (country, name) =>
+  `${(country || 'xx').toLowerCase()}-${(name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 48)}`;
+
+async function vCatalog(body, filter = { q: '', cc: '' }) {
+  const insts = await db.from('institutions')
+    .select('id,name,short_name,type,country,city,is_verified_partner,tagline,website,founded,students,qs_rank,logo,photos')
+    .order('name').limit(300);
   body.innerHTML = '';
-  const card = el(`<div class="card"><h2>Institutions (${(insts.data ?? []).length})</h2>
-    <p class="sub">Quick edits here; full data management lives in Supabase Studio's table editor. Never mark a partner verified without a signed agreement.</p>
-    <div class="scroll"><table><thead><tr><th>Name</th><th>Where</th><th>Verified partner</th><th>Tagline</th></tr></thead>
-    <tbody id="ctb"></tbody></table></div></div>`);
+  const all = insts.data ?? [];
+  const shown = all.filter((i) =>
+    (!filter.cc || i.country === filter.cc) &&
+    (!filter.q || `${i.name} ${i.city}`.toLowerCase().includes(filter.q.toLowerCase())));
+  const card = el(`<div class="card"><h2>Institutions (${shown.length}${filter.q || filter.cc ? ` of ${all.length}` : ''})</h2>
+    <p class="sub">Everything here edits the live catalog. Never mark a partner verified without a signed agreement.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
+      <input id="cq" placeholder="Search name or city…" value="${esc(filter.q)}" style="flex:1;min-width:180px">
+      <select id="ccc"><option value="">All countries</option>
+        ${COUNTRIES.map((c) => `<option value="${c}" ${filter.cc === c ? 'selected' : ''}>${flag(c)} ${c}</option>`).join('')}</select>
+      <button class="act primary" id="addInst">+ Add institution</button>
+    </div>
+    <div class="scroll"><table><thead><tr>
+      <th></th><th>Name</th><th>Where</th><th>Type</th><th>Rank</th><th>Verified</th><th>Photos</th><th style="text-align:right">Actions</th>
+    </tr></thead><tbody id="ctb"></tbody></table></div></div>`);
   body.appendChild(card);
+  card.querySelector('#cq').onchange = (ev) => vCatalog(body, { ...filter, q: ev.target.value });
+  card.querySelector('#ccc').onchange = (ev) => vCatalog(body, { ...filter, cc: ev.target.value });
+  card.querySelector('#addInst').onclick = () => renderInstForm(body, null, filter);
   const tb = card.querySelector('#ctb');
-  for (const i of insts.data ?? []) {
-    const tr = el(`<tr><td><b>${esc(i.name)}</b></td><td>${esc(i.city)}, ${esc(i.country)}</td>
+  if (insts.error || !shown.length) stateRow(tb, 8, insts.error, 'No institutions match.');
+  for (const i of shown) {
+    const tr = el(`<tr>
+      <td>${i.logo ? `<img src="${esc(i.logo)}" style="width:22px;height:22px;border-radius:4px;object-fit:contain" onerror="this.style.display='none'">` : ''}</td>
+      <td><b>${esc(i.name)}</b>${i.short_name ? ` <span class="muted">· ${esc(i.short_name)}</span>` : ''}</td>
+      <td>${flag(i.country)} ${esc(i.city)}, ${esc(i.country)}</td>
+      <td>${esc(i.type ?? '')}</td>
+      <td>${i.qs_rank ?? '<span class="muted">—</span>'}</td>
       <td><input type="checkbox" ${i.is_verified_partner ? 'checked' : ''}></td>
-      <td><input value="${esc(i.tagline ?? '')}" style="width:100%"></td></tr>`);
+      <td>${(i.photos ?? []).length}</td>
+      <td style="text-align:right;white-space:nowrap">
+        <button class="act" data-a="edit">Edit</button>
+        <button class="act" data-a="photos">Photos</button>
+        <button class="act danger" data-a="del">Delete</button>
+      </td></tr>`);
     tr.querySelector('input[type=checkbox]').onchange = async (ev) => {
       const { error } = await db.from('institutions').update({ is_verified_partner: ev.target.checked }).eq('id', i.id);
       if (error) { alert(error.message); ev.target.checked = !ev.target.checked; }
     };
-    const tagInput = tr.querySelector('input:not([type=checkbox])');
-    tagInput.onchange = async () => {
-      const { error } = await db.from('institutions').update({ tagline: tagInput.value }).eq('id', i.id);
-      if (error) alert(error.message);
+    tr.querySelector('[data-a=edit]').onclick = () => renderInstForm(body, i, filter);
+    tr.querySelector('[data-a=photos]').onclick = () => renderInstPhotos(body, i, filter);
+    tr.querySelector('[data-a=del]').onclick = async () => {
+      if (!confirm(`Delete "${i.name}" and ALL its courses? Students' applications pointing at its courses will block this — that is intentional.`)) return;
+      const { error } = await db.from('institutions').delete().eq('id', i.id);
+      if (error) alert('Could not delete: ' + error.message);
+      else vCatalog(body, filter);
     };
     tb.appendChild(tr);
   }
+}
+
+function renderInstForm(body, inst, filter) {
+  const isNew = !inst;
+  const f = inst ?? { country: 'MY', type: 'university', photos: [] };
+  body.innerHTML = '';
+  const card = el(`<div class="card" style="max-width:560px">
+    <h2>${isNew ? 'Add institution' : 'Edit — ' + esc(f.name)}</h2>
+    <div class="err" id="ferr"></div>
+    <table><tbody>
+      <tr><td class="muted">Name</td><td><input id="f_name" value="${esc(f.name ?? '')}" style="width:100%"></td></tr>
+      <tr><td class="muted">Short name</td><td><input id="f_short" value="${esc(f.short_name ?? '')}" style="width:100%"></td></tr>
+      <tr><td class="muted">Type</td><td><select id="f_type" style="width:100%">
+        ${TYPES.map((t) => `<option ${f.type === t ? 'selected' : ''}>${t}</option>`).join('')}</select></td></tr>
+      <tr><td class="muted">Country</td><td><select id="f_cc" style="width:100%">
+        ${COUNTRIES.map((c) => `<option value="${c}" ${f.country === c ? 'selected' : ''}>${flag(c)} ${c}</option>`).join('')}</select></td></tr>
+      <tr><td class="muted">City</td><td><input id="f_city" value="${esc(f.city ?? '')}" style="width:100%"></td></tr>
+      <tr><td class="muted">Tagline</td><td><input id="f_tag" value="${esc(f.tagline ?? '')}" style="width:100%"></td></tr>
+      <tr><td class="muted">Website</td><td><input id="f_web" value="${esc(f.website ?? '')}" style="width:100%"></td></tr>
+      <tr><td class="muted">Logo URL</td><td><input id="f_logo" value="${esc(f.logo ?? '')}" style="width:100%"></td></tr>
+      <tr><td class="muted">Founded</td><td><input id="f_founded" type="number" value="${esc(f.founded ?? '')}" style="width:100%"></td></tr>
+      <tr><td class="muted">Students</td><td><input id="f_students" type="number" value="${esc(f.students ?? '')}" style="width:100%"></td></tr>
+      <tr><td class="muted">World rank</td><td><input id="f_rank" type="number" value="${esc(f.qs_rank ?? '')}" style="width:100%"></td></tr>
+    </tbody></table>
+    <div style="display:flex;gap:8px;margin-top:12px">
+      <button class="act primary" id="fsave">${isNew ? 'Create' : 'Save changes'}</button>
+      <button class="act" id="fcancel">Cancel</button>
+    </div></div>`);
+  body.appendChild(card);
+  card.querySelector('#fcancel').onclick = () => vCatalog(body, filter);
+  card.querySelector('#fsave').onclick = async () => {
+    const val = (id) => card.querySelector(id).value.trim();
+    const num = (id) => (val(id) === '' ? null : Number(val(id)));
+    const row = {
+      name: val('#f_name'), short_name: val('#f_short') || val('#f_name'),
+      type: card.querySelector('#f_type').value, country: card.querySelector('#f_cc').value,
+      city: val('#f_city'), tagline: val('#f_tag'), website: val('#f_web'), logo: val('#f_logo'),
+      founded: num('#f_founded'), students: num('#f_students'), qs_rank: num('#f_rank'),
+    };
+    if (!row.name || !row.city) { card.querySelector('#ferr').textContent = 'Name and city are required.'; return; }
+    const q = isNew
+      ? db.from('institutions').insert({ id: slugId(row.country, row.name), ...row })
+      : db.from('institutions').update(row).eq('id', inst.id);
+    const { error } = await q;
+    if (error) { card.querySelector('#ferr').textContent = error.message; return; }
+    vCatalog(body, filter);
+  };
+}
+
+async function renderInstPhotos(body, inst, filter) {
+  const fresh = await db.from('institutions').select('photos').eq('id', inst.id).single();
+  const photos = fresh.data?.photos ?? [];
+  body.innerHTML = '';
+  const card = el(`<div class="card">
+    <h2>Photos — ${esc(inst.name)}</h2>
+    <p class="sub">Uploads go to the app's public campus-photo storage. The FIRST photo is the hero image students see — keep it recognizably the campus.</p>
+    <div class="err" id="perr"></div>
+    <div id="pgrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:12px"></div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <input type="file" id="pfile" accept="image/*">
+      <button class="act primary" id="pup">Upload photo</button>
+      <button class="act" id="pback">Back to catalog</button>
+    </div></div>`);
+  body.appendChild(card);
+  const grid = card.querySelector('#pgrid');
+  photos.forEach((url, idx) => {
+    const cell = el(`<div style="position:relative">
+      <img src="${esc(url)}" style="width:100%;height:110px;object-fit:cover;border-radius:8px;border:1px solid var(--line)">
+      ${idx === 0 ? '<span class="pill green" style="position:absolute;left:6px;top:6px">hero</span>' : ''}
+      <button class="act danger" style="position:absolute;right:6px;top:6px;padding:2px 8px">✕</button></div>`);
+    cell.querySelector('button').onclick = async () => {
+      if (!confirm('Remove this photo from the school page?')) return;
+      const next = photos.filter((_, j) => j !== idx);
+      const { error } = await db.from('institutions').update({ photos: next }).eq('id', inst.id);
+      if (error) alert(error.message); else renderInstPhotos(body, inst, filter);
+    };
+    grid.appendChild(cell);
+  });
+  if (!photos.length) grid.appendChild(el('<div class="muted">No photos yet — upload the first one below.</div>'));
+  card.querySelector('#pback').onclick = () => vCatalog(body, filter);
+  card.querySelector('#pup').onclick = async () => {
+    const file = card.querySelector('#pfile').files[0];
+    if (!file) { card.querySelector('#perr').textContent = 'Choose an image file first.'; return; }
+    card.querySelector('#perr').textContent = '';
+    const path = `${inst.id}/${Date.now()}-${file.name.replace(/[^\w.-]+/g, '_')}`;
+    const up = await db.storage.from('institution-media').upload(path, file, { upsert: false });
+    if (up.error) { card.querySelector('#perr').textContent = up.error.message; return; }
+    const { data: pub } = db.storage.from('institution-media').getPublicUrl(path);
+    const { error } = await db.from('institutions').update({ photos: [...photos, pub.publicUrl] }).eq('id', inst.id);
+    if (error) { card.querySelector('#perr').textContent = error.message; return; }
+    renderInstPhotos(body, inst, filter);
+  };
 }
 
 boot();
