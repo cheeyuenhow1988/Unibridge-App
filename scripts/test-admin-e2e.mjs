@@ -1,0 +1,220 @@
+// Full back-office trial in a real browser (runs in GitHub Actions where
+// Playwright + open egress are available; triggered by the qa_screens input
+// of the supabase-deploy workflow).
+//
+// What it does:
+//   1. Creates a throwaway ADMIN and a throwaway NORMAL user on the live
+//      project (management API token from the workflow secret)
+//   2. Direct REST pre-checks with the admin's JWT (hard evidence of what
+//      the server returns, independent of the page)
+//   3. Serves admin/ locally with a generated config.js, signs in with the
+//      throwaway admin, clicks through ALL tabs — Overview, Students,
+//      Applications, Rewards, Chats, Catalog — asserts each renders its
+//      data (or honest empty state, never a silent failure), performs a
+//      mock action (grants the test user VIP from the Students tab), and
+//      screenshots every step into qa-screenshots/
+//   4. Signs in as the NORMAL user and asserts the "No access" wall
+//   5. Deletes both throwaway users (and any leftovers of crashed runs)
+//
+// Exit code 1 on any failed assertion — screenshots are written regardless.
+import crypto from 'node:crypto';
+import fs from 'node:fs';
+import http from 'node:http';
+import path from 'node:path';
+
+const TOKEN = process.env.SUPABASE_ACCESS_TOKEN;
+if (!TOKEN) { console.log('SUPABASE_ACCESS_TOKEN not set — skipping.'); process.exit(0); }
+const API = 'https://api.supabase.com';
+const ADMIN_DIR = new URL('../admin/', import.meta.url).pathname;
+const SHOTS = 'qa-screenshots';
+fs.mkdirSync(SHOTS, { recursive: true });
+
+const results = [];
+const ok = (name, pass, extra = '') => {
+  results.push([pass ? 'PASS' : 'FAIL', name, extra].filter(Boolean).join(' | '));
+  console.log(results[results.length - 1]);
+};
+
+const mgmt = async (method, p, body) => {
+  const res = await fetch(`${API}${p}`, {
+    method,
+    headers: { Authorization: `Bearer ${TOKEN}`, ...(body ? { 'Content-Type': 'application/json' } : {}) },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  const text = await res.text();
+  let data; try { data = JSON.parse(text); } catch { data = text; }
+  return { status: res.status, data };
+};
+const runSql = async (ref, query) => {
+  const r = await mgmt('POST', `/v1/projects/${ref}/database/query`, { query });
+  if (r.status >= 300) throw new Error(`sql: HTTP ${r.status} ${JSON.stringify(r.data).slice(0, 300)}`);
+  return Array.isArray(r.data) ? r.data : r.data?.result ?? r.data?.rows ?? [];
+};
+
+// ---- project + keys --------------------------------------------------------
+const projects = await mgmt('GET', '/v1/projects');
+const wanted = process.env.SUPABASE_PROJECT_REF;
+const project = wanted ? projects.data.find((p) => p.id === wanted)
+  : projects.data.length === 1 ? projects.data[0]
+  : projects.data.find((p) => /unibridge/i.test(p.name)) ?? projects.data[0];
+if (!project) { console.error('no project'); process.exit(1); }
+const REF = project.id;
+const URL_BASE = `https://${REF}.supabase.co`;
+const keys = (await mgmt('GET', `/v1/projects/${REF}/api-keys?reveal=true`)).data;
+const anonKey = (keys.find((k) => k.name === 'anon') ?? keys.find((k) => k.type === 'publishable'))?.api_key;
+const serviceKey = (keys.find((k) => k.name === 'service_role') ?? keys.find((k) => k.type === 'secret'))?.api_key;
+
+const gotrue = (method, p, body, jwtOrKey = serviceKey) => fetch(`${URL_BASE}${p}`, {
+  method,
+  headers: { apikey: anonKey, Authorization: `Bearer ${jwtOrKey}`, 'Content-Type': 'application/json' },
+  body: body === undefined ? undefined : JSON.stringify(body),
+}).then(async (res) => ({ status: res.status, data: await res.json().catch(() => null) }));
+
+// ---- throwaway users (sweep leftovers first) -------------------------------
+const QA_RE = /^qa-(admin|user)-[0-9a-f]{8}@example\.com$/;
+const listUsers = async () => (await gotrue('GET', '/auth/v1/admin/users?page=1&per_page=200')).data?.users ?? [];
+for (const u of await listUsers()) {
+  if (QA_RE.test(u.email ?? '')) await gotrue('DELETE', `/auth/v1/admin/users/${u.id}`);
+}
+const rand = crypto.randomBytes(4).toString('hex');
+const mk = async (email, name) => {
+  const password = crypto.randomBytes(12).toString('hex');
+  const r = await gotrue('POST', '/auth/v1/admin/users', { email, password, email_confirm: true, user_metadata: { name } });
+  if (r.status >= 300) { console.error('cannot create', email, r.status, JSON.stringify(r.data).slice(0, 200)); process.exit(1); }
+  return { id: r.data.id, email, password };
+};
+const qaAdmin = await mk(`qa-admin-${rand}@example.com`, 'QA Admin');
+const qaUser = await mk(`qa-user-${rand}@example.com`, 'QA User');
+await runSql(REF, `insert into public.admin_users (user_id, role) values ('${qaAdmin.id}', 'staff') on conflict do nothing`);
+
+// ---- direct REST evidence (independent of the page) ------------------------
+const signIn = async (u) => {
+  const res = await fetch(`${URL_BASE}/auth/v1/token?grant_type=password`, {
+    method: 'POST', headers: { apikey: anonKey, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: u.email, password: u.password }),
+  });
+  return (await res.json()).access_token;
+};
+const jwtAdmin = await signIn(qaAdmin);
+const rest = (p, jwt) => fetch(`${URL_BASE}/rest/v1/${p}`, { headers: { apikey: anonKey, Authorization: `Bearer ${jwt}` } })
+  .then(async (res) => ({ status: res.status, data: await res.json().catch(() => null) }));
+const preMsgs = await rest('messages?select=id&limit=5', jwtAdmin);
+ok('server: admin JWT reads messages', preMsgs.status === 200 && Array.isArray(preMsgs.data) && preMsgs.data.length > 0,
+  `HTTP ${preMsgs.status}, ${Array.isArray(preMsgs.data) ? preMsgs.data.length : JSON.stringify(preMsgs.data).slice(0, 120)} rows`);
+const preProf = await rest('profiles?select=id&limit=5', jwtAdmin);
+ok('server: admin JWT reads profiles', preProf.status === 200, `HTTP ${preProf.status}`);
+
+// ---- serve admin/ locally ---------------------------------------------------
+fs.writeFileSync(path.join(ADMIN_DIR, 'config.js'),
+  `window.UB_CONFIG = ${JSON.stringify({ url: URL_BASE, anonKey })};`);
+const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css' };
+const server = http.createServer((req, res) => {
+  const file = path.join(ADMIN_DIR, req.url === '/' ? 'index.html' : req.url.split('?')[0]);
+  try {
+    const body = fs.readFileSync(file);
+    res.writeHead(200, { 'Content-Type': MIME[path.extname(file)] ?? 'application/octet-stream' });
+    res.end(body);
+  } catch {
+    res.writeHead(404); res.end('nope');
+  }
+});
+await new Promise((r) => server.listen(8321, '127.0.0.1', r));
+
+// ---- browser trial ----------------------------------------------------------
+const { chromium } = await import('playwright');
+const browser = await chromium.launch();
+const failures400 = [];
+const consoleErrors = [];
+
+async function newPage() {
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  page.on('response', (r) => {
+    if (r.url().includes('supabase.co') && r.status() >= 400) failures400.push(`${r.status()} ${r.url().replace(/\?.*$/, '')}`);
+  });
+  page.on('console', (m) => { if (m.type() === 'error') consoleErrors.push(m.text().slice(0, 200)); });
+  return page;
+}
+const bodyText = (page) => page.evaluate(() => document.body.innerText);
+const waitFor = async (page, re, tries = 30) => {
+  for (let i = 0; i < tries; i++) {
+    if (re.test(await bodyText(page))) return true;
+    await page.waitForTimeout(500);
+  }
+  return false;
+};
+
+const page = await newPage();
+await page.goto('http://127.0.0.1:8321/', { waitUntil: 'domcontentloaded' });
+await waitFor(page, /Admin sign-in/);
+await page.screenshot({ path: `${SHOTS}/00-signin.png`, fullPage: true });
+await page.fill('#email', qaAdmin.email);
+await page.fill('#pass', qaAdmin.password);
+await page.getByRole('button', { name: 'Sign in', exact: true }).click();
+ok('ui: admin signs in and sees the shell', await waitFor(page, /Overview/));
+
+const TABS = [
+  ['Overview', /Registered students/, '01-overview.png'],
+  ['Students', /QA Admin/, '02-students.png'],
+  ['Applications', /No applications yet\.|Stage/, '03-applications.png'],
+  ['Rewards', /No redemptions yet\.|Mark fulfilled|fulfilled/, '04-rewards.png'],
+  ['Chats', /./, '05-chats.png'], // asserted separately below
+  ['Catalog', /Institutions \(\d+\)/, '06-catalog.png'],
+];
+for (const [name, marker, shot] of TABS) {
+  await page.getByRole('button', { name, exact: true }).click();
+  await page.waitForTimeout(1800);
+  const text = await bodyText(page);
+  const silentFail = /Could not load/.test(text);
+  if (name === 'Chats') {
+    const rows = await page.locator('#mtb tr').count();
+    const hasMessages = rows > 0 && !/No messages yet\.|Could not load/.test(text);
+    ok('ui: Chats shows the seeded group messages', hasMessages, `${rows} rows${silentFail ? ' + load error shown' : ''}`);
+  } else {
+    ok(`ui: ${name} tab renders`, marker.test(text) && !silentFail, silentFail ? 'shows a load error' : '');
+  }
+  if (name === 'Catalog') {
+    ok('ui: Catalog lists all 102 institutions', /Institutions \(102\)/.test(text));
+  }
+  await page.screenshot({ path: `${SHOTS}/${shot}`, fullPage: false });
+}
+
+// Mock action: grant the QA USER a VIP plan from the Students tab.
+await page.getByRole('button', { name: 'Students', exact: true }).click();
+await page.waitForTimeout(1500);
+const userRow = page.locator('tr', { hasText: 'QA User' });
+if (await userRow.count()) {
+  await userRow.locator('select').selectOption('vip');
+  await page.waitForTimeout(1800);
+  const vipShown = await page.locator('tr', { hasText: 'QA User' }).locator('.pill', { hasText: 'vip' }).count();
+  ok('ui: granting VIP from Students tab works', vipShown > 0);
+  await page.screenshot({ path: `${SHOTS}/07-vip-granted.png`, fullPage: false });
+} else {
+  ok('ui: granting VIP from Students tab works', false, 'QA User row not found');
+}
+await page.close();
+
+// Non-admin wall.
+const page2 = await newPage();
+await page2.goto('http://127.0.0.1:8321/', { waitUntil: 'domcontentloaded' });
+await waitFor(page2, /Admin sign-in/);
+await page2.fill('#email', qaUser.email);
+await page2.fill('#pass', qaUser.password);
+await page2.getByRole('button', { name: 'Sign in', exact: true }).click();
+ok('ui: non-admin hits the "No access" wall', await waitFor(page2, /No access/));
+await page2.screenshot({ path: `${SHOTS}/08-non-admin-wall.png`, fullPage: true });
+await page2.close();
+
+await browser.close();
+server.close();
+
+// ---- cleanup ----------------------------------------------------------------
+for (const u of [qaAdmin, qaUser]) await gotrue('DELETE', `/auth/v1/admin/users/${u.id}`);
+const gone = await runSql(REF, `select count(*) c from auth.users where email ~ '^qa-(admin|user)-'`);
+ok('cleanup: throwaway users removed', Number(gone[0]?.c) === 0);
+
+if (failures400.length) console.log('HTTP >=400 from supabase during the trial:\n  ' + [...new Set(failures400)].join('\n  '));
+if (consoleErrors.length) console.log('Console errors during the trial:\n  ' + [...new Set(consoleErrors)].slice(0, 10).join('\n  '));
+
+const fails = results.filter((r) => r.startsWith('FAIL'));
+console.log(`\n${results.length - fails.length}/${results.length} back-office trial checks passed`);
+process.exit(fails.length ? 1 : 0);

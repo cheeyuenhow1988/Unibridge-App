@@ -70,6 +70,10 @@ if (!window.UB_CONFIG || !window.UB_CONFIG.url) {
 }
 const db = window.supabase.createClient(window.UB_CONFIG.url, window.UB_CONFIG.anonKey);
 const STATUSES = ['submitted','under_review','conditional_offer','offer','accepted','coe_issued'];
+/** Never render a failed query as an empty list — say what went wrong. */
+const stateRow = (tb, cols, error, emptyText) =>
+  tb.appendChild(el(`<tr><td colspan="${cols}" class="${error ? 'err' : 'muted'}">${
+    error ? 'Could not load: ' + esc(error.message) : emptyText}</td></tr>`));
 
 // ------------------------------------------------------------------- auth
 async function boot() {
@@ -196,6 +200,7 @@ async function vStudents(body) {
     <tbody id="stb"></tbody></table></div></div>`);
   body.appendChild(card);
   const tb = card.querySelector('#stb');
+  if (profiles.error || !(profiles.data ?? []).length) stateRow(tb, 7, profiles.error, 'No students yet.');
   for (const p of profiles.data ?? []) {
     const e = ent[p.id];
     const tr = el(`<tr><td><b>${esc(p.name)}</b></td><td>${esc(p.home_country ?? p.nationality ?? '')}</td>
@@ -231,7 +236,7 @@ async function vApplications(body) {
     <tbody id="atb"></tbody></table></div></div>`);
   body.appendChild(card);
   const tb = card.querySelector('#atb');
-  if (!(apps.data ?? []).length) tb.appendChild(el('<tr><td colspan="6" class="muted">No applications yet.</td></tr>'));
+  if (apps.error || !(apps.data ?? []).length) stateRow(tb, 6, apps.error, 'No applications yet.');
   for (const a of apps.data ?? []) {
     const tr = el(`<tr><td><b>${esc(names[a.student_id] ?? '—')}</b></td><td>${esc(a.course_id)}</td>
       <td>${esc(a.intake ?? '')}</td><td>${esc((a.submitted_at ?? '').slice(0, 10))}</td>
@@ -262,7 +267,7 @@ async function vRewards(body) {
     <tbody id="rtb"></tbody></table></div></div>`);
   body.appendChild(card);
   const tb = card.querySelector('#rtb');
-  if (!(reds.data ?? []).length) tb.appendChild(el('<tr><td colspan="6" class="muted">No redemptions yet.</td></tr>'));
+  if (reds.error || !(reds.data ?? []).length) stateRow(tb, 6, reds.error, 'No redemptions yet.');
   for (const r of reds.data ?? []) {
     const tr = el(`<tr><td><b>${esc(names[r.student_id] ?? '—')}</b></td><td>${esc(r.reward_item)}</td>
       <td>${r.coin_cost}</td><td>${esc((r.redeemed_at ?? '').slice(0, 10))}</td>
@@ -287,6 +292,7 @@ async function vChats(body) {
     <tbody id="mtb"></tbody></table></div></div>`);
   body.appendChild(card);
   const tb = card.querySelector('#mtb');
+  if (msgs.error || !(msgs.data ?? []).length) stateRow(tb, 5, msgs.error, 'No messages yet.');
   for (const m of msgs.data ?? []) {
     const tr = el(`<tr><td class="muted">${esc((m.created_at ?? '').replace('T', ' ').slice(0, 16))}</td>
       <td>${esc(m.group_id ?? '')}</td><td><b>${esc(m.sender_name ?? '')}</b></td>
@@ -311,6 +317,7 @@ async function vCatalog(body) {
     <tbody id="ctb"></tbody></table></div></div>`);
   body.appendChild(card);
   const tb = card.querySelector('#ctb');
+  if (insts.error || !(insts.data ?? []).length) stateRow(tb, 4, insts.error, 'No institutions loaded.');
   for (const i of insts.data ?? []) {
     const tr = el(`<tr><td><b>${esc(i.name)}</b></td><td>${esc(i.city)}, ${esc(i.country)}</td>
       <td><input type="checkbox" ${i.is_verified_partner ? 'checked' : ''}></td>
