@@ -1,0 +1,1 @@
+window.UB_CONFIG = {"url":"https://xxlrpxidasahnmzmqcpo.supabase.co","anonKey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4bHJweGlkYXNhaG5tem1xY3BvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYzNTE2NzgsImV4cCI6MjEwMTkyNzY3OH0.UdO8MyL2p_mU5LwOaUvP7UzdqMU529Zi_ITavXvfkqI"};
