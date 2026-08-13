@@ -177,6 +177,7 @@ async function vOverview(body) {
   for (const a of apps.data ?? []) byStatus[a.status] = (byStatus[a.status] ?? 0) + 1;
   const balance = (coins.data ?? []).reduce((s, r) => s + r.delta, 0);
   const pending = (red.data ?? []).filter((r) => !r.fulfilled).length;
+  const bucketN = (k) => (apps.data ?? []).filter((a) => appBucket(a.status) === k).length;
   body.innerHTML = '';
   body.appendChild(el(`<div class="stats">
     <div class="stat"><div class="n">${students.count ?? 0}</div><div class="l">Registered students</div></div>
@@ -184,8 +185,13 @@ async function vOverview(body) {
     <div class="stat"><div class="n">${balance}</div><div class="l">Coins outstanding</div></div>
     <div class="stat"><div class="n">${pending}</div><div class="l">Redemptions to fulfil</div></div>
   </div>`));
-  body.appendChild(el(`<div class="card"><h2>Applications by stage</h2>
-    ${STATUSES.map((s) => `<span class="pill" style="margin:0 6px 6px 0">${s.replace('_',' ')} · ${byStatus[s] ?? 0}</span>`).join('')}
+  body.appendChild(el(`<div class="stats" style="margin-top:12px">
+    <div class="stat"><div class="n" style="color:#B54708">${bucketN('pending')}</div><div class="l">🟡 Pending applications</div></div>
+    <div class="stat"><div class="n" style="color:#067647">${bucketN('passed')}</div><div class="l">🟢 Passed (offer & beyond)</div></div>
+    <div class="stat"><div class="n" style="color:#B42318">${bucketN('failed')}</div><div class="l">🔴 Failed (rejected)</div></div>
+  </div>`));
+  body.appendChild(el(`<div class="card" style="margin-top:12px"><h2>Applications by stage</h2>
+    ${[...STATUSES, 'rejected'].map((s) => `<span class="pill" style="margin:0 6px 6px 0">${s.replace('_',' ')} · ${byStatus[s] ?? 0}</span>`).join('')}
   </div>`));
 }
 
@@ -229,31 +235,58 @@ async function vStudents(body) {
 }
 
 // ------------------------------------------------------------ applications
-async function vApplications(body) {
+const APP_BUCKETS = {
+  pending: { label: '🟡 Pending', statuses: ['submitted', 'under_review'] },
+  passed: { label: '🟢 Passed', statuses: ['conditional_offer', 'offer', 'accepted', 'coe_issued'] },
+  failed: { label: '🔴 Failed', statuses: ['rejected'] },
+};
+const appBucket = (status) =>
+  Object.keys(APP_BUCKETS).find((k) => APP_BUCKETS[k].statuses.includes(status)) ?? 'pending';
+
+async function vApplications(body, bucket = '') {
   const [apps, profiles] = await Promise.all([
     db.from('applications').select('id,student_id,course_id,status,intake,fee_waived,submitted_at').order('submitted_at', { ascending: false }).limit(200),
     db.from('profiles').select('id,name'),
   ]);
   const names = Object.fromEntries((profiles.data ?? []).map((p) => [p.id, p.name]));
+  const all = apps.data ?? [];
+  const nOf = (k) => all.filter((a) => appBucket(a.status) === k).length;
+  const shown = bucket ? all.filter((a) => appBucket(a.status) === bucket) : all;
   body.innerHTML = '';
   const card = el(`<div class="card"><h2>Applications</h2>
-    <p class="sub">Changing the stage updates the student's tracker in the app.</p>
-    <div class="scroll"><table><thead><tr><th>Student</th><th>Course</th><th>Intake</th><th>Submitted</th><th>Fee</th><th>Stage</th></tr></thead>
+    <p class="sub">Changing the stage updates the student's tracker in the app. Pending = waiting on a decision; Passed = offer or beyond; Failed = rejected.</p>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+      <button class="act${bucket === '' ? ' primary' : ''}" data-b="">All (${all.length})</button>
+      ${Object.entries(APP_BUCKETS).map(([k, v]) =>
+        `<button class="act${bucket === k ? ' primary' : ''}" data-b="${k}">${v.label} (${nOf(k)})</button>`).join('')}
+    </div>
+    <div class="scroll"><table><thead><tr><th>Student</th><th>Course</th><th>Intake</th><th>Submitted</th><th>Fee</th><th>Result</th><th>Stage</th></tr></thead>
     <tbody id="atb"></tbody></table></div></div>`);
   body.appendChild(card);
+  for (const b of card.querySelectorAll('button[data-b]')) {
+    b.onclick = () => vApplications(body, b.dataset.b);
+  }
   const tb = card.querySelector('#atb');
-  if (apps.error || !(apps.data ?? []).length) stateRow(tb, 6, apps.error, 'No applications yet.');
-  for (const a of apps.data ?? []) {
+  if (apps.error || !shown.length) stateRow(tb, 7, apps.error, bucket ? 'No applications in this group.' : 'No applications yet.');
+  const bucketPill = (s) => {
+    const k = appBucket(s);
+    const cls = k === 'passed' ? 'green' : k === 'failed' ? '' : 'gray';
+    const style = k === 'failed' ? 'style="background:#FEE4E2;color:#B42318"' : '';
+    return `<span class="pill ${cls}" ${style}>${k}</span>`;
+  };
+  for (const a of shown) {
     const tr = el(`<tr><td><b>${esc(names[a.student_id] ?? '—')}</b></td><td>${esc(a.course_id)}</td>
       <td>${esc(a.intake ?? '')}</td><td>${esc((a.submitted_at ?? '').slice(0, 10))}</td>
       <td>${a.fee_waived ? '<span class="pill green">waived</span>' : ''}</td>
-      <td><select>${STATUSES.map((s) => `<option ${s === a.status ? 'selected' : ''}>${s}</option>`).join('')}</select></td></tr>`);
+      <td>${bucketPill(a.status)}</td>
+      <td><select>${[...STATUSES, 'rejected'].map((s) => `<option ${s === a.status ? 'selected' : ''}>${s}</option>`).join('')}</select></td></tr>`);
     tr.querySelector('select').onchange = async (ev) => {
       const status = ev.target.value;
       const { error } = await db.from('applications').update({
         status, decision_at: new Date().toISOString(),
       }).eq('id', a.id);
       if (error) { alert(error.message); ev.target.value = a.status; }
+      else vApplications(body, bucket);
     };
     tb.appendChild(tr);
   }
