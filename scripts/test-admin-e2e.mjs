@@ -196,6 +196,13 @@ for (const [name, marker, shot] of TABS) {
     await page.screenshot({ path: `${SHOTS}/05b-community-videos.png`, fullPage: false });
     await page.getByRole('button', { name: /Photos \(/ }).click();
     await page.waitForTimeout(600);
+    await page.fill('#pFrom', '2030-01-01');
+    await page.locator('#pFrom').dispatchEvent('change');
+    await page.waitForTimeout(600);
+    ok('ui: posts date filter narrows the grid', /No posts in this date range/.test(await bodyText(page)));
+    await page.locator('#pDateClear').click();
+    await page.waitForTimeout(600);
+    ok('ui: clearing the date filter restores posts', (await page.locator('#postsGrid img').count()) > 0);
   } else {
     ok(`ui: ${name} tab renders`, rendered && !silentFail, silentFail ? 'shows a load error' : rendered ? '' : 'marker never appeared');
   }
