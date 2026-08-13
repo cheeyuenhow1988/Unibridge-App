@@ -169,7 +169,10 @@ const TABS = [
 ];
 for (const [name, marker, shot] of TABS) {
   await page.getByRole('button', { name, exact: true }).click();
-  await page.waitForTimeout(1800);
+  // Wait for the tab's real content marker (up to ~8s) — a fixed sleep made
+  // the check flaky on slow loads.
+  const target = name === 'Community' ? /Latest group messages/ : marker;
+  const rendered = await waitFor(page, target, 16);
   const text = await bodyText(page);
   const silentFail = /Could not load/.test(text);
   if (name === 'Community') {
@@ -181,7 +184,7 @@ for (const [name, marker, shot] of TABS) {
     const reelImgs = await page.locator('#reelsGrid img').count();
     ok('ui: Community shows short reels with thumbnails', reelImgs > 0, `${reelImgs} reel thumbnails`);
   } else {
-    ok(`ui: ${name} tab renders`, marker.test(text) && !silentFail, silentFail ? 'shows a load error' : '');
+    ok(`ui: ${name} tab renders`, rendered && !silentFail, silentFail ? 'shows a load error' : rendered ? '' : 'marker never appeared');
   }
   if (name === 'Catalog') {
     const rows = await page.locator('#ctb tr').count();

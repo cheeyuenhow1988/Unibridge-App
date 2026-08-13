@@ -123,13 +123,17 @@ function renderAuth() {
 
 function renderSetPassword() {
   main.innerHTML = '';
+  const fromInvite = /type=(invite|recovery)/.test(location.hash);
   main.appendChild(el(`<div id="auth" class="card">
+    ${fromInvite ? '' : '<button class="act" id="pwback" style="margin-bottom:10px">← Back</button>'}
     <h2>Welcome — set your password</h2>
     <div class="err" id="perr"></div>
     <input id="np1" type="password" placeholder="New password (min 8 characters)" autocomplete="new-password">
     <input id="np2" type="password" placeholder="Repeat password" autocomplete="new-password">
     <button class="primary act" id="setp">Save password & enter</button>
   </div>`));
+  const pwback = $('#pwback');
+  if (pwback) pwback.onclick = () => { history.replaceState(null, '', location.pathname); boot(); };
   $('#setp').onclick = async () => {
     const p1 = $('#np1').value, p2 = $('#np2').value;
     if (p1.length < 8) { $('#perr').textContent = 'Use at least 8 characters.'; return; }
