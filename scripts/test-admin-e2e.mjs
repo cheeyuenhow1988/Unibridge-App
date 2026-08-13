@@ -182,6 +182,16 @@ for (const [name, marker, shot] of TABS) {
   if (name === 'Catalog') {
     const rows = await page.locator('#ctb tr').count();
     ok('ui: Catalog actually renders the institution rows', rows >= 100, `${rows} rows`);
+    await page.getByRole('button', { name: /^Filters/ }).click();
+    await page.waitForTimeout(800);
+    await page.locator('#ftype').selectOption('college');
+    await page.waitForTimeout(1200);
+    const collegeRows = await page.locator('#ctb tr').count();
+    ok('ui: Filters panel narrows the catalog (type=college)',
+      collegeRows > 0 && collegeRows < rows && /of \d+/.test(await bodyText(page)), `${collegeRows} of ${rows} rows`);
+    await page.screenshot({ path: `${SHOTS}/06b-catalog-filtered.png`, fullPage: false });
+    await page.locator('#fclear').click();
+    await page.waitForTimeout(1000);
   }
   await page.screenshot({ path: `${SHOTS}/${shot}`, fullPage: false });
 }

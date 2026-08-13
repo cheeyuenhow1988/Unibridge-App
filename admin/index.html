@@ -316,7 +316,8 @@ const flag = (cc) => /^[A-Z]{2}$/.test(cc ?? '') ? String.fromCodePoint(...[...c
 const slugId = (country, name) =>
   `${(country || 'xx').toLowerCase()}-${(name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 48)}`;
 
-async function vCatalog(body, filter = { q: '', cc: '' }) {
+const EMPTY_FILTER = { q: '', cc: '', type: '', ver: '', ph: '', rk: '', open: false };
+async function vCatalog(body, filter = { ...EMPTY_FILTER }) {
   const insts = await db.from('institutions')
     .select('id,name,short_name,type,country,city,is_verified_partner,tagline,website,founded,students,qs_rank,logo,photos')
     .order('name').limit(300);
@@ -324,21 +325,50 @@ async function vCatalog(body, filter = { q: '', cc: '' }) {
   const all = insts.data ?? [];
   const shown = all.filter((i) =>
     (!filter.cc || i.country === filter.cc) &&
+    (!filter.type || i.type === filter.type) &&
+    (!filter.ver || (filter.ver === 'yes') === Boolean(i.is_verified_partner)) &&
+    (!filter.ph || (filter.ph === 'with') === ((i.photos ?? []).length > 0)) &&
+    (!filter.rk || (filter.rk === 'ranked') === (i.qs_rank != null)) &&
     (!filter.q || `${i.name} ${i.city}`.toLowerCase().includes(filter.q.toLowerCase())));
-  const card = el(`<div class="card"><h2>Institutions (${shown.length}${filter.q || filter.cc ? ` of ${all.length}` : ''})</h2>
+  const nActive = ['type', 'ver', 'ph', 'rk'].filter((k) => filter[k]).length;
+  const filtered = filter.q || filter.cc || nActive > 0;
+  const card = el(`<div class="card"><h2>Institutions (${shown.length}${filtered ? ` of ${all.length}` : ''})</h2>
     <p class="sub">Everything here edits the live catalog. Never mark a partner verified without a signed agreement.</p>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
       <input id="cq" placeholder="Search name or city…" value="${esc(filter.q)}" style="flex:1;min-width:180px">
       <select id="ccc"><option value="">All countries</option>
         ${COUNTRIES.map((c) => `<option value="${c}" ${filter.cc === c ? 'selected' : ''}>${flag(c)} ${c}</option>`).join('')}</select>
+      <button class="act${nActive ? ' primary' : ''}" id="cfilters">Filters${nActive ? ' · ' + nActive : ''}</button>
       <button class="act primary" id="addInst">+ Add institution</button>
     </div>
+    ${filter.open ? `<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg)">
+      <select id="ftype"><option value="">All types</option>
+        ${TYPES.map((t) => `<option value="${t}" ${filter.type === t ? 'selected' : ''}>${t}</option>`).join('')}</select>
+      <select id="fver"><option value="">Verified: all</option>
+        <option value="yes" ${filter.ver === 'yes' ? 'selected' : ''}>Verified partners only</option>
+        <option value="no" ${filter.ver === 'no' ? 'selected' : ''}>Not verified</option></select>
+      <select id="fph"><option value="">Photos: all</option>
+        <option value="with" ${filter.ph === 'with' ? 'selected' : ''}>With photos</option>
+        <option value="without" ${filter.ph === 'without' ? 'selected' : ''}>No photos</option></select>
+      <select id="frk"><option value="">Rank: all</option>
+        <option value="ranked" ${filter.rk === 'ranked' ? 'selected' : ''}>World-ranked</option>
+        <option value="unranked" ${filter.rk === 'unranked' ? 'selected' : ''}>Unranked</option></select>
+      <button class="act" id="fclear">Clear filters</button>
+    </div>` : ''}
     <div class="scroll"><table><thead><tr>
       <th></th><th>Name</th><th>Where</th><th>Type</th><th>Rank</th><th>Verified</th><th>Photos</th><th style="text-align:right">Actions</th>
     </tr></thead><tbody id="ctb"></tbody></table></div></div>`);
   body.appendChild(card);
   card.querySelector('#cq').onchange = (ev) => vCatalog(body, { ...filter, q: ev.target.value });
   card.querySelector('#ccc').onchange = (ev) => vCatalog(body, { ...filter, cc: ev.target.value });
+  card.querySelector('#cfilters').onclick = () => vCatalog(body, { ...filter, open: !filter.open });
+  if (filter.open) {
+    card.querySelector('#ftype').onchange = (ev) => vCatalog(body, { ...filter, type: ev.target.value });
+    card.querySelector('#fver').onchange = (ev) => vCatalog(body, { ...filter, ver: ev.target.value });
+    card.querySelector('#fph').onchange = (ev) => vCatalog(body, { ...filter, ph: ev.target.value });
+    card.querySelector('#frk').onchange = (ev) => vCatalog(body, { ...filter, rk: ev.target.value });
+    card.querySelector('#fclear').onclick = () => vCatalog(body, { ...EMPTY_FILTER, q: filter.q, cc: filter.cc, open: true });
+  }
   card.querySelector('#addInst').onclick = () => renderInstForm(body, null, filter);
   const tb = card.querySelector('#ctb');
   if (insts.error || !shown.length) stateRow(tb, 8, insts.error, 'No institutions match.');
