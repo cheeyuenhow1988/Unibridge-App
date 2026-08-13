@@ -171,14 +171,21 @@ for (const [name, marker, shot] of TABS) {
   await page.getByRole('button', { name, exact: true }).click();
   // Wait for the tab's real content marker (up to ~8s) — a fixed sleep made
   // the check flaky on slow loads.
-  const target = name === 'Community' ? /Latest group messages/ : marker;
+  const target = name === 'Community' ? /Group chats/ : marker;
   const rendered = await waitFor(page, target, 16);
   const text = await bodyText(page);
   const silentFail = /Could not load/.test(text);
   if (name === 'Community') {
-    const rows = await page.locator('#mtb tr').count();
-    const hasMessages = rows > 0 && !/No messages yet\.|Could not load/.test(text);
-    ok('ui: Community shows the seeded group messages', hasMessages, `${rows} rows${silentFail ? ' + load error shown' : ''}`);
+    const gRows = await page.locator('#gtb tr').count();
+    ok('ui: Community lists group chats with latest-message previews', gRows >= 10 && !silentFail, `${gRows} groups`);
+    await page.locator('#gtb tr').first().click();
+    await page.waitForTimeout(1500);
+    const chatRows = await page.locator('#mtb tr').count();
+    ok('ui: opening a group shows its full conversation', chatRows > 0, `${chatRows} messages`);
+    await page.screenshot({ path: `${SHOTS}/05c-group-chat.png`, fullPage: false });
+    await page.getByRole('button', { name: '← Back' }).click();
+    await page.waitForTimeout(1500);
+    ok('ui: back arrow returns to the group list', (await page.locator('#gtb tr').count()) >= 10);
     const postImgs = await page.locator('#postsGrid img').count();
     ok('ui: Community shows shared post pictures', postImgs > 0, `${postImgs} post images`);
     const reelImgs = await page.locator('#reelsGrid img').count();
