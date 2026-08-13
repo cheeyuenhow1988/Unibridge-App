@@ -164,7 +164,7 @@ const TABS = [
   ['Students', /QA Admin/, '02-students.png'],
   ['Applications', /No applications yet\.|Stage/, '03-applications.png'],
   ['Rewards', /No redemptions yet\.|Mark fulfilled|fulfilled/, '04-rewards.png'],
-  ['Chats', /./, '05-chats.png'], // asserted separately below
+  ['Community', /./, '05-community.png'], // asserted separately below
   ['Catalog', /Institutions \(\d+\)/, '06-catalog.png'],
 ];
 for (const [name, marker, shot] of TABS) {
@@ -172,10 +172,14 @@ for (const [name, marker, shot] of TABS) {
   await page.waitForTimeout(1800);
   const text = await bodyText(page);
   const silentFail = /Could not load/.test(text);
-  if (name === 'Chats') {
+  if (name === 'Community') {
     const rows = await page.locator('#mtb tr').count();
     const hasMessages = rows > 0 && !/No messages yet\.|Could not load/.test(text);
-    ok('ui: Chats shows the seeded group messages', hasMessages, `${rows} rows${silentFail ? ' + load error shown' : ''}`);
+    ok('ui: Community shows the seeded group messages', hasMessages, `${rows} rows${silentFail ? ' + load error shown' : ''}`);
+    const postImgs = await page.locator('#postsGrid img').count();
+    ok('ui: Community shows shared post pictures', postImgs > 0, `${postImgs} post images`);
+    const reelImgs = await page.locator('#reelsGrid img').count();
+    ok('ui: Community shows short reels with thumbnails', reelImgs > 0, `${reelImgs} reel thumbnails`);
   } else {
     ok(`ui: ${name} tab renders`, marker.test(text) && !silentFail, silentFail ? 'shows a load error' : '');
   }
