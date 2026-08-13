@@ -383,6 +383,7 @@ function renderInstForm(body, inst, filter) {
   const photos = f.photos ?? [];
   body.innerHTML = '';
   const card = el(`<div class="card" style="max-width:720px">
+    <button class="act" id="fback" style="margin-bottom:10px">← Back</button>
     <h2>${isNew ? 'Add institution' : 'Edit — ' + esc(f.name)}</h2>
     <div class="err" id="ferr"></div>
     <table><tbody>
@@ -442,6 +443,7 @@ function renderInstForm(body, inst, filter) {
     };
   }
 
+  card.querySelector('#fback').onclick = () => vCatalog(body, filter);
   card.querySelector('#fcancel').onclick = () => vCatalog(body, filter);
   card.querySelector('#fsave').onclick = async () => {
     const val = (id) => card.querySelector(id).value.trim();
