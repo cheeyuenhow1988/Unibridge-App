@@ -123,13 +123,17 @@ function renderAuth() {
 
 function renderSetPassword() {
   main.innerHTML = '';
+  const fromInvite = /type=(invite|recovery)/.test(location.hash);
   main.appendChild(el(`<div id="auth" class="card">
+    ${fromInvite ? '' : '<button class="act" id="pwback" style="margin-bottom:10px">← Back</button>'}
     <h2>Welcome — set your password</h2>
     <div class="err" id="perr"></div>
     <input id="np1" type="password" placeholder="New password (min 8 characters)" autocomplete="new-password">
     <input id="np2" type="password" placeholder="Repeat password" autocomplete="new-password">
     <button class="primary act" id="setp">Save password & enter</button>
   </div>`));
+  const pwback = $('#pwback');
+  if (pwback) pwback.onclick = () => { history.replaceState(null, '', location.pathname); boot(); };
   $('#setp').onclick = async () => {
     const p1 = $('#np1').value, p2 = $('#np2').value;
     if (p1.length < 8) { $('#perr').textContent = 'Use at least 8 characters.'; return; }
@@ -144,7 +148,7 @@ function renderSetPassword() {
 $('#signout').onclick = async () => { await db.auth.signOut(); location.reload(); };
 
 // ------------------------------------------------------------------ shell
-const TABS = ['Overview','Students','Applications','Rewards','Chats','Catalog'];
+const TABS = ['Overview','Students','Applications','Rewards','Community','Catalog'];
 let tab = 'Overview';
 function renderShell() {
   main.innerHTML = '';
@@ -158,7 +162,7 @@ function renderShell() {
   const body = el('<div id="body"><div class="card muted">Loading…</div></div>');
   main.appendChild(body);
   ({ Overview: vOverview, Students: vStudents, Applications: vApplications,
-     Rewards: vRewards, Chats: vChats, Catalog: vCatalog })[tab](body);
+     Rewards: vRewards, Community: vCommunity, Catalog: vCatalog })[tab](body);
 }
 
 // --------------------------------------------------------------- overview
@@ -284,13 +288,24 @@ async function vRewards(body) {
   }
 }
 
-// ------------------------------------------------------------------ chats
-async function vChats(body) {
-  const msgs = await db.from('messages').select('id,group_id,sender_name,body,created_at').order('created_at', { ascending: false }).limit(100);
+// -------------------------------------------------------------- community
+const fmtDur = (s) => `${Math.floor((s ?? 0) / 60)}:${String((s ?? 0) % 60).padStart(2, '0')}`;
+const fmtViews = (v) => (v >= 1000 ? `${(v / 1000).toFixed(1)}k` : String(v ?? 0));
+
+async function vCommunity(body) {
+  const [msgs, posts, shorts, ambs] = await Promise.all([
+    db.from('messages').select('id,group_id,sender_name,body,created_at').order('created_at', { ascending: false }).limit(100),
+    db.from('ambassador_posts').select('id,ambassador_id,caption,media_urls,likes,posted_date').order('posted_date', { ascending: false }).limit(60),
+    db.from('shorts').select('id,ambassador_id,title,video_url,thumbnail_url,duration_sec,view_count,is_reality_check').order('view_count', { ascending: false }).limit(60),
+    db.from('ambassadors').select('id,name'),
+  ]);
+  const names = Object.fromEntries((ambs.data ?? []).map((a) => [a.id, a.name]));
   body.innerHTML = '';
+
+  // ---- group messages -----------------------------------------------------
   const card = el(`<div class="card"><h2>Latest group messages</h2>
     <p class="sub">Moderation view — delete removes the message for everyone.</p>
-    <div class="scroll"><table><thead><tr><th>When</th><th>Group</th><th>Sender</th><th>Message</th><th></th></tr></thead>
+    <div class="scroll" style="max-height:420px;overflow-y:auto"><table><thead><tr><th>When</th><th>Group</th><th>Sender</th><th>Message</th><th></th></tr></thead>
     <tbody id="mtb"></tbody></table></div></div>`);
   body.appendChild(card);
   const tb = card.querySelector('#mtb');
@@ -307,6 +322,63 @@ async function vChats(body) {
     };
     tb.appendChild(tr);
   }
+
+  // ---- shared post pictures ----------------------------------------------
+  const postsCard = el(`<div class="card"><h2>Student posts (${(posts.data ?? []).length})</h2>
+    <p class="sub">Pictures shared in the community feed. Delete removes the post for everyone.</p>
+    <div class="err">${posts.error ? 'Could not load: ' + esc(posts.error.message) : ''}</div>
+    <div id="postsGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px"></div></div>`);
+  body.appendChild(postsCard);
+  const pg = postsCard.querySelector('#postsGrid');
+  if (!(posts.data ?? []).length && !posts.error) pg.appendChild(el('<div class="muted">No posts yet.</div>'));
+  for (const p of posts.data ?? []) {
+    const img = (p.media_urls ?? [])[0];
+    const cell = el(`<div style="border:1px solid var(--line);border-radius:10px;overflow:hidden">
+      ${img ? `<img src="${esc(img)}" style="width:100%;height:120px;object-fit:cover" loading="lazy">`
+            : '<div style="height:120px;background:var(--bg)" class="muted"></div>'}
+      <div style="padding:8px">
+        <div style="font-size:12px;height:34px;overflow:hidden">${esc((p.caption ?? '').slice(0, 90))}</div>
+        <div class="muted" style="font-size:11px;margin:4px 0">${esc(names[p.ambassador_id] ?? '')} · ♥ ${p.likes ?? 0} · ${esc(p.posted_date ?? '')}</div>
+        <button class="act danger" style="width:100%;padding:4px">Delete post</button>
+      </div></div>`);
+    cell.querySelector('button').onclick = async () => {
+      if (!confirm('Delete this post (picture + caption) for everyone?')) return;
+      const { error } = await db.from('ambassador_posts').delete().eq('id', p.id);
+      if (error) alert(error.message); else cell.remove();
+    };
+    pg.appendChild(cell);
+  }
+
+  // ---- short reels --------------------------------------------------------
+  const reelsCard = el(`<div class="card"><h2>Short reels (${(shorts.data ?? []).length})</h2>
+    <p class="sub">Video clips in the app's Shorts feed, most-viewed first. Click a thumbnail to open the video when one is attached.</p>
+    <div class="err">${shorts.error ? 'Could not load: ' + esc(shorts.error.message) : ''}</div>
+    <div id="reelsGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px"></div></div>`);
+  body.appendChild(reelsCard);
+  const rg = reelsCard.querySelector('#reelsGrid');
+  if (!(shorts.data ?? []).length && !shorts.error) rg.appendChild(el('<div class="muted">No reels yet.</div>'));
+  for (const s of shorts.data ?? []) {
+    const cell = el(`<div style="border:1px solid var(--line);border-radius:10px;overflow:hidden">
+      <div style="position:relative;cursor:${s.video_url ? 'pointer' : 'default'}">
+        ${s.thumbnail_url ? `<img src="${esc(s.thumbnail_url)}" style="width:100%;height:200px;object-fit:cover" loading="lazy">`
+                          : '<div style="height:200px;background:#1a1a2e"></div>'}
+        <span style="position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);font-size:30px;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.6)">▶</span>
+        <span class="pill" style="position:absolute;right:6px;bottom:6px;background:rgba(0,0,0,.65);color:#fff">${fmtDur(s.duration_sec)}</span>
+        ${s.is_reality_check ? '<span class="pill" style="position:absolute;left:6px;top:6px;background:#FEF0C7;color:#93370D">reality check</span>' : ''}
+      </div>
+      <div style="padding:8px">
+        <div style="font-size:12px;font-weight:600;height:32px;overflow:hidden">${esc(s.title ?? '')}</div>
+        <div class="muted" style="font-size:11px;margin:4px 0">${esc(names[s.ambassador_id] ?? '')} · ${fmtViews(s.view_count)} views</div>
+        <button class="act danger" style="width:100%;padding:4px">Delete reel</button>
+      </div></div>`);
+    if (s.video_url) cell.querySelector('div').onclick = () => window.open(s.video_url, '_blank');
+    cell.querySelector('button').onclick = async () => {
+      if (!confirm('Delete this reel for everyone?')) return;
+      const { error } = await db.from('shorts').delete().eq('id', s.id);
+      if (error) alert(error.message); else cell.remove();
+    };
+    rg.appendChild(cell);
+  }
 }
 
 // ---------------------------------------------------------------- catalog
@@ -316,7 +388,8 @@ const flag = (cc) => /^[A-Z]{2}$/.test(cc ?? '') ? String.fromCodePoint(...[...c
 const slugId = (country, name) =>
   `${(country || 'xx').toLowerCase()}-${(name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 48)}`;
 
-async function vCatalog(body, filter = { q: '', cc: '' }) {
+const EMPTY_FILTER = { q: '', cc: '', type: '', ver: '', ph: '', rk: '', open: false };
+async function vCatalog(body, filter = { ...EMPTY_FILTER }) {
   const insts = await db.from('institutions')
     .select('id,name,short_name,type,country,city,is_verified_partner,tagline,website,founded,students,qs_rank,logo,photos')
     .order('name').limit(300);
@@ -324,21 +397,50 @@ async function vCatalog(body, filter = { q: '', cc: '' }) {
   const all = insts.data ?? [];
   const shown = all.filter((i) =>
     (!filter.cc || i.country === filter.cc) &&
+    (!filter.type || i.type === filter.type) &&
+    (!filter.ver || (filter.ver === 'yes') === Boolean(i.is_verified_partner)) &&
+    (!filter.ph || (filter.ph === 'with') === ((i.photos ?? []).length > 0)) &&
+    (!filter.rk || (filter.rk === 'ranked') === (i.qs_rank != null)) &&
     (!filter.q || `${i.name} ${i.city}`.toLowerCase().includes(filter.q.toLowerCase())));
-  const card = el(`<div class="card"><h2>Institutions (${shown.length}${filter.q || filter.cc ? ` of ${all.length}` : ''})</h2>
+  const nActive = ['type', 'ver', 'ph', 'rk'].filter((k) => filter[k]).length;
+  const filtered = filter.q || filter.cc || nActive > 0;
+  const card = el(`<div class="card"><h2>Institutions (${shown.length}${filtered ? ` of ${all.length}` : ''})</h2>
     <p class="sub">Everything here edits the live catalog. Never mark a partner verified without a signed agreement.</p>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
       <input id="cq" placeholder="Search name or city…" value="${esc(filter.q)}" style="flex:1;min-width:180px">
       <select id="ccc"><option value="">All countries</option>
         ${COUNTRIES.map((c) => `<option value="${c}" ${filter.cc === c ? 'selected' : ''}>${flag(c)} ${c}</option>`).join('')}</select>
+      <button class="act${nActive ? ' primary' : ''}" id="cfilters">Filters${nActive ? ' · ' + nActive : ''}</button>
       <button class="act primary" id="addInst">+ Add institution</button>
     </div>
+    ${filter.open ? `<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg)">
+      <select id="ftype"><option value="">All types</option>
+        ${TYPES.map((t) => `<option value="${t}" ${filter.type === t ? 'selected' : ''}>${t}</option>`).join('')}</select>
+      <select id="fver"><option value="">Verified: all</option>
+        <option value="yes" ${filter.ver === 'yes' ? 'selected' : ''}>Verified partners only</option>
+        <option value="no" ${filter.ver === 'no' ? 'selected' : ''}>Not verified</option></select>
+      <select id="fph"><option value="">Photos: all</option>
+        <option value="with" ${filter.ph === 'with' ? 'selected' : ''}>With photos</option>
+        <option value="without" ${filter.ph === 'without' ? 'selected' : ''}>No photos</option></select>
+      <select id="frk"><option value="">Rank: all</option>
+        <option value="ranked" ${filter.rk === 'ranked' ? 'selected' : ''}>World-ranked</option>
+        <option value="unranked" ${filter.rk === 'unranked' ? 'selected' : ''}>Unranked</option></select>
+      <button class="act" id="fclear">Clear filters</button>
+    </div>` : ''}
     <div class="scroll"><table><thead><tr>
       <th></th><th>Name</th><th>Where</th><th>Type</th><th>Rank</th><th>Verified</th><th>Photos</th><th style="text-align:right">Actions</th>
     </tr></thead><tbody id="ctb"></tbody></table></div></div>`);
   body.appendChild(card);
   card.querySelector('#cq').onchange = (ev) => vCatalog(body, { ...filter, q: ev.target.value });
   card.querySelector('#ccc').onchange = (ev) => vCatalog(body, { ...filter, cc: ev.target.value });
+  card.querySelector('#cfilters').onclick = () => vCatalog(body, { ...filter, open: !filter.open });
+  if (filter.open) {
+    card.querySelector('#ftype').onchange = (ev) => vCatalog(body, { ...filter, type: ev.target.value });
+    card.querySelector('#fver').onchange = (ev) => vCatalog(body, { ...filter, ver: ev.target.value });
+    card.querySelector('#fph').onchange = (ev) => vCatalog(body, { ...filter, ph: ev.target.value });
+    card.querySelector('#frk').onchange = (ev) => vCatalog(body, { ...filter, rk: ev.target.value });
+    card.querySelector('#fclear').onclick = () => vCatalog(body, { ...EMPTY_FILTER, q: filter.q, cc: filter.cc, open: true });
+  }
   card.querySelector('#addInst').onclick = () => renderInstForm(body, null, filter);
   const tb = card.querySelector('#ctb');
   if (insts.error || !shown.length) stateRow(tb, 8, insts.error, 'No institutions match.');
@@ -353,7 +455,6 @@ async function vCatalog(body, filter = { q: '', cc: '' }) {
       <td>${(i.photos ?? []).length}</td>
       <td style="text-align:right;white-space:nowrap">
         <button class="act" data-a="edit">Edit</button>
-        <button class="act" data-a="photos">Photos</button>
         <button class="act danger" data-a="del">Delete</button>
       </td></tr>`);
     tr.querySelector('input[type=checkbox]').onchange = async (ev) => {
@@ -361,7 +462,6 @@ async function vCatalog(body, filter = { q: '', cc: '' }) {
       if (error) { alert(error.message); ev.target.checked = !ev.target.checked; }
     };
     tr.querySelector('[data-a=edit]').onclick = () => renderInstForm(body, i, filter);
-    tr.querySelector('[data-a=photos]').onclick = () => renderInstPhotos(body, i, filter);
     tr.querySelector('[data-a=del]').onclick = async () => {
       if (!confirm(`Delete "${i.name}" and ALL its courses? Students' applications pointing at its courses will block this — that is intentional.`)) return;
       const { error } = await db.from('institutions').delete().eq('id', i.id);
@@ -372,11 +472,20 @@ async function vCatalog(body, filter = { q: '', cc: '' }) {
   }
 }
 
+async function uploadMedia(instId, file) {
+  const path = `${instId}/${Date.now()}-${file.name.replace(/[^\w.-]+/g, '_')}`;
+  const up = await db.storage.from('institution-media').upload(path, file, { upsert: false });
+  if (up.error) throw new Error(up.error.message);
+  return db.storage.from('institution-media').getPublicUrl(path).data.publicUrl;
+}
+
 function renderInstForm(body, inst, filter) {
   const isNew = !inst;
   const f = inst ?? { country: 'MY', type: 'university', photos: [] };
+  const photos = f.photos ?? [];
   body.innerHTML = '';
-  const card = el(`<div class="card" style="max-width:560px">
+  const card = el(`<div class="card" style="max-width:720px">
+    <button class="act" id="fback" style="margin-bottom:10px">← Back</button>
     <h2>${isNew ? 'Add institution' : 'Edit — ' + esc(f.name)}</h2>
     <div class="err" id="ferr"></div>
     <table><tbody>
@@ -389,16 +498,54 @@ function renderInstForm(body, inst, filter) {
       <tr><td class="muted">City</td><td><input id="f_city" value="${esc(f.city ?? '')}" style="width:100%"></td></tr>
       <tr><td class="muted">Tagline</td><td><input id="f_tag" value="${esc(f.tagline ?? '')}" style="width:100%"></td></tr>
       <tr><td class="muted">Website</td><td><input id="f_web" value="${esc(f.website ?? '')}" style="width:100%"></td></tr>
-      <tr><td class="muted">Logo URL</td><td><input id="f_logo" value="${esc(f.logo ?? '')}" style="width:100%"></td></tr>
+      <tr><td class="muted">Logo</td><td><div style="display:flex;gap:8px;align-items:center">
+        <img id="f_logo_prev" src="${esc(f.logo ?? '')}" style="width:36px;height:36px;border-radius:6px;object-fit:contain;border:1px solid var(--line);${f.logo ? '' : 'display:none'}" onerror="this.style.display='none'">
+        <input id="f_logo" value="${esc(f.logo ?? '')}" style="flex:1" placeholder="Logo image URL">
+        ${isNew ? '' : '<input type="file" id="f_logo_file" accept="image/*" style="display:none"><button class="act" id="f_logo_up">Upload</button>'}
+      </div></td></tr>
       <tr><td class="muted">Founded</td><td><input id="f_founded" type="number" value="${esc(f.founded ?? '')}" style="width:100%"></td></tr>
       <tr><td class="muted">Students</td><td><input id="f_students" type="number" value="${esc(f.students ?? '')}" style="width:100%"></td></tr>
       <tr><td class="muted">World rank</td><td><input id="f_rank" type="number" value="${esc(f.qs_rank ?? '')}" style="width:100%"></td></tr>
     </tbody></table>
     <div style="display:flex;gap:8px;margin-top:12px">
       <button class="act primary" id="fsave">${isNew ? 'Create' : 'Save changes'}</button>
-      <button class="act" id="fcancel">Cancel</button>
-    </div></div>`);
+      <button class="act" id="fcancel">${isNew ? 'Cancel' : 'Back to catalog'}</button>
+    </div>
+    ${isNew ? '<p class="note" style="margin-top:8px">Create the school first — the photo sections open right after.</p>' : ''}
+  </div>`);
   body.appendChild(card);
+
+  const refresh = async () => {
+    const { data, error } = await db.from('institutions').select('*').eq('id', inst.id).single();
+    if (error) { alert(error.message); return; }
+    renderInstForm(body, data, filter);
+  };
+  const setPhotos = async (next) => {
+    const { error } = await db.from('institutions').update({ photos: next }).eq('id', inst.id);
+    if (error) alert(error.message); else refresh();
+  };
+
+  // Live logo preview + optional upload straight into the media storage.
+  const logoInput = card.querySelector('#f_logo');
+  const logoPrev = card.querySelector('#f_logo_prev');
+  logoInput.oninput = () => {
+    logoPrev.src = logoInput.value.trim();
+    logoPrev.style.display = logoInput.value.trim() ? '' : 'none';
+  };
+  if (!isNew) {
+    const logoFile = card.querySelector('#f_logo_file');
+    card.querySelector('#f_logo_up').onclick = () => logoFile.click();
+    logoFile.onchange = async () => {
+      if (!logoFile.files[0]) return;
+      try {
+        logoInput.value = await uploadMedia(inst.id, logoFile.files[0]);
+        logoInput.oninput();
+        card.querySelector('#ferr').textContent = 'Logo uploaded — press "Save changes" to keep it.';
+      } catch (e) { card.querySelector('#ferr').textContent = e.message; }
+    };
+  }
+
+  card.querySelector('#fback').onclick = () => vCatalog(body, filter);
   card.querySelector('#fcancel').onclick = () => vCatalog(body, filter);
   card.querySelector('#fsave').onclick = async () => {
     const val = (id) => card.querySelector(id).value.trim();
@@ -410,57 +557,70 @@ function renderInstForm(body, inst, filter) {
       founded: num('#f_founded'), students: num('#f_students'), qs_rank: num('#f_rank'),
     };
     if (!row.name || !row.city) { card.querySelector('#ferr').textContent = 'Name and city are required.'; return; }
-    const q = isNew
-      ? db.from('institutions').insert({ id: slugId(row.country, row.name), ...row })
-      : db.from('institutions').update(row).eq('id', inst.id);
-    const { error } = await q;
-    if (error) { card.querySelector('#ferr').textContent = error.message; return; }
-    vCatalog(body, filter);
+    if (isNew) {
+      const { data, error } = await db.from('institutions')
+        .insert({ id: slugId(row.country, row.name), ...row }).select().single();
+      if (error) { card.querySelector('#ferr').textContent = error.message; return; }
+      renderInstForm(body, data, filter); // straight into photo management
+    } else {
+      const { error } = await db.from('institutions').update(row).eq('id', inst.id);
+      if (error) { card.querySelector('#ferr').textContent = error.message; return; }
+      vCatalog(body, filter);
+    }
   };
-}
 
-async function renderInstPhotos(body, inst, filter) {
-  const fresh = await db.from('institutions').select('photos').eq('id', inst.id).single();
-  const photos = fresh.data?.photos ?? [];
-  body.innerHTML = '';
-  const card = el(`<div class="card">
-    <h2>Photos — ${esc(inst.name)}</h2>
-    <p class="sub">Uploads go to the app's public campus-photo storage. The FIRST photo is the hero image students see — keep it recognizably the campus.</p>
+  if (isNew) return;
+
+  // ---- Pictures: MAIN (hero) photo separated from the rest ----------------
+  const media = el(`<div class="card" style="max-width:720px">
+    <h2>Pictures</h2>
+    <p class="sub">The MAIN photo is what students see first on the school page — it must clearly show the campus. Changes here save immediately.</p>
     <div class="err" id="perr"></div>
-    <div id="pgrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:12px"></div>
+    <h2 style="font-size:13px;color:var(--faint)">MAIN PHOTO (profile picture)</h2>
+    <div id="heroBox" style="margin-bottom:14px"></div>
+    <h2 style="font-size:13px;color:var(--faint)">OTHER PHOTOS</h2>
+    <div id="pgrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:12px"></div>
     <div style="display:flex;gap:8px;align-items:center">
       <input type="file" id="pfile" accept="image/*">
-      <button class="act primary" id="pup">Upload photo</button>
-      <button class="act" id="pback">Back to catalog</button>
+      <button class="act primary" id="pup">Add photo</button>
     </div></div>`);
-  body.appendChild(card);
-  const grid = card.querySelector('#pgrid');
-  photos.forEach((url, idx) => {
-    const cell = el(`<div style="position:relative">
-      <img src="${esc(url)}" style="width:100%;height:110px;object-fit:cover;border-radius:8px;border:1px solid var(--line)">
-      ${idx === 0 ? '<span class="pill green" style="position:absolute;left:6px;top:6px">hero</span>' : ''}
-      <button class="act danger" style="position:absolute;right:6px;top:6px;padding:2px 8px">✕</button></div>`);
-    cell.querySelector('button').onclick = async () => {
-      if (!confirm('Remove this photo from the school page?')) return;
-      const next = photos.filter((_, j) => j !== idx);
-      const { error } = await db.from('institutions').update({ photos: next }).eq('id', inst.id);
-      if (error) alert(error.message); else renderInstPhotos(body, inst, filter);
+  body.appendChild(media);
+  const heroBox = media.querySelector('#heroBox');
+  if (photos.length) {
+    const hero = el(`<div style="position:relative;max-width:460px">
+      <img src="${esc(photos[0])}" style="width:100%;height:230px;object-fit:cover;border-radius:10px;border:1px solid var(--line)">
+      <span class="pill green" style="position:absolute;left:8px;top:8px">main</span>
+      <button class="act danger" style="position:absolute;right:8px;top:8px;padding:2px 9px">✕</button></div>`);
+    hero.querySelector('button').onclick = () => {
+      if (confirm('Remove the main photo? The next photo becomes the new main.')) setPhotos(photos.slice(1));
     };
+    heroBox.appendChild(hero);
+  } else {
+    heroBox.appendChild(el('<div class="muted">No main photo yet — the first photo you add becomes it.</div>'));
+  }
+  const grid = media.querySelector('#pgrid');
+  if (photos.length <= 1) grid.appendChild(el('<div class="muted">No other photos yet.</div>'));
+  photos.slice(1).forEach((url, j) => {
+    const idx = j + 1;
+    const cell = el(`<div style="position:relative">
+      <img src="${esc(url)}" style="width:100%;height:100px;object-fit:cover;border-radius:8px;border:1px solid var(--line)">
+      <div style="display:flex;gap:4px;margin-top:4px">
+        <button class="act" style="flex:1;padding:3px 6px;font-size:11px">Make main</button>
+        <button class="act danger" style="padding:3px 8px;font-size:11px">✕</button>
+      </div></div>`);
+    const [mkMain, rm] = cell.querySelectorAll('button');
+    mkMain.onclick = () => setPhotos([url, ...photos.filter((_, k) => k !== idx)]);
+    rm.onclick = () => { if (confirm('Remove this photo?')) setPhotos(photos.filter((_, k) => k !== idx)); };
     grid.appendChild(cell);
   });
-  if (!photos.length) grid.appendChild(el('<div class="muted">No photos yet — upload the first one below.</div>'));
-  card.querySelector('#pback').onclick = () => vCatalog(body, filter);
-  card.querySelector('#pup').onclick = async () => {
-    const file = card.querySelector('#pfile').files[0];
-    if (!file) { card.querySelector('#perr').textContent = 'Choose an image file first.'; return; }
-    card.querySelector('#perr').textContent = '';
-    const path = `${inst.id}/${Date.now()}-${file.name.replace(/[^\w.-]+/g, '_')}`;
-    const up = await db.storage.from('institution-media').upload(path, file, { upsert: false });
-    if (up.error) { card.querySelector('#perr').textContent = up.error.message; return; }
-    const { data: pub } = db.storage.from('institution-media').getPublicUrl(path);
-    const { error } = await db.from('institutions').update({ photos: [...photos, pub.publicUrl] }).eq('id', inst.id);
-    if (error) { card.querySelector('#perr').textContent = error.message; return; }
-    renderInstPhotos(body, inst, filter);
+  media.querySelector('#pup').onclick = async () => {
+    const file = media.querySelector('#pfile').files[0];
+    if (!file) { media.querySelector('#perr').textContent = 'Choose an image file first.'; return; }
+    media.querySelector('#perr').textContent = '';
+    try {
+      const url = await uploadMedia(inst.id, file);
+      await setPhotos([...photos, url]);
+    } catch (e) { media.querySelector('#perr').textContent = e.message; }
   };
 }
 
