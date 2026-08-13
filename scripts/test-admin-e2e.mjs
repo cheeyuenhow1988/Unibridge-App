@@ -162,7 +162,7 @@ ok('ui: admin signs in and sees the shell', await waitFor(page, /Overview/));
 const TABS = [
   ['Overview', /Registered students/, '01-overview.png'],
   ['Students', /QA Admin/, '02-students.png'],
-  ['Applications', /No applications yet\.|Stage/, '03-applications.png'],
+  ['Applications', /Pending \(/, '03-applications.png'],
   ['Rewards', /No redemptions yet\.|Mark fulfilled|fulfilled/, '04-rewards.png'],
   ['Community', /./, '05-community.png'], // asserted separately below
   ['Catalog', /Institutions \(\d+\)/, '06-catalog.png'],

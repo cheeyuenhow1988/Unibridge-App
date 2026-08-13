@@ -232,6 +232,8 @@ const bStillBlocked = await as(B, `select * from public.profiles where id = '${A
 ok('admin: student isolation unchanged by admin layer', bStillBlocked.rows?.length === 0);
 const bCatalogWrite = await as(B, "update public.institutions set tagline = 'hax' where id = 'test-uni' returning id");
 ok('admin: non-admin still cannot edit catalog', Boolean(bCatalogWrite.error) || bCatalogWrite.rows?.length === 0);
+const admReject = await as(D, `update public.applications set status = 'rejected' where student_id = '${A}' returning status`);
+ok('admin: can mark an application rejected (failed bucket)', admReject.rows?.[0]?.status === 'rejected', admReject.error ?? '');
 const admMedia = await as(D, "insert into storage.objects (bucket_id, name, owner) values ('institution-media', 'test-uni/photo.jpg', auth.uid()) returning id");
 ok('media: admin uploads campus photos', admMedia.rows?.length === 1, admMedia.error ?? '');
 const bMedia = await as(B, "insert into storage.objects (bucket_id, name, owner) values ('institution-media', 'test-uni/hack.jpg', auth.uid()) returning id");
