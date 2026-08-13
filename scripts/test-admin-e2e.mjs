@@ -183,6 +183,12 @@ for (const [name, marker, shot] of TABS) {
     ok('ui: Community shows shared post pictures', postImgs > 0, `${postImgs} post images`);
     const reelImgs = await page.locator('#reelsGrid img').count();
     ok('ui: Community shows short reels with thumbnails', reelImgs > 0, `${reelImgs} reel thumbnails`);
+    await page.getByRole('button', { name: /Videos \(/ }).click();
+    await page.waitForTimeout(800);
+    ok('ui: Videos sub-tab switches to the reels grid', await page.locator('#reelsGrid').isVisible());
+    await page.screenshot({ path: `${SHOTS}/05b-community-videos.png`, fullPage: false });
+    await page.getByRole('button', { name: /Photos \(/ }).click();
+    await page.waitForTimeout(600);
   } else {
     ok(`ui: ${name} tab renders`, rendered && !silentFail, silentFail ? 'shows a load error' : rendered ? '' : 'marker never appeared');
   }

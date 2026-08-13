@@ -323,13 +323,29 @@ async function vCommunity(body) {
     tb.appendChild(tr);
   }
 
-  // ---- shared post pictures ----------------------------------------------
-  const postsCard = el(`<div class="card"><h2>Student posts (${(posts.data ?? []).length})</h2>
-    <p class="sub">Pictures shared in the community feed. Delete removes the post for everyone.</p>
-    <div class="err">${posts.error ? 'Could not load: ' + esc(posts.error.message) : ''}</div>
-    <div id="postsGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px"></div></div>`);
+  // ---- student posts: Photos | Videos sub-tabs ----------------------------
+  const postsCard = el(`<div class="card"><h2>Student posts</h2>
+    <p class="sub">Content shared in the community feed. Delete removes it for everyone.</p>
+    <div style="display:flex;gap:6px;margin-bottom:12px">
+      <button class="act primary" id="subPhotos">📷 Photos (${(posts.data ?? []).length})</button>
+      <button class="act" id="subVideos">🎬 Videos (${(shorts.data ?? []).length})</button>
+    </div>
+    <div class="err">${posts.error ? 'Could not load: ' + esc(posts.error.message) : ''}${shorts.error ? ' Could not load videos: ' + esc(shorts.error.message) : ''}</div>
+    <div id="postsGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px"></div>
+    <div id="reelsGrid" style="display:none;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px"></div></div>`);
   body.appendChild(postsCard);
+  const subP = postsCard.querySelector('#subPhotos');
+  const subV = postsCard.querySelector('#subVideos');
   const pg = postsCard.querySelector('#postsGrid');
+  const rg = postsCard.querySelector('#reelsGrid');
+  const showSub = (which) => {
+    pg.style.display = which === 'p' ? 'grid' : 'none';
+    rg.style.display = which === 'v' ? 'grid' : 'none';
+    subP.classList.toggle('primary', which === 'p');
+    subV.classList.toggle('primary', which === 'v');
+  };
+  subP.onclick = () => showSub('p');
+  subV.onclick = () => showSub('v');
   if (!(posts.data ?? []).length && !posts.error) pg.appendChild(el('<div class="muted">No posts yet.</div>'));
   for (const p of posts.data ?? []) {
     const img = (p.media_urls ?? [])[0];
@@ -349,13 +365,7 @@ async function vCommunity(body) {
     pg.appendChild(cell);
   }
 
-  // ---- short reels --------------------------------------------------------
-  const reelsCard = el(`<div class="card"><h2>Short reels (${(shorts.data ?? []).length})</h2>
-    <p class="sub">Video clips in the app's Shorts feed, most-viewed first. Click a thumbnail to open the video when one is attached.</p>
-    <div class="err">${shorts.error ? 'Could not load: ' + esc(shorts.error.message) : ''}</div>
-    <div id="reelsGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px"></div></div>`);
-  body.appendChild(reelsCard);
-  const rg = reelsCard.querySelector('#reelsGrid');
+  // ---- short reels (Videos sub-tab content) -------------------------------
   if (!(shorts.data ?? []).length && !shorts.error) rg.appendChild(el('<div class="muted">No reels yet.</div>'));
   for (const s of shorts.data ?? []) {
     const cell = el(`<div style="border:1px solid var(--line);border-radius:10px;overflow:hidden">
