@@ -166,6 +166,7 @@ const TABS = [
   ['Rewards', /No redemptions yet\.|Mark fulfilled|fulfilled/, '04-rewards.png'],
   ['Community', /./, '05-community.png'], // asserted separately below
   ['Catalog', /Institutions \(\d+\)/, '06-catalog.png'],
+  ['Team', /Back-office team/, '11-team.png'],
 ];
 for (const [name, marker, shot] of TABS) {
   await page.getByRole('button', { name, exact: true }).click();
@@ -219,6 +220,17 @@ for (const [name, marker, shot] of TABS) {
     await page.screenshot({ path: `${SHOTS}/06b-catalog-filtered.png`, fullPage: false });
     await page.locator('#fclear').click();
     await page.waitForTimeout(1000);
+  }
+  if (name === 'Team') {
+    // The QA admin is STAFF: it must see the roster and the whitelist, but
+    // none of the master-only controls (invite form, allow/remove buttons).
+    const teamText = await bodyText(page);
+    const inviteBtns = await page.locator('#isend').count();
+    const allowBtns = await page.locator('#wadd').count();
+    ok('ui: staff sees no invite or whitelist edit controls', inviteBtns === 0 && allowBtns === 0,
+      `${inviteBtns} invite, ${allowBtns} allow`);
+    ok('ui: staff is told only the master manages team & security', /Only the master account/.test(teamText));
+    ok('ui: empty whitelist reads as gating off', /No restrictions — staff can sign in from any address/.test(teamText));
   }
   await page.screenshot({ path: `${SHOTS}/${shot}`, fullPage: false });
 }

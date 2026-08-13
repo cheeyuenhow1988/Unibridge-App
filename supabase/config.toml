@@ -32,3 +32,7 @@ file_size_limit = "10MiB"
 # reach it. Gateway-level JWT verification must therefore be off.
 [functions.sync-entitlement]
 verify_jwt = false
+
+# invite-admin verifies the caller's JWT itself (must be an owner row).
+[functions.invite-admin]
+verify_jwt = false

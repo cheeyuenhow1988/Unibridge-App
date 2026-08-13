@@ -33,7 +33,6 @@ import { splitStatements } from './sql-split.mjs';
 const TOKEN = process.env.SUPABASE_ACCESS_TOKEN;
 const API = 'https://api.supabase.com';
 const MIG_DIR = new URL('../supabase/migrations/', import.meta.url).pathname;
-const FN_ENTRY = new URL('../supabase/functions/sync-entitlement/index.ts', import.meta.url).pathname;
 const PAGES_URL = 'https://cheeyuenhow1988.github.io/Unibridge-App';
 const TEST_EMAIL_RE = /^rls-[ab]-[0-9a-f]{10}@example\.com$/;
 
@@ -203,23 +202,25 @@ await applyMigrations();
 
 // ------------------------------------------------------------ edge function
 
-async function deployFunction() {
-  const source = fs.readFileSync(FN_ENTRY, 'utf8');
+async function deployFunction(slug) {
+  const entry = new URL(`../supabase/functions/${slug}/index.ts`, import.meta.url).pathname;
+  const source = fs.readFileSync(entry, 'utf8');
   const form = new FormData();
-  form.append('metadata', JSON.stringify({ name: 'sync-entitlement', entrypoint_path: 'index.ts', verify_jwt: false }));
+  form.append('metadata', JSON.stringify({ name: slug, entrypoint_path: 'index.ts', verify_jwt: false }));
   form.append('file', new Blob([source], { type: 'application/typescript' }), 'index.ts');
-  let r = await api('POST', `/v1/projects/${REF}/functions/deploy?slug=sync-entitlement`, form, { form: true });
+  let r = await api('POST', `/v1/projects/${REF}/functions/deploy?slug=${slug}`, form, { form: true });
   if (r.status === 404 || r.status === 405) {
     // Older management API: create/update with inline body.
-    const body = { slug: 'sync-entitlement', name: 'sync-entitlement', verify_jwt: false, body: source };
+    const body = { slug, name: slug, verify_jwt: false, body: source };
     r = await api('POST', `/v1/projects/${REF}/functions`, body);
-    if (r.status === 409) r = await api('PATCH', `/v1/projects/${REF}/functions/sync-entitlement`, body);
+    if (r.status === 409) r = await api('PATCH', `/v1/projects/${REF}/functions/${slug}`, body);
   }
-  ok('edge function sync-entitlement deployed', r.status >= 200 && r.status < 300,
+  ok(`edge function ${slug} deployed`, r.status >= 200 && r.status < 300,
     r.status >= 300 ? `HTTP ${r.status} ${JSON.stringify(r.data).slice(0, 200)}` : '');
   return r.status >= 200 && r.status < 300;
 }
-const fnDeployed = await deployFunction();
+const fnDeployed = await deployFunction('sync-entitlement');
+await deployFunction('invite-admin');
 
 {
   const secrets = await api('GET', `/v1/projects/${REF}/secrets`);
@@ -334,9 +335,10 @@ if (adminEmail) {
     ok('admin: account already exists', true, adminEmail);
   }
   if (adminUser?.id) {
-    await runSql(REF, `insert into public.admin_users (user_id, role) values ('${adminUser.id}', 'owner')
-      on conflict (user_id) do nothing`, 'admin grant');
-    ok('admin: back-office access granted', true, adminEmail);
+    await runSql(REF, `insert into public.admin_users (user_id, role, email)
+      values ('${adminUser.id}', 'owner', '${adminEmail.replace(/'/g, "''")}')
+      on conflict (user_id) do update set role = 'owner', email = excluded.email`, 'admin grant');
+    ok('admin: master (owner) access granted', true, adminEmail);
   }
 }
 

@@ -49,6 +49,7 @@
   <div class="logo"><b>Uni</b><i>Bridge</i></div>
   <div class="tag">Back Office</div>
   <div class="spacer"></div>
+  <span id="rolebadge" class="pill green" style="display:none;margin-right:4px"></span>
   <span id="who" class="note"></span>
   <button id="setpass" class="act" style="display:none">Set password</button>
   <button id="signout" class="act" style="display:none">Sign out</button>
@@ -84,12 +85,29 @@ async function boot() {
   // Invite / recovery links land here with a session but no password set yet.
   const hashType = new URLSearchParams(location.hash.slice(1)).get('type');
   if (hashType === 'invite' || hashType === 'recovery') return renderSetPassword();
-  const { data: adminRow } = await db.from('admin_users').select('role').maybeSingle();
+  const { data: adminRow } = await db.from('admin_users').select('role').eq('user_id', session.user.id).maybeSingle();
   if (!adminRow) {
     main.innerHTML = '<div class="card"><h2>No access</h2><p class="note">This account is signed in but has no back-office permission. Ask the owner to grant it.</p></div>';
     $('#signout').style.display = '';
     return;
   }
+  // Staff are IP-gated once the whitelist has entries (master never is).
+  // Without this check they would pass the gate but see empty tables — say
+  // plainly what is wrong instead.
+  if (adminRow.role !== 'owner') {
+    const { data: ipOk } = await db.rpc('admin_ip_ok');
+    if (ipOk === false) {
+      main.innerHTML = '<div class="card"><h2>Address not allowed</h2><p class="note">Your account is staff and this back office is IP-restricted. Ask the master account to add your current IP on the Team tab.</p></div>';
+      $('#signout').style.display = '';
+      return;
+    }
+  }
+  window.UB_ROLE = adminRow.role;
+  window.UB_UID = session.user.id;
+  const badge = $('#rolebadge');
+  badge.textContent = adminRow.role === 'owner' ? '👑 Master account' : 'Staff';
+  badge.className = adminRow.role === 'owner' ? 'pill green' : 'pill gray';
+  badge.style.display = '';
   $('#who').textContent = session.user.email;
   $('#signout').style.display = '';
   $('#setpass').style.display = '';
@@ -148,7 +166,7 @@ function renderSetPassword() {
 $('#signout').onclick = async () => { await db.auth.signOut(); location.reload(); };
 
 // ------------------------------------------------------------------ shell
-const TABS = ['Overview','Students','Applications','Rewards','Community','Catalog'];
+const TABS = ['Overview','Students','Applications','Rewards','Community','Catalog','Team'];
 let tab = 'Overview';
 function renderShell() {
   main.innerHTML = '';
@@ -162,7 +180,7 @@ function renderShell() {
   const body = el('<div id="body"><div class="card muted">Loading…</div></div>');
   main.appendChild(body);
   ({ Overview: vOverview, Students: vStudents, Applications: vApplications,
-     Rewards: vRewards, Community: vCommunity, Catalog: vCatalog })[tab](body);
+     Rewards: vRewards, Community: vCommunity, Catalog: vCatalog, Team: vTeam })[tab](body);
 }
 
 // --------------------------------------------------------------- overview
@@ -193,6 +211,120 @@ async function vOverview(body) {
   body.appendChild(el(`<div class="card" style="margin-top:12px"><h2>Applications by stage</h2>
     ${[...STATUSES, 'rejected'].map((s) => `<span class="pill" style="margin:0 6px 6px 0">${s.replace('_',' ')} · ${byStatus[s] ?? 0}</span>`).join('')}
   </div>`));
+
+}
+
+// ------------------------------------------------------------------- team
+async function vTeam(body, notice = '') {
+  const isOwner = window.UB_ROLE === 'owner';
+  body.innerHTML = '';
+
+  // Roster — the database gives the master account every row; staff only
+  // ever receive their own, so the same query serves both views.
+  const team = await db.from('admin_users').select('user_id,role,email,created_at').order('created_at');
+  const teamCard = el(`<div class="card"><h2>Back-office team</h2>
+    <p class="sub">${isOwner
+      ? 'You are the master account — invite staff and manage security below.'
+      : 'Only the master account can see and manage the full team.'}</p>
+    ${notice ? `<p class="sub" style="color:#067647"><b>${esc(notice)}</b></p>` : ''}
+    <div class="err">${team.error ? 'Could not load: ' + esc(team.error.message) : ''}</div>
+    <div class="scroll"><table><thead><tr><th>Account</th><th>Role</th><th>Since</th><th></th></tr></thead>
+    <tbody id="ttb"></tbody></table></div></div>`);
+  body.appendChild(teamCard);
+  const ttb = teamCard.querySelector('#ttb');
+  if (team.error || !(team.data ?? []).length) stateRow(ttb, 4, team.error, 'No admins yet.');
+  for (const t of team.data ?? []) {
+    const isMe = t.user_id === window.UB_UID;
+    const tr = el(`<tr><td><b>${esc(t.email ?? t.user_id.slice(0, 8) + '…')}</b>${isMe ? ' <span class="muted">(you)</span>' : ''}</td>
+      <td>${t.role === 'owner' ? '<span class="pill green">👑 master</span>' : '<span class="pill gray">staff</span>'}</td>
+      <td class="muted">${esc((t.created_at ?? '').slice(0, 10))}</td>
+      <td>${isOwner && !isMe ? '<button class="act danger">Remove</button>' : ''}</td></tr>`);
+    const rm = tr.querySelector('button');
+    if (rm) rm.onclick = async () => {
+      if (!confirm('Remove this admin’s back-office access?')) return;
+      const { error } = await db.from('admin_users').delete().eq('user_id', t.user_id);
+      if (error) alert(error.message); else tr.remove();
+    };
+    ttb.appendChild(tr);
+  }
+
+  // Invite — shown to the master only. The invite-admin function re-checks
+  // the caller's role server-side; hiding the form is UX, not the wall.
+  if (isOwner) {
+    const inv = el(`<div class="card" style="margin-top:12px"><h2>Invite staff</h2>
+      <p class="sub">They receive an email linking to this back office, where they set their own password. Staff run day-to-day work; a second master can also manage the team and security.</p>
+      <div class="err" id="ierr"></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <input id="iemail" type="email" placeholder="colleague@example.com" style="flex:1;min-width:220px">
+        <select id="irole"><option value="staff">staff</option><option value="owner">master</option></select>
+        <button class="primary act" id="isend">Send invitation</button>
+      </div></div>`);
+    body.appendChild(inv);
+    inv.querySelector('#isend').onclick = async () => {
+      const email = inv.querySelector('#iemail').value.trim();
+      const role = inv.querySelector('#irole').value;
+      const ierr = inv.querySelector('#ierr');
+      if (!email) { ierr.textContent = 'Type their email first.'; return; }
+      ierr.textContent = 'Sending…';
+      const { data, error } = await db.functions.invoke('invite-admin', { body: { email, role } });
+      if (error || !data?.ok) { ierr.textContent = 'Could not invite: ' + (error?.message ?? data?.error ?? 'unknown error'); return; }
+      vTeam(body, data.invited
+        ? `Invitation email sent to ${email}.`
+        : `${email} already had an account — back-office access granted.`);
+    };
+  }
+
+  // IP whitelist — restricts STAFF only. An empty list means gating is off.
+  const wl = await db.from('admin_ip_whitelist').select('id,cidr,note,created_at').order('created_at');
+  const wlCard = el(`<div class="card" style="margin-top:12px"><h2>IP whitelist (staff security)</h2>
+    <p class="sub">With at least one entry here, <b>staff</b> can use the back office only from an allowed address. <b>Master accounts are never IP-restricted</b> — you cannot lock yourself out.</p>
+    <div class="err" id="werr">${wl.error ? 'Could not load: ' + esc(wl.error.message) : ''}</div>
+    <div class="scroll"><table><thead><tr><th>Allowed IP / range</th><th>Note</th><th>Added</th><th></th></tr></thead>
+    <tbody id="wtb"></tbody></table></div>
+    ${isOwner ? `<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+      <input id="wip" placeholder="IP or range — e.g. 203.0.113.7 or 203.0.113.0/24" style="flex:2;min-width:230px">
+      <input id="wnote" placeholder="note — e.g. KL office" style="flex:1;min-width:140px">
+      <button class="act" id="wmine">Use my IP</button>
+      <button class="primary act" id="wadd">Allow</button>
+    </div>` : '<p class="sub">Only the master account can change this list.</p>'}</div>`);
+  body.appendChild(wlCard);
+  const wtb = wlCard.querySelector('#wtb');
+  if (wl.error || !(wl.data ?? []).length) stateRow(wtb, 4, wl.error, 'No restrictions — staff can sign in from any address.');
+  for (const w of wl.data ?? []) {
+    const tr = el(`<tr><td><b>${esc(w.cidr)}</b></td><td>${esc(w.note ?? '')}</td>
+      <td class="muted">${esc((w.created_at ?? '').slice(0, 10))}</td>
+      <td>${isOwner ? '<button class="act danger">Remove</button>' : ''}</td></tr>`);
+    const rm = tr.querySelector('button');
+    if (rm) rm.onclick = async () => {
+      if (!confirm(`Remove ${w.cidr} from the allow-list?`)) return;
+      const { error } = await db.from('admin_ip_whitelist').delete().eq('id', w.id);
+      if (error) alert(error.message); else vTeam(body);
+    };
+    wtb.appendChild(tr);
+  }
+  if (isOwner) {
+    wlCard.querySelector('#wmine').onclick = async () => {
+      const werr = wlCard.querySelector('#werr');
+      try {
+        const r = await fetch('https://api.ipify.org?format=json');
+        wlCard.querySelector('#wip').value = (await r.json()).ip ?? '';
+        werr.textContent = '';
+      } catch { werr.textContent = 'Could not detect your IP — type it manually.'; }
+    };
+    wlCard.querySelector('#wadd').onclick = async () => {
+      const cidr = wlCard.querySelector('#wip').value.trim();
+      const note = wlCard.querySelector('#wnote').value.trim();
+      const werr = wlCard.querySelector('#werr');
+      // A malformed entry would fail closed and block ALL staff — catch it here.
+      const v4 = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})(\/\d{1,2})?$/.exec(cidr);
+      const v6 = /^[0-9a-fA-F:]+(\/\d{1,3})?$/.test(cidr) && cidr.includes(':');
+      if (v4 && v4.slice(1, 5).some((o) => Number(o) > 255)) { werr.textContent = 'That IPv4 address has a number over 255.'; return; }
+      if (!v4 && !v6) { werr.textContent = 'Type a valid IP (203.0.113.7) or range (203.0.113.0/24).'; return; }
+      const { error } = await db.from('admin_ip_whitelist').insert({ cidr, note: note || null });
+      if (error) { werr.textContent = error.message; return; }
+      vTeam(body, `${cidr} allowed.`);
+    };
+  }
 }
 
 // --------------------------------------------------------------- students

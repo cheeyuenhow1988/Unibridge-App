@@ -234,6 +234,23 @@ const bCatalogWrite = await as(B, "update public.institutions set tagline = 'hax
 ok('admin: non-admin still cannot edit catalog', Boolean(bCatalogWrite.error) || bCatalogWrite.rows?.length === 0);
 const admReject = await as(D, `update public.applications set status = 'rejected' where student_id = '${A}' returning status`);
 ok('admin: can mark an application rejected (failed bucket)', admReject.rows?.[0]?.status === 'rejected', admReject.error ?? '');
+
+// ---- master account (owner) roster powers ---------------------------------
+await db.exec(`insert into public.admin_users (user_id, role, email) values ('${B}', 'staff', 'b@test.example')
+  on conflict (user_id) do update set role = 'staff';`);
+const ownAll = await as(D, 'select count(*) c from public.admin_users');
+ok('master: owner sees the whole admin roster', Number(ownAll.rows?.[0]?.c) >= 2);
+const staffAll = await as(B, 'select count(*) c from public.admin_users');
+ok('master: staff sees only their own row', Number(staffAll.rows?.[0]?.c) === 1);
+const staffPromote = await as(B, `update public.admin_users set role = 'owner' where user_id = '${B}' returning role`);
+ok('master: staff cannot self-promote', Boolean(staffPromote.error) || staffPromote.rows?.length === 0);
+const selfRemove = await as(D, `delete from public.admin_users where user_id = '${D}' returning user_id`);
+ok('master: owner cannot remove their own row (lock-out guard)', Boolean(selfRemove.error) || selfRemove.rows?.length === 0);
+const removeStaff = await as(D, `delete from public.admin_users where user_id = '${B}' returning user_id`);
+ok('master: owner removes a staff admin', removeStaff.rows?.length === 1, removeStaff.error ?? '');
+// as() rolls the delete back — actually clear B's temp admin role so the
+// non-admin checks below stay honest.
+await db.exec(`delete from public.admin_users where user_id = '${B}';`);
 const admMedia = await as(D, "insert into storage.objects (bucket_id, name, owner) values ('institution-media', 'test-uni/photo.jpg', auth.uid()) returning id");
 ok('media: admin uploads campus photos', admMedia.rows?.length === 1, admMedia.error ?? '');
 const bMedia = await as(B, "insert into storage.objects (bucket_id, name, owner) values ('institution-media', 'test-uni/hack.jpg', auth.uid()) returning id");
@@ -241,6 +258,32 @@ ok('media: non-admin cannot upload to the media bucket', Boolean(bMedia.error));
 await db.exec(`insert into storage.objects (bucket_id, name, owner) values ('institution-media', 'test-uni/seeded.jpg', '${D}')`);
 const bMediaRead = await as(B, "select count(*) c from storage.objects where bucket_id = 'institution-media'");
 ok('media: everyone can view campus photos', Number(bMediaRead.rows?.[0]?.c) >= 1);
+
+// ---- IP whitelist gating ---------------------------------------------------
+const asIp = async (uid, ip, sql) => {
+  await db.exec('begin');
+  await db.exec(`set local role authenticated; set local "request.jwt.claim.sub" = '${uid}';
+    set local "request.headers" = '{"x-forwarded-for": "${ip}"}';`);
+  let out;
+  try { out = await db.query(sql); } catch (e) { out = { error: String(e.message) }; }
+  await db.exec('rollback');
+  return out;
+};
+await db.exec(`insert into public.admin_ip_whitelist (cidr, note) values ('10.1.2.0/24', 'office');
+  insert into public.admin_users (user_id, role, email) values ('${B}', 'staff', 'b@test.example')
+  on conflict (user_id) do update set role = 'staff';`);
+const ownerAnywhere = await asIp(D, '9.9.9.9', 'select count(*) c from public.profiles');
+ok('ipwl: MASTER keeps full access from ANY IP', Number(ownerAnywhere.rows?.[0]?.c) >= 3, `sees ${ownerAnywhere.rows?.[0]?.c}`);
+const staffBlocked = await asIp(B, '9.9.9.9', 'select count(*) c from public.profiles');
+ok('ipwl: staff from a foreign IP loses admin reads', Number(staffBlocked.rows?.[0]?.c) === 1, `sees ${staffBlocked.rows?.[0]?.c}`);
+const staffAllowed = await asIp(B, '10.1.2.5', 'select count(*) c from public.profiles');
+ok('ipwl: staff from a whitelisted IP keeps admin reads', Number(staffAllowed.rows?.[0]?.c) >= 3, `sees ${staffAllowed.rows?.[0]?.c}`);
+const staffNoHeader = await as(B, 'select count(*) c from public.profiles');
+ok('ipwl: staff with no forwarded IP gets no admin power', Number(staffNoHeader.rows?.[0]?.c) === 1);
+await db.exec('delete from public.admin_ip_whitelist;');
+const staffRestored = await as(B, 'select count(*) c from public.profiles');
+ok('ipwl: clearing the whitelist restores staff access', Number(staffRestored.rows?.[0]?.c) >= 3);
+await db.exec(`delete from public.admin_users where user_id = '${B}';`);
 
 const fails = results.filter((r) => r.startsWith('FAIL'));
 console.log(`\n${results.length - fails.length}/${results.length} passed`);
