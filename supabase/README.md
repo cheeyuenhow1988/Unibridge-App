@@ -189,6 +189,13 @@ this commit — rerun after every schema change.
   original token was shared in a private chat during setup (owner's
   accepted risk for the prototype). Before launch: generate a fresh token,
   update the `SUPABASE_ACCESS_TOKEN` GitHub secret, delete the old one.
+- **Configure custom SMTP before real onboarding.** Supabase's built-in
+  mailer is demo-grade: a couple of emails per hour, and delivery beyond
+  the project owner's own address is unreliable — a staff invitation to an
+  outside Gmail address was never delivered on 2026-08-18. Until real SMTP
+  (Gmail app password, Resend, Brevo, …) is PATCHed into `config/auth`,
+  staff onboarding uses the Team tab's **Login code** fallback, and student
+  sign-up must not rely on email confirmations or magic links.
 
 - **Local state is authoritative.** Stores mirror earns/redemptions/plan
   changes to the backend fire-and-forget; the UI never blocks on it.

@@ -238,12 +238,27 @@ async function vTeam(body, notice = '') {
     const tr = el(`<tr><td><b>${esc(t.email ?? t.user_id.slice(0, 8) + '…')}</b>${isMe ? ' <span class="muted">(you)</span>' : ''}</td>
       <td>${t.role === 'owner' ? '<span class="pill green">👑 master</span>' : '<span class="pill gray">staff</span>'}</td>
       <td class="muted">${esc((t.created_at ?? '').slice(0, 10))}</td>
-      <td>${isOwner && !isMe ? '<button class="act danger">Remove</button>' : ''}</td></tr>`);
-    const rm = tr.querySelector('button');
+      <td style="white-space:nowrap">${isOwner && !isMe
+        ? `${t.email ? '<button class="act codebtn">Login code</button> ' : ''}<button class="act danger rmbtn">Remove</button>` : ''}</td></tr>`);
+    const rm = tr.querySelector('.rmbtn');
     if (rm) rm.onclick = async () => {
       if (!confirm('Remove this admin’s back-office access?')) return;
       const { error } = await db.from('admin_users').delete().eq('user_id', t.user_id);
       if (error) alert(error.message); else tr.remove();
+    };
+    // Invitation emails are unreliable until real SMTP is set up — this
+    // gives the master a one-time code to pass on privately instead.
+    const cb = tr.querySelector('.codebtn');
+    if (cb) cb.onclick = async () => {
+      if (!confirm(`Create a one-time login code for ${t.email}? Any password they had stops working.`)) return;
+      cb.disabled = true; cb.textContent = 'Working…';
+      const { data, error } = await db.functions.invoke('invite-admin',
+        { body: { email: t.email, action: 'temp_password' } });
+      if (error || !data?.ok) {
+        alert('Could not create a code: ' + (error?.message ?? data?.error ?? 'unknown error'));
+        cb.disabled = false; cb.textContent = 'Login code'; return;
+      }
+      vTeam(body, `Login code for ${t.email}:  ${data.temp_password}  — send it to them privately (WhatsApp is fine). They sign in with their email + this code, then press “Set password” at the top to choose their own.`);
     };
     ttb.appendChild(tr);
   }
@@ -252,7 +267,7 @@ async function vTeam(body, notice = '') {
   // the caller's role server-side; hiding the form is UX, not the wall.
   if (isOwner) {
     const inv = el(`<div class="card" style="margin-top:12px"><h2>Invite staff</h2>
-      <p class="sub">They receive an email linking to this back office, where they set their own password. Staff run day-to-day work; a second master can also manage the team and security.</p>
+      <p class="sub">They receive an email linking to this back office, where they set their own password. Staff run day-to-day work; a second master can also manage the team and security. <b>If the email doesn't arrive</b> (check Spam too — the prototype email service is limited), use the <b>Login code</b> button next to their name instead.</p>
       <div class="err" id="ierr"></div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
         <input id="iemail" type="email" placeholder="colleague@example.com" style="flex:1;min-width:220px">
@@ -269,8 +284,8 @@ async function vTeam(body, notice = '') {
       const { data, error } = await db.functions.invoke('invite-admin', { body: { email, role } });
       if (error || !data?.ok) { ierr.textContent = 'Could not invite: ' + (error?.message ?? data?.error ?? 'unknown error'); return; }
       vTeam(body, data.invited
-        ? `Invitation email sent to ${email}.`
-        : `${email} already had an account — back-office access granted.`);
+        ? `Invitation email sent to ${email}. If it hasn't arrived in a few minutes (Spam folder included), press “Login code” next to their name and send them the code yourself.`
+        : `${email} already had an account — back-office access granted. If they can't sign in, press “Login code” next to their name.`);
     };
   }
 

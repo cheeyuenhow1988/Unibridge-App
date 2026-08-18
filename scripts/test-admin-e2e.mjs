@@ -227,8 +227,9 @@ for (const [name, marker, shot] of TABS) {
     const teamText = await bodyText(page);
     const inviteBtns = await page.locator('#isend').count();
     const allowBtns = await page.locator('#wadd').count();
-    ok('ui: staff sees no invite or whitelist edit controls', inviteBtns === 0 && allowBtns === 0,
-      `${inviteBtns} invite, ${allowBtns} allow`);
+    const codeBtns = await page.locator('.codebtn').count();
+    ok('ui: staff sees no invite, whitelist or login-code controls', inviteBtns === 0 && allowBtns === 0 && codeBtns === 0,
+      `${inviteBtns} invite, ${allowBtns} allow, ${codeBtns} code`);
     ok('ui: staff is told only the master manages team & security', /Only the master account/.test(teamText));
     ok('ui: empty whitelist reads as gating off', /No restrictions — staff can sign in from any address/.test(teamText));
   }

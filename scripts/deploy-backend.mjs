@@ -294,7 +294,8 @@ const admin = (method, p, body) => fetch(`${URL_BASE}${p}`, {
 async function sweepTestData(label) {
   try {
     const list = await admin('GET', '/auth/v1/admin/users?page=1&per_page=200');
-    const testUsers = (list.data?.users ?? []).filter((u) => TEST_EMAIL_RE.test(u.email ?? ''));
+    const testUsers = (list.data?.users ?? []).filter((u) =>
+      TEST_EMAIL_RE.test(u.email ?? '') || /\+invitetest/i.test(u.email ?? ''));
     for (const u of testUsers) {
       await runSql(REF, `delete from storage.objects where bucket_id = 'documents'
         and (storage.foldername(name))[1] = '${u.id}'`, 'sweep storage').catch(() => undefined);
@@ -340,6 +341,31 @@ if (adminEmail) {
       on conflict (user_id) do update set role = 'owner', email = excluded.email`, 'admin grant');
     ok('admin: master (owner) access granted', true, adminEmail);
   }
+}
+
+// Email-delivery health: Supabase's built-in mailer is demo-grade (a couple
+// of emails per hour, and it only delivers reliably to the project owner's
+// address). Surface whether custom SMTP is configured and how many invited
+// admins are stuck unconfirmed — counts only, never addresses.
+{
+  const cfg = await api('GET', `/v1/projects/${REF}/config/auth`);
+  const smtp = Boolean(cfg.data?.smtp_host);
+  console.log(`  email: custom SMTP configured: ${smtp ? 'yes' : 'NO — invite/magic-link emails are unreliable beyond the project owner'}`);
+  const inv = await runSql(REF, `select count(*) c from auth.users u
+    join public.admin_users a on a.user_id = u.id
+    where u.invited_at is not null and u.email_confirmed_at is null`, 'pending invites').catch(() => null);
+  if (inv) console.log(`  email: invited admins who never completed sign-in: ${inv[0]?.c ?? '?'}`);
+}
+
+// Deliverability test: workflow_dispatch input test_invite_email → send one
+// real invitation there (NO admin grant — plain auth user only) so the
+// owner can watch their own inbox. The user is swept on the next run.
+const testInvite = (process.env.TEST_INVITE_EMAIL ?? '').trim();
+if (testInvite) {
+  const r = await admin('POST', `/auth/v1/invite?redirect_to=${encodeURIComponent(`${PAGES_URL}/admin/`)}`,
+    { email: testInvite, data: { name: 'Deliverability test' } });
+  ok('email: deliverability-test invitation accepted by the mailer', r.status < 300,
+    r.status < 300 ? 'now watch the inbox (and Spam) for a few minutes' : `HTTP ${r.status} ${JSON.stringify(r.data).slice(0, 160)}`);
 }
 
 await sweepTestData('pre');

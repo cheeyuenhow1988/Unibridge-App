@@ -17,10 +17,11 @@ Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: CORS });
   if (req.method !== 'POST') return json(405, { error: 'POST only' });
 
-  let body: { email?: string; role?: string };
+  let body: { email?: string; role?: string; action?: string };
   try { body = await req.json(); } catch { return json(400, { error: 'invalid JSON body' }); }
   const email = (body.email ?? '').trim().toLowerCase();
   const role = body.role === 'owner' ? 'owner' : 'staff';
+  const action = body.action === 'temp_password' ? 'temp_password' : 'invite';
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return json(400, { error: 'valid email required' });
 
   const admin = createClient(Deno.env.get('SUPABASE_URL')!, Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!);
@@ -33,6 +34,25 @@ Deno.serve(async (req) => {
   const { data: ownerRow } = await admin.from('admin_users')
     .select('role').eq('user_id', caller.user.id).eq('role', 'owner').maybeSingle();
   if (!ownerRow) return json(403, { error: 'only the master account can invite admins' });
+
+  // Fallback for when the invitation email never arrives (the built-in
+  // mailer is unreliable): the master gets a one-time login code to hand
+  // over out-of-band. Restricted to ROSTER members — this path must never
+  // be able to take over a student account.
+  if (action === 'temp_password') {
+    const { data: rosterRow } = await admin.from('admin_users')
+      .select('user_id').eq('email', email).maybeSingle();
+    if (!rosterRow) return json(404, { error: 'that email is not on the back-office team' });
+    const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';
+    const bytes = crypto.getRandomValues(new Uint8Array(14));
+    const temp = [...bytes].map((b) => alphabet[b % alphabet.length]).join('');
+    // email_confirm: invited-but-unconfirmed accounts can't password-sign-in
+    // until the address is marked confirmed.
+    const { error: updErr } = await admin.auth.admin.updateUserById(
+      rosterRow.user_id, { password: temp, email_confirm: true });
+    if (updErr) return json(500, { error: updErr.message });
+    return json(200, { ok: true, temp_password: temp });
+  }
 
   // Existing account → just grant; new account → invitation email.
   let userId: string | null = null;

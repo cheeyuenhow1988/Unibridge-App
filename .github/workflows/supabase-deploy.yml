@@ -24,6 +24,9 @@ on:
         description: 'Run the full back-office browser trial and save screenshots (may show student data — artifact kept 1 day)'
         required: false
         default: 'false'
+      test_invite_email:
+        description: 'Send a deliverability-test invitation to this address (use your own inbox, e.g. a +invitetest Gmail alias); the test auth user is swept on the next run'
+        required: false
   push:
     branches: [claude/unibridge-app-prototype-11m67q]
     paths: ['supabase/**', 'admin/**', 'scripts/deploy-backend.mjs', 'scripts/sql-split.mjs', '.github/workflows/supabase-deploy.yml']
@@ -49,6 +52,7 @@ jobs:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
           SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
           ADMIN_EMAIL: ${{ inputs.admin_email }}
+          TEST_INVITE_EMAIL: ${{ inputs.test_invite_email }}
         run: node scripts/deploy-backend.mjs
       # The publishable key is public by design, but GitHub blocks key-shaped
       # job outputs — hand it to the build job as an artifact file instead.
