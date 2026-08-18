@@ -90,7 +90,13 @@ const mk = async (email, name) => {
 };
 const qaAdmin = await mk(`qa-admin-${rand}@example.com`, 'QA Admin');
 const qaUser = await mk(`qa-user-${rand}@example.com`, 'QA User');
-await runSql(REF, `insert into public.admin_users (user_id, role) values ('${qaAdmin.id}', 'staff') on conflict do nothing`);
+// The QA admin is a MASTER (owner): owners bypass the IP whitelist by
+// design, so the trial keeps working from GitHub's runners even when the
+// real whitelist has entries. (A staff robot proved this the hard way —
+// the whitelist correctly stripped its powers mid-trial.) Staff-level
+// database restrictions stay covered by scripts/test-migrations.mjs.
+await runSql(REF, `insert into public.admin_users (user_id, role, email)
+  values ('${qaAdmin.id}', 'owner', '${qaAdmin.email}') on conflict do nothing`);
 
 // ---- direct REST evidence (independent of the page) ------------------------
 const signIn = async (u) => {
@@ -158,6 +164,7 @@ await page.fill('#email', qaAdmin.email);
 await page.fill('#pass', qaAdmin.password);
 await page.getByRole('button', { name: 'Sign in', exact: true }).click();
 ok('ui: admin signs in and sees the shell', await waitFor(page, /Overview/));
+ok('ui: master badge shown in the header', await waitFor(page, /Master account/));
 
 const TABS = [
   ['Overview', /Registered students/, '01-overview.png'],
@@ -222,16 +229,16 @@ for (const [name, marker, shot] of TABS) {
     await page.waitForTimeout(1000);
   }
   if (name === 'Team') {
-    // The QA admin is STAFF: it must see the roster and the whitelist, but
-    // none of the master-only controls (invite form, allow/remove buttons).
+    // The QA admin is a MASTER: the full toolkit must be present — invite
+    // form, whitelist add, and a Login code button on other members' rows.
+    // Assert presence only; never press them against the real roster.
     const teamText = await bodyText(page);
     const inviteBtns = await page.locator('#isend').count();
     const allowBtns = await page.locator('#wadd').count();
     const codeBtns = await page.locator('.codebtn').count();
-    ok('ui: staff sees no invite, whitelist or login-code controls', inviteBtns === 0 && allowBtns === 0 && codeBtns === 0,
+    ok('ui: master sees invite, whitelist and login-code controls', inviteBtns >= 1 && allowBtns >= 1 && codeBtns >= 1,
       `${inviteBtns} invite, ${allowBtns} allow, ${codeBtns} code`);
-    ok('ui: staff is told only the master manages team & security', /Only the master account/.test(teamText));
-    ok('ui: empty whitelist reads as gating off', /No restrictions — staff can sign in from any address/.test(teamText));
+    ok('ui: master-exemption note shown on the whitelist card', /never IP-restricted/.test(teamText));
   }
   await page.screenshot({ path: `${SHOTS}/${shot}`, fullPage: false });
 }
