@@ -343,6 +343,11 @@ if (adminEmail) {
   }
 }
 
+// Roster hygiene: rows granted before the email column existed show as a
+// bare id in the Team tab — backfill from auth so people see names.
+await runSql(REF, `update public.admin_users a set email = u.email
+  from auth.users u where u.id = a.user_id and a.email is null`, 'roster email backfill').catch(() => undefined);
+
 // Email-delivery health: Supabase's built-in mailer is demo-grade (a couple
 // of emails per hour, and it only delivers reliably to the project owner's
 // address). Surface whether custom SMTP is configured and how many invited
