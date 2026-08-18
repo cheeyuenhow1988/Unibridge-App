@@ -232,6 +232,9 @@ for (const [name, marker, shot] of TABS) {
     // The QA admin is a MASTER: the full toolkit must be present — invite
     // form, whitelist add, and a Login code button on other members' rows.
     // Assert presence only; never press them against the real roster.
+    // vTeam paints in two async chunks (roster+invite, then the whitelist
+    // card after its own query) — wait for the second chunk first.
+    await waitFor(page, /IP whitelist \(staff security\)/);
     const teamText = await bodyText(page);
     const inviteBtns = await page.locator('#isend').count();
     const allowBtns = await page.locator('#wadd').count();
