@@ -184,29 +184,63 @@ function renderShell() {
 }
 
 // --------------------------------------------------------------- overview
-async function vOverview(body) {
-  const [students, apps, coins, red, funnel] = await Promise.all([
-    db.from('profiles').select('id', { count: 'exact', head: true }),
-    db.from('applications').select('status'),
-    db.from('coin_ledger').select('delta'),
-    db.from('redemptions').select('fulfilled'),
-    db.rpc('admin_signup_funnel'),
+async function vOverview(body, range = { from: '', to: '' }) {
+  const from = range.from ?? '', to = range.to ?? '';
+  const filtered = Boolean(from || to);
+  const [profiles, apps, coins, red, funnel] = await Promise.all([
+    db.from('profiles').select('id,created_at'),
+    db.from('applications').select('status,submitted_at'),
+    db.from('coin_ledger').select('delta,created_at'),
+    db.from('redemptions').select('fulfilled,redeemed_at'),
+    db.rpc('admin_signup_funnel', {
+      p_from: from ? `${from}T00:00:00Z` : null,
+      p_to: to ? `${to}T23:59:59Z` : null,
+    }),
   ]);
+  // Same convention as the Community filters: compare the UTC date part.
+  const inRange = (ts) => { const d = (ts ?? '').slice(0, 10); return (!from || d >= from) && (!to || d <= to); };
+  const appsF = (apps.data ?? []).filter((a) => inRange(a.submitted_at));
+  const coinsF = (coins.data ?? []).filter((c) => inRange(c.created_at));
+  const redF = (red.data ?? []).filter((r) => inRange(r.redeemed_at));
   const byStatus = {};
-  for (const a of apps.data ?? []) byStatus[a.status] = (byStatus[a.status] ?? 0) + 1;
-  const balance = (coins.data ?? []).reduce((s, r) => s + r.delta, 0);
-  const pending = (red.data ?? []).filter((r) => !r.fulfilled).length;
-  const bucketN = (k) => (apps.data ?? []).filter((a) => appBucket(a.status) === k).length;
+  for (const a of appsF) byStatus[a.status] = (byStatus[a.status] ?? 0) + 1;
+  const balance = coinsF.reduce((s, r) => s + r.delta, 0);
+  const pending = redF.filter((r) => !r.fulfilled).length;
+  const bucketN = (k) => appsF.filter((a) => appBucket(a.status) === k).length;
   body.innerHTML = '';
-  body.appendChild(el(`<div class="stats">
-    <div class="stat"><div class="n">${students.count ?? 0}</div><div class="l">Registered students</div></div>
-    <div class="stat"><div class="n">${(apps.data ?? []).length}</div><div class="l">Applications</div></div>
-    <div class="stat"><div class="n">${balance}</div><div class="l">Coins outstanding</div></div>
-    <div class="stat"><div class="n">${pending}</div><div class="l">Redemptions to fulfil</div></div>
+
+  // Period picker — see any previous window; empty = all time, live.
+  const period = el(`<div class="card"><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+    <b>📅 Period</b>
+    <input type="date" id="oFrom" value="${esc(from)}"> <span class="muted">to</span>
+    <input type="date" id="oTo" value="${esc(to)}">
+    ${filtered ? '<button class="act" id="oDateClear">Show all time</button>' : ''}
+    <span class="muted">${filtered
+      ? `Showing ${esc(from || 'the beginning')} → ${esc(to || 'today')}`
+      : 'All time — pick dates to see a previous period.'}</span>
+  </div></div>`);
+  body.appendChild(period);
+  const rerange = () => vOverview(body, { from: period.querySelector('#oFrom').value, to: period.querySelector('#oTo').value });
+  period.querySelector('#oFrom').onchange = rerange;
+  period.querySelector('#oTo').onchange = rerange;
+  const oclear = period.querySelector('#oDateClear');
+  if (oclear) oclear.onclick = () => vOverview(body);
+
+  // Students-only count from the funnel (back-office accounts excluded) so
+  // this tile and the funnel card below always agree; profile rows are the
+  // fallback if the rpc ever fails.
+  const f = (funnel.data ?? [])[0] ?? {};
+  const registeredN = funnel.error
+    ? (profiles.data ?? []).filter((p) => inRange(p.created_at)).length
+    : Number(f.registered ?? 0);
+  body.appendChild(el(`<div class="stats" style="margin-top:12px">
+    <div class="stat"><div class="n">${registeredN}</div><div class="l">Registered students</div></div>
+    <div class="stat"><div class="n">${appsF.length}</div><div class="l">Applications${filtered ? ' in period' : ''}</div></div>
+    <div class="stat"><div class="n">${balance}</div><div class="l">${filtered ? 'Coins moved in period' : 'Coins outstanding'}</div></div>
+    <div class="stat"><div class="n">${pending}</div><div class="l">Redemptions to fulfil${filtered ? ' (period)' : ''}</div></div>
   </div>`));
   // Registration funnel — created → confirmed email → first sign-in. The
   // "waiting" bucket is Jimmy's early warning that emails are not landing.
-  const f = (funnel.data ?? [])[0] ?? {};
   const waiting = Number(f.waiting_confirm ?? 0);
   body.appendChild(el(`<div class="card" style="margin-top:12px"><h2>Registration funnel</h2>
     <p class="sub">New students: account created → confirmation email clicked → signed in.</p>
