@@ -53,6 +53,9 @@ jobs:
           SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
           ADMIN_EMAIL: ${{ inputs.admin_email }}
           TEST_INVITE_EMAIL: ${{ inputs.test_invite_email }}
+          # Gmail app password (optional secret) — connects real SMTP so
+          # invitation/confirmation emails actually deliver.
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
         run: node scripts/deploy-backend.mjs
       # The publishable key is public by design, but GitHub blocks key-shaped
       # job outputs — hand it to the build job as an artifact file instead.

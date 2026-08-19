@@ -268,6 +268,37 @@ ghOutput({ deployed: 'true', supabase_url: URL_BASE });
   ok('auth site_url points at the web app', r.status >= 200 && r.status < 300, r.status >= 300 ? `HTTP ${r.status}` : '');
 }
 
+// Real email delivery: when the SMTP_PASS secret (a Gmail app password)
+// exists, connect the owner's Gmail as the mailer. Never log the password
+// or full error bodies — only the API's message field.
+const smtpPass = (process.env.SMTP_PASS ?? '').trim();
+if (smtpPass) {
+  const SENDER = 'cheeyuenhow@gmail.com';
+  const r = await api('PATCH', `/v1/projects/${REF}/config/auth`, {
+    smtp_admin_email: SENDER,
+    smtp_host: 'smtp.gmail.com',
+    smtp_port: '465',
+    smtp_user: SENDER,
+    smtp_pass: smtpPass,
+    smtp_sender_name: 'UniBridge',
+    smtp_max_frequency: 5,
+  });
+  ok('email: Gmail connected as the mailer (custom SMTP)', r.status < 300,
+    r.status < 300 ? '' : `HTTP ${r.status} ${String(r.data?.message ?? '').slice(0, 160)}`);
+  if (r.status < 300) {
+    // With a real mailer in place, sign-up becomes verified registration
+    // and the built-in 2-per-hour email cap can be lifted.
+    let r2 = await api('PATCH', `/v1/projects/${REF}/config/auth`, {
+      mailer_autoconfirm: false, rate_limit_email_sent: 100,
+    });
+    if (r2.status >= 300) {
+      r2 = await api('PATCH', `/v1/projects/${REF}/config/auth`, { mailer_autoconfirm: false });
+    }
+    ok('email: sign-up now requires a real confirmation email', r2.status < 300,
+      r2.status < 300 ? '' : `HTTP ${r2.status} ${String(r2.data?.message ?? '').slice(0, 160)}`);
+  }
+}
+
 // ------------------------------------------------------------ verification
 
 const gw = async (method, p, jwt, body, extraHeaders = {}) => {
@@ -367,6 +398,12 @@ await runSql(REF, `update public.admin_users a set email = u.email
 // owner can watch their own inbox. The user is swept on the next run.
 const testInvite = (process.env.TEST_INVITE_EMAIL ?? '').trim();
 if (testInvite) {
+  // A leftover test user from an interrupted run would 422 the invite.
+  const list = await admin('GET', '/auth/v1/admin/users?page=1&per_page=200');
+  const old = (list.data?.users ?? []).find((u) => (u.email ?? '').toLowerCase() === testInvite.toLowerCase());
+  if (old) await admin('DELETE', `/auth/v1/admin/users/${old.id}`);
+  // With custom SMTP the send happens during this request — a wrong app
+  // password fails HERE, so this doubles as the SMTP credential check.
   const r = await admin('POST', `/auth/v1/invite?redirect_to=${encodeURIComponent(`${PAGES_URL}/admin/`)}`,
     { email: testInvite, data: { name: 'Deliverability test' } });
   ok('email: deliverability-test invitation accepted by the mailer', r.status < 300,

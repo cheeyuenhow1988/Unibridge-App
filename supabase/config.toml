@@ -21,7 +21,9 @@ enable_signup = true
 
 [auth.email]
 enable_signup = true
-enable_confirmations = false
+# The LIVE project requires confirmation emails (Gmail SMTP via the
+# SMTP_PASS secret, wired in scripts/deploy-backend.mjs).
+enable_confirmations = true
 
 [storage]
 enabled = true
