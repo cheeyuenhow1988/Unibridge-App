@@ -26,6 +26,8 @@ await db.exec(`
     id uuid primary key,
     email text,
     raw_user_meta_data jsonb not null default '{}'::jsonb,
+    email_confirmed_at timestamptz,
+    last_sign_in_at timestamptz,
     created_at timestamptz not null default now()
   );
   create function auth.uid() returns uuid
@@ -284,6 +286,19 @@ await db.exec('delete from public.admin_ip_whitelist;');
 const staffRestored = await as(B, 'select count(*) c from public.profiles');
 ok('ipwl: clearing the whitelist restores staff access', Number(staffRestored.rows?.[0]?.c) >= 3);
 await db.exec(`delete from public.admin_users where user_id = '${B}';`);
+
+// ---- registration funnel ---------------------------------------------------
+await db.exec(`update auth.users set email_confirmed_at = now(), last_sign_in_at = now() where id = '${A}';
+  update auth.users set email_confirmed_at = null, last_sign_in_at = null where id = '${B}';`);
+const funnel = await as(D, 'select * from public.admin_signup_funnel()');
+const fr = funnel.rows?.[0] ?? {};
+ok('funnel: master sees registered/confirmed/signed-in counts',
+  Number(fr.registered) >= 2 && Number(fr.confirmed) >= 1 && Number(fr.signed_in) >= 1,
+  `${fr.registered} reg, ${fr.confirmed} confirmed, ${fr.signed_in} signed in`);
+ok('funnel: never-confirmed bucket spots students stuck on email',
+  Number(fr.waiting_confirm) >= 1, `${fr.waiting_confirm} waiting`);
+const funnelB = await as(B, 'select * from public.admin_signup_funnel()');
+ok('funnel: non-admin sees only zeros', Number(funnelB.rows?.[0]?.registered) === 0);
 
 const fails = results.filter((r) => r.startsWith('FAIL'));
 console.log(`\n${results.length - fails.length}/${results.length} passed`);

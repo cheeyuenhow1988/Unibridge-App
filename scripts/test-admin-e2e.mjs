@@ -214,6 +214,10 @@ for (const [name, marker, shot] of TABS) {
   } else {
     ok(`ui: ${name} tab renders`, rendered && !silentFail, silentFail ? 'shows a load error' : rendered ? '' : 'marker never appeared');
   }
+  if (name === 'Overview') {
+    ok('ui: registration funnel card shows all four counts',
+      /Registration funnel/.test(text) && (await page.locator('#funnelStats .stat').count()) === 4);
+  }
   if (name === 'Catalog') {
     const rows = await page.locator('#ctb tr').count();
     ok('ui: Catalog actually renders the institution rows', rows >= 100, `${rows} rows`);
