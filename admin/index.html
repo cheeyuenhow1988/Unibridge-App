@@ -185,11 +185,12 @@ function renderShell() {
 
 // --------------------------------------------------------------- overview
 async function vOverview(body) {
-  const [students, apps, coins, red] = await Promise.all([
+  const [students, apps, coins, red, funnel] = await Promise.all([
     db.from('profiles').select('id', { count: 'exact', head: true }),
     db.from('applications').select('status'),
     db.from('coin_ledger').select('delta'),
     db.from('redemptions').select('fulfilled'),
+    db.rpc('admin_signup_funnel'),
   ]);
   const byStatus = {};
   for (const a of apps.data ?? []) byStatus[a.status] = (byStatus[a.status] ?? 0) + 1;
@@ -202,6 +203,21 @@ async function vOverview(body) {
     <div class="stat"><div class="n">${(apps.data ?? []).length}</div><div class="l">Applications</div></div>
     <div class="stat"><div class="n">${balance}</div><div class="l">Coins outstanding</div></div>
     <div class="stat"><div class="n">${pending}</div><div class="l">Redemptions to fulfil</div></div>
+  </div>`));
+  // Registration funnel — created → confirmed email → first sign-in. The
+  // "waiting" bucket is Jimmy's early warning that emails are not landing.
+  const f = (funnel.data ?? [])[0] ?? {};
+  const waiting = Number(f.waiting_confirm ?? 0);
+  body.appendChild(el(`<div class="card" style="margin-top:12px"><h2>Registration funnel</h2>
+    <p class="sub">New students: account created → confirmation email clicked → signed in.</p>
+    ${funnel.error ? `<div class="err">Could not load: ${esc(funnel.error.message)}</div>` : `
+    <div class="stats" id="funnelStats">
+      <div class="stat"><div class="n">${f.registered ?? 0}</div><div class="l">Registered</div></div>
+      <div class="stat"><div class="n" style="color:#067647">${f.confirmed ?? 0}</div><div class="l">📧 Confirmed their email</div></div>
+      <div class="stat"><div class="n" style="color:#175CD3">${f.signed_in ?? 0}</div><div class="l">🔑 Signed in at least once</div></div>
+      <div class="stat"><div class="n" style="color:${waiting > 0 ? '#B54708' : '#067647'}">${waiting}</div><div class="l">⏳ Waiting on their email</div></div>
+    </div>
+    ${waiting > 0 ? `<p class="sub" style="color:#B54708;margin-top:8px"><b>${waiting} student${waiting === 1 ? '' : 's'} registered but never confirmed their email.</b> If this number keeps growing, confirmation emails are probably not reaching students — check delivery from the Team tab.</p>` : ''}`}
   </div>`));
   body.appendChild(el(`<div class="stats" style="margin-top:12px">
     <div class="stat"><div class="n" style="color:#B54708">${bucketN('pending')}</div><div class="l">🟡 Pending applications</div></div>
