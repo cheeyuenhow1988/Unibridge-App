@@ -217,6 +217,16 @@ for (const [name, marker, shot] of TABS) {
   if (name === 'Overview') {
     ok('ui: registration funnel card shows all four counts',
       /Registration funnel/.test(text) && (await page.locator('#funnelStats .stat').count()) === 4);
+    // Period picker: a future-only window must zero the funnel, and
+    // clearing must restore all-time numbers.
+    await page.fill('#oFrom', '2030-01-01');
+    await page.locator('#oFrom').dispatchEvent('change');
+    await page.waitForTimeout(1800);
+    const zeroed = (await page.locator('#funnelStats .stat .n').first().textContent()) === '0';
+    ok('ui: Overview period filter shows the selected window', zeroed && /Showing 2030-01-01/.test(await bodyText(page)));
+    await page.locator('#oDateClear').click();
+    await page.waitForTimeout(1800);
+    ok('ui: clearing the period restores all-time numbers', /All time — pick dates/.test(await bodyText(page)));
   }
   if (name === 'Catalog') {
     const rows = await page.locator('#ctb tr').count();

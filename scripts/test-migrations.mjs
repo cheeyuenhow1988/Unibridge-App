@@ -299,6 +299,10 @@ ok('funnel: never-confirmed bucket spots students stuck on email',
   Number(fr.waiting_confirm) >= 1, `${fr.waiting_confirm} waiting`);
 const funnelB = await as(B, 'select * from public.admin_signup_funnel()');
 ok('funnel: non-admin sees only zeros', Number(funnelB.rows?.[0]?.registered) === 0);
+const funFuture = await as(D, "select * from public.admin_signup_funnel('2099-01-01'::timestamptz, null)");
+ok('funnel: a future date window shows zero registrations', Number(funFuture.rows?.[0]?.registered) === 0);
+const funWide = await as(D, "select * from public.admin_signup_funnel(null, '2099-01-01'::timestamptz)");
+ok('funnel: a wide date window keeps every registration', Number(funWide.rows?.[0]?.registered) >= 2);
 
 const fails = results.filter((r) => r.startsWith('FAIL'));
 console.log(`\n${results.length - fails.length}/${results.length} passed`);
