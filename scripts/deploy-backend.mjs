@@ -139,6 +139,17 @@ for (let i = 0; i < 60 && !/ACTIVE_HEALTHY/i.test(project.status); i++) {
 }
 if (!/ACTIVE_HEALTHY/i.test(project.status)) fatal(`project is not healthy: ${project.status}`);
 
+// A just-restored project reports healthy a little before Postgres accepts
+// queries ("Connection terminated unexpectedly"). Probe with a no-op until
+// it answers, so no real statement is ever retried mid-flight.
+for (let i = 1; ; i++) {
+  const r = await api('POST', `/v1/projects/${REF}/database/query`, { query: 'select 1' });
+  if (r.status >= 200 && r.status < 300) break;
+  if (i >= 24) fatal(`database not answering after restore: HTTP ${r.status} ${JSON.stringify(r.data).slice(0, 200)}`);
+  console.log(`Database not ready yet (${String(r.data?.message ?? r.status).slice(0, 80)}) — retrying…`);
+  await sleep(5000);
+}
+
 // ------------------------------------------------------------- migrations
 
 async function applyMigrations() {
