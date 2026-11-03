@@ -17,17 +17,21 @@ holds the build profiles, and every screen runs on-device via Expo.
   .apk / TestFlight build for your own phones.
 
 ## Review checklist before submitting
-- **Mock sign-in buttons**: "Continue with Google/Apple" currently create a
-  local demo account. App Review may flag these as broken sign-in. Either
-  wire real OAuth first (Apple requires *Sign in with Apple* whenever other
-  social logins exist) or relabel them "Demo account" for the first build.
+- **Sign-in**: the live build (Supabase configured) uses real email +
+  password accounts with confirmation emails, and shows no Google/Apple
+  buttons. Ship the store build in live mode. Adding Google later means
+  adding *Sign in with Apple* too (Apple's rule when other social logins
+  exist). The demo build's "Continue with Google/Apple" buttons only create a
+  local demo account — never submit the demo build.
 - **Prototype data**: tuition/requirements are labeled indicative in-app —
   keep those labels; they are the honest-metadata story for review notes.
-- **Privacy policy URL**: both stores require one. The app stores data
-  on-device only; write that up on any public page and link it in the
-  store listings.
-- **Account deletion**: required by both stores — already satisfied by
-  Profile → "Delete app data" and the /reset link.
+- **Privacy policy URL**: both stores require one. The live build stores
+  accounts, profiles, grades and documents on UniBridge's servers (Supabase,
+  Singapore region) — the policy must say so, and name who to contact.
+- **Account deletion**: required by both stores. Profile → "Delete app data"
+  only clears the device; with real server accounts the stores need in-app
+  deletion of the server account too (still to build — see
+  supabase/README.md caveats).
 - **Assets still to brand**: `assets/` icon + splash are Expo defaults;
   replace with UniBridge art (1024×1024 icon, adaptive icon foreground)
   before production submission.

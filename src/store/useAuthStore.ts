@@ -9,6 +9,11 @@ export interface Account {
   email: string;
   provider: AuthProvider;
   createdAt: string;
+  /** A real server account (live app). Absent = prototype account that
+   * lives only on this device. */
+  live?: boolean;
+  /** Live account created but its email link not opened yet. */
+  pending?: boolean;
 }
 
 interface AuthState {
@@ -18,8 +23,9 @@ interface AuthState {
 }
 
 /**
- * Prototype auth: accounts live only on this device. Real Google/Apple OAuth
- * and server-side accounts arrive with the backend phase.
+ * The account shown in the app. In the demo build it is the whole story
+ * (stored only on this device); in the live build it mirrors the Supabase
+ * session — services/auth.ts and components/AuthSync.tsx keep the two in step.
  */
 export const useAuthStore = create<AuthState>()(
   persist(

@@ -8,10 +8,14 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
 import { Platform, View } from 'react-native';
+import { AuthSync } from '@/components/AuthSync';
 import { GlobalTabBar } from '@/components/ui/GlobalTabBar';
 import { ToastHost } from '@/components/ui/Toast';
 import { useTheme } from '@/hooks/useTheme';
 import { initLiveRates } from '@/services/currency';
+// Imported at boot on purpose: the client must read an email link's
+// tokens from the URL before anything navigates.
+import { isBackendConfigured } from '@/services/supabase';
 import { useProfileStore } from '@/store/useProfileStore';
 
 void SplashScreen.preventAutoHideAsync();
@@ -59,6 +63,7 @@ export default function RootLayout() {
       </Stack>
       <GlobalTabBar />
       <ToastHost />
+      {isBackendConfigured ? <AuthSync /> : null}
     </View>
   );
 

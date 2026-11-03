@@ -90,6 +90,27 @@ pipeline creates the account, emails an invitation that lands on /admin to
 set a password, and grants back-office access. Repeat with another email
 to add staff later; remove a row from `admin_users` to revoke.
 
+## Student accounts (live app at /live)
+
+The live build (`EXPO_PUBLIC_SUPABASE_*` set) replaces the prototype's
+on-device account with real email + password accounts:
+
+- **Sign up** → confirmation email (Gmail SMTP, branded template) → the link
+  opens `/live/auth/callback`, which signs the student in. Students can keep
+  onboarding while they wait; the Profile tab shows "Confirm your email".
+- **Sign in** on any device restores the profile from `profiles` + `grades` +
+  `english_scores`; a device that onboarded first pushes its profile up. The
+  back office's Students tab and Registration funnel read the same rows.
+- **Forgot password** → reset email → `/live/auth/reset` → new password.
+- **Log out** ends the session and wipes the device (a shared phone must not
+  show the next person a minor's profile).
+- Email links return to `EXPO_PUBLIC_SITE_URL` (written into
+  `live-config.env` by the deploy); it must stay inside the auth redirect
+  allow-list or links fall back to the root demo.
+- The demo build at the site root is unchanged (local account, demo persona).
+- `scripts/test-app-auth-e2e.mjs` (qa_screens runs) proves all of the above
+  against the real project without sending a single email.
+
 ## Zero-to-live runbook (manual CLI alternative, ~20 minutes, free tier)
 
 1. **Create the project** at [database.new](https://database.new) (free
@@ -189,6 +210,12 @@ this commit — rerun after every schema change.
   original token was shared in a private chat during setup (owner's
   accepted risk for the prototype). Before launch: generate a fresh token,
   update the `SUPABASE_ACCESS_TOKEN` GitHub secret, delete the old one.
+- **Before public sign-ups: privacy policy + in-app account deletion.**
+  Real accounts now hold minors' data on the server. Malaysia's PDPA and
+  both app stores need a privacy-policy page, and the stores require that a
+  student can delete their *server* account from inside the app (today
+  "Delete app data" clears only the device). Consider CAPTCHA on sign-up
+  before paid marketing, so bots can't burn the Gmail sending quota.
 - **Email now goes through the owner's Gmail (app password in the
   `SMTP_PASS` GitHub secret).** The deploy connects smtp.gmail.com as the
   mailer, requires real confirmation emails on sign-up, and lifts the

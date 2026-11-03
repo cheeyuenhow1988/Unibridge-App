@@ -13,7 +13,7 @@
 import { supabase } from '@/services/supabase';
 import type {
   Ambassador, Application, ApplicationStatus, Attraction, CostOfLiving, Course, DocumentTypeId,
-  EmbassyEntry, GroupMessage, Institution, IntakeGroup, Scholarship, Short, SupportStaff,
+  EmbassyEntry, GroupMessage, Institution, IntakeGroup, Scholarship, Short, StudentProfile, SupportStaff,
 } from '@/types/models';
 
 /** Non-null client for internal use — api.ts only calls in configured mode. */
@@ -374,6 +374,104 @@ export async function signOut(): Promise<void> {
 }
 
 export { currentUserId };
+
+// ------------------------------------------------------------ profile sync
+
+/** Systems graded by one overall score store it as a single row. */
+const TOTAL_ROW = '__total__';
+
+/** Mirror the onboarding profile into profiles + grades + english_scores.
+ * All three are own-row RLS tables: this can only ever touch the caller. */
+export async function saveProfile(p: StudentProfile): Promise<void> {
+  const uid = await requireUserId();
+  const ec = p.emergencyContact;
+  const prof = await sb().from('profiles').upsert(
+    {
+      id: uid,
+      name: p.name,
+      home_country: p.homeCountry,
+      nationality: p.nationality,
+      qualification_system: p.qualification,
+      intake_year: p.intakeYear,
+      emergency_contact_name: ec?.name || null,
+      emergency_contact_relationship: ec?.relationship || null,
+      emergency_contact_phone: ec?.phone || null,
+      emergency_contact_email: ec?.email || null,
+    },
+    { onConflict: 'id' },
+  );
+  if (prof.error) throw new Error(`profiles: ${prof.error.message}`);
+
+  const rows = p.grades.subjects?.length
+    ? p.grades.subjects.map((s) => ({
+        student_id: uid, subject: s.subject, grade_value: s.grade, qualification_system: p.qualification,
+      }))
+    : p.grades.total !== undefined
+      ? [{ student_id: uid, subject: TOTAL_ROW, grade_value: String(p.grades.total), qualification_system: p.qualification }]
+      : [];
+  const del = await sb().from('grades').delete().eq('student_id', uid);
+  if (del.error) throw new Error(`grades: ${del.error.message}`);
+  if (rows.length) {
+    const ins = await sb().from('grades').insert(rows);
+    if (ins.error) throw new Error(`grades: ${ins.error.message}`);
+  }
+
+  const eng = await sb().from('english_scores').upsert(
+    {
+      student_id: uid,
+      test_type: p.english.test,
+      score: p.english.test === 'none' ? null : p.english.score ?? null,
+    },
+    { onConflict: 'student_id' },
+  );
+  if (eng.error) throw new Error(`english_scores: ${eng.error.message}`);
+}
+
+/** Rebuild the student's profile from the server, so signing in on a new
+ * device skips onboarding. Null while the server copy is incomplete. */
+export async function loadProfile(): Promise<StudentProfile | null> {
+  const uid = await requireUserId();
+  const [prof, grades, eng] = await Promise.all([
+    sb().from('profiles').select('*').eq('id', uid).maybeSingle(),
+    sb().from('grades').select('subject, grade_value').eq('student_id', uid),
+    sb().from('english_scores').select('test_type, score').eq('student_id', uid).maybeSingle(),
+  ]);
+  if (prof.error) throw new Error(`profiles: ${prof.error.message}`);
+  if (grades.error) throw new Error(`grades: ${grades.error.message}`);
+  if (eng.error) throw new Error(`english_scores: ${eng.error.message}`);
+
+  const r: any = prof.data;
+  if (!r?.home_country || !r.nationality || !r.qualification_system || !r.intake_year) return null;
+  const gradeRows: any[] = grades.data ?? [];
+  const total = gradeRows.find((g) => g.subject === TOTAL_ROW);
+  const subjects = gradeRows
+    .filter((g) => g.subject !== TOTAL_ROW)
+    .map((g) => ({ subject: String(g.subject), grade: String(g.grade_value) }));
+  if (!total && subjects.length === 0) return null;
+
+  const test = eng.data?.test_type ?? 'none';
+  return {
+    name: r.name ?? '',
+    homeCountry: r.home_country,
+    nationality: r.nationality,
+    qualification: r.qualification_system,
+    intakeYear: Number(r.intake_year),
+    grades: total ? { total: Number(total.grade_value) } : { subjects },
+    english: test === 'none'
+      ? { test: 'none' }
+      : { test, score: eng.data?.score == null ? undefined : Number(eng.data.score) },
+    ...(r.emergency_contact_name
+      ? {
+          emergencyContact: {
+            name: r.emergency_contact_name,
+            relationship: r.emergency_contact_relationship ?? '',
+            phone: r.emergency_contact_phone ?? '',
+            email: r.emergency_contact_email ?? '',
+          },
+        }
+      : {}),
+  };
+}
 
 // -------------------------------------------------------------------- writes
 

@@ -45,7 +45,7 @@ export function GlobalTabBar() {
   );
 
   const isTabRoot = TABS.some((x) => pathname === x.path);
-  if (!onboarded || isTabRoot || pathname === '/' || pathname.startsWith('/onboarding') || pathname.startsWith('/reset')) {
+  if (!onboarded || isTabRoot || pathname === '/' || pathname.startsWith('/onboarding') || pathname.startsWith('/reset') || pathname.startsWith('/auth')) {
     return null;
   }
   const active = PARENT.find(([re]) => re.test(pathname))?.[1];

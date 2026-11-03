@@ -8,6 +8,7 @@ import { Text } from '@/components/ui/Text';
 import { spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/useTheme';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
+import { supabase } from '@/services/supabase';
 import { useAuthStore } from '@/store/useAuthStore';
 import { useCommunityStore } from '@/store/useCommunityStore';
 import { useProfileStore } from '@/store/useProfileStore';
@@ -28,6 +29,8 @@ export default function ResetScreen() {
     if (ran.current) return;
     ran.current = true;
     void (async () => {
+      // Live build: end the server session too, not just the local copy.
+      await supabase?.auth.signOut({ scope: 'local' }).catch(() => undefined);
       try {
         await AsyncStorage.clear();
       } catch {

@@ -5,6 +5,7 @@ import * as ImagePicker from 'expo-image-picker';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Alert, Linking, Modal, Pressable, ScrollView, View } from 'react-native';
+import { LiveAccountCard } from '@/components/LiveAccountCard';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
@@ -20,6 +21,7 @@ import { BUILD_ID } from '@/constants/version';
 import { useMatchData } from '@/hooks/useMatchData';
 import { useTheme } from '@/hooks/useTheme';
 import { ALL_CURRENCIES, formatDual, getRatesMeta, homeCurrencyFor } from '@/services/currency';
+import { isBackendConfigured } from '@/services/supabase';
 import { loadDemoProfile } from '@/store/seedDemo';
 import type { CurrencyCode } from '@/types/models';
 import { useApplicationsStore } from '@/store/useApplicationsStore';
@@ -338,7 +340,9 @@ export default function ProfileScreen() {
           </Card>
 
           <SectionHeader title={t('auth.account')} />
-          {account ? (
+          {isBackendConfigured ? (
+            <LiveAccountCard />
+          ) : account ? (
             <Card style={{ gap: spacing.sm }}>
               <Row gap={spacing.md}>
                 <Ionicons
@@ -434,14 +438,18 @@ export default function ProfileScreen() {
           </Row>
 
           <SectionHeader title={t('common.appName')} />
-          <Button
-            label={t('profile.loadDemo')}
-            variant="secondary"
-            icon="flask-outline"
-            onPress={() => {
-              void loadDemoProfile().then(() => router.replace('/(tabs)/match'));
-            }}
-          />
+          {/* The live app holds real accounts: a demo persona's grades must
+              never be pushed into a student's profile. */}
+          {isBackendConfigured ? null : (
+            <Button
+              label={t('profile.loadDemo')}
+              variant="secondary"
+              icon="flask-outline"
+              onPress={() => {
+                void loadDemoProfile().then(() => router.replace('/(tabs)/match'));
+              }}
+            />
+          )}
           <Button label={t('profile.resetApp')} variant="danger" icon="trash-outline" onPress={resetAll} />
           <Text variant="caption" tone="faint" center style={{ marginTop: spacing.md }}>
             {t('profile.about')}

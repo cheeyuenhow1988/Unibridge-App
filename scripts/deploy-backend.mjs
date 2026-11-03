@@ -255,7 +255,9 @@ console.log(`EXPO_PUBLIC_SUPABASE_ANON_KEY=${anonKey}`);
 console.log('');
 // Handed to the app-build job as an artifact file: GitHub refuses key-shaped
 // job outputs ("may contain secret"), even for the public publishable key.
-fs.writeFileSync('live-config.env', `EXPO_PUBLIC_SUPABASE_URL=${URL_BASE}\nEXPO_PUBLIC_SUPABASE_ANON_KEY=${anonKey}\n`);
+// EXPO_PUBLIC_SITE_URL: where the live app's confirmation / reset emails
+// send students back to (must sit inside the auth redirect allow-list).
+fs.writeFileSync('live-config.env', `EXPO_PUBLIC_SUPABASE_URL=${URL_BASE}\nEXPO_PUBLIC_SUPABASE_ANON_KEY=${anonKey}\nEXPO_PUBLIC_SITE_URL=${PAGES_URL}/live\n`);
 ghOutput({ deployed: 'true', supabase_url: URL_BASE });
 
 // ------------------------------------------------------------- auth config
@@ -299,6 +301,39 @@ if (smtpPass) {
   }
 }
 
+// Branded emails: students get "Confirm your UniBridge account", not the
+// generic Supabase template (which reads like phishing). Soft check — a
+// wording update must never block a deploy.
+{
+  const shell = (lead, cta, foot) => `<div style="font-family:Arial,Helvetica,sans-serif;max-width:480px;margin:0 auto;padding:24px;color:#101828">
+<p style="font-size:20px;font-weight:bold;margin:0 0 16px"><span style="color:#2D5BFF">Uni</span><span style="color:#21C063">Bridge</span></p>
+<p style="font-size:16px;line-height:1.5">${lead}</p>
+<p style="margin:24px 0"><a href="{{ .ConfirmationURL }}" style="display:inline-block;background:#2D5BFF;color:#ffffff;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:bold">${cta}</a></p>
+<p style="font-size:13px;color:#667085;line-height:1.5">If the button doesn't work, copy this link into your browser:<br>{{ .ConfirmationURL }}</p>
+<p style="font-size:13px;color:#667085;line-height:1.5">${foot}</p>
+</div>`;
+  const r = await api('PATCH', `/v1/projects/${REF}/config/auth`, {
+    mailer_subjects_confirmation: 'Confirm your UniBridge account',
+    mailer_templates_confirmation_content: shell(
+      'Welcome to UniBridge! Please confirm your email address to activate your account.',
+      'Confirm my email',
+      "Didn't create a UniBridge account? You can safely ignore this email."),
+    mailer_subjects_recovery: 'Reset your UniBridge password',
+    mailer_templates_recovery_content: shell(
+      'We received a request to reset the password for your UniBridge account.',
+      'Choose a new password',
+      "Didn't ask for this? Ignore this email — your password stays the same."),
+    mailer_subjects_invite: "You're invited to the UniBridge back office",
+    mailer_templates_invite_content: shell(
+      "You've been invited to help run UniBridge. Accept the invitation to set your password and sign in.",
+      'Accept invitation',
+      "Not expecting this? You can safely ignore this email."),
+  });
+  console.log(r.status < 300
+    ? 'PASS | email: branded UniBridge templates (confirm / reset / invite)'
+    : `WARN | email: templates not updated — HTTP ${r.status} ${String(r.data?.message ?? '').slice(0, 160)}`);
+}
+
 // ------------------------------------------------------------ verification
 
 const gw = async (method, p, jwt, body, extraHeaders = {}) => {
@@ -326,7 +361,7 @@ async function sweepTestData(label) {
   try {
     const list = await admin('GET', '/auth/v1/admin/users?page=1&per_page=200');
     const testUsers = (list.data?.users ?? []).filter((u) =>
-      TEST_EMAIL_RE.test(u.email ?? '') || /\+invitetest/i.test(u.email ?? ''));
+      TEST_EMAIL_RE.test(u.email ?? '') || /\+invitetest/i.test(u.email ?? '') || /^app-qa-[0-9a-f]{8}-\w+@example\.com$/.test(u.email ?? ''));
     for (const u of testUsers) {
       await runSql(REF, `delete from storage.objects where bucket_id = 'documents'
         and (storage.foldername(name))[1] = '${u.id}'`, 'sweep storage').catch(() => undefined);

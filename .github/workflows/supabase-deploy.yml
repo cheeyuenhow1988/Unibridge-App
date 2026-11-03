@@ -29,7 +29,7 @@ on:
         required: false
   push:
     branches: [claude/unibridge-app-prototype-11m67q]
-    paths: ['supabase/**', 'admin/**', 'scripts/deploy-backend.mjs', 'scripts/sql-split.mjs', '.github/workflows/supabase-deploy.yml']
+    paths: ['supabase/**', 'admin/**', 'src/**', 'app.json', 'package.json', 'package-lock.json', 'scripts/deploy-backend.mjs', 'scripts/sql-split.mjs', 'scripts/test-app-auth-e2e.mjs', '.github/workflows/supabase-deploy.yml']
 permissions: {}
 concurrency: supabase-deploy
 jobs:
@@ -107,6 +107,26 @@ jobs:
           node -e "const fs=require('fs');const j=JSON.parse(fs.readFileSync('app.json','utf8'));(j.expo.experiments??={}).baseUrl='/Unibridge-App/live';fs.writeFileSync('app.json',JSON.stringify(j,null,2));"
           set -a && source live-config.env && set +a
           npx expo export --platform web
+      # Real sign-up trial against the live backend, BEFORE publishing: a
+      # broken sign-up never reaches students. No email is sent (see script).
+      - name: Install Playwright (sign-up trial)
+        if: inputs.qa_screens == 'true'
+        run: |
+          npm install --no-save --no-audit --no-fund playwright
+          npx playwright install --with-deps chromium
+      - name: Student sign-up trial (real backend)
+        if: inputs.qa_screens == 'true'
+        env:
+          # Scoped to this step only.
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+        run: node scripts/test-app-auth-e2e.mjs
+      - uses: actions/upload-artifact@v4
+        if: always() && inputs.qa_screens == 'true'
+        with:
+          name: app-qa-screenshots
+          path: app-qa-screenshots/
+          retention-days: 1
       - name: Publish app under /live and back office under /admin
         run: |
           node -e "

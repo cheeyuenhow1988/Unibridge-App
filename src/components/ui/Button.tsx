@@ -15,9 +15,10 @@ interface Props {
   disabled?: boolean;
   loading?: boolean;
   style?: StyleProp<ViewStyle>;
+  testID?: string;
 }
 
-export function Button({ label, onPress, variant = 'primary', size = 'md', icon, disabled, loading, style }: Props) {
+export function Button({ label, onPress, variant = 'primary', size = 'md', icon, disabled, loading, style, testID }: Props) {
   const { colors } = useTheme();
   const bg =
     variant === 'primary' ? colors.accent
@@ -34,6 +35,7 @@ export function Button({ label, onPress, variant = 'primary', size = 'md', icon,
     <Pressable
       accessibilityRole="button"
       accessibilityLabel={label}
+      testID={testID}
       onPress={onPress}
       disabled={disabled || loading}
       style={(state) => {

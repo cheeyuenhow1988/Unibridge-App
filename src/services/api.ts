@@ -364,3 +364,24 @@ export async function syncPlanEntitlement(
     console.warn('[api] syncPlanEntitlement: not synced to backend', e);
   }
 }
+
+/** Push this device's profile to the signed-in student's server rows. */
+export async function syncProfile(profile: StudentProfile): Promise<void> {
+  if (!isBackendConfigured) return;
+  try {
+    await backend.saveProfile(profile);
+  } catch (e) {
+    console.warn('[api] syncProfile: not saved to backend', e);
+  }
+}
+
+/** The signed-in student's server profile when complete, else null. */
+export async function fetchServerProfile(): Promise<StudentProfile | null> {
+  if (!isBackendConfigured) return null;
+  try {
+    return await backend.loadProfile();
+  } catch (e) {
+    console.warn('[api] fetchServerProfile failed', e);
+    return null;
+  }
+}

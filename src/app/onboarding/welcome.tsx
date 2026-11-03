@@ -12,6 +12,7 @@ import { Text } from '@/components/ui/Text';
 import { FLAGS } from '@/constants/countries';
 import { radius, spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/useTheme';
+import { isBackendConfigured } from '@/services/supabase';
 import { loadDemoProfile } from '@/store/seedDemo';
 
 const SLIDES = [
@@ -120,14 +121,17 @@ export default function Welcome() {
               }
             }}
           />
+          {/* Live app: returning students sign in; the demo persona stays in
+              the prototype build only. */}
           <Pressable
-            onPress={startDemo}
+            onPress={isBackendConfigured ? () => router.push('/onboarding/auth?mode=signin') : startDemo}
             disabled={demoLoading}
             accessibilityRole="button"
+            testID="welcome-secondary"
             style={{ minHeight: 44, justifyContent: 'center' }}
           >
             <Text variant="label" color={colors.onGradient} center style={{ textDecorationLine: 'underline' }}>
-              {t('onboarding.tryDemo')}
+              {isBackendConfigured ? t('auth.haveAccount') : t('onboarding.tryDemo')}
             </Text>
           </Pressable>
         </View>
